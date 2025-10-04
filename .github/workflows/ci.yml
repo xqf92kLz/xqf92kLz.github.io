@@ -12,30 +12,52 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # 确保 Git 历史完整（用于插件获取提交信息）
+      
       - uses: actions/setup-python@v4
         with:
-          python-version: 3.x
+          python-version: "3.11"  # 明确指定 Python 版本（避免 3.x 格式的问题）
+      
+      # 可选：保留缓存以加速依赖安装（若有问题可注释）
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
       - uses: actions/cache@v3
         with:
-          key: mkdocs-material-${ env.cache_id }
+          key: mkdocs-material-${{ env.cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-git-revision-date-localized-plugin
-      - run: pip install mkdocs-git-authors-plugin
-      - run: pip install mkdocs-git-committers-plugin-2
-      - run: pip install mkdocs-rss-plugin
-      # - run: pip install jieba
-      - run: pip install mkdocs-markdownextradata-plugin
-      # - run: pip install mkdocs-glightbox
-      # - run: pip install "mkdocs-material[imaging]"
-      # - run: pip install mkdocs-statistics-plugin 
-      # - run: pip install mkdocs-rss-plugin    
-      - run: pip install mkdocs-document-dates     
-      - run: pip install mkdocs-ai-summary-wcowin
-      - run: pip install -r requirements.txt # 安装其他依赖
-      - run: pip install mkdocs-material 
-      - run: pip install --upgrade --force-reinstall mkdocs-material
-      - run: mkdocs gh-deploy --force
+      
+      # 安装 MkDocs 及插件（按实际需求调整）
+      - run: |
+          pip install mkdocs-git-revision-date-localized-plugin
+          pip install mkdocs-git-authors-plugin
+          pip install mkdocs-git-committers-plugin-2
+          pip install mkdocs-rss-plugin
+          pip install mkdocs-markdownextradata-plugin
+          pip install mkdocs-document-dates     
+          pip install mkdocs-ai-summary-wcowin
+          pip install -r requirements.txt  # 安装其他依赖
+          pip install --upgrade mkdocs-material  # 确保 material 主题是最新版
+      
+      # 构建静态文件并部署到 gh-pages 分支
+      - run: |
+          mkdocs build  # 先本地构建，确保无错误
+          mkdocs gh-deploy --force  # 部署到 gh-pages 分支（自动生成 .nojekyll）
+      
+      # 额外保险：手动确认 .nojekyll 存在（防止插件或配置冲突导致文件缺失）
+      - name: Ensure .nojekyll exists in gh-pages
+        run: |
+          # 检查 gh-pages 分支的 .nojekyll 文件（通过本地临时克隆验证）
+          git clone -b gh-pages https://github.com/${{ github.repository }} temp-gh-pages
+          cd temp-gh-pages
+          if [ ! -f ".nojekyll" ]; then
+            echo "Creating .nojekyll file"
+            touch .nojekyll
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git add .nojekyll
+            git commit -m "Add .nojekyll to disable Jekyll"
+            git push
+          fi
+          cd ..
+          rm -rf temp-gh-pages
