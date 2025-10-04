@@ -1,0 +1,62 @@
+name: ci 
+on:
+  push:
+    branches:
+      - master 
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${ env.cache_id }
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-git-revision-date-localized-plugin
+      - run: pip install mkdocs-git-authors-plugin
+      - run: pip install mkdocs-git-committers-plugin-2
+      - run: pip install mkdocs-rss-plugin
+      # - run: pip install jieba
+      - run: pip install mkdocs-markdownextradata-plugin
+      # - run: pip install mkdocs-glightbox
+      # - run: pip install "mkdocs-material[imaging]"
+      # - run: pip install mkdocs-statistics-plugin 
+      # - run: pip install mkdocs-rss-plugin    
+      - run: pip install mkdocs-document-dates     
+      - run: pip install mkdocs-ai-summary-wcowin
+      - run: pip install -r requirements.txt # 安装其他依赖
+      - run: pip install mkdocs-material 
+      - run: pip install --upgrade --force-reinstall mkdocs-material
+      - run: mkdocs gh-deploy --force
+      # 使用 AI 摘要部署
+      - name: 使用 AI 摘要部署
+        env:
+          AI_SUMMARY_CI_ENABLED: 'true' # 在 CI 中启用
+          AI_SUMMARY_CACHE_ENABLED: 'true' # 使用缓存
+          AI_SUMMARY_CACHE_EXPIRE_DAYS: '30' # 缓存 30 天
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}  # 添加 GLM API 密钥
+        run: mkdocs gh-deploy --force
+      
+      # 自动提交 AI 缓存文件
+      - name: 自动提交 AI 缓存
+        run: |
+          if [ -d ".ai_cache" ] && [ "$(ls -A .ai_cache 2>/dev/null)" ]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add .ai_cache/
+            if ! git diff --cached --quiet; then
+              git commit -m "🤖 自动更新 AI 摘要缓存 [skip ci]"
+              git push
+            fi
+          fi
