@@ -1,0 +1,2454 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.uwouni.com/blog/%E5%BE%AE%E7%A7%AF%E5%88%86/1/">
+      
+      
+        <link rel="prev" href="../0/">
+      
+      
+        <link rel="next" href="../2/">
+      
+      
+      <link rel="icon" href="https://cdn.luogu.com.cn/upload/image_hosting/uo5wu9mh.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>第一章 函数与极限 - uwouni</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/light.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/core/core.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/user.config.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="uwouni" class="md-header__button md-logo" aria-label="uwouni" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            uwouni
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第一章 函数与极限
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../to%20do/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  To do
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../0/" class="md-tabs__link">
+          
+  
+  
+  微积分
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/1/" class="md-tabs__link">
+          
+  
+  
+  线性代数
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="uwouni" class="md-nav__button md-logo" aria-label="uwouni" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    uwouni
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../to%20do/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    To do
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    微积分
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            微积分
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第 0 章 预备知识
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第一章 函数与极限
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一章 函数与极限
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      数列极限
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数列极限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      压缩映像原理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数极限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数的连续性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      重要极限 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      重要极限 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="重要极限 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      数列形式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数形式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1infty" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(1^{\infty}\) 型极限
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      拓展
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      易错点
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第二章 导数与微分
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    线性代数
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            线性代数
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一章 线性方程组的求解
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第二章 行列式与矩阵的秩
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      数列极限
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数列极限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      压缩映像原理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数极限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数的连续性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      重要极限 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      重要极限 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="重要极限 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      数列形式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数形式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1infty" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(1^{\infty}\) 型极限
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      拓展
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      易错点
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>第一章 函数与极限</h1>
+
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-07T12:21:56.767622+00:00'>2025-10-07</time></span><span data-tippy-content data-tippy-raw='2025-10-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-07T12:21:56.767622+00:00'>2025-10-07</time></span></div></div>
+<h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>狄利克雷函数是周期函数，但是无最小正周期。</li>
+<li>上下界</li>
+<li>
+<p>上确界 <span class="arithmatex">\(\sup\)</span>，下确界 <span class="arithmatex">\(\inf\)</span></p>
+</li>
+<li>
+<p>确界原理：非空有界的实数集必有上下确界。（但未必存在最大（小）元）</p>
+</li>
+</ul>
+<h3 id="_3">数列极限<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>数列极限的概念</p>
+</li>
+<li>
+<p>收敛数列的性质</p>
+<ul>
+<li>
+<p>唯一性</p>
+</li>
+<li>
+<p>有界性</p>
+</li>
+<li>
+<p>保号性：若 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=a&gt;0\)</span>，则对 <span class="arithmatex">\(\forall \eta\in(0,a)\)</span>，<span class="arithmatex">\(\exists N&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(a_n&gt;\eta&gt;0\)</span>。（若 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n=a&lt;0\)</span>，则对 <span class="arithmatex">\(\forall \eta\in(a,0)\)</span>，<span class="arithmatex">\(\exists N&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(a_n&lt;\eta&lt;0\)</span>）</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>注意可以取 <span class="arithmatex">\(\eta=\frac a 2,\frac a 3\)</span>……</p>
+</details>
+</li>
+<li>
+<p>不等式性质：当 <span class="arithmatex">\(n&gt;n_0\in\mathbb N\)</span>，<span class="arithmatex">\(a_n\geq b_n\)</span>，且 <span class="arithmatex">\(\{a_n\}\)</span> 收敛于 <span class="arithmatex">\(a\)</span>、<span class="arithmatex">\(\{b_n\}\)</span> 收敛于 <span class="arithmatex">\(b\)</span>，则 <span class="arithmatex">\(a&gt;b\)</span>。</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>即使满足 <span class="arithmatex">\(n&gt;n_0\in\mathbb N\)</span>，<span class="arithmatex">\(a_n&gt;b_n\)</span>，且 <span class="arithmatex">\(\{a_n\}\)</span> 收敛于 <span class="arithmatex">\(a\)</span>、<span class="arithmatex">\(\{b_n\}\)</span> 收敛于 <span class="arithmatex">\(b\)</span>，仍然得不到 <span class="arithmatex">\(a&gt;b\)</span>（仍旧只能得到 <span class="arithmatex">\(a\geq b\)</span>）。例如 <span class="arithmatex">\(a_n=\frac 1 n&gt;0\)</span>，<span class="arithmatex">\(b_n=0\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n=\lim\limits_{n\to +\infty}=0\)</span>；<span class="arithmatex">\(a_n=\frac{1}{2^n}\)</span>，<span class="arithmatex">\(b_n=\frac{1}{2^{n+1}}\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n=\lim\limits_{n\to \infty}b_n=0\)</span>。</p>
+</details>
+</li>
+<li>
+<p>四则运算</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<ol>
+<li>必须保证参与计算的极限存在。</li>
+<li>四则运算法则只适用于有限项的情形。如 <span class="arithmatex">\(\lim\limits_{n\to \infty}(\underbrace{\frac 1 n+\frac 1 n+\cdots+\frac 1 n}_{n个})\neq \lim\limits_{n\to \infty}\frac 1 n+\lim\limits_{n\to \infty}\frac 1 n+\cdots+\lim\limits_{n\to \infty}\frac 1 n=0\)</span>（实际上，<span class="arithmatex">\(=\lim\limits_{n\to \infty}1=1\)</span>）。</li>
+</ol>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>数列极限存在的准则</p>
+<ul>
+<li>
+<p><strong>夹逼定理</strong></p>
+</li>
+<li>
+<p>数列与子数列收敛性的关系</p>
+<p>数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\{a_n\}\)</span> 的任一子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span> 都收敛且极限相等。</p>
+<p>数列 <span class="arithmatex">\(\{a_n\}\)</span> 发散 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\{a_n\}\)</span> 中有两个子列极限存在但不相等，或有一个子列极限不存在。</p>
+</li>
+<li>
+<p><strong>单调收敛准则：</strong>单调递增有上界的数列必收敛；单调递减有下界的数列必收敛。</p>
+</li>
+<li>
+<p>魏尔斯特拉斯（Weierstrass）定理：有界数列必有收敛的子列。</p>
+</li>
+<li>
+<p><strong>柯西（Cauchy）收敛准则：</strong>数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛 <span class="arithmatex">\(\Leftrightarrow\)</span> 对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时对 <span class="arithmatex">\(\forall p\in\mathbb N^*\)</span> 均有 <span class="arithmatex">\(|a_{n+p}-a_n|&lt;\varepsilon\)</span>。</p>
+<p>数列 <span class="arithmatex">\(\{a_n\}\)</span> 发散 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\exists \varepsilon_0&gt;0\)</span>，对 <span class="arithmatex">\(\forall N&gt;0\)</span>，<span class="arithmatex">\(\exists m_0,n_0&gt;N\)</span>，有 <span class="arithmatex">\(|a_{m_0}-a_{n_0}|\geq\varepsilon_0\)</span>。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(a_n=1+\frac 1 {2^2}+\cdots+\frac 1 {n^2}\)</span>，证明：<span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N=[\frac{1}{\varepsilon}]\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|a_{n+p}-a_n|=\frac{1}{(n+1)^2}+\cdots+\frac{1}{(n+p)^2}&lt;\frac 1 n-\frac 1 {n+p}&lt;\frac 1 n&lt;\varepsilon\)</span>。</p>
+<p>根据柯西收敛准则，数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\(\frac{1}{(n+1)^2}&lt;\frac{1}{n(n+1)}=\frac 1 n-\frac{1}{(n+1)}\)</span>。</p>
+</details>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<ol>
+<li>数列 <span class="arithmatex">\(\{a_n\}\)</span> 单调递增。</li>
+<li><span class="arithmatex">\(0&lt;a_n&lt;2\)</span>。</li>
+</ol>
+</li>
+</ul>
+</details>
+<p>设 <span class="arithmatex">\(a_n=1+\frac 1 2+\cdots+\frac 1 n\)</span>，证明：<span class="arithmatex">\(\{a_n\}\)</span> 发散。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(a_n=1+\frac 1 2+\cdots+\frac 1 n&gt;\ln(n+1)\)</span>，故 <span class="arithmatex">\(\{a_n\}\)</span> 无界，从而 <span class="arithmatex">\(\{a_n\}\)</span> 发散。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<div class="arithmatex">\[
+\begin{aligned}
+a_{2^n}&amp;=1+\frac 1 2+(\frac 1 3+\frac 1 4)+\cdots+(\frac{1}{2^{n-1}+1}+\frac{1}{2^{n-1}+2}+\cdots+\frac{1}{2^n})\\
+&amp;&gt;1+\frac 1 2+(\frac 1 4+\frac 1 4)+\cdots+\underbrace{(\frac{1}{2^n}+\frac{1}{2^n}+\cdots+\frac{1}{2^n})}_{2^{n-1}项}\\
+&amp;=1+\frac n 2
+\end{aligned}
+\]</div>
+<p>故 <span class="arithmatex">\(\{a_n\}\)</span> 无界，从而 <span class="arithmatex">\(\{a_n\}\)</span> 发散。</p>
+</li>
+<li>
+<p><strong>法 3：</strong></p>
+<p><span class="arithmatex">\(|a_{n+p}-a_n|=\frac{1}{n+1}+\cdots+\frac{1}{n+p}\geq \frac{p}{n+p}\)</span>，取 <span class="arithmatex">\(\varepsilon_0=\frac 1 2\)</span>，对 <span class="arithmatex">\(\forall N&gt;0\)</span>，<span class="arithmatex">\(\exists n&gt;N\)</span>，<span class="arithmatex">\(p=n\)</span>，<span class="arithmatex">\(|a_{n+p}-a_n|\geq \frac 1 2=\varepsilon\)</span>。</p>
+<p>即：若 <span class="arithmatex">\(\{a_n\}\)</span> 收敛，记 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n=A\in\mathbb R\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to +\infty}(a_{2n}-a_n)=0\)</span>。</p>
+<p>而 <span class="arithmatex">\(a_{2n}-a_n=\frac{1}{n+1}+\frac{1}{n+2}+\cdots+\frac{1}{n+n}&gt;\frac 1 2\)</span>，从而 <span class="arithmatex">\(\lim\limits_{n\to +\infty}(a_{2n}-a_n)\geq \frac 1 2\)</span>。</p>
+</li>
+</ul>
+</details>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="_4">压缩映像原理<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>压缩映像-1：设数列 <span class="arithmatex">\(\{a_n\}\)</span> 满足 <span class="arithmatex">\(|a_{n+1}-A|\leq r|a_n-A|\)</span>（<span class="arithmatex">\(n\geq n_0\)</span>，<span class="arithmatex">\(n_0\in\mathbb N^*\)</span>），其中 <span class="arithmatex">\(0&lt;r&lt;1\)</span>，<span class="arithmatex">\(A\)</span> 为实常数，则数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛且 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n=A\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>当 <span class="arithmatex">\(n\geq n_0\)</span> 时，有 <span class="arithmatex">\(0\leq |a_{n+1}-A|\leq r|a_n-A|\leq \cdots\leq r^{n-n_0+1}|a_{n_0}-A|\)</span>。又 <span class="arithmatex">\(0&lt;r&lt;1\)</span>，故 <span class="arithmatex">\(\lim\limits_{n\to \infty}r^{n-n_0+1}|a_{n_0}-A|=0\)</span>，所以 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n=A\)</span>。</p>
+</details>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(a_1=4\)</span>，且 <span class="arithmatex">\(a_{n+1}=\sqrt{6+a_n}\)</span>，证明：<span class="arithmatex">\(\lim\limits_{n\to \infty}a_n\)</span> 存在，并计算此极限。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="info">
+<summary>常规方法：利用单调收敛准则</summary>
+<p><strong>有界性：</strong></p>
+<ul>
+<li><strong>法 1：</strong>【下证数列 <span class="arithmatex">\(\{a_n\}\)</span> 有下界 <span class="arithmatex">\(3\)</span>。】<span class="arithmatex">\(a_1=4\geq 3\)</span>。假设 <span class="arithmatex">\(a_n\geq 3\)</span>，则 <span class="arithmatex">\(a_{n+1}=\sqrt{6+a_n}\geq \sqrt{6+3}=3\)</span>。则对 <span class="arithmatex">\(\forall n\in\mathbb N^*\)</span>，<span class="arithmatex">\(a_n\geq 3\)</span>。</li>
+<li><strong>法 2：</strong>显然 <span class="arithmatex">\(a_n\geq 0\)</span>。</li>
+</ul>
+<p><strong>单调性：</strong></p>
+<ul>
+<li>
+<p><strong>法 1：</strong>【下证数列 <span class="arithmatex">\(\{a_n\}\)</span> 单调递减。】<span class="arithmatex">\(a_2=\sqrt{10}&lt;a_1\)</span>。若 <span class="arithmatex">\(a_n&lt;a_{n-1}\)</span>，则 <span class="arithmatex">\(a_{n+1}=\sqrt{6+a_n}&lt;\sqrt{6+a_{n-1}}=a_n\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>若 <span class="arithmatex">\(a_{n+1}=f(a_n)\)</span>：</p>
+<ul>
+<li>
+<p>若递推函数 <span class="arithmatex">\(f(x)\)</span> 单调递增，则 <span class="arithmatex">\(\{a_n\}\)</span> 单调。</p>
+<ul>
+<li>若 <span class="arithmatex">\(a_1&lt;a_2\)</span>：<span class="arithmatex">\(a_1&lt;a_2\)</span> 成立。假设 <span class="arithmatex">\(a_n&lt;a_{n+1}\)</span>，则 <span class="arithmatex">\(a_{n+1}=f(a_n)&lt;f(a_{n+1})=a_{n+2}\)</span>。因此 <span class="arithmatex">\(\{a_n\}\)</span> 单调递增。</li>
+<li>若 <span class="arithmatex">\(a_1&gt;a_2\)</span>：同理可证，<span class="arithmatex">\(\{a_n\}\)</span> 单调递减。</li>
+</ul>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(f(x)\)</span> 单调递减，则子列 <span class="arithmatex">\(\{a_{2n}\},\{a_{2n+1}\}\)</span> 分别单调。</p>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(a_1&lt;a_3\)</span>：</p>
+<p><span class="arithmatex">\(a_1&lt;a_3\)</span> 成立。假设 <span class="arithmatex">\(a_{2n-1}&lt;a_{2n+1}\)</span>，则 <span class="arithmatex">\(a_{2n}=f(a_{2n-1})&gt;f(a_{2n+1})=a_{2n+2}\)</span>，<span class="arithmatex">\(a_{2n+1}=f(a_{2n})&lt;f(a_{2n+2})=a_{2n+3}\)</span>。因此 <span class="arithmatex">\(\{a_{2n+1}\}\)</span> 单调递增。</p>
+<p><span class="arithmatex">\(a_2=f(a_1)&gt;f(a_3)=a_4\)</span>。同理可证，<span class="arithmatex">\(\{a_{2n}\}\)</span> 单调递减。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(a_1&gt;a_3\)</span>：同理，<span class="arithmatex">\(\{a_{2n+1}\}\)</span> 单调递减，<span class="arithmatex">\(\{a_{2n}\}\)</span> 单调递增。</p>
+</li>
+</ul>
+<p>最后，若 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_{2n-1}=\lim\limits_{n\to \infty}a_{2n}\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n\)</span> 存在。</p>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p><strong>法 2：</strong><span class="arithmatex">\(a_{n+1}-a_n=\sqrt{6+a_n}-\sqrt{6+a_{n-1}}=\dfrac{a_n-a_{n-1}}{\sqrt{6+a_n}+\sqrt{6+a_{n-1}}}\)</span> 与 <span class="arithmatex">\(a_n-a_{n-1}\)</span> 同号，从而与 <span class="arithmatex">\(a_2-a_1\)</span> 同号，又 <span class="arithmatex">\(a_2-a_1&lt;0\)</span>，则 <span class="arithmatex">\(\{a_n\}\)</span> 递减。</p>
+</li>
+</ul>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>单调和有界有时会有依赖关系。如 <span class="arithmatex">\(a_{n+1}-a_n=\sqrt{6+a_n}-a_n=\dfrac{6+a_n-a_n^2}{\sqrt{6+a_n}+a_n}=\dfrac{(3-a_n)(2+a_n)}{\sqrt{6+a_n}+a_n}\)</span>，由于其 <span class="arithmatex">\(&lt;0\)</span>（单调递减），则 <span class="arithmatex">\(a_n&gt;3\)</span>（有下界），这里单调递减可以推出有下界。</p>
+<p>由上可得，<span class="arithmatex">\(\{a_n\}\)</span> 收敛。记 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=x\)</span>，则 <span class="arithmatex">\(x=\sqrt{6+x}\Rightarrow x=3\)</span>。因此 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=3\)</span>。</p>
+</details>
+</details>
+<ul>
+<li>
+<p><strong>压缩映像法：</strong></p>
+<p>若数列 <span class="arithmatex">\(\{a_n\}\)</span> 极限存在，容易计算出极限为 <span class="arithmatex">\(3\)</span>。
+$$
+|a_{n+1}-3|=|\sqrt{6+a_n}-3|=\frac{|a_n-3|}{\sqrt{6+a_n}+3}\leq \frac 1 3|a_n-3|\leq \cdots\leq \frac{1}{3^n}|a_1-3|
+$$
+因为 <span class="arithmatex">\(|a_1-3|\)</span> 是一个常数，故 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{1}{3^n}|a_1-3|=0\)</span>。由夹逼定理知 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=3\)</span>。</p>
+</li>
+</ul>
+</details>
+<p>设 <span class="arithmatex">\(a_1=4\)</span>，且 <span class="arithmatex">\(a_{n+1}=\sqrt{6-a_n}\)</span>，证明：<span class="arithmatex">\(\lim\limits_{n\to \infty}a_n\)</span> 存在，并计算此极限。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>由于该数列的递推函数 <span class="arithmatex">\(f(x)=\sqrt{6-x}\)</span> 单调递减，容易得到 <span class="arithmatex">\(\{a_{2n-1}\}\)</span> 单调递减，欧数列 <span class="arithmatex">\(\{a_{2n}\}\)</span> 单调递增。利用单调收敛准则会比较麻烦。</p>
+</details>
+<ul>
+<li>
+<p><strong>压缩映像法：</strong></p>
+<p>若数列 <span class="arithmatex">\(\{a_n\}\)</span> 极限存在，容易计算出极限为 <span class="arithmatex">\(2\)</span>。
+$$
+|a_{n+1}-2|=|\sqrt{6-a_n}-2|=\frac{|a_n-2|}{\sqrt{6-a_n}+2}\leq \frac 1 2|a_n-2|\leq \cdots\leq \frac{1}{2^n}|a_1-2|
+$$
+因此 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=2\)</span>。</p>
+</li>
+</ul>
+</details>
+<p>数列 <span class="arithmatex">\(\{a_n\}\)</span> 满足 <span class="arithmatex">\(a_1&gt;0\)</span>，且 <span class="arithmatex">\(a_{n+1}=3+\dfrac{4}{a_n}\)</span>，证明：<span class="arithmatex">\(\lim\limits_{n\to \infty}a_n\)</span> 存在，并计算此极限。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>若 <span class="arithmatex">\(\{a_n\}\)</span> 收敛，则极限为 <span class="arithmatex">\(4\)</span>。但 <span class="arithmatex">\(\{a_n\}\)</span> 整体并非单调，其单调性与首项 <span class="arithmatex">\(a_1\)</span> 的取值有关。</p>
+</details>
+<details class="info">
+<summary>常规方法</summary>
+<ul>
+<li>
+<p><strong>有界：</strong>
+    <span class="arithmatex">\(a_{n+1}-4=\dfrac{4-a_n}{a_n}=\dfrac{4-(3+\frac{4}{a_{n-1}})}{3+\frac{4}{a_{n-1}}}=\dfrac{a_{n-1}-4}{3a_{n-1}+4}\)</span>，则 <span class="arithmatex">\(a_{n+1}-4\)</span> 与 <span class="arithmatex">\(a_{n-1}-4\)</span> 同号。</p>
+<p>若 <span class="arithmatex">\(a_1&gt;4\)</span>，则 <span class="arithmatex">\(a_{2n+1}&gt;4\)</span>，从而 <span class="arithmatex">\(\{a_{2n-1}\}\)</span> 有下界。</p>
+<p>若 <span class="arithmatex">\(a_1&lt;4\)</span>，则 <span class="arithmatex">\(a_{2n+1}&lt;4\)</span>，从而 <span class="arithmatex">\(\{a_{2n-1}\}\)</span> 有上界。</p>
+</li>
+<li>
+<p><strong>单调：</strong></p>
+<p><span class="arithmatex">\(a_{n+1}-a_{n-1}=\dfrac{-3(a_{n-1}+1)(a_{n-1}-4)}{3a_{n-1}+4}\)</span>。</p>
+<p>若 <span class="arithmatex">\(a_1&gt;4\)</span>，则 <span class="arithmatex">\(a_{2n+1}&gt;4\)</span>，故 <span class="arithmatex">\(\{a_{2n-1}\}\)</span> 单调递减且有下界，从而 <span class="arithmatex">\(\{a_{2n-1}\}\)</span> 收敛。</p>
+<p>若 <span class="arithmatex">\(a_1&lt;4\)</span>，则 <span class="arithmatex">\(a_{2+1}&lt;4\)</span>，故 <span class="arithmatex">\(\{a_{2n-1}\}\)</span> 单调递增且有上界，从而 <span class="arithmatex">\(\{a_{2n-1}\}\)</span> 收敛。</p>
+<p>若 <span class="arithmatex">\(a_1=4\)</span>，则 <span class="arithmatex">\(a_n=4\)</span>，<span class="arithmatex">\(\{a_n\}\)</span> 为常数列，显然收敛。</p>
+<p>由 <span class="arithmatex">\(a_{2n+1}-4=\dfrac{4-a_{2n}}{a_{2n}}=\dfrac{a_{2n-1}-4}{3a_{2n-1}+4}\)</span> 可得，<span class="arithmatex">\(\lim\limits_{n\to \infty}a_{2n-1}=4\)</span>。</p>
+<p>又 <span class="arithmatex">\(a_{2n}=3+\dfrac{4}{a_{2n-1}}\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_{2n}=4\)</span>。</p>
+</li>
+</ul>
+<p>因此 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=4\)</span>。</p>
+</details>
+<ul>
+<li>
+<p><strong>压缩映像法：</strong></p>
+<p>易得 <span class="arithmatex">\(n\geq 2\)</span> 时，<span class="arithmatex">\(a_n&gt;3\)</span>。</p>
+<div class="arithmatex">\[
+0&lt;|a_{n+1}-4|=\frac{|a_n-4|}{a_n}&lt;\frac 1 3|a_n-4|&lt;\frac{1}{3^2}|a_{n-1}-4|&lt;\cdots&lt;\frac{1}{3^n}|a_1-4|
+\]</div>
+<p>因为 <span class="arithmatex">\(|a_1-4|\)</span> 是一个常数，故 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{1}{3^n}|a_1-4|=0\)</span>。由夹逼定理知 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=4\)</span>。</p>
+</li>
+</ul>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{n\to\infty}na^n\,(|a|&lt;1)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>记 <span class="arithmatex">\(a_n=na^n\)</span>。</p>
+<p>当 <span class="arithmatex">\(a=0\)</span> 时，<span class="arithmatex">\(\lim\limits_{mn\to \infty}na^n=0\)</span>。</p>
+<p>当 <span class="arithmatex">\(a\neq 0\)</span> 时，<span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{|a_{n+1}|}{|a_n|}=\lim\limits_{n\to \infty}|\dfrac{(n+1)a^{n+1}}{na^n}|=|a|\)</span>，又 <span class="arithmatex">\(0&lt;|a|&lt;1\)</span>，所以 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=0\)</span>，即 <span class="arithmatex">\(\lim\limits_{n\to \infty}na^n=0\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>压缩映像-2：设数列 <span class="arithmatex">\(\{a_n\}\)</span> 满足 <span class="arithmatex">\(|a_{n+1}-a_n|\leq r|a_n-a_{n-1}|\)</span>（<span class="arithmatex">\(n\geq n_0\)</span>，<span class="arithmatex">\(n_0\in\mathbb N^*\)</span>），其中 <span class="arithmatex">\(0&lt;r&lt;1\)</span>，则 <span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
+<details class="note">
+<summary>证明</summary>
+<p>当 <span class="arithmatex">\(n&gt;n_0\)</span> 时，有 <span class="arithmatex">\(|a_{n+1}-a_n|\leq r|a_n-a_{n-1}|\leq \cdots\leq r^{n-n_0}|a_{n_0+1}-a_{n_0}|\)</span>。</p>
+<p>对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，<span class="arithmatex">\(\frac{r^{n-n_0}}{1-r}|a_{n_0+1}-a_{n_0}|&lt;\varepsilon\)</span>。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+|a_{n+p+1}-a_n|&amp;\leq |a_{n+p+1}-a_{n+p}|+|a_{n+p}-a_{n+p-1}|+\cdots+|a_{n+1}-a_n|\\
+&amp;\leq(r^p+r^{p-1}+\cdots+r+1)|a_{n+1}-a_n|\\
+&amp;=\frac{1-r^{p+1}}{1-r}\times |a_{n+1}-a_n|\\
+&amp;=\frac{1}{1-r}\times r^{n-n_0}|a_{n_0+1}-a_{n_0}|\\
+&amp;&lt;\varepsilon
+\end{aligned}
+\]</div>
+<p>根据柯西收敛准则，<span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
+</details>
+</li>
+</ul>
+<h3 id="_5">函数极限<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>函数极限的概念</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>证明 <span class="arithmatex">\(\lim\limits_{x\to 2}\frac{3}{2x-1}=1\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>思路</summary>
+<p><span class="arithmatex">\(|\frac{3}{2x-1}-1|=|\frac{2x-4}{2x-1}|=\frac{2}{|2x-1|}|x-2|&lt;\varepsilon\)</span></p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>要根据 <span class="arithmatex">\(|f(x)-A|&lt;\varepsilon\)</span>，推出 <span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta\)</span> 的 <span class="arithmatex">\(\delta\)</span>。所以要把 <span class="arithmatex">\(|f(x)-A|\)</span> 化出 <span class="arithmatex">\(|x-x_0|\)</span> 的形式。</p>
+</details>
+<p><span class="arithmatex">\(|x-2|&lt;\frac{\varepsilon|2x-1|}{2}\)</span>，但右边不是常数。不妨把邻域框定了！</p>
+<p>不妨假设 <span class="arithmatex">\(1&lt;x&lt;3\)</span>，则 <span class="arithmatex">\(2x-1&gt;1\)</span>，<span class="arithmatex">\(|x-2|&lt;\frac{\varepsilon}{2}\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>可将讨论范围限定在点 <span class="arithmatex">\(x_0\)</span> 的某邻域 <span class="arithmatex">\(\mathring U(x_0,\delta)\)</span>。</p>
+</details>
+</details>
+<p>对 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \delta=\min\{1,\varepsilon\}\)</span>，当 <span class="arithmatex">\(0&lt;|x-2|&lt;\delta\)</span> 时，有 <span class="arithmatex">\(|\frac{3}{2x-1}-1|=\frac{2|x-2|}{|2x-1|}&lt;2|x-2|&lt;\varepsilon\)</span>。</p>
+</details>
+</details>
+<p><span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=A\Leftrightarrow f(x_0-0)=f(x_0+0)=A\)</span></p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<ul>
+<li>
+<p><span class="arithmatex">\(x\to \infty\)</span> 应分为 <span class="arithmatex">\(x\to +\infty\)</span> 和 <span class="arithmatex">\(x\to -\infty\)</span>。</p>
+<p><span class="arithmatex">\(\lim\limits_{x\to \infty}f(x)=A\Leftrightarrow \lim\limits_{x\to -\infty}f(x)=\lim\limits_{x\to +\infty}f(x)=A\)</span></p>
+<p>例如 <span class="arithmatex">\(\lim\limits_{x\to \infty}2^x\)</span> 不存在，因为 <span class="arithmatex">\(\lim\limits_{x\to +\infty}2^x=+\infty\)</span>，<span class="arithmatex">\(\lim\limits_{x\to -\infty}2^x=0\)</span>。</p>
+<p>再例如 <span class="arithmatex">\(\lim\limits_{x\to 0}e^{\frac 1 x}\)</span> 不存在，因为 <span class="arithmatex">\(x\to 0\)</span> 分为 <span class="arithmatex">\(x\to 0+0\)</span> 和 <span class="arithmatex">\(x\to 0-0\)</span>（左右极限），则 <span class="arithmatex">\(\frac 1 x\to \infty\)</span>，也分为 <span class="arithmatex">\(+\infty\)</span> 和 <span class="arithmatex">\(-\infty\)</span>。<span class="arithmatex">\(\lim\limits_{x\to 0-0}e^{\frac 1 x}=0\)</span>，<span class="arithmatex">\(\lim\limits_{x\to 0+0}e^{\frac 1 x}=+\infty\)</span>。</p>
+</li>
+<li>
+<p>分段函数在分界点处的连续性，应按定义分别讨论其左右极限。</p>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p>函数极限的性质：</p>
+<ul>
+<li>唯一性</li>
+<li>局部有界性</li>
+<li>保号性</li>
+<li>不等式性质</li>
+<li>四则运算</li>
+<li>复合函数的极限：<span class="arithmatex">\(\lim_{x \to x_0} f(\varphi(x)) \xlongequal[ \text{当}\, x \to x_0 \,\text{时},\,\varphi(x) \to u_0 ]{\text{令} \, \varphi(x) = u} \lim_{u \to u_0} f(u)\)</span></li>
+</ul>
+</li>
+<li>
+<p>函数极限存在的准则</p>
+<ul>
+<li>
+<p>夹逼定理</p>
+</li>
+<li>
+<p><strong>海涅（Heine）定理（归结原理）</strong></p>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 有定义，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=A/\infty/+\infty/-\infty\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> 对于 <span class="arithmatex">\(\forall\)</span> 以 <span class="arithmatex">\(x_0\)</span> 为极限且含于 <span class="arithmatex">\(\mathring U(x_0)\)</span> 的数列 <span class="arithmatex">\(\{x_n\}\)</span>，都有 <span class="arithmatex">\(\lim\limits_{n\to \infty}f(x_n)=A/\infty/+\infty/-\infty\)</span>。</p>
+<p>即 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=A\Leftrightarrow \forall \{x_n\}\subset \mathring U(x_0)\land \lim\limits_{n\to \infty}x_n=x_0,\lim\limits_{n\to \infty}f(x_n)=A\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>
+<p><span class="arithmatex">\(\Rightarrow\)</span>：</p>
+<p>设 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=A\in\mathbb R\)</span>，则对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \delta&gt;0\)</span>，当 <span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta\)</span> 时，有 <span class="arithmatex">\(|f(x)-A|&lt;\varepsilon\)</span>。</p>
+<p>对 <span class="arithmatex">\(\forall \{x_n\}\subset \mathring U(x_0)\)</span> 且 <span class="arithmatex">\(\lim\limits_{n\to \infty}x_n=x_0\)</span>，对上述 <span class="arithmatex">\(\delta&gt;0\)</span>，<span class="arithmatex">\(\exists N&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|x_n-x_0|&lt;\delta\)</span>，因此 <span class="arithmatex">\(|f(x_n)-A|&lt;\varepsilon\)</span>，从而 <span class="arithmatex">\(\lim\limits_{n\to +\infty}f(x_n)=A\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\Leftarrow\)</span>：</p>
+<p>反证法。若 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)\neq A\)</span>，则 <span class="arithmatex">\(\exists \varepsilon_0&gt;0\)</span>，对 <span class="arithmatex">\(\forall \delta&gt;0\)</span>，<span class="arithmatex">\(\exists x'\in \mathring U(x_0,\delta)\)</span> 使得 <span class="arithmatex">\(|f(x')-A|\geq \varepsilon_0\)</span>。</p>
+<p>取 <span class="arithmatex">\(\delta_1=1\)</span>，则 <span class="arithmatex">\(\exists x_1\in\mathring U(x_0,\delta 1)\)</span> 使得 <span class="arithmatex">\(|f(x_1)-A|\geq\varepsilon_0\)</span>。</p>
+<p>取 <span class="arithmatex">\(\delta_2=\min\{\frac 1 2,|x_0-x_1|\}\)</span>，则 <span class="arithmatex">\(\exists x_2\in\mathring U(x_0,\delta_2)\)</span> 使得 <span class="arithmatex">\(|f(x_2)-A|\geq \varepsilon_0\)</span>。</p>
+<p>……</p>
+<p>依次取 <span class="arithmatex">\(\delta_n=\min\{\frac 1 n,|x_0-x_{n-1}|\}\)</span>，则 <span class="arithmatex">\(\exists x_n\in\mathring U(x_0,\delta_n)\)</span> 使得 <span class="arithmatex">\(|f(x_n)-A|\geq \varepsilon_0\)</span>。</p>
+<p>由此得到数列 <span class="arithmatex">\(\{x_n\}\)</span> 满足 <span class="arithmatex">\(0&lt;|x_n-x_0|&lt;\frac 1 n\)</span> 且 <span class="arithmatex">\(|f(x_n)-A|\geq \varepsilon_0\)</span>。则 <span class="arithmatex">\(\lim\limits_{n\to +\infty}x_n=x_0\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}f(x_n)\neq A\)</span>。与条件矛盾。</p>
+<p>因此 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=A\)</span>。</p>
+</li>
+</ul>
+</details>
+<details class="tip" open="open">
+<summary>用归结原理证明极限不存在</summary>
+<ol>
+<li>
+<p>若存在数列 <span class="arithmatex">\(\{x_n\}\)</span> 且 <span class="arithmatex">\(\lim\limits_{n\to +\infty}x_n=x_0\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}f(x_n)\)</span> 不存在，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)\)</span> 不存在。</p>
+</li>
+<li>
+<p>若存在数列 <span class="arithmatex">\(\{x_n\},\{y_n\}\)</span> 且 <span class="arithmatex">\(\lim\limits_{n\to +\infty}x_n=\lim\limits_{n\to x_0}y_n=x_0\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}f(x_n)\neq \lim\limits_{n\to +\infty}f(y_n)\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)\)</span> 不存在。</p>
+</li>
+</ol>
+</details>
+</li>
+<li>
+<p>单调有界准则</p>
+</li>
+</ul>
+</li>
+<li>
+<p>柯西收敛准则</p>
+</li>
+<li>
+<p>无穷小量</p>
+<ul>
+<li>
+<p>无穷小量的定义：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内有定义且 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=0\)</span>，则称 <span class="arithmatex">\(f(x)\)</span> 为 <span class="arithmatex">\(x\to x_0\)</span> 时的无穷小量，记作 <span class="arithmatex">\(f(x)=o(1)\)</span>。</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>有限个无穷小量的和差积均为无穷小量，但是：</p>
+<ol>
+<li>
+<p>无限个无穷小量的和不一定是无穷小量。如 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac 1 n=0\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to \infty}(\underbrace{\frac 1 n+\frac 1 n+\cdots+\frac 1 n}_{n个})=1\)</span>。</p>
+</li>
+<li>
+<p>无限个无穷小量的乘积不一定是无穷小量。如：</p>
+<p><span class="arithmatex">\(\{a_n^{(1)}\}:1,\frac 1 2,\frac 1 3,\frac 1 4,\cdots,\frac 1 k,\frac 1 {k+1},\cdots\)</span></p>
+<p><span class="arithmatex">\(\{a_n^{(2)}\}:1,2^1,\frac 1 3,\frac 1 4,\cdots,\frac 1 k,\frac{1}{k+1},\cdots\)</span></p>
+<p><span class="arithmatex">\(\{a_n^{(3)}\}:1,1,3^2,\frac 1 4,\cdots,\frac 1 k,\frac{1}{k+1},\cdots\)</span></p>
+<p>……</p>
+<p><span class="arithmatex">\(\{a_n^{(k)}\}:1,1,1,1,\cdots,k^{k-1},\frac{1}{k+1},\cdots\)</span>（前 <span class="arithmatex">\(k-1\)</span> 项都取 <span class="arithmatex">\(1\)</span>，第 <span class="arithmatex">\(k\)</span> 项取 <span class="arithmatex">\(k^{k-1}\)</span>，从第 <span class="arithmatex">\(k+1\)</span> 项开始取 <span class="arithmatex">\(\frac{1}{k+1},\frac{1}{k+2},\cdots\)</span>）</p>
+<p>显然有 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n^{(k)}=0\)</span>，但 <span class="arithmatex">\(a_n^{(1)}a_n^{(2)}\cdots a_n^{(k)}\cdots=1\)</span>，并非无穷小量。</p>
+</li>
+</ol>
+</details>
+</li>
+<li>
+<p>无穷小量与极限之间的关系：<span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=A\Leftrightarrow f(x)=A+\alpha(x)\)</span>，其中 <span class="arithmatex">\(\alpha(x)\)</span> 是 <span class="arithmatex">\(x\to x_0\)</span> 时的无穷小。</p>
+</li>
+<li>
+<p>无穷小量阶的比较：</p>
+<p>设 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=0\)</span>，<span class="arithmatex">\(\lim\limits_{x\to x_0}g(x)=0\)</span>：</p>
+<ol>
+<li>若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=0\)</span>，则称当 <span class="arithmatex">\(x\to x_0\)</span> 时，<span class="arithmatex">\(f(x)\)</span> 是比 <span class="arithmatex">\(g(x)\)</span> 高阶的无穷小量，记作 <span class="arithmatex">\(f(x)=o(g(x)),x\to x_0\)</span>。</li>
+<li>若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=c\neq 0\)</span>，则称当 <span class="arithmatex">\(x\to x_0\)</span> 时，<span class="arithmatex">\(f(x)\)</span> 与 <span class="arithmatex">\(g(x)\)</span> 是同阶的无穷小量，记作 <span class="arithmatex">\(f(x)\sim cg(x),x\to x_0\)</span>。</li>
+<li>若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=1\)</span>，则称当 <span class="arithmatex">\(x\to x_0\)</span> 时，<span class="arithmatex">\(f(x)\)</span> 与 <span class="arithmatex">\(g(x)\)</span> 是等价无穷小量，记作 <span class="arithmatex">\(f(x)\sim g(x),x\to x_0\)</span>。</li>
+<li>若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{[g(x)]^k}=A\neq 0\)</span>，则称当 <span class="arithmatex">\(x\to x_0\)</span> 时，<span class="arithmatex">\(f(x)\)</span> 是 <span class="arithmatex">\(g(x)\)</span> 的 <span class="arithmatex">\(k\,(k&gt;0)\)</span> 阶无穷小量。</li>
+</ol>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>求 <span class="arithmatex">\(x\to 0^+\)</span> 时，无穷小 <span class="arithmatex">\(\sqrt{x+\sqrt{x+\sqrt{x}}}\)</span> 关于 <span class="arithmatex">\(x\)</span> 的阶数。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0^+}\dfrac{\sqrt{x+\sqrt{x+\sqrt x}}}{x^k}=\lim\limits_{x\to 0^+}\sqrt{x^{1-2k}+\sqrt{x^{1-4k}+\sqrt{x^{1-8k}}}}\)</span>，而 <span class="arithmatex">\(\lim\limits_{x\to 0^+}x^{\alpha}=\begin{cases}0&amp;(\alpha&gt;0)\\1&amp;(\alpha=0)\\ \infty&amp;(\alpha&lt;0)\end{cases}\)</span>，又 <span class="arithmatex">\(1-2k&gt;1-4k&gt;1-8k\)</span>，要使极限存在且非零，只能 <span class="arithmatex">\(1-2k&gt;1-4k&gt;1-8k=0\)</span>。故 <span class="arithmatex">\(k=\frac 1 8\)</span>，<span class="arithmatex">\(\lim\limits_{x\to 0^+}\dfrac{\sqrt{x+\sqrt{x+\sqrt x}}}{x^k}=1\)</span>。</p>
+<p>因此，<span class="arithmatex">\(x\to 0^+\)</span> 时，无穷小 <span class="arithmatex">\(\sqrt{x+\sqrt{x+\sqrt x}}\)</span> 关于 <span class="arithmatex">\(x\)</span> 的阶数为 <span class="arithmatex">\(\frac 1 8\)</span>。</p>
+</details>
+</details>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>无穷小量的和，其阶数就低不就高。</p>
+<p>如 <span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\(x+x^2\)</span> 为 <span class="arithmatex">\(1\)</span> 阶无穷小量，而非 <span class="arithmatex">\(2\)</span> 阶无穷小量，因为 <span class="arithmatex">\(\lim\limits_{x\to 0}\frac{x+x^2}{x}=1\)</span>，而 <span class="arithmatex">\(\lim\limits_{x\to 0}\frac{x+x^2}{x^2}=\infty\)</span>。</p>
+</details>
+<p><span class="arithmatex">\(o(1)\pm o(1)=o(1)\)</span>，<span class="arithmatex">\(o(x^n)+o(x^m)=o(x^{\min(n,m)})\)</span>，<span class="arithmatex">\(o(x^m)o(x^n)=o(x^{m+n})\,(m&gt;0,n&gt;0)\)</span>。</p>
+</li>
+<li>
+<p>无穷小量的等价替换：</p>
+<p>当 <span class="arithmatex">\(x\to x_0\)</span> 时，<span class="arithmatex">\(\alpha(x),\beta(x),\alpha'(x),\beta'(x)\)</span> 均为无穷小量，且 <span class="arithmatex">\(\alpha(x)\sim\alpha'(x)\)</span>，<span class="arithmatex">\(\beta(x)\sim\beta'(x)\)</span>，若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{\alpha'(x)}{\beta'(x)}=A\in\mathbb R\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{\alpha(x)}{\beta(x)}=A\)</span>。</p>
+<details class="note" open="open">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{\alpha(x)}{\beta(x)}=\lim\limits_{x\to x_0}\frac{\alpha(x)}{\alpha'(x)}\cdot\frac{\alpha'(x)}{\beta'(x)}\cdot\frac{\beta'(x)}{\beta(x)}=\lim\limits_{x\to x_0}\frac{\alpha'(x)}{\beta'(x)}=A\)</span></p>
+</details>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(x\to 0\)</span> 时，常见的等价无穷小量：</p>
+<p><span class="arithmatex">\(\sin x\sim \tan x\sim \arcsin x\sim \arctan x\sim x\)</span></p>
+<p><span class="arithmatex">\(1-\cos x\sim\frac{x^2}{2}\)</span></p>
+<p><span class="arithmatex">\(\ln(1+x)\sim e^x-1\sim x\)</span></p>
+<p><span class="arithmatex">\((1+x)^{\alpha}-1\sim \alpha x\)</span></p>
+<details class="note" open="open">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{\ln(1+x)}{x}=\lim\limits_{x\to 0}\ln(1+x)^{\frac 1 x}=\ln(\lim\limits_{x\to 0}(1+x)^{\frac 1 x})=\ln e=1\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{e^x-1}{x}\xlongequal{e^x-1=t}\lim\limits_{t\to 0}\frac{t}{\ln(1+t)}=1\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{(1+x)^{\alpha}-1}{x}=\lim\limits_{x\to 0}\frac{e^{\alpha\ln(1+x)}-1}{x}=\lim\limits_{x\to 0}\frac{\alpha\ln(1+x)}{x}=\alpha\)</span></p>
+</details>
+<p><span class="arithmatex">\(a^x-1=e^{x\ln a}-1\sim x\ln a\)</span>（<span class="arithmatex">\(a&gt;0\)</span>）</p>
+<p><span class="arithmatex">\(\log_a(1+x)=\frac{\ln(1+x)}{\ln a}\sim\frac{x}{\ln a}\)</span>（<span class="arithmatex">\(a&gt;0\)</span> 且 <span class="arithmatex">\(a\neq 1\)</span>）</p>
+<ul>
+<li>当 <span class="arithmatex">\(x\to 1\)</span> 时，<span class="arithmatex">\(\ln x=\ln(1+(x-1))\sim x-1\)</span>。 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>无穷大量</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内有定义，且对 <span class="arithmatex">\(\forall M&gt;0\)</span>，<span class="arithmatex">\(\exists \delta&gt;0\)</span>，当 <span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta\)</span> 时恒有 <span class="arithmatex">\(|f(x)|&gt;M\)</span>，则称 <span class="arithmatex">\(f(x)\)</span> 为 <span class="arithmatex">\(x\to x_0\)</span> 时的无穷大量。</p>
+<details class="info" open="open">
+<summary>无穷大量与无界量</summary>
+<p>对 <span class="arithmatex">\(x_0\)</span> 无论多么小的空心邻域 <span class="arithmatex">\(\mathring U(x_0)\)</span>，对 <span class="arithmatex">\(\forall M&gt;0\)</span>，<span class="arithmatex">\(\exists x'\in\mathring U(x_0)\)</span>，<span class="arithmatex">\(|f(x')|&gt;M\)</span>，则称 <span class="arithmatex">\(f(x)\)</span> 为 <span class="arithmatex">\(x\to x_0\)</span> 的无界量。</p>
+<p>无界只要邻域内存在一个 <span class="arithmatex">\(&gt;M\)</span> 就行，而无穷大量要邻域内任意都 <span class="arithmatex">\(&gt;M\)</span>。</p>
+<p>如 <span class="arithmatex">\(f(x)=\begin{cases}\frac 1 x\sin \frac 1 x&amp;(x\neq 0)\\0&amp;(x=0)\end{cases}\)</span>，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 的邻域内无界但不是无穷大量。（取 <span class="arithmatex">\(x_n=\frac{1}{2n\pi}\)</span>，<span class="arithmatex">\(f(x_n)=0\)</span>，邻域内散布着很多值为 <span class="arithmatex">\(0\)</span> 的点，不满足邻域内任意都 <span class="arithmatex">\(&gt;M\)</span>，所以不是 <span class="arithmatex">\(x\to 0\)</span> 时的无穷大量）</p>
+</details>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>有限个/无限个 无穷大量的和不一定是无穷大量（无穷大量包含 <span class="arithmatex">\(+\infty\)</span> 和 <span class="arithmatex">\(-\infty\)</span>，可能相互抵消）。</p>
+<p>有限个无穷大量的乘积一定是无穷大量。</p>
+<p>无限个无穷大量的乘积不一定是无穷大量。</p>
+<p>如：</p>
+<p><span class="arithmatex">\(\{a_n^{(1)}\}:1,2,3,4,\cdots,k,k+1,\cdots\)</span></p>
+<p><span class="arithmatex">\(\{a_n^{(2)}\}:1,\frac 1 {2^1},3,4,\cdots,k,k+1,\cdots\)</span></p>
+<p><span class="arithmatex">\(\{a_n^{(3)}\}:1,1,\frac{1}{3^2},4,\cdots,k,k+1,\cdots\)</span></p>
+<p>……</p>
+<p><span class="arithmatex">\(\{a_n^{(k)}\}:1,1,1,1,\cdots,\frac{1}{k^{k-1}},k+1,\cdots\)</span>（前 <span class="arithmatex">\(k-1\)</span> 项取 <span class="arithmatex">\(1\)</span>，第 <span class="arithmatex">\(k\)</span> 项取 <span class="arithmatex">\(\frac{1}{k^{k-1}}\)</span>，从第 <span class="arithmatex">\(k+1\)</span> 项开始取 <span class="arithmatex">\(k+1,k+2,\cdots\)</span>）</p>
+<p>显然有 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n^{(k)}=+\infty\)</span>，但 <span class="arithmatex">\(a_n^{(1)}a_n^{(2)}\cdots a_n^{(k)}\cdots=1\)</span>，并非无穷大量。</p>
+</details>
+</li>
+<li>
+<p>无穷大量阶的比较：</p>
+<p>设 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=\infty\)</span>，<span class="arithmatex">\(\lim\limits_{x\to x_0}g(x)=\infty\)</span>：</p>
+<ol>
+<li>
+<p>若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=0\)</span>，则称当 <span class="arithmatex">\(x\to x_0\)</span> 时，<span class="arithmatex">\(f(x)\)</span> 是比 <span class="arithmatex">\(g(x)\)</span> 的低阶的无穷大量，或 <span class="arithmatex">\(g(x)\)</span> 是比 <span class="arithmatex">\(f(x)\)</span> 高阶的无穷大量。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=c\neq 0\)</span>，则称当 <span class="arithmatex">\(x\to x_0\)</span> 时，<span class="arithmatex">\(f(x)\)</span> 与 <span class="arithmatex">\(g(x)\)</span> 是同阶的无穷大量。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=1\)</span>，则称当 <span class="arithmatex">\(x\to x_0\)</span> 时，<span class="arithmatex">\(f(x)\)</span> 与 <span class="arithmatex">\(g(x)\)</span> 是等价无穷大量。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="_6">函数的连续性<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>函数连续的概念</p>
+<ul>
+<li>
+<p>函数在一点连续的定义</p>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续的定义：</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 内有定义，且 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=f(x_0)\)</span>。</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>如果没有 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续的条件，那么 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)\)</span> 与 <span class="arithmatex">\(f(x_0)\)</span> 没有任何关系！</p>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 内有定义，且对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \delta&gt;0\)</span>，当 <span class="arithmatex">\(|x-x_0|&lt;\delta\)</span> 时，有 <span class="arithmatex">\(|f(x)-f(x_0)|&lt;\varepsilon\)</span>。</p>
+</li>
+<li><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 内有定义，且 <span class="arithmatex">\(\lim_{\Delta x\to 0}\Delta  y=0\)</span>，其中 <span class="arithmatex">\(\Delta y=f(x_0+\Delta x)-f(x_0)\)</span>（称此为 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处的增量）。</li>
+</ol>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>函数 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=f(x_0)=f(\lim\limits_{x\to x_0}x)\)</span>。即极限符号与函数符号之间可以交换次序。</p>
+</details>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>若函数 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处不连续，则上述结论不成立。</p>
+<p>如存在有理点列 <span class="arithmatex">\(\{q_n\}\)</span> 满足 <span class="arithmatex">\(\lim\limits_{n\to +\infty}q_n=\sqrt 2\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}D(q_n)=1\)</span>，<span class="arithmatex">\(D(\lim\limits_{n\to q_n})=D(\sqrt 2)=0\)</span>，此时 <span class="arithmatex">\(\lim\limits_{n\to+\infty}D(q_n)\neq D(\lim\limits_{n\to +\infty}q_n)\)</span>（其中 <span class="arithmatex">\(D(x)\)</span> 为狄利克雷函数）。</p>
+</details>
+</li>
+<li>
+<p>函数在区间上连续的定义</p>
+</li>
+<li>
+<p>间断点：</p>
+<ol>
+<li>
+<p>第一类间断点：<span class="arithmatex">\(f(x_0+0)\)</span> 与 <span class="arithmatex">\(f(x_0-0)\)</span> 都存在。</p>
+<ul>
+<li>可去间断点：<span class="arithmatex">\(f(x_0+0)=f(x_0-0)\)</span> 但 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处无定义或 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)\neq f(x_0)\)</span>；</li>
+<li>跳跃间断点：<span class="arithmatex">\(f(x_0+0)\neq f(x_0-0)\)</span>。<span class="arithmatex">\(|f(x_0+0)-f(x_0-0)|\)</span> 称为跳跃度。</li>
+</ul>
+</li>
+<li>
+<p>第二类间断点：<span class="arithmatex">\(f(x_0+0)\)</span> 与 <span class="arithmatex">\(f(x_0-0)\)</span> 至少有一个不存在。</p>
+</li>
+</ol>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}(\frac{e^{\frac 1 x}+2}{e^{\frac 2 x}+1}+\frac{\sin x}{|x|})\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>（1）<span class="arithmatex">\(\lim\limits_{x\to 0+0}\dfrac{e^{\frac 1 x}+2}{e^{\frac 2 x}+1}\xlongequal{\frac 1 x=t}\lim\limits_{t\to +\infty}\dfrac{e^t+2}{e^{2t}+1}=\lim\limits_{t\to +\infty}\dfrac{e^{-t}+2e^{-2t}}{1+e^{-t}}=0\)</span>，<span class="arithmatex">\(\lim\limits_{x\to 0+0}\dfrac{\sin x}{|x|}=1\)</span>。</p>
+<p>（2）<span class="arithmatex">\(\lim\limits_{x\to 0-0}\dfrac{e^{\frac 1 x}+2}{e^{\frac 2 x}+1}=2\)</span>，<span class="arithmatex">\(\lim\limits_{x\to 0-0}\dfrac{\sin x}{|x|}=\lim\limits_{x\to 0-0}\dfrac{\sin x}{-x}=-1\)</span>。</p>
+<p>故 <span class="arithmatex">\(\lim\limits_{x\to 0+0}(\dfrac{e^{\frac 1 x}+2}{e^{\frac 2 x}+1}+\dfrac{\sin x}{|x|})=\lim\limits_{x\to 0-0}(\dfrac{e^{\frac 1 x}+2}{e^{\frac 2 x}+1}+\dfrac{\sin x}{|x|})=1\)</span>，从而 <span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac{e^{\frac 1 x}+2}{e^{\frac 2 x}+1}+\dfrac{\sin x}{|x|})=1\)</span>。</p>
+</details>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>函数间断点要分别计算其左右极限。</p>
+</details>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>函数连续的局部性质</p>
+<ul>
+<li>四则运算</li>
+<li>复合函数的连续性</li>
+</ul>
+</li>
+<li>
+<p>闭区间上连续函数的性质</p>
+<ul>
+<li>有界性定理</li>
+<li>最大最小值定理</li>
+<li>根的存在定理（零点定理）</li>
+<li>介值定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上最大值为 <span class="arithmatex">\(M\)</span>、最小值为 <span class="arithmatex">\(m\)</span>，则 <span class="arithmatex">\(\forall \eta\in(m,M)\)</span>，都 <span class="arithmatex">\(\exists x\in[a,b]\)</span> 使得 <span class="arithmatex">\(f(x)=\eta\)</span>。</li>
+<li>一致连续性</li>
+</ul>
+</li>
+<li>
+<p>初等函数在其定义域上的连续性</p>
+<ul>
+<li>
+<p>单调函数的连续性</p>
+</li>
+<li>
+<p>反函数的连续性</p>
+</li>
+<li>
+<p>基本初等函数的连续性</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>证明：函数 <span class="arithmatex">\(f(x)=\sin x\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上连续。</p>
+<details class="note">
+<summary>解答</summary>
+<p>对 <span class="arithmatex">\(\forall x_0\in \mathbb R\)</span>，<span class="arithmatex">\(|\sin x-\sin x_0|=2|\cos\frac{x+x_0}{2}\sin\frac{x-x_0}{2}|\leq 2|\frac{x-x_0}{2}|=|x-x_0|\)</span>。因此，对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \delta=\varepsilon\)</span>，当 <span class="arithmatex">\(|x-x_0|&lt;\delta\)</span> 时，有 <span class="arithmatex">\(|f(x)-f(x_0)|=|\sin x-\sin x_0|\leq |x-x_0|&lt;\varepsilon\)</span>。因此 <span class="arithmatex">\(f(x)=\sin x\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续，从而 <span class="arithmatex">\(f(x)=\sin x\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上连续。</p>
+</details>
+<p>证明：函数 <span class="arithmatex">\(f(x)=\cos x\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上连续。</p>
+<details class="note">
+<summary>解答</summary>
+<p>对 <span class="arithmatex">\(\forall x_0\in \mathbb R\)</span>，<span class="arithmatex">\(|\cos x-\cos x_0|=2|\sin\frac{x+x_0}{2}\sin\frac{x-x_0}{2}|\leq 2|\frac{x-x_0}{2}|\leq |x-x_0|\)</span>。因此，对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \delta=\varepsilon\)</span>，当 <span class="arithmatex">\(|x-x_0|&lt;\delta\)</span> 时，有 <span class="arithmatex">\(|f(x)-f(x_0)|=|\cos x-\cos x_0|\leq |x-x_0|&lt;\varepsilon\)</span>。因此 <span class="arithmatex">\(f(x)=\cos x\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续，从而 <span class="arithmatex">\(f(x)=\cos x\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上连续。</p>
+</details>
+<p>证明：函数 <span class="arithmatex">\(f(x)=e^x\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上连续。</p>
+<details class="note">
+<summary>解答</summary>
+<p>【下证 <span class="arithmatex">\(f(x)=e^x\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(f(x)=e^x\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续】</p>
+<p>若 <span class="arithmatex">\(f(x)=e^x\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续，则 <span class="arithmatex">\(\lim_{x\to 0}e^x=1\)</span>。对 <span class="arithmatex">\(\forall x_0\in \mathbb R\)</span>，有 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=\lim\limits_{x\to x_0}e^x=\lim\limits_{x\to x_0}e^{x_0}\cdot e^{x-x_0}\xlongequal{x-x_0=t}e^{x_0}\lim\limits_{t\to 0}e^t=e^{x_0}\)</span>，则 <span class="arithmatex">\(f(x)=e^x\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续。</p>
+<p>【下证 <span class="arithmatex">\(f(x)=e^x\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续】</p>
+<p><span class="arithmatex">\(|e^x-1|&lt;\varepsilon\)</span>，<span class="arithmatex">\(1-\varepsilon&lt;e^x&lt;1+\varepsilon\)</span>，<span class="arithmatex">\(\ln(1-\varepsilon)&lt;x&lt;\ln(1+\varepsilon)\)</span>（令 <span class="arithmatex">\(\varepsilon&lt;1\)</span>），<span class="arithmatex">\(-\ln\frac{1}{1-\varepsilon}&lt;x&lt;\ln(1+\varepsilon)\)</span>，而 <span class="arithmatex">\(\ln\frac{1}{1-\varepsilon}&gt;\ln(1+\varepsilon)\)</span>，所以可以取 <span class="arithmatex">\(\delta=\min\{\ln\frac{1}{1-\varepsilon},\ln(1+\varepsilon)\}=\ln(1+\varepsilon)\)</span>。</p>
+<p><span class="arithmatex">\(\forall \varepsilon\in(0,1)\)</span>，<span class="arithmatex">\(\exists \delta-\ln(1+\varepsilon)\)</span>，当 <span class="arithmatex">\(|x-0|&lt;\delta\)</span> 时，有 <span class="arithmatex">\(|f(x)-f(0)|=|e^x-1|&lt;\varepsilon\)</span>。故 <span class="arithmatex">\(f(x)=e^x\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续。从而 <span class="arithmatex">\(f(x)=e^x\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上连续。</p>
+</details>
+</details>
+</li>
+<li>
+<p>所有初等函数都是连续函数</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1">重要极限 1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{\sin x}{x}=1\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>当 <span class="arithmatex">\(x\in(0,\frac{\pi}{2})\)</span>，<span class="arithmatex">\(\sin x&lt;x&lt;\tan x\)</span>。故 <span class="arithmatex">\(1&lt;\frac{x}{\sin x}&lt;\frac{1}{\cos x}\Rightarrow \cos x&lt;\frac{\sin x}{x}&lt;1\)</span>。</p>
+<p>又 <span class="arithmatex">\(0\leq 1-\cos x=2\sin^2\frac x 2\leq \frac 1 2 x^2\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to  0}\cos x=1\)</span>，从而 <span class="arithmatex">\(\lim\limits_{x\to 0+0}\frac{\sin x}x=1\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>证明 <span class="arithmatex">\(\lim\limits_{x\to x_0}\cos x=\cos x_0\)</span>：</p>
+<p><span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \delta=\varepsilon\)</span>，当 <span class="arithmatex">\(x\in \mathring U(x_0,\delta)\)</span> 时，<span class="arithmatex">\(|\cos x-\cos x_0|=|2\sin\frac{x+x_0}{2}\sin\frac{x-x_0}{2}|\leq |2\sin\frac{x-x_0}{2}|\leq |x-x_0|&lt;\varepsilon\)</span>。</p>
+</details>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0-0}\frac{\sin x}{x}\xlongequal{x=-u}\lim\limits_{u\to 0+0} \frac{\sin(-u)}{-u}=\lim\limits_{u\to 0+0}\frac{\sin u}{u}=1\)</span>。</p>
+<p>所以 <span class="arithmatex">\(\lim\limits_{x\to 0}\frac{\sin x}x=1\)</span>。</p>
+</details>
+<details class="example" open="open">
+<summary>例题</summary>
+<p><span class="arithmatex">\(\lim\limits_{x\to\infty}x\sin\frac{a}{x}\xlongequal{\frac 1 x=t}=\lim\limits_{t\to 0}\frac{\sin at}{t}=\lim\limits_{t\to 0}a\frac{\sin at}{at}=a\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{\tan x}{x}=\lim\limits_{x\to 0}\frac{\sin x}{x}\cdot\frac{1}{\cos x}=1\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{\arcsin x}{x}\xlongequal{\arcsin x=t}\lim\limits_{t\to 0}\frac t{\sin t}=1\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{\arctan x}{x}=1\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{\sin ax}{\tan bx}=\lim\limits_{x\to 0}\frac{\sin ax}{ax}\cdot\frac{bx}{\tan bx}\cdot \frac{ax}{bx}=\frac a b\,(b\neq 0)\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{1-\cos x}{x^2}=\lim\limits_{x\to 0}\frac{2\sin^2\frac x 2}{x^2}=\lim\limits_{x\to 0}\frac{2\sin^2\frac x 2}{2(\frac x 2)^2}\cdot\frac 1 2=\frac 1 2\)</span></p>
+<p>（法 2：<span class="arithmatex">\(=\lim\limits_{x\to 0}\frac{(1-\cos x)(1+\cos x)}{x^2(1+\cos x)}=\lim\limits_{x\to 0}\frac{\sin^2 x}{x^2(1+\cos x)}=\lim\limits_{x\to 0}\frac{\sin^2 x}{2x^2}=\frac 1 2\lim\limits_{x\to 0}(\frac{\sin x}{x})^2=\frac 1 2\)</span>）</p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{\cos ax-\cos bx}{x^2}=\lim\limits_{x\to 0}\frac{(\cos ax-1)+(1-\cos bx)}{x^2}=\lim\limits_{x\to 0}\frac{\cos ax-1}{x^2}+\lim\limits_{x\to 0}\frac{1-\cos bx}{x^2}=\frac {-a^2+b^2} 2\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{\tan x-\sin x}{x^3}=\lim\limits_{x\to 0}\frac{\tan x(1-\cos x)}{x^3}=\lim\limits_{x\to 0}\frac{\tan x}{x}\cdot\frac{1-\cos x}{x^2}=\frac 1 2\)</span></p>
+</details>
+<h3 id="2">重要极限 2<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h4 id="_7">数列形式<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>设 <span class="arithmatex">\(a_n=(1+\frac 1 n)^n\)</span>，证明：数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
+<details class="note">
+<summary>解答</summary>
+<ol>
+<li>
+<p><strong>证明单调：</strong></p>
+<ul>
+<li>
+<p><strong>法 1：</strong>二项式定理展开</p>
+<p><span class="arithmatex">\(a_n=\sum_{k=0}^n \binom{n}{k} (\frac{1}{n})^k=\sum_{k=0}^n \frac{n(n-1)\cdots(n-k+1)}{k!}\cdot\frac{1}{n^k}=\sum_{k=0}^n\frac{1}{k!}(1-\frac 1 n)(1-\frac{2}n)\cdots(1-\frac{k-1}{n})\)</span></p>
+<p><span class="arithmatex">\(a_{n+1}=\sum_{k=0}^{n+1}\frac{1}{k!}(1-\frac{1}{n+1})(1-\frac{2}{n+1})\cdots(1-\frac{k-1}{n+1})\)</span>，<span class="arithmatex">\(k\in[0,n]\)</span> 时 <span class="arithmatex">\(a_n\)</span> 每一项都小于 <span class="arithmatex">\(a_{n+1}\)</span> 每一项，<span class="arithmatex">\(k=n+1\)</span> 时 <span class="arithmatex">\(a_{n+1}\)</span> 那一项 <span class="arithmatex">\(&gt;0\)</span>，所以 <span class="arithmatex">\(a_n&lt;a_{n+1}\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong>均值不等式</p>
+<p><span class="arithmatex">\(a_n=(1+\frac 1 n)^n\times 1&lt;(\frac{n(1+\frac 1 n)+1}{n+1})^{n+1}=(1+\frac{1}{n+1})^{n+1}=a_{n+1}\)</span>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>证明有界：</strong></p>
+<ul>
+<li>
+<p><strong>法 1：</strong>放缩成等比，<span class="arithmatex">\(a_n&lt;\sum_{k=0}^n\frac{1}{k!}&lt;1+1+\sum_{k=2}^n\frac{1}{2^{k-1}}&lt;3\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\(n!\geq 2^{n-1}\)</span>。</p>
+</details>
+</li>
+<li>
+<p><strong>法 2：</strong>放缩成裂项，<span class="arithmatex">\(a_n&lt;\sum_{k=0}^n\frac{1}{k!}&lt;1+1+\sum_{k=2}^n\frac{1}{(k-1)k}=3-\frac 1 n&lt;3\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\(n!\geq (n-1)n\)</span>。</p>
+</details>
+</li>
+<li>
+<p><strong>法 3：</strong>均值不等式，<span class="arithmatex">\(a_n=4\times((1+\frac 1 n)^n\times \frac 1 2\times \frac 1 2)&lt;4\times (\frac{n(1+\frac 1 n)+\frac 1 2+\frac 1 2}{n+2})^{n+2}=4\)</span>。</p>
+</li>
+<li>
+<p><strong>法 4：</strong>记 <span class="arithmatex">\(b_n=(1+\frac 1 n)^{n+1}\)</span>。</p>
+<p><span class="arithmatex">\(b_n=(1+\frac 1 n)^{n+1}\times 1&lt;(\frac{(n+1)(1+\frac 1 n)+1}{n+2})^{n+2}\)</span> 算起来麻烦。</p>
+<p>取倒数，<span class="arithmatex">\(\frac 1 {b_n}=(\frac n{n+1})^{n+1}\cdot 1&lt;(\frac{(n+1)\frac{n}{n+1}+1}{n+2})^{n+2}=(\frac{n+1}{n+2})^{n+2}=\frac{1}{(1+\frac{1}{n+1})^{n+2}}=\frac{1}{b_{n+1}}\)</span>，则 <span class="arithmatex">\(\{b_n\}\)</span> 单调递减。</p>
+<p>则 <span class="arithmatex">\(2=a_1\leq a_n&lt;a_{n+1}&lt;b_{n+1}&lt;b_n\leq b_1=4\)</span>。</p>
+</li>
+</ul>
+</li>
+</ol>
+</details>
+<details class="info">
+<summary>拓展：调和级数</summary>
+<p>设 <span class="arithmatex">\(a_n=1+\frac 1 2+\cdots+\frac 1 n-\ln n\)</span>。证明：数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
+<details class="note">
+<summary>解答</summary>
+<p>(1) 由于 <span class="arithmatex">\((1+\frac 1 n)^n&lt;e&lt;(1+\frac 1 n)^{n+1}\)</span>，则 <span class="arithmatex">\(\frac 1{n+1}&lt;\ln(1+\frac 1 n)&lt;\frac 1 n\)</span>。</p>
+<p><span class="arithmatex">\(\sum_{k=1}^n\frac 1 {k+1}&lt;\sum_{k=1}^n\ln(1+\frac 1 k)&lt;\sum_{k=1}^n\frac 1 k\)</span></p>
+<p><span class="arithmatex">\(\frac 1 2+\cdots+\frac{1}{n+1}&lt;\ln(1+n)&lt;1+\frac 1 2+\cdots+\frac 1 n\)</span></p>
+<p><span class="arithmatex">\(1+\frac 1 2+\cdots+\frac 1{n+1}&lt;\ln(1+n)+1\)</span></p>
+<p>则 <span class="arithmatex">\(\ln(n+1)&lt;1+\frac 1 2+\cdots+\frac 1 n&lt;1+\ln n\)</span>。</p>
+<p>(2) <span class="arithmatex">\(a_{n+1}-a_n=\frac{1}{n+1}-\ln(n+1)+\ln n=\frac{1}{n+1}-\ln(1+\frac 1 n)&lt;0\)</span>，则 <span class="arithmatex">\(\{a_n\}\)</span> 单调递减。</p>
+<p>又 <span class="arithmatex">\(a_n=1+\frac 1 2+\cdots+\frac 1 n-\ln n&gt;\ln(n+1)-\ln n&gt;0\)</span>，则 <span class="arithmatex">\(\{a_n\}\)</span> 有下界。</p>
+<p>则数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛。该数列的极限记为 <span class="arithmatex">\(\gamma\)</span>，称为欧拉常数，<span class="arithmatex">\(\gamma=0.5772\cdots\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>当 <span class="arithmatex">\(x&gt;0\)</span> 时，<span class="arithmatex">\(\frac{x}{1+x}&lt;\ln(1+x)&lt;x\)</span>。将 <span class="arithmatex">\(x=\frac 1 n\)</span> 代入有 <span class="arithmatex">\(\frac{1}{n+1}&lt;\ln(1+\frac 1 n)&lt;\frac 1 n\)</span>。</p>
+</details>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\((1+\frac 1 n)^n&lt;e&lt;(1+\frac 1 n)^{n+1}\)</span></p>
+<p><span class="arithmatex">\(\frac{1}{n+1}&lt;\ln(1+\frac 1 n)&lt;\frac 1 n\)</span></p>
+<p><span class="arithmatex">\(\ln(n+1)&lt;1+\frac 1 2+\cdots+\frac 1 n&lt;1+\ln n\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{n\to+\infty}\frac{1+\frac 1 2+\cdots+\frac 1 n}{\ln n}=1\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{n\to +\infty}(1+\frac 1 2+\cdots+\frac 1 n-\ln n)=\gamma=0.57721\cdots\)</span>（欧拉常数）</p>
+</details>
+<p>证明：<span class="arithmatex">\(\lim\limits_{n\to +\infty}(\frac{1}{n+1}+\frac{1}{n+2}+\cdots+\frac{1}{n+n})=\ln 2\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=(1+\frac 1 2+\cdots+\frac 1 n+\frac{1}{n+1}+\cdots+\frac{1}{2n})-(1+\frac 1 2+\cdots+\frac 1 n)=H_{2n}-H_n=\ln 2\)</span>。</p>
+</details>
+<p>证明：<span class="arithmatex">\(\lim\limits_{n\to +\infty}(1-\frac 1 2+\frac 1 3-\frac 1 4+\cdots+(-1)^{n-1}\frac 1 n)=\ln 2\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=(1+\frac 1 2+\cdots+\frac 1 n)-2(\frac 1 2+\frac 1 4+\cdots+\frac{1}{2[\frac n 2]})=H_n-H_{[\frac n 2]}\)</span></p>
+</details>
+</details>
+<h4 id="_8">函数形式<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(\lim\limits_{x\to \infty}(1+\frac 1 x)^x=e\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>当 <span class="arithmatex">\(x&gt;0\)</span> 时，有 <span class="arithmatex">\((1+\frac{1}{[x]+1})^{[x]}&lt;(1+\frac 1 x)^x&lt;(1+\frac{1}{[x]})^{[x]+1}\)</span>，而 <span class="arithmatex">\(\lim\limits_{x\to +\infty}(1+\frac{1}{[x]+1})^{[x]}=e=\lim\limits_{x\to +\infty}(1+\frac{1}{[x]})^{[x]+1}\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to \infty}(1+\frac 1 x)^x=e\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>在数列极限中已证 <span class="arithmatex">\(\lim\limits_{n\to \infty}(1+\frac 1 n)^n=e\)</span>。</p>
+<p><span class="arithmatex">\(\lim\limits_{n\to +\infty}(1+\frac{1}{n+1})^n=\lim\limits_{n\to+\infty}(1+\frac{1}{n+1})^{n+1}\cdot(1+\frac{1}{n+1})^{-1}=e\)</span>。</p>
+<p><span class="arithmatex">\(\lim\limits_{n\to+\infty}(1+\frac 1 n)^{n+1}=\lim\limits_{n\to +\infty}(1+\frac 1 n)^n\cdot(1+\frac 1 n)=e\)</span>。</p>
+</details>
+<p>当 <span class="arithmatex">\(x&lt;0\)</span> 时，<span class="arithmatex">\(\lim\limits_{x\to -\infty}(1+\frac 1 x)^x\xlongequal{x=-t}\lim\limits_{t\to+\infty}(1-\frac 1 t)^{-t}=\lim\limits_{t\to +\infty}(\frac t{t-1})^t=\lim\limits_{t\to \infty}(1+\frac{1}{t-1})^{t-1}\cdot(1+\frac{1}{t-1})=e\)</span>。</p>
+</details>
+<h4 id="1infty"><span class="arithmatex">\(1^{\infty}\)</span> 型极限<a class="headerlink" href="#1infty" title="Permanent link">&para;</a></h4>
+<p>设 <span class="arithmatex">\(\lim\limits_{x\to a}f(x)=0\)</span>，<span class="arithmatex">\(\lim\limits_{x\to a}g(x)=\infty\)</span>，且 <span class="arithmatex">\(\lim\limits_{x\to a}f(x)g(x)=A\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to a}(1+f(x))^{g(x)}=\lim\limits_{x\to a}[(1+f(x))^{\frac 1 {f(x)}}]^{f(x)g(x)}=e^{A}\)</span>。</p>
+<details class="example">
+<summary>例题</summary>
+<details class="example">
+<summary>例 1</summary>
+<div class="arithmatex">\[
+\lim\limits_{n\to +\infty}(\frac{3n+2}{3n+5})^{2n-1}=\lim\limits_{n\to +\infty}(1+\frac{-3}{3n+5})^{\frac{3n+5}{-3}\cdot\frac{-3(2n-1)}{3n+5}}=e^{-2}
+\]</div>
+</details>
+<details class="example">
+<summary>例 2</summary>
+<p>分子有理化</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lim\limits_{n\to +\infty}(\sqrt{n^2+2n}-n)^n
+&amp;=\lim\limits_{n\to +\infty}(\frac{2n}{\sqrt{n^2+2n}+n})^n\\
+&amp;=\lim\limits_{n\to +\infty}(1+\frac{n-\sqrt{n^2+2n}}{\sqrt{n^2+2n}+n})^n\\
+&amp;=\lim\limits_{n\to +\infty}(1+\frac{-2n}{(\sqrt{n^2+2n}+n)^2})^n\\
+&amp;=\lim\limits_{n\to +\infty}(1+\frac{-2n}{(\sqrt{n^2+2n}+n)^2})^{\frac{(\sqrt{n^2+2n}+n)^2}{-2n}\cdot\frac{-2n^2}{(\sqrt{n^2+2n}+n)^2}}\\
+&amp;=e^{-\frac 1 2}
+\end{aligned}
+\]</div>
+</details>
+<details class="example">
+<summary>例 3</summary>
+<div class="arithmatex">\[
+\lim\limits_{x\to \infty}(\sqrt{\cos\frac 1 x})^{x^2}\xlongequal{\frac 1 x=t}\lim\limits_{t\to 0}(\cos t)^{\frac{1}{2t^2}}=\lim\limits_{t\to 0}(1+(\cos t-1))^{\frac{1}{\cos t-1}\cdot\frac{\cos t-1}{2t^2}}=e^{-\frac 1 4}
+\]</div>
+</details>
+</details>
+<h2 id="_9">拓展<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Stolz 定理</p>
+<p>若 <span class="arithmatex">\(\{b_n\}\)</span> 严格递增且 <span class="arithmatex">\(\lim\limits_{n\to \infty}b_n=+\infty\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{a_n}{b_n}=\lim\limits_{n\to \infty}\frac{a_{n+1}-a_n}{b_{n+1}-b_n}\)</span>。</p>
+</li>
+</ul>
+<h2 id="_10">题目<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>把数列切分</p>
+<details class="example">
+<summary>例题</summary>
+<p>证明：<span class="arithmatex">\(\lim\limits_{n\to +\infty}\frac{a^n}{n!}=0\)</span>，<span class="arithmatex">\(a\)</span> 是常数。</p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>当 <span class="arithmatex">\(a=0\)</span> 时，显然成立。</li>
+<li>
+<p>当 <span class="arithmatex">\(a\neq 0\)</span> 时：</p>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(|\frac{a^n}{n!}-0|=\frac{|a|^n}{n!}\)</span>。当 <span class="arithmatex">\(n&gt;|a|\)</span> 后，随着 <span class="arithmatex">\(n\)</span> 的增大，<span class="arithmatex">\(n!\)</span> 会比 <span class="arithmatex">\(|a|^n\)</span> 增长得更快，<span class="arithmatex">\(\frac{|a|^n}{n!}\)</span> 会越来越接近 <span class="arithmatex">\(0\)</span>。</p>
+</details>
+<p>当 <span class="arithmatex">\(n&gt;|a|\)</span> 时，<span class="arithmatex">\(|\frac{a^n}{n!}-0|=\prod_{i=1}^{|a|}\frac{|a|}{i}\times \prod_{i=|a|+1}^n\frac{|a|}{i}&lt;\prod_{i=1}^{|a|}\frac{|a|}{i}\times \frac{|a|}{n}&lt;\varepsilon\)</span>，<span class="arithmatex">\(n&gt;\frac{\prod_{i=1}^{|a|}\frac{|a|}{i}\times |a|}{\varepsilon}\)</span>。</p>
+<p>对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，取 <span class="arithmatex">\(N=\max\{|a|,[\frac{\prod_{i=1}^{|a|}\frac{|a|}{i}\times |a|}{\varepsilon}]\}\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|\frac{a^n}{n!}-0|&lt;\varepsilon\)</span>。因此 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\frac{a^n}{n!}=0\)</span>。</p>
+</li>
+</ul>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\(n!\leq k!\times n\,(k&lt; n)\)</span>。</p>
+</details>
+<p>证明：若 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=a\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{\sum_{k=1}^n a_k}{n}=a\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>考虑 <span class="arithmatex">\(n\to \infty\)</span> 时，<span class="arithmatex">\(\exists N_1\)</span>，使得 <span class="arithmatex">\(i&gt;N_1\)</span> 时 <span class="arithmatex">\(a_i\)</span> 非常接近 <span class="arithmatex">\(a\)</span>；<span class="arithmatex">\(i\leq N_1\)</span> 时，由于这部分只有有限项，且 <span class="arithmatex">\(n\to \infty\)</span>，所以这部分对整体平均数的影响可忽略。</p>
+</details>
+<p>由于 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=a\)</span>，则对 <span class="arithmatex">\(\forall \frac{\varepsilon}2&gt;0\)</span>，<span class="arithmatex">\(\exists N_1&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N_1\)</span> 时 <span class="arithmatex">\(|a_n-a|&lt;\frac{\varepsilon} 2\)</span>。</p>
+<p><span class="arithmatex">\(|\dfrac{\sum_{k=1}^n a_k}{n}-a|=\dfrac{|\sum_{k=1}^n(a_k-a)|}{n}\leq \dfrac{\sum_{k=1}^n|a_k-a|}{n}=\dfrac{\sum_{k=1}^{N_1}|a_k-a|}n+\dfrac{\sum_{k={N_1+1}}^n|a_k-a|}n&lt;\dfrac{\sum_{k=1}^{N_1}|a_k-a|}n+\frac{\varepsilon}{2}\)</span></p>
+<p>前半部分是有限项求和，记作 <span class="arithmatex">\(\frac C n\)</span>。<span class="arithmatex">\(\exists N_2&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N_2\)</span> 时，<span class="arithmatex">\(|\frac C n-0|&lt;\frac{\varepsilon}2\)</span>。</p>
+<p>因此，对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，取 <span class="arithmatex">\(N=\max\{N_1,N_2\}\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，<span class="arithmatex">\(|\dfrac{\sum_{k=1}^n a_k}{n}-a|&lt;\frac{\varepsilon}2+\frac{\varepsilon} 2=\varepsilon\)</span>。故 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{\sum_{k=1}^n a_k}{n}=a\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>三角函数</p>
+<details class="example">
+<summary>例题</summary>
+<p><strong>利用诱导公式：</strong></p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to \frac{\pi}{2}}\dfrac{1-\sin x}{(2x-\pi)^2}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\xlongequal{x-\frac{\pi}{2}=t}\lim\limits_{t\to 0}\dfrac{1-\cos t}{4t^2}=\dfrac 1 8\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>一般的等价无穷小都是 <span class="arithmatex">\(x\to 0\)</span> 时的。这里用诱导公式就将 <span class="arithmatex">\(x\to \frac{\pi}{2}\)</span> 变成了 <span class="arithmatex">\(t\to 0\)</span>。</p>
+</details>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 1}(1-x)\tan\dfrac{\pi x}{2}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\xlongequal{x-1=t}\lim\limits_{t\to 0}t\tan\dfrac{\pi(1-t)}{2}=\lim\limits_{t\to 0}t\cdot \cot\dfrac{\pi t}{2}=\lim\limits_{t\to 0}t\cdot\dfrac{\cos\frac{\pi t}{2}}{\sin \frac{\pi t}2}=\lim\limits_{t\to 0}t\cdot\dfrac{1}{\frac{\pi t}{2}}=\dfrac 2{\pi}\)</span></p>
+</details>
+<p><strong>利用二倍角公式/半角公式：</strong>（用半角公式扔掉与 <span class="arithmatex">\(\cos\)</span> 在一起的 <span class="arithmatex">\(\pm 1\)</span>）</p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sqrt{1-\cos x^2}}{1-\cos x}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\sqrt{2\sin^2\frac{x^2}2}}{2\sin^2 \frac x 2}=\lim\limits_{x\to 0}\dfrac{\sqrt 2}2\dfrac{\sin \frac{x^2}{2}}{\sin^2 \frac x 2}=\lim\limits_{x\to 0}\dfrac{\sqrt 2}2\dfrac{\frac{x^2}2}{(\frac x 2)^2}=\sqrt 2\)</span></p>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0^+}\dfrac{1-\sqrt{\cos x}}{1-\cos \sqrt x}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0^+}\dfrac{1-\cos x}{(1-\cos \sqrt x)(1+\sqrt{\cos x})}=\lim\limits_{x\to 0^+}\dfrac{2\sin^2\frac x 2}{2\sin^2\frac{\sqrt x}2\cdot 2}=\lim\limits_{x\to 0^+}\dfrac{(\frac x 2)^2}{(\frac{\sqrt x}2)^2\cdot 2}=\lim\limits_{x\to 0^+}\dfrac x 2=0\)</span></p>
+</details>
+<p><strong>利用和差化积：</strong></p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{n\to \infty}(\sin\sqrt{n+1}-\sin\sqrt n)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{n\to\infty}\cos\frac{\sqrt{n+1}+\sqrt n}{2}\sin\frac{\sqrt{n+1}-\sqrt n}{2}\)</span>【和差化积】，又因为 <span class="arithmatex">\(\lim\limits_{n\to \infty}\sin\frac{\sqrt{n+1}-\sqrt n}2=\lim\limits_{n\to \infty}\sin\frac{1}{2(\sqrt{n+1}+\sqrt n)}=0\)</span>，<span class="arithmatex">\(|\cos\frac{\sqrt{n+1}+\sqrt n}2|\leq 1\)</span>【三角函数的有界性】，则 <span class="arithmatex">\(\lim\limits_{n\to\infty}(\sin\sqrt{n+1}-\sin \sqrt n)=0\)</span>。</p>
+</details>
+<p><strong>利用重要极限 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sin x}x=1\)</span>：</strong></p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sin \sin \sin x}{x}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}[\dfrac{\sin(\sin \sin x)}{\sin \sin x}\cdot \dfrac{\sin(\sin x)}{\sin x}\cdot\dfrac{\sin x}x]=1\)</span>。</p>
+</details>
+<p><strong>综合题：</strong></p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{n\to \infty}(\cos \dfrac x n+k\sin\dfrac x n)^n\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><strong>法 1：</strong><span class="arithmatex">\(I=\lim\limits_{n\to \infty}[1+(\cos\dfrac x n +k\sin\dfrac x n-1)]^{\dfrac{1}{\cos\frac x n+k\sin\frac x n-1}\cdot n(\cos\frac x n+k\sin\frac x n-1)}\)</span>，而 <span class="arithmatex">\(\lim\limits_{n\to \infty}n(\cos \dfrac x n+k\sin\dfrac x n-1)=\lim\limits_{n\to \infty}n(\cos \dfrac x n-1)+\lim\limits_{n\to \infty}nk\sin\dfrac x n=\lim\limits_{n\to \infty}n\cdot\dfrac{-(\frac x n)^2}{2}+\lim\limits_{n\to \infty}nk\cdot \dfrac x n\)</span>【把 <span class="arithmatex">\(\cos\)</span> 和 <span class="arithmatex">\(-1\)</span> 放一起凑等价无穷小】<span class="arithmatex">\(=0+kx=kx\)</span>，所以 <span class="arithmatex">\(I=e^{kx}\)</span>。</p>
+<p><strong>法 2：</strong><span class="arithmatex">\(\lim\limits_{n\to \infty}n(\cos \dfrac x n+k\sin\dfrac x n -1)=\lim\limits_{n\to \infty}n(k\sin\dfrac x n-2\sin^2\dfrac{x}{2n})\)</span>【利用半角公式去掉 <span class="arithmatex">\(-1\)</span>】<span class="arithmatex">\(=\lim\limits_{n\to \infty}n\cdot 2\sin\dfrac{x}{2n}(k\cos\dfrac x {2n}-\sin\dfrac{x}{2n})\)</span>【利用半角公式提取 <span class="arithmatex">\(\sin\)</span>，再利用等价无穷小消掉 <span class="arithmatex">\(n\)</span>】<span class="arithmatex">\(=\lim\limits_{n\to \infty}n\cdot 2\cdot \dfrac{x}{2n}(k\cdot 1-0)=x(k-0)=kx\)</span>，所以原式 <span class="arithmatex">\(=e^{kx}\)</span>。</p>
+<p><strong>法 3：</strong><span class="arithmatex">\(I=\lim\limits_{n\to \infty}\cos \dfrac x n(1+k\tan\dfrac x n)^n\)</span>【凑出两个 <span class="arithmatex">\(1^{\infty}\)</span> 型相乘。需要注意无穷多个 <span class="arithmatex">\(1\)</span> 相乘就不一定是 <span class="arithmatex">\(1\)</span> 了，四则运算法则只对有限项的加减乘除有效】<span class="arithmatex">\(=\lim\limits_{n\to \infty}[1+(\cos \dfrac x n-1)]^{\dfrac{1}{\cos\frac x n-1}\cdot n(\cos\frac x n-1)}\cdot\lim\limits_{n\to \infty}(1+k\tan\dfrac x n)^{\dfrac{1}{k\tan\frac x n}\cdot nk\tan\frac x n}=e^{\lim\limits_{n\to \infty}n(\cos\frac x n-1)}\cdot e^{\lim\limits_{n\to \infty}nk\tan\frac x n}=e^{\lim\limits_{n\to \infty}n\cdot\frac{-(\frac x n)^2}{2}}\cdot e^{\lim\limits_{n\to \infty}nk\cdot\frac x n}=e^0\cdot e^{kx}=e^{kx}\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>放缩技巧：</p>
+<ol>
+<li>
+<p>分式的放缩</p>
+</li>
+<li>
+<p>二项式放缩</p>
+</li>
+<li>
+<p>均值不等式放缩</p>
+</li>
+<li>
+<p>对数/底数相关放缩</p>
+<details class="example">
+<summary>例题</summary>
+<p><strong>放缩分式</strong></p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac 1 2\times \frac 3 4\times \frac 5 6\times \cdots\times \frac{2n-1}{2n}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\((\frac 1 2\times \frac 3 4\times \cdots\times \frac{2n-1}{2n})^2&lt;(\frac 1 2\times \frac 3 4\times \cdots\frac{2n-1}{2n})\times (\frac 2 3\times \frac 4 5\times \cdots\times \frac{2n}{2n+1})=\frac{1}{2n+1}\)</span>，所以 <span class="arithmatex">\(0&lt;\frac 1 2\times \frac 3 4\times \cdots\frac{2n-1}{2n}&lt;\frac{1}{\sqrt{2n+1}}\)</span>，由夹逼定理知 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac 1 2\times \frac 3 4\times \cdots\times \frac{2n-1}{2n}=0\)</span>。</p>
+</details>
+<p><strong>放缩 n 次方根</strong></p>
+<p>证明：<span class="arithmatex">\(\lim\limits_{n\to +\infty}\sqrt[n]{a}=1\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p>当 <span class="arithmatex">\(a=1\)</span> 时，<span class="arithmatex">\(\lim\limits_{n\to +\infty}\sqrt[n]a=1\)</span>。</p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(a&gt;1\)</span> 时：</p>
+<ul>
+<li>
+<p><strong>法 1：</strong>【草稿：<span class="arithmatex">\(|\sqrt[n]{a}-1|&lt;\varepsilon\)</span>，<span class="arithmatex">\(\sqrt[n]{a}-1&lt;\varepsilon\)</span>，<span class="arithmatex">\(a^{\frac 1 n}&lt;\log_a(1+\varepsilon)\)</span>，<span class="arithmatex">\(\frac 1 n&lt;\log_a(1+\varepsilon)\)</span>，<span class="arithmatex">\(n&gt;\frac{1}{\log_a(1+\varepsilon)}\)</span>】</p>
+<p>对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N=[\frac{1}{\log_a(1+\varepsilon)}]\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|\sqrt[n]{a}-1|=\sqrt[n]a-1&lt;\varepsilon\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong>令 <span class="arithmatex">\(\sqrt[n]a-1=y_n&gt;0\)</span>，【下证 <span class="arithmatex">\(y_n\to 0\)</span>】</p>
+<p><span class="arithmatex">\(a=(1+y_n)^n&gt;1+y_n\)</span>，<span class="arithmatex">\(y_n&lt;\frac{a-1}{n}&lt;\varepsilon\)</span>，<span class="arithmatex">\(n&gt;\frac{a-1}{\varepsilon}\)</span></p>
+<p>对 <span class="arithmatex">\(\forall \varepsilon &gt;0\)</span>，<span class="arithmatex">\(\exists N=[\frac{a-1}{\varepsilon}]\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|\sqrt[n]a-1|=y_n&lt;\frac{a-1}{n}&lt;\varepsilon\)</span>，因此 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\sqrt[n]{a}=1\)</span>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(0&lt;a&lt;1\)</span> 时，<span class="arithmatex">\(\lim\limits_{n\to \infty}\sqrt[n]a=\lim\limits_{n\to \infty}\frac{1}{\sqrt[n]{\frac 1 a}}=1\)</span>。</p>
+</li>
+</ul>
+</details>
+<p>证明：<span class="arithmatex">\(\lim\limits_{n\to +\infty}\sqrt[n]{n}=1\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="question" open="open">
+<summary>尝试</summary>
+<ul>
+<li>
+<p><strong>尝试 1：</strong><span class="arithmatex">\(\sqrt[n]n-1&lt;\varepsilon\)</span>，<span class="arithmatex">\(n^{\frac 1 n}&lt;1+\varepsilon\)</span>，解不出来。</p>
+</li>
+<li>
+<p><strong>尝试 2：</strong>令 <span class="arithmatex">\(\sqrt[n]n-1=y_n\)</span>，则 <span class="arithmatex">\(n=(1+y_n)^n&gt;1+ny_n\)</span>，<span class="arithmatex">\(y_n&lt;\frac{n-1}{n}\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\frac{n-1}{n}=1\)</span> 而非 <span class="arithmatex">\(0\)</span>，所以 <span class="arithmatex">\(\frac{n-1}{n}\)</span> 并不能小于任意小的 <span class="arithmatex">\(\varepsilon\)</span>。也就是放缩放太大了。</p>
+</li>
+<li>
+<p><strong>尝试 3：</strong>令 <span class="arithmatex">\(\sqrt[n]n-1=y_n\)</span>，则 <span class="arithmatex">\(n=(1+y_n)^n&gt;1+ny_n+\frac{n(n-1)}{2}y_n^2\)</span>。为了解不等式方便扔掉 <span class="arithmatex">\(ny_n\)</span>。即 <span class="arithmatex">\(n=(1+y_n)^n&gt;1+\frac{n(n-1)}{2}y_n^2\)</span>，<span class="arithmatex">\(n-1&gt;\frac{n(n-1)}{2}y_n^2\)</span></p>
+<p><span class="arithmatex">\(y_n&lt;\sqrt{\frac 2 n}&lt;\varepsilon\)</span>，<span class="arithmatex">\(n&gt;\frac{2}{\varepsilon^2}\)</span></p>
+<p>对 <span class="arithmatex">\(\forall \epsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N=[\frac{2}{\varepsilon^2}]\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|\sqrt[n]n-1|=y_n&lt;\sqrt{\frac 2 n}&lt;\varepsilon\)</span>。</p>
+</li>
+<li>
+<p><strong>尝试 4：</strong>均值不等式。<span class="arithmatex">\(\sqrt[n]n=\sqrt[n]{n\times \underbrace{1 \times \dots \times 1}_{(n-1)个1} }\leq \frac{n+(n-1)}{n}\)</span> 并不趋于 <span class="arithmatex">\(1\)</span>，放缩放太大了。</p>
+</li>
+<li>
+<p><strong>尝试 5：</strong>均值不等式。<span class="arithmatex">\(\sqrt[n]{n}=\sqrt[n]{\sqrt{n} \times \sqrt{n} \times \underbrace{1 \times \dots \times 1}_{(n-2)个1}}\leq \frac{2\sqrt{n} + (n - 2)}{n}\)</span> 是趋于 <span class="arithmatex">\(1\)</span> 的。</p>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><strong>法 1：</strong>令 <span class="arithmatex">\(\sqrt[n]n-1=y_n\)</span>，则 <span class="arithmatex">\(n=(1+y_n)^n&gt;1+\frac{n(n-1)}{2}y_n^2\)</span>，<span class="arithmatex">\(y_n&lt;\sqrt{\frac 2 n}\)</span>。</p>
+<p>对 <span class="arithmatex">\(\forall \epsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N=[\frac{2}{\varepsilon^2}]\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|\sqrt[n]n-1|=y_n&lt;\sqrt{\frac 2 n}&lt;\varepsilon\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong>利用均值不等式。<span class="arithmatex">\(\sqrt[n]{n}=\sqrt[n]{\sqrt{n} \times \sqrt{n} \times \underbrace{1 \times \dots \times 1}_{(n-2)个1}}\leq \frac{2\sqrt{n} + (n - 2)}{n}&lt;\frac{2}{\sqrt{n}}+1\)</span>。 </p>
+<p>对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，$ \exists N = [ \frac{4}{\varepsilon^2}] $，当 <span class="arithmatex">\(n &gt; N\)</span> 时，有 <span class="arithmatex">\(|\sqrt[n]{n}-1|&lt;\frac{2}{\sqrt n}&lt;\varepsilon\)</span>。</p>
+</li>
+</ul>
+</details>
+<p><strong>放缩阶乘</strong></p>
+<p>计算：<span class="arithmatex">\(\lim\limits_{n\to +\infty}(n!)^{\frac 1{n^2}}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>由于 <span class="arithmatex">\(1\leq n!\leq n^n\)</span>，则 <span class="arithmatex">\(1\leq (n!)^{\frac 1 {n^2}}\leq n^{\frac 1 n}\)</span>。</p>
+<p>而 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\sqrt[n]n=1\)</span>，因此 <span class="arithmatex">\(\lim\limits_{n\to +\infty}(n!)^{\frac 1{n^2}}=1\)</span>。</p>
+</details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{1}{\sqrt[n]{n!}}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>考虑把 <span class="arithmatex">\(n!\)</span> 放缩成一个东西的 <span class="arithmatex">\(n\)</span> 次方，方便算 <span class="arithmatex">\(\sqrt[n]{n!}\)</span>。</p>
+</details>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>由于 <span class="arithmatex">\(n!\geq (\frac n 2)^{\frac n 2}\)</span>，故 <span class="arithmatex">\(\sqrt[n]{n!}\geq \sqrt[n]{(\frac n 2)^{\frac n 2}}=(\frac n 2)^{\frac 1 2}\)</span>，所以 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{1}{\sqrt[n]{n!}}=0\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p>对 <span class="arithmatex">\(1\leq k\leq n\)</span>，有 <span class="arithmatex">\(k(n+1-k)\geq n\)</span>（关于 <span class="arithmatex">\(k\)</span> 的二次函数 <span class="arithmatex">\(k(n+1-k)\)</span> 开口向下，对称轴 <span class="arithmatex">\(k=\frac{n+1}{2}\)</span>，当 <span class="arithmatex">\(1\leq k\leq n\)</span> 时最小值在端点 <span class="arithmatex">\(k=1,k=n\)</span> 取到，此时最小值为 <span class="arithmatex">\(n\)</span>）。故 <span class="arithmatex">\((n!)^2=\prod_{k=1}^n[k\cdot (n+1-k)]\geq n^n\)</span>，故 <span class="arithmatex">\(n!\geq n^{\frac n 2}\)</span>。</p>
+<p><span class="arithmatex">\(\sqrt[n]{n!}\geq \sqrt[n]{n^{\frac n 2}}=\sqrt n\to +\infty\,(n\to +\infty)\)</span>，故 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{1}{\sqrt[n]{n!}}=0\)</span>。</p>
+</li>
+<li>
+<p><strong>法 3：</strong></p>
+<p>利用 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{a^n}{n!}=0\)</span>。</p>
+<p>【草稿：<span class="arithmatex">\(|\frac{1}{\sqrt[n]{n!}}-0|&lt;|\frac{1}{\sqrt[n]{|a|^n}}|=\frac 1 {|a|}\leq\varepsilon\)</span>。故取 <span class="arithmatex">\(a=\frac 1 {\varepsilon}\)</span>】</p>
+<p>对 <span class="arithmatex">\(\forall a\)</span>，取 <span class="arithmatex">\(\varepsilon_0=1\)</span>，<span class="arithmatex">\(\exists N_1\)</span>，当 <span class="arithmatex">\(n&gt;N_1\)</span> 时，有 <span class="arithmatex">\(|\frac{a^n}{n!}-0|&lt;\varepsilon_0\)</span>，即 <span class="arithmatex">\(n!&gt;|a|^n\)</span>。</p>
+<p>对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，取 <span class="arithmatex">\(a=\frac 1 {\varepsilon}\)</span>、<span class="arithmatex">\(N=N_1\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，<span class="arithmatex">\(|\frac{1}{\sqrt[n]{n!}}-0|&lt;|\frac{1}{\sqrt[n]{a^n}}|=\frac 1 a=\varepsilon\)</span>。因此 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{a^n}{n!}=0\)</span>。</p>
+</li>
+</ul>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\(n!\leq n^n\)</span>，<span class="arithmatex">\(n!\geq n^{\frac n 2}\)</span>，<span class="arithmatex">\(n!\geq 2^{n-1}\)</span>，<span class="arithmatex">\(n!\geq (n-1)n\)</span>，<span class="arithmatex">\(n!\geq k!\times (k+1)^{n-k}\,(k\leq n)\)</span>，<span class="arithmatex">\(n!\leq k!\times n\,(k&lt; n)\)</span>，<span class="arithmatex">\(n!\geq (\frac n 2)^{\frac n 2}\)</span>。</p>
+</details>
+<p><strong>放缩指数</strong></p>
+<p>证明：<span class="arithmatex">\(\lim\limits_{n\to +\infty}\frac{n^2}{2^n}=0\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>思路</summary>
+<p>注意到分子是关于 <span class="arithmatex">\(n\)</span> 的二次式，考虑把分母放缩成大于二次。</p>
+</details>
+<p>当 <span class="arithmatex">\(n\geq 3\)</span> 时，<span class="arithmatex">\(2^n=(1+1)^n=\sum_{k=0}^{+\infty}\binom n k&gt;\binom n 3=\frac{n(n-1)(n-2)}{6}\)</span>，这样就放缩成了三次式。</p>
+<p><span class="arithmatex">\(\frac{n^2}{2^n}&lt;\frac{6n}{(n-1)(n-2)}&lt;\frac{8}{n}\)</span>（当 <span class="arithmatex">\(n\)</span> 大于一个常数时，<span class="arithmatex">\(6n^2&lt;8(n-1)(n-2)\)</span>，因为左边二次项系数是 <span class="arithmatex">\(6\)</span>，右边是 <span class="arithmatex">\(8\)</span>）</p>
+<p><span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N=\max\{100,[\frac 8 \varepsilon]\}\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(0&lt;\frac{n^2}{2^n}&lt;\frac{n^2}{\binom n 3}=\frac{6n}{(n-1)(n-2)}&lt;\frac{8}{n}&lt;\varepsilon\)</span>。</p>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<ul>
+<li>
+<p>证明：<span class="arithmatex">\(\lim\limits_{n\to +\infty}\frac{n^k}{a^n}=0\)</span>，其中 <span class="arithmatex">\(a&gt;1\)</span>，<span class="arithmatex">\(k\)</span> 为常数，<span class="arithmatex">\(k\in\mathbb N^*\)</span>。</p>
+<p>可以把分母放缩成关于 <span class="arithmatex">\(n\)</span> 的 <span class="arithmatex">\(k+1\)</span> 次：<span class="arithmatex">\(a^n=(a-1+1)^n&gt;\binom{n}{k+1}(a-1)^{k+1}\)</span>。</p>
+</li>
+<li>
+<p>放缩：可以放缩成【左边次数小于右边】，也可以放缩成【左边次数等于右边】且【最高次项左边系数小于右边】（如 <span class="arithmatex">\(\frac{n+100}{n^2}&lt;\frac{2}{n}\)</span> 在 <span class="arithmatex">\(n&gt;100\)</span> 时成立），这样 <span class="arithmatex">\(n\)</span> 大于一个常数时放缩成立。</p>
+</li>
+</ul>
+</details>
+<p>证明：<span class="arithmatex">\(\lim\limits_{n\to +\infty}q^n=0\,(|q|&lt;1)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(q=0\)</span> 时成立。</p>
+<p><span class="arithmatex">\(0&lt;|q|&lt;1\)</span> 时，<span class="arithmatex">\(|q^n-0|=|q|^n\xlongequal{|q|=\frac{1}{1+b}}\frac{1}{(1+b)^n}&lt;\frac{1}{nb}&lt;\varepsilon\)</span>。<span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，取 <span class="arithmatex">\(N=[\frac{1}{b\varepsilon}]\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|q^n-0|&lt;\frac 1{nb}&lt;\varepsilon\)</span>。因此 <span class="arithmatex">\(\lim\limits_{n\to +\infty}q^n=0\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(q=0\)</span> 时成立。</p>
+<p><span class="arithmatex">\(0&lt;|q|&lt;1\)</span> 时，<span class="arithmatex">\(|q^n-0|&lt;\varepsilon\)</span>，<span class="arithmatex">\(|q|^n&lt;\varepsilon\)</span>，<span class="arithmatex">\(n&gt;\log_{|q|}\varepsilon\)</span>。<span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，取 <span class="arithmatex">\(N=[\log_{|q|}\varepsilon]\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|q^n-0|&lt;\varepsilon\)</span>。因此 <span class="arithmatex">\(\lim\limits_{n\to +\infty}q^n=0\)</span>。</p>
+</li>
+</ul>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\(a^n\xlongequal{a=1+b}(1+b)^n&gt;1+nb\)</span></p>
+<p><span class="arithmatex">\(a^n\xlongequal{a=\frac{1}{1+b}}\frac{1}{(1+b)^n}&lt;\frac{1}{1+nb}\)</span></p>
+</details>
+</details>
+</li>
+</ol>
+</li>
+<li>
+<p>根式可以想想根式差</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\lim\limits_{n\to +\infty}n(\sqrt[3]{1+\frac 3 n}-1)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>记 <span class="arithmatex">\(a_n=\sqrt[3]{1+\frac 3 n}\)</span>，则 <span class="arithmatex">\(a_n-1=\frac{a_n^3-1}{a_n^2+a_n+1}=\frac{\frac 3 n}{a_n^2+a_n+1}\)</span>。</p>
+<p><span class="arithmatex">\(\lim\limits_{n\to \infty}n(\sqrt[3]{1+\frac 3 n}-1)=\lim\limits_{n\to \infty}\frac{3}{a_n^2+a_n+1}=1\)</span>。</p>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\(a^k-b^k=(a-b)(a^{k-1}+a^{k-2}b+a^{k-3}b^2+\cdots+ab^{k-2}+b^{k-1})\)</span></p>
+<p>逆用后，可将 “根式差” 转化为 “分式”：<span class="arithmatex">\(a-b=\frac{a^k-b^k}{a^{k-1}+a^{k-2}b+\cdots+ab^{k-2}+b^{k-1}}\)</span>。如 <span class="arithmatex">\(\lim\limits_{n\to \infty}\sqrt[k]{1+\frac c n}-1=\lim\limits_{n\to \infty}\frac{\frac c n}{k}\)</span>（分母共 <span class="arithmatex">\(k\)</span> 项，每项当 <span class="arithmatex">\(n\to \infty\)</span> 时都 <span class="arithmatex">\(\to 1\)</span>，因此分母 <span class="arithmatex">\(\to k\)</span>）。</p>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to +\infty}(\sqrt{x^2+4x-1}-x+3)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>（猜测法：<span class="arithmatex">\((x+2)-x+3=5\)</span>）</p>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to +\infty}\dfrac{(x^2+4x-1)-(x-3)^2}{\sqrt{x^2+4x-1}+(x-3)}=\lim\limits_{x\to +\infty}\dfrac{10x-10}{\sqrt{x^2+4x-1}+(x-3)}=5\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>有理分式 <span class="arithmatex">\(x\to \infty\)</span> 时的极限</p>
+<div class="arithmatex">\[
+\lim\limits_{x \to \infty} \frac{a_n x^n + \cdots + a_1 x + a_0}{b_m x^m + \cdots + b_1 x + b_0} = \begin{cases} 0 &amp; (m &gt; n) \\ \dfrac{a_n}{b_n} &amp; (m = n) \\ \infty &amp; (m &lt; n) \end{cases}
+\]</div>
+<p>其中 <span class="arithmatex">\(a_n b_m \neq 0\)</span>，且 <span class="arithmatex">\(m, n\)</span> 为正整数。</p>
+</details>
+</details>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac 0 0\)</span> 型技巧：</p>
+<ol>
+<li>消零因子</li>
+<li>利用等价无穷小</li>
+<li>利用 <span class="arithmatex">\(\frac{\sin x}x\)</span></li>
+</ol>
+<details class="example">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 1}\dfrac{\sqrt[m]x-1}{\sqrt[n]x-1}\)</span>，其中 <span class="arithmatex">\(n,m\in\mathbb N^*\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\xlongequal{x=t^{mn}}\lim\limits_{t\to 1}\dfrac{t^n-1}{t^m-1}=\lim\limits_{t\to 1}\dfrac{(t-1)(t^{n-1}+t^{n-2}+\cdots+t+1)}{(t-1)(t^{m-1}+t^{m-2}+\cdots+t+1)}=\lim\limits_{t\to 1}\dfrac{t^{n-1}+t^{n-2}+\cdots+t+1}{t^{m-1}+t^{m-2}+\cdots+t+1}=\dfrac n m\)</span>。</p>
+</details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 1}\dfrac{x^{n+1}-(n+1)x+n}{(x-1)^2}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 1}\dfrac{x^{n+1}-1-(n+1)x+(n+1)}{(x-1)^2}=\lim\limits_{x\to 1}\dfrac{(x-1)(x^n+x^{n-1}+\cdots+1)-(x-1)(n+1)}{(x-1)^2}=\lim\limits_{x\to 1}\dfrac{x^n+x^{n-1}+\cdots+x-n}{x-1}=\lim\limits_{x\to 1}(\dfrac{x^n-1}{x-1}+\dfrac{x^{n-1}}{x-1}+\cdots+\dfrac{x-1}{x-1})=n+(n-1)+\cdots+1=\frac{n(n+1)}{2}\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>配凑：</p>
+<p>如 <span class="arithmatex">\(x\to 0\)</span> 时</p>
+<p><span class="arithmatex">\(\cos x=1+(\cos x-1)\sim 1-\frac{x^2}{2}\)</span></p>
+<p><span class="arithmatex">\(a^x=1+(a^x-1)\sim 1+x\ln a\)</span></p>
+<p><span class="arithmatex">\((1+x)^{\alpha}=1+[(1+x)^{\alpha}-1]\sim 1+\alpha x\)</span></p>
+<p><span class="arithmatex">\((1+x)^{\alpha}-(1+x)^{\beta}=[(1+x)^{\alpha}-1]-[(1+x)^{\beta}-1]\)</span></p>
+<p><span class="arithmatex">\(e^x=1+(e^x-1)\sim 1+x\)</span></p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\ln(\cos x)}{x^2}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\ln(1+(\cos x-1))}{x^2}=\lim\limits_{x\to 0}\dfrac{\cos x-1}{x^2}=-\dfrac 1 2\)</span>。</p>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{n\to +\infty}(\dfrac{\sqrt[n]2+\sqrt[n]3}{2})^n\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;=\lim\limits_{n\to +\infty}\left(1+\dfrac{(\sqrt[n]2-1)+(\sqrt[n]3-1)}{2}\right)^{\dfrac{2}{(\sqrt[n]2-1)+(\sqrt [n]3-1)}\cdot\dfrac{[(\sqrt[n]2-1)+(\sqrt[n]3-1)]n}{2}}\\
+&amp;=e^{\dfrac{\ln 2+\ln 3}{2}}\\
+&amp;=\sqrt 6
+\end{aligned}
+\]</div>
+<p>在凑 <span class="arithmatex">\(1^{\infty}\)</span> 型极限的同时，还把 <span class="arithmatex">\(a^x-1\)</span> 凑出来了。</p>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac{a_1^x+a_2^x+\cdots+a_n^x}{n})^{\dfrac 1 x}\,(a_i&gt;0\,i=1,2,\cdots,n)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;=\lim\limits_{x\to 0}\left(1+\dfrac{(a_1^x-1)+\cdots+(a_n^x-1)}{n}\right)^{\dfrac{n}{(a_1^x-1)+\cdots(a_n^x-1)}\cdot\dfrac{(a_1^x-1)+\cdots+(a_n^x-1)}{nx}}\\
+&amp;=e^{\dfrac{\ln a_1+\cdots+\ln a_n}{n}}\\
+&amp;=e^{\ln\sqrt[n]{a_1a_2\cdots a_n}}\\
+&amp;=\sqrt[n]{a_1a_2\cdots a_n}
+\end{aligned}
+\]</div>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sqrt[3]{1+x}-\sqrt{1-x}}x\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\sqrt[3]{1+x}-1}{x}-\lim\limits_{x\to 0}\dfrac{\sqrt{1-x}-1}{x}=\lim\limits_{x\to 0}\dfrac{\frac 1 3 x}x-\lim\limits_{x\to 0}\dfrac{\frac 1 2(-x)}x=\dfrac 1 3+\dfrac 1 2=\dfrac 5 6\)</span>。</p>
+</details>
+</details>
+<p>有些时候可以把加减的常数分配到每一项里</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\lim\limits_{n\to +\infty}(\sum_{k=1}^n\sqrt{1+\frac k{n^2}}-n)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(S_n=\sum_{k=1}^n\sqrt{1+\frac k{n^2}}-n=\sum_{k=1}^n(\sqrt{1+\frac k {n^2}}-1)\)</span>，</p>
+<p>其中 <span class="arithmatex">\(\sqrt{1+\frac{k}{n^2}}-1=\dfrac{\frac{k}{n^2}}{\sqrt{1+\frac{k}{n^2}}+1}\in[\dfrac{\frac k {n^2}}{\sqrt{1+\frac 1 n}+1},\dfrac{\frac{k}{n^2}}{2})\)</span>。</p>
+<p>因此 <span class="arithmatex">\(S_n\geq \dfrac{\frac{\frac{(1+n)n}{2}}{n^2}}{\sqrt{1+\frac 1 n}+1}=\dfrac{\frac{n+1}{2n}}{\sqrt{1+\frac 1 n}+1}\)</span>，<span class="arithmatex">\(\lim\limits_{n\to +\infty}\frac{n+1}{2n}\cdot \frac{1}{\sqrt{1+\frac 1 n}+1}=\frac 1 4\)</span>。</p>
+<p><span class="arithmatex">\(S_n\leq \dfrac{\frac{n+1}{2n}}{2}=\frac{n+1}{4n}\)</span>，<span class="arithmatex">\(\lim\limits_{n\to +\infty}\frac{n+1}{4n}=\frac 1 4\)</span>。</p>
+<p>故 <span class="arithmatex">\(\lim\limits_{n\to +\infty}S_n=\lim\limits_{n\to +\infty}(\sum_{k=1}^n\sqrt{1+\frac k{n^2}}-n)=\frac 1 4\)</span>。</p>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x \to 1} \dfrac{x + x^2 + \cdots + x^n - n}{x - 1}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>当 <span class="arithmatex">\(m\)</span> 为正整数时 <span class="arithmatex">\(\lim\limits_{x \to 1} \dfrac{x^m - 1}{x - 1} = \lim\limits_{x \to 1} \dfrac{(x - 1)(x^{m-1} + \cdots + x + 1)}{x - 1} = m\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>消零因子。</p>
+</details>
+<p>原式 <span class="arithmatex">\(I = \lim\limits_{x \to 1} \dfrac{(x - 1) + (x^2 - 1) + \cdots + (x^n - 1)}{x - 1} = 1 + 2 + \cdots + n = \dfrac{n(n + 1)}{2}\)</span>。</p>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x \to 1} \dfrac{x + \sqrt{x} + \sqrt[3]{x} + \cdots + \sqrt[n]{x} - n}{x - 1}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\lim\limits_{x\to 1}\dfrac{\sqrt[k]x-1}{x-1}\xlongequal{\sqrt[k]x=t}\lim\limits_{t\to 1}\dfrac{t-1}{t^k-1}=\lim\limits_{t\to 1}\dfrac{t-1}{(t-1)(t^{k-1}+t^{k-2}+\cdots+t+1)}=\frac 1 k\)</span>。</p>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 1}\dfrac{(x-1)+(\sqrt x-1)+\cdots+(\sqrt[n]x-1)}{x-1}=1+\dfrac 1 2+\cdots+\dfrac 1 n\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>反用等价无穷小：如 <span class="arithmatex">\(x\sim \ln(x+1),x\sim \tan x,x\to 0\)</span>，<span class="arithmatex">\(x-1\sim \ln x,x\to 1\)</span>。</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\cos x\cos 2x\cdots\cos nx-1}{x^2}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong> 注意到 <span class="arithmatex">\(\cos x\cos 2x\cdots\cos nx\to 1\)</span>，而 <span class="arithmatex">\(t\to 1\)</span> 时，<span class="arithmatex">\(t-1\sim \ln t\)</span>。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;=\lim\limits_{x\to 0}\frac{\ln(\cos x\cos 2x\cdots\cos nx)}{x^2}\\
+&amp;=\lim\limits_{x\to 0}\sum_{k=1}^n\frac{\ln(\cos kx)}{x^2}\\
+&amp;=\lim\limits_{x\to 0}\sum_{k=1}^n\frac{\cos kx-1}{x^2}\\
+&amp;=-\frac 1 2\sum_{k=1}^nk^2\\
+&amp;=-\frac{n(n+1)(2n+1)}{12}
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;=\lim\limits_{x\to 0}\frac{\cos x\cos 2x\cdots\cos (n-1)x[\cos nx-1]+\lim\limits_{x\to 0}(\cos x\cos 2x\cdots\cos(n-1)x-1)}{x^2}\\
+&amp;=\lim\limits_{x\to 0}\frac{1\cdot -\frac 1 2(nx)^2+\lim\limits_{x\to 0}(\cos x\cos 2x\cdots\cos(n-1)x-1)}{x^2}\\
+&amp;=-\frac 1 2 n^2+I_{n-1}\\
+&amp;=-\frac 1 2(n^2+(n-1)^2+\cdots+2^2)+I_1\\
+&amp;=-\frac 1 2(n^2+(n-1)^2+\cdots+2^2+1^2)\\
+&amp;=-\frac{n(n+1)(2n+1)}{12}
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p><strong>法 3：</strong> 根据泰勒展开，有 <span class="arithmatex">\(\cos x=1-\frac{x^2}{2}+o(x^2)\)</span>。则：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\cos x\cos 2x\cdots\cos nx
+&amp;=(1-\frac{x^2}{2}+o(x^2))(1-\frac{(2x)^2}{2}+o(x^2))\cdots(1-\frac{(nx)^2}{2}+o(x^2))\\
+&amp;=1-\frac 1 2(1^2+2^2+\cdots+n^2)x^2+o(x^2)
+\end{aligned}
+\]</div>
+<p>则：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}{x^2}\\
+&amp;=-\frac 1 2(1^2+2^2+\cdots+n^2)\\
+&amp;=-\frac{n(n+1)(2n+1)}{12}
+\end{aligned}
+\]</div>
+</li>
+</ul>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to\infty}x(\dfrac {\pi}4-\arctan\dfrac{x}{1+x})\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to \infty}x\cdot\tan(\dfrac{\pi}4-\arctan\dfrac{x}{1+x})=\lim\limits_{x\to \infty}x\cdot\dfrac{1-\frac x{1+x}}{1+\dfrac{x}{1+x}}=\lim\limits_{x\to \infty}\dfrac{x}{1+2x}=\frac 1 2\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>幂、指数相关</p>
+<details class="example">
+<summary>例题</summary>
+<p><strong>同底：</strong></p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to a}\dfrac{a^x-a^a}{x-a}\,(a&gt;0,a\neq 1)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to a}(a^a\cdot\dfrac{a^{x-a}-1}{x-a})\xlongequal{x-a=t}a^a\lim\limits_{t\to 0}\dfrac{a^t-1}{t}=a^a\lim\limits_{t\to 0}\dfrac{e^{t\ln a}-1}{t}=a^a\ln a\)</span>。</p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>设 <span class="arithmatex">\(f(x)=a^x\,(a&gt;0,a\neq 1)\)</span>，求 <span class="arithmatex">\(f'(a)\)</span>：<span class="arithmatex">\(f'(a)=\lim\limits_{x\to a}\dfrac{a^x-a^a}{x-a}=(a^x)'\vert_{x=a}=(a^x\ln a)\vert_{x=a}=a^a\ln a\)</span>。</p>
+</details>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to +\infty}x^2(a^{\frac 1 x}-a^{\frac 1 {x+1}})\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to +\infty}a^{\frac 1 {x+1}}\cdot x^2(a^{\frac 1 x-\frac{1}{x+1}}-1)=\lim\limits_{x\to +\infty}a^{\frac 1 {x+1}}\cdot x^2((\frac 1 x-\frac 1 {x+1})\ln a)=\lim\limits_{x\to +\infty}x^2(\frac{1}{x(x+1)}\ln a)=\ln a\)</span>。</p>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>看到两个同底指数项相减 <span class="arithmatex">\(a^A-a^B\)</span>，可以提取较小的指数项作为公因子，转化成 <span class="arithmatex">\(a^B(a^{A-B}-1)\)</span> 的形式。当 <span class="arithmatex">\(A-B\to 0\)</span> 时，恰好满足 <span class="arithmatex">\(a^t-1\sim t\ln a,t\to 0\)</span> 的等价无穷小条件。</p>
+</details>
+<p><strong>同幂：</strong></p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to a}\dfrac{x^a-a^a}{x-a}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\frac{a^a}a\lim\limits_{x\to a}\dfrac{(\frac x a)^a-1}{\frac x a-1}\xlongequal{t=\frac x a -1}a^{a-1}\lim\limits_{t\to 0}\dfrac{(1+t)^a-1}{t}=a^a\)</span>。</p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>设 <span class="arithmatex">\(f(x)=x^a\)</span>，求 <span class="arithmatex">\(f'(a)\)</span>：<span class="arithmatex">\(f'(a)=\lim\limits_{x\to a}\dfrac{x^a-a^a}{x-a}=(x^a)'\vert_{x=a}=(ax^{a-1})\vert_{x=a}=a^a\)</span>。</p>
+</details>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>提取常数，凑 <span class="arithmatex">\(\lim\limits_{t\to 1}\dfrac{t^k-1}{t-1}\)</span> 或  <span class="arithmatex">\(\lim\limits_{t\to 0}\dfrac{(1+t)^k-1}t\)</span>。</p>
+</details>
+<p><strong>拆分技巧：</strong></p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to a}\dfrac{a^x-x^a}{x-a}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(a^x-x^a\)</span> 可以拆成两个单一函数增量的差 <span class="arithmatex">\((a^x-a^a)-(x^a-a^a)\)</span>。</p>
+<p><span class="arithmatex">\(=\lim\limits_{x\to a}\dfrac{a^x-a^a}{x-a}-\lim\limits_{x\to a}\dfrac{x^a-a^a}{x-a}=a^a\ln a-a^a=a^a\ln\dfrac a e\)</span>。</p>
+</details>
+</details>
+</li>
+</ul>
+<h2 id="_11">易错点<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>不等式乘法要讨论正负</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac x a[\dfrac b x]\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\dfrac b x-1&lt;[\dfrac b x]\leq \dfrac b x\)</span></p>
+<ul>
+<li>
+<p>当 <span class="arithmatex">\(x&gt;0\)</span> 时，<span class="arithmatex">\(\dfrac b x-\dfrac x a&lt;\dfrac x a[\dfrac b x]\leq \dfrac b a\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0^+}(\dfrac b a-\dfrac x a)=\dfrac  b a\)</span></p>
+<p>由夹逼定理，<span class="arithmatex">\(\lim\limits_{x\to 0^+}\dfrac x a[\dfrac b x]=\dfrac b a\)</span>。</p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(x&lt;0\)</span> 时，<span class="arithmatex">\(\dfrac b a\leq\dfrac x a[\dfrac b x]&lt;\dfrac b a-\dfrac x a\)</span>。</p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0^-}(\dfrac b a-\dfrac x a)=\dfrac b a\)</span></p>
+<p>由夹逼定理，<span class="arithmatex">\(\lim\limits_{x\to 0^-}\dfrac x a[\dfrac b x]=\dfrac b a\)</span>。</p>
+</li>
+</ul>
+<p>综上，<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac x a[\dfrac b x]=\dfrac b a\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>分段函数先求左右极限</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{[x]}x\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>当 <span class="arithmatex">\(-1&lt;x&lt;0\)</span> 时，<span class="arithmatex">\([x]=-1\)</span>，<span class="arithmatex">\(f(x)=-\frac 1 x\)</span>，故 <span class="arithmatex">\(\lim\limits_{x\to 0^-}f(x)=\lim\limits_{x\to 0^-}(-\frac 1 x)=\infty\)</span> 极限不存在。</p>
+<p>（当 <span class="arithmatex">\(0&lt;x&lt;1\)</span> 时，<span class="arithmatex">\([x]=0\)</span>，<span class="arithmatex">\(f(x)=0\)</span>，<span class="arithmatex">\(\lim\limits_{x\to 0^+}f(x)=0\)</span>）</p>
+<p>故 <span class="arithmatex">\(\lim\limits_{x\to 0}f(x)\)</span> 不存在。</p>
+</details>
+</details>
+</li>
+<li>
+<p>记得分类讨论</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{a^n}{1+a^n}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\lim\limits_{n\to \infty}a^n=\begin{cases}0&amp;(0&lt;a&lt;1)\\1&amp;(a=1)\\+\infty&amp;(a&gt;1)\end{cases}\)</span></p>
+<p>当 <span class="arithmatex">\(0&lt;a&lt;1\)</span> 时，<span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{a^n}{1+a^n}=\dfrac{0}{1+0}=0\)</span>。</p>
+<p>当 <span class="arithmatex">\(a=1\)</span> 时，<span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{a^n}{1+a^n}=\dfrac{1}{1+1}=\dfrac 1 2\)</span>。</p>
+<p>当 <span class="arithmatex">\(a&gt;1\)</span> 时，<span class="arithmatex">\(\lim\limits_{n\to \infty}\xlongequal{x=a^n}\lim\limits_{x\to +\infty}\dfrac{x}{1+x}=1\)</span>。</p>
+</details>
+</details>
+<p>小心除以 <span class="arithmatex">\(0\)</span> 了。</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to\infty}(\dfrac{x+a}{x-a})^x\)</span>。</p>
+<details class="failure">
+<summary>错解</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to \infty}[(1+\dfrac{2a}{x-a})^{\frac{x-a}{2a}}]^{\frac{x\cdot 2a}{x-a}}=e^{2a}\)</span></p>
+<p>错因：<span class="arithmatex">\(\dfrac{x-a}{2a}\)</span> 当 <span class="arithmatex">\(a=0\)</span> 时不存在。</p>
+</details>
+<details class="success">
+<summary>正解</summary>
+<p><span class="arithmatex">\(a\neq 0\)</span> 时，<span class="arithmatex">\(=e^{2a}\)</span>；
+<span class="arithmatex">\(a=0\)</span> 时，<span class="arithmatex">\(=1\)</span>，同样 <span class="arithmatex">\(=e^{2a}\)</span>。</p>
+<p>综上，<span class="arithmatex">\(=e^{2a}\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{\sin x}x\)</span> 是 <span class="arithmatex">\(0\)</span> 比 <span class="arithmatex">\(0\)</span> 用的；极限存在才能用四则运算法则</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}x\sin \frac 1 x\)</span>。</p>
+<details class="failure">
+<summary>错解</summary>
+<p>错解 1：<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sin\frac 1 x}{\frac 1 x}=1\)</span>。</p>
+<p>错解 2：<span class="arithmatex">\(\lim\limits_{x\to 0}\cdot\lim\limits_{x\to 0}\sin\frac 1 x=0\cdot\lim\limits_{x\to 0}\sin\frac 1 x=0\)</span>。</p>
+</details>
+<details class="success">
+<summary>正解</summary>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}x=0\)</span>，<span class="arithmatex">\(|\sin\frac 1 x|\leq 1\)</span> 有界，故 <span class="arithmatex">\(\lim\limits_{x\to 0}x\sin\frac 1 x=0\)</span>。【利用有界函数与无穷小之积仍是无穷小】</p>
+</details>
+</details>
+</li>
+<li>
+<p>注意拆分的时候必须拆成极限都存在的。</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{(1+mx)^n-(1+nx)^m}{x^2}\)</span>。</p>
+<details class="failure">
+<summary>错解</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{(1+mx)^n-1}{x^2}-\lim\limits_{x\to 0}\dfrac{(1+nx)^m-1}{x^2}=\lim\limits_{x\to 0}\dfrac{mnx}{x^2}-\lim\limits_{x\to 0}\dfrac{mnx}{x^2}\)</span></p>
+<p>错因：拆分出来的这两个单独的极限都不存在。（当 <span class="arithmatex">\(x\to 0\)</span> 时，分子 <span class="arithmatex">\((1+mx)^n-1\)</span> 和 <span class="arithmatex">\((1+nx)^m-1\)</span> 是 <span class="arithmatex">\(o(x)\)</span> 量级，分母是 <span class="arithmatex">\(x^2\)</span>，单独的分式极限为 <span class="arithmatex">\(\infty\)</span>）</p>
+</details>
+<details class="success">
+<summary>正解</summary>
+<p>当 <span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\((1+x)^k=1+kx+o(x)\)</span>。其实可以更精确，即 <span class="arithmatex">\((1+x)^k=1+kx+\dfrac{k(k-1)}{2}x^2+o(x^2)\)</span>。</p>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{1+n\cdot mx+\frac{n(n-1)}{2}(mx)^2+o(x^2)-(1+m\cdot nx+\frac{m(m-1)}{2}(nx)^2+o(x^2))}{x^2}=\lim\limits_{x\to 0}\dfrac{\frac{mn(n-m)}{2}x^2+o(x^2)}{x^2}=\dfrac{mn(n-m)}{2}\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>没考虑等价无穷小的条件而误用。如，<span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\(\cos \frac{\pi x}{2}\)</span> 并不是无穷小量，不能使用无穷小的等价替换，实际上，它的值就是 <span class="arithmatex">\(1\)</span>。</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["search", "content.action.edit", "navigation.tabs", "navigation.instant", "navigation.top", "content.code.copy", "search.suggest", "search.highlight", "search.share", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="../../../assets/document_dates/tippy/popper.min.js"></script>
+      
+        <script src="../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../../assets/document_dates/core/default.config.js"></script>
+      
+        <script src="../../../assets/document_dates/user.config.js"></script>
+      
+        <script src="../../../assets/document_dates/core/utils.js"></script>
+      
+        <script src="../../../assets/document_dates/core/core.js"></script>
+      
+    
+  </body>
+</html>
