@@ -797,7 +797,7 @@
 
   <h1>第二章 导数与微分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-01'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-01T10:35:48.256118+08:00'>2025-10-01</time></span><span data-tippy-content data-tippy-raw='2025-10-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-07T15:23:30.783845+08:00'>2025-10-07</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-07T18:40:33.414094+08:00'>2025-10-07</time></span><span data-tippy-content data-tippy-raw='2025-10-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-07T18:40:33.415120+08:00'>2025-10-07</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">导数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1137,6 +1137,13 @@
 <p>又当 <span class="arithmatex">\(x=0\)</span> 时，<span class="arithmatex">\(0=\ln\dfrac{e}{y(0)}+1\Rightarrow y(0)=e^2\)</span></p>
 <p><span class="arithmatex">\(x=0,y(0)=e^2\)</span> 代入，<span class="arithmatex">\(1\cdot (e^2)=\dfrac{1}{e}\cdot\dfrac{e^2-e\cdot y'(0)}{e^2}\Rightarrow y(0)=e-e^4\)</span></p>
 </details>
+<p>设 <span class="arithmatex">\(y=y(x)\)</span> 是 <span class="arithmatex">\(x^3+y^3-3x+3y-2=0\)</span> 确定的隐函数。求 <span class="arithmatex">\(\dfrac{\text dy}{\text dx}\)</span> 和 <span class="arithmatex">\(\dfrac{\text d^2y}{\text dx^2}\bigg |_{x=1}\)</span>。</p>
+<details class="note">
+<summary>计算</summary>
+<p>两边同时对 <span class="arithmatex">\(x\)</span> 求导：<span class="arithmatex">\(3x^3+3y^2\textcolor{blue}{y'}-3+3y'=0\)</span>，即 <span class="arithmatex">\(x^2+y^2y'-1+y'=0\Rightarrow y'=\dfrac{1-x^2}{1+y^2}\)</span>。</p>
+<p>再求对 <span class="arithmatex">\(x\)</span> 求一次导。<span class="arithmatex">\(2x+2y\textcolor{blue}y'\cdot y'+y^2y''+y''=0\Rightarrow y''=-\dfrac{2x+2y(y')^2}{1+y^2}\)</span>。</p>
+<p>代入 <span class="arithmatex">\(x=1,y=1\)</span> 得 <span class="arithmatex">\(y'(1)=0,y''(1)=-1\)</span>。</p>
+</details>
 </details>
 </li>
 <li>
@@ -1238,19 +1245,51 @@
 <p><span class="arithmatex">\(\large\frac{\text d ^2y}{\text d x^2}=\frac{\text d(\frac{\text d y}{\text d x})/\text dt}{\text d x/\text dt}=\frac{y''(t)x'(t)-y'(t)x''(t)}{[x'(t)]^3}\)</span></p>
 <details class="example" open="open">
 <summary>例题</summary>
-<p>设 <span class="arithmatex">\(y=y(x)\)</span> 由参数方程 <span class="arithmatex">\(\begin{cases}x=\sin t\\y=t\sin t+\cos t\end{cases}\)</span> 确定，求 <span class="arithmatex">\(\dfrac{\text d^2y}{\text dx^2}\vert_{t=\frac{\pi}4}\)</span>。</p>
+<p>设 <span class="arithmatex">\(y=y(x)\)</span> 由参数方程 <span class="arithmatex">\(\begin{cases}x=\sin t\\y=t\sin t+\cos t\end{cases}\)</span> 确定，求 <span class="arithmatex">\(\dfrac{\text d^2y}{\text dx^2}\bigg|_{t=\frac{\pi}4}\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
 <p><span class="arithmatex">\(\dfrac{\text dy}{\text dx}=\dfrac{\text dy/\text dt}{\text dx/\text dt}=\dfrac{\sin t+t\cos t-\sin t}{\cos t}=t\)</span></p>
 <p><span class="arithmatex">\(\dfrac{\text d^2 y}{\text dx^2}=\dfrac{\text d(\frac{\text dy}{\text dx})/\text dt}{\text dx/\text dt}=\dfrac{1}{\cos t}\)</span></p>
-<p><span class="arithmatex">\(\dfrac{\text d^2 y}{\text dx^2}\vert_{t=\frac{\pi}4}=\sqrt 2\)</span></p>
+<p><span class="arithmatex">\(\dfrac{\text d^2 y}{\text dx^2}\bigg|_{t=\frac{\pi}4}=\sqrt 2\)</span></p>
+</details>
+<p>证明：曲线 <span class="arithmatex">\(x^{\frac 2 3}+y^{\frac 2 3}=a^{\frac 2 3}\,(a&gt;0)\)</span> 上任意一点处的切线被坐标轴所截的弦长为常数。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong>（参数方程的求导）</p>
+<p>参数方程：<span class="arithmatex">\(\begin{cases}x=a\cos^3 t\\y=a\sin^3 t\end{cases}\)</span></p>
+<p>设切点 <span class="arithmatex">\(P(a\cos^3 t_0,a\sin^3 t_0)\)</span>，切线斜率 <span class="arithmatex">\(k=\dfrac{\text dy/\text dt}{\text dx/\text dt}=\dfrac{3a\sin^2t\cos t}{3a\cos^2t(-\sin t)}\big|_{t=t_0}=-\tan t_0\)</span>，切线 <span class="arithmatex">\(l:y-a\sin^3 t_0=-\tan t_0(x-a\cos^3 t_0)\)</span>，切线 <span class="arithmatex">\(l\)</span> 与坐标轴的交点为 <span class="arithmatex">\(A(a\cos t_0,0),B(0,a\sin t_0)\)</span>，则切线 <span class="arithmatex">\(l\)</span> 被坐标轴所截的弦长 <span class="arithmatex">\(|AB|=a\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong>（隐函数的求导）</p>
+<p>方程两边同时对 <span class="arithmatex">\(x\)</span> 求导，<span class="arithmatex">\(\dfrac 2 3 x^{-\frac 1 3}+\dfrac 2 3 y^{-\frac 1 3}\textcolor{blue}{y'}=0\)</span>，则 <span class="arithmatex">\(y'=-(\dfrac y x)^{\frac 1 3}\)</span></p>
+<p>设切点 <span class="arithmatex">\(P(x_0,y_0)\)</span>，切线 <span class="arithmatex">\(l:y-y_0=-(\dfrac{y_0}{x_0})^{\frac 1 3}(x-x_0)\)</span>，切线 <span class="arithmatex">\(l\)</span> 与坐标轴的交点 <span class="arithmatex">\(A(x_0^{\frac 1 3}(x_0^{\frac 2 3}+y_0^{\frac 2 3}),0)=A(a^{\frac 2 3}x_0^{\frac 1 3},0),B(0,a^{\frac 2 3}y_0^{\frac 1 3})\)</span>，<span class="arithmatex">\(|AB|=\sqrt{a^{\frac 4 3}(x_0^{\frac 2 3}+y_0^{\frac 2 3})}=a\)</span>。</p>
+</li>
+</ul>
 </details>
 </details>
 </li>
 <li>
 <p>极坐标方程确定函数的导数</p>
+<p>其实就是求参数方程 <span class="arithmatex">\(\begin{cases}x=r(\theta)\cos\theta\\y=r(\theta)\sin\theta\end{cases}\)</span> 的导数。</p>
+<p><span class="arithmatex">\(\large\frac{\text dy}{\text dx}=\frac{\text dy/\text d\theta}{\text dx/\text d\theta}=\frac{r'(\theta)\sin\theta+r(\theta)\cos\theta}{r'(\theta)\cos\theta-r(\theta)\sin\theta}\)</span></p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>求阿基米德曲线 <span class="arithmatex">\(r=\theta\)</span> 在 <span class="arithmatex">\(\theta=\frac{\pi}2\)</span> 处的切线方程。</p>
+<details class="note">
+<summary>解答</summary>
+<p>参数方程：<span class="arithmatex">\(\begin{cases}x=\theta\cos\theta\\y=\theta\sin\theta\end{cases}\)</span></p>
+<p><span class="arithmatex">\(\dfrac{\text dy}{\text dx}\bigg|_{\theta=\frac{\pi}2}=\dfrac{\sin\theta+\theta\cos\theta}{\cos\theta-\theta\sin\theta}\bigg|_{\theta=\frac{\pi}2}=-\dfrac{2}{\pi}\)</span></p>
+<p>切点 <span class="arithmatex">\((0,\frac{\pi}2)\)</span>，故切线 <span class="arithmatex">\(l:y=-\dfrac{2}{\pi}+\dfrac{\pi}2\)</span>。</p>
+</details>
+</details>
 </li>
-<li>近似计算与误差估计</li>
+</ul>
+</li>
+<li>
+<p>近似计算与误差估计</p>
+<ul>
 <li>近似计算</li>
 <li>误差估计</li>
 </ul>
