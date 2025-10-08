@@ -843,7 +843,7 @@
 
   <h1>第二章 行列式与矩阵的秩</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-07T16:31:58.380397+00:00'>2025-10-07</time></span><span data-tippy-content data-tippy-raw='2025-10-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-07T16:31:58.380397+00:00'>2025-10-07</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-08T03:56:00.749206+00:00'>2025-10-08</time></span><span data-tippy-content data-tippy-raw='2025-10-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-08T03:56:00.749206+00:00'>2025-10-08</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="laplace">Laplace 定理<a class="headerlink" href="#laplace" title="Permanent link">&para;</a></h3>
 <ul>
@@ -980,8 +980,20 @@ A
 <li>
 <p>化零降阶法</p>
 <ul>
-<li>将某一行（列）化成仅剩一个非 <span class="arithmatex">\(0\)</span>，再行列式展开化成低一阶。</li>
-<li>一点两斜形，按”一点“所在的行（列）展开，得到两个三角形</li>
+<li>
+<p>将某一行（列）化成仅剩一个非 <span class="arithmatex">\(0\)</span>，再行列式展开化成低一阶。</p>
+</li>
+<li>
+<p>一点两斜形，按”一点“所在的行（列）展开，得到两个三角形</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(D=\begin{vmatrix} a_1 &amp; b_1 &amp; &amp; &amp; \\ &amp; a_2 &amp; b_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \ddots &amp; \\ &amp; &amp; &amp; a_{n - 1} &amp; b_{n - 1} \\ b_n &amp; 0 &amp; \cdots &amp; 0 &amp; a_n \end{vmatrix}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<div class="arithmatex">\[\begin{aligned}D &amp;= a_1\cdot (-1)^{1+1}\begin{vmatrix} a_2 &amp; b_2 &amp; &amp;  \\ &amp; \ddots &amp; \ddots &amp;  \\ &amp; &amp; a_{n - 1} &amp; b_{n - 1} \\ &amp; &amp; &amp; a_n \end{vmatrix} + b_n\cdot (-1)^{n + 1}\begin{vmatrix} b_1 &amp; &amp; &amp;  \\ a_1 &amp; b_2 &amp; &amp;  \\ &amp; \ddots &amp; \ddots &amp;  \\ &amp; &amp; a_{n - 1} &amp; b_{n - 1} \end{vmatrix}\\ &amp;= a_1a_2\cdots a_n + (-1)^{n + 1}b_1b_2\cdots b_n\end{aligned}\]</div>
+</details>
+</details>
+</li>
 </ul>
 </li>
 <li>
@@ -1004,8 +1016,8 @@ A
 <p>拉普拉斯展开式</p>
 <ul>
 <li>
-<p>X 形：</p>
-<p><span class="arithmatex">\(\begin{vmatrix}a_1&amp; &amp; &amp; &amp; &amp;b_1\\&amp;\ddots &amp; &amp; &amp;⋰&amp; \\&amp; &amp;a_k&amp;b_k&amp; &amp; \\&amp; &amp;b_{k+1}&amp;a_{k+1}&amp; &amp; \\&amp; ⋰ &amp; &amp; &amp;\ddots&amp; \\b_{2k}&amp; &amp; &amp; &amp; &amp;a_{2k}\end{vmatrix}=\prod_{i=1}^k\begin{vmatrix}a_i&amp;b_i\\b_{2k-i+1}&amp;a_{2k-i+1}\end{vmatrix}\)</span></p>
+<p>X 形：把的 <span class="arithmatex">\(2n+1-i\)</span> 行移动到第 <span class="arithmatex">\(2i\)</span> 行，第 <span class="arithmatex">\(2n+1-i\)</span> 列移动到第 <span class="arithmatex">\(2i\)</span> 列（<span class="arithmatex">\(i\in[1,n]\)</span>）</p>
+<p><span class="arithmatex">\(\begin{aligned}\begin{vmatrix}a_1&amp; &amp; &amp; &amp; &amp;b_1\\&amp;\ddots &amp; &amp; &amp;⋰&amp; \\&amp; &amp;a_n&amp;b_n&amp; &amp; \\&amp; &amp;b_{n+1}&amp;a_{n+1}&amp; &amp; \\&amp; ⋰ &amp; &amp; &amp;\ddots&amp; \\b_{2n}&amp; &amp; &amp; &amp; &amp;a_{2n}\end{vmatrix}_{2n}&amp;=\begin{vmatrix} a_1 &amp; b_1 &amp; &amp; &amp; &amp; \\ b_{2n} &amp; a_{2n} &amp; &amp; &amp; &amp; \\ &amp; &amp; \ddots &amp;\ddots &amp; &amp; \\ &amp; &amp; \ddots&amp; \ddots &amp; &amp; \\ &amp; &amp; &amp; &amp; a_n &amp; b_n \\ &amp; &amp; &amp; &amp; b_{n + 1} &amp; a_{n + 1} \end{vmatrix}_{2n}\\ &amp;=\prod_{i=1}^n\begin{vmatrix}a_i&amp;b_i\\b_{2n-i+1}&amp;a_{2n-i+1}\end{vmatrix}\end{aligned}\)</span></p>
 </li>
 </ul>
 </li>
@@ -1018,18 +1030,35 @@ A
 <p>递推法</p>
 <ul>
 <li>
-<p>异爪形（高阶）：按开口展开，变成 <span class="arithmatex">\(n-1\)</span> 阶异爪形和一个 <span class="arithmatex">\(n-1\)</span> 阶三角形</p>
+<p>异爪形（高阶）：按开口或爪的根部展开，变成 <span class="arithmatex">\(n-1\)</span> 阶异爪形和一个 <span class="arithmatex">\(n-1\)</span> 阶三角形</p>
+<p>如 <span class="arithmatex">\(D_{n} = \begin{vmatrix} * &amp; * &amp; &amp; &amp; \\ &amp; * &amp; * &amp; &amp; \\ &amp; &amp; \ddots &amp; \ddots &amp; \\ &amp; &amp; &amp; * &amp; * \\ * &amp; * &amp; \cdots &amp; * &amp; * \end{vmatrix}_{n}\)</span> 可以按第 <span class="arithmatex">\(1\)</span> 列或第 <span class="arithmatex">\(n\)</span> 列展开。</p>
 <details class="example" open="open">
 <summary>例题</summary>
 <p>计算 <span class="arithmatex">\(D_n = \begin{vmatrix}a &amp; -1 \\&amp; a &amp; -1 \\&amp; &amp; a &amp; \cdots \\&amp; &amp; &amp; \cdots &amp; -1 \\a_n &amp; a_{n - 1} &amp; a_{n - 2} &amp; \cdots &amp; a + a_1\end{vmatrix}\)</span></p>
 <details class="note">
 <summary>解答</summary>
+<p>按第一列展开：</p>
 <div class="arithmatex">\[\begin{aligned} D_n&amp;= a\cdot (-1)^{1+1}\begin{vmatrix} a &amp; -1 \\ &amp; a &amp; -1 \\ &amp; &amp; a &amp; \cdots \\ &amp; &amp; &amp; \cdots &amp; -1 \\ a_{n - 1} &amp; a_{n - 2} &amp; a_{n - 3} &amp; \cdots &amp; a + a_1 \end{vmatrix}_{n - 1} + a_n\cdot (-1)^{n + 1}\begin{vmatrix} -1 \\ a &amp; -1 \\ &amp; a &amp; -1 \\ &amp; &amp; \cdots &amp; -1 \\ &amp; &amp; &amp; a &amp; -1 \end{vmatrix}_{n - 1} \\&amp;= aD_{n - 1} + (-1)^{n + 1}a_n(-1)^{n - 1}\\&amp;= aD_{n - 1} + a_n \\ D_n &amp;= aD_{n - 1} + a_n \\ &amp;= a(aD_{n - 2} + a_{n - 1}) + a_n = a^2D_{n - 2} + a_n + a \cdot a_{n - 1} \\ &amp;= a^2(aD_{n - 3} + a_{n - 2}) + a_n + a_{n - 1} = a^3D_{n - 3} + a_n + a \cdot a_{n - 1} + a^2 \cdot a_{n - 2} \\ &amp;= \cdots \\ &amp;= a^{n - 1}D_1 + a_n + a \cdot a_{n - 1} + a^2 \cdot a_{n - 2} + \cdots + a^{n - 2}a_2 \\ &amp;= a^n + \sum_{i = 1}^{n} a^{n - i}a_i \end{aligned}\]</div>
+</details>
+<p>计算 <span class="arithmatex">\(D_{n} = \begin{vmatrix} a_{1} &amp; -a_{1} &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\ 0 &amp; a_{2} &amp; -a_{2} &amp; \cdots &amp; 0 &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; a_{n} &amp; -a_{n} \\ b &amp; b &amp; b &amp; \cdots &amp; b &amp; b \end{vmatrix}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<p>按第 <span class="arithmatex">\(n\)</span> 列展开：</p>
+<div class="arithmatex">\[\begin{aligned}D_{n} &amp;=(-a_n)\cdot (-1)^{(n-1)+n}D_{n-1}+b\cdot (-1)^{n+n}\begin{vmatrix} a_{1} &amp; -a_{1} \\ &amp; a_{2} &amp; -a_{2} \\ &amp; &amp; \ddots &amp; \ddots \\ &amp; &amp; &amp; a_{n - 1} &amp; -a_{n - 1} \\ &amp; &amp; &amp; &amp; a_{n} \end{vmatrix}\\&amp;= a_{n}D_{n - 1}+b\prod_{i = 1}^{n}a_{i}\end{aligned}\]</div>
+<ul>
+<li>
+<p>当 <span class="arithmatex">\(\prod_{i = 1}^{n}a_{i} \neq 0\)</span> 时，<span class="arithmatex">\(\dfrac{D_{n}}{\prod_{i = 1}^{n}a_{i}} = \dfrac{D_{n - 1}}{\prod_{i = 1}^{n - 1}a_{i}} + b=\cdots=\dfrac{D_1}{a_1}+(n-1)b\)</span>，又 <span class="arithmatex">\(D_1=2a_1b\)</span>，则 <span class="arithmatex">\(D_n= (n + 1)b\prod_{i = 1}^{n}a_{i}\)</span>。</p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(\prod_{i = 1}^{n}a_{i} = 0\)</span> 时，则 <span class="arithmatex">\(D_{n}\)</span> 中有一行的元素全为 <span class="arithmatex">\(0\)</span>，<span class="arithmatex">\(D_{n} = 0\)</span>，也符合上式。</p>
+</li>
+</ul>
+<p>故 <span class="arithmatex">\(D_{n} = (n + 1)b\prod_{i = 1}^{n}a_{i}\)</span>。</p>
 </details>
 </details>
 </li>
 <li>
-<p>三对角形（高阶）：按第一行展开，得到一个 <span class="arithmatex">\(n-1\)</span> 阶三对角形和一个 <span class="arithmatex">\(n-2\)</span> 阶三对角形“加边”状物。</p>
+<p>三对角形（高阶）：按第一行展开，得到一个 <span class="arithmatex">\(n-1\)</span> 阶三对角形和一个 <span class="arithmatex">\(n-2\)</span> 阶三对角形“加边后”的产物。</p>
 <details class="example" open="open">
 <summary>例题</summary>
 <p>计算 <span class="arithmatex">\(D_n = \begin{vmatrix}a &amp; c \\b &amp; a &amp; c \\&amp; b &amp; \ddots &amp; \ddots \\&amp; &amp; \ddots &amp; a &amp; c \\&amp; &amp; &amp; b &amp; a\end{vmatrix}_n\)</span></p>
@@ -1053,23 +1082,45 @@ A
     \end{vmatrix}_{n - 1} \\
     &amp;= a\cdot D_{n - 1} - c\cdot bD_{n - 2}\end{aligned}
     \]</div>
+<p>然后用特征根解。  </p>
 </details>
 </details>
 </li>
 <li>
-<p>大对称形：可以拆分成 <span class="arithmatex">\(n-1\)</span> 阶“加边”状物和一个 <span class="arithmatex">\(n\)</span> 阶类三角形状物。</p>
+<p>大对称形：可以拆分成一个 <span class="arithmatex">\(n\)</span> 阶有一元素相等的行（列）状物和 <span class="arithmatex">\(n-1\)</span> 阶“加边后”的产物。</p>
 <details class="example" open="open">
 <summary>例题</summary>
+<p>计算 <span class="arithmatex">\(D_{n} = \begin{vmatrix}a + x_1 &amp; a &amp; \cdots &amp; a \\a &amp; a + x_2 &amp; \cdots &amp; a \\\vdots &amp; \vdots &amp; &amp; \vdots \\a &amp; a &amp; \cdots &amp; a + x_n\end{vmatrix}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<div class="arithmatex">\[\begin{aligned}D_n &amp;= \begin{vmatrix}a + x_1 &amp; a &amp; \cdots &amp; a &amp; a \\a &amp; a + x_2 &amp; \cdots &amp; a &amp; a \\\vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\a &amp; a &amp; \cdots &amp; a + x_{n-1} &amp; a \\ a &amp; a &amp; \cdots &amp; a &amp; a\end{vmatrix} + \begin{vmatrix}a + x_1 &amp; a &amp; \cdots &amp; a &amp; 0 \\a &amp; a + x_2 &amp; \cdots &amp; a &amp; 0 \\\vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\a &amp; a &amp; \cdots &amp; a + x_{n-1} &amp; 0 \\a &amp; a &amp; \cdots &amp; a &amp; x_n\end{vmatrix}\\&amp;= \begin{vmatrix}x_1 &amp; 0 &amp; \cdots &amp; 0 &amp; a \\0 &amp; x_2 &amp; \cdots &amp; 0 &amp; a \\\vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\0 &amp; 0 &amp; \cdots &amp; x_{n-1} &amp; a \\0 &amp; 0 &amp; \cdots &amp; 0 &amp; a\end{vmatrix} + x_n D_{n-1}\\&amp;= x_1 x_2 \cdots x_{n-1} a + x_n D_{n-1}\end{aligned}\]</div>
+<p>同理 <span class="arithmatex">\(D_{n-1} = x_1 x_2 \cdots x_{n-2} a + x_{n-1} D_{n-2}\)</span>，<span class="arithmatex">\(\cdots\)</span>，<span class="arithmatex">\(D_2 = x_1 a + x_2 D_1\)</span>，故 <span class="arithmatex">\(D_n =  a \sum_{i=1}^{n} \prod_{j\neq i} x_j + \prod_{j=1}^{n} x_j\)</span>。</p>
+</details>
+<p>计算 <span class="arithmatex">\(D_{n} = \begin{vmatrix} a_1 &amp; b &amp; \cdots &amp; b &amp; b \\ b &amp; a_2 &amp; \cdots &amp; b &amp; b \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\ b &amp; b &amp; \cdots &amp; a_{n - 1} &amp; b \\ b &amp; b &amp; \cdots &amp; b &amp; a_n \end{vmatrix}_{n}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(D_1 = a_1\)</span>，<span class="arithmatex">\(D_2 = a_1a_2 - b^2\)</span>。</p>
+<p>当 <span class="arithmatex">\(n \geq 3\)</span> 时，</p>
+<div class="arithmatex">\[\begin{aligned}D_{n} &amp;=\begin{vmatrix} a_1 &amp; b &amp; \cdots &amp; b &amp; b \\ b &amp; a_2 &amp; \cdots &amp; b &amp; b \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\ b &amp; b &amp; \cdots &amp; a_{n - 1} &amp; b \\ b &amp; b &amp; \cdots &amp; b &amp; b \end{vmatrix}_{n}+\begin{vmatrix} a_1 &amp; b &amp; \cdots &amp; b \\ b &amp; a_2 &amp; \cdots &amp; b \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ b &amp; b &amp; \cdots &amp; a_{n - 1} \\ b &amp; b &amp; \cdots &amp;b&amp; a_n - b \end{vmatrix}_{n}\\&amp;=\begin{vmatrix} a_1 - b &amp; &amp; &amp; &amp;b \\ &amp; a_2 - b &amp; &amp; &amp;b \\ &amp; &amp; \ddots &amp; &amp;\vdots \\ &amp; &amp; &amp; a_{n - 1} - b &amp; b \\ &amp; &amp; &amp; &amp; b \end{vmatrix}_{n}+(a_n - b)D_{n - 1} \\&amp;=b\prod_{i = 1}^{n - 1}(a_i - b)+ (a_n - b)D_{n - 1}\end{aligned}\]</div>
+<p><span class="arithmatex">\(n=2\)</span> 时也符合上式。</p>
+<ul>
+<li>
+<p>当 <span class="arithmatex">\(\prod_{i = 1}^{n}(a_i - b) \neq 0\)</span> 时：</p>
+<div class="arithmatex">\[\begin{aligned}\dfrac{D_{n}}{\prod_{i = 1}^{n}(a_i - b)}&amp; = \dfrac{D_{n - 1}}{\prod_{i = 1}^{n - 1}(a_i - b)} + \dfrac{b}{a_n - b}\\&amp;=\cdots\\&amp;=\dfrac{a_1}{a_1 - b} + \sum_{i = 2}^{n}\dfrac{b}{a_i - b}\\ &amp;=1+\sum_{i=1}^n\dfrac{b}{a_i-b}\\\Rightarrow D_n&amp;= (1 + \sum_{i = 1}^{n}\frac{b}{a_i - b} )\prod_{i = 1}^{n}(a_i - b)\\&amp; = \prod_{i = 1}^{n}(a_i - b) + b\sum_{i = 1}^{n}\prod_{j\neq i}(a_j - b)\end{aligned}\]</div>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(\prod_{i = 1}^{n}(a_i - b) = 0\)</span> 时，不妨设 <span class="arithmatex">\(a_k = b\)</span>，则</p>
+<div class="arithmatex">\[\begin{aligned}D_{n} &amp;= \begin{vmatrix} a_1 &amp; b &amp; \cdots &amp; b &amp; \cdots &amp; b \\ b &amp; a_2 &amp; \cdots &amp; b &amp; \cdots &amp; b \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; &amp; \vdots \\ b &amp; b &amp; \cdots &amp; a_k &amp; \cdots &amp; b \\ \vdots &amp; \vdots &amp; &amp; \vdots &amp; \ddots &amp; \vdots \\ b &amp; b &amp; \cdots &amp; b &amp; \cdots &amp; a_n \end{vmatrix}_{n} \\&amp;= \begin{vmatrix} a_1 - b &amp; &amp; &amp; b \\ &amp; a_2 - b &amp; &amp; b \\ &amp; &amp; \ddots &amp; \vdots \\ &amp; &amp; &amp; b \\ &amp; &amp; &amp; \vdots &amp; \ddots \\ &amp; &amp; &amp; b &amp; a_n - b \end{vmatrix}_{n} \\&amp;\xlongequal{按R_k展开} b\cdot (-1)^{k+k}\prod_{i\neq k}(a_i - b)\end{aligned}\]</div>
+<p>也符合上式。</p>
+</li>
+</ul>
+<p>故 <span class="arithmatex">\(D_{n} = \prod_{i = 1}^{n}(a_i - b) + b\sum_{i = 1}^{n}\prod_{j\neq i}(a_j - b)\)</span>。</p>
+</details>
 <p>计算 <span class="arithmatex">\(D_{n} = \begin{vmatrix}x &amp; b &amp; b &amp; \cdots &amp; b \\a &amp; x &amp; b &amp; \cdots &amp; b \\a &amp; a &amp; x &amp; \cdots &amp; b \\\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\a &amp; a &amp; a &amp; \cdots &amp; x\end{vmatrix}\)</span>，其中 <span class="arithmatex">\(a\neq b\)</span></p>
 <details class="note">
 <summary>解答</summary>
-<p><span class="arithmatex">\(\begin{aligned}
-D_{n}&amp;=
-\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; 0 \\ a &amp; x &amp; b &amp; \cdots &amp; 0 \\ a &amp; a &amp; x &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a &amp; a &amp; a &amp; \cdots &amp; x - b \end{vmatrix}_{n}+\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; b \\ a &amp; x &amp; b &amp; \cdots &amp; b \\ a &amp; a &amp; x &amp; \cdots &amp; b \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a &amp; a &amp; a &amp; \cdots &amp; b \end{vmatrix}_{n}\\&amp;=(x - b)D_{n - 1}+
-b\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; 1 \\ a &amp; x &amp; b &amp; \cdots &amp; 1 \\ a &amp; a &amp; x &amp; \cdots &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a &amp; a &amp; a &amp; \cdots &amp; 1 \end{vmatrix}_{n}
-\end{aligned}\)</span></p>
-<p>其中 <span class="arithmatex">\(\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; 1 \\ a &amp; x &amp; b &amp; \cdots &amp; 1 \\ a &amp; a &amp; x &amp; \cdots &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a &amp; a &amp; a &amp; \cdots &amp; 1 \end{vmatrix}_{n}\xlongequal{C_{i}-aC_{n}}\begin{vmatrix} x - a &amp; b - a &amp; b - a &amp; \cdots &amp; 1 \\ 0 &amp; x - a &amp; b - a &amp; \cdots &amp; 1 \\ 0 &amp; 0 &amp; x - a &amp; \cdots &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 \end{vmatrix}_{n}=(x - a)^{n - 1}\)</span></p>
-<p>则 <span class="arithmatex">\(D_{n}=(x - b)D_{n - 1}+b(x - a)^{n - 1}\)</span>，同理可得 <span class="arithmatex">\(D_{n}^{\text{T}}=(x - a)D_{n - 1}^{\text{T}}+a(x - b)^{n - 1}\)</span>。</p>
+<div class="arithmatex">\[\begin{aligned} D_{n}&amp;=\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; b \\ a &amp; x &amp; b &amp; \cdots &amp; b \\ a &amp; a &amp; x &amp; \cdots &amp; b \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a &amp; a &amp; a &amp; \cdots &amp; b \end{vmatrix}_{n}+\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; 0 \\ a &amp; x &amp; b &amp; \cdots &amp; 0 \\ a &amp; a &amp; x &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a &amp; a &amp; a &amp; \cdots &amp; x - b \end{vmatrix}_{n}\\&amp;=b\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; 1 \\ a &amp; x &amp; b &amp; \cdots &amp; 1 \\ a &amp; a &amp; x &amp; \cdots &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a &amp; a &amp; a &amp; \cdots &amp; 1 \end{vmatrix}_{n}+(x - b)D_{n - 1}\\&amp;=b\begin{vmatrix} x - a &amp; b - a &amp; b - a &amp; \cdots &amp; 1 \\ 0 &amp; x - a &amp; b - a &amp; \cdots &amp; 1 \\ 0 &amp; 0 &amp; x - a &amp; \cdots &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 \end{vmatrix}_{n}+(x - b)D_{n - 1}\\&amp;=b(x - a)^{n - 1}+(x - b)D_{n - 1}\end{aligned}\]</div>
+<p>同理可得 <span class="arithmatex">\(D_{n}^{\text{T}}=(x - a)D_{n - 1}^{\text{T}}+a(x - b)^{n - 1}\)</span>。</p>
 <p>由 <span class="arithmatex">\(D_{n}=D_{n}^{\text{T}},\ D_{n - 1}=D_{n - 1}^{\text{T}}\)</span>，得到 <span class="arithmatex">\(\dfrac{D_{n}-b(x - a)^{n - 1}}{x - b}=\dfrac{D_{n}-a(x - b)^{n - 1}}{x - a}\)</span>，解得 <span class="arithmatex">\(D_{n}=\dfrac{b(x - a)^{n}-a(x - b)^{n}}{b - a}\)</span>。</p>
 </details>
 </details>
@@ -1077,7 +1128,7 @@ b\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; 1 \\ a &amp; x &amp; b &am
 </ul>
 </li>
 <li>
-<p>范德蒙德行列式</p>
+<p>范德蒙德行列式：注意正负交替可能是负数的幂次。</p>
 <details class="example" open="open">
 <summary>例题</summary>
 <p>计算 <span class="arithmatex">\(D=\begin{vmatrix}a&amp;b&amp;c\\a^2&amp;b^2&amp;c^2\\b+c&amp;c+a&amp;a+b\end{vmatrix}\)</span>。</p>
@@ -1089,6 +1140,15 @@ b\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; 1 \\ a &amp; x &amp; b &am
 <details class="note">
 <summary>解答</summary>
 <div class="arithmatex">\[\begin{aligned}D&amp;=\begin{vmatrix}1&amp;1&amp;1&amp;1\\1&amp;2&amp;3&amp;4\\1&amp;4&amp;9&amp;16\\1&amp;8&amp;27&amp;64\end{vmatrix}+\begin{vmatrix}1&amp;1&amp;1&amp;1\\1&amp;2&amp;-1&amp;4\\1&amp;4&amp;1&amp;16\\1&amp;8&amp;-1&amp;64\end{vmatrix}\\&amp;=\begin{vmatrix}1&amp;1&amp;1&amp;1\\1&amp;2&amp;3&amp;4\\1&amp;4&amp;9&amp;16\\1&amp;8&amp;27&amp;64\end{vmatrix}+\begin{vmatrix}1&amp;1&amp;1&amp;1\\1&amp;2&amp;-1&amp;4\\1&amp;4&amp;(-1)^2&amp;16\\1&amp;8&amp;(-1)^3&amp;64\end{vmatrix}\\&amp;=3!2!1!+1\cdot (-2)\cdot 3\cdot (-3)\cdot 2\cdot 5\\&amp;=192\end{aligned}\]</div>
+</details>
+<p>计算 <span class="arithmatex">\(D_n = \begin{vmatrix} 1 &amp; 1 &amp; \cdots &amp; 1 \\ x_1 &amp; x_2 &amp; \cdots &amp; x_n \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ x_1^{n-2} &amp; x_2^{n-2} &amp; \cdots &amp; x_n^{n-2} \\ x_1^n &amp; x_2^n &amp; \cdots &amp; x_n^n \end{vmatrix}\,(n\geq 2)\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<p>构造 <span class="arithmatex">\(n+1\)</span> 阶范德蒙德行列式 <span class="arithmatex">\(D'_n = \begin{vmatrix} 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 &amp; 1 \\ x_1 &amp; x_2 &amp; \cdots &amp; x_{n-1} &amp; x_n &amp; y \\ \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots &amp; \vdots \\ x_1^{n-2} &amp; x_2^{n-2} &amp; \cdots &amp; x_{n-1}^{n-2} &amp; x_n^{n-2} &amp; y^{n-2} \\ x_1^{n-1} &amp; x_2^{n-1} &amp; \cdots &amp; x_{n-1}^{n-1} &amp; x_n^{n-1} &amp; y^{n-1} \\ x_1^n &amp; x_2^n &amp; \cdots &amp; x_{n-1}^n &amp; x_n^n &amp; y^n \end{vmatrix}\)</span></p>
+<p>则原行列式 <span class="arithmatex">\(D_n\)</span> 就是 <span class="arithmatex">\(D'_n\)</span> 中元素 <span class="arithmatex">\(y^{n-1}\)</span> 的余子式 <span class="arithmatex">\(M_{n-1,n}\)</span>。</p>
+<p>把 <span class="arithmatex">\(D_n'\)</span> 按第 <span class="arithmatex">\(n\)</span> 列展开，<span class="arithmatex">\(D_n'=\sum_{i=1}^n y^i(-1)^{i+n}M_{i,n}\)</span>，把 <span class="arithmatex">\(D_n'\)</span> 看成关于 <span class="arithmatex">\(y\)</span> 的多项式 <span class="arithmatex">\(D_n'(y)\)</span>，那么 <span class="arithmatex">\(M_{n-1,n}=\dfrac{[y^{n-1}]D_n'(y)}{(-1)^{(n-1)+n}}\)</span>。</p>
+<p>又 <span class="arithmatex">\(D_n'(y) = \prod_{1 \leq i &lt; j \leq n} (x_j - x_i) \cdot \prod_{i=1}^n (y - x_i)\)</span>，可得 <span class="arithmatex">\([y^{n-1}]D_n'(y)=\prod_{1 \leq i &lt; j \leq n} (x_j - x_i) \cdot ( -\sum_{i=1}^n x_i)\)</span>。</p>
+<p>因此 <span class="arithmatex">\(D_n=\prod_{1 \leq i &lt; j \leq n} (x_j - x_i) \cdot ( \sum_{i=1}^n x_i)\)</span>。</p>
 </details>
 </details>
 </li>
