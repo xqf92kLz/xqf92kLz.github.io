@@ -843,7 +843,7 @@
 
   <h1>第二章 行列式与矩阵的秩</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-08T03:56:00.749206+00:00'>2025-10-08</time></span><span data-tippy-content data-tippy-raw='2025-10-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-08T03:56:00.749206+00:00'>2025-10-08</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-08T13:42:20.509790+00:00'>2025-10-08</time></span><span data-tippy-content data-tippy-raw='2025-10-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-08T13:42:20.509790+00:00'>2025-10-08</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="laplace">Laplace 定理<a class="headerlink" href="#laplace" title="Permanent link">&para;</a></h3>
 <ul>
@@ -985,7 +985,7 @@ A
 </li>
 <li>
 <p>一点两斜形，按”一点“所在的行（列）展开，得到两个三角形</p>
-<details class="example" open="open">
+<details class="example">
 <summary>例题</summary>
 <p>计算 <span class="arithmatex">\(D=\begin{vmatrix} a_1 &amp; b_1 &amp; &amp; &amp; \\ &amp; a_2 &amp; b_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \ddots &amp; \\ &amp; &amp; &amp; a_{n - 1} &amp; b_{n - 1} \\ b_n &amp; 0 &amp; \cdots &amp; 0 &amp; a_n \end{vmatrix}\)</span></p>
 <details class="note">
@@ -1003,14 +1003,43 @@ A
 <p>行（列）和相等：通过变换让一行（列）元素相同，方便提取公因子，进而造 <span class="arithmatex">\(0\)</span>。</p>
 </li>
 <li>
-<p>爪形：斜爪消平爪</p>
+<p>循环行列式：虽然也是行（列）和相等，但别的做法。</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(D=\begin{vmatrix} 1 &amp; 2 &amp; 3 &amp; \cdots &amp; n - 1 &amp; n \\ n &amp; 1 &amp; 2 &amp; \cdots &amp; n - 2 &amp; n - 1 \\ n - 1 &amp; n &amp; 1 &amp; \cdots &amp; n - 3 &amp; n - 2 \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\ 3 &amp; 4 &amp; 5 &amp; \cdots &amp; 1 &amp; 2 \\ 2 &amp; 3 &amp; 4 &amp; \cdots &amp; n &amp; 1 \end{vmatrix}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<p>因为同一列是等差的，所以 <span class="arithmatex">\(R_i-R_{i+1}\)</span> 可以把很多元素干成一样的。然后稍加变换就能得到爪形行列式。</p>
+<div class="arithmatex">\[\begin{aligned}\begin{vmatrix} 1 &amp; 2 &amp; 3 &amp; \cdots &amp; n - 1 &amp; n \\ n &amp; 1 &amp; 2 &amp; \cdots &amp; n - 2 &amp; n - 1 \\ n - 1 &amp; n &amp; 1 &amp; \cdots &amp; n - 3 &amp; n - 2 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 3 &amp; 4 &amp; 5 &amp; \cdots &amp; 1 &amp; 2 \\ 2 &amp; 3 &amp; 4 &amp; \cdots &amp; n &amp; 1 \end{vmatrix} &amp;\xlongequal{R_i-R_{i+1}} \begin{vmatrix} 1 - n &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 1 - n &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 1 - n &amp; \cdots &amp; 1 &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 - n &amp; 1 \\ 2 &amp; 3 &amp; 4 &amp; \cdots &amp; n &amp; 1 \end{vmatrix} \\ &amp;\xlongequal{C_i-C_n} \begin{vmatrix} -n &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 1 \\ 0 &amp; -n &amp; 0 &amp; \cdots &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; -n &amp; \cdots &amp; 0 &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; -n &amp; 1 \\ 1 &amp; 2 &amp; 3 &amp; \cdots &amp; n - 1 &amp; 1 \end{vmatrix} \\&amp;= \begin{vmatrix} -n &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\ 0 &amp; -n &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -n &amp; \cdots &amp; 0 &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; -n &amp; 0 \\ 1 &amp; 2 &amp; 3 &amp; \cdots &amp; n - 1 &amp; 1 + \frac{1}{n} + \frac{2}{n} + \cdots + \frac{n - 1}{n} \end{vmatrix} \\&amp; = (-n)^{n - 1}[1 + \frac{1}{2}(n - 1)] \\&amp;= \frac{1}{2}(n + 1)(-n)^{n - 1}\end{aligned}\]</div>
+</details>
+</details>
+</li>
+<li>
+<p>爪形（法 1）：斜爪消平爪</p>
 <p><span class="arithmatex">\(\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\a_{21}&amp;a_{22}&amp; &amp; \\\vdots&amp;&amp;\ddots&amp;\\a_{n1}&amp; &amp; &amp;a_{nn}\end{vmatrix}=(a_{11}-\sum_{i=2}^na_{i1}\frac{a_{1i}}{a_{ii}})\prod_{i=2}^na_{ii}\)</span></p>
+<p>可以当做一个模板解其他型行列式</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(D=\begin{vmatrix} x_1 - a_1 &amp; x_2 &amp; x_3 &amp; \cdots &amp; x_n \\ x_1 &amp; x_2 - a_2 &amp; x_3 &amp; \cdots &amp; x_n \\ x_1 &amp; x_2 &amp; x_3 - a_3 &amp; \cdots &amp; x_n \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ x_1 &amp; x_2 &amp; x_3 &amp; \cdots &amp; x_n - a_n \end{vmatrix}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(R_{i+1}-R_1\)</span> 可以得到爪形行列式，<span class="arithmatex">\(D=(-1)^n\prod_{i=1}^n a_i(\sum_{i=1}^n\dfrac{x_i}{a_i}-1)\)</span>。</p>
+</details>
+<p>计算 <span class="arithmatex">\(D=\begin{vmatrix} a_1b_1 &amp; a_1b_2 &amp; a_1b_3 &amp; \cdots &amp; a_1b_n \\ a_2b_1 &amp; a_2b_2 &amp; a_2b_3 &amp; \cdots &amp; a_2b_n \\ a_3b_1 &amp; a_3b_2 &amp; a_3b_3 &amp; \cdots &amp; a_3b_n \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_nb_1 &amp; a_nb_2 &amp; a_nb_3 &amp; \cdots &amp; a_nb_n \end{vmatrix}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(R_1\)</span> 提出公因子 <span class="arithmatex">\(a_1\)</span>，再 <span class="arithmatex">\(R_i-a_iR_1\)</span>，得到爪形行列式。<span class="arithmatex">\(D=a_1b_n\prod_{i=1}^{n-1}(a_{i+1}b_i-a_ib_{i+1})\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>爪形（法 2）：按平爪展开，得到 <span class="arithmatex">\(n\)</span> 个能直接计算的行列式</p>
 </li>
 <li>
 <p>异爪形（低阶）：直接展开</p>
 </li>
 <li>
-<p>三对角形（低阶）：通过逐行（列）相消，把一条斜线消 <span class="arithmatex">\(0\)</span></p>
+<p>三对角形：通过逐行（列）相消，把一条斜线消 <span class="arithmatex">\(0\)</span></p>
 </li>
 <li>
 <p>拉普拉斯展开式</p>
@@ -1030,9 +1059,12 @@ A
 <p>递推法</p>
 <ul>
 <li>
+<p>爪形（法 3）：按只有两个元素的行（列）展开，变成 <span class="arithmatex">\(n-1\)</span> 形爪形和另一个行列式，另一个行列式再按只有单个元素的行（列）展开变成三角形</p>
+</li>
+<li>
 <p>异爪形（高阶）：按开口或爪的根部展开，变成 <span class="arithmatex">\(n-1\)</span> 阶异爪形和一个 <span class="arithmatex">\(n-1\)</span> 阶三角形</p>
 <p>如 <span class="arithmatex">\(D_{n} = \begin{vmatrix} * &amp; * &amp; &amp; &amp; \\ &amp; * &amp; * &amp; &amp; \\ &amp; &amp; \ddots &amp; \ddots &amp; \\ &amp; &amp; &amp; * &amp; * \\ * &amp; * &amp; \cdots &amp; * &amp; * \end{vmatrix}_{n}\)</span> 可以按第 <span class="arithmatex">\(1\)</span> 列或第 <span class="arithmatex">\(n\)</span> 列展开。</p>
-<details class="example" open="open">
+<details class="example">
 <summary>例题</summary>
 <p>计算 <span class="arithmatex">\(D_n = \begin{vmatrix}a &amp; -1 \\&amp; a &amp; -1 \\&amp; &amp; a &amp; \cdots \\&amp; &amp; &amp; \cdots &amp; -1 \\a_n &amp; a_{n - 1} &amp; a_{n - 2} &amp; \cdots &amp; a + a_1\end{vmatrix}\)</span></p>
 <details class="note">
@@ -1059,7 +1091,7 @@ A
 </li>
 <li>
 <p>三对角形（高阶）：按第一行展开，得到一个 <span class="arithmatex">\(n-1\)</span> 阶三对角形和一个 <span class="arithmatex">\(n-2\)</span> 阶三对角形“加边后”的产物。</p>
-<details class="example" open="open">
+<details class="example">
 <summary>例题</summary>
 <p>计算 <span class="arithmatex">\(D_n = \begin{vmatrix}a &amp; c \\b &amp; a &amp; c \\&amp; b &amp; \ddots &amp; \ddots \\&amp; &amp; \ddots &amp; a &amp; c \\&amp; &amp; &amp; b &amp; a\end{vmatrix}_n\)</span></p>
 <details class="note">
@@ -1087,8 +1119,8 @@ A
 </details>
 </li>
 <li>
-<p>大对称形：可以拆分成一个 <span class="arithmatex">\(n\)</span> 阶有一元素相等的行（列）状物和 <span class="arithmatex">\(n-1\)</span> 阶“加边后”的产物。</p>
-<details class="example" open="open">
+<p>大对称形：把其中一个行（列）拆分成一个单元素行（列）和一个方便消其他位置的行（列）。</p>
+<details class="example">
 <summary>例题</summary>
 <p>计算 <span class="arithmatex">\(D_{n} = \begin{vmatrix}a + x_1 &amp; a &amp; \cdots &amp; a \\a &amp; a + x_2 &amp; \cdots &amp; a \\\vdots &amp; \vdots &amp; &amp; \vdots \\a &amp; a &amp; \cdots &amp; a + x_n\end{vmatrix}\)</span></p>
 <details class="note">
@@ -1116,12 +1148,37 @@ A
 </ul>
 <p>故 <span class="arithmatex">\(D_{n} = \prod_{i = 1}^{n}(a_i - b) + b\sum_{i = 1}^{n}\prod_{j\neq i}(a_j - b)\)</span>。</p>
 </details>
-<p>计算 <span class="arithmatex">\(D_{n} = \begin{vmatrix}x &amp; b &amp; b &amp; \cdots &amp; b \\a &amp; x &amp; b &amp; \cdots &amp; b \\a &amp; a &amp; x &amp; \cdots &amp; b \\\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\a &amp; a &amp; a &amp; \cdots &amp; x\end{vmatrix}\)</span>，其中 <span class="arithmatex">\(a\neq b\)</span></p>
+<p>计算 <span class="arithmatex">\(D_{n} = \begin{vmatrix}x &amp; b &amp; b &amp; \cdots &amp; b \\a &amp; x &amp; b &amp; \cdots &amp; b \\a &amp; a &amp; x &amp; \cdots &amp; b \\\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\a &amp; a &amp; a &amp; \cdots &amp; x\end{vmatrix}\)</span>，其中 <span class="arithmatex">\(a\neq b\)</span>（<span class="arithmatex">\(a=b\)</span> 是行/列和相等型）</p>
 <details class="note">
 <summary>解答</summary>
 <div class="arithmatex">\[\begin{aligned} D_{n}&amp;=\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; b \\ a &amp; x &amp; b &amp; \cdots &amp; b \\ a &amp; a &amp; x &amp; \cdots &amp; b \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a &amp; a &amp; a &amp; \cdots &amp; b \end{vmatrix}_{n}+\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; 0 \\ a &amp; x &amp; b &amp; \cdots &amp; 0 \\ a &amp; a &amp; x &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a &amp; a &amp; a &amp; \cdots &amp; x - b \end{vmatrix}_{n}\\&amp;=b\begin{vmatrix} x &amp; b &amp; b &amp; \cdots &amp; 1 \\ a &amp; x &amp; b &amp; \cdots &amp; 1 \\ a &amp; a &amp; x &amp; \cdots &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a &amp; a &amp; a &amp; \cdots &amp; 1 \end{vmatrix}_{n}+(x - b)D_{n - 1}\\&amp;=b\begin{vmatrix} x - a &amp; b - a &amp; b - a &amp; \cdots &amp; 1 \\ 0 &amp; x - a &amp; b - a &amp; \cdots &amp; 1 \\ 0 &amp; 0 &amp; x - a &amp; \cdots &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 \end{vmatrix}_{n}+(x - b)D_{n - 1}\\&amp;=b(x - a)^{n - 1}+(x - b)D_{n - 1}\end{aligned}\]</div>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(D_{n} - \dfrac{b}{b - a}(x - a)^{n} = (x - b)[D_{n - 1} - \dfrac{b}{b - a}(x - a)^{n - 1}]\)</span><span class="arithmatex">\(= \cdots=(x - b)^{n-1}[x-\dfrac{b}{b-a}(x-a)]=-\dfrac{a}{b-a}(x-b)^n\)</span>，即 <span class="arithmatex">\(D_{n} = \dfrac{b(x - a)^{n} - a(x - b)^{n}}{b - a}\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>待定系数法</p>
+<p><span class="arithmatex">\(a_n=pa_{n-1}+f(n)\)</span></p>
+<p><span class="arithmatex">\(f(n)=C\)</span>：设 <span class="arithmatex">\(a_n+A=p(a_{n-1}+A)\)</span></p>
+<p><span class="arithmatex">\(f(n)=qr^{n-1}\)</span>：设 <span class="arithmatex">\(a_n+Ar^n=p(a_{n-1}+Ar^{n-1})\)</span>，<span class="arithmatex">\(a_n=pa_{n-1}+pAr^{n-1}-Ar^n\)</span>，则 <span class="arithmatex">\(A=\dfrac{qr^{n-1}}{pr^{n-1}-r^n}=\dfrac{q}{p-r}\)</span>。</p>
+<p><span class="arithmatex">\(f(n)=xn+y\)</span>：设 <span class="arithmatex">\(a_n+An+B=p(a_{n-1}+A(n-1)+B)\)</span></p>
+<p><span class="arithmatex">\(f(n)=xn^2+yn+z\)</span>：设 <span class="arithmatex">\(a_n+An^2+Bn+C=p(a_{n-1}+A(n-1)^2+B(n-1)+C)\)</span></p>
+<p><span class="arithmatex">\(f(n)\)</span> 是多项式：设成同次数多项式</p>
+</details>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
 <p>同理可得 <span class="arithmatex">\(D_{n}^{\text{T}}=(x - a)D_{n - 1}^{\text{T}}+a(x - b)^{n - 1}\)</span>。</p>
 <p>由 <span class="arithmatex">\(D_{n}=D_{n}^{\text{T}},\ D_{n - 1}=D_{n - 1}^{\text{T}}\)</span>，得到 <span class="arithmatex">\(\dfrac{D_{n}-b(x - a)^{n - 1}}{x - b}=\dfrac{D_{n}-a(x - b)^{n - 1}}{x - a}\)</span>，解得 <span class="arithmatex">\(D_{n}=\dfrac{b(x - a)^{n}-a(x - b)^{n}}{b - a}\)</span>。</p>
+</li>
+</ul>
+</details>
+<p>计算 <span class="arithmatex">\(D_n = \begin{vmatrix} 1 + x_1^2 &amp; x_2x_1 &amp; \cdots &amp; x_{n-1}x_1 &amp; x_nx_1 \\ x_1x_2 &amp; 1 + x_2^2 &amp; \cdots &amp; x_{n-1}x_2 &amp; x_nx_2 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\ x_1x_{n-1} &amp; x_2x_{n-1} &amp; \cdots &amp; 1 + x_{n-1}^2 &amp; x_nx_{n-1} \\ x_1x_n &amp; x_2x_n &amp; \cdots &amp; x_{n-1}x_n &amp; 1 + x_n^2 \end{vmatrix}_n\)</span></p>
+<details class="note">
+<summary>计算</summary>
+<div class="arithmatex">\[\begin{aligned}D_n &amp;= \begin{vmatrix} 1 + x_1^2 &amp; x_2x_1 &amp; \cdots &amp; x_{n-1}x_1 \\ x_1x_2 &amp; 1 + x_2^2 &amp; \cdots &amp; x_{n-1}x_2 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ x_1x_{n-1} &amp; x_2x_{n-1} &amp; \cdots &amp; 1 + x_{n-1}^2 \\ x_1x_n &amp; x_2x_n &amp; \cdots &amp; x_{n-1}x_n &amp; 1 \end{vmatrix} + x_n \begin{vmatrix} 1 + x_1^2 &amp; x_2x_1 &amp; \cdots &amp; x_{n-1}x_1 &amp; x_1 \\ x_1x_2 &amp; 1 + x_2^2 &amp; \cdots &amp; x_{n-1}x_2 &amp; x_2 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\ x_1x_{n-1} &amp; x_2x_{n-1} &amp; \cdots &amp; 1 + x_{n-1}^2 &amp; x_{n-1} \\ x_1x_n &amp; x_2x_n &amp; \cdots &amp; x_{n-1}x_n &amp; x_n \end{vmatrix}\\&amp;=D_{n-1}+x_n \begin{vmatrix} 1 &amp; &amp;\cdots &amp; &amp;x_1 \\ &amp; 1 &amp; \cdots &amp; &amp;x_2 \\ &amp; &amp; \ddots &amp; &amp;\vdots \\ &amp; &amp; \cdots &amp; 1 &amp; x_{n-1} \\ &amp; &amp; \cdots &amp; &amp; x_n \end{vmatrix}_n\\&amp;=D_{n-1}+x_n^2\end{aligned}\]</div>
+<p>则 <span class="arithmatex">\(D_n=1+\sum_{i=1}^n x_i^2\)</span>。</p>
 </details>
 </details>
 </li>
@@ -1129,7 +1186,7 @@ A
 </li>
 <li>
 <p>范德蒙德行列式：注意正负交替可能是负数的幂次。</p>
-<details class="example" open="open">
+<details class="example">
 <summary>例题</summary>
 <p>计算 <span class="arithmatex">\(D=\begin{vmatrix}a&amp;b&amp;c\\a^2&amp;b^2&amp;c^2\\b+c&amp;c+a&amp;a+b\end{vmatrix}\)</span>。</p>
 <details class="note">
@@ -1153,15 +1210,15 @@ A
 </details>
 </li>
 <li>
-<p>加边法：用新加的行（列）同时消其他的行（列）</p>
-<details class="example" open="open">
+<p>加边法：用新加的行（列）同时消其他的行（列）。注意可以多次加边</p>
+<details class="example">
 <summary>例题</summary>
-<p>计算 <span class="arithmatex">\(D=\begin{vmatrix} b_1 + a_1 &amp; a_1 &amp; \cdots &amp; a_1 \\ a_2 &amp; b_2 + a_2 &amp; \cdots &amp; a_2 \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ a_n &amp; a_n &amp; \cdots &amp; b_n + a_n \end{vmatrix}\)</span>。</p>
+<p>计算 <span class="arithmatex">\(D=\begin{vmatrix} b_1 + a_1 &amp; a_1 &amp; \cdots &amp; a_1 \\ a_2 &amp; b_2 + a_2 &amp; \cdots &amp; a_2 \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ a_n &amp; a_n &amp; \cdots &amp; b_n + a_n \end{vmatrix}\)</span></p>
 <details class="note">
 <summary>解答</summary>
 <div class="arithmatex">\[ \begin{aligned} D&amp;=\begin{vmatrix} 1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\ a_1 &amp; b_1 + a_1 &amp; a_1 &amp; \cdots &amp; a_1 \\ a_2 &amp; a_2 &amp; b_2 + a_2 &amp; \cdots &amp; a_2 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ a_n &amp; a_n &amp; a_n &amp; \cdots &amp; b_n + a_n \end{vmatrix} \\ &amp;=\begin{vmatrix} 1 &amp; -1 &amp; -1 &amp; \cdots &amp; -1 \\ a_1 &amp; b_1 &amp; &amp; &amp; \\ a_2 &amp; &amp; b_2 &amp; &amp; \\ \vdots &amp; &amp; &amp; \ddots &amp; \\ a_n &amp; &amp; &amp; &amp; b_n \end{vmatrix} \\ &amp;=(1 + \sum_{i=1}^n\frac{a_i}{b_i} )b_1b_2\cdots b_n \end{aligned}\]</div>
 </details>
-<p>计算 <span class="arithmatex">\(D=\begin{vmatrix}1+x_1^2&amp;x_1x_2&amp;\cdots&amp;x_1x_n\\x_2x_1&amp;1+x_2^2&amp;\cdots&amp;x_2x_n\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\x_nx_1&amp;x_nx_2&amp;\cdots&amp;1+x_n^2\end{vmatrix}_n\)</span>。</p>
+<p>计算 <span class="arithmatex">\(D=\begin{vmatrix}1+x_1^2&amp;x_1x_2&amp;\cdots&amp;x_1x_n\\x_2x_1&amp;1+x_2^2&amp;\cdots&amp;x_2x_n\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\x_nx_1&amp;x_nx_2&amp;\cdots&amp;1+x_n^2\end{vmatrix}_n\)</span></p>
 <details class="note">
 <summary>解答</summary>
 <div class="arithmatex">\[\begin{aligned}D&amp;=\begin{vmatrix}1&amp;x_1&amp;x_2&amp;\cdots&amp;x_n\\0&amp;1+x_1^2&amp;x_1x_2&amp;\cdots&amp;x_1x_n\\0&amp;x_2x_1&amp;1+x_2^2&amp;\cdots&amp;x_2x_n\\0&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\0&amp;x_nx_1&amp;x_nx_2&amp;\cdots&amp;1+x_n^2\end{vmatrix}_{n+1}\\
@@ -1169,6 +1226,85 @@ A
 \begin{vmatrix}1&amp;x_1&amp;x_2&amp;\cdots&amp;x_n\\-x_1&amp;1\\-x_2&amp;&amp;1\\\vdots&amp;&amp;&amp;\ddots\\-x_n&amp;&amp;&amp;&amp;1\end{vmatrix}_{n+1}\\
 &amp;=1+\sum_{i=1}^n x_i^2
 \end{aligned}
+\]</div>
+</details>
+<p>计算 <span class="arithmatex">\(D=\begin{vmatrix}1 + x_1 &amp; 1 + x_1^2 &amp; \cdots &amp; 1 + x_1^n \\1 + x_2 &amp; 1 + x_2^2 &amp; \cdots &amp; 1 + x_2^n \\\vdots &amp; \vdots &amp; \ddots &amp;\vdots \\1 + x_n &amp; 1 + x_n^2 &amp; \cdots &amp; 1 + x_n^n\end{vmatrix}_n\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<div class="arithmatex">\[
+\begin{aligned}
+D&amp;=
+\begin{vmatrix}
+1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+1 &amp; 1 + x_1 &amp; 1 + x_1^2 &amp; \cdots &amp; 1 + x_1^n \\
+1 &amp; 1 + x_2 &amp; 1 + x_2^2 &amp; \cdots &amp; 1 + x_2^n \\
+\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\
+1 &amp; 1 + x_n &amp; 1 + x_n^2 &amp; \cdots &amp; 1 + x_n^n
+\end{vmatrix}_{n+1}\\
+&amp;=
+\begin{vmatrix}
+1 &amp; -1 &amp; -1 &amp; \cdots &amp; -1 \\
+1 &amp; x_1 &amp; x_1^2 &amp; \cdots &amp; x_1^n \\
+1 &amp; x_2 &amp; x_2^2 &amp; \cdots &amp; x_2^n \\
+\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\
+1 &amp; x_n &amp; x_n^2 &amp; \cdots &amp; x_n^n
+\end{vmatrix}_{n+1}\\
+&amp;=
+\begin{vmatrix}
+2 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+1 &amp; x_1 &amp; x_1^2 &amp; \cdots &amp; x_1^n \\
+1 &amp; x_2 &amp; x_2^2 &amp; \cdots &amp; x_2^n \\
+\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\
+1 &amp; x_n &amp; x_n^2 &amp; \cdots &amp; x_n^n
+\end{vmatrix}
++
+\begin{vmatrix}
+-1 &amp; -1 &amp; -1 &amp; \cdots &amp; -1 \\
+1 &amp; x_1 &amp; x_1^2 &amp; \cdots &amp; x_1^n \\
+1 &amp; x_2 &amp; x_2^2 &amp; \cdots &amp; x_2^n \\
+\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\
+1 &amp; x_n &amp; x_n^2 &amp; \cdots &amp; x_n^n
+\end{vmatrix}\\
+&amp;=
+2\cdot (-1)^{1+1}\cdot x_1x_2\cdots x_n
+\begin{vmatrix}
+1 &amp; x_1 &amp; \cdots &amp; x_1^{n-1} \\
+2 &amp; x_2 &amp; \cdots &amp; x_2^{n-1} \\
+\vdots &amp; \vdots &amp; &amp; \vdots \\
+n &amp; x_n &amp; \cdots &amp; x_n^{n-1}
+\end{vmatrix}
++
+(-1)\begin{vmatrix}
+1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\
+1 &amp; x_1 &amp; x_1^2 &amp; \cdots &amp; x_1^n \\
+1 &amp; x_2 &amp; x_2^2 &amp; \cdots &amp; x_2^n \\
+\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\
+1 &amp; x_n &amp; x_n^2 &amp; \cdots &amp; x_n^n
+\end{vmatrix}\\
+&amp;=[2\prod_{i=1}^n x_i-\prod_{i=1}^n (x_i-1)]\prod_{1\leq i&lt;j\leq n}(x_j-x_i)
+\end{aligned}
+\]</div>
+</details>
+<p>计算 <span class="arithmatex">\(D_{n}=\begin{vmatrix}0&amp;a_{1}+a_{2}&amp;\cdots&amp;a_{1}+a_{n}\\a_{2}+a_{1}&amp;0&amp;\cdots&amp;a_{2}+a_{n}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\a_{n}+a_{1}&amp;a_{n}+a_{2}&amp;\cdots&amp;0\end{vmatrix}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<div class="arithmatex">\[
+\begin{aligned}D_{n}&amp;=\begin{vmatrix} 1&amp;a_{1}&amp;a_{2}&amp;\cdots&amp;a_{n}\\ 0&amp;0&amp;a_{1}+a_{2}&amp;\cdots&amp;a_{1}+a_{n}\\ 0&amp;a_{2}+a_{1}&amp;0&amp;\cdots&amp;a_{2}+a_{n}\\ \vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\ 0&amp;a_{n}+a_{1}&amp;a_{n}+a_{2}&amp;\cdots&amp;0 \end{vmatrix}_{n + 1}\\&amp;\xlongequal{R_i-R_1}\begin{vmatrix} 1&amp;a_{1}&amp;a_{2}&amp;\cdots&amp;a_{n}\\ -1&amp;-a_{1}&amp;a_{1}&amp;\cdots&amp;a_{1}\\ -1&amp;a_{2}&amp;-a_{2}&amp;\cdots&amp;a_{2}\\ \vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\ -1&amp;a_{n}&amp;a_{n}&amp;\cdots&amp;-a_{n} \end{vmatrix}_{n + 1}\\&amp;=\begin{vmatrix} 1&amp;0&amp;0&amp;0&amp;\cdots&amp;0\\ 0&amp;1&amp;a_{1}&amp;a_{2}&amp;\cdots&amp;a_{n}\\ a_{1}&amp;-1&amp;-a_{1}&amp;a_{1}&amp;\cdots&amp;a_{1}\\ a_{2}&amp;-1&amp;a_{2}&amp;-a_{2}&amp;\cdots&amp;a_{2}\\ \vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\ a_{n}&amp;-1&amp;a_{n}&amp;a_{n}&amp;\cdots&amp;-a_{n} \end{vmatrix}_{n + 2}\\&amp;\xlongequal{C_{3\sim n + 2}-C_{1}}\begin{vmatrix}
+1&amp;0&amp;-1&amp;-1&amp;\cdots&amp;-1\\
+0&amp;1&amp;a_{1}&amp;a_{2}&amp;\cdots&amp;a_{n}\\
+a_{1}&amp;-1&amp;-2a_{1}&amp;0&amp;\cdots&amp;0\\
+a_{2}&amp;-1&amp;0&amp;-2a_{2}&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+a_{n}&amp;-1&amp;0&amp;0&amp;\cdots&amp;-2a_{n}
+\end{vmatrix}_{n + 2}
+\\&amp;\xlongequal[C_{2}-\sum\limits_{i = 3}^{n + 2}\frac{1}{2a_{i - 2}}C_{i}]{C_{1}+\sum\limits_{i = 3}^{n + 2}\frac{1}{2}C_{i}}\begin{vmatrix}
+1 - \frac{n}{2}&amp;\frac{1}{2}\sum\limits_{i = 1}^{n}\frac{1}{a_{i}}&amp;-1&amp;-1&amp;\cdots&amp;-1\\
+\frac{1}{2}\sum\limits_{i = 1}^{n}a_{i}&amp;1 - \frac{n}{2}&amp;a_{1}&amp;a_{2}&amp;\cdots&amp;a_{n}\\
+0&amp;0&amp;-2a_{1}&amp;0&amp;\cdots&amp;0\\
+0&amp;0&amp;0&amp;-2a_{2}&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+0&amp;0&amp;0&amp;0&amp;\cdots&amp;-2a_{n}
+\end{vmatrix}_{n + 2}\\&amp;= (-2)^{n}a_{1}a_{2}\cdots a_{n}[(1 - \frac{n}{2})^{2} - \frac{1}{4}(\sum_{i = 1}^{n}a_{i})(\sum\limits_{i = 1}^{n}\frac{1}{a_{i}})]\end{aligned}
 \]</div>
 </details>
 </details>
