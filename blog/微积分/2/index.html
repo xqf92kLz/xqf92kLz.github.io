@@ -843,7 +843,7 @@
 
   <h1>第二章 导数与微分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-08T15:24:45.089868+00:00'>2025-10-08</time></span><span data-tippy-content data-tippy-raw='2025-10-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-08T15:24:45.089868+00:00'>2025-10-08</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-09'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-09T13:29:33.392674+00:00'>2025-10-09</time></span><span data-tippy-content data-tippy-raw='2025-10-09'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-09T13:29:33.392674+00:00'>2025-10-09</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">导数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1233,9 +1233,86 @@
 <li>
 <p>求高阶导数：</p>
 <ol>
-<li>归纳法</li>
-<li>用莱布尼兹公式</li>
-<li>泰勒展开</li>
+<li>
+<p>归纳法</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)=e^x\cos x\)</span>，求 <span class="arithmatex">\(f^{(2024)}(x)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(f'(x)=e^x(\cos x-\sin x)=\sqrt 2 e^x\cos(x+\dfrac{\pi}4)\)</span>【把 <span class="arithmatex">\(f'(x)\)</span> 改成与 <span class="arithmatex">\(f(x)\)</span> 结构类似的】</p>
+<p>假设 <span class="arithmatex">\(f^{(n)}(x)=(\sqrt 2)^n e^x\cos(x+\dfrac{n\pi}4)\)</span>，则 <span class="arithmatex">\(f^{(n+1)}(x)=(\sqrt 2)^ne^x\cdot [\cos(x+\dfrac{n\pi}4)-\sin(x+\dfrac{n\pi}4)]=(\sqrt 2)^{n+1}e^x\cos(x+\dfrac{(n+1)\pi}4)\)</span>。【注意 <span class="arithmatex">\((\sqrt 2)^n\)</span> 是常数】</p>
+<p>由归纳法知，<span class="arithmatex">\(f^{(2024)}(x)=2^{1012}e^x\cos x\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong>（利用欧拉公式）</p>
+<details class="abstract" open="open">
+<summary>思路</summary>
+<p>用欧拉公式构造复值函数：由欧拉公式，<span class="arithmatex">\(e^{ix}=\cos x+i\sin x\)</span>，那么 <span class="arithmatex">\(f(x)=e^x\cos x\)</span> 就是 <span class="arithmatex">\(g(x)=e^x\cdot e^{ix}\)</span> 的实部。</p>
+<p>复值函数的导数性质：若复值函数 <span class="arithmatex">\(g(x)=u(x)+iv(x)\)</span>（<span class="arithmatex">\(u,v\)</span> 为实函数），则 <span class="arithmatex">\(g^{(n)}(x)=u^{(n)}(x)+iv^{(n)}(x)\)</span>。因此，实部的 <span class="arithmatex">\(n\)</span> 阶导数等于复值函数 <span class="arithmatex">\(n\)</span> 阶导数的实部。</p>
+<p>所以，<span class="arithmatex">\(f^{(n)}(x)=\text{Re}[g^{(n)}(x)]\)</span>。</p>
+</details>
+<p><span class="arithmatex">\(g^{(n)}(x)=(1+i)^ne^{(1+i)x}\)</span>【因为 <span class="arithmatex">\((e^{kx})^{(n)}=k^ne^{kx}\)</span>】<span class="arithmatex">\(=(\sqrt 2)^n(\cos\dfrac{n\pi}4+i\sin\dfrac{n\pi}4)\cdot e^x(\cos x+i\sin x)=(\sqrt 2)^ne^x[\cos (x+\dfrac{n\pi}4)+i\sin(x+\dfrac{n\pi}4))]\)</span>。</p>
+<p>故 <span class="arithmatex">\(f^{(n)}(x)=(\sqrt 2)^n e^x\cos(x+\dfrac{n\pi}4)\)</span>。所以 <span class="arithmatex">\(f^{(2024)}(x)=2^{1012}e^x\cos x\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>计算过程中：</p>
+<ol>
+<li>
+<p>复数的乘法可以用模长相乘、辐角相加处理。例如，复数 <span class="arithmatex">\(1+i\)</span> 模长为 <span class="arithmatex">\(\sqrt 2\)</span>、辐角为 <span class="arithmatex">\(\dfrac{\pi}4\)</span>。所以 <span class="arithmatex">\((1+i)^n\)</span> 模长为 <span class="arithmatex">\((\sqrt 2)^n\)</span>、辐角为 <span class="arithmatex">\(\dfrac{n\pi}4\)</span>。故 <span class="arithmatex">\((1+i)^n=(\sqrt 2)^n(\cos\dfrac{n\pi}4+i\sin\dfrac{n\pi}4)\)</span>。</p>
+</li>
+<li>
+<p>复指数用欧拉公式转成三角形式的复数。</p>
+<p><span class="arithmatex">\(e^{(a+ib)x}=e^{ax}\cdot e^{ibx}=e^{ax}(\cos bx+i\sin bx)\)</span>。</p>
+</li>
+</ol>
+</details>
+</li>
+</ul>
+</details>
+</details>
+</li>
+<li>
+<p>用莱布尼兹公式</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)=x^2e^{-2x}\)</span>，求 <span class="arithmatex">\(f^{(2024)}(0)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>根据莱布尼兹公式，<span class="arithmatex">\(f^{(n)}(x)=C_{n}^0 x^2(e^{-2x})^{(n)}+C_{n}^1(x^2)'(e^{-2x})^{n-1}+C_{n}^2(x^2)''(e^{-2x})^{(n-2)}\)</span><span class="arithmatex">\(=x^2\cdot (-2)^{n}e^{-2x}+n\cdot 2x\cdot (-2)^{n-1}e^{-2x}+\dfrac{n\cdot (n-1)}2\cdot 2\cdot (-2)^{n-2}e^{-2x}\)</span>，因此 <span class="arithmatex">\(f^{(2024)}(0)=2024\cdot 2023\cdot 2^{2022}\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>递推</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)=\arctan x\)</span>，求 <span class="arithmatex">\(f^{(n)}(0)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(f'(x)=\dfrac{1}{1+x^2}\)</span>，则 <span class="arithmatex">\((1+x^2)f'(x)=1\)</span>。</p>
+<p>两边同时求 <span class="arithmatex">\((n-1)\)</span> 阶导数，由莱布尼兹公式（因为 <span class="arithmatex">\((1+x^2)\)</span> 的从三阶导开始就变成 <span class="arithmatex">\(0\)</span> 了，所以展开时只有前几项非零）可得 <span class="arithmatex">\((1+x^2)f^{(n)}(x)+2(n-1)xf^{(n-1)}(x)+(n-1)(n-2)f^{(n-2)}(x)=0\)</span>。</p>
+<p>令 <span class="arithmatex">\(x=0\)</span> 有 <span class="arithmatex">\(f^{(n)}(0)+(n-1)(n-2)f^{(n-2)}(0)=0\)</span>。得到递推式 <span class="arithmatex">\(f^{(n)}(0)=-(n-1)(n-2)f^{(n-2)}(0)\)</span>。</p>
+<p>又 <span class="arithmatex">\(f(0)=0\)</span>，<span class="arithmatex">\(f'(0)=1\)</span>，所以 <span class="arithmatex">\(f^{(n)}(0)=\begin{cases}0&amp;(n\text{ is even})\\(-1)^{\frac{n-1}2}(n-1)!&amp;(n\text{ is old})\end{cases}\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)=\arcsin x\)</span>，求 <span class="arithmatex">\(f^{(n)}(0)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>记 <span class="arithmatex">\(y=\arcsin x\)</span>。</p>
+<p><span class="arithmatex">\(y'=\dfrac{1}{\sqrt {1-x^2}}\Rightarrow y'\sqrt{1-x^2}=1\)</span>【直接用莱布尼兹公式无法求解，展开后非 <span class="arithmatex">\(0\)</span> 项过多】</p>
+<p>再求导，<span class="arithmatex">\(y''=\dfrac 1 2 \dfrac{1}{(1-x^2)}\dfrac{1}{\sqrt{1-x^2}}\cdot (-2x)=\dfrac{x}{1-x^2}\cdot \textcolor{blue}{\dfrac{1}{\sqrt{1-x^2}}}=\dfrac{x}{1-x^2}\cdot \textcolor{blue}{y'}\)</span>，因此 <span class="arithmatex">\((1-x^2)y''=xy'\)</span>。</p>
+<p>两边同时对 <span class="arithmatex">\(x\)</span> 求 <span class="arithmatex">\(n-2\)</span> 阶导数：<span class="arithmatex">\((1-x^2)y^{(n)}+C_{n-2}^1 (-2x)y^{n-1}-2C_{n-2}^2 y^{n-2}=xy^{(n-1)}+C_{n-2}^1 y^{n-2}\)</span>，得到递推式 <span class="arithmatex">\(y^{(n)}(0)=(n-2)^2 y^{(n-2)}(0)\)</span>。</p>
+<p>又 <span class="arithmatex">\(y(0)=0\)</span>，<span class="arithmatex">\(y'(0)=1\)</span>，则 <span class="arithmatex">\(y^{(2n)}(0)=0\)</span>，<span class="arithmatex">\(y^{(2n+1)}(0)=[(2n-1)!!]^2\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)=\ln(x+\sqrt{1+x^2})\)</span>，求 <span class="arithmatex">\(f^{(n)}(0)\)</span>。</p>
+</details>
+</li>
+<li>
+<p>泰勒展开</p>
+</li>
 </ol>
 </li>
 </ul>
@@ -1351,8 +1428,12 @@
 <p>证明：（1）若 <span class="arithmatex">\(f(x)\)</span> 是可导的偶函数，则 <span class="arithmatex">\(f'(x)\)</span> 是奇函数；（2）若 <span class="arithmatex">\(f(x)\)</span> 是可导的奇函数，则 <span class="arithmatex">\(f'(x)\)</span> 是偶函数。</p>
 <details class="note">
 <summary>解答</summary>
-<p>（1）<span class="arithmatex">\(f'(-x)\triangleq \lim\limits_{\Delta x\to 0}\dfrac{f(-x+\Delta x)-f(-x)}{\Delta x}=\lim\limits_{Delta x\to 0}\dfrac{f(x-\Delta x)-f(x)}{\Delta x}\)</span>【利用 <span class="arithmatex">\(f(-x)=f(x)\)</span>】<span class="arithmatex">\(=-\lim\limits_{\Delta x\to 0}\dfrac{f(x-\Delta x)-f(x)}{-\Delta x}=-f'(x)\)</span></p>
+<p>（1）<span class="arithmatex">\(f'(-x)\triangleq \lim\limits_{\Delta x\to 0}\dfrac{f(-x+\Delta x)-f(-x)}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{f(x-\Delta x)-f(x)}{\Delta x}\)</span>【利用 <span class="arithmatex">\(f(-x)=f(x)\)</span>】<span class="arithmatex">\(=-\lim\limits_{\Delta x\to 0}\dfrac{f(x-\Delta x)-f(x)}{-\Delta x}=-f'(x)\)</span></p>
 <p>（2）<span class="arithmatex">\(f'(-x)\triangleq \lim\limits_{\Delta x\to 0}\dfrac{f(-x+\Delta x)-f(-x)}{\Delta x}\)</span>【利用 <span class="arithmatex">\(f(-x)=-f(x)\)</span>】<span class="arithmatex">\(=\lim\limits_{\Delta x\to 0}\dfrac{-f(x-\Delta x)+f(x)}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{f(x-\Delta x)-f(x)}{-\Delta x}=f'(x)\)</span></p>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处存在任意阶导数，那么：若 <span class="arithmatex">\(f(x)\)</span> 为奇函数，则 <span class="arithmatex">\(f^{(2n)}(0)=0\)</span>；若 <span class="arithmatex">\(f(x)\)</span> 为偶函数，则 <span class="arithmatex">\(f^{(2n-1)}(0)=0\)</span>。</p>
 </details>
 <p>证明：若 <span class="arithmatex">\(f(x)\)</span> 是可导的周期为 <span class="arithmatex">\(T\)</span> 的周期函数，则 <span class="arithmatex">\(f'(x)\)</span> 也是以 <span class="arithmatex">\(T\)</span> 为周期的周期函数。</p>
 <details class="note">
@@ -1361,11 +1442,37 @@
 </details>
 </li>
 <li>
-<p>已知条件</p>
+<p>从所给条件中挖掘出有用结论</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续，且 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{f(x)}x=2\)</span>，求 <span class="arithmatex">\(f'(0)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(f(0)=\lim\limits_{x\to 0}f(x)=\lim\limits_{x\to 0}\dfrac{f(x)}x\cdot x=0\)</span></p>
+<p><span class="arithmatex">\(f'(0)=\lim\limits_{x\to 0}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\to 0}\dfrac{f(x)}x=2\)</span></p>
+</details>
+<p>???+ tip</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>  设 $f(x)$ 在 $x=x_0$ 处连续且满足 $\lim\limits_{x\to x_0}\dfrac{f(x)}{x-x_0}=A$，则 $f(x_0)=0,f&#39;(x_0)=A$。
+
+  证明：$f(x_0)=\lim\limits_{x\to x_0}f(x)=\lim\limits_{x\to x_0}\dfrac{f(x)}{x-x_0}(x-x_0)=A\times 0=0$，$f&#39;(x_0)\triangleq \lim\limits_{x\to x_0}\dfrac{f(x)-f(x_0)}{x-x_0}=\lim\limits_{x\to x_0}\dfrac{f(x)}{x-x_0}=A$。
+</code></pre></div></td></tr></table></div>
+<p>设 <span class="arithmatex">\(f(x)=\begin{cases}\dfrac{\sqrt{1+x}-1}x&amp;(x&gt;0)\\ax+b&amp;(x\leq 0)\end{cases}\)</span>，且 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处可导，求 <span class="arithmatex">\(a,b\)</span> 的值。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处可导，则：<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 连续（左右极限相等），且左右导数相等。两个未知量，两个条件。</p>
+</details>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处可导，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续。<span class="arithmatex">\(f(0+0)=\lim\limits_{x\to 0^+}f(x)=\lim\limits_{x\to 0^+}\dfrac{\sqrt{1+x}-1}x=\dfrac 1 2\)</span>，<span class="arithmatex">\(f(0-0)=\lim\limits_{x\to 0^-}(ax+b)=b\)</span>。由 <span class="arithmatex">\(f(0+0)=f(0-0)\)</span> 得 <span class="arithmatex">\(b=\dfrac 1 2\)</span>。</p>
+<p><span class="arithmatex">\(f_+'(0)=\lim\limits_{x\to 0^+}\dfrac{f(x)-f(0)}x=\lim\limits_{x\to 0^+}\dfrac{\sqrt{1+x}-1-\frac 1 2 x}{x^2}=-\lim\limits_{x\to 0^+}\dfrac{\frac 1 4 x^2}{x^2(\sqrt{1+x}+1+\frac 1 2 x)}=-\dfrac 1 8\)</span>，<span class="arithmatex">\(f_-'(0)=a\)</span>。由 <span class="arithmatex">\(f_+'(0)=f_-'(0)\)</span> 得 <span class="arithmatex">\(a=-\dfrac 1 8\)</span>。</p>
+<p>因此 <span class="arithmatex">\(a=-\dfrac 1 8\)</span>，<span class="arithmatex">\(b=\dfrac 1 2\)</span>。</p>
 <details class="tip" open="open">
 <summary>Tip</summary>
-<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处连续且满足 <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)}{x-x_0}=A\)</span>，则 <span class="arithmatex">\(f(x_0)=0,f'(x_0)=A\)</span>。</p>
-<p>证明：<span class="arithmatex">\(f(x_0)=\lim\limits_{x\to x_0}f(x)=\lim\limits_{x\to x_0}\dfrac{f(x)}{x-x_0}(x-x_0)=A\times 0=0\)</span>，<span class="arithmatex">\(f'(x_0)\triangleq \lim\limits_{x\to x_0}\dfrac{f(x)-f(x_0)}{x-x_0}=\lim\limits_{x\to x_0}\dfrac{f(x)}{x-x_0}=A\)</span>。</p>
+<p>给出可导的条件，相当于有可导（左右导数相等）和连续（左右极限相等）两个条件。</p>
+</details>
+</details>
 </details>
 </li>
 </ul>

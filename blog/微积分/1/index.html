@@ -1017,17 +1017,39 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-08T15:24:45.089868+00:00'>2025-10-08</time></span><span data-tippy-content data-tippy-raw='2025-10-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-08T15:24:45.089868+00:00'>2025-10-08</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-09'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-09T13:29:33.392674+00:00'>2025-10-09</time></span><span data-tippy-content data-tippy-raw='2025-10-09'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-09T13:29:33.392674+00:00'>2025-10-09</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>狄利克雷函数是周期函数，但是无最小正周期。</li>
-<li>上下界</li>
 <li>
-<p>上确界 <span class="arithmatex">\(\sup\)</span>，下确界 <span class="arithmatex">\(\inf\)</span></p>
+<p>基本初等函数：六类（常值函数，幂函数，指数函数，对数函数，三角函数，反三角函数）。</p>
+<p>初等函数：由基本初等函数经过有限次四则运算与复合运算所得到的函数。
+- 狄利克雷函数 <span class="arithmatex">\(D(x)=[x\in\mathbb Q]\)</span> 是周期函数（任意非零有理数都是 <span class="arithmatex">\(D(x)\)</span> 的周期），但是无最小正周期。</p>
+</li>
+<li>
+<p>有界集：<span class="arithmatex">\(\exists M&gt;0\)</span>，对 <span class="arithmatex">\(\forall x\in A\)</span>，都有 <span class="arithmatex">\(|x|\leq M\)</span>。</p>
+<p>无界集：<span class="arithmatex">\(\forall M&gt;0\)</span>，都 <span class="arithmatex">\(\exists x_0\in A\)</span>，使得 <span class="arithmatex">\(|x_0|&gt;M\)</span>。</p>
+</li>
+<li>
+<p>上下确界</p>
+<ul>
+<li>
+<p>上确界：最小的上界</p>
+<p>若 <span class="arithmatex">\(\alpha\)</span> 满足，<span class="arithmatex">\(\forall x\in A\)</span>，<span class="arithmatex">\(x\leq \alpha\)</span>（<span class="arithmatex">\(\alpha\)</span> 是 <span class="arithmatex">\(A\)</span> 的上界），且 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists x_0\in A\)</span> 使 <span class="arithmatex">\(x_0&gt;\alpha-\varepsilon\)</span>（<span class="arithmatex">\(\alpha-\varepsilon\)</span> 都不是 <span class="arithmatex">\(A\)</span> 的上界），则 <span class="arithmatex">\(\alpha\)</span> 为 <span class="arithmatex">\(A\)</span> 的上确界，记作 <span class="arithmatex">\(\alpha=\sup A\)</span>。</p>
+</li>
+<li>
+<p>下确界：最大的下界</p>
+<p>若 <span class="arithmatex">\(\beta\)</span> 满足，<span class="arithmatex">\(\forall x\in A\)</span>，<span class="arithmatex">\(x\geq \beta\)</span>（<span class="arithmatex">\(\beta\)</span> 是 <span class="arithmatex">\(A\)</span> 的下界），且 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists x_0\in A\)</span> 使 <span class="arithmatex">\(x_0&lt;\beta+\varepsilon\)</span>（<span class="arithmatex">\(\beta+\varepsilon\)</span> 都不是 <span class="arithmatex">\(A\)</span> 的下界），则 <span class="arithmatex">\(\beta\)</span> 为 <span class="arithmatex">\(A\)</span> 的下确界，记作 <span class="arithmatex">\(\beta=\inf A\)</span>。</p>
+</li>
+</ul>
+<p>若 <span class="arithmatex">\(A\)</span> 有上（下）确界，则上（下）确界可能属于 <span class="arithmatex">\(A\)</span>，也可能不属于 <span class="arithmatex">\(A\)</span>。上（下）确界属于 <span class="arithmatex">\(A\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> 上（下）确界为 <span class="arithmatex">\(A\)</span> 的最大（小）值。</p>
+<p>如 <span class="arithmatex">\(\sup(0,2)=2\)</span>，<span class="arithmatex">\(\inf\{1,\frac 1 2,\frac 1 3,\cdots\}=0\)</span>。</p>
 </li>
 <li>
 <p>确界原理：非空有界的实数集必有上下确界。（但未必存在最大（小）元）</p>
+</li>
+<li>
+<p>有界函数，无界函数</p>
 </li>
 </ul>
 <h3 id="_3">数列极限<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -1052,7 +1074,11 @@
 </details>
 </li>
 <li>
-<p>不等式性质：当 <span class="arithmatex">\(n&gt;n_0\in\mathbb N\)</span>，<span class="arithmatex">\(a_n\geq b_n\)</span>，且 <span class="arithmatex">\(\{a_n\}\)</span> 收敛于 <span class="arithmatex">\(a\)</span>、<span class="arithmatex">\(\{b_n\}\)</span> 收敛于 <span class="arithmatex">\(b\)</span>，则 <span class="arithmatex">\(a&gt;b\)</span>。</p>
+<p>不等式性质：若 <span class="arithmatex">\(\{a_n\}\)</span> 收敛于 <span class="arithmatex">\(a\)</span>、<span class="arithmatex">\(\{b_n\}\)</span> 收敛于 <span class="arithmatex">\(b\)</span>，且 <span class="arithmatex">\(\exists N_0\in\mathbb N^*\)</span>，当 <span class="arithmatex">\(n&gt;N_0\)</span> 时都有 <span class="arithmatex">\(a_n\geq b_n\)</span>，则 <span class="arithmatex">\(a\geq b\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>反证法。假设 <span class="arithmatex">\(a&lt;b\)</span>，那么取 <span class="arithmatex">\(\varepsilon=\dfrac{b-a}{2}\)</span> 易得当 <span class="arithmatex">\(n&gt;N_1\)</span> 时 <span class="arithmatex">\(a_n&lt;b_n\)</span>。取 <span class="arithmatex">\(N=\max\{N_0,N_1\}\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(a_n&lt;b_n\)</span>，与条件矛盾，所以假设不成立。故 <span class="arithmatex">\(a\geq b\)</span>。</p>
+</details>
 <details class="warning" open="open">
 <summary>注意</summary>
 <p>即使满足 <span class="arithmatex">\(n&gt;n_0\in\mathbb N\)</span>，<span class="arithmatex">\(a_n&gt;b_n\)</span>，且 <span class="arithmatex">\(\{a_n\}\)</span> 收敛于 <span class="arithmatex">\(a\)</span>、<span class="arithmatex">\(\{b_n\}\)</span> 收敛于 <span class="arithmatex">\(b\)</span>，仍然得不到 <span class="arithmatex">\(a&gt;b\)</span>（仍旧只能得到 <span class="arithmatex">\(a\geq b\)</span>）。例如 <span class="arithmatex">\(a_n=\frac 1 n&gt;0\)</span>，<span class="arithmatex">\(b_n=0\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n=\lim\limits_{n\to +\infty}=0\)</span>；<span class="arithmatex">\(a_n=\frac{1}{2^n}\)</span>，<span class="arithmatex">\(b_n=\frac{1}{2^{n+1}}\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n=\lim\limits_{n\to \infty}b_n=0\)</span>。</p>
@@ -1060,6 +1086,29 @@
 </li>
 <li>
 <p>四则运算</p>
+<p>若 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=a\)</span>，<span class="arithmatex">\(\lim\limits_{n\to \infty}b_n=b\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}(a_n\pm b_n)=a\pm b\)</span>，<span class="arithmatex">\(\lim\limits_{n\to \infty}(a_n\cdot b_n)=a\cdot b\)</span>，<span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{a_n}{b_n}=\frac a b\,(b\neq 0)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N_1\)</span>，当 <span class="arithmatex">\(n&gt;N_1\)</span> 时，有 <span class="arithmatex">\(|a_n-a|&lt;\varepsilon,|b_n-b|&lt;\varepsilon\)</span>。</p>
+<ul>
+<li>
+<p>证明 <span class="arithmatex">\(\lim\limits_{n\to \infty}(a_n+b_n)=a+b\)</span>：</p>
+<p><span class="arithmatex">\(|(a_n+b_n)-(a+b)|=|(a_n-a)+(b_n-b)|\leq |a_n-a|+|b_n-b|&lt;\varepsilon+\varepsilon=2\varepsilon\)</span>。</p>
+</li>
+<li>
+<p>证明 <span class="arithmatex">\(\lim\limits_{n\to \infty}(a_n\cdot b_n)=ab\)</span>：</p>
+<p><span class="arithmatex">\(|a_nb_n-ab|=|(a_n-a)b_n+a(b_n-b)|\leq |a_n-a||b_n|+|a||b_n-b|\)</span></p>
+<p>由收敛数列的有界性知，<span class="arithmatex">\(\exists M\)</span>，对 <span class="arithmatex">\(\forall n\)</span>，有 <span class="arithmatex">\(|b_n|\leq M\)</span>。</p>
+<p>于是 <span class="arithmatex">\(|a_nb_n-ab|&lt;\varepsilon M+|a|\varepsilon=(M+|a|)\varepsilon\)</span></p>
+</li>
+<li>
+<p>证明 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{a_n}{b_n}=\dfrac a b\,(b\neq 0)\)</span>：</p>
+<p><span class="arithmatex">\(|\dfrac{a_n}{b_n}-\dfrac a b|=|\dfrac{a_nb-ab_n}{b_nb}|=|\dfrac{b(a_n-a)+a(b-b_n)}{b_n}|\leq \dfrac{|b||a_n-a|+|a||b-b_n|}{|b||b_n|}&lt;\dfrac{|a|+|b|}{|b||b_n|}\varepsilon\)</span></p>
+<p>又 <span class="arithmatex">\(\lim\limits_{n\to \infty}b_n=b\neq 0\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}|b_n|=|b|&gt;0\)</span>。由保号性知，<span class="arithmatex">\(\exists N_2&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N_2\)</span> 时，有 <span class="arithmatex">\(|b_n|&gt;\dfrac 1 2|b|\)</span>。</p>
+<p><span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，取 <span class="arithmatex">\(N=\max\{N_1,N_2\}\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，<span class="arithmatex">\(|\dfrac{a_n}{b_n}-\dfrac a b|&lt;\dfrac{|a|+|b|}{|b||b_n|}\varepsilon&lt;\dfrac{2(|a|+|b|)}{b^2}\varepsilon\)</span>。</p>
+</li>
+</ul>
+</details>
 <details class="warning" open="open">
 <summary>注意</summary>
 <ol>
@@ -1075,14 +1124,35 @@
 <ul>
 <li>
 <p><strong>夹逼定理</strong></p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{n\to \infty}\sqrt[n]{a_1^n+a_2^n+\cdots+a_m^n}\)</span>，其中 <span class="arithmatex">\(a_i\)</span> 为正常数。</p>
+<details class="note">
+<summary>解答</summary>
+<p>不妨设 <span class="arithmatex">\(A=\max\{a_1,a_2,\cdots,a_m\}\)</span>，由于 <span class="arithmatex">\(A=\sqrt[n]{A^n}&lt;\sqrt[n]{a_1^n+a_2^n+\cdots+a_m^n}&lt;\sqrt[n]{m\cdot A^n}=A\sqrt[n]{m}\)</span></p>
+<p>又 <span class="arithmatex">\(\lim\limits_{n\to \infty}A=\lim\limits_{n\to \infty}A\sqrt[n]m=A\)</span>，由夹逼定理知，<span class="arithmatex">\(\lim\limits_{n\to \infty}\sqrt[n]{a_1^n+a_2^n+\cdots+a_m^n}=A=\max\{a_1,a_2,\cdots,a_n\}\)</span>。</p>
+</details>
+</details>
 </li>
 <li>
 <p>数列与子数列收敛性的关系</p>
 <p>数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\{a_n\}\)</span> 的任一子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span> 都收敛且极限相等。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\Rightarrow\)</span>：<span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|a_n-a|&lt;\varepsilon\)</span>。对于子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span>，取 <span class="arithmatex">\(K=N\)</span>，当 <span class="arithmatex">\(k&gt;K\)</span> 时，有 <span class="arithmatex">\(n_k\geq k&gt;L=N\)</span>，有 <span class="arithmatex">\(|a_{n_k}-a|&lt;\varepsilon\)</span>。所以 <span class="arithmatex">\(\lim\limits_{k\to\infty}a_{n_k}=a\)</span>。</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span>：由于 <span class="arithmatex">\(\{a_n\}\)</span> 本身就是 <span class="arithmatex">\(\{a_n\}\)</span> 的一个子列，故 <span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
+</details>
 <p>数列 <span class="arithmatex">\(\{a_n\}\)</span> 发散 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\{a_n\}\)</span> 中有两个子列极限存在但不相等，或有一个子列极限不存在。</p>
 </li>
 <li>
-<p><strong>单调收敛准则：</strong>单调递增有上界的数列必收敛；单调递减有下界的数列必收敛。</p>
+<p><strong>单调有界定理：</strong>单调递增有上界的数列必收敛；单调递减有下界的数列必收敛。</p>
+<details class="note">
+<summary>证明</summary>
+<p>若 <span class="arithmatex">\(\{a_n\}\)</span> 递增且有上界：</p>
+<p>由确界原理知，必有上确界，设为 <span class="arithmatex">\(a\)</span>，则 <span class="arithmatex">\(a_n\leq a\)</span>。<span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N\)</span> 使得 <span class="arithmatex">\(a_N&gt;a-\varepsilon\)</span>。</p>
+<p>由于 <span class="arithmatex">\(\{a_n\}\)</span> 递增，故当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(a-\varepsilon&lt;a_N\leq a_n\leq a&lt;a+\varepsilon\)</span>，即 <span class="arithmatex">\(|a_n-a|&lt;\varepsilon\)</span>。故 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=a\)</span>。</p>
+</details>
+<p>由于改变数列的有限项不影响数列的敛散性和极限，所以数列从某一项开始单调有界结论依然成立。</p>
 </li>
 <li>
 <p>魏尔斯特拉斯（Weierstrass）定理：有界数列必有收敛的子列。</p>
@@ -1353,8 +1423,17 @@ $$
 <li>局部有界性</li>
 <li>保号性</li>
 <li>不等式性质</li>
-<li>四则运算</li>
-<li>复合函数的极限：<span class="arithmatex">\(\lim_{x \to x_0} f(\varphi(x)) \xlongequal[ \text{当}\, x \to x_0 \,\text{时},\,\varphi(x) \to u_0 ]{\text{令} \, \varphi(x) = u} \lim_{u \to u_0} f(u)\)</span></li>
+<li>函数极限的四则运算</li>
+<li>
+<p>复合函数的极限：设 <span class="arithmatex">\(y=f(u),u=\varphi(x)\)</span>，若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\varphi(x)=u_0\)</span>，<span class="arithmatex">\(\lim\limits_{u\to u_0}f(u)=A\)</span>，且存在 <span class="arithmatex">\(x_0\)</span> 的某邻域 <span class="arithmatex">\(\mathring U(x_0,\delta')\)</span>，当 <span class="arithmatex">\(x\in\mathring U(x_0,\delta')\)</span>时，<span class="arithmatex">\(\varphi(x)\neq u_0\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=\lim\limits_{u\to u_0}f(u)=A\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>由于 <span class="arithmatex">\(\lim\limits_{u\to u_0}f(u)=A\)</span>，所以 <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \eta&gt;0\)</span>，当 <span class="arithmatex">\(0&lt;|u-u_0|&lt;\eta\)</span> 时，有 <span class="arithmatex">\(|f(u)-A|&lt;\varepsilon\)</span>。</p>
+<p>又因为 <span class="arithmatex">\(\lim\limits_{x\to x_0}\varphi(x)=u_0\)</span>，所以对上述 <span class="arithmatex">\(\eta&gt;0\)</span>，<span class="arithmatex">\(\exists \delta_1&gt;0\)</span>，当 <span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta_1\)</span> 时，都有 <span class="arithmatex">\(|\varphi(x)-u_0|&lt;\eta\)</span>。</p>
+<p>取 <span class="arithmatex">\(\delta=\min\{\delta',\delta_1\}\)</span>，当 <span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta\)</span> 时，有 <span class="arithmatex">\(0&lt;\varphi(x)-u_0|&lt;\eta\)</span>，从而有 <span class="arithmatex">\(|f(\varphi(x))-A|&lt;\varepsilon\)</span>。即 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=\lim\limits_{u\to u_0}f(u)=A\)</span>。</p>
+</details>
+<p><span class="arithmatex">\(\lim_{x \to x_0} f(\varphi(x)) \xlongequal[ \text{当}\, x \to x_0 \,\text{时},\,\varphi(x) \to u_0 ]{\text{令} \, \varphi(x) = u} \lim_{u \to u_0} f(u)\)</span></p>
+</li>
 </ul>
 </li>
 <li>
@@ -1400,12 +1479,13 @@ $$
 </details>
 </li>
 <li>
-<p>单调有界准则</p>
-</li>
-</ul>
+<p>单调有界定理（充分条件）：单调有界函数必有单侧极限。若 <span class="arithmatex">\(\exists \delta&gt;0\)</span>，，使得 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((x_0-\delta,x_0)\)</span> 内单调增有上界/单调减有下界，则 <span class="arithmatex">\(\lim\limits_{x\to x_0^-}f(x)\)</span> 存在。</p>
 </li>
 <li>
-<p>柯西收敛准则</p>
+<p>柯西收敛准则（充要条件）：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内有定义。则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)\)</span> 存在 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \delta&gt;0\)</span>，当 <span class="arithmatex">\(x',x''\in\mathring U(x_0)\)</span> 且 <span class="arithmatex">\(x',x''\in\mathring U(x_0,\delta)\)</span> 时，都有 <span class="arithmatex">\(|f(x')-f(x'')|&lt;\varepsilon\)</span>。</p>
+<p><span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)\)</span> 不存在 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\exists \varepsilon_0&gt;0\)</span>，对 <span class="arithmatex">\(\forall \delta&gt;0\)</span>，<span class="arithmatex">\(\exists x',x''\in\mathring U(x_0)\)</span> 且 <span class="arithmatex">\(x',x''\in\mathring U(x_0,\delta)\)</span>，有 <span class="arithmatex">\(|f(x')-f(x'')|\geq \varepsilon_0\)</span>。</p>
+</li>
+</ul>
 </li>
 <li>
 <p>无穷小量</p>
@@ -1594,18 +1674,37 @@ $$
 <li>
 <p>函数连续的局部性质</p>
 <ul>
-<li>四则运算</li>
-<li>复合函数的连续性</li>
+<li>
+<p>连续函数的四则运算：若 <span class="arithmatex">\(f(x),g(x)\)</span> 在点 <span class="arithmatex">\(x=x_0\)</span> 处连续，则 <span class="arithmatex">\(f(x)\pm g(x),f(x)g(x),cf(x),\frac{f(x)}{g(x)}\,(g(x_0)\neq 0)\)</span> 在点 <span class="arithmatex">\(x=x_0\)</span> 处也连续。</p>
+</li>
+<li>
+<p>复合函数的连续性：若 <span class="arithmatex">\(u=\varphi(x)\)</span> 在点 <span class="arithmatex">\(x=x_0\)</span> 处连续，<span class="arithmatex">\(y=f(u)\)</span> 在 <span class="arithmatex">\(u_0=\varphi(x_0)\)</span> 处连续，则 <span class="arithmatex">\(y=f(\varphi(x))\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处也连续，且 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=f(\varphi(x_0))=f(\lim\limits_{x\to x_0}\varphi(x))\)</span>。</p>
+<ul>
+<li>
+<p>推论：</p>
+<p>若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\varphi(x)=u_0\)</span>，<span class="arithmatex">\(y=f(u)\)</span> 在 <span class="arithmatex">\(u=u_0\)</span> 处连续，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=f(\lim\limits_{x\to x_0}\varphi(x))\)</span>。</p>
+<p>若 <span class="arithmatex">\(\lim\limits_{x\to \infty}\varphi(x)=u_0\)</span>，<span class="arithmatex">\(y=f(u)\)</span> 在 <span class="arithmatex">\(u=u_0\)</span> 处连续，则 <span class="arithmatex">\(\lim\limits_{x\to \infty}f(\varphi(x))=f(\lim\limits_{x\to \infty}\varphi(x))=f(u_0)\)</span>。</p>
+<p>也就是可以利用 <span class="arithmatex">\(f\)</span> 的连续性，交换极限符号与函数符号之间的次序。</p>
+<details class="info" open="open">
+<summary>幂指函数的极限</summary>
+<p>若 <span class="arithmatex">\(\lim\limits_{x\to x_0}u(x)=a&gt;0\)</span>，<span class="arithmatex">\(\lim\limits_{x\to x_0}v(x)=b\)</span>（<span class="arithmatex">\(a,b\)</span> 为常数），则 <span class="arithmatex">\(\lim\limits_{x\to x_0}u(x)^{v(x)}=a^b\)</span>。</p>
+<p>证明：<span class="arithmatex">\(\lim\limits_{x\to x_0}u(x)^{v(x)}=\lim\limits_{x\to x_0}e^{v(x)\ln u(x)}=e^{\lim\limits_{x\to x_0}v(x)\ln u(x)}\)</span>【利用了 <span class="arithmatex">\(e^x\)</span> 的连续性】<span class="arithmatex">\(=e^{\lim\limits_{x\to x_0}v(x)\cdot \lim\limits_{x\to x_0}\ln u(x)}=e^{\lim\limits_{x\to x_0}v(x)\cdot \ln\lim\limits_{x\to x_0}u(x)}\)</span>【利用了 <span class="arithmatex">\(\ln\)</span> 的连续性】<span class="arithmatex">\(=e^{b\ln a}=a^b\)</span></p>
+</details>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <p>闭区间上连续函数的性质</p>
 <ul>
 <li>有界性定理</li>
-<li>最大最小值定理</li>
-<li>根的存在定理（零点定理）</li>
+<li>最大值最小值定理：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上一定能取到最大值与最小值。</li>
+<li>根的存在定理 / 零点定理：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(a)f(b)&lt;0\)</span>，则至少存在一点 <span class="arithmatex">\(\xi\in(a,b)\)</span>，使 <span class="arithmatex">\(f(\xi)=0\)</span>。</li>
 <li>介值定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上最大值为 <span class="arithmatex">\(M\)</span>、最小值为 <span class="arithmatex">\(m\)</span>，则 <span class="arithmatex">\(\forall \eta\in(m,M)\)</span>，都 <span class="arithmatex">\(\exists x\in[a,b]\)</span> 使得 <span class="arithmatex">\(f(x)=\eta\)</span>。</li>
-<li>一致连续性</li>
+<li>一致连续性定理 / 康托尔（Cantor）定理：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上一致连续。
+    （设 <span class="arithmatex">\(f(x)\)</span> 定义在区间 <span class="arithmatex">\(E\)</span> 上，若 <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \delta(\varepsilon)&gt;0\)</span>，当 <span class="arithmatex">\(x',x''\in E\)</span> 且 <span class="arithmatex">\(|x'-x''|&lt;\delta\)</span> 时，就有 <span class="arithmatex">\(|f(x')-f(x'')|&lt;\varepsilon\)</span>，则称 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(E\)</span> 上一致连续）</li>
+<li><span class="arithmatex">\(f(x)\)</span> 在开区间 <span class="arithmatex">\((a,b)\)</span> 内一致连续 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((a,b)\)</span> 内连续，且 <span class="arithmatex">\(\lim\limits_{x\to a^+}f(x),\lim\limits_{x\to b^-}f(x)\)</span> 存在（其中 <span class="arithmatex">\(a,b\)</span> 为常数）。</li>
 </ul>
 </li>
 <li>
@@ -2413,6 +2512,9 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 </li>
 <li>
 <p>没考虑等价无穷小的条件而误用。如，<span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\(\cos \frac{\pi x}{2}\)</span> 并不是无穷小量，不能使用无穷小的等价替换，实际上，它的值就是 <span class="arithmatex">\(1\)</span>。</p>
+</li>
+<li>
+<p>注意极限的四则运算法则无法推广到无限项，例如 <span class="arithmatex">\(1^{\infty}\)</span> 不一定是 <span class="arithmatex">\(1\)</span>。</p>
 </li>
 </ul>
 
