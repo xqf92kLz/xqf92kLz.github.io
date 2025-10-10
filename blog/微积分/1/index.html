@@ -1035,7 +1035,7 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-10T09:08:37.280610+00:00'>2025-10-10</time></span><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-10T09:08:37.280610+00:00'>2025-10-10</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-10T12:15:30.293454+00:00'>2025-10-10</time></span><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-10T12:15:30.293454+00:00'>2025-10-10</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2540,6 +2540,9 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 <p>注意极限的四则运算法则无法推广到无限项，例如 <span class="arithmatex">\(1^{\infty}\)</span> 不一定是 <span class="arithmatex">\(1\)</span>。</p>
 </li>
 <li>
+<p>看清楚是 <span class="arithmatex">\(\cos^2 x-1\)</span> 还是 <span class="arithmatex">\(\cos x-1\)</span>，前者是 <span class="arithmatex">\(-\sin^2 x\)</span>，后者是 <span class="arithmatex">\(-\frac 1 2 x^2\)</span>。</p>
+</li>
+<li>
 <p>间断点相关</p>
 <details class="danger">
 <summary>易错题</summary>
@@ -2594,12 +2597,16 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 <p>B. 若 <span class="arithmatex">\(\{x_n\}\)</span> 单调，则 <span class="arithmatex">\(\{f(x_n)\}\)</span> 必收敛</p>
 <p>C. 若 <span class="arithmatex">\(\{f(x_n)\}\)</span> 收敛，则 <span class="arithmatex">\(\{x_n\}\)</span> 必收敛</p>
 <p>D. 若 <span class="arithmatex">\(\{f(x_n)\}\)</span> 单调，则 <span class="arithmatex">\(\{x_n\}\)</span> 必收敛</p>
+<p>E. 若 <span class="arithmatex">\(\{x_n\}\)</span> 发散，则 <span class="arithmatex">\(\{f(x_n)\}\)</span> 必发散</p>
+<p>F. 若 <span class="arithmatex">\(\{f(x_n)\}\)</span> 发散，则 <span class="arithmatex">\(\{x_n\}\)</span> 必发散</p>
 <details class="note">
 <summary>解答</summary>
-<p>答案：ACD</p>
+<p>答案：ACDEF</p>
 <p>A 反例：<span class="arithmatex">\(f(x)=\begin{cases}\arctan x&amp;(x&lt;0)\\\arctan x+1&amp;(x\geq 0)\end{cases}\)</span>，<span class="arithmatex">\(x_n=\dfrac{(-1)^n}{n}\)</span>。<span class="arithmatex">\(x_n\to 0\)</span>，但 <span class="arithmatex">\(\{f(x_n)\}\)</span> 振荡，不收敛。【可能有跳跃间断点】</p>
 <p>C 反例：<span class="arithmatex">\(f(x)=\arctan x\)</span>，<span class="arithmatex">\(x_n=n\)</span>。<span class="arithmatex">\(\{f(x_n)\}\)</span> 趋向上确界而收敛，但 <span class="arithmatex">\(\{x_n\}\)</span> 发散。</p>
 <p>D 反例：<span class="arithmatex">\(f(x)=\arctan x\)</span>，<span class="arithmatex">\(x_n=n\)</span>。<span class="arithmatex">\(\{f(x_n)\}\)</span> 单调，但 <span class="arithmatex">\(\{x_n\}\)</span> 发散。</p>
+<p>E 反例：<span class="arithmatex">\(f(x)=\arctan x\)</span>，<span class="arithmatex">\(x_n=n\)</span>。<span class="arithmatex">\(\{x_n\}\)</span> 发散但 <span class="arithmatex">\(\{f(x_n)\}\)</span> 收敛。</p>
+<p>F 反例：<span class="arithmatex">\(f(x)=\begin{cases}\arctan x&amp;(x&lt;0)\\\arctan x+1&amp;(x\geq 0)\end{cases}\)</span>，<span class="arithmatex">\(x_n=\dfrac{(-1)^n}{n}\)</span>。<span class="arithmatex">\(\{f(x_n)\}\)</span> 发散，但 <span class="arithmatex">\(\{x_n\}\)</span> 收敛。</p>
 </details>
 <p>已知数列 <span class="arithmatex">\(\{a_n\}\,(a_n\in\mathbb R,a_n\neq 0)\)</span>，若 <span class="arithmatex">\(\{a_n\}\)</span> 发散，则：</p>
 <p>A. 数列 <span class="arithmatex">\(\{a_n+\dfrac{2}{a_n}\}\)</span> 发散</p>
@@ -2644,6 +2651,13 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 <p>若 <span class="arithmatex">\(x_0=\dfrac p q\)</span>：任意邻域内都存在无理数，不能使函数值逼近 <span class="arithmatex">\(\dfrac 1 q\)</span>。所以在有理点处不连续。</p>
 </li>
 </ul>
+</details>
+<p>令 <span class="arithmatex">\(f_n(x)=x^n+nx-2\,(x&gt;0)\)</span>，根记为 <span class="arithmatex">\(x_n\)</span>。求 <span class="arithmatex">\(\lim\limits_{n\to \infty}(1+x_n)^n\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(x_n^n+nx_n-2=0\)</span></p>
+<p><span class="arithmatex">\(f_n(0)&lt;0\)</span>，<span class="arithmatex">\(f_n(0)=n-1\)</span>。<span class="arithmatex">\(n&gt;1\)</span> 时，<span class="arithmatex">\(x_n\in(0,1)\)</span>，则 <span class="arithmatex">\(x_n^n\to 0\)</span>，<span class="arithmatex">\(nx_n\to 2\)</span>。</p>
+<p><span class="arithmatex">\(\lim\limits_{n\to \infty}(1+x_n)^n=\lim\limits_{n\to \infty}(1+\dfrac 2 n)^n=\lim\limits_{n\to \infty}(1+\dfrac 2 n)^{\frac n 2\cdot \frac {2n} n}=e^2\)</span></p>
 </details>
 </details>
 </li>
