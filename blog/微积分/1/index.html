@@ -652,6 +652,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      思考题
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -999,6 +1008,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      思考题
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1017,7 +1035,7 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-10T01:35:28.727878+00:00'>2025-10-10</time></span><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-10T01:35:28.727878+00:00'>2025-10-10</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-10T09:08:37.280610+00:00'>2025-10-10</time></span><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-10T09:08:37.280610+00:00'>2025-10-10</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1160,6 +1178,11 @@
 <li>
 <p><strong>柯西（Cauchy）收敛准则：</strong>数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛 <span class="arithmatex">\(\Leftrightarrow\)</span> 对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时对 <span class="arithmatex">\(\forall p\in\mathbb N^*\)</span> 均有 <span class="arithmatex">\(|a_{n+p}-a_n|&lt;\varepsilon\)</span>。</p>
 <p>数列 <span class="arithmatex">\(\{a_n\}\)</span> 发散 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\exists \varepsilon_0&gt;0\)</span>，对 <span class="arithmatex">\(\forall N&gt;0\)</span>，<span class="arithmatex">\(\exists m_0,n_0&gt;N\)</span>，有 <span class="arithmatex">\(|a_{m_0}-a_{n_0}|\geq\varepsilon_0\)</span>。</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>“数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛当且仅当 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span> 及 <span class="arithmatex">\(\forall p\in\mathbb N^*\)</span>，<span class="arithmatex">\(\exists N&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时有 <span class="arithmatex">\(|a_{n+p}-a_n|&lt;\varepsilon\)</span>”的表述是错误的！也就是“数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛 <span class="arithmatex">\(\Leftrightarrow\)</span> 对 <span class="arithmatex">\(\forall p\in\mathbb N^*\)</span>，有 <span class="arithmatex">\(\lim\limits_{n\to \infty}(a_{n+p}-a_n)=0\)</span>”的表述是错误的！</p>
+<p>例如 <span class="arithmatex">\(a_n=\ln n\)</span>，<span class="arithmatex">\(|a_{n+p}-a_n|=\ln(1+\dfrac p n)\to 0\)</span>，但 <span class="arithmatex">\(\{a_n\}\)</span> 发散。再例如 <span class="arithmatex">\(a_n=\sqrt n\)</span>，<span class="arithmatex">\(|a_{n+p}-a_n|=\sqrt{n+p}-\sqrt n=\dfrac{p}{\sqrt{n+p}+\sqrt n}\to 0\)</span>，但 <span class="arithmatex">\(\{a_n\}\)</span> 发散。</p>
+</details>
 <details class="example" open="open">
 <summary>例题</summary>
 <p>设 <span class="arithmatex">\(a_n=1+\frac 1 {2^2}+\cdots+\frac 1 {n^2}\)</span>，证明：<span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
@@ -2515,6 +2538,114 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 </li>
 <li>
 <p>注意极限的四则运算法则无法推广到无限项，例如 <span class="arithmatex">\(1^{\infty}\)</span> 不一定是 <span class="arithmatex">\(1\)</span>。</p>
+</li>
+<li>
+<p>间断点相关</p>
+<details class="danger">
+<summary>易错题</summary>
+<p>求 <span class="arithmatex">\(f(x)=|x-1|^{\frac{1}{x(x-2)}}\)</span> 的第一类间断点的个数。</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：<span class="arithmatex">\(2\)</span></p>
+<p>关注特殊点 <span class="arithmatex">\(x=0,1,2\)</span>。</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(x\to 1\)</span>：底趋于 <span class="arithmatex">\(0\)</span>，指数趋于 <span class="arithmatex">\(-1\)</span>，极限趋于无穷（不存在）。所以是第二类间断点（无穷间断点）。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(x\to 0\)</span>：<span class="arithmatex">\(\lim\limits_{x\to 0}f(x)=\lim\limits_{x\to 0}(1-x)^{\frac{1}{x(x-2)}}=\lim\limits_{x\to 0}(1-x)^{\frac{1}{-x}\cdot \frac{-x}{x(x-2)}}=e^{\frac 1 2}\)</span>（左右一致且有限），但 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处无定义。所以是第一类间断点（可去间断点）。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(x\to 2\)</span>：<span class="arithmatex">\(\lim\limits_{x\to 2}f(x)=\lim\limits_{x\to 0}(x-1)^{\frac{1}{x(x-2)}}=\lim\limits_{x\to 0}(1+(x-2))^{\frac{1}{x-2}\cdot \frac{x-2}{x(x-2)}}=e^{\frac 1 2}\)</span>（左右一致且有限），但 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=2\)</span> 处无定义。所以是第一类间断点（可去间断点）。</p>
+</li>
+</ul>
+</details>
+<p>求 <span class="arithmatex">\(f(x)=|x|^{\frac{1}{(1-x)(x-2)}}\)</span> 的第一类间断点个数。</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：1</p>
+<p>关注点 <span class="arithmatex">\(x=0,1,2\)</span>。</p>
+<ul>
+<li><span class="arithmatex">\(x\to 0\)</span>：底趋于 <span class="arithmatex">\(0\)</span>，指数趋于 <span class="arithmatex">\(-\dfrac 1 2\)</span>，极限趋于无穷（不存在）。所以是第二类间断点（无穷间断点）。</li>
+<li><span class="arithmatex">\(x\to 1\)</span>：<span class="arithmatex">\(\lim\limits_{x\to 1}f(x)=\lim\limits_{x\to 1}x^{\frac{1}{(1-x)(x-2)}}=\lim\limits_{x\to 1}(1+(x-1))^{\frac{1}{x-1}\cdot \frac{x-1}{(1-x)(x-2)}}=e\)</span>（左右一致且有限），但 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=1\)</span> 处无定义。所以是第一类间断点（可去间断点）。</li>
+<li><span class="arithmatex">\(x\to 2\)</span>：<span class="arithmatex">\(x\to 2^-\)</span> 时，底趋于 <span class="arithmatex">\(2\)</span> 大于 <span class="arithmatex">\(1\)</span>，指数趋于 <span class="arithmatex">\(+\infty\)</span>，极限趋于正无穷（不存在）。所以是第二类间断点（无穷间断点）。</li>
+</ul>
+</details>
+<p>设 <span class="arithmatex">\(f(x)=\lim\limits_{n\to +\infty}\dfrac{1+x}{1+x^{2n}}\)</span>，则 <span class="arithmatex">\(f(x)\)</span>：</p>
+<p>A. 没有间断点</p>
+<p>B. 有间断点 <span class="arithmatex">\(x=-1\)</span></p>
+<p>C. 有间断点 <span class="arithmatex">\(x=0\)</span></p>
+<p>D. 有间断点 <span class="arithmatex">\(x=1\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：D</p>
+<p><span class="arithmatex">\(f(x)=\begin{cases}1+x&amp;(|x|&lt;1)\\\dfrac{1+x}2&amp;(|x|=1)\\0&amp;(|x|&gt;1)\end{cases}\)</span></p>
+<p><span class="arithmatex">\(x=1\)</span> 处，左极限为 <span class="arithmatex">\(2\)</span>，右极限为 <span class="arithmatex">\(0\)</span>，故为间断点（跳跃）。</p>
+<p><span class="arithmatex">\(x=-1\)</span> 处，左右极限均为 <span class="arithmatex">\(0\)</span>，连续。</p>
+</details>
+</details>
+</li>
+<li>
+<p>收敛/发散相关</p>
+<details class="danger">
+<summary>易错题</summary>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上严格单调有界，<span class="arithmatex">\(\{x_n\}\)</span> 为实数列，则错误的有：</p>
+<p>A. 若 <span class="arithmatex">\(\{x_n\}\)</span> 收敛，则 <span class="arithmatex">\(\{f(x_n)\}\)</span> 必收敛</p>
+<p>B. 若 <span class="arithmatex">\(\{x_n\}\)</span> 单调，则 <span class="arithmatex">\(\{f(x_n)\}\)</span> 必收敛</p>
+<p>C. 若 <span class="arithmatex">\(\{f(x_n)\}\)</span> 收敛，则 <span class="arithmatex">\(\{x_n\}\)</span> 必收敛</p>
+<p>D. 若 <span class="arithmatex">\(\{f(x_n)\}\)</span> 单调，则 <span class="arithmatex">\(\{x_n\}\)</span> 必收敛</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：ACD</p>
+<p>A 反例：<span class="arithmatex">\(f(x)=\begin{cases}\arctan x&amp;(x&lt;0)\\\arctan x+1&amp;(x\geq 0)\end{cases}\)</span>，<span class="arithmatex">\(x_n=\dfrac{(-1)^n}{n}\)</span>。<span class="arithmatex">\(x_n\to 0\)</span>，但 <span class="arithmatex">\(\{f(x_n)\}\)</span> 振荡，不收敛。【可能有跳跃间断点】</p>
+<p>C 反例：<span class="arithmatex">\(f(x)=\arctan x\)</span>，<span class="arithmatex">\(x_n=n\)</span>。<span class="arithmatex">\(\{f(x_n)\}\)</span> 趋向上确界而收敛，但 <span class="arithmatex">\(\{x_n\}\)</span> 发散。</p>
+<p>D 反例：<span class="arithmatex">\(f(x)=\arctan x\)</span>，<span class="arithmatex">\(x_n=n\)</span>。<span class="arithmatex">\(\{f(x_n)\}\)</span> 单调，但 <span class="arithmatex">\(\{x_n\}\)</span> 发散。</p>
+</details>
+<p>已知数列 <span class="arithmatex">\(\{a_n\}\,(a_n\in\mathbb R,a_n\neq 0)\)</span>，若 <span class="arithmatex">\(\{a_n\}\)</span> 发散，则：</p>
+<p>A. 数列 <span class="arithmatex">\(\{a_n+\dfrac{2}{a_n}\}\)</span> 发散</p>
+<p>B. 数列 <span class="arithmatex">\(\{a_n-\dfrac{1}{a_n}\}\)</span> 发散</p>
+<p>C. 数列 <span class="arithmatex">\(\{2^{a_n}+2^{-a_n}\}\)</span> 发散</p>
+<p>D. 数列 <span class="arithmatex">\(\{2^{a_n}-2^{-a_n}\}\)</span> 发散</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：D</p>
+<p>A 反例：<span class="arithmatex">\(\{a_n\}\)</span> 取 <span class="arithmatex">\(1,2,1,2,\cdots\)</span></p>
+<p>B 反例：<span class="arithmatex">\(\{a_n\}\)</span> 取 <span class="arithmatex">\(1,-1,1,-1,\cdots\)</span></p>
+<p>C 反例：<span class="arithmatex">\(\{a_n\}\)</span> 取 <span class="arithmatex">\(1,-1,1,-1,\cdots\)</span></p>
+</details>
+<p>以下说法错误的是：</p>
+<p>A. 若 <span class="arithmatex">\(\{a_n\},\{b_n\}\)</span> 收敛，则 <span class="arithmatex">\(\{a_nb_n\}\)</span> 可能收敛</p>
+<p>B. 若 <span class="arithmatex">\(\{a_n\}\)</span> 收敛，<span class="arithmatex">\(\{b_n\}\)</span> 发散，则 <span class="arithmatex">\(\{a_n+b_n\}\)</span> 一定发散</p>
+<p>C. 若正项数列 <span class="arithmatex">\(\{a_n\},\{b_n\}\)</span> 均发散，则 <span class="arithmatex">\(\{a_n+b_n\}\)</span> 一定发散</p>
+<p>D. 若正项数列 <span class="arithmatex">\(\{a_n\}\)</span> 满足 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=0\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}\sqrt[n]{a_n}=0\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：CD</p>
+<p>C 反例：<span class="arithmatex">\(\{a_n\}\)</span> 为 <span class="arithmatex">\(1,2,1,2,\cdots\)</span>，<span class="arithmatex">\(\{b_n\}\)</span> 为 <span class="arithmatex">\(2,1,2,1,\cdots\)</span>，<span class="arithmatex">\(a_n+b_n=3\)</span> 收敛</p>
+<p>D 反例：<span class="arithmatex">\(a_n=\dfrac{1}{2^n}\)</span>，则 <span class="arithmatex">\(\sqrt[n]{a_n}=\dfrac 1 2\neq 0\)</span></p>
+</details>
+</details>
+</li>
+</ul>
+<h2 id="_12">思考题<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<details class="example">
+<summary>例题</summary>
+<p>定义函数 <span class="arithmatex">\(f(x)=\begin{cases}\dfrac 1 q&amp;(x=\dfrac p q,\,\gcd(p,q)=1)\\0&amp;(x\notin\mathbb Q)\end{cases}\)</span>。那么 <span class="arithmatex">\(f(x)\)</span> 在哪些点连续？为什么？</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(f\)</span> 在每个无理点连续，在任意有理点不连续。</p>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(x_0\notin\mathbb Q\)</span>：<span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，只有有限个 <span class="arithmatex">\(\dfrac 1 q\geq \varepsilon\)</span> 的有理数 <span class="arithmatex">\(\dfrac p q\)</span>（因为 <span class="arithmatex">\(q\leq\dfrac{1}{\varepsilon}\)</span>），因此存在一个邻域 <span class="arithmatex">\(\mathring U(x_0)\)</span> 不包含这些有理数，那么 <span class="arithmatex">\(x\in\mathring U(x_0),|f(x)-f(x_0)|&lt;\varepsilon\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=f(x_0)\)</span>。所以在无理点处连续。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(x_0=\dfrac p q\)</span>：任意邻域内都存在无理数，不能使函数值逼近 <span class="arithmatex">\(\dfrac 1 q\)</span>。所以在有理点处不连续。</p>
+</li>
+</ul>
+</details>
+</details>
 </li>
 </ul>
 
