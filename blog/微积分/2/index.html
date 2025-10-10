@@ -843,7 +843,7 @@
 
   <h1>第二章 导数与微分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-09'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-09T15:51:10.454939+00:00'>2025-10-09</time></span><span data-tippy-content data-tippy-raw='2025-10-09'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-09T15:51:10.454939+00:00'>2025-10-09</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-10T01:35:28.727878+00:00'>2025-10-10</time></span><span data-tippy-content data-tippy-raw='2025-10-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-10T01:35:28.727878+00:00'>2025-10-10</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">导数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1234,6 +1234,30 @@
 <p>求高阶导数：</p>
 <ol>
 <li>
+<p>化基本初等函数</p>
+<details class="example">
+<summary>例题</summary>
+<p><span class="arithmatex">\(y=\sin^4 x+\cos^4 x\)</span>，求 <span class="arithmatex">\(y^{(n)}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(y=(\sin^2 x+\cos^2 x)^2-2\sin^2 x\cos^2 x=1-\dfrac 1 2\sin^2 2x=1-\dfrac 1 4(1-\cos 4x)=\dfrac 3 4+\dfrac 1 4\cos 4x\)</span></p>
+<p><span class="arithmatex">\(y^{(n)}=\dfrac 1 4\cos(4x+\dfrac{n\pi}2)\cdot 4^n=4^{n-1}\cos(4x+\dfrac{n\pi}2)\)</span></p>
+</details>
+<p><span class="arithmatex">\(y=\dfrac{1}{x^2-3x+2}\)</span>，求 <span class="arithmatex">\(y^{(n)}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(y=\dfrac{1}{x-2}-\dfrac{1}{x-1}\)</span></p>
+<p><span class="arithmatex">\(y^{(n)}=\dfrac{(-1)^n n!}{(x-2)^{n+1}}-\dfrac{(-1)^n n!}{(x-1)^{n+1}}\)</span></p>
+</details>
+<p><span class="arithmatex">\(y=\dfrac{1}{1-x^2}\)</span>，求 <span class="arithmatex">\(y^{(n)}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(y=\dfrac{1}{2}(\dfrac 1{1+x}+\dfrac 1 {1-x})=\dfrac 1 2(\dfrac{1}{x+1}-\dfrac{1}{x-1})\)</span>【<span class="arithmatex">\(x\)</span> 系数为正，方便求导】</p>
+<p><span class="arithmatex">\(y^{(n)}=\dfrac 1 2 [\dfrac{(-1)^n n!}{(x+1)^{n+1}}-\dfrac{(-1)^n n!}{(x-1)^{n+1}}]\)</span></p>
+</details>
+</details>
+</li>
+<li>
 <p>归纳法</p>
 <details class="example">
 <summary>例题</summary>
@@ -1287,7 +1311,7 @@
 </details>
 </li>
 <li>
-<p>递推</p>
+<p>递推（构造常微分方程）</p>
 <details class="example">
 <summary>例题</summary>
 <p>设 <span class="arithmatex">\(f(x)=\arctan x\)</span>，求 <span class="arithmatex">\(f^{(n)}(0)\)</span>。</p>
