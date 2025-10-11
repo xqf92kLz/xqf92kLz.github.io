@@ -980,7 +980,7 @@
 
   <h1>第二章 行列式与矩阵的秩</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-11'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-11T08:09:13.502820+00:00'>2025-10-11</time></span><span data-tippy-content data-tippy-raw='2025-10-11'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-11T08:09:13.502820+00:00'>2025-10-11</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-11'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-11T09:59:32.838658+00:00'>2025-10-11</time></span><span data-tippy-content data-tippy-raw='2025-10-11'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-11T09:59:32.838658+00:00'>2025-10-11</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>排列<ul>
@@ -1086,15 +1086,19 @@ x_2^{n-2} &amp; x_3^{n-2} &amp; \cdots &amp; x_n^{n-2}
 <p>故方程组唯一解为：<span class="arithmatex">\(x_1 = \frac{D_1}{D} = 1\)</span>，<span class="arithmatex">\(x_2 = \frac{D_2}{D} = 0\)</span>，<span class="arithmatex">\(\cdots\)</span>，<span class="arithmatex">\(x_n = \frac{D_n}{D} = 0\)</span>。</p>
 </details>
 </details>
-<details class="info" open="open">
-<summary>Info</summary>
-<p>Cramer 法则的使用条件是方程组个数与未知量个数相同。</p>
-<p>若系数行列式 <span class="arithmatex">\(D=0\)</span>，则线性方程组有无穷多解或无解。</p>
-<p><span class="arithmatex">\(b\)</span> 与 <span class="arithmatex">\(A\)</span> 的某列成比例时有奇效。</p>
-</details>
 </li>
 </ul>
 </li>
+</ul>
+<p>​      <br />
+​        ???+ info
+​      <br />
+            Cramer 法则的使用条件是方程组个数与未知量个数相同。</p>
+<div class="highlight"><pre><span></span><code>        若系数行列式 $D=0$，则线性方程组有无穷多解或无解。
+
+        $b$ 与 $A$ 的某列成比例时有奇效。
+</code></pre></div>
+<ul>
 <li>
 <p>行列式按多行（列）展开</p>
 <ul>
@@ -1194,7 +1198,45 @@ A
 <p>爪形（法 2）：按平爪展开，得到 <span class="arithmatex">\(n\)</span> 个能直接计算的行列式</p>
 </li>
 <li>
-<p>异爪形（低阶）：直接展开</p>
+<p>异爪形（法 1，特殊可用）：通过逐行（列）相消，用主对角线消次对角线</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(D_{n+1} = \begin{vmatrix}-a_1 &amp; a_1 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\0 &amp; -a_2 &amp; a_2 &amp; \cdots &amp; 0 &amp; 0 \\0 &amp; 0 &amp; -a_3 &amp; \cdots &amp; 0 &amp; 0 \\\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\0 &amp; 0 &amp; 0 &amp; \cdots &amp; -a_n &amp; a_n \\1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1\end{vmatrix}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<div class="arithmatex">\[\xlongequal{C_{j+1}+C_j}
+\begin{vmatrix}
+-a_1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; -a_2 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -a_3 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; -a_n &amp; 0 \\
+1 &amp; 2 &amp; 3 &amp; \cdots &amp; n &amp; n+1
+\end{vmatrix}
+ = (-1)^n (n+1) a_1 a_2 \cdots a_n\]</div>
+</details>
+</details>
+</li>
+<li>
+<p>异爪形（法 2，通用）：把平爪展开。</p>
+<p><span class="arithmatex">\(D_n = \begin{vmatrix}a_n &amp; c_n &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\0 &amp; a_{n-1} &amp; c_{n-1} &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; a_{n-2} &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots \\0 &amp; 0 &amp; 0 &amp; \cdots &amp; a_3 &amp; c_3 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; a_2 &amp; c_2 \\b_n &amp; b_{n-1} &amp; b_{n-2} &amp; \cdots &amp; b_3 &amp; b_2 &amp; a_1\end{vmatrix}\\=\sum_{k=1}^n (-1)^{k-1}b_k\cdot (\prod_{i=k+1}^n a_i)\cdot (\prod_{i=2}^k c_i)\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p>按最后一行展开，<span class="arithmatex">\(D_n = \sum_{k=1}^{n} (-1)^{n+k} b_{n-k+1} M_{nk}\)</span></p>
+<ul>
+<li>
+<p>当 <span class="arithmatex">\(k = 1\)</span>  时，<span class="arithmatex">\(M_{n1}=b_n \cdot c_2 c_3 \cdots c_n\)</span></p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(k = n\)</span> 时，<span class="arithmatex">\(M_{nn}=a_1 \cdot a_2 a_3 \cdots a_n = a_1 a_2 \cdots a_n\)</span></p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(1&lt;k&lt;n\)</span> 时，<span class="arithmatex">\(M_{nk}\)</span> 可写为分块行列式 <span class="arithmatex">\(M_{nk} = \begin{vmatrix}A_{k-1} &amp; 0 \\0 &amp; B_{n-k}\end{vmatrix}\)</span>，其中 <span class="arithmatex">\(A_{k-1} = \begin{pmatrix}a_n &amp; c_n &amp; 0 &amp; \cdots &amp; 0 \\0 &amp; a_{n-1} &amp; c_{n-1} &amp; \cdots &amp; 0 \\0 &amp; 0 &amp; a_{n-2} &amp; \cdots &amp; 0 \\\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\0 &amp; 0 &amp; \cdots &amp; 0 &amp; a_{n-k+2}\end{pmatrix}\)</span>，<span class="arithmatex">\(B_{n-k} = \begin{pmatrix}c_{n-k+1} &amp; 0 &amp; \cdots &amp; 0 \\a_{n-k} &amp; c_{n-k} &amp; \cdots &amp; 0 \\\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\0 &amp; \cdots &amp; a_2 &amp; c_2\end{pmatrix}\)</span></p>
+<p>得 <span class="arithmatex">\(M_{nk} =\prod_{i=n-k+2}^{n} a_i\times  \prod_{i=2}^{n-k+1} c_i\)</span></p>
+</li>
+</ul>
+<p>则 <span class="arithmatex">\(D_n=\sum_{k=1}^n (-1)^{k-1}b_k\cdot (\prod_{i=k+1}^n a_i)\cdot (\prod_{i=2}^k c_i)\)</span>。</p>
+</details>
 </li>
 <li>
 <p>三对角形：通过逐行（列）相消，把一条斜线消 <span class="arithmatex">\(0\)</span></p>
@@ -1220,7 +1262,7 @@ A
 <p>爪形（法 3）：按只有两个元素的行（列）展开，变成 <span class="arithmatex">\(n-1\)</span> 形爪形和另一个行列式，另一个行列式再按只有单个元素的行（列）展开变成三角形</p>
 </li>
 <li>
-<p>异爪形（高阶）：按开口或爪的根部展开，变成 <span class="arithmatex">\(n-1\)</span> 阶异爪形和一个 <span class="arithmatex">\(n-1\)</span> 阶三角形</p>
+<p>异爪形（法 3）：按开口或爪的根部展开，变成 <span class="arithmatex">\(n-1\)</span> 阶异爪形和一个 <span class="arithmatex">\(n-1\)</span> 阶三角形</p>
 <p>如 <span class="arithmatex">\(D_{n} = \begin{vmatrix} * &amp; * &amp; &amp; &amp; \\ &amp; * &amp; * &amp; &amp; \\ &amp; &amp; \ddots &amp; \ddots &amp; \\ &amp; &amp; &amp; * &amp; * \\ * &amp; * &amp; \cdots &amp; * &amp; * \end{vmatrix}_{n}\)</span> 可以按第 <span class="arithmatex">\(1\)</span> 列或第 <span class="arithmatex">\(n\)</span> 列展开。</p>
 <details class="example">
 <summary>例题</summary>
@@ -1248,7 +1290,7 @@ A
 </details>
 </li>
 <li>
-<p>三对角形（高阶）：按第一行展开，得到一个 <span class="arithmatex">\(n-1\)</span> 阶三对角形和一个 <span class="arithmatex">\(n-2\)</span> 阶三对角形“加边后”的产物。</p>
+<p>三对角形（高阶）：按第一行或最后一行展开，得到一个 <span class="arithmatex">\(n-1\)</span> 阶三对角形和一个 <span class="arithmatex">\(n-2\)</span> 阶三对角形“加边后”的产物。</p>
 <details class="example">
 <summary>例题</summary>
 <p>计算 <span class="arithmatex">\(D_n = \begin{vmatrix}a &amp; c \\b &amp; a &amp; c \\&amp; b &amp; \ddots &amp; \ddots \\&amp; &amp; \ddots &amp; a &amp; c \\&amp; &amp; &amp; b &amp; a\end{vmatrix}_n\)</span></p>
@@ -1272,7 +1314,44 @@ A
     \end{vmatrix}_{n - 1} \\
     &amp;= a\cdot D_{n - 1} - c\cdot bD_{n - 2}\end{aligned}
     \]</div>
-<p>然后用特征根解。  </p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>递推公式 <span class="arithmatex">\(D_n = aD_{n-1} + bD_{n-2}\)</span> 的求解</p>
+<p>特征方程为 <span class="arithmatex">\(x^2=ax+b\)</span>，解得两个根 <span class="arithmatex">\(x_1,x_2\)</span> 称为特征根。若 <span class="arithmatex">\(x_1\neq x_2\)</span>，则通项为 <span class="arithmatex">\(D_n=Ax_1^n+Bx_2^n\)</span>；否则，<span class="arithmatex">\(D_n=(A\cdot n+B)x_1^n\)</span>。其中 <span class="arithmatex">\(A,B\)</span> 可以通过 <span class="arithmatex">\(D_1,D_2\)</span> 解出。</p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>
+<p>当 <span class="arithmatex">\(b = 0\)</span> 时，<span class="arithmatex">\(D_n = aD_{n-1} = a^2D_{n-2} = \cdots = a^{n-1}D_1\)</span></p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(b \neq 0\)</span> 时，<span class="arithmatex">\(D_n - aD_{n-1} - bD_{n-2} = 0\)</span></p>
+<p>考虑特征方程 <span class="arithmatex">\(x^2 - ax - b = 0\)</span>，<span class="arithmatex">\(\Delta = a^2 + 4b\)</span>。</p>
+<ol>
+<li>
+<p>当 <span class="arithmatex">\(\Delta \neq 0\)</span> 时</p>
+<p>方程有两个不相等的根 <span class="arithmatex">\(u_1,u_2\)</span>，<span class="arithmatex">\(u_1 + u_2 = a\)</span>，<span class="arithmatex">\(u_1u_2 = -b\)</span>，则：</p>
+<p><span class="arithmatex">\(D_n - (u_1 + u_2)D_{n-1} + u_1u_2D_{n-2} = 0\)</span></p>
+<p><span class="arithmatex">\(D_n - u_1D_{n-1} = u_2(D_{n-1} - u_1D_{n-2})=\cdots=u_2^{n-2}(D_2 - u_1D_1)\)</span></p>
+<p>同理 <span class="arithmatex">\(D_n - u_2D_{n-1} = u_1(D_{n-1} - u_2D_{n-2})=\cdots= u_1^{n-2}(D_2 - u_2D_1)\)</span></p>
+<div class="highlight"><pre><span></span><code>    消去 $D_{n-1}$，解得：$D_n = \dfrac{u_1^{n-1}(D_2 - u_2D_1) - u_2^{n-1}(D_2 - u_1D_1)}{u_1 - u_2}$
+
+2. 当 $\Delta = 0$ 时
+
+    方程有两个相等的根 $u_1 = u_2 = u$，$u = \frac{a}{2}$，$u^2 =  -b$，则：
+
+    $D_n - 2uD_{n-1} + u^2D_{n-2} = 0$
+
+    $D_n - uD_{n-1} = u(D_{n-1} - uD_{n-2}) = \cdots=u^{n-2}(D_2 - uD_1)$
+
+    $D_n = uD_{n-1} + u^{n-2}(D_2 - uD_1)\\= u(uD_{n-2} + u^{n-3}(D_2 - uD_1)) + u^{n-2}(D_2 - uD_1) = u^2D_{n-2} + 2u^{n-2}(D_2 - uD_1) \\=\cdots=u^{n-2}D_2 + (n - 2)u^{n-2}(D_2 - uD_1)\\=u^{n-2}((n - 1)D_2 - (n - 2)uD_1)$
+</code></pre></div>
+</li>
+</ol>
+</li>
+</ul>
+</details>
+</details>
 </details>
 </details>
 </li>
@@ -1394,6 +1473,40 @@ a_{n1} &amp; a_{n2} + x_2 &amp; \cdots &amp; a_{nn} + x_n
 &amp;=D_n+\sum_{j=1}^n x_j\sum_{i=1}^n A_{ij}
 \end{aligned}
 \]</div>
+</details>
+</details>
+</li>
+<li>
+<p>归纳法</p>
+<details class="example">
+<summary>例题</summary>
+<p>证明：<span class="arithmatex">\(D_n=\begin{vmatrix} 2\cos \alpha &amp; 1 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\ 1 &amp; 2\cos \alpha &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 2\cos \alpha &amp; \cdots &amp; 0 &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 2\cos \alpha &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 &amp; 2\cos \alpha \end{vmatrix}_n = \dfrac{\sin(n + 1)\alpha}{\sin \alpha} \quad (\sin \alpha \neq 0)\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p>当 <span class="arithmatex">\(n = 1\)</span> 时：<span class="arithmatex">\(D_1 = 2\cos \alpha=\dfrac{2\cos\alpha}{\sin\alpha}=\dfrac{\sin(1+1)\alpha}{\sin\alpha}\)</span></p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(n = 2\)</span> 时：<span class="arithmatex">\(D_2 = \begin{vmatrix} 2\cos \alpha &amp; 1 \\ 1 &amp; 2\cos \alpha \end{vmatrix}= 4\cos^2 \alpha - 1=2\cos^2\alpha+\cos 2\alpha\)</span><span class="arithmatex">\(=\dfrac{2\cos^2 \alpha \sin \alpha + \cos 2\alpha \sin \alpha}{\sin \alpha} = \dfrac{\sin 2\alpha \cos \alpha + \cos 2\alpha \sin \alpha}{\sin \alpha}=\dfrac{\sin(2 + 1)\alpha}{\sin \alpha}\)</span></p>
+</li>
+<li>
+<p>假设当 <span class="arithmatex">\(n \leq k\)</span> 时结论成立，<span class="arithmatex">\(D_{k-1} = \dfrac{\sin((k - 1) + 1)\alpha}{\sin \alpha} = \dfrac{\sin k \alpha}{\sin \alpha}\)</span>，<span class="arithmatex">\(D_k = \dfrac{\sin(k + 1)\alpha}{\sin \alpha}\)</span>。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+D_{k+1} &amp;= \begin{vmatrix} 2\cos \alpha &amp; 1 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\ 1 &amp; 2\cos \alpha &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 2\cos \alpha &amp; \cdots &amp; 0 &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 2\cos \alpha &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 &amp; 2\cos \alpha \end{vmatrix}_{k+1} \\
+&amp; = 2\cos \alpha \cdot D_k - \begin{vmatrix} 1 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\ 0 &amp; 2\cos \alpha &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 2\cos \alpha &amp; \cdots &amp; 0 &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 2\cos \alpha &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 &amp; 2\cos\alpha \end{vmatrix}_k\\
+&amp;=2\cos\alpha \cdot \dfrac{\sin (k+1)\alpha}{\sin \alpha}-\dfrac{\sin k\alpha}{\sin \alpha}\\
+&amp;= \frac{2\cos \alpha \sin(k + 1)\alpha - [ \sin(k + 1)\alpha \cos \alpha - \cos(k + 1)\alpha \sin \alpha]}{\sin \alpha} \\
+&amp;= \frac{\cos \alpha \sin(k + 1)\alpha + \cos(k + 1)\alpha \sin \alpha}{\sin \alpha}\\
+&amp;= \frac{\sin(k + 2)\alpha}{\sin \alpha} \\
+&amp;= \frac{\sin((k + 1) + 1)\alpha}{\sin \alpha}
+\end{aligned}
+\]</div>
+<p>在 <span class="arithmatex">\(n=k+1\)</span> 时也成立。</p>
+</li>
+</ul>
+<p>根据归纳法知，对任意 <span class="arithmatex">\(n\)</span> 都成立。</p>
 </details>
 </details>
 </li>
