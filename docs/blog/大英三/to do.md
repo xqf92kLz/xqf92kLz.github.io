@@ -14,7 +14,7 @@
 
 - [ ] Part III Translation 10% 短句翻译  (Book II Unit 1-4)    
 
-- [ ] Part IVSentence Completion 10% (给单词首字母和中文）(Book II Unit 1-4 10个&==Book I Unit 1-4 10个==，单词来自词表)
+- [ ] Part IV Sentence Completion 10% (给单词首字母和中文）(Book II Unit 1-4 10个&==Book I Unit 1-4 10个==，单词来自词表)
 
 - [ ] Part V BankedCloze 10%（15个单词选10个填空，不用词形变换）
 
