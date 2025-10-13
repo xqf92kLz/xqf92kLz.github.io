@@ -675,13 +675,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵的相抵
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       题目
     </span>
@@ -691,7 +700,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       行列式的计算
     </span>
@@ -1029,13 +1038,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵的相抵
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       题目
     </span>
@@ -1045,7 +1063,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       行列式的计算
     </span>
@@ -1076,7 +1094,7 @@
 
   <h1>第二章 行列式与矩阵的秩</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-13T02:01:46.448599+00:00'>2025-10-13</time></span><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-13T02:01:46.448599+00:00'>2025-10-13</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-13T04:18:53.204971+00:00'>2025-10-13</time></span><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-13T04:18:53.204971+00:00'>2025-10-13</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>排列<ul>
@@ -1181,20 +1199,16 @@ x_2^{n-2} &amp; x_3^{n-2} &amp; \cdots &amp; x_n^{n-2}
 <p><span class="arithmatex">\(D_j = \begin{vmatrix}1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; 1 &amp; \cdots &amp; a_1^{n - 1} \\1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; 1 &amp; \cdots &amp; a_2^{n - 1} \\1 &amp; a_3 &amp; a_3^2 &amp; \cdots &amp; 1 &amp; \cdots &amp; a_3^{n - 1} \\\cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\1 &amp; a_n &amp; a_n^2 &amp; \cdots &amp; 1 &amp; \cdots &amp; a_n^{n - 1}\end{vmatrix} = 0 \ (j = 2,3,\cdots,n)\)</span></p>
 <p>故方程组唯一解为：<span class="arithmatex">\(x_1 = \frac{D_1}{D} = 1\)</span>，<span class="arithmatex">\(x_2 = \frac{D_2}{D} = 0\)</span>，<span class="arithmatex">\(\cdots\)</span>，<span class="arithmatex">\(x_n = \frac{D_n}{D} = 0\)</span>。</p>
 </details>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>Cramer 法则的使用条件是方程组个数与未知量个数相同。</p>
+<p>若系数行列式 <span class="arithmatex">\(D=0\)</span>，则线性方程组有无穷多解或无解。</p>
+<p><span class="arithmatex">\(b\)</span> 与 <span class="arithmatex">\(A\)</span> 的某列成比例时有奇效。</p>
+</details>
 </details>
 </li>
 </ul>
 </li>
-</ul>
-<p>​      <br />
-​        ???+ info
-​      <br />
-            Cramer 法则的使用条件是方程组个数与未知量个数相同。</p>
-<div class="highlight"><pre><span></span><code>        若系数行列式 $D=0$，则线性方程组有无穷多解或无解。
-
-        $b$ 与 $A$ 的某列成比例时有奇效。
-</code></pre></div>
-<ul>
 <li>
 <p>行列式按多行（列）展开</p>
 <ul>
@@ -1232,8 +1246,41 @@ A
 <ul>
 <li>行阶梯形矩阵（行最简形矩阵），其秩为阶梯头个数。</li>
 </ul>
-<h2 id="_3">题目<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="_4">行列式的计算<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_3">矩阵的相抵<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>相抵（等价）</p>
+<p>定义：对于 <span class="arithmatex">\(A,B\in\mathbb P^{m\times n}\)</span>，若 <span class="arithmatex">\(r(A) = r(B)\)</span>，则称 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 相抵（或等价），记作 <span class="arithmatex">\(A \stackrel{\mathcal{R}}{\sim} B\)</span>。</p>
+<p>定理：<span class="arithmatex">\(A\stackrel{\mathcal {R}}{\sim}B\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(A\)</span> 可经有限次初等变换化为 <span class="arithmatex">\(B\)</span>。</p>
+</li>
+<li>
+<p>相抵等价关系</p>
+<p>数学上，称满足自反性、对称性和传递性的关系为一个等价关系。</p>
+<p>对于 <span class="arithmatex">\(A,B,C\in \mathbb P^{m\times n}\)</span>：</p>
+<ul>
+<li>
+<p>自反性：<span class="arithmatex">\(A \stackrel{\mathcal{R}}{\sim} A\)</span></p>
+</li>
+<li>
+<p>对称性：若 <span class="arithmatex">\(A \stackrel{\mathcal{R}}{\sim} B\)</span>，则 <span class="arithmatex">\(B \stackrel{\mathcal{R}}{\sim} A\)</span></p>
+</li>
+<li>
+<p>传递性：若 <span class="arithmatex">\(A \stackrel{\mathcal{R}}{\sim} B\)</span>，<span class="arithmatex">\(B \stackrel{\mathcal{R}}{\sim} C\)</span>，则 <span class="arithmatex">\(A \stackrel{\mathcal{R}}{\sim} C\)</span></p>
+</li>
+</ul>
+<p>所以矩阵的相抵关系是一种等价关系。</p>
+</li>
+<li>
+<p>相抵等价类</p>
+<p>若将 <span class="arithmatex">\(\mathbb P^{m\times n}\)</span> 中秩相同的矩阵归为一类，可得 <span class="arithmatex">\(\min\{m\,n\}+1\)</span> 个相抵等价类，与 <span class="arithmatex">\(\begin{pmatrix} E_r &amp; O \\ O &amp; O \end{pmatrix}\)</span> 为 <span class="arithmatex">\(A\)</span> 同类的矩阵的秩均为 <span class="arithmatex">\(r\,(r\in 0,1,\cdots,\min\{m,n\})\)</span>。</p>
+</li>
+<li>
+<p>相抵（等价）标准形</p>
+<p>当 <span class="arithmatex">\(r(A) = r\)</span> 时，称 <span class="arithmatex">\(\begin{pmatrix} E_r &amp; O \\ O &amp; O \end{pmatrix}\)</span> 为 <span class="arithmatex">\(A\)</span> 的相抵（等价）标准形。</p>
+</li>
+</ul>
+<h2 id="_4">题目<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">行列式的计算<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>化零降阶法</p>
@@ -1333,24 +1380,21 @@ A
 </ul>
 <p>则 <span class="arithmatex">\(D_n=\sum_{k=1}^n (-1)^{k-1}b_k\cdot (\prod_{i=k+1}^n a_i)\cdot (\prod_{i=2}^k c_i)\)</span>。</p>
 </details>
+</li>
+</ul>
+</li>
+</ul>
+<p>​  <br />
+​       - 三对角形：通过逐行（列）相消，把一条斜线消 <span class="arithmatex">\(0\)</span>
+​ <br />
+​       - 拉普拉斯展开式
+​ <br />
+​           - X 形：把的 <span class="arithmatex">\(2n+1-i\)</span> 行移动到第 <span class="arithmatex">\(2i\)</span> 行，第 <span class="arithmatex">\(2n+1-i\)</span> 列移动到第 <span class="arithmatex">\(2i\)</span> 列（<span class="arithmatex">\(i\in[1,n]\)</span>）
+​ <br />
+​           <span class="arithmatex">\(\begin{aligned}\begin{vmatrix}a_1&amp; &amp; &amp; &amp; &amp;b_1\\&amp;\ddots &amp; &amp; &amp;⋰&amp; \\&amp; &amp;a_n&amp;b_n&amp; &amp; \\&amp; &amp;b_{n+1}&amp;a_{n+1}&amp; &amp; \\&amp; ⋰ &amp; &amp; &amp;\ddots&amp; \\b_{2n}&amp; &amp; &amp; &amp; &amp;a_{2n}\end{vmatrix}_{2n}&amp;=\begin{vmatrix} a_1 &amp; b_1 &amp; &amp; &amp; &amp; \\ b_{2n} &amp; a_{2n} &amp; &amp; &amp; &amp; \\ &amp; &amp; \ddots &amp;\ddots &amp; &amp; \\ &amp; &amp; \ddots&amp; \ddots &amp; &amp; \\ &amp; &amp; &amp; &amp; a_n &amp; b_n \\ &amp; &amp; &amp; &amp; b_{n + 1} &amp; a_{n + 1} \end{vmatrix}_{2n}\\ &amp;=\prod_{i=1}^n\begin{vmatrix}a_i&amp;b_i\\b_{2n-i+1}&amp;a_{2n-i+1}\end{vmatrix}\end{aligned}\)</span>
+​     <br />
+    - 循环形</p>
 <ul>
-<li>
-<p>三对角形：通过逐行（列）相消，把一条斜线消 <span class="arithmatex">\(0\)</span></p>
-</li>
-<li>
-<p>拉普拉斯展开式</p>
-<ul>
-<li>X 形：把的 <span class="arithmatex">\(2n+1-i\)</span> 行移动到第 <span class="arithmatex">\(2i\)</span> 行，第 <span class="arithmatex">\(2n+1-i\)</span> 列移动到第 <span class="arithmatex">\(2i\)</span> 列（<span class="arithmatex">\(i\in[1,n]\)</span>）</li>
-</ul>
-<p><span class="arithmatex">\(\begin{aligned}\begin{vmatrix}a_1&amp; &amp; &amp; &amp; &amp;b_1\\&amp;\ddots &amp; &amp; &amp;⋰&amp; \\&amp; &amp;a_n&amp;b_n&amp; &amp; \\&amp; &amp;b_{n+1}&amp;a_{n+1}&amp; &amp; \\&amp; ⋰ &amp; &amp; &amp;\ddots&amp; \\b_{2n}&amp; &amp; &amp; &amp; &amp;a_{2n}\end{vmatrix}_{2n}&amp;=\begin{vmatrix} a_1 &amp; b_1 &amp; &amp; &amp; &amp; \\ b_{2n} &amp; a_{2n} &amp; &amp; &amp; &amp; \\ &amp; &amp; \ddots &amp;\ddots &amp; &amp; \\ &amp; &amp; \ddots&amp; \ddots &amp; &amp; \\ &amp; &amp; &amp; &amp; a_n &amp; b_n \\ &amp; &amp; &amp; &amp; b_{n + 1} &amp; a_{n + 1} \end{vmatrix}_{2n}\\ &amp;=\prod_{i=1}^n\begin{vmatrix}a_i&amp;b_i\\b_{2n-i+1}&amp;a_{2n-i+1}\end{vmatrix}\end{aligned}\)</span></p>
-</li>
-</ul>
-</li>
-<li>
-<p>循环形</p>
-</li>
-</ul>
-</li>
 <li>
 <p>递推法</p>
 <ul>
@@ -1410,6 +1454,7 @@ A
     \end{vmatrix}_{n - 1} \\
     &amp;= a\cdot D_{n - 1} - c\cdot bD_{n - 2}\end{aligned}
     \]</div>
+<p>可以特征方程法求，也可考虑归纳证明。</p>
 <details class="tip" open="open">
 <summary>Tip</summary>
 <p>递推公式 <span class="arithmatex">\(D_n = aD_{n-1} + bD_{n-2}\)</span> 的求解</p>

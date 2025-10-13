@@ -95,6 +95,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -627,6 +632,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第三章 矩阵的运算
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -638,6 +656,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵求逆
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -903,6 +962,38 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵求逆
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -919,7 +1010,90 @@
 
   <h1>第三章 矩阵的运算</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-13T02:01:46.448599+00:00'>2025-10-13</time></span><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-13T02:01:46.448599+00:00'>2025-10-13</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-13T04:18:53.204971+00:00'>2025-10-13</time></span><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-13T04:18:53.204971+00:00'>2025-10-13</time></span></div></div>
+<h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>特殊矩阵</p>
+<ul>
+<li>
+<p>对角矩阵 <span class="arithmatex">\(\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span></p>
+</li>
+<li>
+<p>数量矩阵 <span class="arithmatex">\(\text{diag}(\lambda,\lambda,\cdots,\lambda)\)</span></p>
+</li>
+<li>
+<p>单位矩阵 <span class="arithmatex">\(\text{diag}(1,1,\cdots,1)\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>矩阵的加减法、数乘、乘法和转置，方阵的幂</p>
+<p>对于 <span class="arithmatex">\(n\)</span> 阶方阵 <span class="arithmatex">\(A,B\)</span>，<span class="arithmatex">\(|AB|=|A||B|\)</span>。</p>
+<p>方阵的迹：<span class="arithmatex">\(\text{tr}(A_{n\times n})=\sum_{i=1}^n a_{ii}\)</span>。<span class="arithmatex">\(\text{tr}(A\pm B)=\text{tr}(A)\pm \text{tr}(B)\)</span>，<span class="arithmatex">\(\text{tr}(kA)=k\text{tr}(A)\)</span>，<span class="arithmatex">\(\text{tr}(AB)=\text{tr}(BA)\)</span></p>
+<p>虽然一般 <span class="arithmatex">\(AB\neq BA\)</span>，但是 <span class="arithmatex">\(|AB|=|BA|\)</span>、<span class="arithmatex">\(\text{tr}(AB)=\text{tr}(BA)\)</span>（<span class="arithmatex">\(A,B\)</span> 均为方阵）。</p>
+<p>矩阵的转置：<span class="arithmatex">\((A^T)^T=A\)</span>，<span class="arithmatex">\((A\pm B)^T=A^T\pm B^T\)</span>，<span class="arithmatex">\((cA)^T=cA^T\)</span>，<span class="arithmatex">\((AB)^T=B^TA^T\)</span>，<span class="arithmatex">\((ABC)^T=C^TB^TA^T\)</span>，<span class="arithmatex">\(r(A)=r(A^T)\)</span>。当 <span class="arithmatex">\(A\)</span> 是方阵时，<span class="arithmatex">\(|A|=|A^T|\)</span></p>
+<details class="info">
+<summary>方阵与特殊矩阵的乘法</summary>
+<p>对于 <span class="arithmatex">\(A = (a_{ij})_{n \times n}\)</span>：</p>
+<div class="arithmatex">\[
+\text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n)\times  A = \begin{pmatrix} \lambda_1 a_{11} &amp; \lambda_1 a_{12} &amp; \cdots &amp; \lambda_1 a_{1n} \\ \lambda_2 a_{21} &amp; \lambda_2 a_{22} &amp; \cdots &amp; \lambda_2 a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \lambda_n a_{n1} &amp; \lambda_n a_{n2} &amp; \cdots &amp; \lambda_n a_{nn} \end{pmatrix}\\
+A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} \lambda_1 a_{11} &amp; \lambda_2 a_{12} &amp; \cdots &amp; \lambda_n a_{1n} \\ \lambda_1 a_{21} &amp; \lambda_2 a_{22} &amp; \cdots &amp; \lambda_n a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \lambda_1 a_{n1} &amp; \lambda_2 a_{n2} &amp; \cdots &amp; \lambda_n a_{nn} \end{pmatrix}\\
+\text{diag}(\lambda, \lambda, \cdots, \lambda)\times A=A\times \text{diag}(\lambda, \lambda, \cdots, \lambda)=\begin{pmatrix} \lambda a_{11} &amp; \lambda a_{12} &amp; \cdots &amp; \lambda a_{1n} \\ \lambda a_{21} &amp; \lambda a_{22} &amp; \cdots &amp; \lambda a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \lambda a_{n1} &amp; \lambda a_{n2} &amp; \cdots &amp; \lambda a_{nn} \end{pmatrix} = \lambda A
+\]</div>
+</details>
+<details class="warning" open="open">
+<summary>注意</summary>
+<ul>
+<li>
+<p>矩阵乘法不满足交换律：一般 <span class="arithmatex">\(AB\neq BA\)</span></p>
+<p>则一般 <span class="arithmatex">\((AB)^k=AB\cdot AB\cdot \cdots\cdot AB\neq A^kB^k\)</span></p>
+<p><span class="arithmatex">\((A+B)^2=A^2+AB+BA+B^2\neq A^2+2AB+B^2\)</span></p>
+<p><span class="arithmatex">\((A+B)(A-B)=A^2+AB+BA-B^2\neq A^2-B^2\)</span></p>
+</li>
+<li>
+<p>矩阵乘法不满足消去律，且存在零因子性：<span class="arithmatex">\(AB=AC\)</span> 时不能得出 <span class="arithmatex">\(A=O\)</span> 或 <span class="arithmatex">\(B=C\)</span>，<span class="arithmatex">\(AB=O\)</span> 时不能得出 <span class="arithmatex">\(A=O\)</span> 或 <span class="arithmatex">\(B=O\)</span>。</p>
+<p>两个非零矩阵的乘积可能等于零矩阵。若存在非零矩阵 <span class="arithmatex">\(A,B\)</span> 满足 <span class="arithmatex">\(AB=O\)</span>，则称 <span class="arithmatex">\(A\)</span> 为左零因子，<span class="arithmatex">\(B\)</span> 为右零因子。</p>
+</li>
+</ul>
+</details>
+</li>
+</ul>
+<h3 id="_2">矩阵求逆<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>伴随矩阵：将 <span class="arithmatex">\(a_{i,j}\)</span> 换成 <span class="arithmatex">\(A_{i,j}\)</span> 再转置，记作 <span class="arithmatex">\(A^{*}=\begin{pmatrix}A_{1,1}&amp;A_{2,1}&amp;\cdots&amp;A_{n,1}\\A_{1,2}&amp;A_{2,2}&amp;\cdots&amp;A_{n,2}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\A_{1,n}&amp;A_{2,n}&amp;\cdots&amp;A_{n,n}\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(AA^*=A^*A=|A|E\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\sum_{k=1}^n a_{ik}A^*_{kj}=\sum_{k=1}^n a_{ik}A_{jk}=|A|[i=j]\)</span></p>
+</details>
+</li>
+<li>
+<p>矩阵的逆</p>
+<p>对于 <span class="arithmatex">\(n\)</span> 阶方阵<span class="arithmatex">\(A\)</span>，若存在 <span class="arithmatex">\(B\)</span> 阶方阵 <span class="arithmatex">\(B\)</span> 使得 <span class="arithmatex">\(AB=BA=E\)</span>，则称 <span class="arithmatex">\(A\)</span> 可逆（非退化/非奇异），且 <span class="arithmatex">\(B\)</span> 是 <span class="arithmatex">\(A\)</span> 的逆矩阵。否则，称 <span class="arithmatex">\(A\)</span> 不可逆（退化/奇异）。</p>
+<ol>
+<li>
+<p>逆矩阵是相互的。</p>
+</li>
+<li>
+<p>逆矩阵是唯一的。</p>
+<details class="note">
+<summary>证明</summary>
+<p>反证。若 <span class="arithmatex">\(B\neq C\)</span>，<span class="arithmatex">\(AB=BA=E\)</span> 且 <span class="arithmatex">\(AC=CA=E\)</span>，则 <span class="arithmatex">\(B=BE=B(AC)=(BA)C=EC=C\)</span>，矛盾。</p>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(A_{n\times n}\)</span> 可逆 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(|A|\neq 0\)</span>。且 <span class="arithmatex">\(A^{-1}=\frac{A^*}{|A|}\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\Rightarrow\)</span>：<span class="arithmatex">\(AA^{-1}=E\)</span>，则 <span class="arithmatex">\(|A||A^{-1}|=|E|=1\)</span>，即 <span class="arithmatex">\(|A|\neq 0\)</span>。</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span>：<span class="arithmatex">\(AA^*=A^*A=|A|E\)</span>，由于 <span class="arithmatex">\(|A|\neq 0\)</span>，则 <span class="arithmatex">\(A\cdot \dfrac{A^*}{|A|}=\dfrac{A^*}{|A|}A=E\)</span>，可知 <span class="arithmatex">\(A\)</span> 可逆，<span class="arithmatex">\(A^{-1}=\dfrac{A^*}{|A|}\)</span>。</p>
+</details>
+</li>
+</ol>
+</li>
+</ul>
 
 
 
