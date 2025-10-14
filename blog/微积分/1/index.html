@@ -545,6 +545,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#stolz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stolz 定理
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -627,7 +636,7 @@
         <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
-      拓展
+      题目
     </span>
   </a>
   
@@ -636,15 +645,6 @@
         <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
-      题目
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
       易错点
     </span>
   </a>
@@ -652,7 +652,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       思考题
     </span>
@@ -1135,6 +1135,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#stolz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stolz 定理
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1217,7 +1226,7 @@
         <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
-      拓展
+      题目
     </span>
   </a>
   
@@ -1226,15 +1235,6 @@
         <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
-      题目
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
       易错点
     </span>
   </a>
@@ -1242,7 +1242,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       思考题
     </span>
@@ -1268,7 +1268,7 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-13T16:02:19.364542+00:00'>2025-10-13</time></span><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-13T16:02:19.364542+00:00'>2025-10-13</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-14'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-14T04:28:53.174717+00:00'>2025-10-14</time></span><span data-tippy-content data-tippy-raw='2025-10-14'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-14T04:28:53.174717+00:00'>2025-10-14</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1450,16 +1450,13 @@
 </li>
 <li>
 <p><strong>单调有界定理：</strong>单调递增有上界的数列必收敛；单调递减有下界的数列必收敛。</p>
-<div class="highlight"><pre><span></span><code>??? note &quot;证明&quot;
-
-    若 $\{a_n\}$ 递增且有上界：
-
-    由确界原理知，必有上确界，设为 $a$，则 $a_n\leq a$。$\forall \varepsilon&gt;0$，$\exists N$ 使得 $a_N&gt;a-\varepsilon$。
-
-    由于 $\{a_n\}$ 递增，故当 $n&gt;N$ 时，有 $a-\varepsilon&lt;a_N\leq a_n\leq a&lt;a+\varepsilon$，即 $|a_n-a|&lt;\varepsilon$。故 $\lim\limits_{n\to \infty}a_n=a$。
-
-由于改变数列的有限项不影响数列的敛散性和极限，所以数列从某一项开始单调有界结论依然成立。
-</code></pre></div>
+<details class="note">
+<summary>证明</summary>
+<p>若 <span class="arithmatex">\(\{a_n\}\)</span> 递增且有上界：</p>
+<p>由确界原理知，必有上确界，设为 <span class="arithmatex">\(a\)</span>，则 <span class="arithmatex">\(a_n\leq a\)</span>。<span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N\)</span> 使得 <span class="arithmatex">\(a_N&gt;a-\varepsilon\)</span>。</p>
+<p>由于 <span class="arithmatex">\(\{a_n\}\)</span> 递增，故当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(a-\varepsilon&lt;a_N\leq a_n\leq a&lt;a+\varepsilon\)</span>，即 <span class="arithmatex">\(|a_n-a|&lt;\varepsilon\)</span>。故 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=a\)</span>。</p>
+</details>
+<p>由于改变数列的有限项不影响数列的敛散性和极限，所以数列从某一项开始单调有界结论依然成立。</p>
 <ul>
 <li>
 <p>魏尔斯特拉斯（Weierstrass）定理：有界数列必有收敛的子列。</p>
@@ -1678,12 +1675,20 @@ $$
 |a_{n+p+1}-a_n|&amp;\leq |a_{n+p+1}-a_{n+p}|+|a_{n+p}-a_{n+p-1}|+\cdots+|a_{n+1}-a_n|\\
 &amp;\leq(r^p+r^{p-1}+\cdots+r+1)|a_{n+1}-a_n|\\
 &amp;=\frac{1-r^{p+1}}{1-r}\times |a_{n+1}-a_n|\\
-&amp;=\frac{1}{1-r}\times r^{n-n_0}|a_{n_0+1}-a_{n_0}|\\
+&amp;&lt;\frac{1}{1-r}\times r^{n-n_0}|a_{n_0+1}-a_{n_0}|\\
 &amp;&lt;\varepsilon
 \end{aligned}
 \]</div>
 <p>根据柯西收敛准则，<span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
 </details>
+</li>
+</ul>
+<h4 id="stolz">Stolz 定理<a class="headerlink" href="#stolz" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(\{y_n\}\)</span> 从某一项开始严格递增且 <span class="arithmatex">\(\lim\limits_{n\to \infty}b_n=+\infty\)</span>，且 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{x_n-x_{n-1}}{y_n-y_{n-1}}\)</span> 存在或为 <span class="arithmatex">\(\pm \infty\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{x_n}{y_n}=\lim\limits_{n\to \infty}\frac{x_n-x_{n-1}}{y_n-y_{n-1}}\)</span>。</p>
+<p>也就是说，分式形式的数列，若分母数列严格递增，且差分后的极限存在，则原式必有极限。</p>
+<p>几何意义：把 <span class="arithmatex">\((x_n,y_n)\)</span> 看作平面上的点 <span class="arithmatex">\(M_n\)</span>，定义意义是，假设 <span class="arithmatex">\(M_n\)</span> 的横坐标 <span class="arithmatex">\(x_n\to +\infty\)</span>，那么当 <span class="arithmatex">\(\vec{M_nM_{n+1}}\)</span> 的斜率以 <span class="arithmatex">\(a\)</span> 为极限时，则 <span class="arithmatex">\(\vec{OM_n}\)</span> 的斜率也以 <span class="arithmatex">\(a\)</span> 为极限。</p>
 </li>
 </ul>
 <h3 id="_5">函数极限<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
@@ -1737,12 +1742,12 @@ $$
 <li>不等式性质</li>
 <li>函数极限的四则运算</li>
 <li>
-<p>复合函数的极限：设 <span class="arithmatex">\(y=f(u),u=\varphi(x)\)</span>，若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\varphi(x)=u_0\)</span>，<span class="arithmatex">\(\lim\limits_{u\to u_0}f(u)=A\)</span>，且存在 <span class="arithmatex">\(x_0\)</span> 的某邻域 <span class="arithmatex">\(\mathring U(x_0,\delta')\)</span>，当 <span class="arithmatex">\(x\in\mathring U(x_0,\delta')\)</span>时，<span class="arithmatex">\(\varphi(x)\neq u_0\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=\lim\limits_{u\to u_0}f(u)=A\)</span>。</p>
+<p>复合函数的极限：设 <span class="arithmatex">\(y=f(u),u=\varphi(x)\)</span>，若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\varphi(x)=u_0\)</span>，<span class="arithmatex">\(\lim\limits_{u\to u_0}f(u)=A\)</span>，且存在 <span class="arithmatex">\(x_0\)</span> 的某邻域 <span class="arithmatex">\(\mathring U(x_0,\delta')\)</span>，当 <span class="arithmatex">\(x\in\mathring U(x_0,\delta')\)</span> 时，<span class="arithmatex">\(\varphi(x)\neq u_0\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=\lim\limits_{u\to u_0}f(u)=A\)</span>。</p>
 <details class="note">
 <summary>证明</summary>
 <p>由于 <span class="arithmatex">\(\lim\limits_{u\to u_0}f(u)=A\)</span>，所以 <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \eta&gt;0\)</span>，当 <span class="arithmatex">\(0&lt;|u-u_0|&lt;\eta\)</span> 时，有 <span class="arithmatex">\(|f(u)-A|&lt;\varepsilon\)</span>。</p>
 <p>又因为 <span class="arithmatex">\(\lim\limits_{x\to x_0}\varphi(x)=u_0\)</span>，所以对上述 <span class="arithmatex">\(\eta&gt;0\)</span>，<span class="arithmatex">\(\exists \delta_1&gt;0\)</span>，当 <span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta_1\)</span> 时，都有 <span class="arithmatex">\(|\varphi(x)-u_0|&lt;\eta\)</span>。</p>
-<p>取 <span class="arithmatex">\(\delta=\min\{\delta',\delta_1\}\)</span>，当 <span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta\)</span> 时，有 <span class="arithmatex">\(0&lt;\varphi(x)-u_0|&lt;\eta\)</span>，从而有 <span class="arithmatex">\(|f(\varphi(x))-A|&lt;\varepsilon\)</span>。即 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=\lim\limits_{u\to u_0}f(u)=A\)</span>。</p>
+<p>取 <span class="arithmatex">\(\delta=\min\{\delta',\delta_1\}\)</span>，当 <span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta\)</span> 时，有 <span class="arithmatex">\(0&lt;|\varphi(x)-u_0|&lt;\eta\)</span>，从而有 <span class="arithmatex">\(|f(\varphi(x))-A|&lt;\varepsilon\)</span>。即 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=\lim\limits_{u\to u_0}f(u)=A\)</span>。</p>
 </details>
 <p><span class="arithmatex">\(\lim_{x \to x_0} f(\varphi(x)) \xlongequal[ \text{当}\, x \to x_0 \,\text{时},\,\varphi(x) \to u_0 ]{\text{令} \, \varphi(x) = u} \lim_{u \to u_0} f(u)\)</span></p>
 </li>
@@ -1991,11 +1996,28 @@ $$
 </li>
 <li>
 <p>复合函数的连续性：若 <span class="arithmatex">\(u=\varphi(x)\)</span> 在点 <span class="arithmatex">\(x=x_0\)</span> 处连续，<span class="arithmatex">\(y=f(u)\)</span> 在 <span class="arithmatex">\(u_0=\varphi(x_0)\)</span> 处连续，则 <span class="arithmatex">\(y=f(\varphi(x))\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处也连续，且 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=f(\varphi(x_0))=f(\lim\limits_{x\to x_0}\varphi(x))\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>由于 <span class="arithmatex">\(y=f(u)\)</span> 在 <span class="arithmatex">\(u_0=\varphi(x_0)\)</span> 处连续，则 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \eta&gt;0\)</span>，当 <span class="arithmatex">\(|u-u_0|&lt;\eta\)</span> 时，都有 <span class="arithmatex">\(|f(u)-f(u_0)|&lt;\varepsilon\)</span>，即 <span class="arithmatex">\(|f(\varphi(x))-f(\varphi(x_0))|&lt;\varepsilon\)</span>。</p>
+<p>又 <span class="arithmatex">\(u=\varphi(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续，对上述 <span class="arithmatex">\(\eta&gt;0\)</span>，<span class="arithmatex">\(\exists \delta&gt;0\)</span>，当 <span class="arithmatex">\(|x-x_0|&lt;\delta\)</span> 时，都有 <span class="arithmatex">\(|\varphi(x)-\varphi(x_0)|&lt;\eta\)</span>，即 <span class="arithmatex">\(|u-u_0|&lt;\eta\)</span>，从而有 <span class="arithmatex">\(|f(\varphi(x))-f(\varphi(x_0))&lt;\varepsilon\)</span>。</p>
+<p>由连续函数的定义知，<span class="arithmatex">\(f(\varphi(x))\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处连续，即 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=f(\varphi(x_0))=f(\lim\limits_{x\to x_0}\varphi(x))\)</span>。</p>
+</details>
+<p>推论：</p>
 <ul>
 <li>
-<p>推论：</p>
 <p>若 <span class="arithmatex">\(\lim\limits_{x\to x_0}\varphi(x)=u_0\)</span>，<span class="arithmatex">\(y=f(u)\)</span> 在 <span class="arithmatex">\(u=u_0\)</span> 处连续，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=f(\lim\limits_{x\to x_0}\varphi(x))\)</span>。</p>
-<p>若 <span class="arithmatex">\(\lim\limits_{x\to \infty}\varphi(x)=u_0\)</span>，<span class="arithmatex">\(y=f(u)\)</span> 在 <span class="arithmatex">\(u=u_0\)</span> 处连续，则 <span class="arithmatex">\(\lim\limits_{x\to \infty}f(\varphi(x))=f(\lim\limits_{x\to \infty}\varphi(x))=f(u_0)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(g(x)=\begin{cases}\varphi(x)&amp;(x\neq x_0)\\u_0&amp;(x=x_0)\end{cases}\)</span>，则 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处连续，又 <span class="arithmatex">\(y=f(u)\)</span> 在 <span class="arithmatex">\(u=u_0=g(x_0)\)</span> 处连续，由复合函数的连续性知 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(g(x))=f(\lim\limits_{x\to x_0}g(x))\)</span>。</p>
+<p>由于当 <span class="arithmatex">\(x\to x_0\)</span> 但 <span class="arithmatex">\(x\neq x_0\)</span> 时，有 <span class="arithmatex">\(g(x)=\varphi(x)\)</span>，所以 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(\varphi(x))=f(\lim\limits_{x\to x_0}\varphi(x))\)</span>。</p>
+</details>
+<p>若 <span class="arithmatex">\(\lim\limits_{x\to \infty}\varphi(x)=u_0\)</span>，<span class="arithmatex">\(y=f(u)\)</span> 在 <span class="arithmatex">\(u=u_0\)</span> 处连续，则 <span class="arithmatex">\(\lim\limits_{x\to \infty}f(\varphi(x))=f(\lim\limits_{x\to \infty}\varphi(x))\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>由于 <span class="arithmatex">\(f(u)\)</span> 在 <span class="arithmatex">\(u_0\)</span> 处连续，则 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \eta&gt;0\)</span>，当 <span class="arithmatex">\(|u-u_0|&lt;\eta\)</span> 时，都有 <span class="arithmatex">\(|f(u)-f(u_0)|&lt;\varepsilon\)</span>。</p>
+<p>由于 <span class="arithmatex">\(\lim\limits_{x\to \infty}\varphi(x)=u_0\)</span>，则对上述的 <span class="arithmatex">\(\eta&gt;0\)</span>，存在 <span class="arithmatex">\(N&gt;0\)</span>，当 <span class="arithmatex">\(|x|&gt;N\)</span> 时，有 <span class="arithmatex">\(|\varphi(x)-u_0|&lt;\eta\)</span>，从而 <span class="arithmatex">\(|f(\varphi(x))-f(u_0)|&lt;\varepsilon\)</span>。</p>
+<p>因此 <span class="arithmatex">\(\lim\limits_{x\to \infty}f(\varphi(x))=f(u_0)=f(\lim\limits_{x\to \infty}\varphi(x))\)</span>。</p>
+</details>
 <p>也就是可以利用 <span class="arithmatex">\(f\)</span> 的连续性，交换极限符号与函数符号之间的次序。</p>
 <details class="info" open="open">
 <summary>幂指函数的极限</summary>
@@ -2011,12 +2033,10 @@ $$
 <p>闭区间上连续函数的性质</p>
 <ul>
 <li>有界性定理</li>
-<li>最大值最小值定理：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上一定能取到最大值与最小值。</li>
+<li>最大值最小值定理：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上一定能取到最大值与最小值。
+    推论：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有界。</li>
 <li>根的存在定理 / 零点定理：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(a)f(b)&lt;0\)</span>，则至少存在一点 <span class="arithmatex">\(\xi\in(a,b)\)</span>，使 <span class="arithmatex">\(f(\xi)=0\)</span>。</li>
 <li>介值定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上最大值为 <span class="arithmatex">\(M\)</span>、最小值为 <span class="arithmatex">\(m\)</span>，则 <span class="arithmatex">\(\forall \eta\in(m,M)\)</span>，都 <span class="arithmatex">\(\exists x\in[a,b]\)</span> 使得 <span class="arithmatex">\(f(x)=\eta\)</span>。</li>
-<li>一致连续性定理 / 康托尔（Cantor）定理：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上一致连续。
-    （设 <span class="arithmatex">\(f(x)\)</span> 定义在区间 <span class="arithmatex">\(E\)</span> 上，若 <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \delta(\varepsilon)&gt;0\)</span>，当 <span class="arithmatex">\(x',x''\in E\)</span> 且 <span class="arithmatex">\(|x'-x''|&lt;\delta\)</span> 时，就有 <span class="arithmatex">\(|f(x')-f(x'')|&lt;\varepsilon\)</span>，则称 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(E\)</span> 上一致连续）</li>
-<li><span class="arithmatex">\(f(x)\)</span> 在开区间 <span class="arithmatex">\((a,b)\)</span> 内一致连续 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((a,b)\)</span> 内连续，且 <span class="arithmatex">\(\lim\limits_{x\to a^+}f(x),\lim\limits_{x\to b^-}f(x)\)</span> 存在（其中 <span class="arithmatex">\(a,b\)</span> 为常数）。</li>
 </ul>
 </li>
 <li>
@@ -2029,7 +2049,7 @@ $$
 <p>反函数的连续性</p>
 </li>
 <li>
-<p>基本初等函数的连续性</p>
+<p>基本初等函数的连续性：一切基本初等函数都是在其定义域上的连续函数。</p>
 <details class="example" open="open">
 <summary>例题</summary>
 <p>证明：函数 <span class="arithmatex">\(f(x)=\sin x\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上连续。</p>
@@ -2054,8 +2074,20 @@ $$
 </details>
 </li>
 <li>
-<p>所有初等函数都是连续函数</p>
+<p>初等函数的连续性：任何初等函数都是在它有定义的区间上的连续函数。</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>定义域与定义区间不等价！定义区间是定义域中连续的实数区间。如 <span class="arithmatex">\(y=\sqrt{x^2(x-1)}\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处不连续：定义域是 <span class="arithmatex">\(\{0\}\cup[1,+\infty)\)</span>，定义区间是 <span class="arithmatex">\([1,+\infty)\)</span>，孤立点 <span class="arithmatex">\(0\)</span> 不属于任何定义区间。</p>
+</details>
 </li>
+</ul>
+</li>
+<li>
+<p>一致连续</p>
+<ul>
+<li>一致连续性定理 / 康托尔（Cantor）定理：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上一致连续。
+    （设 <span class="arithmatex">\(f(x)\)</span> 定义在区间 <span class="arithmatex">\(E\)</span> 上，若 <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists \delta(\varepsilon)&gt;0\)</span>，当 <span class="arithmatex">\(x',x''\in E\)</span> 且 <span class="arithmatex">\(|x'-x''|&lt;\delta\)</span> 时，就有 <span class="arithmatex">\(|f(x')-f(x'')|&lt;\varepsilon\)</span>，则称 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(E\)</span> 上一致连续）</li>
+<li><span class="arithmatex">\(f(x)\)</span> 在开区间 <span class="arithmatex">\((a,b)\)</span> 内一致连续 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((a,b)\)</span> 内连续，且 <span class="arithmatex">\(\lim\limits_{x\to a^+}f(x),\lim\limits_{x\to b^-}f(x)\)</span> 存在（其中 <span class="arithmatex">\(a,b\)</span> 为常数）。</li>
 </ul>
 </li>
 </ul>
@@ -2225,14 +2257,7 @@ $$
 \]</div>
 </details>
 </details>
-<h2 id="_9">拓展<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>Stolz 定理</p>
-<p>若 <span class="arithmatex">\(\{b_n\}\)</span> 严格递增且 <span class="arithmatex">\(\lim\limits_{n\to \infty}b_n=+\infty\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{a_n}{b_n}=\lim\limits_{n\to \infty}\frac{a_{n+1}-a_n}{b_{n+1}-b_n}\)</span>。</p>
-</li>
-</ul>
-<h2 id="_10">题目<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h2 id="_9">题目<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>把数列切分</p>
@@ -2746,7 +2771,7 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 </details>
 </li>
 </ul>
-<h2 id="_11">易错点<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h2 id="_10">易错点<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>不等式乘法要讨论正负</p>
@@ -2949,7 +2974,7 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 </details>
 </li>
 </ul>
-<h2 id="_12">思考题<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h2 id="_11">思考题<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <details class="example">

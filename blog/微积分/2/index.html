@@ -1076,7 +1076,7 @@
 
   <h1>第二章 导数与微分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-13T16:02:19.364542+00:00'>2025-10-13</time></span><span data-tippy-content data-tippy-raw='2025-10-13'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-13T16:02:19.364542+00:00'>2025-10-13</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-14'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-14T04:28:53.174717+00:00'>2025-10-14</time></span><span data-tippy-content data-tippy-raw='2025-10-14'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-14T04:28:53.174717+00:00'>2025-10-14</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">导数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1128,9 +1128,9 @@
 <p>函数可导与连续的关系：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处可导，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处必连续。即，<span class="arithmatex">\(f'(x_0)\)</span> 存在 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=f(x_0)\)</span>。</p>
 <details class="note" open="open">
 <summary>证明</summary>
-<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可导 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}\)</span> 存在 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\Delta y=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}\Delta x=\lim\limits_{\Delta x\to 0}f'(x_0)\cdot 0=0\)</span>。</p>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可导 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}=f'(x_0)\)</span> 存在 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\Delta y=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}\Delta x=\lim\limits_{\Delta x\to 0}f'(x_0)\cdot 0=0\)</span>。</p>
 </details>
-<p>但 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处不一定可导。如 <span class="arithmatex">\(f(x)=|x|\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续，但是在 <span class="arithmatex">\(x=0\)</span> 处不可导。</p>
+<p>但 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处不一定可导。如 <span class="arithmatex">\(f(x)=|x|\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续但不可导。</p>
 <details class="info">
 <summary>Info</summary>
 <p>若 <span class="arithmatex">\(f'(x)\)</span> 存在：</p>
@@ -1337,7 +1337,36 @@
 <p>几个基本初等函数的导数</p>
 <p><span class="arithmatex">\((C')=0\)</span></p>
 <p><span class="arithmatex">\((x^{\alpha})'=\alpha x^{\alpha-1}\,(x&gt;0)\)</span>。特别地，<span class="arithmatex">\((\sqrt x)'=\frac{1}{2\sqrt x}\)</span>，<span class="arithmatex">\((\frac 1 x)'=-\frac{1}{x^2}\)</span></p>
-<p><span class="arithmatex">\((e^x)'=e^x\)</span>，<span class="arithmatex">\((a^x)'=a^x\ln a\,(a&gt;0,a\neq 1)\)</span>，<span class="arithmatex">\((\ln |x|)'=\frac 1 x\)</span>，<span class="arithmatex">\((\log_a x)'=\frac{1}{x\ln a}\,(a&gt;0,a\neq 1)\)</span>，<span class="arithmatex">\((\sin x)'=\cos x\)</span>，<span class="arithmatex">\((\cos x)'=-\sin x\)</span>，<span class="arithmatex">\((\tan x)'=\sec^2 x\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p>考虑 <span class="arithmatex">\(\alpha\neq 0\)</span>。</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall x\in D\)</span> 且 <span class="arithmatex">\(\neq 0\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\dfrac{(x+\Delta x)^{\alpha}-x^{\alpha}}{\Delta x}=\lim\limits_{\Delta x\to 0}x^{\alpha}\dfrac{(1+\frac{\Delta x}x)^{\alpha}-1}{\Delta x}=\lim\limits_{\Delta x\to 0}x^{\alpha}\cdot \dfrac{\alpha\cdot \frac{\Delta x}x}{\Delta x}=\alpha x^{\alpha-1}\)</span></p>
+</li>
+<li>
+<p>若有 <span class="arithmatex">\(x=0\in D\)</span>，必有 <span class="arithmatex">\(\alpha&gt;0\)</span>，此时 <span class="arithmatex">\(f(0)=0\)</span>。</p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{f(x)-f(0)}x=\lim\limits_{x\to 0}\dfrac{x^{\alpha}}x=\begin{cases}0&amp;(\alpha&gt;1)\\1&amp;(\alpha=1)\\\infty&amp;(0&lt;\alpha&lt;1)\end{cases}\)</span></p>
+<p>所以，当 <span class="arithmatex">\(\alpha\geq 1\)</span> 时，<span class="arithmatex">\(f(x)=x^{\alpha}\)</span>在点 <span class="arithmatex">\(x=0\)</span> 处可导且 <span class="arithmatex">\(f'(0)=\begin{cases}0&amp;(\alpha&gt;1)\\1&amp;(\alpha=1)\end{cases}\)</span> 仍然适合公式 <span class="arithmatex">\((x^{\alpha})=\alpha x^{\alpha-1}\)</span>；当 <span class="arithmatex">\(0&lt;\alpha&lt;1\)</span> 时，<span class="arithmatex">\(f(x)=x^{\alpha}\)</span> 在点 <span class="arithmatex">\(x=0\)</span> 处不可导。</p>
+</li>
+</ol>
+</details>
+<p><span class="arithmatex">\((e^x)'=e^x\)</span>，<span class="arithmatex">\((a^x)'=a^x\ln a\,(a&gt;0,a\neq 1)\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\dfrac{a^{x+\Delta x}-a^x}{\Delta x}=a^x\lim\limits_{\Delta x\to 0}\dfrac{a^{\Delta x}-1}{\Delta x}=a^x\ln a\)</span></p>
+</details>
+<p><span class="arithmatex">\((\ln |x|)'=\frac 1 x\)</span>，<span class="arithmatex">\((\log_a |x|)'=\frac{1}{x\ln a}\,(a&gt;0,a\neq 1)\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\dfrac{\log_a(x+\Delta x)-\log_a x}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{\log_a(1+\frac{\Delta x}x)}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{\ln(1+\frac{\Delta x}x)}{\Delta x\ln a}=\lim\limits_{\Delta x\to 0}\dfrac{\frac{\Delta x}x}{\Delta x\ln a}=\dfrac{1}{x\ln a}\)</span></p>
+</details>
+<p><span class="arithmatex">\((\sin x)'=\cos x\)</span>，<span class="arithmatex">\((\cos x)'=-\sin x\)</span>，<span class="arithmatex">\((\tan x)'=\sec^2 x\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\dfrac{\sin(x+\Delta x)-\sin x}{\Delta}=\lim\limits_{\Delta x\to 0}\dfrac{2\cos\frac{2x+\Delta x}{2}\sin\frac{\Delta x}{x}}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{2\cdot \frac{\Delta x}{2}\cos\frac{2x+\Delta x}{2}}{\Delta x}=\cos x\)</span></p>
+</details>
 <p><span class="arithmatex">\((\cot x)'=-\csc^2 x\)</span></p>
 <p><span class="arithmatex">\((\sec x)'=\sec x\tan x\)</span></p>
 <p><span class="arithmatex">\((\csc x)'=-\csc x\cot x\)</span></p>
