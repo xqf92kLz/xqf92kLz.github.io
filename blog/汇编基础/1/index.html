@@ -958,6 +958,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    B2U3 Just relax!
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1052,7 +1075,7 @@
 
   <h1>汇编入门</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-14'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-14T07:56:14.121684+00:00'>2025-10-14</time></span><span data-tippy-content data-tippy-raw='2025-10-14'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-14T07:56:14.121684+00:00'>2025-10-14</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-14'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-14T11:53:09.306478+00:00'>2025-10-14</time></span><span data-tippy-content data-tippy-raw='2025-10-14'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-14T11:53:09.306478+00:00'>2025-10-14</time></span></div></div>
 <h3 id="_1">有符号数与无符号数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -1446,6 +1469,49 @@
 <a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
 <a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
 </code></pre></div>
+<p><a href="https://blog.csdn.net/Zach_z/article/details/78576216">常见中断</a> <code>int 21h</code>：（<a href="https://www.uwouni.com/rbrown.htm">中断大全</a>）</p>
+<table>
+<thead>
+<tr>
+<th>AH</th>
+<th>功能</th>
+<th>调用参数</th>
+<th>返回参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00</td>
+<td>程序终止</td>
+<td>CS=程序段前缀</td>
+<td></td>
+</tr>
+<tr>
+<td>01</td>
+<td>键盘输入并回显</td>
+<td></td>
+<td>AL=输入字符</td>
+</tr>
+<tr>
+<td>02</td>
+<td>显示输出</td>
+<td>DL=输出字符</td>
+<td></td>
+</tr>
+<tr>
+<td>09</td>
+<td>显示字符串，</td>
+<td>DS:DX=字符串地址</td>
+<td></td>
+</tr>
+<tr>
+<td>4C</td>
+<td>带返回码结束</td>
+<td>AL=返回码</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
