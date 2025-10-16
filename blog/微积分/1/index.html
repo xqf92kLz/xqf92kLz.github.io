@@ -1314,7 +1314,7 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-16T07:46:27.388704+00:00'>2025-10-16</time></span><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-16T07:46:27.388704+00:00'>2025-10-16</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-16T09:06:12.800238+00:00'>2025-10-16</time></span><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-16T09:06:12.800238+00:00'>2025-10-16</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1758,11 +1758,16 @@ $$
 <li>
 <p><strong>法 1：</strong></p>
 <p>由于 <span class="arithmatex">\(\dfrac 1 {n+1}&lt;\ln(1+\dfrac 1 n)&lt;\dfrac 1 n\)</span>，则：</p>
-<p><span class="arithmatex">\(1+\dfrac 1 2+\cdots+\dfrac 1 n&gt;\ln(1+1)+\ln(1+\dfrac 1 2)+\cdots+\ln(1+\dfrac 1 n)=\ln(n+1)\)</span></p>
-<p><span class="arithmatex">\(1+\dfrac 1 2+\cdots+\dfrac 1 n&lt;1+\ln(1+1)+\ln(1+\dfrac 1 2)+\cdots+\ln(1+\dfrac{1}{n-1})=1+\ln n\)</span></p>
-<p><span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\ln n}=1\)</span>，<span class="arithmatex">\(\dfrac{\ln n}{\ln(n+1)}&lt;1\)</span></p>
-<p>则 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\frac 1 2+\frac 1 3+\cdots +\frac 1 n}=1\)</span>。</p>
 </li>
+</ul>
+<p><span class="arithmatex">\(1+\dfrac 1 2+\cdots+\dfrac 1 n&gt;\ln(1+1)+\ln(1+\dfrac 1 2)+\cdots+\ln(1+\dfrac 1 n)=\ln(n+1)\)</span></p>
+<div class="highlight"><pre><span></span><code>$1+\dfrac 1 2+\cdots+\dfrac 1 n&lt;1+\ln(1+1)+\ln(1+\dfrac 1 2)+\cdots+\ln(1+\dfrac{1}{n-1})=1+\ln n$
+
+$\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\ln n}=1$，$\dfrac{\ln n}{\ln(n+1)}&lt;1$
+
+则 $\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\frac 1 2+\frac 1 3+\cdots +\frac 1 n}=1$。
+</code></pre></div>
+<ul>
 <li>
 <p><strong>法 2：</strong></p>
 <p>记 <span class="arithmatex">\(a_n=\ln n\)</span>，<span class="arithmatex">\(b_n=1+\dfrac 1 2+\dfrac 1 3+\cdots+\dfrac 1 n\)</span>，<span class="arithmatex">\(\{b_n\}\)</span> 单调递增趋于 <span class="arithmatex">\(+\infty\)</span>，由 Stolz 定理 2 得 <span class="arithmatex">\(I=\lim\limits_{n\to \infty}\dfrac{a_n-a_{n-1}}{b_n-b_{n-1}}=\lim\limits_{n\to \infty}\dfrac{\ln n-\ln (n-1)}{\frac 1 n}=\lim\limits_{n\to \infty} n\ln(1+\dfrac 1 {n-1})=\lim\limits_{n\to \infty}\dfrac{n}{n-1}\ln(1+\dfrac{1}{n-1})^{n-1}=1\cdot \ln e=1\)</span>。</p>
@@ -2425,6 +2430,12 @@ $$
 <details class="note">
 <summary>解答</summary>
 <p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\sin x}{\ln(1+x)}\cdot \dfrac{(1-\frac 1 {\cos x})}{\sqrt{\cos x}-1}=\lim\limits_{x\to 0}\dfrac{\frac{\cos x-1}{\cos x}}{\sqrt{\cos x}-1}=\lim\limits_{x\to 0}\dfrac{\sqrt{\cos x}+1}{\cos x}=2\)</span></p>
+</details>
+<p><strong>利用有界性：</strong>（有界函数乘无穷小）</p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{3\sin x+x^2\cos\frac 1 x}{(1+\cos x)\ln(1+x)}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{3\sin x+x^2\cos\frac 1 x}{2x}=\lim\limits_{x\to 0}(\dfrac 3 2\cdot \dfrac{\sin x}x+\dfrac 1 2 x\cos\dfrac 1 x)=\dfrac 3 2\)</span></p>
 </details>
 <p><strong>综合题：</strong></p>
 <p>计算 <span class="arithmatex">\(\lim\limits_{n\to \infty}(\cos \dfrac x n+k\sin\dfrac x n)^n\)</span>。</p>
