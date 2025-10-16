@@ -1122,7 +1122,7 @@
 
   <h1>第二章 导数与微分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-15T15:38:12.928643+00:00'>2025-10-15</time></span><span data-tippy-content data-tippy-raw='2025-10-15'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-15T15:38:12.928643+00:00'>2025-10-15</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-16T01:36:08.704727+00:00'>2025-10-16</time></span><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-16T01:36:08.704727+00:00'>2025-10-16</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">导数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1420,6 +1420,7 @@
 <p><span class="arithmatex">\((\arccos x)'=-\frac{1}{\sqrt{1-x^2}}\)</span></p>
 <p><span class="arithmatex">\((\arctan x)'=\frac{1}{1+x^2}\)</span></p>
 <p><span class="arithmatex">\((\text{arccot } x)'=-\frac{1}{1+x^2}\)</span></p>
+<p><span class="arithmatex">\((\sinh x)'=\cosh x\)</span>，<span class="arithmatex">\((\cosh x)'=\sinh x\)</span>，<span class="arithmatex">\((\tanh x)'=\frac{1}{\cosh^2 x}\)</span></p>
 <details class="tip" open="open">
 <summary>Tip</summary>
 <p><span class="arithmatex">\((\ln|u(x)|)'=\dfrac{u'(x)}{u(x)}\)</span></p>
@@ -1428,14 +1429,47 @@
 </details>
 </li>
 <li>
-<p>导数的四则运算</p>
+<p>导数的四则运算：设 <span class="arithmatex">\(u=u(x),v=v(x)\)</span> 在点 <span class="arithmatex">\(x\)</span> 处可导，则 <span class="arithmatex">\(u\pm v\)</span>，<span class="arithmatex">\(u\cdot v\)</span>，<span class="arithmatex">\(\frac u v\,(v\neq 0)\)</span> 都在点 <span class="arithmatex">\(x\)</span> 处可导，且 <span class="arithmatex">\((u\pm v)'=u'\pm v'\)</span>，<span class="arithmatex">\((uv)'=u'v+uv'\)</span>，<span class="arithmatex">\((\frac u v)'=\frac{u'v-uv'}{v^2}\,(v\neq 0)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>由 <span class="arithmatex">\(\Delta u=u(x+\Delta x)-u(x)\)</span> 知 <span class="arithmatex">\(u(x+\Delta x)=u+\Delta u\)</span>；由 <span class="arithmatex">\(\Delta v=v(x+\Delta x)-v(x)\)</span>知 <span class="arithmatex">\(v(x+\Delta x)=v+\Delta v\)</span>。</p>
+<ul>
+<li>
+<p>证明 <span class="arithmatex">\((u\pm v)'=u'\pm v'\)</span>：</p>
+<p>设 <span class="arithmatex">\(y=u(x)\pm v(x)\)</span>，则 <span class="arithmatex">\((u+v)'=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{\Delta u\pm\Delta v}{\Delta x}=u'\pm v'\)</span>。</p>
+</li>
+<li>
+<p>证明 <span class="arithmatex">\((uv)'=u'v+uv'\)</span>：</p>
+<p>设 <span class="arithmatex">\(y=u(x)v(x)\)</span>，则 <span class="arithmatex">\((uv)'=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{u(x+\Delta x)v(x+\Delta x)-uv}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{(u+\Delta u)(v+\Delta v)-uv}{\Delta x}=\dfrac{v\Delta u+u\Delta v+\Delta u\Delta v}{\Delta x}=\lim\limits_{\Delta x\to 0}(v\cdot \dfrac{\Delta u}{\Delta x}+u\cdot \dfrac{\Delta v}{\Delta x}+\Delta u\cdot \dfrac{\Delta v}{\Delta x})=u'v+uv'\)</span>。</p>
+</li>
+<li>
+<p>证明 <span class="arithmatex">\((\dfrac u v)'=\dfrac{u'v-uv'}{v^2}\)</span>：</p>
+<p>设 <span class="arithmatex">\(y=\dfrac{u(x)}{v(x)}\,(v(x)\neq 0)\)</span>，则：<span class="arithmatex">\((\dfrac u v)'=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{\frac{u(x+\Delta x)}{v(x+\Delta x)}-\frac u v}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{\frac{u+\Delta u}{v+\Delta v}-\frac u v}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{\frac{v\Delta u-u\Delta v}{v(v+\Delta v)}}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{v\frac{\Delta u}{\Delta x}-u\frac{\Delta v}{\Delta x}}{v(v+\Delta v)}=\dfrac{u'v-uv'}{v^2}\,(v\neq 0)\)</span>。</p>
+</li>
+</ul>
+</details>
+<p>若 <span class="arithmatex">\(u_i=u_i(x)\,(i=1,2,\cdots,n)\)</span> 均可导，则 <span class="arithmatex">\((u_1+u_2+\cdots+u_n)'=u_1'+u_2'+\cdots+u_n'\)</span>，<span class="arithmatex">\((u_1u_2\cdots u_n)'=\sum_{k=1}^n u_1\cdots u_k'\cdots u_n\)</span>。</p>
 </li>
 <li>
 <p>反函数的求导法则</p>
-<p>设 <span class="arithmatex">\(y=f(x)\)</span> 可导，且 <span class="arithmatex">\(f'(x)\neq 0\)</span>，则存在反函数 <span class="arithmatex">\(x=\varphi(y)\)</span>，且 <span class="arithmatex">\(\large\frac{\text dx}{\text dy}=\frac{1}{\frac{\text dy}{\text dx}}\)</span>，即 <span class="arithmatex">\(\varphi'(y)=\frac{1}{f'(x)}\)</span>。</p>
+<p>设 <span class="arithmatex">\(y=f(x)\)</span> 可导，且 <span class="arithmatex">\(f'(x)\neq 0\)</span>（即 <span class="arithmatex">\(f(x)\)</span> 严格单调），则存在反函数 <span class="arithmatex">\(x=\varphi(y)\)</span>，且 <span class="arithmatex">\(\large\frac{\text dx}{\text dy}=\frac{1}{\frac{\text dy}{\text dx}}\)</span>，即 <span class="arithmatex">\(\varphi'(y)=\frac{1}{f'(x)}\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<ol>
+<li>
+<p>由于 <span class="arithmatex">\(y=f(x)\)</span> 可导，从而连续，则其反函数 <span class="arithmatex">\(x=\varphi(y)\)</span> 也连续。</p>
+<p>所以，当 <span class="arithmatex">\(\Delta x\to 0\)</span> 时，<span class="arithmatex">\(\Delta y\to 0\)</span>；同理，当 <span class="arithmatex">\(\Delta y\to 0\)</span> 时，<span class="arithmatex">\(\Delta x\to 0\)</span>。</p>
+</li>
+<li>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 严格单调，则其反函数 <span class="arithmatex">\(\varphi(y)\)</span> 也严格单调。</p>
+<p>所以，当 <span class="arithmatex">\(\Delta x\neq 0\)</span> 时，<span class="arithmatex">\(\Delta y\neq 0\)</span>；同理，当 <span class="arithmatex">\(\Delta y\neq 0\)</span> 时，<span class="arithmatex">\(\Delta x\neq 0\)</span>。</p>
+</li>
+</ol>
+<p>故 <span class="arithmatex">\(\varphi'(y)=\lim\limits_{\Delta y\to 0}\dfrac{\Delta y}{\Delta y}=\lim\limits_{\Delta x\to 0}\dfrac{1}{\frac{\Delta y}{\Delta x}}=\dfrac{1}{f'(x)}\)</span>。</p>
+</details>
 <details class="info" open="open">
 <summary>Info</summary>
-<p><span class="arithmatex">\(f'(x)\)</span> 存在且 <span class="arithmatex">\(f'(x)\neq 0\)</span> <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(f'(x)\)</span> 必恒正或恒负</p>
+<p><span class="arithmatex">\(f'(x)\)</span> 存在且 <span class="arithmatex">\(f'(x)\neq 0\)</span> <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(f'(x)\)</span> 必恒正或恒负（<span class="arithmatex">\(f(x)\)</span> 单调）</p>
 </details>
 <details class="example" open="open">
 <summary>例题</summary>
@@ -1464,10 +1498,24 @@
 </li>
 <li>
 <p>复合函数求导法则</p>
-<p>设 <span class="arithmatex">\(u=g(x)\)</span> 在点 <span class="arithmatex">\(x\)</span> 处可导，<span class="arithmatex">\(y=f(u)\)</span> 在点 <span class="arithmatex">\(u=g(x)\)</span> 处可导，则 <span class="arithmatex">\(\{f[g(x)]\}'=f'[g(x)]g'(x)\)</span>。</p>
+<p>设 <span class="arithmatex">\(u=g(x)\)</span> 对 <span class="arithmatex">\(x\)</span> 可导，<span class="arithmatex">\(y=f(u)\)</span> 对 <span class="arithmatex">\(u\)</span> 可导，则 <span class="arithmatex">\(y=f(g(x))\)</span> 可导，且 <span class="arithmatex">\(\frac{\text dy}{\text dx}=\frac{\text dy}{\text du}\cdot \frac{\text du}{\text dx}\)</span> 或 <span class="arithmatex">\((f(g(x)))'=f'(g(x))g'(x)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<details class="failure" open="open">
+<summary>错误证法</summary>
+<p><span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta u}\cdot \dfrac{\Delta u}{\Delta x}=\lim\limits_{\Delta u\to 0}\dfrac{\Delta y}{\Delta u}\cdot \lim\limits_{\Delta x\to 0}\dfrac{\Delta u}{\Delta x}=f'(u)g'(x)\)</span>。</p>
+<p>错误原因：<span class="arithmatex">\(\Delta u\)</span> 可能为 <span class="arithmatex">\(0\)</span>。</p>
+</details>
+<details class="success" open="open">
+<summary>正确证法</summary>
+<p><span class="arithmatex">\(\Delta y=f'(u_0)\Delta u+\alpha(\Delta u)\Delta u\)</span>。其中 <span class="arithmatex">\(\alpha(\Delta u)\)</span> 为 <span class="arithmatex">\(\Delta u\to 0\)</span> 时的无穷小量。</p>
+<p><span class="arithmatex">\(\alpha(\Delta u)=\begin{cases}\dfrac{f(u_0+\Delta u)-f(u_0)}{\Delta u}-f'(u_0)&amp;(\Delta u\neq 0)\\0&amp;(\Delta u=0)\end{cases}\)</span></p>
+<p>则 <span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{f'(u_0)\Delta u+\alpha(\Delta u)\Delta u}{\Delta x}=f'(u_0)g'(x_0)+0\cdot g'(x_0)=f'(g(x_0))g'(x_0)\)</span>。</p>
+</details>
+</details>
 <details class="warning" open="open">
 <summary>注意</summary>
-<p><span class="arithmatex">\(\{f[g(x)]\}'=\dfrac{\text d\{f[g(x)]\}}{\text dx}\)</span>，而 <span class="arithmatex">\(f'[g(x)]=\dfrac{\text d\{f[g(x)]\}}{\text d[g(x)]}\)</span>。前者是对 <span class="arithmatex">\(x\)</span> 求导，后者是对 <span class="arithmatex">\(g(x)\)</span> 求导。要看清楚求导符号的位置。</p>
+<p><span class="arithmatex">\((f(g(x)))'=\dfrac{\text d\{f(g(x))\}}{\text dx}\)</span>，而 <span class="arithmatex">\(f'(g(x))=\dfrac{\text d\{f(g(x))\}}{\text d(g(x))}\)</span>。前者是对 <span class="arithmatex">\(x\)</span> 求导，后者是对 <span class="arithmatex">\(g(x)\)</span> 求导。要看清楚求导符号的位置。</p>
 </details>
 <p>注意可能 <span class="arithmatex">\(\Delta u=0\)</span></p>
 </li>
@@ -1511,6 +1559,17 @@
 <p>两边对 <span class="arithmatex">\(x\)</span> 求导（注意 <span class="arithmatex">\(y=f(x)\)</span>，即将 <span class="arithmatex">\(y\)</span> 看作中间变量），<span class="arithmatex">\(\frac 1 y y'=[\ln |f(x)|]'\Rightarrow y'=\frac{yf'(x)}{f(x)}\)</span></p>
 </li>
 </ol>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(y=\dfrac{\sqrt[5]{x-3}\sqrt[3]{3x-2}}{\sqrt{x+2}}\)</span>，求 <span class="arithmatex">\(y'\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\ln y=\frac 1 5\ln|x-5|+\frac 1 3\ln|3x-2|-\frac 1 2\ln|x+2|\)</span></p>
+<p>两边同时对 <span class="arithmatex">\(x\)</span> 求导：</p>
+<p><span class="arithmatex">\(\dfrac 1 y y'=\dfrac 1 5\cdot\dfrac 1 {x-3}+\dfrac 1 3\cdot\dfrac{1}{3x-2}\cdot 3-\dfrac 1 2\cdot\dfrac{1}{x+2}\)</span></p>
+<p>得 <span class="arithmatex">\(y'=\dfrac{\sqrt[5]{x-3}\sqrt[3]{3x-2}}{\sqrt{x+2}}[\dfrac{1}{5(x-3)}+\dfrac{1}{3x-2}-\dfrac{1}{2(x+2)}]\)</span></p>
+</details>
+</details>
 </li>
 </ul>
 </li>
@@ -1529,14 +1588,15 @@
 <p><span class="arithmatex">\({(a^x)}^{(n)}=a^x\ln^n a\,(a&gt;0,a\neq 1)\)</span>，<span class="arithmatex">\({(e^x)^{(n)}}=e^x\)</span></p>
 <p><span class="arithmatex">\({(\sin kx)}^{(n)}=k^n\sin(kx+\frac{n\pi}2)\)</span></p>
 <p><span class="arithmatex">\({(\cos kx)}^{(n)}=k^n\cos(kx+\frac{n\pi} 2)\)</span></p>
-<p><span class="arithmatex">\({\ln x}^{(n)}=(-1)^{n-1}\frac{(n-1)!}{x^n}\,(x&gt;0)\)</span></p>
+<p><span class="arithmatex">\({(\ln x)}^{(n)}=(-1)^{n-1}\frac{(n-1)!}{x^n}\,(x&gt;0)\)</span></p>
 <p><span class="arithmatex">\({[\ln(1+x)]}^{(n)}=(-1)^{n-1}\frac{(n-1)!}{(1+x)^n}\,(x&gt;-1)\)</span></p>
 <p><span class="arithmatex">\({[(x+x_0)^m]}^{(n)}=m(m-1)(m-2)\cdots(m-n+1)(x+x_0)^{m-n}\)</span></p>
 <p><span class="arithmatex">\({(\frac{1}{x+a})}^{(n)}=\frac{(-1)^n n!}{(x+a)^{n+1}}\)</span></p>
 </li>
 <li>
 <p>高阶导数的运算法则</p>
-<p>莱布尼兹公式：<span class="arithmatex">\({(uv)}^{(n)}=\sum_{k=0}^n C_n^k u^{(n-k)}v^{(k)}\)</span>，其中 <span class="arithmatex">\(u^{(0)}=u\)</span>，<span class="arithmatex">\(v^{(0)}=v\)</span>。</p>
+<p><span class="arithmatex">\((u\pm v)^{(n)}=u^{(n)}\pm v^{(n)}\)</span></p>
+<p>莱布尼兹（Leibniz）公式：<span class="arithmatex">\({(uv)}^{(n)}=\sum_{k=0}^n C_n^k u^{(n-k)}v^{(k)}\)</span>，其中 <span class="arithmatex">\(u^{(0)}=u\)</span>，<span class="arithmatex">\(v^{(0)}=v\)</span>。</p>
 </li>
 <li>
 <p>求高阶导数：</p>
@@ -1668,12 +1728,17 @@
 <ul>
 <li>
 <p>微分的定义</p>
-<p>设 <span class="arithmatex">\(y=f(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 内有定义，当 <span class="arithmatex">\(\Delta x\to 0\)</span> 时，对于函数增量 <span class="arithmatex">\(\Delta y=f(x_0+\Delta x)-f(x_0)\)</span>，若存在与 <span class="arithmatex">\(\Delta x\)</span> 无关的常数 <span class="arithmatex">\(A\)</span>，得 <span class="arithmatex">\(\Delta y=A\Delta x+o(\Delta x)\)</span>，则称 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处可微，并称 <span class="arithmatex">\(A\Delta x\)</span>（线性主部）为 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处的微分，记作 <span class="arithmatex">\(\text dy\vert_{x=x_0}=A\Delta x\)</span>。</p>
+<p>设 <span class="arithmatex">\(y=f(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 内有定义，当 <span class="arithmatex">\(\Delta x\to 0\)</span> 时，对于函数增量 <span class="arithmatex">\(\Delta y=f(x_0+\Delta x)-f(x_0)\)</span>，若存在与 <span class="arithmatex">\(\Delta x\)</span> 无关的常数 <span class="arithmatex">\(A\)</span>，使得 <span class="arithmatex">\(\Delta y=A\Delta x+o(\Delta x)\)</span>，则称 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处可微，并称 <span class="arithmatex">\(A\Delta x\)</span>（线性主部）为 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处的微分，记作 <span class="arithmatex">\(\text dy\vert_{x=x_0}=A\Delta x\)</span>。</p>
 <p>又由于 <span class="arithmatex">\(\Delta x=1\cdot \Delta x+0\)</span>，所以 <span class="arithmatex">\(\Delta x=\text dx\)</span>。</p>
 </li>
 <li>
 <p>可微与可导的关系</p>
 <p>函数 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可微 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可导。此时 <span class="arithmatex">\(A=f'(x_0)\)</span>，即 <span class="arithmatex">\(\text dy\vert_{x=x_0}=f'(x_0)\text dx\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\Rightarrow\)</span>：由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可微，则 <span class="arithmatex">\(\Delta y=A\Delta x+o(\Delta x)\,(\Delta x\to 0)\)</span>，故 <span class="arithmatex">\(f'(x_0)=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\to 0}(A+\dfrac{o(\Delta x)}{\Delta x})=A\)</span>，所以 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可导。</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span>：由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可导，则 <span class="arithmatex">\(f'(x_0)=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}\Rightarrow\dfrac{\Delta y}{\Delta x}=f'(x_0)+o(\Delta x)\)</span>，所以 <span class="arithmatex">\(\Delta y=f'(x_0)\Delta x+o(\Delta x)\)</span>，从而 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可微。</p>
+</details>
 </li>
 <li>
 <p>微分的几何意义</p>
@@ -1688,6 +1753,7 @@
 </li>
 <li>
 <p>微分的四则运算</p>
+<p>设 <span class="arithmatex">\(u=u(x),v=v(x)\)</span> 在点 <span class="arithmatex">\(x\)</span> 处均可微，则 <span class="arithmatex">\(u\pm v\)</span>，<span class="arithmatex">\(uv\)</span>，<span class="arithmatex">\(cu\)</span>，<span class="arithmatex">\(\frac u v\,(v\neq 0)\)</span> 在点 <span class="arithmatex">\(x\)</span> 处都可微，且 <span class="arithmatex">\(\text d(u\pm v)=\text du\pm \text dv\)</span>，<span class="arithmatex">\(\text d(uv)=v\text du+u\text dv\)</span>，<span class="arithmatex">\(\text d(cu)=c\text du\)</span>，<span class="arithmatex">\(\text d(\frac u v)'=\frac{v\text du-u\text dv}{v^2}\,(v\neq 0)\)</span>。</p>
 <details class="example" open="open">
 <summary>例题（隐函数法 2）</summary>
 <p>设 <span class="arithmatex">\(y=y(x)\)</span> 由方程 <span class="arithmatex">\(x^y=y^x\,(x&gt;0,y&gt;0)\)</span> 确定，求 <span class="arithmatex">\(\dfrac{\text dy}{\text dx}\)</span>。</p>
@@ -1708,6 +1774,11 @@
 <li>
 <p>一阶微分形式不变性</p>
 <p>若 <span class="arithmatex">\(u=\varphi(x)\)</span> 在点 <span class="arithmatex">\(x\)</span> 处可微，<span class="arithmatex">\(y=f(u)\)</span> 在点 <span class="arithmatex">\(u\,(u=\varphi(x))\)</span> 处可微，则复合函数 <span class="arithmatex">\(y=f(\varphi(x))\)</span> 在点 <span class="arithmatex">\(x\)</span> 处可微，且 <span class="arithmatex">\(\text dy=f'(u)\text du\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>由复合函数的求导法则知，<span class="arithmatex">\(y=f(\varphi(x))\)</span> 在点 <span class="arithmatex">\(x\)</span> 处可导，所以在点 <span class="arithmatex">\(x\)</span> 处可微。</p>
+<p><span class="arithmatex">\(\text dy=f'(\varphi(x))\varphi'(x)\text dx=f'(\varphi(x))\text d\varphi(x)=f'(u)\text du\)</span></p>
+</details>
 <details class="example" open="open">
 <summary>例题</summary>
 <p>设 <span class="arithmatex">\(y=e^{\sin(\ln x)}\)</span>，求 <span class="arithmatex">\(\text dy\)</span> 及 <span class="arithmatex">\(\dfrac{\text dy}{\text dx}\)</span>。</p>
@@ -1769,8 +1840,23 @@
 <li>
 <p>近似计算与误差估计</p>
 <ul>
-<li>近似计算</li>
-<li>误差估计</li>
+<li>
+<p>近似计算</p>
+<p>若 <span class="arithmatex">\(y=f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处可微，则有 <span class="arithmatex">\(f(x_0+\Delta x)-f(x_0)=f'(x_0)\Delta x+o(\Delta x)\,(\Delta x\to 0)\)</span></p>
+<p>当 <span class="arithmatex">\(|\Delta x|\)</span> 很小时，<span class="arithmatex">\(f(x+\Delta x)\approx f(x_0)+f'(x_0)\Delta x\)</span>。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\sqrt[100]{1.002}\)</span> 的近似值。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(f(x)=\sqrt[100]{x}\)</span>，<span class="arithmatex">\(f'(x)=\dfrac{1}{100}x^{-\frac{99}{100}}\)</span>。</p>
+<p><span class="arithmatex">\(f(1.002)=f(1+0.002)\approx f(1)+f'(1)\cdot 0.002=1+\dfrac 1 {100}\cdot 0.002=1.00002\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>误差估计</p>
+</li>
 </ul>
 </li>
 <li>
