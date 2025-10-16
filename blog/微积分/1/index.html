@@ -1314,7 +1314,7 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-16T05:49:35.939075+00:00'>2025-10-16</time></span><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-16T05:49:35.939075+00:00'>2025-10-16</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-16T07:46:27.388704+00:00'>2025-10-16</time></span><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-16T07:46:27.388704+00:00'>2025-10-16</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1732,9 +1732,44 @@ $$
 <h4 id="stolz">Stolz 定理<a class="headerlink" href="#stolz" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>若 <span class="arithmatex">\(\{y_n\}\)</span> 从某一项开始严格递增且 <span class="arithmatex">\(\lim\limits_{n\to \infty}b_n=+\infty\)</span>，且 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{x_n-x_{n-1}}{y_n-y_{n-1}}\)</span> 存在或为 <span class="arithmatex">\(\pm \infty\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{x_n}{y_n}=\lim\limits_{n\to \infty}\frac{x_n-x_{n-1}}{y_n-y_{n-1}}\)</span>。</p>
-<p>也就是说，分式形式的数列，若分母数列严格递增，且差分后的极限存在，则原式必有极限。</p>
-<p>几何意义：把 <span class="arithmatex">\((x_n,y_n)\)</span> 看作平面上的点 <span class="arithmatex">\(M_n\)</span>，定义意义是，假设 <span class="arithmatex">\(M_n\)</span> 的横坐标 <span class="arithmatex">\(x_n\to +\infty\)</span>，那么当 <span class="arithmatex">\(\vec{M_nM_{n+1}}\)</span> 的斜率以 <span class="arithmatex">\(a\)</span> 为极限时，则 <span class="arithmatex">\(\vec{OM_n}\)</span> 的斜率也以 <span class="arithmatex">\(a\)</span> 为极限。</p>
+<p>Stolz 定理 1：设 <span class="arithmatex">\(\{a_n\},\{b_n\}\)</span> 满足 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=0,\lim\limits_{n\to \infty}b_n=0\)</span>，且 <span class="arithmatex">\(\{b_n\}\)</span> 单调递减，则当 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{a_n-a_{n-1}}{b_n-b_{n-1}}\)</span> 存在或为 <span class="arithmatex">\(\pm \infty\)</span> 时，有 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{a_n}{b_n}=\lim\limits_{n\to \infty}\frac{a_n-a_{n-1}}{b_n-b_{n-1}}\)</span>。</p>
+</li>
+<li>
+<p>Stolz 定理 2：若 <span class="arithmatex">\(\{b_n\}\)</span>（从某一项开始）严格递增且 <span class="arithmatex">\(\lim\limits_{n\to \infty}b_n=+\infty\)</span>，则当 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{a_n-a_{n-1}}{b_n-b_{n-1}}\)</span> 存在或为 <span class="arithmatex">\(\pm \infty\)</span> 时，有 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{a_n}{b_n}=\lim\limits_{n\to \infty}\frac{a_n-a_{n-1}}{b_n-b_{n-1}}\)</span>。</p>
+<p>几何意义：把 <span class="arithmatex">\((b_n,a_n)\)</span> 看作平面上的点 <span class="arithmatex">\(M_n\)</span>，定义意义是，假设 <span class="arithmatex">\(M_n\)</span> 的横坐标 <span class="arithmatex">\(\to +\infty\)</span>，那么当 <span class="arithmatex">\(\vec{M_nM_{n+1}}\)</span> 的斜率以 <span class="arithmatex">\(a\)</span> 为极限时，则 <span class="arithmatex">\(\vec{OM_n}\)</span> 的斜率也以 <span class="arithmatex">\(a\)</span> 为极限。</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{1+\sqrt 2+\sqrt[3]3+\cdots+\sqrt[n]{n}}n\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong>记 <span class="arithmatex">\(a_n=\sqrt[n]n\)</span>，则 <span class="arithmatex">\(I=\lim\limits_{n\to \infty}\dfrac{a_1+a_2+\cdots+a_n}{n}=\lim\limits_{n\to \infty}a_n=1\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong>记 <span class="arithmatex">\(a_n=1+\sqrt 2+\sqrt[3]3+\cdots+\sqrt[n]n\)</span>，<span class="arithmatex">\(b_n=n\)</span>，<span class="arithmatex">\(\{b_n\}\)</span> 单调递增趋于 <span class="arithmatex">\(+\infty\)</span>，由 Stolz 定理 2 得 <span class="arithmatex">\(I=\lim\limits_{n\to \infty}\dfrac{a_n-a_{n-1}}{b_n-b_{n-1}}=\lim\limits_{n\to \infty}\dfrac{\sqrt[n]n}{n-(n-1)}=1\)</span>。</p>
+</li>
+</ul>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\frac 1 2+\frac 1 3+\cdots +\frac 1 n}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>由于 <span class="arithmatex">\(\dfrac 1 {n+1}&lt;\ln(1+\dfrac 1 n)&lt;\dfrac 1 n\)</span>，则：</p>
+<p><span class="arithmatex">\(1+\dfrac 1 2+\cdots+\dfrac 1 n&gt;\ln(1+1)+\ln(1+\dfrac 1 2)+\cdots+\ln(1+\dfrac 1 n)=\ln(n+1)\)</span></p>
+<p><span class="arithmatex">\(1+\dfrac 1 2+\cdots+\dfrac 1 n&lt;1+\ln(1+1)+\ln(1+\dfrac 1 2)+\cdots+\ln(1+\dfrac{1}{n-1})=1+\ln n\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\ln n}=1\)</span>，<span class="arithmatex">\(\dfrac{\ln n}{\ln(n+1)}&lt;1\)</span></p>
+<p>则 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\frac 1 2+\frac 1 3+\cdots +\frac 1 n}=1\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p>记 <span class="arithmatex">\(a_n=\ln n\)</span>，<span class="arithmatex">\(b_n=1+\dfrac 1 2+\dfrac 1 3+\cdots+\dfrac 1 n\)</span>，<span class="arithmatex">\(\{b_n\}\)</span> 单调递增趋于 <span class="arithmatex">\(+\infty\)</span>，由 Stolz 定理 2 得 <span class="arithmatex">\(I=\lim\limits_{n\to \infty}\dfrac{a_n-a_{n-1}}{b_n-b_{n-1}}=\lim\limits_{n\to \infty}\dfrac{\ln n-\ln (n-1)}{\frac 1 n}=\lim\limits_{n\to \infty} n\ln(1+\dfrac 1 {n-1})=\lim\limits_{n\to \infty}\dfrac{n}{n-1}\ln(1+\dfrac{1}{n-1})^{n-1}=1\cdot \ln e=1\)</span>。</p>
+</li>
+</ul>
+</details>
+</details>
 </li>
 </ul>
 <h3 id="_5">函数极限<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
@@ -2385,6 +2420,12 @@ $$
 <summary>解答</summary>
 <p><span class="arithmatex">\(=\lim\limits_{x\to 0}[\dfrac{\sin(\sin \sin x)}{\sin \sin x}\cdot \dfrac{\sin(\sin x)}{\sin x}\cdot\dfrac{\sin x}x]=1\)</span>。</p>
 </details>
+<p><strong>切化弦：</strong></p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sin x-\tan x}{(\sqrt{\cos x}-1)\ln(1+x)}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\sin x}{\ln(1+x)}\cdot \dfrac{(1-\frac 1 {\cos x})}{\sqrt{\cos x}-1}=\lim\limits_{x\to 0}\dfrac{\frac{\cos x-1}{\cos x}}{\sqrt{\cos x}-1}=\lim\limits_{x\to 0}\dfrac{\sqrt{\cos x}+1}{\cos x}=2\)</span></p>
+</details>
 <p><strong>综合题：</strong></p>
 <p>计算 <span class="arithmatex">\(\lim\limits_{n\to \infty}(\cos \dfrac x n+k\sin\dfrac x n)^n\)</span>。</p>
 <details class="note">
@@ -2567,9 +2608,10 @@ $$
 </ol>
 </li>
 <li>
-<p>根式可以想想根式差</p>
+<p>根号的处理</p>
 <details class="example">
 <summary>例题</summary>
+<p><strong>转分式：</strong></p>
 <p>计算：<span class="arithmatex">\(\lim\limits_{n\to +\infty}n(\sqrt[3]{1+\frac 3 n}-1)\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
@@ -2579,7 +2621,7 @@ $$
 <details class="tip" open="open">
 <summary>Tip</summary>
 <p><span class="arithmatex">\(a^k-b^k=(a-b)(a^{k-1}+a^{k-2}b+a^{k-3}b^2+\cdots+ab^{k-2}+b^{k-1})\)</span></p>
-<p>逆用后，可将 “根式差” 转化为 “分式”：<span class="arithmatex">\(a-b=\frac{a^k-b^k}{a^{k-1}+a^{k-2}b+\cdots+ab^{k-2}+b^{k-1}}\)</span>。如 <span class="arithmatex">\(\lim\limits_{n\to \infty}\sqrt[k]{1+\frac c n}-1=\lim\limits_{n\to \infty}\frac{\frac c n}{k}\)</span>（分母共 <span class="arithmatex">\(k\)</span> 项，每项当 <span class="arithmatex">\(n\to \infty\)</span> 时都 <span class="arithmatex">\(\to 1\)</span>，因此分母 <span class="arithmatex">\(\to k\)</span>）。</p>
+<p>逆用后，可将 “根式差” 转化为 “分式”：<span class="arithmatex">\(a-b=\dfrac{a^k-b^k}{a^{k-1}+a^{k-2}b+\cdots+ab^{k-2}+b^{k-1}}\)</span>。如 <span class="arithmatex">\(\lim\limits_{n\to \infty}\sqrt[k]{1+\frac c n}-1=\lim\limits_{n\to \infty}\dfrac{\frac c n}{k}\)</span>（分母共 <span class="arithmatex">\(k\)</span> 项，每项当 <span class="arithmatex">\(n\to \infty\)</span> 时都 <span class="arithmatex">\(\to 1\)</span>，因此分母 <span class="arithmatex">\(\to k\)</span>）。</p>
 </details>
 <p>计算 <span class="arithmatex">\(\lim\limits_{x\to +\infty}(\sqrt{x^2+4x-1}-x+3)\)</span>。</p>
 <details class="note">
@@ -2594,6 +2636,24 @@ $$
 \]</div>
 <p>其中 <span class="arithmatex">\(a_n b_m \neq 0\)</span>，且 <span class="arithmatex">\(m, n\)</span> 为正整数。</p>
 </details>
+</details>
+<p><strong>提公因子转无穷小，配凑：</strong></p>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to +\infty}(\sqrt[3]{x^3+x^2+1}-\sqrt{x^2+1})\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to +\infty}x(\sqrt[3]{1+\frac 1 x+\frac{1}{x^3}}-\sqrt{1+\frac{1}{x^2}})\xlongequal{t=\frac 1 x}\lim\limits_{t\to 0^+}\dfrac{\sqrt[3]{1+t+t^3}-\sqrt{1+t^2}}t=\lim\limits_{t\to 0^+}\dfrac{\sqrt[3]{1+t+t^3}-1}{t}-\lim\limits_{t\to 0^+}\dfrac{\sqrt{1+t^2}-1}t=\lim\limits_{t\to 0^+}\dfrac{\frac 1 3(t+t^3)}t-\lim\limits_{t\to 0^+}\dfrac{\frac 1 2 t^2}t=\dfrac 1 3-0=\dfrac 1 3\)</span></p>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to -\infty}x(\sqrt{x^2+1}+x)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong><span class="arithmatex">\(I=\lim\limits_{x\to -\infty}x\dfrac{1}{\sqrt{x^2+1}-x}=\lim\limits_{x\to +\infty}-x\dfrac{1}{\sqrt{x^2+1}+x}=\lim\limits_{x\to +\infty}-\dfrac{1}{\sqrt{1+\frac{1}{x^2}}+1}=-\dfrac 1 2\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong><span class="arithmatex">\(I=\lim\limits_{x\to -\infty}-x^2(\sqrt{1+\frac 1 {x^2}}-1)=\lim\limits_{x\to -\infty}-x^2\cdot \dfrac 1 2\cdot \dfrac 1 {x^2}=-\dfrac 1 2\)</span></p>
+</li>
+</ul>
 </details>
 </details>
 </li>
@@ -2813,6 +2873,26 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 <p>指数函数 <span class="arithmatex">\(a^x\,(a&gt;1)\)</span> 在 <span class="arithmatex">\(x\to +\infty\)</span> 时主导增长。通过对数拆分提取出主导项。</p>
 </details>
 <p><span class="arithmatex">\(I=\lim\limits_{x\to +\infty}\dfrac{\ln(3^x\cdot (3^{-x}+1))}{\ln(2^x\cdot (2^{-x}+1))}=\lim\limits_{x\to +\infty}\dfrac{x\ln 3+\ln(3^{-x}+1)}{x\ln 2+\ln(2^{-x}+1)}=\lim\limits_{x\to +\infty}\dfrac{\ln 3+\frac 1 x\ln(3^{-x}+1)}{\ln 2+\frac 1 x\ln(2^{-x}+1)}=\dfrac{\ln 3}{\ln 2}\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>不好做的试试夹逼定理。放缩也有技巧</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to +\infty}(\dfrac{{e^x}+e^{2x}+\cdots+e^{nx}}n)^{\frac 1 x}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="question" open="open">
+<summary>尝试</summary>
+<p><span class="arithmatex">\((e^x)^{\frac 1 x}\leq (\dfrac{e^x+e^{2x}+\cdots+e^{nx}}{n})^{\frac 1 x}\leq (e^{nx})^{\frac 1 x}=e^n\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to +\infty}(e^x)^{\frac 1 x}=e\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to +\infty}e^n=e^n\)</span></p>
+<p>放缩得不好，夹逼不出来。于是考虑把左边也放缩成 <span class="arithmatex">\(e^{nx}\)</span> 相关的，舍掉其他项。</p>
+</details>
+<p><span class="arithmatex">\((\dfrac{e^{nx}}n)^{\frac 1 x}\leq (\dfrac{e^x+e^{2x}+\cdots+e^{nx}}{n})^{\frac 1 x}\leq (e^{nx})^{\frac 1 x}=e^n\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to +\infty}(\dfrac{e^{nx}}n)^{\frac 1 x}=\lim\limits_{x\to +\infty}e^n\cdot (\dfrac 1 n)^{\frac 1 x}=e^n\)</span></p>
+<p>故 <span class="arithmatex">\(\lim\limits_{x\to +\infty}(\dfrac{e^x+e^{2x}+\cdots+e^{nx}}{n})^{\frac 1 x}=e^n\)</span>。</p>
 </details>
 </details>
 </li>
