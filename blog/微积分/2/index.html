@@ -1122,7 +1122,7 @@
 
   <h1>第二章 导数与微分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-18T03:36:48.448343+00:00'>2025-10-18</time></span><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-18T03:36:48.448343+00:00'>2025-10-18</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-18T08:18:49.357193+00:00'>2025-10-18</time></span><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-18T08:18:49.357193+00:00'>2025-10-18</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">导数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1175,6 +1175,7 @@
 <details class="note" open="open">
 <summary>证明</summary>
 <p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可导 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}=f'(x_0)\)</span> 存在 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(\lim\limits_{\Delta x\to 0}\Delta y=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}\Delta x=\lim\limits_{\Delta x\to 0}f'(x_0)\cdot 0=0\)</span>。</p>
+<p>（其实就是，分式极限存在，且分母极限为 <span class="arithmatex">\(0\)</span>，可推出分子极限为 <span class="arithmatex">\(0\)</span>）</p>
 </details>
 <p>但 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处不一定可导。如 <span class="arithmatex">\(f(x)=|x|\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续但不可导。</p>
 <details class="info">
@@ -1373,6 +1374,13 @@
 </li>
 </ol>
 </details>
+<p>推广：若 <span class="arithmatex">\(f_-'(x_0)\)</span> 和 <span class="arithmatex">\(f_+'(x_0)\)</span> 都存在（不要求相等），就有 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处连续。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(f_-'(x_0)\)</span> 存在，即 <span class="arithmatex">\(\lim\limits_{\Delta x\to 0^-}\dfrac{\Delta y}{\Delta x}\)</span> 存在，且 <span class="arithmatex">\(\lim\limits_{\Delta x\to 0^-}\Delta x=0\)</span>，所以 <span class="arithmatex">\(\lim\limits_{\Delta x\to 0^-}\Delta y=0\)</span>，因此 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处左连续。</p>
+<p>同理 <span class="arithmatex">\(\lim\limits_{\Delta x\to 0^+}\Delta y=0\)</span>，因此 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处右连续。</p>
+<p>所以 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续。</p>
+</details>
 </li>
 </ul>
 </li>
@@ -1515,7 +1523,7 @@
 </details>
 <details class="warning" open="open">
 <summary>注意</summary>
-<p><span class="arithmatex">\((f(g(x)))'=\dfrac{\text d\{f(g(x))\}}{\text dx}\)</span>，而 <span class="arithmatex">\(f'(g(x))=\dfrac{\text d\{f(g(x))\}}{\text d(g(x))}\)</span>。前者是对 <span class="arithmatex">\(x\)</span> 求导，后者是对 <span class="arithmatex">\(g(x)\)</span> 求导。要看清楚求导符号的位置。</p>
+<p><span class="arithmatex">\((f(g(x)))'=\dfrac{\text d(f(g(x)))}{\text dx}\)</span>，而 <span class="arithmatex">\(f'(g(x))=\dfrac{\text d(f(g(x)))}{\text d(g(x))}\)</span>。前者是对 <span class="arithmatex">\(x\)</span> 求导，后者是对 <span class="arithmatex">\(g(x)\)</span> 求导。要看清楚求导符号的位置。</p>
 </details>
 <p>注意可能 <span class="arithmatex">\(\Delta u=0\)</span></p>
 </li>
@@ -1545,6 +1553,19 @@
 <p>两边同时对 <span class="arithmatex">\(x\)</span> 求导：<span class="arithmatex">\(3x^3+3y^2\textcolor{blue}{y'}-3+3y'=0\)</span>，即 <span class="arithmatex">\(x^2+y^2y'-1+y'=0\Rightarrow y'=\dfrac{1-x^2}{1+y^2}\)</span>。</p>
 <p>再求对 <span class="arithmatex">\(x\)</span> 求一次导。<span class="arithmatex">\(2x+2y\textcolor{blue}y'\cdot y'+y^2y''+y''=0\Rightarrow y''=-\dfrac{2x+2y(y')^2}{1+y^2}\)</span>。</p>
 <p>代入 <span class="arithmatex">\(x=1,y=1\)</span> 得 <span class="arithmatex">\(y'(1)=0,y''(1)=-1\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(y=f(x)\)</span> 由方程 <span class="arithmatex">\(\sin(xy)+\ln y-x=1\)</span> 确定，求 <span class="arithmatex">\(\lim\limits_{n\to \infty}n[f(\dfrac 2 n)-e]\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>【借助导数定义】</p>
+<p><span class="arithmatex">\(f(\dfrac  2 n)=f(0+\dfrac 2 n)\)</span></p>
+<p>而将 <span class="arithmatex">\(x=0\)</span> 代入方程，可得 <span class="arithmatex">\(y|_{x=0}=f(0)=e\)</span></p>
+</details>
+<p>方程两边同时对 <span class="arithmatex">\(x\)</span> 求导，<span class="arithmatex">\(\cos (xy)\cdot (y+xy')+\dfrac 1 y\cdot y'-1=0\)</span>。</p>
+<p>代入 <span class="arithmatex">\(x=0,y|_{x=0}=e\)</span> 可得 <span class="arithmatex">\(y'|_{x=0}=f'(0)=e(1-e)\)</span>。</p>
+<p><span class="arithmatex">\(\lim\limits_{n\to \infty}n[f(\dfrac 2 n)-e]=\lim\limits_{n\to \infty}\dfrac{f(0+\frac 2 n)-f(0)}{\frac 2 n\cdot \frac 1 2}=2f'(0)=2e(1-e)\)</span></p>
 </details>
 </details>
 </li>
@@ -1712,6 +1733,17 @@
 </li>
 <li>
 <p>泰勒展开</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)=x^5 e^{6x}\)</span>，求 <span class="arithmatex">\(f^{(101)}(0)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(x^5e^{6x}=x^5(1+6x+\dfrac{(6x)^2}{2!}+\cdots+\dfrac{(6x)^{96}}{96!}+\cdots)=x^5+\cdots+\dfrac{6^{96}}{96!}x^{101}+\cdots\)</span></p>
+<p><span class="arithmatex">\(y=y(0)+y'(0)x+\dfrac{y''(0)}{2!}x^2+\cdots+\dfrac{y^{(101)}(0)}{101!}x^{101}+\cdots\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow \dfrac{6^{96}}{96!}=\dfrac{y^{(101)}(0)}{101!}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow y^{(101)}(0)=\dfrac{6^{96}}{96!}\cdot 101!\)</span></p>
+</details>
+</details>
 </li>
 </ol>
 </li>

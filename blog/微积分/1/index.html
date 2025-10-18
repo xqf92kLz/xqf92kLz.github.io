@@ -1314,7 +1314,7 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-18T03:36:48.448343+00:00'>2025-10-18</time></span><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-18T03:36:48.448343+00:00'>2025-10-18</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-18T08:18:49.356671+00:00'>2025-10-18</time></span><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-18T08:18:49.356671+00:00'>2025-10-18</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1440,6 +1440,25 @@
 <p>当 <span class="arithmatex">\(u_i\geq 0\)</span> 时，<span class="arithmatex">\(1\cdot u_{\max}\leq u_1+u_2+\cdots+u_n\leq n\cdot u_{\max}\)</span>。</p>
 </li>
 </ol>
+</details>
+<p>设 <span class="arithmatex">\(x_n=(1+\dfrac 1{n^2})(1+\dfrac{2}{n^2})\cdots(1+\dfrac n {n^2})\)</span>，求 <span class="arithmatex">\(\lim\limits_{n\to \infty}x_n\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong>等式两边同时取对数，<span class="arithmatex">\(\ln x_n=\sum_{i=1}^n \ln(1+\dfrac i {n^2})\)</span>。</p>
+<p>根据 <span class="arithmatex">\(\dfrac x {1+x}&lt;\ln(1+x)&lt;x\,(x&gt;0)\)</span>，有 <span class="arithmatex">\(\sum_{i=1}^n \dfrac{\frac i {n^2}}{1+\frac{i}{n^2}}&lt;\sum_{i=1}^n \ln(1+\dfrac i {n^2})&lt;\sum_{i=1}^n\dfrac i {n^2}\)</span></p>
+<p><span class="arithmatex">\(\sum_{i=1}^n\dfrac i {n^2}=\dfrac{\frac 1 2 n(n+1)}{n^2}\to \dfrac 1 2\,(n\to \infty)\)</span></p>
+<p><span class="arithmatex">\(\sum_{i=1}^n \dfrac{\frac i {n^2}}{1+\frac{i}{n^2}}=\sum_{i=1}^n \dfrac i {n^2+i}&gt;\sum_{i=1}^n \dfrac i {n^2+n}=\dfrac{\frac 1 2 n(n+1)}{n^2+n}\to \dfrac 1 2\,(n\to \infty)\)</span>【二次放缩】</p>
+<p>由夹逼定理，<span class="arithmatex">\(\lim\limits_{n\to \infty}\ln x_n=\dfrac 1 2\)</span>。则 <span class="arithmatex">\(\lim\limits_{n\to \infty}x_n=e^{\frac 1 2}\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p>根据 <span class="arithmatex">\(x-\dfrac 1 2 x^2&lt;\ln(1+x)&lt;x\,(x&gt;0)\)</span>，有 <span class="arithmatex">\(\sum_{i=1}^n \dfrac i {n^2}-\dfrac 1 2\sum_{i=1}^n(\dfrac i {n^2})^2&lt;\sum_{i=1}^n \ln(1+\dfrac i {n^2})&lt;\sum_{i=1}^n\dfrac i {n^2}\)</span></p>
+<p><span class="arithmatex">\(\sum_{i=1}^n \dfrac i {n^2}-\dfrac 1 2\sum_{i=1}^n(\dfrac i {n^2})^2=\dfrac{\frac 1 2 n(n+1)}{n^2}-\dfrac 1 2 \cdot \dfrac{\frac 1 6 n(n+1)(2n+1)}{n^4}\to \dfrac 1 2\,(n\to \infty)\)</span></p>
+<p>由夹逼定理，<span class="arithmatex">\(\lim\limits_{n\to \infty}\ln x_n=\dfrac 1 2\)</span>。则 <span class="arithmatex">\(\lim\limits_{n\to \infty}x_n=e^{\frac 1 2}\)</span>。</p>
+</li>
+</ul>
 </details>
 </details>
 <details class="info" open="open">
