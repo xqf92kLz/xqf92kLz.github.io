@@ -54,17 +54,17 @@
     
       <link rel="stylesheet" href="../../../assets/document_dates/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
+    
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/light.css">
     
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/material.css">
     
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
-    
       <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
-    
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
-    
-      <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
     
       <link rel="stylesheet" href="../../../assets/document_dates/core/core.css">
     
@@ -539,7 +539,7 @@
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      压缩映像原理
+      压缩映射原理
     </span>
   </a>
   
@@ -1175,7 +1175,7 @@
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      压缩映像原理
+      压缩映射原理
     </span>
   </a>
   
@@ -1314,7 +1314,7 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-16T09:06:12.800238+00:00'>2025-10-16</time></span><span data-tippy-content data-tippy-raw='2025-10-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-16T09:06:12.800238+00:00'>2025-10-16</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-18T03:36:48.448343+00:00'>2025-10-18</time></span><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-18T03:36:48.448343+00:00'>2025-10-18</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1429,6 +1429,31 @@
 <p>不妨设 <span class="arithmatex">\(A=\max\{a_1,a_2,\cdots,a_m\}\)</span>，由于 <span class="arithmatex">\(A=\sqrt[n]{A^n}&lt;\sqrt[n]{a_1^n+a_2^n+\cdots+a_m^n}&lt;\sqrt[n]{m\cdot A^n}=A\sqrt[n]{m}\)</span></p>
 <p>又 <span class="arithmatex">\(\lim\limits_{n\to \infty}A=\lim\limits_{n\to \infty}A\sqrt[n]m=A\)</span>，由夹逼定理知，<span class="arithmatex">\(\lim\limits_{n\to \infty}\sqrt[n]{a_1^n+a_2^n+\cdots+a_m^n}=A=\max\{a_1,a_2,\cdots,a_n\}\)</span>。</p>
 </details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>基本放缩方法：</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(n\cdot u_{\min}\leq u_1+u_2+\cdots+u_n\leq n\cdot u_{\max}\)</span>。</p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(u_i\geq 0\)</span> 时，<span class="arithmatex">\(1\cdot u_{\max}\leq u_1+u_2+\cdots+u_n\leq n\cdot u_{\max}\)</span>。</p>
+</li>
+</ol>
+</details>
+</details>
+<details class="info" open="open">
+<summary>注意</summary>
+<p>需要注意有些加加加的题不一定是夹逼定理，可以直接加出来。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(x_n=1+\dfrac{1}{1+2}+\dfrac{1}{1+2+3}+\cdots+\dfrac{1}{1+2+3+\cdots+n}\)</span>，求 <span class="arithmatex">\(\lim\limits_{n\to \infty}x_n\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\dfrac{1}{1+2+3+\cdots+n}=\dfrac{2}{n(n+1)}=2(\dfrac 1 n-\dfrac 1 {n+1})\)</span></p>
+<p><span class="arithmatex">\(x_n=1+2(\dfrac 1 2-\dfrac 1 3+\dfrac 1 3-\dfrac 1 4+\cdots+\dfrac 1 n-\dfrac 1{n+1})=2-\dfrac 2 {n+1}\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}x_n=2\)</span></p>
+</details>
+</details>
 </details>
 </li>
 <li>
@@ -1492,8 +1517,6 @@
 </details>
 </details>
 </li>
-</ul>
-</li>
 <li>
 <p><strong>单调有界定理：</strong>单调递增有上界的数列必收敛；单调递减有下界的数列必收敛。</p>
 <details class="note">
@@ -1503,7 +1526,7 @@
 <p>由于 <span class="arithmatex">\(\{a_n\}\)</span> 递增，故当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(a-\varepsilon&lt;a_N\leq a_n\leq a&lt;a+\varepsilon\)</span>，即 <span class="arithmatex">\(|a_n-a|&lt;\varepsilon\)</span>。故 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=a\)</span>。</p>
 </details>
 <p>由于改变数列的有限项不影响数列的敛散性和极限，所以数列从某一项开始单调有界结论依然成立。</p>
-<ul>
+</li>
 <li>
 <p>魏尔斯特拉斯（Weierstrass）定理：有界数列必有收敛的子列。</p>
 </li>
@@ -1571,10 +1594,10 @@ a_{2^n}&amp;=1+\frac 1 2+(\frac 1 3+\frac 1 4)+\cdots+(\frac{1}{2^{n-1}+1}+\frac
 </ul>
 </li>
 </ul>
-<h4 id="_4">压缩映像原理<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h4 id="_4">压缩映射原理<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>压缩映像-1：设数列 <span class="arithmatex">\(\{a_n\}\)</span> 满足 <span class="arithmatex">\(|a_{n+1}-A|\leq r|a_n-A|\)</span>（<span class="arithmatex">\(n\geq n_0\)</span>，<span class="arithmatex">\(n_0\in\mathbb N^*\)</span>），其中 <span class="arithmatex">\(0&lt;r&lt;1\)</span>，<span class="arithmatex">\(A\)</span> 为实常数，则数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛且 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n=A\)</span>。</p>
+<p>压缩映射-1：设数列 <span class="arithmatex">\(\{a_n\}\)</span> 满足 <span class="arithmatex">\(|a_{n+1}-A|\leq r|a_n-A|\)</span>（<span class="arithmatex">\(n\geq n_0\)</span>，<span class="arithmatex">\(n_0\in\mathbb N^*\)</span>），其中 <span class="arithmatex">\(0&lt;r&lt;1\)</span>，<span class="arithmatex">\(A\)</span> 为实常数，则数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛且 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n=A\)</span>。</p>
 <details class="note">
 <summary>证明</summary>
 <p>当 <span class="arithmatex">\(n\geq n_0\)</span> 时，有 <span class="arithmatex">\(0\leq |a_{n+1}-A|\leq r|a_n-A|\leq \cdots\leq r^{n-n_0+1}|a_{n_0}-A|\)</span>。又 <span class="arithmatex">\(0&lt;r&lt;1\)</span>，故 <span class="arithmatex">\(\lim\limits_{n\to \infty}r^{n-n_0+1}|a_{n_0}-A|=0\)</span>，所以 <span class="arithmatex">\(\lim\limits_{n\to +\infty}a_n=A\)</span>。</p>
@@ -1635,7 +1658,7 @@ a_{2^n}&amp;=1+\frac 1 2+(\frac 1 3+\frac 1 4)+\cdots+(\frac{1}{2^{n-1}+1}+\frac
 </details>
 <ul>
 <li>
-<p><strong>压缩映像法：</strong></p>
+<p><strong>压缩映射法：</strong></p>
 <p>若数列 <span class="arithmatex">\(\{a_n\}\)</span> 极限存在，容易计算出极限为 <span class="arithmatex">\(3\)</span>。
 $$
 |a_{n+1}-3|=|\sqrt{6+a_n}-3|=\frac{|a_n-3|}{\sqrt{6+a_n}+3}\leq \frac 1 3|a_n-3|\leq \cdots\leq \frac{1}{3^n}|a_1-3|
@@ -1653,7 +1676,7 @@ $$
 </details>
 <ul>
 <li>
-<p><strong>压缩映像法：</strong></p>
+<p><strong>压缩映射法：</strong></p>
 <p>若数列 <span class="arithmatex">\(\{a_n\}\)</span> 极限存在，容易计算出极限为 <span class="arithmatex">\(2\)</span>。
 $$
 |a_{n+1}-2|=|\sqrt{6-a_n}-2|=\frac{|a_n-2|}{\sqrt{6-a_n}+2}\leq \frac 1 2|a_n-2|\leq \cdots\leq \frac{1}{2^n}|a_1-2|
@@ -1692,7 +1715,7 @@ $$
 </details>
 <ul>
 <li>
-<p><strong>压缩映像法：</strong></p>
+<p><strong>压缩映射法：</strong></p>
 <p>易得 <span class="arithmatex">\(n\geq 2\)</span> 时，<span class="arithmatex">\(a_n&gt;3\)</span>。</p>
 <div class="arithmatex">\[
 0&lt;|a_{n+1}-4|=\frac{|a_n-4|}{a_n}&lt;\frac 1 3|a_n-4|&lt;\frac{1}{3^2}|a_{n-1}-4|&lt;\cdots&lt;\frac{1}{3^n}|a_1-4|
@@ -1711,7 +1734,7 @@ $$
 </details>
 </li>
 <li>
-<p>压缩映像-2：设数列 <span class="arithmatex">\(\{a_n\}\)</span> 满足 <span class="arithmatex">\(|a_{n+1}-a_n|\leq r|a_n-a_{n-1}|\)</span>（<span class="arithmatex">\(n\geq n_0\)</span>，<span class="arithmatex">\(n_0\in\mathbb N^*\)</span>），其中 <span class="arithmatex">\(0&lt;r&lt;1\)</span>，则 <span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
+<p>压缩映射-2：设数列 <span class="arithmatex">\(\{a_n\}\)</span> 满足 <span class="arithmatex">\(|a_{n+1}-a_n|\leq r|a_n-a_{n-1}|\)</span>（<span class="arithmatex">\(n\geq n_0\)</span>，<span class="arithmatex">\(n_0\in\mathbb N^*\)</span>），其中 <span class="arithmatex">\(0&lt;r&lt;1\)</span>，则 <span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
 <details class="note">
 <summary>证明</summary>
 <p>当 <span class="arithmatex">\(n&gt;n_0\)</span> 时，有 <span class="arithmatex">\(|a_{n+1}-a_n|\leq r|a_n-a_{n-1}|\leq \cdots\leq r^{n-n_0}|a_{n_0+1}-a_{n_0}|\)</span>。</p>
@@ -1953,16 +1976,18 @@ $\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\ln n}=1$，$\dfrac{\ln n}{\ln(n+1)}&l
 <li>
 <p>当 <span class="arithmatex">\(x\to 0\)</span> 时，常见的等价无穷小量：</p>
 <p><span class="arithmatex">\(\sin x\sim \tan x\sim \arcsin x\sim \arctan x\sim x\)</span></p>
-<p><span class="arithmatex">\(1-\cos x\sim\frac{x^2}{2}\)</span></p>
+<p><span class="arithmatex">\(1-\cos x\sim\frac 1 2 x^2\)</span>（拓展：<span class="arithmatex">\(1-\cos^{\alpha}x\sim \frac{\alpha}2 x^2\)</span>）</p>
+<p>提公因子的技巧：<span class="arithmatex">\(\tan x-\sin x=\tan x(1-\cos x)\sim x\cdot \frac 1 2 x^2=\frac 1 2 x^3\)</span></p>
 <p><span class="arithmatex">\(\ln(1+x)\sim e^x-1\sim x\)</span></p>
-<p><span class="arithmatex">\((1+x)^{\alpha}-1\sim \alpha x\)</span></p>
+<p><span class="arithmatex">\((1+x)^{\alpha}-1\sim \alpha x\)</span>（<span class="arithmatex">\(\alpha\)</span> 可以与 <span class="arithmatex">\(x\)</span> 无关也可以是关于 <span class="arithmatex">\(x\)</span> 的函数）</p>
 <details class="note" open="open">
 <summary>证明</summary>
 <p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{\ln(1+x)}{x}=\lim\limits_{x\to 0}\ln(1+x)^{\frac 1 x}=\ln(\lim\limits_{x\to 0}(1+x)^{\frac 1 x})=\ln e=1\)</span></p>
 <p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{e^x-1}{x}\xlongequal{e^x-1=t}\lim\limits_{t\to 0}\frac{t}{\ln(1+t)}=1\)</span></p>
 <p><span class="arithmatex">\(\lim\limits_{x\to 0}\frac{(1+x)^{\alpha}-1}{x}=\lim\limits_{x\to 0}\frac{e^{\alpha\ln(1+x)}-1}{x}=\lim\limits_{x\to 0}\frac{\alpha\ln(1+x)}{x}=\alpha\)</span></p>
+<p><span class="arithmatex">\(1-\cos^{\alpha}x=1-(1+(\cos x-1))^{\alpha}\sim -\alpha(\cos x-1)\)</span>【利用 <span class="arithmatex">\((1+x)^{\alpha}-1\sim \alpha x\)</span>】<span class="arithmatex">\(\sim \dfrac{\alpha}2 x^2\)</span></p>
 </details>
-<p><span class="arithmatex">\(a^x-1=e^{x\ln a}-1\sim x\ln a\)</span>（<span class="arithmatex">\(a&gt;0\)</span>）</p>
+<p><span class="arithmatex">\(a^x-1=e^{x\ln a}-1\sim x\ln a\)</span>（<span class="arithmatex">\(a&gt;0\)</span>）（<span class="arithmatex">\(a\)</span> 可以与 <span class="arithmatex">\(x\)</span> 无关也可以是关于 <span class="arithmatex">\(x\)</span> 的函数）</p>
 <p><span class="arithmatex">\(\log_a(1+x)=\frac{\ln(1+x)}{\ln a}\sim\frac{x}{\ln a}\)</span>（<span class="arithmatex">\(a&gt;0\)</span> 且 <span class="arithmatex">\(a\neq 1\)</span>）</p>
 <ul>
 <li>当 <span class="arithmatex">\(x\to 1\)</span> 时，<span class="arithmatex">\(\ln x=\ln(1+(x-1))\sim x-1\)</span>。 </li>
@@ -2888,7 +2913,7 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 </details>
 </li>
 <li>
-<p>不好做的试试夹逼定理。放缩也有技巧</p>
+<p>不好做的试试夹逼定理。</p>
 <details class="example">
 <summary>例题</summary>
 <p>计算：<span class="arithmatex">\(\lim\limits_{x\to +\infty}(\dfrac{{e^x}+e^{2x}+\cdots+e^{nx}}n)^{\frac 1 x}\)</span>。</p>
@@ -2904,6 +2929,34 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 <p><span class="arithmatex">\((\dfrac{e^{nx}}n)^{\frac 1 x}\leq (\dfrac{e^x+e^{2x}+\cdots+e^{nx}}{n})^{\frac 1 x}\leq (e^{nx})^{\frac 1 x}=e^n\)</span></p>
 <p><span class="arithmatex">\(\lim\limits_{x\to +\infty}(\dfrac{e^{nx}}n)^{\frac 1 x}=\lim\limits_{x\to +\infty}e^n\cdot (\dfrac 1 n)^{\frac 1 x}=e^n\)</span></p>
 <p>故 <span class="arithmatex">\(\lim\limits_{x\to +\infty}(\dfrac{e^x+e^{2x}+\cdots+e^{nx}}{n})^{\frac 1 x}=e^n\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>分式极限存在，且分母极限为 <span class="arithmatex">\(0\)</span>，可推出分子极限为 <span class="arithmatex">\(0\)</span>。</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sqrt{1+f(x)}-1}{x-\tan x}=2\)</span>，求 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{f(x)}{x-\sin x}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sqrt{1+f(x)}-1}{x-\tan x}=2\)</span> 且分母 <span class="arithmatex">\(\to 0\)</span>，<span class="arithmatex">\(\Rightarrow\)</span> 分子 <span class="arithmatex">\(\to 0\)</span>，即 <span class="arithmatex">\(\lim\limits_{x\to 0}(\sqrt{1+f(x)}-1)=0\)</span>，从而 <span class="arithmatex">\(\lim\limits_{x\to 0}f(x)=0\)</span>。</p>
+<p>然后就有等价无穷小了。</p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sqrt{1+f(x)}-1}{x-\tan x}=\lim\limits_{x\to 0}\dfrac{\frac 1 2 f(x)}{-\frac 1 3 x^3}=2\)</span>，于是 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{f(x)}{x^3}=-\dfrac 4 3\)</span></p>
+<p>因此 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{f(x)}{x-\sin x}=\lim\limits_{x\to 0}\dfrac{f(x)}{\frac 1 6 x^3}=-8\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>乘除法中极限不为 <span class="arithmatex">\(0\)</span> 的先计算。</p>
+</li>
+<li>
+<p>对数字或函数进行变形。如 <span class="arithmatex">\(1=e^0=\ln e\)</span>，<span class="arithmatex">\(0=\ln 1\)</span>，<span class="arithmatex">\(\frac{\pi}4=\arctan 1\)</span>，<span class="arithmatex">\(x=\ln e^x\)</span></p>
+<details class="example">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\ln(\sin^2 x+e^x)-x}{\ln(x^2+e^{2x})-2x}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\ln (\sin^2 x+e^x)-\ln e^x}{\ln(x^2+e^{2x})-\ln e^{2x}}=\lim\limits_{x\to 0}\dfrac{\ln(\frac{\sin^2 x+e^x}{e^x})}{\ln(\frac{x^2+e^{2x}}{e^{2x}})}=\lim\limits_{x\to 0}=\dfrac{\ln(1+\frac{\sin^2}{e^x})}{\ln(1+\frac{x^2}{e^{2x}})}=\lim\limits_{x\to 0}\dfrac{\sin^2 x}{e^x}\cdot\dfrac{e^{2x}}{x^2}=\lim\limits_{x\to 0}e^x=1\)</span></p>
 </details>
 </details>
 </li>
@@ -3064,6 +3117,17 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 <p><span class="arithmatex">\(x=-1\)</span> 处，左右极限均为 <span class="arithmatex">\(0\)</span>，连续。</p>
 </details>
 </details>
+<p>涉及 <span class="arithmatex">\(e^{\infty}\)</span> 要分 <span class="arithmatex">\(e^{+\infty}\)</span>（<span class="arithmatex">\(+\infty\)</span>） 和 <span class="arithmatex">\(e^{-\infty}\)</span>（<span class="arithmatex">\(0\)</span>） 讨论。</p>
+<details class="example">
+<summary>例题</summary>
+<p>求 <span class="arithmatex">\(f(x)=\dfrac{1}{1-e^{\frac x {1-x}}}\)</span> 的间断点。</p>
+<details class="note">
+<summary>解答</summary>
+<p>关注点 <span class="arithmatex">\(x=0,1\)</span>。</p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}f(x)=\dfrac{1}{1-e^0}=\dfrac 1 0=\infty\)</span>，所以 <span class="arithmatex">\(x=0\)</span> 是第二类间断点（无穷间断点）。</p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 1^-}f(x)=\dfrac{1}{1-e^{+\infty}}=\dfrac{1}{1-(+\infty)}=0\)</span>，<span class="arithmatex">\(\lim\limits_{x\to 1^+}f(x)=\dfrac{1}{1-e^{-\infty}}=\dfrac{1}{1-0}=1\)</span>，所以 <span class="arithmatex">\(x=1\)</span> 是第一类间断点（跳跃间断点）。</p>
+</details>
+</details>
 </li>
 <li>
 <p>收敛/发散相关</p>
@@ -3107,6 +3171,30 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 <p>答案：CD</p>
 <p>C 反例：<span class="arithmatex">\(\{a_n\}\)</span> 为 <span class="arithmatex">\(1,2,1,2,\cdots\)</span>，<span class="arithmatex">\(\{b_n\}\)</span> 为 <span class="arithmatex">\(2,1,2,1,\cdots\)</span>，<span class="arithmatex">\(a_n+b_n=3\)</span> 收敛</p>
 <p>D 反例：<span class="arithmatex">\(a_n=\dfrac{1}{2^n}\)</span>，则 <span class="arithmatex">\(\sqrt[n]{a_n}=\dfrac 1 2\neq 0\)</span></p>
+</details>
+<p>已知数列 <span class="arithmatex">\(\{a_n\}\)</span> 单调，则：</p>
+<p>A. <span class="arithmatex">\(\lim\limits_{n\to \infty}(e^{a_n}-1)\)</span> 存在</p>
+<p>B. <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{1}{1+a_n^2}\)</span> 存在</p>
+<p>C. <span class="arithmatex">\(\lim\limits_{n\to \infty}\sin a_n\)</span> 存在</p>
+<p>D. <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{1}{1-a_n^2}\)</span> 存在</p>
+<details class="note">
+<summary>解答</summary>
+<p>若单调数列 <span class="arithmatex">\(\{a_n\}\)</span> 有界，则极限存在，记 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=A\)</span>。则 <span class="arithmatex">\(\lim\limits_{n\to \infty}(e^{a_n}-1)=e^A-1\)</span>，<span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{1}{1+a_n^2}=\dfrac{1}{1+A}\)</span>，<span class="arithmatex">\(\lim\limits_{n\to \infty}\sin a_n=\sin A\)</span>，<span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{1}{1-a_n^2}\)</span> 未必存在。</p>
+<p>若单调数列 <span class="arithmatex">\(\{a_n\}\)</span> 无界，则极限不存在，<span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=+\infty\)</span> 或 <span class="arithmatex">\(-\infty\)</span>，此时 <span class="arithmatex">\(\lim\limits_{n\to \infty}(e^{a_n}-1)\)</span> 与 <span class="arithmatex">\(\lim\limits_{n\to \infty}\sin a_n\)</span> 都不存在，而 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{1}{1+a_n^2}=1\)</span> 仍存在。</p>
+<p>答案：B。</p>
+</details>
+<p>设 <span class="arithmatex">\(\{x_n\},\{y_n\}\)</span> 均无界，<span class="arithmatex">\(\{z_n\}\)</span> 有界，则：</p>
+<p>A. <span class="arithmatex">\(\{x_n+y_n\}\)</span> 必无界</p>
+<p>B. <span class="arithmatex">\(\{x_ny_n\}\)</span> 必无界</p>
+<p>C. <span class="arithmatex">\(\{x_n+z_n\}\)</span> 必无界</p>
+<p>D. <span class="arithmatex">\(\{x_nz_n\}\)</span> 必无界</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：C。</p>
+<p>A 反例：<span class="arithmatex">\(\{x_n\}=\{n\}\)</span>，<span class="arithmatex">\(\{y_n\}=\{-n\}\)</span></p>
+<p>B 反例：<span class="arithmatex">\(\{x_n\}:0,2,0,4,0,6,\cdots\)</span>，<span class="arithmatex">\(\{y_n\}:1,0,3,0,5,0,\cdots\)</span></p>
+<p>C 可反证。</p>
+<p>D 反例：<span class="arithmatex">\(\{x_n\}:1,2,3,4,5,6,\cdots\)</span>，<span class="arithmatex">\(\{y_n\}:0,0,0,0,0,\cdots\)</span></p>
 </details>
 </details>
 </li>
