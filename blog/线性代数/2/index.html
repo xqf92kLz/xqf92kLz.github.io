@@ -1163,7 +1163,7 @@
 
   <h1>第二章 行列式与矩阵的秩</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-19'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-19T08:30:31.783393+00:00'>2025-10-19</time></span><span data-tippy-content data-tippy-raw='2025-10-19'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-19T08:30:31.783393+00:00'>2025-10-19</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-19'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-19T09:18:12.308566+00:00'>2025-10-19</time></span><span data-tippy-content data-tippy-raw='2025-10-19'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-19T09:18:12.308566+00:00'>2025-10-19</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>排列<ul>
@@ -1448,6 +1448,7 @@ A
 </li>
 </ul>
 <p>则 <span class="arithmatex">\(D_n=\sum_{k=1}^n (-1)^{k-1}b_k\cdot (\prod_{i=k+1}^n a_i)\cdot (\prod_{i=2}^k c_i)\)</span>。</p>
+</details>
 <ul>
 <li>
 <p>三对角形：通过逐行（列）相消，把一条斜线消 <span class="arithmatex">\(0\)</span></p>
@@ -1455,12 +1456,13 @@ A
 <li>
 <p>拉普拉斯展开式</p>
 <ul>
-<li>X 形：把的 <span class="arithmatex">\(2n+1-i\)</span> 行移动到第 <span class="arithmatex">\(2i\)</span> 行，第 <span class="arithmatex">\(2n+1-i\)</span> 列移动到第 <span class="arithmatex">\(2i\)</span> 列（<span class="arithmatex">\(i\in[1,n]\)</span>）</li>
-</ul>
+<li>
+<p>X 形：把的 <span class="arithmatex">\(2n+1-i\)</span> 行移动到第 <span class="arithmatex">\(2i\)</span> 行，第 <span class="arithmatex">\(2n+1-i\)</span> 列移动到第 <span class="arithmatex">\(2i\)</span> 列（<span class="arithmatex">\(i\in[1,n]\)</span>）</p>
 <p><span class="arithmatex">\(\begin{aligned}\begin{vmatrix}a_1&amp; &amp; &amp; &amp; &amp;b_1\\&amp;\ddots &amp; &amp; &amp;⋰&amp; \\&amp; &amp;a_n&amp;b_n&amp; &amp; \\&amp; &amp;b_{n+1}&amp;a_{n+1}&amp; &amp; \\&amp; ⋰ &amp; &amp; &amp;\ddots&amp; \\b_{2n}&amp; &amp; &amp; &amp; &amp;a_{2n}\end{vmatrix}_{2n}&amp;=\begin{vmatrix} a_1 &amp; b_1 &amp; &amp; &amp; &amp; \\ b_{2n} &amp; a_{2n} &amp; &amp; &amp; &amp; \\ &amp; &amp; \ddots &amp;\ddots &amp; &amp; \\ &amp; &amp; \ddots&amp; \ddots &amp; &amp; \\ &amp; &amp; &amp; &amp; a_n &amp; b_n \\ &amp; &amp; &amp; &amp; b_{n + 1} &amp; a_{n + 1} \end{vmatrix}_{2n}\\ &amp;=\prod_{i=1}^n\begin{vmatrix}a_i&amp;b_i\\b_{2n-i+1}&amp;a_{2n-i+1}\end{vmatrix}\end{aligned}\)</span></p>
 </li>
 </ul>
-</details>
+</li>
+</ul>
 </li>
 </ul>
 </li>
