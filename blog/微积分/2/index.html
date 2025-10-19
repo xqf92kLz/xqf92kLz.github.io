@@ -1122,7 +1122,7 @@
 
   <h1>第二章 导数与微分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-18T15:54:40.326814+00:00'>2025-10-18</time></span><span data-tippy-content data-tippy-raw='2025-10-18'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-18T15:54:40.326814+00:00'>2025-10-18</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-19'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-19T02:39:39.936292+00:00'>2025-10-19</time></span><span data-tippy-content data-tippy-raw='2025-10-19'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-19T02:39:39.936292+00:00'>2025-10-19</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">导数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1150,6 +1150,11 @@
 <summary>正确</summary>
 <p><span class="arithmatex">\(\lim\limits_{h\to 0}\dfrac{f(x_0+h)-f(x_0-h)}h\)</span>【若 <span class="arithmatex">\(\lim\limits_{h\to 0}\dfrac{f(x_0+h)-f(x_0)}h\)</span> 和 <span class="arithmatex">\(\lim\limits_{h\to 0}\dfrac{f(x_0-h)-f(x_0)}{-h}\)</span> 存在】<span class="arithmatex">\(=\lim\limits_{h\to 0}\dfrac{f(x_0+h)-f(x_0)}h+\lim\limits_{h\to 0}\dfrac{f(x_0-h)-f(x_0)}{-h}=f_+'(x_0)+f_-'(x_0)=2f'(x_0)\)</span></p>
 <p>同理，<span class="arithmatex">\(\lim\limits_{h\to 0}\dfrac{f(x_0+\alpha h)-f(x_0-\beta h)}h\)</span>【若 <span class="arithmatex">\(\lim\limits_{h\to 0}\dfrac{f(x_0+\alpha h)-f(x_0)}{\alpha h}\)</span> 和 <span class="arithmatex">\(\dfrac{f(x_0-\beta h)-f(x_0)}{-\beta h}\)</span> 存在】<span class="arithmatex">\(=\lim\limits_{h\to 0}(\dfrac{f(x_0+\alpha h)-f(x_0)}{\alpha h}\times \alpha+\dfrac{f(x_0-\beta h)-f(x_0)}{-\beta h}\times \beta)=\alpha f_-(x_0)+\beta f_+(x_0)=(\alpha+\beta)f'(x_0)\)</span></p>
+</details>
+<details class="failure" open="open">
+<summary>注意</summary>
+<p><span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{f(x+\frac 1 n)-f(x)}{\frac 1 n}\)</span> 存在，不能推出 <span class="arithmatex">\(f'(x)\)</span> 存在。</p>
+<p>如对于狄利克雷函数，由于 <span class="arithmatex">\([x\in \mathbb Q]=[x+\dfrac 1 n\in\mathbb Q]\)</span>，故 <span class="arithmatex">\(D(x+\dfrac 1 n)-D(x)=0\)</span>，<span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{D(x+\frac 1 n)-D(x)}{\frac 1 n}=0\)</span>。但 <span class="arithmatex">\(D(x)\)</span> 不连续，因此不可导。</p>
 </details>
 </details>
 <p>几何意义</p>
