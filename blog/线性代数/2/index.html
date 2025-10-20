@@ -1163,7 +1163,7 @@
 
   <h1>第二章 行列式与矩阵的秩</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-19'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-19T09:36:43.968435+00:00'>2025-10-19</time></span><span data-tippy-content data-tippy-raw='2025-10-19'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-19T09:36:43.968435+00:00'>2025-10-19</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-20'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-20T04:52:39.522268+00:00'>2025-10-20</time></span><span data-tippy-content data-tippy-raw='2025-10-20'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-20T04:52:39.522268+00:00'>2025-10-20</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>排列<ul>
@@ -1544,18 +1544,14 @@ A
 <p><span class="arithmatex">\(D_n - (u_1 + u_2)D_{n-1} + u_1u_2D_{n-2} = 0\)</span></p>
 <p><span class="arithmatex">\(D_n - u_1D_{n-1} = u_2(D_{n-1} - u_1D_{n-2})=\cdots=u_2^{n-2}(D_2 - u_1D_1)\)</span></p>
 <p>同理 <span class="arithmatex">\(D_n - u_2D_{n-1} = u_1(D_{n-1} - u_2D_{n-2})=\cdots= u_1^{n-2}(D_2 - u_2D_1)\)</span></p>
-<div class="highlight"><pre><span></span><code>    消去 $D_{n-1}$，解得：$D_n = \dfrac{u_1^{n-1}(D_2 - u_2D_1) - u_2^{n-1}(D_2 - u_1D_1)}{u_1 - u_2}$
-
-2. 当 $\Delta = 0$ 时
-
-    方程有两个相等的根 $u_1 = u_2 = u$，$u = \frac{a}{2}$，$u^2 =  -b$，则：
-
-    $D_n - 2uD_{n-1} + u^2D_{n-2} = 0$
-
-    $D_n - uD_{n-1} = u(D_{n-1} - uD_{n-2}) = \cdots=u^{n-2}(D_2 - uD_1)$
-
-    $D_n = uD_{n-1} + u^{n-2}(D_2 - uD_1)\\= u(uD_{n-2} + u^{n-3}(D_2 - uD_1)) + u^{n-2}(D_2 - uD_1) = u^2D_{n-2} + 2u^{n-2}(D_2 - uD_1) \\=\cdots=u^{n-2}D_2 + (n - 2)u^{n-2}(D_2 - uD_1)\\=u^{n-2}((n - 1)D_2 - (n - 2)uD_1)$
-</code></pre></div>
+<p>消去 <span class="arithmatex">\(D_{n-1}\)</span>，解得：<span class="arithmatex">\(D_n = \dfrac{u_1^{n-1}(D_2 - u_2D_1) - u_2^{n-1}(D_2 - u_1D_1)}{u_1 - u_2}\)</span></p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(\Delta = 0\)</span> 时</p>
+<p>方程有两个相等的根 <span class="arithmatex">\(u_1 = u_2 = u\)</span>，<span class="arithmatex">\(u = \frac{a}{2}\)</span>，<span class="arithmatex">\(u^2 =  -b\)</span>，则：</p>
+<p><span class="arithmatex">\(D_n - 2uD_{n-1} + u^2D_{n-2} = 0\)</span></p>
+<p><span class="arithmatex">\(D_n - uD_{n-1} = u(D_{n-1} - uD_{n-2}) = \cdots=u^{n-2}(D_2 - uD_1)\)</span></p>
+<p><span class="arithmatex">\(D_n = uD_{n-1} + u^{n-2}(D_2 - uD_1)\\= u(uD_{n-2} + u^{n-3}(D_2 - uD_1)) + u^{n-2}(D_2 - uD_1) = u^2D_{n-2} + 2u^{n-2}(D_2 - uD_1) \\=\cdots=u^{n-2}D_2 + (n - 2)u^{n-2}(D_2 - uD_1)\\=u^{n-2}((n - 1)D_2 - (n - 2)uD_1)\)</span></p>
 </li>
 </ol>
 </li>

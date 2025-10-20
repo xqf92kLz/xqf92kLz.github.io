@@ -689,6 +689,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      分块矩阵
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1056,6 +1065,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      分块矩阵
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1079,7 +1097,7 @@
 
   <h1>第三章 矩阵的运算</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-19'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-19T09:36:43.968435+00:00'>2025-10-19</time></span><span data-tippy-content data-tippy-raw='2025-10-19'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-19T09:36:43.968435+00:00'>2025-10-19</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-20'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-20T04:52:39.522268+00:00'>2025-10-20</time></span><span data-tippy-content data-tippy-raw='2025-10-20'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-20T04:52:39.522268+00:00'>2025-10-20</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -1099,7 +1117,7 @@
 <li>
 <p>矩阵的加减法、数乘、乘法和转置，方阵的幂</p>
 <p>对于 <span class="arithmatex">\(n\)</span> 阶方阵 <span class="arithmatex">\(A,B\)</span>，<span class="arithmatex">\(|AB|=|A||B|\)</span>。</p>
-<p>方阵的迹：<span class="arithmatex">\(\text{tr}(A_{n\times n})=\sum_{i=1}^n a_{ii}\)</span>。<span class="arithmatex">\(\text{tr}(A\pm B)=\text{tr}(A)\pm \text{tr}(B)\)</span>，<span class="arithmatex">\(\text{tr}(kA)=k\text{tr}(A)\)</span>，<span class="arithmatex">\(\text{tr}(AB)=\text{tr}(BA)\)</span></p>
+<p><strong>方阵的迹：</strong><span class="arithmatex">\(\text{tr}(A_{n\times n})=\sum_{i=1}^n a_{ii}\)</span>。<span class="arithmatex">\(\text{tr}(A\pm B)=\text{tr}(A)\pm \text{tr}(B)\)</span>，<span class="arithmatex">\(\text{tr}(kA)=k\text{tr}(A)\)</span>，<span class="arithmatex">\(\text{tr}(AB)=\text{tr}(BA)\)</span></p>
 <p>虽然一般 <span class="arithmatex">\(AB\neq BA\)</span>，但是 <span class="arithmatex">\(|AB|=|BA|\)</span>、<span class="arithmatex">\(\text{tr}(AB)=\text{tr}(BA)\)</span>（<span class="arithmatex">\(A,B\)</span> 均为方阵）。</p>
 <p>矩阵的转置：<span class="arithmatex">\((A^T)^T=A\)</span>，<span class="arithmatex">\((A\pm B)^T=A^T\pm B^T\)</span>，<span class="arithmatex">\((cA)^T=cA^T\)</span>，<span class="arithmatex">\((AB)^T=B^TA^T\)</span>，<span class="arithmatex">\((ABC)^T=C^TB^TA^T\)</span>，<span class="arithmatex">\(r(A)=r(A^T)\)</span>。当 <span class="arithmatex">\(A\)</span> 是方阵时，<span class="arithmatex">\(|A|=|A^T|\)</span></p>
 <details class="info">
@@ -1115,32 +1133,44 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 <summary>注意</summary>
 <ul>
 <li>
-<p>矩阵乘法不满足交换律：一般 <span class="arithmatex">\(AB\neq BA\)</span></p>
+<p>矩阵乘法不一定满足交换律：一般 <span class="arithmatex">\(AB\neq BA\)</span></p>
 <p>则一般 <span class="arithmatex">\((AB)^k=AB\cdot AB\cdot \cdots\cdot AB\neq A^kB^k\)</span></p>
 <p><span class="arithmatex">\((A+B)^2=A^2+AB+BA+B^2\neq A^2+2AB+B^2\)</span></p>
 <p><span class="arithmatex">\((A+B)(A-B)=A^2+AB+BA-B^2\neq A^2-B^2\)</span></p>
 </li>
 <li>
-<p>矩阵乘法不满足消去律，且存在零因子性：<span class="arithmatex">\(AB=AC\)</span> 时不能得出 <span class="arithmatex">\(A=O\)</span> 或 <span class="arithmatex">\(B=C\)</span>，<span class="arithmatex">\(AB=O\)</span> 时不能得出 <span class="arithmatex">\(A=O\)</span> 或 <span class="arithmatex">\(B=O\)</span>。</p>
-<p>两个非零矩阵的乘积可能等于零矩阵。若存在非零矩阵 <span class="arithmatex">\(A,B\)</span> 满足 <span class="arithmatex">\(AB=O\)</span>，则称 <span class="arithmatex">\(A\)</span> 为左零因子，<span class="arithmatex">\(B\)</span> 为右零因子。</p>
+<p><span class="arithmatex">\(A\neq O\)</span> 且 <span class="arithmatex">\(B\neq O\)</span> 不能推出 <span class="arithmatex">\(AB\neq O\)</span>。例如线性方程组 <span class="arithmatex">\(AX=0\)</span> 有非零解，若 <span class="arithmatex">\(B\)</span> 的各列均为方程非零解，则 <span class="arithmatex">\(AB=O\)</span>。</p>
+<p>若存在 <span class="arithmatex">\(A\neq O,B\neq O\)</span> 满足 <span class="arithmatex">\(AB=O\)</span>，则称 <span class="arithmatex">\(A\)</span> 为 <strong>左零因子</strong>，<span class="arithmatex">\(B\)</span> 为 <strong>右零因子</strong>。</p>
+</li>
+<li>
+<p>矩阵乘法不一定满足消去律：<span class="arithmatex">\(AB=AC\)</span> 不能推出 <span class="arithmatex">\(A=O\)</span> 或 <span class="arithmatex">\(A=B\)</span>。因为 <span class="arithmatex">\(AB=AC\Rightarrow A(B-C)=O\)</span>，由上一条可知不一定 <span class="arithmatex">\(A=O\)</span> 或 <span class="arithmatex">\(B=C\)</span>。</p>
 </li>
 </ul>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>虽然矩阵乘法不一定满足交换律，但是数量矩阵和任何矩阵相乘都是可交换的。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>由于 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(E\)</span> 是可交换的，则 <span class="arithmatex">\((A+\lambda E)^n=\sum_{i=0}^n C_n^i A^i(\lambda E)^{n-i}=\sum_{i=0}^n C_n^i \lambda^{n-i}A^i\)</span>。</p>
+</details>
 </details>
 </li>
 </ul>
 <h3 id="_2">矩阵求逆<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>伴随矩阵：将 <span class="arithmatex">\(a_{i,j}\)</span> 换成 <span class="arithmatex">\(A_{i,j}\)</span> 再转置，记作 <span class="arithmatex">\(A^{*}=\begin{pmatrix}A_{1,1}&amp;A_{2,1}&amp;\cdots&amp;A_{n,1}\\A_{1,2}&amp;A_{2,2}&amp;\cdots&amp;A_{n,2}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\A_{1,n}&amp;A_{2,n}&amp;\cdots&amp;A_{n,n}\end{pmatrix}\)</span></p>
+<p><strong>伴随矩阵：</strong>将 <span class="arithmatex">\(a_{i,j}\)</span> 换成 <span class="arithmatex">\(A_{i,j}\)</span> 再转置，记作 <span class="arithmatex">\(A^{*}=\begin{pmatrix}A_{1,1}&amp;A_{2,1}&amp;\cdots&amp;A_{n,1}\\A_{1,2}&amp;A_{2,2}&amp;\cdots&amp;A_{n,2}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\A_{1,n}&amp;A_{2,n}&amp;\cdots&amp;A_{n,n}\end{pmatrix}\)</span></p>
 <p><span class="arithmatex">\(AA^*=A^*A=|A|E\)</span></p>
 <details class="note">
 <summary>证明</summary>
 <p><span class="arithmatex">\(\sum_{k=1}^n a_{ik}A^*_{kj}=\sum_{k=1}^n a_{ik}A_{jk}=|A|[i=j]\)</span></p>
+<p><span class="arithmatex">\(\sum_{k=1}^n A^*_{ik}a_{kj}=\sum_{k=1}^n A_{ki}a_{kj}=|A|[i=j]\)</span></p>
 </details>
 </li>
 <li>
-<p>矩阵的逆</p>
-<p>对于 <span class="arithmatex">\(n\)</span> 阶方阵<span class="arithmatex">\(A\)</span>，若存在 <span class="arithmatex">\(B\)</span> 阶方阵 <span class="arithmatex">\(B\)</span> 使得 <span class="arithmatex">\(AB=BA=E\)</span>，则称 <span class="arithmatex">\(A\)</span> 可逆（非退化/非奇异），且 <span class="arithmatex">\(B\)</span> 是 <span class="arithmatex">\(A\)</span> 的逆矩阵。否则，称 <span class="arithmatex">\(A\)</span> 不可逆（退化/奇异）。</p>
+<p><strong>矩阵的逆</strong></p>
+<p>对于 <span class="arithmatex">\(n\)</span> 阶方阵<span class="arithmatex">\(A\)</span>，若存在 <span class="arithmatex">\(n\)</span> 阶方阵 <span class="arithmatex">\(B\)</span> 使得 <span class="arithmatex">\(AB=BA=E\)</span>，则称 <span class="arithmatex">\(A\)</span> 可逆（非退化/非奇异），且 <span class="arithmatex">\(B\)</span> 是 <span class="arithmatex">\(A\)</span> 的逆矩阵。否则，称 <span class="arithmatex">\(A\)</span> 不可逆（退化/奇异）。</p>
 <ol>
 <li>
 <p>逆矩阵是相互的。</p>
@@ -1160,7 +1190,122 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 <p><span class="arithmatex">\(\Leftrightarrow\)</span>：<span class="arithmatex">\(AA^*=A^*A=|A|E\)</span>，由于 <span class="arithmatex">\(|A|\neq 0\)</span>，则 <span class="arithmatex">\(A\cdot \dfrac{A^*}{|A|}=\dfrac{A^*}{|A|}A=E\)</span>，可知 <span class="arithmatex">\(A\)</span> 可逆，<span class="arithmatex">\(A^{-1}=\dfrac{A^*}{|A|}\)</span>。</p>
 </details>
 </li>
+<li>
+<p>对于 <span class="arithmatex">\(A_{n\times n},B_{n\times n}\)</span>，若 <span class="arithmatex">\(AB=E\)</span> 或 <span class="arithmatex">\(BA=E\)</span>，则 <span class="arithmatex">\(A^{-1}=B,B^{-1}=A\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>下证 <span class="arithmatex">\(AB=E\Rightarrow A^{-1}=B,B^{-1}=A\)</span>。</p>
+<p><span class="arithmatex">\(AB=E\Rightarrow |AB|=|E|\Rightarrow |A|\neq 0,|B|\neq 0\Rightarrow \exists A^{-1},B^{-1}\)</span></p>
+<p><span class="arithmatex">\(A^{-1}=A^{-1}(AB)=(A^{-1}A)B=B\)</span></p>
+<p><span class="arithmatex">\(B^{-1}=(AB)B^{-1}=A(BB^{-1})=A\)</span></p>
+</details>
+<p>推论：<span class="arithmatex">\(AB=E\Leftrightarrow BA=E\Leftrightarrow A,B\)</span> 互为逆矩阵。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>由此，要证 <span class="arithmatex">\(A^{-1}=B,B^{-1}=A\)</span>，只需证 <span class="arithmatex">\(AB=E\)</span> 或 <span class="arithmatex">\(BA=E\)</span> 即可，不需要证 <span class="arithmatex">\(AB=E\)</span> 且 <span class="arithmatex">\(BA=E\)</span>。</p>
+<details class="example">
+<summary>一些简单的证明</summary>
+<p><span class="arithmatex">\((A^{-1})^{-1}=A\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p>因为 <span class="arithmatex">\(A^{-1}A=E\)</span></p>
+</details>
+<p><span class="arithmatex">\((AB)^{-1}=B^{-1}A^{-1}\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p>因为 <span class="arithmatex">\((AB)(B^{-1}A^{-1})=A(BB^{-1})A^{-1}=E\)</span></p>
+</details>
+<p><span class="arithmatex">\((cA)^{-1}=\dfrac 1 c A^{-1}\,(c\neq 0)\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p>因为 <span class="arithmatex">\((cA)(\dfrac 1 c A^{-1})=(c\cdot \dfrac 1 c)AA^{-1}=E\)</span></p>
+</details>
+<p><span class="arithmatex">\((A^T)^{-1}=(A^{-1})^T\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p>因为 <span class="arithmatex">\(A^T(A^{-1})^T=(A^{-1}A)^T=E\)</span></p>
+</details>
+<p><span class="arithmatex">\(|A^{-1}|=|A|^{-1}\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p>因为 <span class="arithmatex">\(|A^{-1}A|=|E|\Rightarrow |A^{-1}||A|=1\)</span></p>
+</details>
+</details>
+</details>
+</li>
 </ol>
+</li>
+<li>
+<p>伴随矩阵的其他性质</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(A_{n\times n}\,(n\geq 2)\)</span>，则 <span class="arithmatex">\(|A^*|=|A|^{n-1}\)</span>，无论 <span class="arithmatex">\(A\)</span> 是否可逆</p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>
+<p>当 <span class="arithmatex">\(|A|\neq 0\)</span> 时：<span class="arithmatex">\(AA^*=|A|E\Rightarrow |A||A^*|=||A|E|\Rightarrow |A||A^*|=|A|^n\)</span>【利用 <span class="arithmatex">\(|kM|=k^n|M|\)</span>】，则 <span class="arithmatex">\(|A^*|=|A|^{n-1}\)</span>。</p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(|A|=0\)</span> 时：反证。假设 <span class="arithmatex">\(|A^*|\neq 0\)</span>，则 <span class="arithmatex">\((A^{*})^{-1}\)</span> 存在，又 <span class="arithmatex">\(AA^*=|A|E=O\Rightarrow A A^*(A^{*})^{-1}=O\cdot (A^*)^{-1}\Rightarrow A=O\Rightarrow A^*=O\)</span>，与 <span class="arithmatex">\(|A^*|\neq 0\)</span> 矛盾。故 <span class="arithmatex">\(|A^{*}|=0\)</span>。</p>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(A_{n\times n},B_{n\times n}\)</span> 均可逆，则 <span class="arithmatex">\((AB)^*=B^*A^*\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\((AB)^*=|AB|(AB)^{-1}\)</span>【利用 <span class="arithmatex">\(M^*=|M|M^{-1}\)</span>（<span class="arithmatex">\(M\)</span> 可逆）】<span class="arithmatex">\(=|A||B|B^{-1}A^{-1}=|B|B^{-1}|A|A^{-1}=B^*A^*\)</span></p>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(A_{n\times n}\,(n\geq 2)\)</span>，则 <span class="arithmatex">\(r(A^*)=\begin{cases}n,&amp;r(A)=n\\1,&amp;r(A)=n-1\\0,&amp;r(A)&lt;n-1\end{cases}\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>
+<p>当 <span class="arithmatex">\(r(A)=n\)</span> 时：</p>
+<p><span class="arithmatex">\(r(A)=n\Rightarrow |A|\neq 0\Rightarrow |A^*|=|A|^{n-1}\neq 0\Rightarrow r(A^*)=n\)</span></p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(r(A)=n-1\)</span> 时：</p>
+<p><span class="arithmatex">\(A\)</span> 中至少有一个 <span class="arithmatex">\(n-1\)</span> 阶子式不为 <span class="arithmatex">\(0\)</span>，所以 <span class="arithmatex">\(A^*\neq O\)</span>，即 <span class="arithmatex">\(r(A^*)\geq 1\)</span>。</p>
+<p>又 <span class="arithmatex">\(|A|=0\)</span>，所以 <span class="arithmatex">\(AA^*=|A|E=O\)</span>。</p>
+<p>根据矩阵秩的性质（若 <span class="arithmatex">\(AB=O\)</span>，则 <span class="arithmatex">\(r(A)+r(B)\leq n\)</span>，其中 <span class="arithmatex">\(n\)</span> 为 <span class="arithmatex">\(A\)</span> 的列数，同时也是 <span class="arithmatex">\(B\)</span> 的行数），则 <span class="arithmatex">\(r(A)+r(A^*)\leq n\Rightarrow n-1+r(A^*)\leq n\Rightarrow r(A^*)\leq 1\)</span>。</p>
+<p>故 <span class="arithmatex">\(r(A^*)=1\)</span>。</p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(r(A)&lt;n-1\)</span> 时：</p>
+<p><span class="arithmatex">\(A\)</span> 中所有 <span class="arithmatex">\(n-1\)</span> 阶子式都为 <span class="arithmatex">\(0\)</span>，所以 <span class="arithmatex">\(A^*=O\)</span>，从而 <span class="arithmatex">\(r(A^*)=0\)</span>。</p>
+</li>
+</ul>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>矩阵逆没有加减相关的运算法则，所以需要化和差为积。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(A,B,A+B\)</span> 均可逆，证明：<span class="arithmatex">\(A^{-1}+B^{-1}\)</span> 可逆，并求 <span class="arithmatex">\((A^{-1}+B^{-1})^{-1}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(A^{-1}+B^{-1}=B^{-1}BA^{-1}+B^{-1}AA^{-1}=B^{-1}(B+A)A^{-1}\)</span></p>
+<p><span class="arithmatex">\(|A^{-1}+B^{-1}|=|B^{-1}||A+B||A^{-1}|\neq 0\)</span>，故 <span class="arithmatex">\(A^{-1}+B^{-1}\)</span> 可逆。</p>
+<p><span class="arithmatex">\((A^{-1}+B^{-1})^{-1}=(B^{-1}(B+A)A^{-1})^{-1}=A(A+B)^{-1}B\)</span></p>
+</details>
+</details>
+</li>
+</ul>
+<h3 id="_3">分块矩阵<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>分块矩阵的积</p>
+<p>前提条件：1. 分块前可以乘（<span class="arithmatex">\(A\)</span> 列数等于 <span class="arithmatex">\(B\)</span> 行数）；2. 分块完可以乘（<span class="arithmatex">\(A\)</span> 列分块方式与 <span class="arithmatex">\(B\)</span> 行分块方式一致）4</p>
+</li>
+<li>
+<p>分块矩阵的转置：块之间转置，块内也转置。</p>
 </li>
 </ul>
 
