@@ -1163,7 +1163,7 @@
 
   <h1>第二章 行列式与矩阵的秩</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-20'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-20T04:52:39.522268+00:00'>2025-10-20</time></span><span data-tippy-content data-tippy-raw='2025-10-20'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-20T04:52:39.522268+00:00'>2025-10-20</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-20'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-20T06:50:07.011976+00:00'>2025-10-20</time></span><span data-tippy-content data-tippy-raw='2025-10-20'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-20T06:50:07.011976+00:00'>2025-10-20</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>排列<ul>
@@ -1617,12 +1617,59 @@ A
 </li>
 </ul>
 </details>
+<p>计算 <span class="arithmatex">\(D_{n} = \begin{vmatrix}x_1 &amp; b &amp; b &amp; \cdots &amp; b \\a &amp; x_2 &amp; b &amp; \cdots &amp; b \\a &amp; a &amp; x_3 &amp; \cdots &amp; b \\\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\a &amp; a &amp; a &amp; \cdots &amp; x_n\end{vmatrix}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(D_n=b\prod_{i=1}^{n-1}(x_i - a)+(x_n - b)D_{n - 1}\)</span></p>
+<p>同理（转置）有 <span class="arithmatex">\(D_n=a\prod_{i=1}^{n-1}(x_i-b)+(x_n-a)D_{n-1}\)</span></p>
+<p>若 <span class="arithmatex">\(a\neq b\)</span>，解得 <span class="arithmatex">\(D_n=\dfrac 1 {a-b}[a\prod_{i=1}^n (x_i-b)-b\prod_{i=1}^n (x_i-a)]\)</span>。</p>
+<p>若 <span class="arithmatex">\(a=b\)</span>，由递推可得 <span class="arithmatex">\(D_n=\prod_{i=1}^n (x_i-b)+b\sum_{i=1}^n \prod_{j\neq i}(x_j-b)\)</span>。</p>
+</details>
 <p>计算 <span class="arithmatex">\(D_n = \begin{vmatrix} a_1 + x_1^2 &amp; x_2x_1 &amp; \cdots &amp; x_{n-1}x_1 &amp; x_nx_1 \\ x_1x_2 &amp; a_2 + x_2^2 &amp; \cdots &amp; x_{n-1}x_2 &amp; x_nx_2 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\ x_1x_{n-1} &amp; x_2x_{n-1} &amp; \cdots &amp; a_{n-1} + x_{n-1}^2 &amp; x_nx_{n-1} \\ x_1x_n &amp; x_2x_n &amp; \cdots &amp; x_{n-1}x_n &amp; a_n + x_n^2 \end{vmatrix}_n\)</span></p>
 <details class="note">
-<summary>计算</summary>
+<summary>解答</summary>
 <div class="arithmatex">\[\begin{aligned}D_n &amp;= \begin{vmatrix} a_1 + x_1^2 &amp; x_2x_1 &amp; \cdots &amp; x_{n-1}x_1 \\ x_1x_2 &amp; a_2 + x_2^2 &amp; \cdots &amp; x_{n-1}x_2 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ x_1x_{n-1} &amp; x_2x_{n-1} &amp; \cdots &amp; a_{n-1} + x_{n-1}^2 \\ x_1x_n &amp; x_2x_n &amp; \cdots &amp; x_{n-1}x_n &amp; a_n \end{vmatrix} + x_n \begin{vmatrix} a_1 + x_1^2 &amp; x_2x_1 &amp; \cdots &amp; x_{n-1}x_1 &amp; x_1 \\ x_1x_2 &amp; 1 + x_2^2 &amp; \cdots &amp; x_{n-1}x_2 &amp; x_2 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\ x_1x_{n-1} &amp; x_2x_{n-1} &amp; \cdots &amp; a_{n-1} + x_{n-1}^2 &amp; x_{n-1} \\ x_1x_n &amp; x_2x_n &amp; \cdots &amp; x_{n-1}x_n &amp; x_n \end{vmatrix}\\&amp;=a_nD_{n-1}+x_n \begin{vmatrix} a_1 &amp; &amp;\cdots &amp; &amp;x_1 \\ &amp; a_2 &amp; \cdots &amp; &amp;x_2 \\ &amp; &amp; \ddots &amp; &amp;\vdots \\ &amp; &amp; \cdots &amp; a_{n-1} &amp; x_{n-1} \\ &amp; &amp; \cdots &amp; &amp; x_n \end{vmatrix}_n\\&amp;=a_nD_{n-1}+x_n^2\prod_{i=1}^{n-1} a_{i}\end{aligned}\]</div>
 <p><span class="arithmatex">\(\dfrac{D_n}{\prod_{i=1}^n a_i}=\dfrac{D_{n-1}}{\prod_{i=1}^{n-1}a_i}+\dfrac{x_n^2}{a_n}\)</span></p>
 <p><span class="arithmatex">\(D_n=\prod_{i=1}^n a_i(1+\sum_{i=1}^n \dfrac{x_i^2}{a_i})\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>Cauchy 行列式</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(D_n= \begin{vmatrix}(a_1 + b_1)^{-1} &amp; (a_1 + b_2)^{-1} &amp; \cdots &amp; (a_1 + b_n)^{-1} \\(a_2 + b_1)^{-1} &amp; (a_2 + b_2)^{-1} &amp; \cdots &amp; (a_2 + b_n)^{-1} \\\vdots &amp; \vdots &amp; &amp; \vdots \\(a_n + b_1)^{-1} &amp; (a_n + b_2)^{-1} &amp; \cdots &amp; (a_n + b_n)^{-1}\end{vmatrix}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<div class="arithmatex">\[
+\begin{aligned}
+D_n &amp;\xlongequal{C_i-C_n} \begin{vmatrix}
+\frac{b_n - b_1}{(a_1 + b_1)(a_1 + b_n)} &amp; \cdots &amp; \frac{b_n - b_{n-1}}{(a_1 + b_{n-1})(a_1 + b_n)} &amp; \frac{1}{a_1 + b_n} \\
+\vdots &amp; &amp; \vdots &amp; \vdots \\
+\frac{b_n - b_1}{(a_{n-1} + b_1)(a_{n-1} + b_n)} &amp; \cdots &amp; \frac{b_n - b_{n-1}}{(a_{n-1} + b_{n-1})(a_{n-1} + b_n)} &amp; \frac{1}{a_{n-1} + b_n} \\
+\frac{b_n - b_1}{(a_n + b_1)(a_n + b_n)} &amp; \cdots &amp; \frac{b_n - b_{n-1}}{(a_n + b_{n-1})(a_n + b_n)} &amp; \frac{1}{a_n + b_n}
+\end{vmatrix} \\
+&amp;= \frac{\prod_{k=1}^{n-1} (b_n - b_k)}{\prod_{j=1}^{n} (a_j + b_n)} \begin{vmatrix}
+\frac{1}{a_1 + b_1} &amp; \cdots &amp; \frac{1}{a_1 + b_{n-1}} &amp; 1 \\
+\vdots &amp; &amp; \vdots &amp; \vdots \\
+\frac{1}{a_{n-1} + b_1} &amp; \cdots &amp; \frac{1}{a_{n-1} + b_{n-1}} &amp; 1 \\
+\frac{1}{a_n + b_1} &amp; \cdots &amp; \frac{1}{a_n + b_{n-1}} &amp; 1
+\end{vmatrix} \\
+&amp;\xlongequal{R_i-R_n} \frac{\prod_{k=1}^{n-1} (b_n - b_k)}{\prod_{j=1}^{n} (a_j + b_n)} \begin{vmatrix}
+\frac{a_n - a_1}{(a_1 + b_1)(a_n + b_1)} &amp; \cdots &amp; \frac{a_n - a_1}{(a_1 + b_{n-1})(a_n + b_{n-1})} &amp; 0 \\
+\vdots &amp; &amp; \vdots &amp; \vdots \\
+\frac{a_n - a_{n-1}}{(a_{n-1} + b_1)(a_n + b_1)} &amp; \cdots &amp; \frac{a_n - a_{n-1}}{(a_{n-1} + b_{n-1})(a_n + b_{n-1})} &amp; 0 \\
+\frac{1}{a_n + b_1} &amp; \cdots &amp; \frac{1}{a_n + b_{n-1}} &amp; 1
+\end{vmatrix} \\
+&amp;= \frac{\prod_{i=1}^{n-1} (a_n - a_i)(b_n - b_i)}{\prod_{j=1}^{n} (a_j + b_n) \prod_{k=1}^{n-1} (a_n + b_k)} \begin{vmatrix}
+\frac{1}{a_1 + b_1} &amp; \cdots &amp; \frac{1}{a_1 + b_{n-1}} \\
+\vdots &amp; &amp; \vdots \\
+\frac{1}{a_{n-1} + b_1} &amp; \cdots &amp; \frac{1}{a_{n-1} + b_{n-1}}
+\end{vmatrix} \\
+&amp;= \frac{\prod_{i=1}^{n-1} (a_n - a_i)(b_n - b_i)}{\prod_{j=1}^{n} (a_j + b_n) \prod_{k=1}^{n-1} (a_n + b_k)} \cdot D_{n-1}.
+\end{aligned}
+\]</div>
+<p>不断递推下去即得 <span class="arithmatex">\(D_n = \dfrac{\prod_{1 \leq i &lt; j \leq n} (a_j - a_i)(b_j - b_i)}{\prod_{i,j=1}^{n} (a_i + b_j)}\)</span>。</p>
 </details>
 </details>
 </li>
