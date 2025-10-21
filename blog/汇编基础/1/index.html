@@ -774,9 +774,18 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#int21" class="md-nav__link">
+    <span class="md-ellipsis">
+      int21 中断
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      分支与循环
+      堆栈
     </span>
   </a>
   
@@ -785,16 +794,16 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      函数
+      分支与循环
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#int21" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      int21 中断
+      函数
     </span>
   </a>
   
@@ -1059,9 +1068,18 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#int21" class="md-nav__link">
+    <span class="md-ellipsis">
+      int21 中断
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      分支与循环
+      堆栈
     </span>
   </a>
   
@@ -1070,16 +1088,16 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      函数
+      分支与循环
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#int21" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      int21 中断
+      函数
     </span>
   </a>
   
@@ -1103,7 +1121,7 @@
 
   <h1>汇编入门</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-21T12:24:54.697223+00:00'>2025-10-21</time></span><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-21T12:24:54.697223+00:00'>2025-10-21</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-21T13:17:43.993639+00:00'>2025-10-21</time></span><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-21T13:17:43.993639+00:00'>2025-10-21</time></span></div></div>
 <p>模板：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">.386</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
@@ -1260,43 +1278,19 @@
 <li><code>|</code>：<code>or al,bl</code></li>
 <li><code>^</code>：<code>xor al,bl</code></li>
 <li><code>~</code>：<code>not ax</code></li>
-<li><code>&lt;&lt;</code>：<code>shl al,1</code></li>
-<li><code>&gt;&gt;</code>：<code>shr al,1</code>（无符号），<code>sar al,1</code>（有符号）</li>
-<li>循环左移 <code>rol</code>，循环右移 <code>ror</code></li>
+<li>
+<p><code>&lt;&lt;</code>：<code>shl al,1</code>。最后一个被移动的位会被放到 CF 标志中。</p>
+<p>（与 <code>jc</code> 配合：若 CF=1，<code>jc</code> 会跳转）</p>
+</li>
+<li>
+<p><code>&gt;&gt;</code>：<code>shr al,1</code>（无符号），<code>sar al,1</code>（有符号）。最后一个被移动的位会被放到 CF 标志中。</p>
+</li>
+<li>循环左移 <code>rol</code>，循环右移 <code>ror</code>。最后一个被移动的位会在被放到另一端的同时放到 CF 标志中。</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h3 id="_2">分支与循环<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>用跳转实现。</p>
-<details class="note">
-<summary>do-while</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nl">main:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,[</span><span class="no">l1</span><span class="p">]</span><span class="w"> </span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="no">outer_loop</span><span class="p">:</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">l2</span><span class="p">]</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nl">middle_loop:</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,[</span><span class="no">l3</span><span class="p">]</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="nl">inner_loop:</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">            </span><span class="c1">; 循环体操作</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">            </span><span class="nf">add</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="mi">1</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">            </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cx</span><span class="p">,[</span><span class="no">r3</span><span class="p">]</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">            </span><span class="nf">jle</span><span class="w"> </span><span class="no">inner_loop</span><span class="w">     </span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="no">add</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">1</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">r2</span><span class="p">]</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="nf">jle</span><span class="w"> </span><span class="no">middle_loop</span><span class="w"> </span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="no">add</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">1</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,[</span><span class="no">r1</span><span class="p">]</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="nf">jle</span><span class="w"> </span><span class="no">outer_loop</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
-</details>
-<h3 id="_3">函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>写在 <code>main</code> 前面，用 <code>call</code> 调用，用 <code>ret</code> 返回</p>
 <h3 id="int21">int21 中断<a class="headerlink" href="#int21" title="Permanent link">&para;</a></h3>
 <p><a href="https://blog.csdn.net/Zach_z/article/details/78576216">常见中断</a> <code>int 21h</code>：（<a href="https://www.uwouni.com/rbrown.htm">中断大全</a>）</p>
 <table>
@@ -1341,6 +1335,38 @@
 </tr>
 </tbody>
 </table>
+<h3 id="_2">堆栈<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><code>push ax</code>：堆栈指针 -=2，再把 ax 存放到新指针指向的内存中</p>
+<p><code>pop cx</code>：把当前堆栈指针指向的内容取出保存到 cx，再堆栈指针 +=2</p>
+<h3 id="_3">分支与循环<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>用跳转实现。</p>
+<details class="note">
+<summary>do-while</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nl">main:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,[</span><span class="no">l1</span><span class="p">]</span><span class="w"> </span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="no">outer_loop</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">l2</span><span class="p">]</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nl">middle_loop:</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,[</span><span class="no">l3</span><span class="p">]</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="nl">inner_loop:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">            </span><span class="c1">; 循环体操作</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">            </span><span class="nf">add</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">            </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cx</span><span class="p">,[</span><span class="no">r3</span><span class="p">]</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">            </span><span class="nf">jle</span><span class="w"> </span><span class="no">inner_loop</span><span class="w">     </span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="no">add</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">r2</span><span class="p">]</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="nf">jle</span><span class="w"> </span><span class="no">middle_loop</span><span class="w"> </span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="no">add</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,[</span><span class="no">r1</span><span class="p">]</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="nf">jle</span><span class="w"> </span><span class="no">outer_loop</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+</code></pre></div>
+</details>
+<h3 id="_4">函数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>写在 <code>main</code> 前面，用 <code>call</code> 调用，用 <code>ret</code> 返回</p>
 
 
 
