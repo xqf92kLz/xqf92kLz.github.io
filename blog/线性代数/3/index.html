@@ -1133,7 +1133,7 @@
 
   <h1>第三章 矩阵的运算</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-21T03:16:42.216914+00:00'>2025-10-21</time></span><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-21T03:16:42.216914+00:00'>2025-10-21</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-21T03:22:05.013886+00:00'>2025-10-21</time></span><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-21T03:22:05.013886+00:00'>2025-10-21</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">矩阵的加减法、数乘、乘法和转置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1350,14 +1350,12 @@ D. <span class="arithmatex">\(B+E\)</span> 为可逆矩阵</p>
 <p>已知 <span class="arithmatex">\(A=\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}\)</span>，写出 <span class="arithmatex">\(A\)</span> 可逆的一个充要条件，当 <span class="arithmatex">\(A\)</span> 可逆时，求 <span class="arithmatex">\(A^{-1}\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
+</details>
 <p>① 求 <span class="arithmatex">\(|A|=ad-bc\)</span>。<span class="arithmatex">\(A\)</span> 可逆 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(ad\neq bc\)</span></p>
 <p>② 求 <span class="arithmatex">\(A^*=\begin{pmatrix}A_{11}&amp;A_{21}\\A_{12}&amp;A_{22}\end{pmatrix}=\begin{pmatrix}d&amp;-b\\-c&amp;a\end{pmatrix}\)</span></p>
-<details class="tip" open="open">
-<summary>Tip</summary>
-<p>二阶矩阵 <span class="arithmatex">\(A\to A^*\)</span>：主对调，副变号</p>
-</details>
+<p>???+ tip
+      二阶矩阵 <span class="arithmatex">\(A\to A^*\)</span>：主对调，副变号</p>
 <p>③ 则 <span class="arithmatex">\(A^{-1}=\dfrac{A^*}{|A|}=\dfrac{1}{ad-bc}\begin{pmatrix}d&amp;-b\\-c&amp;a\end{pmatrix}\)</span></p>
-</details>
 </details>
 </li>
 </ul>
@@ -1457,7 +1455,7 @@ D. <span class="arithmatex">\(B+E\)</span> 为可逆矩阵</p>
 </li>
 <li>
 <p><span class="arithmatex">\(|A+B|\neq |A|+|B|\)</span></p>
-<p>$(A+B)<sup>T=A</sup>T+B^T</p>
+<p><span class="arithmatex">\((A+B)^T=A^T+B^T\)</span></p>
 <p><span class="arithmatex">\((A+B)^{-1}\neq A^{-1}+B^{-1}\)</span></p>
 <p><span class="arithmatex">\((A+B)^*\neq A^*+B^*\)</span></p>
 </li>
