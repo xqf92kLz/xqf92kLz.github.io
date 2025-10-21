@@ -1337,7 +1337,7 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-21T03:04:55.137049+00:00'>2025-10-21</time></span><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-21T03:04:55.137049+00:00'>2025-10-21</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-21T03:16:42.216914+00:00'>2025-10-21</time></span><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-21T03:16:42.216914+00:00'>2025-10-21</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1467,14 +1467,14 @@
 <p>设 <span class="arithmatex">\(x_n=(1+\dfrac 1{n^2})(1+\dfrac{2}{n^2})\cdots(1+\dfrac n {n^2})\)</span>，求 <span class="arithmatex">\(\lim\limits_{n\to \infty}x_n\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
+</details>
 <ul>
 <li><strong>法 1：</strong>等式两边同时取对数，<span class="arithmatex">\(\ln x_n=\sum_{i=1}^n \ln(1+\dfrac i {n^2})\)</span>。</li>
 </ul>
-</details>
 <p>根据 <span class="arithmatex">\(\dfrac x {1+x}&lt;\ln(1+x)&lt;x\,(x&gt;0)\)</span>，有 <span class="arithmatex">\(\sum_{i=1}^n \dfrac{\frac i {n^2}}{1+\frac{i}{n^2}}&lt;\sum_{i=1}^n \ln(1+\dfrac i {n^2})&lt;\sum_{i=1}^n\dfrac i {n^2}\)</span></p>
 <p><span class="arithmatex">\(\sum_{i=1}^n\dfrac i {n^2}=\dfrac{\frac 1 2 n(n+1)}{n^2}\to \dfrac 1 2\,(n\to \infty)\)</span></p>
 <p><span class="arithmatex">\(\sum_{i=1}^n \dfrac{\frac i {n^2}}{1+\frac{i}{n^2}}=\sum_{i=1}^n \dfrac i {n^2+i}&gt;\sum_{i=1}^n \dfrac i {n^2+n}=\dfrac{\frac 1 2 n(n+1)}{n^2+n}\to \dfrac 1 2\,(n\to \infty)\)</span>【二次放缩】</p>
-<div class="highlight"><pre><span></span><code>  由夹逼定理，$\lim\limits_{n\to \infty}\ln x_n=\dfrac 1 2$。则 $\lim\limits_{n\to \infty}x_n=e^{\frac 1 2}$。
+<div class="highlight"><pre><span></span><code>      由夹逼定理，$\lim\limits_{n\to \infty}\ln x_n=\dfrac 1 2$。则 $\lim\limits_{n\to \infty}x_n=e^{\frac 1 2}$。
 
 - **法 2：**
 
@@ -1503,73 +1503,68 @@
 <li>
 <p>数列与子数列收敛性的关系</p>
 <div class="highlight"><pre><span></span><code>子数列/子列：原数列按顺序选出无穷多项组成的数列。
+</code></pre></div>
+<p>数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\{a_n\}\)</span> 的任一子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span> 都收敛且极限相等。</p>
+<p>??? note "证明"</p>
+<div class="highlight"><pre><span></span><code>$\Rightarrow$：$\forall\varepsilon&gt;0$，$\exists N$，当 $n&gt;N$ 时，有 $|a_n-a|&lt;\varepsilon$。对于子列 $\{a_{n_k}\}$，取 $K=N$，当 $k&gt;K$ 时，有 $n_k\geq k&gt;L=N$，有 $|a_{n_k}-a|&lt;\varepsilon$。所以 $\lim\limits_{k\to\infty}a_{n_k}=a$。
+</code></pre></div>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span>：由于 <span class="arithmatex">\(\{a_n\}\)</span> 本身就是 <span class="arithmatex">\(\{a_n\}\)</span> 的一个子列，故 <span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
+<p>数列 <span class="arithmatex">\(\{a_n\}\)</span> 发散 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\{a_n\}\)</span> 中有两个子列极限存在但不相等，或有一个子列极限不存在。</p>
+<p>???+ info "拓展"</p>
+<div class="highlight"><pre><span></span><code>数列 $\{a_n\}$ 收敛 $\Leftrightarrow$ $\{a_n\}$ 的任何一个非平凡子数列均收敛。
 
-数列 $\{a_n\}$ 收敛 $\Leftrightarrow$ $\{a_n\}$ 的任一子列 $\{a_{n_k}\}$ 都收敛且极限相等。
+（$\{a_n\}$ 的非平凡子数列：$\{a_n\}$ 去掉无穷多项后得到的数列。平凡子数列：$\{a_n\}$ 去掉有限项后得到的数列）
 
 ??? note &quot;证明&quot;
 
-    $\Rightarrow$：$\forall\varepsilon&gt;0$，$\exists N$，当 $n&gt;N$ 时，有 $|a_n-a|&lt;\varepsilon$。对于子列 $\{a_{n_k}\}$，取 $K=N$，当 $k&gt;K$ 时，有 $n_k\geq k&gt;L=N$，有 $|a_{n_k}-a|&lt;\varepsilon$。所以 $\lim\limits_{k\to\infty}a_{n_k}=a$。
+    $\Rightarrow$：易证，取 $K=N$。
 
-$\Leftrightarrow$：由于 $\{a_n\}$ 本身就是 $\{a_n\}$ 的一个子列，故 $\{a_n\}$ 收敛。
+    $\Leftrightarrow$：设 $\{a_{2n-1}\},\{a_{2n}\},\{a_{3n}\}$ 极限分别为 $A,B,C$。由于 $\{a_{6n-3}\}$ 收敛，且为 $\{a_{2n-1}\},\{a_{3n}\}$ 的子列，所以 $A=C$。由于 $\{a_{6n}\}$ 收敛，且为 $\{a_{2n}\},\{a_{3n}\}$ 的子列，所以 $B=C$。故 $A=B$，即 $\lim\limits_{n\to \infty}a_{2n-1}=\lim\limits_{n\to \infty}a_{2n}=A$。从而，$\{a_n\}$ 收敛，且 $\lim\limits_{n\to \infty}a_n=A$。
 
-数列 $\{a_n\}$ 发散 $\Leftrightarrow$ $\{a_n\}$ 中有两个子列极限存在但不相等，或有一个子列极限不存在。
+任何数列都存在单调子列。
 
-???+ info &quot;拓展&quot;
+??? note &quot;证明&quot;
 
-    数列 $\{a_n\}$ 收敛 $\Leftrightarrow$ $\{a_n\}$ 的任何一个非平凡子数列均收敛。
+    ???+ abstract
+        若所有后缀都有最大项，只要每次跳到当前后缀的最大项就行了，得到单调递减子列。
 
-    （$\{a_n\}$ 的非平凡子数列：$\{a_n\}$ 去掉无穷多项后得到的数列。平凡子数列：$\{a_n\}$ 去掉有限项后得到的数列）
+        若存在某个后缀没有最大项，那么该后缀中，任意一项之后都存在比它大的项，只要每次跳到后面更大的就行了。得到严格单调递增的子列。
 
-    ??? note &quot;证明&quot;
+    - 若 $\forall k\in\mathbb N^*$，$\{a_{k+n}\}$ 存在最大项：
 
-        $\Rightarrow$：易证，取 $K=N$。
+        设 $\{a_{1+n}\}$ 的最大项为 $a_{n_1}$，$\{a_{n_1+n}\}$ 的最大项为 $a_{n_2}$，以此类推。显然 $n_1&lt;n_2&lt;\cdots$，$a_{n_1}\geq a_{n_2}\geq \cdots$，得到单调递减的子列 $\{a_{n_k}\}$。
 
-        $\Leftrightarrow$：设 $\{a_{2n-1}\},\{a_{2n}\},\{a_{3n}\}$ 极限分别为 $A,B,C$。由于 $\{a_{6n-3}\}$ 收敛，且为 $\{a_{2n-1}\},\{a_{3n}\}$ 的子列，所以 $A=C$。由于 $\{a_{6n}\}$ 收敛，且为 $\{a_{2n}\},\{a_{3n}\}$ 的子列，所以 $B=C$。故 $A=B$，即 $\lim\limits_{n\to \infty}a_{2n-1}=\lim\limits_{n\to \infty}a_{2n}=A$。从而，$\{a_n\}$ 收敛，且 $\lim\limits_{n\to \infty}a_n=A$。
+    - 若至少存在某个 $k\in\mathbb N^*$，$\{a_{k+n}\}$ 没有最大项。
+        取 $n_1=k+1$，由于 $\{a_{k+n}\}$ 没有最大项，故存在 $n_2&gt;n_1$ 满足 $a_{n_2}&gt;a_{n_1}$。同理，存在 $n_3&gt;n_2$ 满足 $a_{n_3}&gt;a_{n_2}$。以此类推，得到 $a_{n_1}&lt;a_{n_2}&lt;\cdots&lt;a_{n_k}&lt;\cdots$，得到严格单调递增的子列 $\{a_{n_k}\}$。
 
-    任何数列都存在单调子列。
+（Weierstrass 致密性定理）有界数列一定存在收敛子列。
 
-    ??? note &quot;证明&quot;
+??? note &quot;证明&quot;
 
-        ???+ abstract
-            若所有后缀都有最大项，只要每次跳到当前后缀的最大项就行了，得到单调递减子列。
+    数列 $\{a_n\}$ 存在单调递增或递减的子列 $\{a_{n_k}\}$，又数列 $\{a_n\}$ 有界，从而子列 $\{a_{n_k}\}$ 单调且有界。根据单调收敛准则，子列 $\{a_{n_k}\}$ 收敛。
 
-            若存在某个后缀没有最大项，那么该后缀中，任意一项之后都存在比它大的项，只要每次跳到后面更大的就行了。得到严格单调递增的子列。
+发散的有界数列必存在两个收敛子列，且其极限不等。
 
-        - 若 $\forall k\in\mathbb N^*$，$\{a_{k+n}\}$ 存在最大项：
+??? note &quot;证明&quot;
 
-            设 $\{a_{1+n}\}$ 的最大项为 $a_{n_1}$，$\{a_{n_1+n}\}$ 的最大项为 $a_{n_2}$，以此类推。显然 $n_1&lt;n_2&lt;\cdots$，$a_{n_1}\geq a_{n_2}\geq \cdots$，得到单调递减的子列 $\{a_{n_k}\}$。
+    ???+ abstract
+          先利用致密性定理找到第一个收敛子列【利用有界】，设其极限为 $A$。那么 $\exists \varepsilon_0$，使得 $(A-\varepsilon_0,A+\varepsilon_0)$ 外只有第一个收敛子列的有限项【因为第一个收敛子列收敛到 $A$】，剩余 $\{a_n\}$ 的无限项【因为 $\{a_n\}$ 不收敛到 $A$，是发散的】。
 
-        - 若至少存在某个 $k\in\mathbb N^*$，$\{a_{k+n}\}$ 没有最大项。
-            取 $n_1=k+1$，由于 $\{a_{k+n}\}$ 没有最大项，故存在 $n_2&gt;n_1$ 满足 $a_{n_2}&gt;a_{n_1}$。同理，存在 $n_3&gt;n_2$ 满足 $a_{n_3}&gt;a_{n_2}$。以此类推，得到 $a_{n_1}&lt;a_{n_2}&lt;\cdots&lt;a_{n_k}&lt;\cdots$，得到严格单调递增的子列 $\{a_{n_k}\}$。
+          在 $(A-\varepsilon_0,A+\varepsilon_0)$ 外，去掉第一个收敛子列后，再利用致密性定理找到第二个收敛子列，设其极限为 $B$。$B\notin(A-\varepsilon_0,A+\varepsilon_0)$。
 
-    （Weierstrass 致密性定理）有界数列一定存在收敛子列。
+    由于 $\{a_n\}$ 有界，根据致密性定理，存在一个收敛子列 $\{a_{n_k}\}$，设 $\lim\limits_{k\to \infty}a_{n_k}=A$。
 
-    ??? note &quot;证明&quot;
+    由于 $\{a_n\}$ 发散，它不收敛于 $A$，所以 $\exists \varepsilon_0&gt;0$，使得 $\forall N$，$\exists n&gt;N$使得 $|a_n-A|\geq \varepsilon$。这意味着在 $(A-\varepsilon_0,A+\varepsilon_0)$ 外，有 $\{a_n\}$ 的无限多项。
 
-        数列 $\{a_n\}$ 存在单调递增或递减的子列 $\{a_{n_k}\}$，又数列 $\{a_n\}$ 有界，从而子列 $\{a_{n_k}\}$ 单调且有界。根据单调收敛准则，子列 $\{a_{n_k}\}$ 收敛。
+    由于子列 $\{a_n\}$ 收敛于 $A$，则对于上述 $\varepsilon_0$，$\exists K$，当 $k&gt;K$ 时，有 $|a_{n_k}-A|&lt;\varepsilon$。故在 $(A-\varepsilon_0,A+\varepsilon_0)$ 外，子列 $\{a_{n_k}\}$ 只有有限项（即那些 $k\leq K$ 的项）。
 
-    发散的有界数列必存在两个收敛子列，且其极限不等。
+    于是，在 $(A-\varepsilon_0,A+\varepsilon_0)$ 外，除去子列 $\{a_{n_k}\}$ 的有限项，仍存在 $\{a_n\}$ 的无限多项，记为 $S=\{a_n\mid |a_n-A|\geq \varepsilon_0\}$。
 
-    ??? note &quot;证明&quot;
+    $S$ 是无限集，且由于 $\{a_n\}$ 有界，$S$ 也有界。
 
-        ???+ abstract
-              先利用致密性定理找到第一个收敛子列【利用有界】，设其极限为 $A$。那么 $\exists \varepsilon_0$，使得 $(A-\varepsilon_0,A+\varepsilon_0)$ 外只有第一个收敛子列的有限项【因为第一个收敛子列收敛到 $A$】，剩余 $\{a_n\}$ 的无限项【因为 $\{a_n\}$ 不收敛到 $A$，是发散的】。
+    对 $S$ 应用致密性定理，存在一个收敛子列 $\{a_{m_k}\}$，设 $\lim\limits_{k\to \infty}a_{m_k}=B$。由于 $\forall a_{m_k}\in S$，有 $|a_{m_k}-A|\geq \varepsilon$，则 $|B-A|\geq \varepsilon_0&gt;0$，因此 $B\neq A$。
 
-              在 $(A-\varepsilon_0,A+\varepsilon_0)$ 外，去掉第一个收敛子列后，再利用致密性定理找到第二个收敛子列，设其极限为 $B$。$B\notin(A-\varepsilon_0,A+\varepsilon_0)$。
-
-        由于 $\{a_n\}$ 有界，根据致密性定理，存在一个收敛子列 $\{a_{n_k}\}$，设 $\lim\limits_{k\to \infty}a_{n_k}=A$。
-
-        由于 $\{a_n\}$ 发散，它不收敛于 $A$，所以 $\exists \varepsilon_0&gt;0$，使得 $\forall N$，$\exists n&gt;N$使得 $|a_n-A|\geq \varepsilon$。这意味着在 $(A-\varepsilon_0,A+\varepsilon_0)$ 外，有 $\{a_n\}$ 的无限多项。
-
-        由于子列 $\{a_n\}$ 收敛于 $A$，则对于上述 $\varepsilon_0$，$\exists K$，当 $k&gt;K$ 时，有 $|a_{n_k}-A|&lt;\varepsilon$。故在 $(A-\varepsilon_0,A+\varepsilon_0)$ 外，子列 $\{a_{n_k}\}$ 只有有限项（即那些 $k\leq K$ 的项）。
-
-        于是，在 $(A-\varepsilon_0,A+\varepsilon_0)$ 外，除去子列 $\{a_{n_k}\}$ 的有限项，仍存在 $\{a_n\}$ 的无限多项，记为 $S=\{a_n\mid |a_n-A|\geq \varepsilon_0\}$。
-
-        $S$ 是无限集，且由于 $\{a_n\}$ 有界，$S$ 也有界。
-
-        对 $S$ 应用致密性定理，存在一个收敛子列 $\{a_{m_k}\}$，设 $\lim\limits_{k\to \infty}a_{m_k}=B$。由于 $\forall a_{m_k}\in S$，有 $|a_{m_k}-A|\geq \varepsilon$，则 $|B-A|\geq \varepsilon_0&gt;0$，因此 $B\neq A$。
-
-        这样，就得到了两个收敛子列 $\{a_{n_k}\}$ 和 $\{a_{m_k}\}$，分别收敛于 $A$ 和 $B$，且 $A\neq B$。
+    这样，就得到了两个收敛子列 $\{a_{n_k}\}$ 和 $\{a_{m_k}\}$，分别收敛于 $A$ 和 $B$，且 $A\neq B$。
 </code></pre></div>
 <ul>
 <li><strong>单调有界定理：</strong>单调递增有上界的数列必收敛；单调递减有下界的数列必收敛。</li>
@@ -1581,8 +1576,8 @@ $\Leftrightarrow$：由于 $\{a_n\}$ 本身就是 $\{a_n\}$ 的一个子列，�
 由确界原理知，必有上确界，设为 $a$，则 $a_n\leq a$。$\forall \varepsilon&gt;0$，$\exists N$ 使得 $a_N&gt;a-\varepsilon$。
 </code></pre></div>
 <p>由于 <span class="arithmatex">\(\{a_n\}\)</span> 递增，故当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(a-\varepsilon&lt;a_N\leq a_n\leq a&lt;a+\varepsilon\)</span>，即 <span class="arithmatex">\(|a_n-a|&lt;\varepsilon\)</span>。故 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=a\)</span>。</p>
-<p>由于改变数列的有限项不影响数列的敛散性和极限，所以数列从某一项开始单调有界结论依然成立。</p>
 </details>
+<p>由于改变数列的有限项不影响数列的敛散性和极限，所以数列从某一项开始单调有界结论依然成立。</p>
 <ul>
 <li>
 <p>魏尔斯特拉斯（Weierstrass）定理：有界数列必有收敛的子列。</p>
@@ -1720,7 +1715,7 @@ a_{2^n}&amp;=1+\frac 1 2+(\frac 1 3+\frac 1 4)+\cdots+(\frac{1}{2^{n-1}+1}+\frac
 $$
 |a_{n+1}-3|=|\sqrt{6+a_n}-3|=\frac{|a_n-3|}{\sqrt{6+a_n}+3}\leq \frac 1 3|a_n-3|\leq \cdots\leq \frac{1}{3^n}|a_1-3|
 $$
-因为 <span class="arithmatex">\(|a_1-3|\)</span> 是一个常数，故 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{1}{3^n}|a_1-3|=0\)</span>。由夹逼定理知 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=3\)</span>。</p>
+因为 <span class="arithmatex">\(|a_1-3|\)</span> 是一个常数，故 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{1}{3^n}|a_1-3|=0\)</span>。由夹逼定理知 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=3\)</span>。</p>
 </li>
 </ul>
 </details>
@@ -1729,7 +1724,7 @@ $$
 <summary>解答</summary>
 <details class="abstract" open="open">
 <summary>Abstract</summary>
-<p>由于该数列的递推函数 <span class="arithmatex">\(f(x)=\sqrt{6-x}\)</span> 单调递减，容易得到 <span class="arithmatex">\(\{a_{2n-1}\}\)</span> 单调递减，欧数列 <span class="arithmatex">\(\{a_{2n}\}\)</span> 单调递增。利用单调收敛准则会比较麻烦。</p>
+<p>由于该数列的递推函数 <span class="arithmatex">\(f(x)=\sqrt{6-x}\)</span> 单调递减，容易得到 <span class="arithmatex">\(\{a_{2n-1}\}\)</span> 单调递减，<span class="arithmatex">\(\{a_{2n}\}\)</span> 单调递增。利用单调收敛准则会比较麻烦。</p>
 </details>
 <ul>
 <li>
@@ -1777,7 +1772,7 @@ $$
 <div class="arithmatex">\[
 0&lt;|a_{n+1}-4|=\frac{|a_n-4|}{a_n}&lt;\frac 1 3|a_n-4|&lt;\frac{1}{3^2}|a_{n-1}-4|&lt;\cdots&lt;\frac{1}{3^n}|a_1-4|
 \]</div>
-<p>因为 <span class="arithmatex">\(|a_1-4|\)</span> 是一个常数，故 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{1}{3^n}|a_1-4|=0\)</span>。由夹逼定理知 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=4\)</span>。</p>
+<p>因为 <span class="arithmatex">\(|a_1-4|\)</span> 是一个常数，故 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{1}{3^n}|a_1-4|=0\)</span>。由夹逼定理知 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=4\)</span>。</p>
 </li>
 </ul>
 </details>
@@ -1785,7 +1780,7 @@ $$
 <details class="note">
 <summary>解答</summary>
 <p>记 <span class="arithmatex">\(a_n=na^n\)</span>。</p>
-<p>当 <span class="arithmatex">\(a=0\)</span> 时，<span class="arithmatex">\(\lim\limits_{mn\to \infty}na^n=0\)</span>。</p>
+<p>当 <span class="arithmatex">\(a=0\)</span> 时，<span class="arithmatex">\(\lim\limits_{n\to \infty}na^n=0\)</span>。</p>
 <p>当 <span class="arithmatex">\(a\neq 0\)</span> 时，<span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{|a_{n+1}|}{|a_n|}=\lim\limits_{n\to \infty}|\dfrac{(n+1)a^{n+1}}{na^n}|=|a|\)</span>，又 <span class="arithmatex">\(0&lt;|a|&lt;1\)</span>，所以 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=0\)</span>，即 <span class="arithmatex">\(\lim\limits_{n\to \infty}na^n=0\)</span>。</p>
 </details>
 </details>
@@ -1795,7 +1790,7 @@ $$
 <details class="note">
 <summary>证明</summary>
 <p>当 <span class="arithmatex">\(n&gt;n_0\)</span> 时，有 <span class="arithmatex">\(|a_{n+1}-a_n|\leq r|a_n-a_{n-1}|\leq \cdots\leq r^{n-n_0}|a_{n_0+1}-a_{n_0}|\)</span>。</p>
-<p>对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，<span class="arithmatex">\(\frac{r^{n-n_0}}{1-r}|a_{n_0+1}-a_{n_0}|&lt;\varepsilon\)</span>。</p>
+<p>对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，<span class="arithmatex">\(\dfrac{r^{n-n_0}}{1-r}|a_{n_0+1}-a_{n_0}|&lt;\varepsilon\)</span>。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 |a_{n+p+1}-a_n|&amp;\leq |a_{n+p+1}-a_{n+p}|+|a_{n+p}-a_{n+p-1}|+\cdots+|a_{n+1}-a_n|\\
@@ -1816,7 +1811,7 @@ $$
 </li>
 <li>
 <p>Stolz 定理 2：若 <span class="arithmatex">\(\{b_n\}\)</span>（从某一项开始）严格递增且 <span class="arithmatex">\(\lim\limits_{n\to \infty}b_n=+\infty\)</span>，则当 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{a_n-a_{n-1}}{b_n-b_{n-1}}\)</span> 存在或为 <span class="arithmatex">\(\pm \infty\)</span> 时，有 <span class="arithmatex">\(\lim\limits_{n\to \infty}\frac{a_n}{b_n}=\lim\limits_{n\to \infty}\frac{a_n-a_{n-1}}{b_n-b_{n-1}}\)</span>。</p>
-<p>几何意义：把 <span class="arithmatex">\((b_n,a_n)\)</span> 看作平面上的点 <span class="arithmatex">\(M_n\)</span>，定义意义是，假设 <span class="arithmatex">\(M_n\)</span> 的横坐标 <span class="arithmatex">\(\to +\infty\)</span>，那么当 <span class="arithmatex">\(\vec{M_nM_{n+1}}\)</span> 的斜率以 <span class="arithmatex">\(a\)</span> 为极限时，则 <span class="arithmatex">\(\vec{OM_n}\)</span> 的斜率也以 <span class="arithmatex">\(a\)</span> 为极限。</p>
+<p>几何意义：把 <span class="arithmatex">\((b_n,a_n)\)</span> 看作平面上的点 <span class="arithmatex">\(M_n\)</span>，定理意义是，假设 <span class="arithmatex">\(M_n\)</span> 的横坐标 <span class="arithmatex">\(\to +\infty\)</span>，那么当 <span class="arithmatex">\(\vec{M_nM_{n+1}}\)</span> 的斜率以 <span class="arithmatex">\(a\)</span> 为极限时，则 <span class="arithmatex">\(\vec{OM_n}\)</span> 的斜率也以 <span class="arithmatex">\(a\)</span> 为极限。</p>
 <details class="example">
 <summary>例题</summary>
 <p>计算 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{1+\sqrt 2+\sqrt[3]3+\cdots+\sqrt[n]{n}}n\)</span>。</p>
