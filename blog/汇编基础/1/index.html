@@ -767,7 +767,7 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      有符号数与无符号数
+      数据的表示与运算
     </span>
   </a>
   
@@ -776,7 +776,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      运算
+      分支与循环
     </span>
   </a>
   
@@ -785,34 +785,16 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      条件
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      循环
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      输出
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
       函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int21" class="md-nav__link">
+    <span class="md-ellipsis">
+      int21 中断
     </span>
   </a>
   
@@ -1070,7 +1052,7 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      有符号数与无符号数
+      数据的表示与运算
     </span>
   </a>
   
@@ -1079,7 +1061,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      运算
+      分支与循环
     </span>
   </a>
   
@@ -1088,34 +1070,16 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      条件
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      循环
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      输出
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
       函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int21" class="md-nav__link">
+    <span class="md-ellipsis">
+      int21 中断
     </span>
   </a>
   
@@ -1139,11 +1103,32 @@
 
   <h1>汇编入门</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-21T04:25:08.567692+00:00'>2025-10-21</time></span><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-21T04:25:08.567692+00:00'>2025-10-21</time></span></div></div>
-<h3 id="_1">有符号数与无符号数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-21T12:24:54.697223+00:00'>2025-10-21</time></span><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-21T12:24:54.697223+00:00'>2025-10-21</time></span></div></div>
+<p>模板：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">.386</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nl">main:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+</code></pre></div>
+<h3 id="_1">数据的表示与运算<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p><strong>有符号数：</strong>具有符号位，用于表示正数和负数。在计算机中通常采用补码（two's complement）形式存储。</p>
+<p>数据的表示</p>
+<ul>
+<li>
+<p>有符号数与无符号数</p>
+<ul>
+<li>
+<p>有符号数：具有符号位，用于表示正数和负数。用补码存储。</p>
+<p>表示范围：<span class="arithmatex">\([-2^{n-1},2^{n-1}-1]\)</span>，其中非负数范围为 <span class="arithmatex">\([0,2^{n-1}-1]\)</span>，负数范围为 <span class="arithmatex">\([-2^{n-1},-1]\)</span>。</p>
+<details class="abstract">
+<summary>补码</summary>
 <ul>
 <li>
 <p>补码定义：<span class="arithmatex">\(x_{补码}=\begin{cases}x&amp;(x\geq 0)\\2^n-|x|&amp;(x&lt;0)\end{cases}\)</span></p>
@@ -1168,76 +1153,39 @@
 </li>
 <li>
 <p>由补码求真值：<span class="arithmatex">\(x=\begin{cases}x_{补码}&amp;(0\leq x_{补码}&lt;2^{n-1})\\x_{补码}-2^n&amp;(2^{n-1}\leq x_{补码}&lt;2^n)\end{cases}\)</span></p>
-<p><span class="arithmatex">\(n\)</span> 位补码的表示范围：<span class="arithmatex">\([-2^{n-1},2^{n-1}-1]\)</span>，其中非负数范围为 <span class="arithmatex">\([0,2^{n-1}-1]\)</span>，负数范围为 <span class="arithmatex">\([-2^{n-1},-1]\)</span>。</p>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p>无符号数：无符号位，均为数值位。</p>
+<p>表示范围：<span class="arithmatex">\([0,2^n-1]\)</span>。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>无符号数：</strong>无符号位，均为数值位。表示范围：<span class="arithmatex">\([0,2^n-1]\)</span>。</p>
+<p>十六进制常数：后缀 <code>h</code> 或 <code>H</code>，且若十六进制常数恰好以字母开头，需要添加 <code>0</code> 前缀（如 <code>0FFFFh</code> 相当于 C 语言的 <code>0xFFFF</code>）。</p>
+<p>二进制常数：后缀 <code>B</code>。</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">              </span><span class="c1">; (1)十六进制常数末尾要添加h或H后缀</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">     </span><span class="c1">; (2)若十六进制常数恰好以字母开头, 则需要添加0前缀</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">FFFFh</span><span class="c1">; 这里0FFFFh是汇编语言的十六进制常数，相当于C语言的0xFFFF（并不是说高位为0）</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">jb</span><span class="w"> </span><span class="no">done</span><span class="w">       </span><span class="c1">; jb表示jump if below, 是指非符号数的小于则跳</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">              </span><span class="c1">; 这里会跳转, 因为 1 &lt; 65535</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">              </span><span class="c1">; 非符号数的大于则跳指令为ja，意为jump if above</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="err">㈣</span><span class="w"> </span><span class="err">在汇编语言中如何对两个符号数(用补码表示的正、负数)做比较并跳转？</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">              </span><span class="c1">; (1)十六进制常数末尾要添加h或H后缀</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">     </span><span class="c1">; (2)若十六进制常数恰好以字母开头, 则需要添加0前缀</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">FFFFh</span><span class="c1">; 这里0FFFFh是汇编语言的十六进制常数，</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">              </span><span class="c1">; 相当于C语言的0xFFFF</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nf">jl</span><span class="w"> </span><span class="no">done</span><span class="w">       </span><span class="c1">; jl表示jump if less, 是指符号数的小于则跳</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">              </span><span class="c1">; 这里不会跳转, 因为 1 &gt; -1</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">              </span><span class="c1">; 符号数的大于跳转指令为jg，意为jump if greater</span>
-</code></pre></div>
-<h3 id="_2">运算<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p><strong>算术运算：</strong></p>
+</li>
+<li>
+<p>运算</p>
 <ul>
 <li>
-<p><code>+</code>：<code>add</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nf">add</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span><span class="c1">; ax=ax+bx=3+2=5</span>
-</code></pre></div>
+<p>算术运算：</p>
+<ul>
+<li>
+<p><code>+</code>：<code>add ax,bx</code> 表示 <code>ax+=bx</code></p>
 </li>
 <li>
-<p><code>-</code>: <code>sub</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nf">sub</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span><span class="c1">; ax=ax-bx=3-2=1</span>
-</code></pre></div>
+<p><code>-</code>：<code>sub ax,bx</code></p>
 </li>
 <li>
-<p><code>*</code>：<code>imul</code>（有符号），<code>mul</code>（无符号）</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nf">imul</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span><span class="c1">; ax=ax*bx=3*2=6</span>
-</code></pre></div>
+<p><code>*</code>：<code>imul ax,bx</code>（有符号），<code>mul</code>（无符号）</p>
 </li>
 <li>
 <p><code>/</code>：<code>idiv</code>（有符号），<code>div</code>（无符号）</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="c1">; 相当于mov dx, 0FFFFh</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">-6</span><span class="c1">; 相当于mov ax, 0FFFAh</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">          </span><span class="c1">; dx与ax组合起来就是0FFFFFFFAh, 它就是32位的-6  </span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="c1">; 当除数为16位的寄存器或变量时，被除数一定是=dx（高 16 位）:ax（低 16 位）</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nf">idiv</span><span class="w"> </span><span class="no">bx</span><span class="w">   </span><span class="c1">; ax=商=-3=0FFFDh, dx=余数=0=0000h</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">;计算100/16的商和余数</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nl">main:</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="c1">; dx和ax合起来表示32位的100</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">   </span><span class="nf">div</span><span class="w"> </span><span class="no">bx</span><span class="w">     </span><span class="c1">; ax=商, dx=余数</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nl">done:</span><span class="w">   </span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -1274,360 +1222,82 @@
 </tr>
 </tbody>
 </table>
+<details class="abstract">
+<summary>示例</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="c1">; 相当于mov dx, 0FFFFh</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">-6</span><span class="c1">; 相当于mov ax, 0FFFAh</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">          </span><span class="c1">; dx与ax组合起来就是0FFFFFFFAh, 它就是32位的-6  </span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="c1">; 当除数为16位的寄存器或变量时，被除数一定是=dx（高 16 位）:ax（低 16 位）</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nf">idiv</span><span class="w"> </span><span class="no">bx</span><span class="w">   </span><span class="c1">; ax=商=-3=0FFFDh, dx=余数=0=0000h</span>
+</code></pre></div>
+</details>
 </li>
 </ul>
-<p><strong>关系运算：</strong></p>
+</li>
+<li>
+<p>关系运算：</p>
 <ul>
 <li><code>==</code>：<code>je</code></li>
 <li><code>!=</code>：<code>jne</code></li>
 <li><code>&gt;</code>：有符号数 <code>jg</code>，无符号数 <code>ja</code></li>
-<li>
-<p><code>&lt;</code>：有符号数 <code>jl</code>，无符号数 <code>jb</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="c1">; 相当于mov ax, 0FFFFh</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nf">jl</span><span class="w"> </span><span class="no">ax_is_less_than_bx</span><span class="c1">; jl会跳转（因为-1&lt;2）, 若改成jb则不会跳转（因为 65535&gt;2）</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nl">ax_is_less_than_bx:</span>
-</code></pre></div>
-</li>
-<li>
-<p><code>&gt;=</code>：有符号数 <code>jge</code>，无符号数 <code>jae</code></p>
-</li>
+<li><code>&lt;</code>：有符号数 <code>jl</code>，无符号数 <code>jb</code></li>
+<li><code>&gt;=</code>：有符号数 <code>jge</code>，无符号数 <code>jae</code></li>
 <li><code>&lt;=</code>：有符号数 <code>jle</code>，无符号数 <code>jbe</code></li>
 </ul>
+</li>
+<li>
 <p>逻辑运算：</p>
 <ul>
-<li><code>&amp;&amp;</code></li>
-<li><code>||</code></li>
+<li><code>&amp;&amp;</code>：用两个嵌套的 if 实现。</li>
+<li><code>||</code>：用两个并列的 if 实现。</li>
 <li><code>!</code></li>
 </ul>
-<h3 id="_3">条件<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<details class="example">
-<summary>课堂示例</summary>
+</li>
+<li>
+<p>位运算：</p>
+<ul>
+<li><code>&amp;</code>：<code>and al,bl</code></li>
+<li><code>|</code>：<code>or al,bl</code></li>
+<li><code>^</code>：<code>xor al,bl</code></li>
+<li><code>~</code>：<code>not ax</code></li>
+<li><code>&lt;&lt;</code>：<code>shl al,1</code></li>
+<li><code>&gt;&gt;</code>：<code>shr al,1</code>（无符号），<code>sar al,1</code>（有符号）</li>
+<li>循环左移 <code>rol</code>，循环右移 <code>ror</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_2">分支与循环<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>用跳转实现。</p>
 <details class="note">
-<summary>max2</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">;求ax、bx的最大值并保存到cx中</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nf">comment</span><span class="w"> </span><span class="c1">#</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nf">if</span><span class="p">(</span><span class="no">ax</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="no">bx</span><span class="p">)</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">   </span><span class="nf">cx</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">ax</span><span class="c1">;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nf">else</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">   </span><span class="nf">cx</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">bx</span><span class="c1">;</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">   </span><span class="err">16位非符号数的取值范围[0000</span><span class="nf">h</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">FFFFh</span><span class="p">]</span><span class="err">即</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">65535</span><span class="p">]</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">   </span><span class="err">16位的正符号数的取值范围[0000</span><span class="nf">h</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="no">FFFh</span><span class="p">]</span><span class="err">即</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">32767</span><span class="p">]</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">   </span><span class="err">16位的负符号数的取值范围[8000</span><span class="nf">h</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">FFFFh</span><span class="p">]</span><span class="err">即</span><span class="p">[-</span><span class="mi">32768</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">]</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1">#</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="nl">main:</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">   </span><span class="nf">ja</span><span class="w"> </span><span class="no">ax_is_bigger</span><span class="w"> </span><span class="c1">;当ax及bx的值均&lt;=7FFFh时, ja、jg均可用来表示大于则跳</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="nl">bx_is_bigger:</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">   </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="nl">ax_is_bigger:</span>
-<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="nl">done:</span><span class="w">   </span>
-<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<summary>do-while</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nl">main:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,[</span><span class="no">l1</span><span class="p">]</span><span class="w"> </span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="no">outer_loop</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">l2</span><span class="p">]</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nl">middle_loop:</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,[</span><span class="no">l3</span><span class="p">]</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="nl">inner_loop:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">            </span><span class="c1">; 循环体操作</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">            </span><span class="nf">add</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">            </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cx</span><span class="p">,[</span><span class="no">r3</span><span class="p">]</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">            </span><span class="nf">jle</span><span class="w"> </span><span class="no">inner_loop</span><span class="w">     </span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="no">add</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">r2</span><span class="p">]</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="nf">jle</span><span class="w"> </span><span class="no">middle_loop</span><span class="w"> </span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="no">add</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,[</span><span class="no">r1</span><span class="p">]</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="nf">jle</span><span class="w"> </span><span class="no">outer_loop</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
 </code></pre></div>
 </details>
-<details class="note">
-<summary>max3</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">;求ax、bx、cx的最大值并保存到dx中</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nf">comment</span><span class="w"> </span><span class="c1">#</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nf">if</span><span class="p">(</span><span class="no">ax</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="no">bx</span><span class="p">)</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">   </span><span class="nf">if</span><span class="p">(</span><span class="no">ax</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="no">cx</span><span class="p">)</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">      </span><span class="nf">dx</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">ax</span><span class="c1">;</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">   </span><span class="nf">else</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">      </span><span class="nf">dx</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">cx</span><span class="c1">;</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="nf">else</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">   </span><span class="nf">if</span><span class="p">(</span><span class="no">bx</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="no">cx</span><span class="p">)</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">      </span><span class="nf">dx</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">bx</span><span class="c1">;</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">   </span><span class="nf">else</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">      </span><span class="nf">dx</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">cx</span><span class="c1">;   </span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="c1">#</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="nl">main:</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span>
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">   </span><span class="nf">jg</span><span class="w"> </span><span class="no">ax_g_bx</span>
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="nl">bx_ge_ax:</span>
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="no">cx</span>
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">   </span><span class="nf">jg</span><span class="w"> </span><span class="no">bx_g_cx</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="nl">cx_ge_bx:</span>
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="no">cx</span>
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">   </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="nl">bx_g_cx:</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">   </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="nl">ax_g_bx:</span>
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">cx</span>
-<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="w">   </span><span class="nf">jg</span><span class="w"> </span><span class="no">ax_g_cx</span>
-<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="nl">cx_ge_ax:</span>
-<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="no">cx</span>
-<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">   </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
-<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="nl">ax_g_cx:</span>
-<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="nl">done:</span><span class="w">   </span>
-<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
-</details>
-</details>
-<h3 id="_4">循环<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<details class="example">
-<summary>课堂示例</summary>
-<details class="note">
-<summary>cmp</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">;编程计算ax=3+2+1+0</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nl">main:</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nl">again:</span><span class="w">   </span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">   </span><span class="nf">sub</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="c1">; bx = bx - 1 </span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">   </span><span class="nf">jl</span><span class="w">  </span><span class="no">done</span><span class="w">  </span><span class="c1">; 这里必须用jl(符号数的小于则跳,是jg的反义词)，</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">             </span><span class="c1">; 不能改成jb(非符号数的小于则跳,是ja的反义词)，</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">             </span><span class="c1">; 因为当bx=0-1=0FFFFh时，</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">         </span><span class="c1">; 它作为非符号数理解，其值为65535，</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">         </span><span class="c1">; 而它作为符号数理解，其值为-1，故</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">         </span><span class="c1">; 这里若改用jb done的话，则这个跳转</span>
-<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">         </span><span class="c1">; 永远不会发生，因为任何一个[0000h, 0FFFFh]</span>
-<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">         </span><span class="c1">; 范围的非符号数均不可能小于0</span>
-<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">   </span><span class="nf">jmp</span><span class="w"> </span><span class="no">again</span>
-<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="nl">done:</span>
-<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>
-<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span><span class="w"> </span>
-<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="no">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
-</details>
-<details class="note">
-<summary>cmp2</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">;编程计算ax=32766+32767+32768(忽略进位)</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nl">main:</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="no">FFEh</span><span class="c1">; ax=32766</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="nl">again:</span><span class="w">   </span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span><span class="w">   </span><span class="c1">; ①ax=0+7FFEh ②ax=7FFEh+7FFFh ②ax=7FFEh+7FFFh+8000h</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">    </span><span class="c1">; ①bx=7FFFh ②bx=8000h ③bx=8001h</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">8000</span><span class="no">h</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">   </span><span class="nf">ja</span><span class="w"> </span><span class="no">done</span><span class="w">      </span><span class="c1">; 这里必须用ja，不能用jg</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">                </span><span class="c1">; 因为cmp bx, 8000h指令中的8000h有两个</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">            </span><span class="c1">; 身份，当它被看作符号数时，其值是一个负数</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">            </span><span class="c1">; 且等于-32768，而当它被看作非符号数时，其值是</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">            </span><span class="c1">; 一个正整数，且等于32768，一旦我们改用jg done</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">                </span><span class="c1">; 来跳转，那么当bx=7FFF时，CPU会认为bx与8000h</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span><span class="c1">; 的比较是符号数的比较，即bx=32767，8000h=-32768，</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">        </span><span class="c1">; 而32767 &gt; -32768，于是jg done会跳转，从而造成</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">        </span><span class="c1">; 循环提前结束，当程序运行到done时，ax=7FFEh，</span>
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">        </span><span class="c1">; 而我们本来希望程序运行到done时，ax=7FFEh+7FFFh+8000h</span>
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">        </span><span class="c1">; =7FFDh</span>
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">   </span><span class="nf">jmp</span><span class="w"> </span><span class="no">again</span>
-<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="nl">done:</span>
-<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span><span class="w"> </span>
-<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="no">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
-</details>
-<details class="note">
-<summary>fact</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">;计算1! + 2! + 3!</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nf">comment</span><span class="w"> </span><span class="c1">#</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nf">cx</span><span class="w">   </span><span class="no">bx</span><span class="w"> </span><span class="no">dx</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nf">int</span><span class="w"> </span><span class="no">i</span><span class="err">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="no">x</span><span class="p">,</span><span class="w"> </span><span class="no">j</span><span class="p">,</span><span class="w"> </span><span class="no">sum</span><span class="err">=</span><span class="mi">0</span><span class="c1">;</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="nf">while</span><span class="p">(</span><span class="no">i</span><span class="err">&lt;=</span><span class="mi">3</span><span class="p">)</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="err">{</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">   </span><span class="nf">x</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">1</span><span class="c1">;</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">   </span><span class="nf">j</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">1</span><span class="c1">;</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">   </span><span class="nf">while</span><span class="p">(</span><span class="no">j</span><span class="err">&lt;=</span><span class="no">i</span><span class="p">)</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">   </span><span class="err">{</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">      </span><span class="nf">x</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">x</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="no">j</span><span class="c1">;</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">      </span><span class="nf">j</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">j</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">1</span><span class="c1">;</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">   </span><span class="err">}</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">   </span><span class="nf">sum</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">sum</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="no">x</span><span class="c1">;</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">   </span><span class="nf">i</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">i</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">1</span><span class="c1">;</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="err">}</span>
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="c1">#</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="nf">.386</span><span class="w">              </span><span class="c1">; .386告诉编译器后续会(1)用到386指令, </span>
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">                  </span><span class="c1">; (2)使用32位地址</span>
-<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span><span class="c1">; use16表示仍旧采用16位地址, 即取消(2)选项</span>
-<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="nl">main:</span>
-<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="c1">; sum=0</span>
-<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="c1">; i</span>
-<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="nl">again:</span><span class="w">   </span>
-<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span>
-<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="w">   </span><span class="nf">ja</span><span class="w"> </span><span class="no">done</span>
-<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="c1">; x</span>
-<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="c1">; j</span>
-<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="nl">fact_next:</span><span class="w">   </span>
-<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="no">cx</span>
-<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="w">   </span><span class="nf">ja</span><span class="w"> </span><span class="no">fact_done</span>
-<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="w">   </span><span class="nf">imul</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="no">dx</span><span class="c1">; bx=bx*dx</span>
-<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a><span class="w">   </span><span class="nf">jmp</span><span class="w"> </span><span class="no">fact_next</span>
-<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="nl">fact_done:</span><span class="w">   </span>
-<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a><span class="w">   </span><span class="nf">jmp</span><span class="w"> </span><span class="no">again</span>
-<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a><span class="nl">done:</span><span class="w">   </span>
-<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
-</details>
-</details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">comment</span><span class="w"> </span><span class="c1">#</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nf">for</span><span class="p">(</span><span class="no">int</span><span class="w"> </span><span class="no">i</span><span class="err">=</span><span class="no">l1</span><span class="c1">;i&lt;=r1;i++)</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nf">for</span><span class="p">(</span><span class="no">int</span><span class="w"> </span><span class="no">j</span><span class="err">=</span><span class="no">l2</span><span class="c1">;j&lt;=r2;j++)</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">        </span><span class="nf">for</span><span class="p">(</span><span class="no">int</span><span class="w"> </span><span class="no">k</span><span class="err">=</span><span class="no">l3</span><span class="c1">;k&lt;=r3;k++)</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">            </span><span class="err">循环体操作</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1">#</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="c1">;for 式</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="nl">main:</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,[</span><span class="no">l1</span><span class="p">]</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="nl">outer_loop:</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,[</span><span class="no">r1</span><span class="p">]</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">    </span><span class="nf">jg</span><span class="w"> </span><span class="no">exit_outer</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">l2</span><span class="p">]</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">    </span><span class="nl">middle_loop:</span>
-<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">r2</span><span class="p">]</span>
-<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">        </span><span class="nf">jg</span><span class="w"> </span><span class="no">exit_middle</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,[</span><span class="no">l3</span><span class="p">]</span>
-<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">        </span><span class="nl">inner_loop:</span>
-<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">            </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cx</span><span class="p">,[</span><span class="no">r3</span><span class="p">]</span>
-<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">            </span><span class="nf">jg</span><span class="w"> </span><span class="no">exit_inner</span>
-<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="w">            </span><span class="c1">; 循环体操作</span>
-<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">            </span><span class="nf">add</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="mi">1</span>
-<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="w">            </span><span class="nf">jmp</span><span class="w"> </span><span class="no">inner_loop</span>
-<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="w">        </span><span class="nl">exit_inner:</span>
-<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="w">        </span><span class="nf">add</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">1</span>
-<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="w">        </span><span class="nf">jmp</span><span class="w"> </span><span class="no">middle_loop</span>
-<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="w">    </span><span class="nl">exit_middle:</span>
-<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">1</span>
-<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="w">    </span><span class="nf">jmp</span><span class="w"> </span><span class="no">outer_loop</span>
-<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="nl">exit_outer:</span>
-<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
-<a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a>
-<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a><span class="c1">;do-while 式（感觉写起来更清楚）</span>
-<a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-12-40" name="__codelineno-12-40" href="#__codelineno-12-40"></a><span class="nl">main:</span>
-<a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,[</span><span class="no">l1</span><span class="p">]</span><span class="w"> </span>
-<a id="__codelineno-12-42" name="__codelineno-12-42" href="#__codelineno-12-42"></a><span class="no">outer_loop</span><span class="p">:</span>
-<a id="__codelineno-12-43" name="__codelineno-12-43" href="#__codelineno-12-43"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">l2</span><span class="p">]</span>
-<a id="__codelineno-12-44" name="__codelineno-12-44" href="#__codelineno-12-44"></a><span class="w">    </span><span class="nl">middle_loop:</span>
-<a id="__codelineno-12-45" name="__codelineno-12-45" href="#__codelineno-12-45"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,[</span><span class="no">l3</span><span class="p">]</span>
-<a id="__codelineno-12-46" name="__codelineno-12-46" href="#__codelineno-12-46"></a><span class="w">        </span><span class="nl">inner_loop:</span>
-<a id="__codelineno-12-47" name="__codelineno-12-47" href="#__codelineno-12-47"></a><span class="w">            </span><span class="c1">; 循环体操作</span>
-<a id="__codelineno-12-48" name="__codelineno-12-48" href="#__codelineno-12-48"></a><span class="w">            </span><span class="nf">add</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="mi">1</span>
-<a id="__codelineno-12-49" name="__codelineno-12-49" href="#__codelineno-12-49"></a><span class="w">            </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cx</span><span class="p">,[</span><span class="no">r3</span><span class="p">]</span>
-<a id="__codelineno-12-50" name="__codelineno-12-50" href="#__codelineno-12-50"></a><span class="w">            </span><span class="nf">jle</span><span class="w"> </span><span class="no">inner_loop</span><span class="w">     </span>
-<a id="__codelineno-12-51" name="__codelineno-12-51" href="#__codelineno-12-51"></a><span class="w">        </span><span class="no">add</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">1</span>
-<a id="__codelineno-12-52" name="__codelineno-12-52" href="#__codelineno-12-52"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">r2</span><span class="p">]</span>
-<a id="__codelineno-12-53" name="__codelineno-12-53" href="#__codelineno-12-53"></a><span class="w">        </span><span class="nf">jle</span><span class="w"> </span><span class="no">middle_loop</span><span class="w"> </span>
-<a id="__codelineno-12-54" name="__codelineno-12-54" href="#__codelineno-12-54"></a><span class="w">    </span><span class="no">add</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">1</span>
-<a id="__codelineno-12-55" name="__codelineno-12-55" href="#__codelineno-12-55"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,[</span><span class="no">r1</span><span class="p">]</span>
-<a id="__codelineno-12-56" name="__codelineno-12-56" href="#__codelineno-12-56"></a><span class="w">    </span><span class="nf">jle</span><span class="w"> </span><span class="no">outer_loop</span>
-<a id="__codelineno-12-57" name="__codelineno-12-57" href="#__codelineno-12-57"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-12-58" name="__codelineno-12-58" href="#__codelineno-12-58"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
-<h3 id="_5">输出<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nl">main:</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="c1">; ah=2表示调用int 21h函数集中的2号功能</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">              </span><span class="c1">; 同样, AH是ax的高8位, AL则是ax的低8位</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span><span class="c1">; DL=待输出的符号, DL是dx的低8位</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">              </span><span class="c1">; DH则是dx的高8位</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="c1">; 相当于调用一个函数, int表示中断(interrupt)</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
-<details class="example" open="open">
-<summary>课堂示例</summary>
-<details class="note">
-<summary>用双重循环输出3行星号, 每行5个星号</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">; 用双重循环输出3行星号, 每行5个星号</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="c1">; ***** </span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1">; *****</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1">; *****</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="nl">main:</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="c1">; 行数</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">      </span><span class="c1">;editplus中选中几行，再按ctrl+i右缩进, ctrl+shift+i左缩进</span>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">      </span><span class="c1">;缩进空格数可以通过菜单Tools-&gt;Preferences-&gt;File-&gt;Settings &amp; Syntax-&gt;asm-&gt;Tab/indent-&gt;Tab size修改</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="nl">next_row:</span><span class="w">      </span>
-<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">      </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="c1">; 每行5个*</span>
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">   </span><span class="nl">again:</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">      </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="c1">; AH的值用来规定int 21h的子功能号</span>
-<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">      </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="p">*</span><span class="err">&#39;</span><span class="c1">; DL用来表示待输出的字符</span>
-<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">      </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="w">    </span><span class="c1">; 调用DOS函数集</span>
-<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">      </span><span class="nf">sub</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">      </span><span class="nf">jnz</span><span class="w"> </span><span class="no">again</span><span class="w">  </span><span class="c1">; 若不等于0则跳到again</span>
-<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">      </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">      </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">Dh</span><span class="c1">; 回车符的ASCII码</span>
-<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="w">      </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="w">    </span><span class="c1">; putchar(&#39;\r&#39;);</span>
-<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w">      </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="w">      </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">Ah</span><span class="c1">; 换行符的ASCII码</span>
-<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="w">      </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="w">    </span><span class="c1">; putchar(&#39;\n&#39;);</span>
-<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="w">   </span><span class="nf">sub</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="w">   </span><span class="nf">jnz</span><span class="w"> </span><span class="no">next_row</span>
-<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
-</details>
-<details class="note">
-<summary>把eax中的32位整数转化成16进制格式并输出</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">;把eax中的32位整数转化成16进制格式并输出</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nf">.386</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="nl">main:</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="mi">8086</span><span class="no">BEEFh</span>
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="nl">again:</span><span class="w">   </span>
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">   </span><span class="nf">rol</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w">   </span><span class="c1">; 把eax循环左移4位, eax=086BEEF8h</span>
-<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ebx</span><span class="p">,</span><span class="w"> </span><span class="no">eax</span><span class="w"> </span><span class="c1">; 备份eax的当前值</span>
-<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">   </span><span class="nf">and</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">Fh</span><span class="w"> </span><span class="c1">; mask = 0000 0000 0000 0000 0000 0000 0000 1111</span>
-<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">                </span><span class="c1">; eax = eax &amp; 0xF</span>
-<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w">  </span>
-<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="w">   </span><span class="no">jge</span><span class="w"> </span><span class="no">is_alpha</span>
-<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="nl">is_digit:</span>
-<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">0</span><span class="err">&#39;</span><span class="w"> </span><span class="c1">; 0+&#39;0&#39;-&gt;&#39;0&#39;, 9+&#39;0&#39;-&gt;&#39;9&#39;</span>
-<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="w">   </span><span class="nf">jmp</span><span class="w"> </span><span class="no">output</span>
-<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="nl">is_alpha:</span>
-<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="w">   </span><span class="nf">sub</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span>
-<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span><span class="w"> </span><span class="c1">; 10-10+&#39;A&#39;-&gt;&#39;A&#39;, 15-10+&#39;A&#39;-&gt;&#39;F&#39;</span>
-<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="nl">output:</span><span class="w">   </span>
-<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="no">al</span>
-<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="no">ebx</span><span class="w"> </span><span class="c1">; 从备份中恢复eax的值</span>
-<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a><span class="w">   </span><span class="nf">sub</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a><span class="w">   </span><span class="nf">jnz</span><span class="w"> </span><span class="no">again</span>
-<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
-<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
-</details>
-</details>
+<h3 id="_3">函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>写在 <code>main</code> 前面，用 <code>call</code> 调用，用 <code>ret</code> 返回</p>
+<h3 id="int21">int21 中断<a class="headerlink" href="#int21" title="Permanent link">&para;</a></h3>
 <p><a href="https://blog.csdn.net/Zach_z/article/details/78576216">常见中断</a> <code>int 21h</code>：（<a href="https://www.uwouni.com/rbrown.htm">中断大全</a>）</p>
 <table>
 <thead>
@@ -1654,7 +1324,7 @@
 <tr>
 <td>02</td>
 <td>显示输出</td>
-<td>DL=输出字符</td>
+<td>DL=输出字符（\r → 0Dh，\n → 0Ah）</td>
 <td></td>
 </tr>
 <tr>
@@ -1671,67 +1341,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_6">函数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">;输出3层金字塔</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="c1">;   *    空格个数=行数-1-行号, 星号个数=行号*2+1</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c1">;  ***</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1">; *****</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="nl">output_cr:</span><span class="w">    </span><span class="c1">; 用标号来命名一个函数</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">Dh</span><span class="c1">; 回车符的ASCII码</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="w">    </span><span class="c1">; putchar(&#39;\r&#39;);</span>
-<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">Ah</span><span class="c1">; 换行符的ASCII码</span>
-<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="w">    </span><span class="c1">; putchar(&#39;\n&#39;);</span>
-<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">   </span><span class="nf">ret</span><span class="w">        </span><span class="c1">; 函数返回</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>
-<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="nl">output_space:</span><span class="w"> </span><span class="c1">; 输出bp个空格</span>
-<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">   </span><span class="nf">je</span><span class="w"> </span><span class="no">output_space_done</span>
-<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="w"> </span><span class="err">&#39;</span>
-<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">   </span><span class="nf">sub</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="w">   </span><span class="nf">jmp</span><span class="w"> </span><span class="no">output_space</span>
-<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="nl">output_space_done:</span><span class="w">   </span>
-<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">   </span><span class="nf">ret</span>
-<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a>
-<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="nl">output_star:</span><span class="w"> </span><span class="c1">; 输出bp个*</span>
-<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="p">*</span><span class="err">&#39;</span>
-<a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a><span class="w">   </span><span class="nf">sub</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a><span class="w">   </span><span class="nf">jnz</span><span class="w"> </span><span class="no">output_star</span>
-<a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a><span class="w">   </span><span class="nf">ret</span>
-<a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a>
-<a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a><span class="nl">output_a_row:</span>
-<a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a><span class="w">   </span><span class="nf">sub</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a><span class="w">   </span><span class="nf">sub</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="no">si</span><span class="c1">; bp = bx-1-si = 空格数量</span>
-<a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a><span class="w">   </span><span class="nf">call</span><span class="w"> </span><span class="no">output_space</span>
-<a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="no">si</span>
-<a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="no">bp</span>
-<a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="c1">; bp = si * 2 + 1 = 星号的个数</span>
-<a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a><span class="w">   </span><span class="nf">call</span><span class="w"> </span><span class="no">output_star</span>
-<a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a><span class="w">   </span><span class="nf">call</span><span class="w"> </span><span class="no">output_cr</span><span class="w">             </span>
-<a id="__codelineno-16-45" name="__codelineno-16-45" href="#__codelineno-16-45"></a><span class="w">   </span><span class="no">ret</span><span class="w"> </span>
-<a id="__codelineno-16-46" name="__codelineno-16-46" href="#__codelineno-16-46"></a>
-<a id="__codelineno-16-47" name="__codelineno-16-47" href="#__codelineno-16-47"></a><span class="no">main</span><span class="p">:</span>
-<a id="__codelineno-16-48" name="__codelineno-16-48" href="#__codelineno-16-48"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="c1">; 行数</span>
-<a id="__codelineno-16-49" name="__codelineno-16-49" href="#__codelineno-16-49"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="c1">; 初始行号</span>
-<a id="__codelineno-16-50" name="__codelineno-16-50" href="#__codelineno-16-50"></a><span class="nl">next_row:</span><span class="w">   </span>
-<a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a><span class="w">   </span><span class="nf">call</span><span class="w"> </span><span class="no">output_a_row</span>
-<a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-16-53" name="__codelineno-16-53" href="#__codelineno-16-53"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-16-54" name="__codelineno-16-54" href="#__codelineno-16-54"></a><span class="w">   </span><span class="nf">jl</span><span class="w"> </span><span class="no">next_row</span>
-<a id="__codelineno-16-55" name="__codelineno-16-55" href="#__codelineno-16-55"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span><span class="w"> </span><span class="c1">;\ 若在汇编程序中删除这3句话, 则编译出来的exe只能用TD调试, 不能</span>
-<a id="__codelineno-16-56" name="__codelineno-16-56" href="#__codelineno-16-56"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="c1">; \在命令行中输入程序名运行, 若强行运行，则会因为CPU执行后续内存空间中的垃圾代码而死机。</span>
-<a id="__codelineno-16-57" name="__codelineno-16-57" href="#__codelineno-16-57"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="w">     </span><span class="c1">;/ 这3句话相当于C语言中调用函数exit(0), 用于结束程序的运行。</span>
-<a id="__codelineno-16-58" name="__codelineno-16-58" href="#__codelineno-16-58"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-16-59" name="__codelineno-16-59" href="#__codelineno-16-59"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
 
 
 
