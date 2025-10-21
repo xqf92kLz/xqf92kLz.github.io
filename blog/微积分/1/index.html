@@ -1337,7 +1337,7 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-21T03:33:27.102314+00:00'>2025-10-21</time></span><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-21T03:33:27.102314+00:00'>2025-10-21</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-21T04:25:08.567692+00:00'>2025-10-21</time></span><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-21T04:25:08.567692+00:00'>2025-10-21</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2188,8 +2188,28 @@ $\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\ln n}=1$，$\dfrac{\ln n}{\ln(n+1)}&l
 <li>有界性定理</li>
 <li>最大值最小值定理：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上一定能取到最大值与最小值。
     推论：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有界。</li>
-<li>根的存在定理 / 零点定理：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(a)f(b)&lt;0\)</span>，则至少存在一点 <span class="arithmatex">\(\xi\in(a,b)\)</span>，使 <span class="arithmatex">\(f(\xi)=0\)</span>。</li>
-<li>介值定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上最大值为 <span class="arithmatex">\(M\)</span>、最小值为 <span class="arithmatex">\(m\)</span>，则 <span class="arithmatex">\(\forall \eta\in(m,M)\)</span>，都 <span class="arithmatex">\(\exists x\in[a,b]\)</span> 使得 <span class="arithmatex">\(f(x)=\eta\)</span>。</li>
+<li>
+<p>根的存在定理 / 零点定理：若 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(a)f(b)&lt;0\)</span>，则至少存在一点 <span class="arithmatex">\(\xi\in(a,b)\)</span>，使 <span class="arithmatex">\(f(\xi)=0\)</span>。</p>
+<ul>
+<li>
+<p>推论：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((a,b)\)</span> 内连续，且 <span class="arithmatex">\(\lim\limits_{x\to a+0}f(x)\cdot \lim\limits_{x\to b-0}f(x)&lt;0\)</span>，则至少存在一点 <span class="arithmatex">\(\xi\in(a,b)\)</span>，使 <span class="arithmatex">\(f(\xi)=0\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong>令 <span class="arithmatex">\(F(x)=\begin{cases}\lim\limits_{x\to a+0}f(x),&amp;x=a\\f(x),&amp;a&lt;x&lt;b\\\lim\limits_{x\to b-0}f(x),&amp;x=b\end{cases}\)</span>，对 <span class="arithmatex">\(F(x)\)</span> 应用零点定理。</p>
+</li>
+<li>
+<p><strong>法 2：</strong>不妨设 <span class="arithmatex">\(\lim\limits_{x\to a+0}f(x)&gt;0\)</span>，<span class="arithmatex">\(\lim\limits_{x\to b-0}f(x)&lt;0\)</span>。则存在 <span class="arithmatex">\(\delta_1,\delta_2&gt;0\)</span> 使 <span class="arithmatex">\(f(a+\delta_1)&gt;0\)</span>，<span class="arithmatex">\(f(b-\delta_2)&lt;0\)</span>。又 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a+\delta_1,b-\delta_2]\subset(a,b)\)</span> 上连续，于是由零点定理知至少存在一点 <span class="arithmatex">\(\xi\in(a+\delta_,b-\delta_2)\subset(a,b)\)</span>，使 <span class="arithmatex">\(f(\xi)=0\)</span>。</p>
+</li>
+</ul>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>介值定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上最大值为 <span class="arithmatex">\(M\)</span>、最小值为 <span class="arithmatex">\(m\)</span>，则 <span class="arithmatex">\(\forall \eta\in(m,M)\)</span>，都 <span class="arithmatex">\(\exists x\in[a,b]\)</span> 使得 <span class="arithmatex">\(f(x)=\eta\)</span>。</p>
+</li>
 </ul>
 </li>
 <li>
