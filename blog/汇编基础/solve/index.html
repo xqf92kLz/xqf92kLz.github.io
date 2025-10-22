@@ -1067,7 +1067,7 @@
 
   <h1>做题记录</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-21T13:17:43.993639+00:00'>2025-10-21</time></span><span data-tippy-content data-tippy-raw='2025-10-21'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-21T13:17:43.993639+00:00'>2025-10-21</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-22'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-22T02:31:57.511052+00:00'>2025-10-22</time></span><span data-tippy-content data-tippy-raw='2025-10-22'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-22T02:31:57.511052+00:00'>2025-10-22</time></span></div></div>
 <h2 id="pta">PTA 题目集<a class="headerlink" href="#pta" title="Permanent link">&para;</a></h2>
 <details class="note">
 <summary>1 输入一个大写英文字母，输出该字母至'Z'的所有字母</summary>
@@ -1114,69 +1114,412 @@
 <a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="c1">;==========请把以上代码保存到src\main.asm==============================</span>
 </code></pre></div>
 </details>
+<details class="note">
+<summary>2 把16进制字符串转化成整数</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">;本题要求:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">;以下程序的功能是从键盘输入一行长度不超过8个字符的</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">;16进制字符串并保存到数组s中，再把该字符串转化成</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">;32位整数并保存到变量result中。注意字符串s一定以</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">;00h字符结束。</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1">;例如：输入&quot;8086CaFe&quot;，则result的值=8086CAFEh。</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">;请把以下代码补充完整。</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1">;==========请把以下代码保存到src\main.asm==============================</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">;==========选中main.sh及src文件夹-&gt;右键-&gt;压缩成submit.zip提交==========</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nf">.386</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nf">data</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nf">sth</span><span class="w"> </span><span class="no">db</span><span class="w"> </span><span class="mi">10</span><span class="no">h</span><span class="w"> </span><span class="no">dup</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nf">s</span><span class="w">   </span><span class="no">db</span><span class="w"> </span><span class="mi">100</span><span class="no">h</span><span class="w"> </span><span class="no">dup</span><span class="p">(</span><span class="err">&#39;</span><span class="no">S</span><span class="err">&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nf">result</span><span class="w"> </span><span class="no">dd</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="nf">data</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span><span class="p">,</span><span class="w"> </span><span class="no">ds</span><span class="p">:</span><span class="no">data</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="nl">main:</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">data</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="w"> </span><span class="no">offset</span><span class="w"> </span><span class="no">s</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="nl">input_next:</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="c1">; AL=getchar()</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">Dh</span><span class="c1">; 判断是否为回车键</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">   </span><span class="nf">je</span><span class="w"> </span><span class="no">input_done</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="p">[</span><span class="no">si</span><span class="p">],</span><span class="w"> </span><span class="no">al</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">   </span><span class="nf">add</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">                     </span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">   </span><span class="no">jmp</span><span class="w"> </span><span class="no">input_next</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="nl">input_done:</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">si</span><span class="p">],</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="c1">;请在#1_begin和#1_end之间补充代码实现以下功能:</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="c1">;把s中包含的16进制字符串转化成32位整数并保存到</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="c1">;变量result中</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="c1">;#1_begin-------------------------------------</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="no">offset</span><span class="w"> </span><span class="no">s</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="nl">do:</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ebx</span><span class="p">,</span><span class="mi">0</span><span class="w">   </span><span class="c1">;!!!</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bl</span><span class="p">,[</span><span class="no">si</span><span class="p">]</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bl</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">    </span><span class="nf">je</span><span class="w"> </span><span class="no">done</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bl</span><span class="p">,</span><span class="err">&#39;</span><span class="mi">9</span><span class="err">&#39;</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">    </span><span class="nf">jle</span><span class="w"> </span><span class="no">is_digit</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">    </span><span class="nl">is_ch:</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bl</span><span class="p">,</span><span class="err">&#39;</span><span class="no">F</span><span class="err">&#39;</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">        </span><span class="nf">jle</span><span class="w"> </span><span class="no">is_upper</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">        </span><span class="nl">is_lower:</span>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">            </span><span class="nf">sub</span><span class="w"> </span><span class="no">bl</span><span class="p">,</span><span class="err">&#39;</span><span class="no">a</span><span class="err">&#39;</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">            </span><span class="nf">add</span><span class="w"> </span><span class="no">bl</span><span class="p">,</span><span class="mi">10</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">            </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done_ch</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">        </span><span class="nl">is_upper:</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="w">            </span><span class="nf">sub</span><span class="w"> </span><span class="no">bl</span><span class="p">,</span><span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="w">            </span><span class="nf">add</span><span class="w"> </span><span class="no">bl</span><span class="p">,</span><span class="mi">10</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="w">        </span><span class="nl">done_ch:</span>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="w">        </span><span class="nf">jmp</span><span class="w"> </span><span class="no">trans</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">    </span><span class="nl">is_digit:</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="w">        </span><span class="nf">sub</span><span class="w"> </span><span class="no">bl</span><span class="p">,</span><span class="err">&#39;</span><span class="mi">0</span><span class="err">&#39;</span>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">    </span><span class="nl">trans:</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">    </span><span class="nf">shl</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="mi">4</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">    </span><span class="nf">or</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="no">ebx</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="w">    </span><span class="nf">jmp</span><span class="w"> </span><span class="no">do</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="nl">done:</span>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="p">[</span><span class="no">result</span><span class="p">],</span><span class="no">eax</span>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="c1">;#1_end========================================</span>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="c1">;==========请把以上代码保存到src\main.asm==============================</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>3 金字塔</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">;本题要求:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">comment</span><span class="w"> </span><span class="err">%</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="err">以下程序的功能是从键盘输入一个字符</span><span class="nf">c</span><span class="err">，再输出</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nf">n层金字塔</span><span class="err">，其中</span><span class="no">n</span><span class="err">=</span><span class="no">c-</span><span class="err">&#39;</span><span class="mi">0</span><span class="err">&#39;，首层空格数=</span><span class="no">n-1</span><span class="err">，后续</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="err">各层空格数逐层减1，首层字符数=1，后续各层字符数</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="err">逐层加2，每层输出的字符均固定为</span><span class="nf">c</span><span class="err">。</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="err">输出字符请调用</span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h的2号功能</span><span class="err">，不能通过写显卡</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="err">地址实现字符输出。另外，输出最后一层时也需要在</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="err">末尾输出0</span><span class="nf">Dh及0Ah</span><span class="err">。</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="err">例如：输入5，则应该输出</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="err">5</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">   </span><span class="err">555</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="err">55555</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w"> </span><span class="err">5555555</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="err">555555555</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1">;请把以下代码补充完整</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="err">%</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1">;==========请把以下代码保存到src\main.asm==============================</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="c1">;==========选中main.sh及src文件夹-&gt;右键-&gt;压缩成submit.zip提交==========</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="nf">data</span><span class="w"> </span><span class="no">segment</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="nf">c</span><span class="w">    </span><span class="no">db</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="nf">rows</span><span class="w"> </span><span class="no">dw</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="nf">spaces_on_this_row</span><span class="w"> </span><span class="no">dw</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="nf">digits_on_this_row</span><span class="w"> </span><span class="no">dw</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="nf">data</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span><span class="p">,</span><span class="w"> </span><span class="no">ds</span><span class="p">:</span><span class="no">data</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="nl">main:</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">data</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="w">       </span><span class="c1">; AL=getchar()</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="p">[</span><span class="no">c</span><span class="p">],</span><span class="w"> </span><span class="no">al</span><span class="w">   </span><span class="c1">; 保存输入的字符到变量c中</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">   </span><span class="nf">sub</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">0</span><span class="err">&#39;</span><span class="w">   </span><span class="c1">; 把输入的数字字符脱掉引号</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w">     </span><span class="c1">; AX的高8位清零</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="p">[</span><span class="no">rows</span><span class="p">],</span><span class="w"> </span><span class="no">ax</span><span class="c1">; 总共需要输出的行数保存到变量rows中</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">   </span><span class="nf">dec</span><span class="w"> </span><span class="no">ax</span><span class="w">        </span><span class="c1">; ax--</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="p">[</span><span class="no">spaces_on_this_row</span><span class="p">],</span><span class="w"> </span><span class="no">ax</span><span class="c1">; 首行需要输出的空格的个数</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="p">[</span><span class="no">digits_on_this_row</span><span class="p">],</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="c1">; 首行需要输出的数字的个数</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="p">[</span><span class="no">rows</span><span class="p">],</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">   </span><span class="nf">je</span><span class="w"> </span><span class="no">exit</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">Dh</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="c1">; 输出回车</span>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">Ah</span>
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="c1">; 输出换行</span>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="c1">;请在#1_begin和#1_end之间补充代码实现以下功能:</span>
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="c1">;输出n层金字塔，其中n=c-&#39;0&#39;，首层空格数=n-1，后续</span>
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a><span class="c1">;各层空格数逐层减1，首层字符数=1，后续各层字符数</span>
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a><span class="c1">;逐层加2，每层输出的字符均固定为c。</span>
+<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a><span class="c1">;输出字符请调用int 21h的2号功能，不能通过写显卡</span>
+<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a><span class="c1">;地址实现字符输出。另外，输出最后一层时也需要在</span>
+<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a><span class="c1">;末尾输出0Dh及0Ah。</span>
+<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a><span class="c1">;#1_begin-------------------------------------</span>
+<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,[</span><span class="no">rows</span><span class="p">]</span>
+<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a><span class="nl">print:</span>
+<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">spaces_on_this_row</span><span class="p">]</span>
+<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a><span class="w">    </span><span class="nl">print_spaces:</span>
+<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">0</span><span class="w">    </span><span class="c1">;注意注意注意</span>
+<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a><span class="w">        </span><span class="nf">je</span><span class="w"> </span><span class="no">done_spaces</span>
+<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="mi">2</span>
+<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="err">&#39;</span><span class="w"> </span><span class="err">&#39;</span>
+<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a><span class="w">        </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a><span class="w">        </span><span class="nf">sub</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a><span class="w">        </span><span class="nf">ja</span><span class="w"> </span><span class="no">print_spaces</span>
+<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a><span class="w">    </span><span class="nl">done_spaces:</span>
+<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,[</span><span class="no">digits_on_this_row</span><span class="p">]</span>
+<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a><span class="w">    </span><span class="nl">print_digits:</span>
+<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a><span class="w">        </span><span class="nf">je</span><span class="w"> </span><span class="no">done_digits</span>
+<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="mi">2</span>
+<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,[</span><span class="no">c</span><span class="p">]</span>
+<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a><span class="w">        </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a><span class="w">        </span><span class="nf">sub</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a><span class="w">        </span><span class="nf">ja</span><span class="w"> </span><span class="no">print_digits</span>
+<a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a><span class="w">    </span><span class="nl">done_digits:</span>
+<a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="mi">2</span>
+<a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="mi">0</span><span class="no">Dh</span>
+<a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a><span class="w">    </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-2-84" name="__codelineno-2-84" href="#__codelineno-2-84"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="mi">2</span>
+<a id="__codelineno-2-85" name="__codelineno-2-85" href="#__codelineno-2-85"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">dl</span><span class="p">,</span><span class="mi">0</span><span class="no">Ah</span>
+<a id="__codelineno-2-86" name="__codelineno-2-86" href="#__codelineno-2-86"></a><span class="w">    </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-2-87" name="__codelineno-2-87" href="#__codelineno-2-87"></a><span class="w">    </span><span class="nf">sub</span><span class="w"> </span><span class="p">[</span><span class="no">spaces_on_this_row</span><span class="p">],</span><span class="mi">1</span>
+<a id="__codelineno-2-88" name="__codelineno-2-88" href="#__codelineno-2-88"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="p">[</span><span class="no">digits_on_this_row</span><span class="p">],</span><span class="mi">2</span>
+<a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a><span class="w">    </span><span class="nf">sub</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-2-90" name="__codelineno-2-90" href="#__codelineno-2-90"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-2-91" name="__codelineno-2-91" href="#__codelineno-2-91"></a><span class="w">    </span><span class="nf">ja</span><span class="w"> </span><span class="no">print</span>
+<a id="__codelineno-2-92" name="__codelineno-2-92" href="#__codelineno-2-92"></a><span class="c1">;#1_end=======================================</span>
+<a id="__codelineno-2-93" name="__codelineno-2-93" href="#__codelineno-2-93"></a><span class="nl">exit:</span>
+<a id="__codelineno-2-94" name="__codelineno-2-94" href="#__codelineno-2-94"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-2-95" name="__codelineno-2-95" href="#__codelineno-2-95"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-2-96" name="__codelineno-2-96" href="#__codelineno-2-96"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-2-97" name="__codelineno-2-97" href="#__codelineno-2-97"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<a id="__codelineno-2-98" name="__codelineno-2-98" href="#__codelineno-2-98"></a><span class="c1">;==========请把以上代码保存到src\main.asm==============================</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>4 逆序输出一个字符串</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">comment</span><span class="w"> </span><span class="err">@</span><span class="p">---------------------------------------------------------------------</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="err">题目描述:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="err">已知数组</span><span class="nf">s中存储了一个符合C语言标准的字符串</span><span class="p">(</span><span class="err">末尾有一个</span><span class="no">ASCII码等于0的字符</span><span class="p">)</span><span class="err">，请在</span><span class="w"> </span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="mi">#1</span><span class="no">_begin</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">   </span><span class="err">与</span><span class="w">  </span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">#1_end</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="err">之间填写代码，按逆序输出</span><span class="nf">s中的字符</span><span class="err">。</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="err">例如：设</span><span class="nf">s的内容为</span><span class="w"> </span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">   </span><span class="no">abc123</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="err">则应该输出</span><span class="w"> </span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">   </span><span class="err">321</span><span class="nf">cba</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="err">------------------------------------------------------------------------------@</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1">;==========请把以下代码保存到src\main.asm==============================</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="c1">;==========选中main.sh及src文件夹-&gt;右键-&gt;压缩成submit.zip提交==========</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="nf">data</span><span class="w"> </span><span class="no">segment</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="nf">sth</span><span class="w"> </span><span class="no">db</span><span class="w"> </span><span class="mi">10</span><span class="no">h</span><span class="w"> </span><span class="no">dup</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="nf">s</span><span class="w"> </span><span class="no">db</span><span class="w"> </span><span class="err">&quot;</span><span class="no">abc123</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="c1">; 此数组的内容在judge时有可能会发生变化</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="nf">data</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span><span class="p">,</span><span class="w"> </span><span class="no">ds</span><span class="p">:</span><span class="no">data</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="nl">main:</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">seg</span><span class="w"> </span><span class="no">s</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="c1">;请在#1_begin和#1_end之间补充代码实现以下功能:</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="c1">;按逆序输出s中的字符</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="c1">;#1_begin--------------------------------------</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="no">offset</span><span class="w"> </span><span class="no">s</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="nl">do:</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,[</span><span class="no">si</span><span class="p">]</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">    </span><span class="nf">je</span><span class="w"> </span><span class="no">done</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">ax</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">    </span><span class="nf">jmp</span><span class="w"> </span><span class="no">do</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="nl">done:</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="no">offset</span><span class="w"> </span><span class="no">s</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="nl">do2:</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,[</span><span class="no">si</span><span class="p">]</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">    </span><span class="nf">je</span><span class="w"> </span><span class="no">done2</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">    </span><span class="nf">pop</span><span class="w"> </span><span class="no">dx</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="mi">2</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">    </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">    </span><span class="nf">jmp</span><span class="w"> </span><span class="no">do2</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="nl">done2:</span>
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="c1">;#1_end========================================</span>
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="nl">exit:</span>
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a><span class="c1">;==========请把以上代码保存到src\main.asm==============================</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>5 输入一个十进制数及一个十六进制数并求和</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">;本题要求:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">;1. 从键盘输入一个其值不超过4294967295的十进制数及一个其值不超过0FFFFFFFFh的十六进制数，</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1">;   这两个数输入时均以回车结束，其中十进制数保存在数组d中，十六进制数保存在数组h中。</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">;2. 把d中的字符串转化成整数，把h中的字符串也转化成整数，求它们的和，结果保存到变量result中。</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">;   若求和时有进位，则丢弃该进位。</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">;3. 例如：输入</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1">;   2147483647</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1">;   8086CaFe</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1">;   则result=0086CAFDh。</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1">;请把以下代码补充完整。</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="c1">;==========请把以下代码保存到src\main.asm==============================</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1">;==========选中main.sh及src文件夹-&gt;右键-&gt;压缩成submit.zip提交==========</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="nf">.386</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="nf">data</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="nf">sth</span><span class="w"> </span><span class="no">db</span><span class="w"> </span><span class="mi">10</span><span class="no">h</span><span class="w"> </span><span class="no">dup</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="nf">d</span><span class="w">   </span><span class="no">db</span><span class="w"> </span><span class="mi">20</span><span class="no">h</span><span class="w"> </span><span class="no">dup</span><span class="p">(</span><span class="err">&#39;</span><span class="no">D</span><span class="err">&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="nf">h</span><span class="w">   </span><span class="no">db</span><span class="w"> </span><span class="mi">20</span><span class="no">h</span><span class="w"> </span><span class="no">dup</span><span class="p">(</span><span class="err">&#39;</span><span class="no">H</span><span class="err">&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="nf">result</span><span class="w"> </span><span class="no">dd</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="nf">data</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span><span class="p">,</span><span class="w"> </span><span class="no">ds</span><span class="p">:</span><span class="no">data</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="nl">main:</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="c1">;请在#1_begin和#1_end之间补充代码</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="c1">;#1_begin-------------------------------------</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="no">data</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="no">ax</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="no">offset</span><span class="w"> </span><span class="no">d</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="nl">read_d:</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">    </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="mi">0</span><span class="no">Dh</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">    </span><span class="nf">je</span><span class="w"> </span><span class="no">read_d_done</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="p">[</span><span class="no">si</span><span class="p">],</span><span class="no">al</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">    </span><span class="nf">jmp</span><span class="w"> </span><span class="no">read_d</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="nl">read_d_done:</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="p">[</span><span class="no">si</span><span class="p">],</span><span class="no">al</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="no">offset</span><span class="w"> </span><span class="no">h</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="nl">read_h:</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="w">    </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="mi">0</span><span class="no">Dh</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a><span class="w">    </span><span class="nf">je</span><span class="w"> </span><span class="no">read_h_done</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="p">[</span><span class="no">si</span><span class="p">],</span><span class="no">al</span>
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a><span class="w">    </span><span class="nf">jmp</span><span class="w"> </span><span class="no">read_h</span>
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a><span class="nl">read_h_done:</span>
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="p">[</span><span class="no">si</span><span class="p">],</span><span class="no">al</span>
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ecx</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="no">offset</span><span class="w"> </span><span class="no">d</span>
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a><span class="nl">calc_d:</span>
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">cl</span><span class="p">,[</span><span class="no">si</span><span class="p">]</span>
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cl</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a><span class="w">    </span><span class="nf">je</span><span class="w"> </span><span class="no">calc_d_done</span>
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a><span class="w">    </span><span class="nf">sub</span><span class="w"> </span><span class="no">cl</span><span class="p">,</span><span class="err">&#39;</span><span class="mi">0</span><span class="err">&#39;</span>
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a><span class="w">    </span><span class="nf">imul</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="mi">10</span>
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="no">ecx</span>
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a><span class="w">    </span><span class="nf">jmp</span><span class="w"> </span><span class="no">calc_d</span>
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a><span class="nl">calc_d_done:</span>
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ebx</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="no">offset</span><span class="w"> </span><span class="no">h</span>
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a><span class="nl">calc_h:</span>
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">cl</span><span class="p">,[</span><span class="no">si</span><span class="p">]</span>
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cl</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a><span class="w">    </span><span class="nf">je</span><span class="w"> </span><span class="no">calc_h_done</span>
+<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cl</span><span class="p">,</span><span class="err">&#39;</span><span class="mi">9</span><span class="err">&#39;</span>
+<a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a><span class="w">    </span><span class="nf">jle</span><span class="w"> </span><span class="no">is_digit</span>
+<a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a><span class="w">    </span><span class="nl">is_ch:</span>
+<a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cl</span><span class="p">,</span><span class="err">&#39;</span><span class="no">F</span><span class="err">&#39;</span>
+<a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a><span class="w">        </span><span class="nf">jle</span><span class="w"> </span><span class="no">is_upper</span>
+<a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a><span class="w">        </span><span class="nl">is_lower:</span>
+<a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a><span class="w">            </span><span class="nf">sub</span><span class="w"> </span><span class="no">cl</span><span class="p">,</span><span class="err">&#39;</span><span class="no">a</span><span class="err">&#39;</span>
+<a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a><span class="w">            </span><span class="nf">add</span><span class="w"> </span><span class="no">cl</span><span class="p">,</span><span class="mi">10</span>
+<a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a><span class="w">            </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done_ch</span>
+<a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a><span class="w">        </span><span class="nl">is_upper:</span>
+<a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a><span class="w">            </span><span class="nf">sub</span><span class="w"> </span><span class="no">cl</span><span class="p">,</span><span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span>
+<a id="__codelineno-4-82" name="__codelineno-4-82" href="#__codelineno-4-82"></a><span class="w">            </span><span class="nf">add</span><span class="w"> </span><span class="no">cl</span><span class="p">,</span><span class="mi">10</span>
+<a id="__codelineno-4-83" name="__codelineno-4-83" href="#__codelineno-4-83"></a><span class="w">        </span><span class="nl">done_ch:</span>
+<a id="__codelineno-4-84" name="__codelineno-4-84" href="#__codelineno-4-84"></a><span class="w">        </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
+<a id="__codelineno-4-85" name="__codelineno-4-85" href="#__codelineno-4-85"></a><span class="w">    </span><span class="nl">is_digit:</span>
+<a id="__codelineno-4-86" name="__codelineno-4-86" href="#__codelineno-4-86"></a><span class="w">        </span><span class="nf">sub</span><span class="w"> </span><span class="no">cl</span><span class="p">,</span><span class="err">&#39;</span><span class="mi">0</span><span class="err">&#39;</span>
+<a id="__codelineno-4-87" name="__codelineno-4-87" href="#__codelineno-4-87"></a><span class="w">    </span><span class="nl">done:</span>
+<a id="__codelineno-4-88" name="__codelineno-4-88" href="#__codelineno-4-88"></a><span class="w">    </span><span class="nf">shl</span><span class="w"> </span><span class="no">ebx</span><span class="p">,</span><span class="mi">4</span>
+<a id="__codelineno-4-89" name="__codelineno-4-89" href="#__codelineno-4-89"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">ebx</span><span class="p">,</span><span class="no">ecx</span>
+<a id="__codelineno-4-90" name="__codelineno-4-90" href="#__codelineno-4-90"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-4-91" name="__codelineno-4-91" href="#__codelineno-4-91"></a><span class="w">    </span><span class="nf">jmp</span><span class="w"> </span><span class="no">calc_h</span>
+<a id="__codelineno-4-92" name="__codelineno-4-92" href="#__codelineno-4-92"></a><span class="nl">calc_h_done:</span>
+<a id="__codelineno-4-93" name="__codelineno-4-93" href="#__codelineno-4-93"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="no">ebx</span>
+<a id="__codelineno-4-94" name="__codelineno-4-94" href="#__codelineno-4-94"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="p">[</span><span class="no">result</span><span class="p">],</span><span class="no">eax</span>
+<a id="__codelineno-4-95" name="__codelineno-4-95" href="#__codelineno-4-95"></a><span class="c1">;#1_end=======================================</span>
+<a id="__codelineno-4-96" name="__codelineno-4-96" href="#__codelineno-4-96"></a><span class="nl">exit:</span>
+<a id="__codelineno-4-97" name="__codelineno-4-97" href="#__codelineno-4-97"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-4-98" name="__codelineno-4-98" href="#__codelineno-4-98"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-4-99" name="__codelineno-4-99" href="#__codelineno-4-99"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-4-100" name="__codelineno-4-100" href="#__codelineno-4-100"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<a id="__codelineno-4-101" name="__codelineno-4-101" href="#__codelineno-4-101"></a><span class="c1">;==========请把以上代码保存到src\main.asm==============================</span>
+</code></pre></div>
+</details>
 <h2 id="_1">作业<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><strong>第一次作业 10.1</strong></p>
 <details class="note">
 <summary>AX为正时计算2*AX否则计算AX的平方</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">.386</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nl">main:</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="c1">; ax的值在评测时会发生改变</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">   </span><span class="c1">;#1_begin--------------------------------------</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">0</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nf">jg</span><span class="w"> </span><span class="no">ax_ge_0</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nf">imul</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="no">ax</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nl">ax_ge_0:</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nf">imul</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">2</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nl">done:</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">   </span><span class="c1">;#1_end========================================</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="nl">exit:</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">.386</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nl">main:</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="c1">; ax的值在评测时会发生改变</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">   </span><span class="c1">;#1_begin--------------------------------------</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="nf">jg</span><span class="w"> </span><span class="no">ax_ge_0</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="nf">imul</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="no">ax</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">        </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="nl">ax_ge_0:</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="nf">imul</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">2</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">        </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="nl">done:</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">   </span><span class="c1">;#1_end========================================</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="nl">exit:</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
 </code></pre></div>
 </details>
 <details class="note">
 <summary>判断素数</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">.386</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nl">main:</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="c1">; cx的值在评测时会发生改变</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">   </span><span class="c1">;#1_begin--------------------------------------</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">2</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nl">again:</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="no">cx</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="nf">jae</span><span class="w"> </span><span class="no">check</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="mi">0</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="no">cx</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="nf">div</span><span class="w"> </span><span class="no">bx</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="mi">0</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="nf">je</span><span class="w"> </span><span class="no">check</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="nf">add</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">1</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="nf">jmp</span><span class="w"> </span><span class="no">again</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="nl">check:</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="no">cx</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">        </span><span class="nf">je</span><span class="w"> </span><span class="no">equal</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">            </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">0</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">            </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">        </span><span class="nl">equal:</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">            </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">1</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">            </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">        </span><span class="nl">done:</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">   </span><span class="c1">;#1_end========================================</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="nl">exit:</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">.386</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nl">main:</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="c1">; cx的值在评测时会发生改变</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">   </span><span class="c1">;#1_begin--------------------------------------</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">2</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="nl">again:</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="no">cx</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="nf">jae</span><span class="w"> </span><span class="no">check</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">        </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="no">cx</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">        </span><span class="nf">div</span><span class="w"> </span><span class="no">bx</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">        </span><span class="nf">je</span><span class="w"> </span><span class="no">check</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">        </span><span class="nf">add</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">        </span><span class="nf">jmp</span><span class="w"> </span><span class="no">again</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="nl">check:</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">        </span><span class="nf">cmp</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="no">cx</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">        </span><span class="nf">je</span><span class="w"> </span><span class="no">equal</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">            </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">            </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">        </span><span class="nl">equal:</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">            </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">            </span><span class="nf">jmp</span><span class="w"> </span><span class="no">done</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">        </span><span class="nl">done:</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">   </span><span class="c1">;#1_end========================================</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="nl">exit:</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
 </code></pre></div>
 </details>
 
