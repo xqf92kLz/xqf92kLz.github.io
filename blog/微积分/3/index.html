@@ -95,6 +95,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -510,6 +515,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第三章 微分中值定理及导数的应用
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -521,6 +539,65 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      微分中值定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      未定式的极限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      泰勒定理及应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -972,6 +1049,56 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      微分中值定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      未定式的极限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      泰勒定理及应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -988,7 +1115,49 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-22'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-22T15:14:09.069153+00:00'>2025-10-22</time></span><span data-tippy-content data-tippy-raw='2025-10-22'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-22T15:14:09.069153+00:00'>2025-10-22</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-23'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-23T08:16:45.292587+00:00'>2025-10-23</time></span><span data-tippy-content data-tippy-raw='2025-10-23'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-23T08:16:45.292587+00:00'>2025-10-23</time></span></div></div>
+<h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>费马（Fermat）定理：设 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处取到极值，且 <span class="arithmatex">\(f'(x_0)\)</span> 存在，则 <span class="arithmatex">\(f'(x_0)=0\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>不妨设 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处取到极大值，则 <span class="arithmatex">\(f_-'(x_0)=\lim\limits_{x\to x_0^-}\dfrac{f(x)-f(x_0)}{x-x_0}\geq 0\)</span>，<span class="arithmatex">\(f_+'(x_0)=\lim\limits_{x\to x_0^+}\dfrac{f(x)-f(x_0)}{x-x_0}\leq 0\)</span>。</p>
+<p>而 <span class="arithmatex">\(f'(x_0)\)</span> 存在，因此 <span class="arithmatex">\(f_-'(x_0)=f_+'(x_0)=f'(x_0)\)</span>，故 <span class="arithmatex">\(f'(x_0)=0\)</span>。</p>
+</details>
+<p>推论：可能取到极值的点，要么不可导，要么导数为 <span class="arithmatex">\(0\)</span>。</p>
+</li>
+<li>
+<p>罗尔（Rolle）定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(f(a)=f(b)\)</span>，则 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
+</li>
+<li>
+<p>拉格朗日（Lagrange）定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，则 <span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\frac{f(b)-f(a)}{b-a}=f'(\xi)\)</span>。</p>
+<p><span class="arithmatex">\(\xi\)</span> 常记作 <span class="arithmatex">\(\xi=a+\theta(b-a)\)</span>，其中 <span class="arithmatex">\(\theta\in(0,1)\)</span>。</p>
+</li>
+<li>
+<p>柯西（Cauchy）定理：设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(g'(x)\neq 0\)</span>，则 <span class="arithmatex">\(\exist \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}\)</span>。</p>
+</li>
+<li>
+<p>【拓展】Darboux 定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可导，且 <span class="arithmatex">\(f_+'(a)f_-'(a)&lt;0\)</span>，则 <span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
+</li>
+<li>
+<p>函数的单调区间与极值</p>
+</li>
+</ul>
+<h3 id="_3">未定式的极限<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(\frac 0 0\)</span> 型未定式的极限</li>
+<li><span class="arithmatex">\(\frac{\infty}{\infty}\)</span> 型未定式的极限</li>
+<li>其他类型未定式的极限</li>
+</ul>
+<h3 id="_4">泰勒定理及应用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>泰勒定理</li>
+<li>几个常用函数的麦克劳林公式</li>
+<li>带有佩亚诺余项的泰勒公式</li>
+<li>泰勒公式的应用</li>
+</ul>
 
 
 

@@ -1337,7 +1337,7 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-22'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-22T15:14:09.069153+00:00'>2025-10-22</time></span><span data-tippy-content data-tippy-raw='2025-10-22'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-22T15:14:09.069153+00:00'>2025-10-22</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-23'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-23T08:16:45.291587+00:00'>2025-10-23</time></span><span data-tippy-content data-tippy-raw='2025-10-23'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-23T08:16:45.291587+00:00'>2025-10-23</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1522,19 +1522,19 @@
 <p>任何数列都存在单调子列。</p>
 <details class="note">
 <summary>证明</summary>
-<div class="highlight"><pre><span></span><code>???+ abstract
-若所有后缀都有最大项，只要每次跳到当前后缀的最大项就行了，得到单调递减子列。
-
-若存在某个后缀没有最大项，那么该后缀中，任意一项之后都存在比它大的项，只要每次跳到后面更大的就行了。得到严格单调递增的子列。
-</code></pre></div>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>若所有后缀都有最大项，只要每次跳到当前后缀的最大项就行了，得到单调递减子列。</p>
+<p>若存在某个后缀没有最大项，那么该后缀中，任意一项之后都存在比它大的项，只要每次跳到后面更大的就行了。得到严格单调递增的子列。</p>
+</details>
 <ul>
 <li>
 <p>若 <span class="arithmatex">\(\forall k\in\mathbb N^*\)</span>，<span class="arithmatex">\(\{a_{k+n}\}\)</span> 存在最大项：</p>
 <p>设 <span class="arithmatex">\(\{a_{1+n}\}\)</span> 的最大项为 <span class="arithmatex">\(a_{n_1}\)</span>，<span class="arithmatex">\(\{a_{n_1+n}\}\)</span> 的最大项为 <span class="arithmatex">\(a_{n_2}\)</span>，以此类推。显然 <span class="arithmatex">\(n_1&lt;n_2&lt;\cdots\)</span>，<span class="arithmatex">\(a_{n_1}\geq a_{n_2}\geq \cdots\)</span>，得到单调递减的子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span>。</p>
-<ul>
-<li>若至少存在某个 <span class="arithmatex">\(k\in\mathbb N^*\)</span>，<span class="arithmatex">\(\{a_{k+n}\}\)</span> 没有最大项。
-取 <span class="arithmatex">\(n_1=k+1\)</span>，由于 <span class="arithmatex">\(\{a_{k+n}\}\)</span> 没有最大项，故存在 <span class="arithmatex">\(n_2&gt;n_1\)</span> 满足 <span class="arithmatex">\(a_{n_2}&gt;a_{n_1}\)</span>。同理，存在 <span class="arithmatex">\(n_3&gt;n_2\)</span> 满足 <span class="arithmatex">\(a_{n_3}&gt;a_{n_2}\)</span>。以此类推，得到 <span class="arithmatex">\(a_{n_1}&lt;a_{n_2}&lt;\cdots&lt;a_{n_k}&lt;\cdots\)</span>，得到严格单调递增的子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span>。</li>
-</ul>
+</li>
+<li>
+<p>若至少存在某个 <span class="arithmatex">\(k\in\mathbb N^*\)</span>，<span class="arithmatex">\(\{a_{k+n}\}\)</span> 没有最大项。</p>
+<p>取 <span class="arithmatex">\(n_1=k+1\)</span>，由于 <span class="arithmatex">\(\{a_{k+n}\}\)</span> 没有最大项，故存在 <span class="arithmatex">\(n_2&gt;n_1\)</span> 满足 <span class="arithmatex">\(a_{n_2}&gt;a_{n_1}\)</span>。同理，存在 <span class="arithmatex">\(n_3&gt;n_2\)</span> 满足 <span class="arithmatex">\(a_{n_3}&gt;a_{n_2}\)</span>。以此类推，得到 <span class="arithmatex">\(a_{n_1}&lt;a_{n_2}&lt;\cdots&lt;a_{n_k}&lt;\cdots\)</span>，得到严格单调递增的子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span>。</p>
 </li>
 </ul>
 </details>
@@ -1546,19 +1546,18 @@
 <p>发散的有界数列必存在两个收敛子列，且其极限不等。</p>
 <details class="note">
 <summary>证明</summary>
-<div class="highlight"><pre><span></span><code>???+ abstract
-先利用致密性定理找到第一个收敛子列【利用有界】，设其极限为 $A$。那么 $\exists \varepsilon_0$，使得 $(A-\varepsilon_0,A+\varepsilon_0)$ 外只有第一个收敛子列的有限项【因为第一个收敛子列收敛到 $A$】，剩余 $\{a_n\}$ 的无限项【因为 $\{a_n\}$ 不收敛到 $A$，是发散的】。
-
-在 $(A-\varepsilon_0,A+\varepsilon_0)$ 外，去掉第一个收敛子列后，再利用致密性定理找到第二个收敛子列，设其极限为 $B$。$B\notin(A-\varepsilon_0,A+\varepsilon_0)$。
-</code></pre></div>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>先利用致密性定理找到第一个收敛子列【利用有界】，设其极限为 <span class="arithmatex">\(A\)</span>。那么 <span class="arithmatex">\(\exists \varepsilon_0\)</span>，使得 <span class="arithmatex">\((A-\varepsilon_0,A+\varepsilon_0)\)</span> 外只有第一个收敛子列的有限项【因为第一个收敛子列收敛到 <span class="arithmatex">\(A\)</span>】，剩余 <span class="arithmatex">\(\{a_n\}\)</span> 的无限项【因为 <span class="arithmatex">\(\{a_n\}\)</span> 不收敛到 <span class="arithmatex">\(A\)</span>，是发散的】。</p>
+<p>在 <span class="arithmatex">\((A-\varepsilon_0,A+\varepsilon_0)\)</span> 外，去掉第一个收敛子列后，再利用致密性定理找到第二个收敛子列，设其极限为 <span class="arithmatex">\(B\)</span>。<span class="arithmatex">\(B\notin(A-\varepsilon_0,A+\varepsilon_0)\)</span>。</p>
+</details>
 <p>由于 <span class="arithmatex">\(\{a_n\}\)</span> 有界，根据致密性定理，存在一个收敛子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span>，设 <span class="arithmatex">\(\lim\limits_{k\to \infty}a_{n_k}=A\)</span>。</p>
 <p>由于 <span class="arithmatex">\(\{a_n\}\)</span> 发散，它不收敛于 <span class="arithmatex">\(A\)</span>，所以 <span class="arithmatex">\(\exists \varepsilon_0&gt;0\)</span>，使得 <span class="arithmatex">\(\forall N\)</span>，<span class="arithmatex">\(\exists n&gt;N\)</span>使得 <span class="arithmatex">\(|a_n-A|\geq \varepsilon\)</span>。这意味着在 <span class="arithmatex">\((A-\varepsilon_0,A+\varepsilon_0)\)</span> 外，有 <span class="arithmatex">\(\{a_n\}\)</span> 的无限多项。</p>
 <p>由于子列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛于 <span class="arithmatex">\(A\)</span>，则对于上述 <span class="arithmatex">\(\varepsilon_0\)</span>，<span class="arithmatex">\(\exists K\)</span>，当 <span class="arithmatex">\(k&gt;K\)</span> 时，有 <span class="arithmatex">\(|a_{n_k}-A|&lt;\varepsilon\)</span>。故在 <span class="arithmatex">\((A-\varepsilon_0,A+\varepsilon_0)\)</span> 外，子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span> 只有有限项（即那些 <span class="arithmatex">\(k\leq K\)</span> 的项）。</p>
 <p>于是，在 <span class="arithmatex">\((A-\varepsilon_0,A+\varepsilon_0)\)</span> 外，除去子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span> 的有限项，仍存在 <span class="arithmatex">\(\{a_n\}\)</span> 的无限多项，记为 <span class="arithmatex">\(S=\{a_n\mid |a_n-A|\geq \varepsilon_0\}\)</span>。</p>
 <p><span class="arithmatex">\(S\)</span> 是无限集，且由于 <span class="arithmatex">\(\{a_n\}\)</span> 有界，<span class="arithmatex">\(S\)</span> 也有界。</p>
 <p>对 <span class="arithmatex">\(S\)</span> 应用致密性定理，存在一个收敛子列 <span class="arithmatex">\(\{a_{m_k}\}\)</span>，设 <span class="arithmatex">\(\lim\limits_{k\to \infty}a_{m_k}=B\)</span>。由于 <span class="arithmatex">\(\forall a_{m_k}\in S\)</span>，有 <span class="arithmatex">\(|a_{m_k}-A|\geq \varepsilon\)</span>，则 <span class="arithmatex">\(|B-A|\geq \varepsilon_0&gt;0\)</span>，因此 <span class="arithmatex">\(B\neq A\)</span>。</p>
-<div class="highlight"><pre><span></span><code>这样，就得到了两个收敛子列 $\{a_{n_k}\}$ 和 $\{a_{m_k}\}$，分别收敛于 $A$ 和 $B$，且 $A\neq B$。
-</code></pre></div>
+<p>这样，就得到了两个收敛子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span> 和 <span class="arithmatex">\(\{a_{m_k}\}\)</span>，分别收敛于 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span>，且 <span class="arithmatex">\(A\neq B\)</span>。</p>
 </details>
 </details>
 </li>
@@ -1566,12 +1565,9 @@
 <p><strong>单调有界定理：</strong>单调递增有上界的数列必收敛；单调递减有下界的数列必收敛。</p>
 <details class="note">
 <summary>证明</summary>
-<div class="highlight"><pre><span></span><code>若 $\{a_n\}$ 递增且有上界：
-
-由确界原理知，必有上确界，设为 $a$，则 $a_n\leq a$。$\forall \varepsilon&gt;0$，$\exists N$ 使得 $a_N&gt;a-\varepsilon$。
-
-由于 $\{a_n\}$ 递增，故当 $n&gt;N$ 时，有 $a-\varepsilon&lt;a_N\leq a_n\leq a&lt;a+\varepsilon$，即 $|a_n-a|&lt;\varepsilon$。故 $\lim\limits_{n\to \infty}a_n=a$。
-</code></pre></div>
+<p>若 <span class="arithmatex">\(\{a_n\}\)</span> 递增且有上界：</p>
+<p>由确界原理知，必有上确界，设为 <span class="arithmatex">\(a\)</span>，则 <span class="arithmatex">\(a_n\leq a\)</span>。<span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N\)</span> 使得 <span class="arithmatex">\(a_N&gt;a-\varepsilon\)</span>。</p>
+<p>由于 <span class="arithmatex">\(\{a_n\}\)</span> 递增，故当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(a-\varepsilon&lt;a_N\leq a_n\leq a&lt;a+\varepsilon\)</span>，即 <span class="arithmatex">\(|a_n-a|&lt;\varepsilon\)</span>。故 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=a\)</span>。</p>
 </details>
 <p>由于改变数列的有限项不影响数列的敛散性和极限，所以数列从某一项开始单调有界结论依然成立。</p>
 <ul>
@@ -1829,16 +1825,11 @@ $$
 <li>
 <p><strong>法 1：</strong></p>
 <p>由于 <span class="arithmatex">\(\dfrac 1 {n+1}&lt;\ln(1+\dfrac 1 n)&lt;\dfrac 1 n\)</span>，则：</p>
-</li>
-</ul>
 <p><span class="arithmatex">\(1+\dfrac 1 2+\cdots+\dfrac 1 n&gt;\ln(1+1)+\ln(1+\dfrac 1 2)+\cdots+\ln(1+\dfrac 1 n)=\ln(n+1)\)</span></p>
-<div class="highlight"><pre><span></span><code>$1+\dfrac 1 2+\cdots+\dfrac 1 n&lt;1+\ln(1+1)+\ln(1+\dfrac 1 2)+\cdots+\ln(1+\dfrac{1}{n-1})=1+\ln n$
-
-$\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\ln n}=1$，$\dfrac{\ln n}{\ln(n+1)}&lt;1$
-
-则 $\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\frac 1 2+\frac 1 3+\cdots +\frac 1 n}=1$。
-</code></pre></div>
-<ul>
+<p><span class="arithmatex">\(1+\dfrac 1 2+\cdots+\dfrac 1 n&lt;1+\ln(1+1)+\ln(1+\dfrac 1 2)+\cdots+\ln(1+\dfrac{1}{n-1})=1+\ln n\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\ln n}=1\)</span>，<span class="arithmatex">\(\dfrac{\ln n}{\ln(n+1)}&lt;1\)</span></p>
+<p>则 <span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\frac 1 2+\frac 1 3+\cdots +\frac 1 n}=1\)</span>。</p>
+</li>
 <li>
 <p><strong>法 2：</strong></p>
 <p>记 <span class="arithmatex">\(a_n=\ln n\)</span>，<span class="arithmatex">\(b_n=1+\dfrac 1 2+\dfrac 1 3+\cdots+\dfrac 1 n\)</span>，<span class="arithmatex">\(\{b_n\}\)</span> 单调递增趋于 <span class="arithmatex">\(+\infty\)</span>，由 Stolz 定理 2 得 <span class="arithmatex">\(I=\lim\limits_{n\to \infty}\dfrac{a_n-a_{n-1}}{b_n-b_{n-1}}=\lim\limits_{n\to \infty}\dfrac{\ln n-\ln (n-1)}{\frac 1 n}=\lim\limits_{n\to \infty} n\ln(1+\dfrac 1 {n-1})=\lim\limits_{n\to \infty}\dfrac{n}{n-1}\ln(1+\dfrac{1}{n-1})^{n-1}=1\cdot \ln e=1\)</span>。</p>
@@ -1931,7 +1922,7 @@ $\lim\limits_{n\to \infty}\dfrac{\ln n}{1+\ln n}=1$，$\dfrac{\ln n}{\ln(n+1)}&l
 <li>
 <p><span class="arithmatex">\(\Leftarrow\)</span>：</p>
 <p>反证法。若 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)\neq A\)</span>，则 <span class="arithmatex">\(\exists \varepsilon_0&gt;0\)</span>，对 <span class="arithmatex">\(\forall \delta&gt;0\)</span>，<span class="arithmatex">\(\exists x'\in \mathring U(x_0,\delta)\)</span> 使得 <span class="arithmatex">\(|f(x')-A|\geq \varepsilon_0\)</span>。</p>
-<p>取 <span class="arithmatex">\(\delta_1=1\)</span>，则 <span class="arithmatex">\(\exists x_1\in\mathring U(x_0,\delta 1)\)</span> 使得 <span class="arithmatex">\(|f(x_1)-A|\geq\varepsilon_0\)</span>。</p>
+<p>取 <span class="arithmatex">\(\delta_1=1\)</span>，则 <span class="arithmatex">\(\exists x_1\in\mathring U(x_0,\delta_ 1)\)</span> 使得 <span class="arithmatex">\(|f(x_1)-A|\geq\varepsilon_0\)</span>。</p>
 <p>取 <span class="arithmatex">\(\delta_2=\min\{\frac 1 2,|x_0-x_1|\}\)</span>，则 <span class="arithmatex">\(\exists x_2\in\mathring U(x_0,\delta_2)\)</span> 使得 <span class="arithmatex">\(|f(x_2)-A|\geq \varepsilon_0\)</span>。</p>
 <p>……</p>
 <p>依次取 <span class="arithmatex">\(\delta_n=\min\{\frac 1 n,|x_0-x_{n-1}|\}\)</span>，则 <span class="arithmatex">\(\exists x_n\in\mathring U(x_0,\delta_n)\)</span> 使得 <span class="arithmatex">\(|f(x_n)-A|\geq \varepsilon_0\)</span>。</p>
