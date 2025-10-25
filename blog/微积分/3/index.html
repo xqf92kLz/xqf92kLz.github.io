@@ -1115,10 +1115,13 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-23'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-23T08:16:45.292587+00:00'>2025-10-23</time></span><span data-tippy-content data-tippy-raw='2025-10-23'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-23T08:16:45.292587+00:00'>2025-10-23</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-25'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-25T15:14:01.751366+00:00'>2025-10-25</time></span><span data-tippy-content data-tippy-raw='2025-10-25'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-25T15:14:01.751366+00:00'>2025-10-25</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
+<li>
+<p>函数的极值：函数的极值是局部的概念。函数在区间端点处不存在极值，极值点 <span class="arithmatex">\(x_0\)</span> 一定是定义域的内点（某邻域内有定义）。极大值可以比极小值小。</p>
+</li>
 <li>
 <p>费马（Fermat）定理：设 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处取到极值，且 <span class="arithmatex">\(f'(x_0)\)</span> 存在，则 <span class="arithmatex">\(f'(x_0)=0\)</span>。</p>
 <details class="note">
@@ -1127,19 +1130,117 @@
 <p>而 <span class="arithmatex">\(f'(x_0)\)</span> 存在，因此 <span class="arithmatex">\(f_-'(x_0)=f_+'(x_0)=f'(x_0)\)</span>，故 <span class="arithmatex">\(f'(x_0)=0\)</span>。</p>
 </details>
 <p>推论：可能取到极值的点，要么不可导，要么导数为 <span class="arithmatex">\(0\)</span>。</p>
+<p>驻点：导数为 <span class="arithmatex">\(0\)</span> 的点。</p>
 </li>
 <li>
 <p>罗尔（Rolle）定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(f(a)=f(b)\)</span>，则 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 连续，故 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有最大值 <span class="arithmatex">\(M\)</span> 和最小值 <span class="arithmatex">\(m\)</span>。【最大值最小值定理】</p>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(M=m\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 为常函数，结论显然成立。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(M\neq m\)</span>：由于 <span class="arithmatex">\(f(a)=f(b)\)</span>，故最大值 <span class="arithmatex">\(M\)</span> 与最小值 <span class="arithmatex">\(m\)</span> 不能同时在端点 <span class="arithmatex">\(a,b\)</span> 取到。不妨设 <span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f(\xi)=M\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=\xi\)</span> 处取到极大值。根据费马定理，<span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
+</li>
+</ul>
+</details>
 </li>
 <li>
 <p>拉格朗日（Lagrange）定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，则 <span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\frac{f(b)-f(a)}{b-a}=f'(\xi)\)</span>。</p>
-<p><span class="arithmatex">\(\xi\)</span> 常记作 <span class="arithmatex">\(\xi=a+\theta(b-a)\)</span>，其中 <span class="arithmatex">\(\theta\in(0,1)\)</span>。</p>
+<p>注：<span class="arithmatex">\(\xi\)</span> 常记作 <span class="arithmatex">\(\xi=a+\theta(b-a)\)</span>，其中 <span class="arithmatex">\(\theta\in(0,1)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<details class="note">
+<summary>法 1</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(f'(\xi)-\dfrac{f(b)-f(a)}{b-a}=0\)</span></p>
+<p>考虑构造 <span class="arithmatex">\(F(x)\)</span> 使得 <span class="arithmatex">\(F'(x)=f'(x)-\dfrac{f(b)-f(a)}{b-a}\)</span>，且 <span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，<span class="arithmatex">\(F(a)=F(b)\)</span>，然后对 <span class="arithmatex">\(F(x)\)</span> 应用罗尔定理。</p>
+<p>则 <span class="arithmatex">\(F(x)=f(x)-\dfrac{f(b)-f(a)}{b-a}x\)</span>。</p>
+<p>不过为了方便计算端点值，可以改进成 <span class="arithmatex">\(F(x)=f(x)-\dfrac{f(b)-f(a)}{b-a}(x-a)\)</span>（不改变 <span class="arithmatex">\(F'(x)\)</span>）。</p>
+<p>为了几何意义明显，可以继续改进成 <span class="arithmatex">\(F(x)=f(x)-[f(a)+\dfrac{f(b)-f(a)}{b-a}(x-a)]\)</span>（曲线 <span class="arithmatex">\(y=f(x)\)</span> 减去弦 <span class="arithmatex">\(AB\)</span> 所得的曲线，其端点函数值为 <span class="arithmatex">\(0\)</span>）。</p>
+</details>
+<p>构造函数 <span class="arithmatex">\(F(x)=f(x)-[f(a)+\dfrac{f(b)-f(a)}{b-a}(x-a)]\)</span>。则 <span class="arithmatex">\(F'(x)=f'(x)-\dfrac{f(b)-f(a)}{b-a}\)</span>。</p>
+<p><span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(F(a)=F(b)=0\)</span>。根据罗尔定理，<span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(F'(\xi)=0\)</span>，即 <span class="arithmatex">\(\dfrac{f(b)-f(a)}{b-a}=f'(\xi)\)</span>。</p>
+</details>
+<details class="note">
+<summary>法 2</summary>
+<p>构造函数 <span class="arithmatex">\(F(x)=\begin{vmatrix}x&amp;f(x)&amp;1\\a&amp;f(a)&amp;1\\b&amp;f(b)&amp;1\end{vmatrix}\)</span>（几何意义是 <span class="arithmatex">\(S_{\triangle PAB}\)</span>，其中 <span class="arithmatex">\(P(x,f(x)),A(a,f(a)),B(b,f(b))\)</span>）。</p>
+<p>则 <span class="arithmatex">\(F'(x)=\begin{vmatrix}1&amp;f'(x)&amp;0\\a&amp;f(a)&amp;1\\b&amp;f(b)&amp;1\end{vmatrix}=\begin{vmatrix}1&amp;f'(x)&amp;0\\a&amp;f(a)&amp;1\\b-a&amp;f(b)-f(a)&amp;0\end{vmatrix}\xlongequal{按R_1展开}(b-a)f'(x)-(f(b)-f(a))\)</span></p>
+<p><span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(F(a)=F(b)=0\)</span>。根据罗尔定理，<span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(F'(\xi)=0\)</span>，即 <span class="arithmatex">\(\dfrac{f(b)-f(a)}{b-a}=f'(\xi)\)</span>。</p>
+<details class="tip" open="open">
+<summary>行列式的求导</summary>
+<p>设 <span class="arithmatex">\(f(x)=|a_{ij}(x)|_{n}=\begin{vmatrix}a_{11}(x)&amp;a_{12}(x)&amp;\cdots&amp;a_{1n}(x)\\a_{21}(x)&amp;a_{22}(x)&amp;\cdots&amp;a_{2n}(x)\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\a_{n1}(x)&amp;a_{n2}(x)&amp;\cdots&amp;a_{nn}(x)\end{vmatrix}\)</span></p>
+<p>由于 <span class="arithmatex">\(f(x)=\sum_{j_1j_2\cdots_n}(-1)^{\tau(j_1j_2\cdots j_n)}a_{1j_1}(x)a_{2j_2(x)}\cdots a_{nj_n}(x)\)</span>，则 <span class="arithmatex">\(f'(x)=\sum_{k=1}^n \sum_{j_1j_2\cdots j_n}(-1)^{\tau(j_1j_2\cdots j_n)}a_{1j_1}(x)\cdots [a_{kj_k}(x)]'\cdots a_{nj_n}(x)=\sum_{k=1}^n\begin{vmatrix}a_{11}(x)&amp;a_{12}(x)&amp;\cdots&amp;a_{1n}(x)\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\a_{k1}'(x)&amp;a_{k2}'(x)&amp;\cdots&amp;a_{kn}'(x)\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\a_{n1}(x)&amp;a_{n2}(x)&amp;\cdots&amp;a_{nn}(x)\end{vmatrix}\)</span></p>
+</details>
+</details>
+</details>
+<details class="example">
+<summary>例题</summary>
+<p>证明：设 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 内可导，且对 <span class="arithmatex">\(\forall x\in D\)</span> 均有 <span class="arithmatex">\(f'(x)=0\)</span>，则 <span class="arithmatex">\(f(x)\equiv C\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>任取 <span class="arithmatex">\(x_1&lt;x_2\in D\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([x_1,x_2]\)</span> 上可导，根据拉格朗日中值定理，<span class="arithmatex">\(\exist \xi\in(x_1,x_2)\)</span> 使得 <span class="arithmatex">\(f(x_2)-f(x_1)=f'(\xi)(x_2-x_1)=0\)</span>。因此，<span class="arithmatex">\(f(x)\)</span> 为常函数。</p>
+<details class="tip" open="open">
+<summary>由此引出的想法</summary>
+<p>证 <span class="arithmatex">\(f(x)\equiv C\)</span>，可以证 <span class="arithmatex">\(f'(x)=0\)</span>。</p>
+<details class="example">
+<summary>例题</summary>
+<p>证明：<span class="arithmatex">\(\arctan x-\arctan \dfrac{x-1}{x+1}\equiv \dfrac{\pi}4\,(x&gt;-1)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(f(x)=\arctan x-\arctan\dfrac{x-1}{x+1}\)</span>，则 <span class="arithmatex">\(f'(x)=\dfrac{1}{1+x^2}-\dfrac{1}{1+(\frac{x-1}{x+1})^2}\cdot \dfrac{2}{(x+1)^2}=0\,(x&gt;-1)\)</span>，所以 <span class="arithmatex">\(f(x)=f(1)=\dfrac{\pi}4\)</span>。</p>
+<p>【注：<span class="arithmatex">\(f(-1-0)=-\dfrac 3 4 \pi\)</span>，<span class="arithmatex">\(f(-1+0)=\dfrac{\pi}4\)</span>】</p>
+</details>
+<p>证明：<span class="arithmatex">\(\arctan x+\arctan\dfrac 1 x=\dfrac{\pi}2\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(f(x)=\arctan x+\arctan\dfrac 1 x\)</span>，则 <span class="arithmatex">\(f'(x)=\dfrac{1}{1+x^2}+\dfrac{1}{1+\frac{1}{x^2}}\cdot (-\dfrac{1}{x^2})=0\)</span>，所以 <span class="arithmatex">\(f(x)=f(1)=\dfrac{\pi}2\)</span>。</p>
+</details>
+</details>
+</details>
+</details>
+<p>证明：设 <span class="arithmatex">\(f(x),g(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 内可导，且对 <span class="arithmatex">\(\forall x\in D\)</span> 均有 <span class="arithmatex">\(f'(x)=g'(x)\)</span>，则对 <span class="arithmatex">\(\forall x\in D\)</span> 均有 <span class="arithmatex">\(f(x)=g(x)+C\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(F(x)=f(x)-g(x)\)</span>，则对 <span class="arithmatex">\(\forall x\in D\)</span> 均有 <span class="arithmatex">\(F'(x)=0\)</span>，由上一题知 <span class="arithmatex">\(F(x)\equiv C\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)=\arctan x\)</span>，对 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([0,1]\)</span> 上应用拉格朗日中值定理，求其中值 <span class="arithmatex">\(\xi\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>根据拉格朗日中值定理，<span class="arithmatex">\(\exists \xi\in(0,1)\)</span> 使得 <span class="arithmatex">\(f(1)-f(0)=f'(\xi)(1-0)\)</span>，而 <span class="arithmatex">\(f'(x)=\dfrac{1}{1+x^2}\)</span>，则 <span class="arithmatex">\(\dfrac{\pi}4=\dfrac{1}{1+\xi^2}\Rightarrow \xi=\sqrt{\dfrac{4-\pi}{\pi}}\)</span>。</p>
+</details>
+</details>
 </li>
 <li>
 <p>柯西（Cauchy）定理：设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(g'(x)\neq 0\)</span>，则 <span class="arithmatex">\(\exist \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<details class="failure" open="open">
+<summary>错误证法</summary>
+<p>对 <span class="arithmatex">\(f,g\)</span> 分别在 <span class="arithmatex">\([a,b]\)</span> 上应用拉格朗日中值定理，有 <span class="arithmatex">\(f(b)-f(a)=f'(\xi)(b-a)\)</span>，<span class="arithmatex">\(g(b)-g(a)=g'(\xi)(b-a)\)</span>，两式相除即得结论。</p>
+<p>错因：<span class="arithmatex">\(f(x)\)</span> 和 <span class="arithmatex">\(g(x)\)</span> 对应的可能不是同一个 <span class="arithmatex">\(\xi\)</span>。</p>
+</details>
+<details class="success" open="open">
+<summary>正确证法</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\([f(b)-f(a)]g'(x)-[g(b)-g(a)]f'(x)=0\)</span></p>
+<p>构造 <span class="arithmatex">\(F(x)\)</span> 使得 <span class="arithmatex">\(F'(x)=[f(b)-f(a)]g'(x)-[g(b)-g(a)]f'(x)\)</span>，对 <span class="arithmatex">\(F(x)\)</span> 应用罗尔定理。</p>
+<p>则 <span class="arithmatex">\(F(x)=[f(b)-f(a)]g(x)-[g(b)-g(a)]f(x)\)</span>。</p>
+<p>为了方便求端点值，改进成 <span class="arithmatex">\(F(x)=[f(b)-f(a)][g(x)-g(a)]-[g(b)-g(a)][f(x)-f(a)]\)</span>（不改变 <span class="arithmatex">\(F'(x)\)</span>）。</p>
+</details>
+<p>构造函数 <span class="arithmatex">\(F(x)=[f(b)-f(a)][g(x)-g(a)]-[g(b)-g(a)][f(x)-f(a)]\)</span>。</p>
+<p><span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(F(a)=F(b)=0\)</span>。根据罗尔定理，<span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(F'(\xi)=0\)</span>，即 <span class="arithmatex">\([f(b)-f(a)]g'(x)-[g(b)-g(a)]f'(x)=0\)</span>。</p>
+<p>对 <span class="arithmatex">\(g(x)\)</span>，若 <span class="arithmatex">\(g(x)=g(b)\)</span>，由罗尔定理，<span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(g'(\xi)=0\)</span>，与 <span class="arithmatex">\(g'(x)\neq 0\)</span> 矛盾。因此，<span class="arithmatex">\(g(a)\neq g(b)\)</span>。</p>
+<p>那么由于 <span class="arithmatex">\(g'(\xi)\neq 0\)</span>，<span class="arithmatex">\(g(a)\neq g(b)\)</span>，则 <span class="arithmatex">\(\dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f'(\xi)}{g'(\xi)}\)</span>。</p>
+</details>
+</details>
 </li>
 <li>
-<p>【拓展】Darboux 定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可导，且 <span class="arithmatex">\(f_+'(a)f_-'(a)&lt;0\)</span>，则 <span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
+<p>【拓展】达布（Darboux）定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可导，且 <span class="arithmatex">\(f_+'(a)f_-'(a)&lt;0\)</span>，则 <span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
 </li>
 <li>
 <p>函数的单调区间与极值</p>
