@@ -707,13 +707,31 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵的初等变换与矩阵乘法的联系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵运算对矩阵秩的影响
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       公式总结
     </span>
@@ -1101,13 +1119,31 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵的初等变换与矩阵乘法的联系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵运算对矩阵秩的影响
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       公式总结
     </span>
@@ -1133,7 +1169,7 @@
 
   <h1>第三章 矩阵的运算</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-25'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-25T15:14:01.752366+00:00'>2025-10-25</time></span><span data-tippy-content data-tippy-raw='2025-10-25'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-25T15:14:01.752366+00:00'>2025-10-25</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-27'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-27T04:15:53.992131+00:00'>2025-10-27</time></span><span data-tippy-content data-tippy-raw='2025-10-27'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-27T04:15:53.992131+00:00'>2025-10-27</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">矩阵的加减法、数乘、乘法和转置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1444,8 +1480,98 @@ D. <span class="arithmatex">\(B+E\)</span> 为可逆矩阵</p>
 <li>
 <p>分块矩阵的转置：块之间转置，块内也转置。</p>
 </li>
+<li>
+<p>分块矩阵的求逆：<span class="arithmatex">\(\begin{pmatrix}A&amp;O\\C&amp;B\end{pmatrix}^{-1}=\begin{pmatrix}A^{-1}&amp;O\\-B^{-1}CA^{-1}&amp;B^{-1}\end{pmatrix}\)</span></p>
+</li>
+<li>
+<p>准对角矩阵 <span class="arithmatex">\(A=\text{diag}(A_,A_2,\cdots,A_s)\)</span>，其中 <span class="arithmatex">\(A,A_i\)</span> 都是方阵。运算类比对角矩阵。</p>
+</li>
 </ul>
-<h2 id="_5">公式总结<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="_5">矩阵的初等变换与矩阵乘法的联系<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>初等变换：互换，倍乘，倍加</p>
+</li>
+<li>
+<p>初等矩阵：<span class="arithmatex">\(E\)</span> 经过一次初等变换得到的矩阵。</p>
+<ul>
+<li>互换初等矩阵：<span class="arithmatex">\(E_{ij}\)</span> 表示 <span class="arithmatex">\(E\stackrel{R_{ij}}{\longrightarrow}\)</span> 或 <span class="arithmatex">\(E\stackrel{C_{ij}}{\longrightarrow}\)</span> 所得的初等矩阵。</li>
+<li>倍乘初等矩阵：<span class="arithmatex">\(E_i(k)\)</span> 表示 <span class="arithmatex">\(E\stackrel{kR_i}{\longrightarrow}\)</span> 或 <span class="arithmatex">\(E\stackrel{kC_i}{\longrightarrow}\,(k\neq 0)\)</span> 所得的初等矩阵。</li>
+<li>倍加初等矩阵：<span class="arithmatex">\(E_{ij}(k)\)</span> 表示 <span class="arithmatex">\(E\stackrel{R_i+kR_j}{\longrightarrow}\)</span> 或 <span class="arithmatex">\(E\stackrel{C_j+kC_i}{\longrightarrow}\)</span>（注意这里行/列有点区别）所得的初等矩阵。</li>
+</ul>
+</li>
+<li>
+<p>初等矩阵的性质与重要公式：</p>
+<ul>
+<li>
+<p>对矩阵 <span class="arithmatex">\(A\)</span> 进行初等行变换，相当于矩阵 <span class="arithmatex">\(A\)</span> 左乘对应的初等矩阵。</p>
+<p>对矩阵 <span class="arithmatex">\(A\)</span> 进行初等列变换，相当于矩阵 <span class="arithmatex">\(A\)</span> 右乘相应的初等矩阵。</p>
+</li>
+<li>
+<p>初等矩阵都是可逆矩阵，且 <span class="arithmatex">\([E_i(k)]^{-1}=E_i(\frac 1 k)\)</span>，<span class="arithmatex">\(E_{ij}^{-1}=E_{ij}\)</span>，<span class="arithmatex">\([E_{ij}(k)]^{-1}=E_{ij}(-k)\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(r(A_{m\times n})=r\Leftrightarrow\)</span> 存在 <span class="arithmatex">\(s\)</span> 个 <span class="arithmatex">\(m\)</span> 阶初等矩阵 <span class="arithmatex">\(P_i\)</span> 和 <span class="arithmatex">\(t\)</span> 个 <span class="arithmatex">\(n\)</span> 阶初等矩阵 <span class="arithmatex">\(Q_j\)</span>，使得 <span class="arithmatex">\(P_1P_2\cdots P_sAQ_1Q_2\cdots Q_t=\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}\)</span>。</p>
+<p>推论：<span class="arithmatex">\(r(A_{m\times n})=r\Leftrightarrow\)</span> 存在 <span class="arithmatex">\(m\)</span> 阶可逆矩阵 <span class="arithmatex">\(P\)</span> 和 <span class="arithmatex">\(n\)</span> 阶可逆矩阵 <span class="arithmatex">\(Q\)</span>，使得 <span class="arithmatex">\(PAQ=\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> 可逆 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(A\)</span> 可以表示成若干初等矩阵的乘积。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\Rightarrow\)</span>：<span class="arithmatex">\(A_{n\times n}\)</span> 可逆，则 <span class="arithmatex">\(r(A)=n\)</span>，那么一定存在 <span class="arithmatex">\(n\)</span> 阶初等矩阵 <span class="arithmatex">\(P_1,\cdots,P_s,Q_1,\cdots,Q_r\)</span>，使得 <span class="arithmatex">\(P_1\cdots P_sAQ_\cdots Q_t=E\)</span>，即 <span class="arithmatex">\(P_s^{-1}\cdots P_1^{-1}AQ_1\cdots Q_tQ_t^{-1}\cdots Q_1^{-1}=P_s^{-1}\cdots P_1^{-1}EQ_t^{-1}\cdots Q_1^{-1}\)</span>，所以 <span class="arithmatex">\(A=P_s^{-1}\cdots P_1^{-1}Q_t^{-1}\cdots Q_1^{-1}\)</span>。</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span>：显然。<span class="arithmatex">\(A=P_1\cdots P_s\)</span>，<span class="arithmatex">\(P_i\)</span> 为初等矩阵，则 <span class="arithmatex">\(|A|=|P_1|\cdots |P_s|\neq 0\)</span>。</p>
+</details>
+<p>推论：对于矩阵 <span class="arithmatex">\(A_{m\times n}\)</span> 和可逆矩阵 <span class="arithmatex">\(P_{m\times m},Q_{n\times n}\)</span>，<span class="arithmatex">\(r(A)=r(PA)=r(AQ)=r(PAQ)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>因为可逆矩阵可以表示成初等矩阵的乘积，而初等变换不影响矩阵的秩。</p>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>用初等变换求逆矩阵：</p>
+<p><span class="arithmatex">\(\left(\begin{array}{c:c}A &amp; B \\\end{array}\right)\xrightarrow{\text{初等行变换}}\left(\begin{array}{c:c}E &amp; A^{-1}B \\\end{array}\right)\)</span></p>
+<p>特别地，<span class="arithmatex">\(\left(\begin{array}{c:c}A &amp; E \\\end{array}\right)\xrightarrow{\text{初等行变换}}\left(\begin{array}{c:c}E &amp; A^{-1} \\\end{array}\right)\)</span></p>
+<p><span class="arithmatex">\(\begin{pmatrix}A \\\hdashline B\end{pmatrix} \xrightarrow{\text{初等列变换}} \begin{pmatrix}E \\\hdashline BA^{-1}\end{pmatrix}\)</span></p>
+<p>特别地，<span class="arithmatex">\(\begin{pmatrix}A \\\hdashline E\end{pmatrix} \xrightarrow{\text{初等列变换}} \begin{pmatrix}E \\\hdashline A^{-1}\end{pmatrix}\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\left(\begin{array}{c:c}A &amp; B \\\end{array}\right)\xrightarrow{\text{初等行变换}}\left(\begin{array}{c:c}A^{-1}A &amp; A^{-1}B \\\end{array}\right)=\left(\begin{array}{c:c}E &amp; A^{-1}B \\\end{array}\right)\)</span></p>
+<p>即，<span class="arithmatex">\(A^{-1}A=P_1\cdots P_sA=E\)</span>，<span class="arithmatex">\(A^{-1}B=P_1\cdots P_sB=A^{-1}B\)</span>，也就是 <span class="arithmatex">\(A\)</span> 经过一系列初等行变换得到 <span class="arithmatex">\(E\)</span> 时，<span class="arithmatex">\(B\)</span> 经过同样的初等行变换得到 <span class="arithmatex">\(A^{-1}B\)</span></p>
+</details>
+</li>
+</ul>
+<h3 id="_6">矩阵运算对矩阵秩的影响<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>对于矩阵 <span class="arithmatex">\(A_{m\times n}\)</span> 和可逆矩阵 <span class="arithmatex">\(P_{m\times m},Q_{n\times n}\)</span>，<span class="arithmatex">\(r(A)=r(PA)=r(AQ)=r(PAQ)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>因为可逆矩阵可以表示成初等矩阵的乘积，而初等变换不影响矩阵的秩。</p>
+</details>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(G=\begin{pmatrix}A_{m\times n}&amp;O\\O&amp;B_{s\times t}\end{pmatrix}\)</span> 或 <span class="arithmatex">\(G=\begin{pmatrix}O&amp;A_{m\times n}\\B_{s\times t}&amp;O\end{pmatrix}\)</span>，则 <span class="arithmatex">\(r(G)=r(A)+r(B)\)</span>。</p>
+<p>类似的证明题：</p>
+<ul>
+<li>
+<p>设 <span class="arithmatex">\(r(A_{m\times n})=m\,(m\leq n)\)</span>，则存在 <span class="arithmatex">\(B_{n\times m}\)</span> 使得 <span class="arithmatex">\(AB=E_m\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>先思考 <span class="arithmatex">\(A\)</span> 为相抵标准形的情况，再推广到一般情况。</p>
+<p><span class="arithmatex">\(A\)</span> 为相抵标准形时，<span class="arithmatex">\(A=\begin{pmatrix}E_m&amp;O\end{pmatrix}\)</span>，取 <span class="arithmatex">\(B=\begin{pmatrix}E_m\\O\end{pmatrix}\)</span>，则 <span class="arithmatex">\(AB=\begin{pmatrix}E_m&amp;O\end{pmatrix}\begin{pmatrix}E_m\\O\end{pmatrix}=E_m\)</span></p>
+<p>然后用 <span class="arithmatex">\(A=P\begin{pmatrix}E_m&amp;O\end{pmatrix}Q\)</span> 推广。</p>
+</details>
+<p><span class="arithmatex">\(A=P\begin{pmatrix}E_m&amp;O\end{pmatrix}Q\)</span>，取 <span class="arithmatex">\(B=Q^{-1}\begin{pmatrix}E_m\\O\end{pmatrix}P^{-1}\)</span>，则 <span class="arithmatex">\(AB=P\begin{pmatrix}E_m&amp;O\end{pmatrix}QQ^{-1}\begin{pmatrix}E_m\\O\end{pmatrix}P^{-1}=E_m\)</span></p>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_7">公式总结<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><span class="arithmatex">\(|kA|=k^n|A|\)</span></p>
