@@ -532,10 +532,10 @@
         end main
         ```
 
-??? note "第二次作业"
+??? note "第二次作业 10.23"
 
     ??? note "1 输入一个大写英文字母，输出该字母至'Z'的所有字母"
-
+    
         ```asm
         ;本题要求:
         comment %
@@ -556,9 +556,9 @@
             mov ah,2
             mov dl,al
             int 21h
-
+    
             add al,1
-
+    
             cmp al,'Z'
             jle again
         ;#1_end=======================================
@@ -568,9 +568,9 @@
         code ends
         end main
         ```
-
+    
     ??? note "2 输入一个正奇数n输出由n行星号构成的菱形"
-
+    
         ```asm
         code segment
         assume cs:code
@@ -582,7 +582,7 @@
            mov dl, 0Ah; 换行符的ASCII码
            int 21h    ; putchar('\n');
            ret        ; 函数返回
-
+    
         output_space: ; 输出bp个空格
            push bp
         output_space_next:
@@ -596,7 +596,7 @@
         output_space_done:
            pop bp
            ret
-
+    
         output_star: ; 输出bp个*
            push bp
         output_star_next:   
@@ -607,7 +607,7 @@
            jnz output_star_next
            pop bp
            ret
-
+    
         main:
            mov ah, 1   ; 调用DOS的1号功能输入一个字符
            int 21h     ; AL=输入的字符
@@ -658,7 +658,7 @@
                 add bp,bx            ;<--第3空, 请把解答写在分号左边, 可填多条指令
                                       ;第3空须完成以下计算:                        
                                       ;bp=待输出的*个数=bx - 2*abs(si)
-
+    
            ;#3_end=====================
            call output_star
            call output_cr
