@@ -1115,7 +1115,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-27'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-27T04:15:53.992131+00:00'>2025-10-27</time></span><span data-tippy-content data-tippy-raw='2025-10-27'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-27T04:15:53.992131+00:00'>2025-10-27</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-28'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-28T06:09:40.693752+00:00'>2025-10-28</time></span><span data-tippy-content data-tippy-raw='2025-10-28'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-28T06:09:40.693752+00:00'>2025-10-28</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1146,6 +1146,7 @@
 </li>
 </ul>
 </details>
+<p>推广的 Rolle 定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,+\infty)\)</span> 上连续，在 <span class="arithmatex">\((a,+\infty)\)</span> 内可导，且 <span class="arithmatex">\(\lim\limits_{x\to +\infty}f(x)=f(a)\)</span>，则 <span class="arithmatex">\(\exists \xi\in(a,+\infty)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
 </li>
 <li>
 <p>拉格朗日（Lagrange）定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，则 <span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\frac{f(b)-f(a)}{b-a}=f'(\xi)\)</span>。</p>
@@ -1188,7 +1189,7 @@
 <p>证 <span class="arithmatex">\(f(x)\equiv C\)</span>，可以证 <span class="arithmatex">\(f'(x)=0\)</span>。</p>
 <details class="example">
 <summary>例题</summary>
-<p>证明：<span class="arithmatex">\(\arctan x-\arctan \dfrac{x-1}{x+1}\equiv \dfrac{\pi}4\,(x&gt;-1)\)</span>。</p>
+<p>证明：<span class="arithmatex">\(\arctan x-\arctan \dfrac{x-1}{x+1}\equiv   \dfrac{\pi}4\,(x&gt;-1)\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
 <p>设 <span class="arithmatex">\(f(x)=\arctan x-\arctan\dfrac{x-1}{x+1}\)</span>，则 <span class="arithmatex">\(f'(x)=\dfrac{1}{1+x^2}-\dfrac{1}{1+(\frac{x-1}{x+1})^2}\cdot \dfrac{2}{(x+1)^2}=0\,(x&gt;-1)\)</span>，所以 <span class="arithmatex">\(f(x)=f(1)=\dfrac{\pi}4\)</span>。</p>
@@ -1241,6 +1242,22 @@
 </li>
 <li>
 <p>【拓展】达布（Darboux）定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可导，且 <span class="arithmatex">\(f_+'(a)f_-'(a)&lt;0\)</span>，则 <span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 存在最值。</p>
+<p>不妨设 <span class="arithmatex">\(f_+'(a)&gt;0\)</span>，<span class="arithmatex">\(f_-'(b)&lt;0\)</span>，那么最大值肯定不在端点取到。即 <span class="arithmatex">\(f(x)\)</span> 的最大值在 <span class="arithmatex">\((a,b)\)</span> 内取到，由费马定理知该点导数为 <span class="arithmatex">\(0\)</span>。</p>
+</details>
+<p>不妨设 <span class="arithmatex">\(f_+'(a)&gt;0\)</span>，<span class="arithmatex">\(f_-'(b)&lt;0\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可导，且 <span class="arithmatex">\(f_+'(a)\neq f_-'(b)\)</span>，则对任意介于 <span class="arithmatex">\(f_+'(a)\)</span> 与 <span class="arithmatex">\(f_-'(b)\)</span> 之间的 <span class="arithmatex">\(\mu\)</span>，<span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=\mu\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>设 <span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上存在。<span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上未必连续，但 <span class="arithmatex">\(f'(x)\)</span> 仍具有介值性。由此可得，定义在区间 <span class="arithmatex">\(I\)</span> 上有第一类间断点的函数不存在原函数。</p>
+</details>
+<p>Darboux 定理 + 反证法 可以证明很多东西。</p>
+<p>可用 Darboux 定理证明 Rolle 定理。</p>
 </li>
 <li>
 <p>函数的单调区间与极值</p>
