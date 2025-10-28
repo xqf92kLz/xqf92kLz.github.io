@@ -1121,7 +1121,7 @@
 
   <h1>汇编入门</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-28'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-28T07:37:00.536284+00:00'>2025-10-28</time></span><span data-tippy-content data-tippy-raw='2025-10-28'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-28T07:37:00.536284+00:00'>2025-10-28</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-28'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-28T08:00:22.955597+00:00'>2025-10-28</time></span><span data-tippy-content data-tippy-raw='2025-10-28'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-28T08:00:22.955597+00:00'>2025-10-28</time></span></div></div>
 <p>模板：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">.386</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
@@ -1200,7 +1200,76 @@
 <p><code>-</code>：<code>sub ax,bx</code></p>
 </li>
 <li>
-<p><code>*</code>：<code>imul ax,bx</code>（有符号），<code>mul</code>（无符号）</p>
+<p><code>*</code>：<code>imul</code>（有符号），<code>mul</code>（无符号）</p>
+<p>单操作数（<code>mul</code>，<code>imul</code>）：</p>
+<table>
+<thead>
+<tr>
+<th>数据宽度</th>
+<th>被乘数（隐含）</th>
+<th>乘数（显式操作）</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 位乘法</td>
+<td><code>AL</code>（8 位）</td>
+<td>8 位</td>
+<td><code>AX</code>（16 位，<code>AH:AL</code>）</td>
+</tr>
+<tr>
+<td>16 位乘法</td>
+<td><code>AX</code>（16 位）</td>
+<td>16 位</td>
+<td><code>DX:AX</code>（32 位）</td>
+</tr>
+<tr>
+<td>32 位乘法</td>
+<td><code>EAX</code>（32 位）</td>
+<td>32 位</td>
+<td><code>EDX:EAX</code>（64 位）</td>
+</tr>
+<tr>
+<td>64 位乘法（x86-64）</td>
+<td><code>RAX</code>（64 位）</td>
+<td>64 位</td>
+<td><code>RDX:RAX</code>（128 位）</td>
+</tr>
+</tbody>
+</table>
+<p>双操作数（<code>imul</code>）：</p>
+<p><code>imul ax,bx</code></p>
+<table>
+<thead>
+<tr>
+<th>数据宽度</th>
+<th>被乘数</th>
+<th>乘数</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16 位</td>
+<td>16 位寄存器</td>
+<td>16 位</td>
+<td>目标寄存器（16 位）</td>
+</tr>
+<tr>
+<td>32 位</td>
+<td>32 位寄存器</td>
+<td>32 位</td>
+<td>目标寄存器（32 位）</td>
+</tr>
+<tr>
+<td>64 位（x86-64）</td>
+<td>64 位寄存器</td>
+<td>64 位</td>
+<td>目标寄存器（64 位）</td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
 <p><code>/</code>：<code>idiv</code>（有符号），<code>div</code>（无符号）</p>
@@ -1208,7 +1277,8 @@
 <thead>
 <tr>
 <th>数据宽度</th>
-<th>被除数</th>
+<th>被除数（隐含）</th>
+<th>除数（显式操作）</th>
 <th>商（结果）</th>
 <th>余数（结果）</th>
 </tr>
@@ -1216,27 +1286,31 @@
 <tbody>
 <tr>
 <td>8 位除法</td>
-<td><code>AX</code></td>
-<td><code>AL</code></td>
-<td><code>AH</code></td>
+<td><code>AX</code>（16 位）</td>
+<td>8 位</td>
+<td><code>AL</code>（8 位）</td>
+<td><code>AH</code>（8 位）</td>
 </tr>
 <tr>
 <td>16 位除法</td>
-<td><code>DX:AX</code></td>
-<td><code>AX</code></td>
-<td><code>DX</code></td>
+<td><code>DX:AX</code>（32 位）</td>
+<td>16 位</td>
+<td><code>AX</code>（16 位）</td>
+<td><code>DX</code>（16 位）</td>
 </tr>
 <tr>
 <td>32 位除法</td>
-<td><code>EDX:EAX</code></td>
-<td><code>EAX</code></td>
-<td><code>EDX</code></td>
+<td><code>EDX:EAX</code>（64 位）</td>
+<td>32 位</td>
+<td><code>EAX</code>（32 位）</td>
+<td><code>EDX</code>（32 位）</td>
 </tr>
 <tr>
 <td>64 位除法（x86-64）</td>
-<td><code>RDX:RAX</code></td>
-<td><code>RAX</code></td>
-<td><code>RDX</code></td>
+<td><code>RDX:RAX</code>（128 位）</td>
+<td>64 位</td>
+<td><code>RAX</code>（64 位）</td>
+<td><code>RDX</code>（64 位）</td>
 </tr>
 </tbody>
 </table>
