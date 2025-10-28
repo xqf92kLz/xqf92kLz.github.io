@@ -393,6 +393,76 @@
     ;==========请把以上代码保存到src\main.asm==============================
     ```
 
+??? note "13 输出九九乘法表"
+
+    ```asm
+    ;本题要求:
+    comment %
+    以下程序的功能是输出九九乘法表
+    %
+    ;==========请把以下代码保存到src\main.asm==============================
+    ;==========选中main.sh及src文件夹->右键->压缩成submit.zip提交==========
+    data segment
+    s  db "1*1= 1  ", '$'  ; s[0]=被乘数+'0', s[2]=乘数+'0'，s[4]=乘积的十位+'0' 
+                           ; （若乘积为个位数则s[4]=' '），s[5]=乘积的个位+'0'
+                           ; 一个乘法算式总共包含8个字符，故文本模式下每行（80列）
+                           ; 足够输出9个算式
+    cr db 0Dh, 0Ah, '$'    ; 定义一个由回车及换行构成的字符串
+    data ends
+    
+    code segment
+    assume cs:code, ds:data
+    main:
+       mov ax, data
+       mov ds, ax
+    ;请在#1_begin和#1_end之间补充代码输出九九乘法表
+    ;#1_begin-------------------------------------
+    outer:
+        mov al,s[0]
+        mov s[2],al
+        inner:
+            mov al,s[0]
+            sub al,'0'
+            mov bl,s[2]
+            sub bl,'0'
+            mul bl
+            mov dl,10
+            div dl
+            cmp al,0
+            je equal0
+                mov s[4],al
+                add s[4],'0'
+                jmp done
+            equal0:
+                mov s[4],' '
+            done:
+            mov s[5],ah
+            add s[5],'0'
+    
+            mov ah,9
+            mov dx,offset s
+            int 21h
+    
+            add s[2],1
+            cmp s[2],'9'
+            jbe inner
+    
+        mov ah,9
+        mov dx,offset cr
+        int 21h
+    
+        add s[0],1
+        cmp s[0],'9'
+        jbe outer
+    ;#1_end========================================
+    exit:                
+       mov ah, 4Ch
+       int 21h             ; 结束程序运行
+    code ends
+    end main
+    ;==========请把以上代码保存到src\main.asm==============================
+    ```
+
 ## 作业
 
 ??? note "第一次作业 10.1"
@@ -464,140 +534,140 @@
 
 ??? note "第二次作业"
 
-??? note "1 输入一个大写英文字母，输出该字母至'Z'的所有字母"
+    ??? note "1 输入一个大写英文字母，输出该字母至'Z'的所有字母"
 
-    ```asm
-    ;本题要求:
-    comment %
-    以下程序的功能是从键盘输入一个大写英文字母c，
-    再输出c至′Z′的所有字母
-    例如：输入X，则应该输出XYZ
-    ;请把以下代码补充完整
-    %
-    code segment
-    assume cs:code
-    main:
-    ;请在#1_begin和#1_end之间补充代码实现以下功能:
-    ;从键盘输入一个大写英文字母c，再输出c至′Z′的所有字母
-    ;#1_begin-------------------------------------
-        mov ah,1
-        int 21h
-    again:
-        mov ah,2
-        mov dl,al
-        int 21h
-    
-        add al,1
-    
-        cmp al,'Z'
-        jle again
-    ;#1_end=======================================
-    exit:
-       mov ah, 4Ch
-       int 21h
-    code ends
-    end main
-    ```
+        ```asm
+        ;本题要求:
+        comment %
+        以下程序的功能是从键盘输入一个大写英文字母c，
+        再输出c至′Z′的所有字母
+        例如：输入X，则应该输出XYZ
+        ;请把以下代码补充完整
+        %
+        code segment
+        assume cs:code
+        main:
+        ;请在#1_begin和#1_end之间补充代码实现以下功能:
+        ;从键盘输入一个大写英文字母c，再输出c至′Z′的所有字母
+        ;#1_begin-------------------------------------
+            mov ah,1
+            int 21h
+        again:
+            mov ah,2
+            mov dl,al
+            int 21h
 
-??? note "2 "
+            add al,1
 
-    ```asm
-    code segment
-    assume cs:code
-    output_cr:    ; 用标号来命名一个函数
-       mov ah, 2
-       mov dl, 0Dh; 回车符的ASCII码
-       int 21h    ; putchar('\r');
-       mov ah, 2
-       mov dl, 0Ah; 换行符的ASCII码
-       int 21h    ; putchar('\n');
-       ret        ; 函数返回
+            cmp al,'Z'
+            jle again
+        ;#1_end=======================================
+        exit:
+           mov ah, 4Ch
+           int 21h
+        code ends
+        end main
+        ```
 
-    output_space: ; 输出bp个空格
-       push bp
-    output_space_next:
-       cmp bp, 0
-       je output_space_done
-       mov ah, 2
-       mov dl, ' '
-       int 21h
-       sub bp, 1
-       jmp output_space_next
-    output_space_done:
-       pop bp
-       ret
+    ??? note "2 输入一个正奇数n输出由n行星号构成的菱形"
 
-    output_star: ; 输出bp个*
-       push bp
-    output_star_next:   
-       mov ah, 2
-       mov dl, '*'
-       int 21h
-       sub bp, 1
-       jnz output_star_next
-       pop bp
-       ret
+        ```asm
+        code segment
+        assume cs:code
+        output_cr:    ; 用标号来命名一个函数
+           mov ah, 2
+           mov dl, 0Dh; 回车符的ASCII码
+           int 21h    ; putchar('\r');
+           mov ah, 2
+           mov dl, 0Ah; 换行符的ASCII码
+           int 21h    ; putchar('\n');
+           ret        ; 函数返回
 
-    main:
-       mov ah, 1   ; 调用DOS的1号功能输入一个字符
-       int 21h     ; AL=输入的字符
-                   ; 假设输入的字符是{'1', '3', '5', '7', '9'}内的其中之一
-       mov ah, 0   ; 把AX的高8位清零
-       sub al, '0' ; 脱引号, 比如'5' -> 5
-       mov bx, ax  ; bx=行数
-       call output_cr
-       ;#1_begin-------------------
-        mov ax,bx	;!!! call output_cr 的时候 mov ah,2 使得 ax 被改了
-        shr ax,1
-        mov si,0
-        sub si,ax
-        mov di,ax ;<--第1空, 请把解答写在分号左边, 可填多条指令
-                                  ;第1空须完成以下计算:
-                                  ;①ax=行数/2; ②si=-(行数/2); ③di=行数/2
+        output_space: ; 输出bp个空格
+           push bp
+        output_space_next:
+           cmp bp, 0
+           je output_space_done
+           mov ah, 2
+           mov dl, ' '
+           int 21h
+           sub bp, 1
+           jmp output_space_next
+        output_space_done:
+           pop bp
+           ret
+
+        output_star: ; 输出bp个*
+           push bp
+        output_star_next:   
+           mov ah, 2
+           mov dl, '*'
+           int 21h
+           sub bp, 1
+           jnz output_star_next
+           pop bp
+           ret
+
+        main:
+           mov ah, 1   ; 调用DOS的1号功能输入一个字符
+           int 21h     ; AL=输入的字符
+                       ; 假设输入的字符是{'1', '3', '5', '7', '9'}内的其中之一
+           mov ah, 0   ; 把AX的高8位清零
+           sub al, '0' ; 脱引号, 比如'5' -> 5
+           mov bx, ax  ; bx=行数
+           call output_cr
+           ;#1_begin-------------------
+            mov ax,bx	;!!! call output_cr 的时候 mov ah,2 使得 ax 被改了
+            shr ax,1
+            mov si,0
+            sub si,ax
+            mov di,ax ;<--第1空, 请把解答写在分号左边, 可填多条指令
+                                      ;第1空须完成以下计算:
+                                      ;①ax=行数/2; ②si=-(行数/2); ③di=行数/2
 
 
 
-       ;#1_end=====================
-    next_row:   
-       mov bp, si
-       ;#2_begin-------------------
-        cmp bp,0
-        jl upd
-            jmp done
-        upd:
+           ;#1_end=====================
+        next_row:   
+           mov bp, si
+           ;#2_begin-------------------
+            cmp bp,0
+            jl upd
+                jmp done
+            upd:
+                mov bp,0
+                sub bp,si
+            done:                    ;<--第2空, 请把解答写在分号左边, 可填多条指令
+                                      ;第2空须完成以下计算:                        
+                                      ;bp=待输出的空格数=abs(si)
+
+
+           ;#2_end=====================
+        bp_is_positive:
+           call output_space
+           ;#3_begin-------------------  
             mov bp,0
-            sub bp,si
-        done:                    ;<--第2空, 请把解答写在分号左边, 可填多条指令
-                                  ;第2空须完成以下计算:                        
-                                  ;bp=待输出的空格数=abs(si)
+            cmp si,0
+            jl upd2
+                sub bp,si
+                jmp done2
+            upd2:
+                add bp,si
+            done2:
+                shl bp,1
+                add bp,bx            ;<--第3空, 请把解答写在分号左边, 可填多条指令
+                                      ;第3空须完成以下计算:                        
+                                      ;bp=待输出的*个数=bx - 2*abs(si)
 
-
-       ;#2_end=====================
-    bp_is_positive:
-       call output_space
-       ;#3_begin-------------------  
-        mov bp,0
-        cmp si,0
-        jl upd2
-            sub bp,si
-            jmp done2
-        upd2:
-            add bp,si
-        done2:
-            shl bp,1
-            add bp,bx            ;<--第3空, 请把解答写在分号左边, 可填多条指令
-                                  ;第3空须完成以下计算:                        
-                                  ;bp=待输出的*个数=bx - 2*abs(si)
-
-       ;#3_end=====================
-       call output_star
-       call output_cr
-       add si, 1
-       cmp si, di
-       jle next_row
-    exit:   
-       mov ah, 4Ch
-       int 21h
-    code ends
-    end main
-    ```
+           ;#3_end=====================
+           call output_star
+           call output_cr
+           add si, 1
+           cmp si, di
+           jle next_row
+        exit:   
+           mov ah, 4Ch
+           int 21h
+        code ends
+        end main
+        ```
