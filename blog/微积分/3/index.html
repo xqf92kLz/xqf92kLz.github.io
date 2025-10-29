@@ -1133,7 +1133,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-29'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-29T13:14:30.228409+00:00'>2025-10-29</time></span><span data-tippy-content data-tippy-raw='2025-10-29'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-29T13:14:30.228409+00:00'>2025-10-29</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-10-29'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-10-29T14:36:09.084774+00:00'>2025-10-29</time></span><span data-tippy-content data-tippy-raw='2025-10-29'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-10-29T14:36:09.084774+00:00'>2025-10-29</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1290,14 +1290,14 @@
 </li>
 <li>
 <p><span class="arithmatex">\([f(x)e^{\varphi(x)}]'=[f'(x)+f(x)\varphi'(x)]e^{\varphi(x)}\)</span></p>
-<p>见到 <span class="arithmatex">\(f'(x)+f(x)\varphi'(x)\)</span>，作 <span class="arithmatex">\(F(x)=f(x)e^{\varphi(x)}\)</span>。</p>
-<p>如 <span class="arithmatex">\(f'(x)+kf(x)\)</span> 作 <span class="arithmatex">\(F(x)=f(x)e^{kx}\)</span>，<span class="arithmatex">\(f'(x)+(\dfrac 1 x-1)f(x)\)</span> 作 <span class="arithmatex">\(F(x)=f(x)e^{\ln x-x}=f(x)xe^{-x}\)</span>。</p>
-</li>
-<li>
-<p>常数的处理：如 <span class="arithmatex">\(f'(x)+f(x)=1\)</span>，<span class="arithmatex">\(\Rightarrow [f(x)-1]'+f(x)-1=0\)</span>，构造 <span class="arithmatex">\(F(x)=e^x[f(x)-1]\)</span>。</p>
 </li>
 </ul>
+<p>见到 <span class="arithmatex">\(f'(x)+f(x)\varphi'(x)\)</span>，作 <span class="arithmatex">\(F(x)=f(x)e^{\varphi(x)}\)</span>。</p>
+<p>如 <span class="arithmatex">\(f'(x)+kf(x)\)</span> 作 <span class="arithmatex">\(F(x)=f(x)e^{kx}\)</span>，<span class="arithmatex">\(f'(x)+(\dfrac 1 x-1)f(x)\)</span> 作 <span class="arithmatex">\(F(x)=f(x)e^{\ln x-x}=f(x)xe^{-x}\)</span>。</p>
 </details>
+<ul>
+<li>常数的处理：如 <span class="arithmatex">\(f'(x)+f(x)=1\)</span>，<span class="arithmatex">\(\Rightarrow [f(x)-1]'+f(x)-1=0\)</span>，构造 <span class="arithmatex">\(F(x)=e^x[f(x)-1]\)</span>。<span class="arithmatex">\(f'(x)-\lambda[f(x)-x]=1\)</span>，<span class="arithmatex">\(\Rightarrow [f(x)-x]'-\lambda[f(x)-x]=0\)</span>，构造 <span class="arithmatex">\(F(x)=e^{-\lambda x}[f(x)-x]\)</span>。</li>
+</ul>
 </li>
 <li>
 <p>罗尔定理：</p>
@@ -1357,9 +1357,9 @@
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,c]\)</span> 上连续，<span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\((0,c)\)</span> 存在且单调递减，且 <span class="arithmatex">\(f(0)=0\)</span>。证明：<span class="arithmatex">\(f(a+b)\leq f(a)+f(b)\)</span>，其中 <span class="arithmatex">\(0\leq a\leq b\leq a+b\leq c\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
+</details>
 <p>当 <span class="arithmatex">\(a=0\)</span> 时，由 <span class="arithmatex">\(f(0)\)</span> 知成立。</p>
 <p>当 <span class="arithmatex">\(a&gt;0\)</span> 时，在 <span class="arithmatex">\([0,a]\)</span> 和 <span class="arithmatex">\([b,a+b]\)</span> 上分别应用拉格朗日中值定理，<span class="arithmatex">\(f(a)-f(0)=f'(\xi_1)a\)</span>，<span class="arithmatex">\(f(a+b)-f(b)=f'(\xi_2)a\)</span>，由于 <span class="arithmatex">\(\xi_1&lt;\xi_2\)</span> 且 <span class="arithmatex">\(f'(x)\)</span> 单调递减，则 <span class="arithmatex">\(f'(\xi_1)\geq f'(\xi_2)\)</span>，故 <span class="arithmatex">\(f(a)\geq f(a+b)-f(b)\)</span>，得证。</p>
-</details>
 </details>
 </li>
 </ul>
