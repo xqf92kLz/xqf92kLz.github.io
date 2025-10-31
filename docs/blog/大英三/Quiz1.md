@@ -1,0 +1,116 @@
+
+- [ ] Part I Compound Dictation 10% (Book II 视听说Unit 1-4)
+
+- [ ] Part II Vocabulary & Structure 15% (Book II Unit 1-4 20个&Book I Unit 1-4 10个 来自词表） 
+
+- [ ] Part III Translation 10% 短句翻译  (Book II Unit 1-4)
+
+- [ ] Part IV Sentence Completion 10% (给单词首字母和中文）(Book II Unit 1-4 10个&Book I Unit 1-4 10个，单词来自词表)
+
+- [ ] Part V BankedCloze 10%（15个单词选10个填空，不用词形变换）
+
+	(来自Book II Unit 1-4 ReadingPassages)
+
+- [ ] Part VI Reading 5% (Multiple choice，来自课外)
+
+- [ ] Part VII Writing 15%
+
+## Part III, Part V
+
+（来自 Book II Unit 1-4 Readings）
+
+??? info "U1 Reading 1: From "Made in China" to "Created in China""
+
+    1 In late September 2022, I went to visit a famous **entrepreneur** in Zhongguancun. I entered his office complex from the back door. **Mistakenly**, I took the wrong lift and, as if tripping through a **wormhole**, found myself in the Beijing of the past century. 
+    
+    1 2022年9月底，我去中关村拜访了一位著名企业家。我从后门走进了他的办公大楼。但我坐错了电梯，仿佛穿越了一条时空隧道，我来到了上个世纪的北京。
+    
+    2 In the late 1990s, Zhongguancun, now sometimes referred to as China's Silicon Valley, was largely known for its electronics markets **sprawling** along the neighborhood. There were several ==high-rise buildings==, in which you could **wander** around ==vast open floors==   ==packed with **stalls**==   selling   ==a wide **spectrum** of== tech devices from DVD players to phones, cameras to TVs, USB **cords** to printers. Most of them ==were manufactured or **assembled** in China==. 
+    
+    2 在二十世纪九十年代末，现在有时被称为中国硅谷的中关村以遍布杂乱无章的电子市场而广为人知。那里有几栋高楼，你可以在开阔的开放楼层间闲逛，那里到处是摊位，出售各种科技设备，包括影碟机、手机、相机、电视、USB数据线、打印机等。其中大多数都是在中国制造或组装的。
+    
+    3 Now, the electronics markets in Zhongguancun are mostly gone. ==Standing **amid** the **glittering** office complex==, which ==is home to some of the most promising high-tech start-ups and R&D companies==, you can hardly imagine what it was like only a few decades ago. 
+    
+    3 如今，中关村的电子市场大多已经消失了。在闪闪发光的办公大楼中有一些最具前景的高科技初创企业和研发公司。站在那里，你几乎无法想象几十年前那里的样子。
+    
+    4 There are still some **holdouts** here, so it's easy to ==slip into== an older lift, as I did, and find yourself surrounded by keyboards and printers. But this contrast also ==reminds you of== just how quickly China is changing. "Some people in Silicon Valley still think all China can do is ==**clone** their ideas==, but that's out of date. Now I see China as a major driving force ==for== **innovation** and lots of companies in Western countries are ==copying== China," said an investor working between China and America. 
+    
+    4 这里依然有一些守旧者，所以你很容易像我一样误入一部旧电梯，发现自己被键盘和打印机包围。然而，这种对比也提醒着你中国的变化有多快。“硅谷的一些人仍然觉得中国只会照搬他们的创意，但这种观念已过时了。现在我认为中国是创新的主要驱动力，许多西方企业正在效仿中国。”一位来往于中美之间的投资者说。
+    
+    5 For now, these worlds **coexist**: the China of the past and the China of the future. But **increasingly**, the one that ==draws== the world's attention is not ==the factory-and-warehouse aspect of China==, but the new innovation-driven China that is **poised** to reshape the future of global technology, with growing strength in fields ranging from **artificial intelligence** to **drones**. ==The international community== describes China's ==great== development and achievements as "**miracles**." What is the ==**impetus**== behind these miracles? That's why I went to meet with this entrepreneur. 
+    
+    5 目前，过去的中国与未来的中国共存。但渐渐地，吸引世界关注的不再是 ==中国的工厂和仓库==，而是创新驱动的中国。中国在人工智能和无人机等领域的实力不断增强，势将重塑全球技术的未来。国际社会将中国的巨大发展和成就称为“奇迹”。这些奇迹背后的动力是什么？这就是我要去拜访这位企业家的原因。
+    
+    6 He told me that ==China's tech landscape== back in the 1990s would ==be **unrecognizable** to（不是 for）== a young person ==of== today. Foreign brands **reigned** **supreme** in the mobile phone **sector**, e-commerce was just a **glimmer** in an entrepreneur's eye, and the ==potential== of the Internet was only vaguely realized. 
+    
+    6 他告诉我，二十世纪九十年代的中国科技格局是如今的年轻人无法想象的。外国品牌称霸手机领域，电子商务只是创业者的一个模糊想法，互联网的潜力也仅仅得到了初步认识。
+    
+    7 However, China has ==**accomplished** a remarkable **feat**== in **transforming** itself from ==a low-cost manufacturing economy== to ==a higher-value, innovation-led one==, in only ==a few== decades. According to ==**the Global Innovation Index** 2021 released by **the World Intellectual Property Organization**==, China ranks 12th, moving up two places from 14th in 2020, and ==maintaining **momentum**== for nine **consecutive** years 
+    
+    7 然而，在短短几十年的时间里，中国就完成了从低成本制造业经济向高价值、创新驱动型经济转型这一令人瞩目的壮举。根据世界知识产权组织发布的“2021年全球创新指数”，中国排名第12位，比2020年的第14位上升了两位，而且连续九年保持上升势头。
+    
+    8 "==The rise of China as an innovation **hub** has not happened **overnight**==," the entrepreneur said. "This can ==be explained by== China's ==consistent and favorable innovation policies== for more than three decades, as well as by the fact that ==it has **impressively** increased spending on education, science, and technology==." According to official data, Chinese investments in R&D have **burgeoned** since ==the turn of the century==, ==increasing more than ten times since 2000 and reaching a high of 2.4 percent of **GDP** in 2020==. 
+    
+    8 “中国崛起为创新中心并非一蹴而就。”这位企业家说。“这可以 ==归因于== 中国三十多年来持续有利的创新政策，以及中国大幅增加的教育、科学、技术方面的支出。”根据官方数据，自 ==本世纪初== 以来，中国在研发方面的投入迅速增长。自2000年以来，研发投入增长了十倍以上，而且在国内生产总值中，它的占比在2020年创了新高，达到了2.4%。
+    
+    9 More importantly, China has the ability to ==translate pro-innovation policy and innovation inputs into sound results==, such as technological **breakthroughs** and high-tech products. After years of hard work, China is now ==leading the world== in the field of **aerospace** technology, high-speed railways, ==5G-enabled technologies==, artificial intelligence, and deep-sea exploration. ==In the long term==, some of these innovations might ==have **profound** effects on the economy and industry==, pretty much like how the invention of electricity and computers changed ==human life==. 
+    
+    9 更重要的是，中国具备 ==将支持创新的政策和创新投入转化为切实成果== 的能力，如技术突破和高科技产品。经过多年的努力，中国现在在航天技术、高速铁路、5G技术、人工智能和深海探测领域处于世界领先地位。从长远来看，其中一些创新可能对经济和工业产生深远影响，就像电力和计算机的发明改变了人类生活一样。
+    
+    10 " Innovation is leading China to ride the wave of digitalization and ==**evolve** into== a global tech hub. And the country is **envisioning** ==a shift== from 'made in China' to 'created in China,' from 'Chinese speed' to 'Chinese quality,' and from 'Chinese products' to 'Chinese brands,'" he added. 
+    
+    10 “创新正在引领中国乘着数字化浪潮 ==发展成为== 全球科技中心。中国正设想从‘中国制造’转向‘中国创造’，从‘中国速度’转向‘中国质量’，从‘中国产品’转向‘中国品牌’。”他补充道。
+    
+    11 Walking out of the building ==around== 7 p.m. after the interview, ==I found a complex of buildings still brightly lit==, probably with many employees working hard on China's next big innovation. 
+    
+    11 采访结束后，我大约晚上七点左右走出大楼，发现办公大楼依然灯火通明，可能有许多员工正在努力研发中国的下一个重大创新。
+    
+    12 ==It is no wonder that== when a few weeks ago I talked to ==a group of Chinese executives== about their recent trip to **Silicon Valley**, ==the **consensus** was confidence==. "What Silicon Valley has done is impressive, but now ==I see the most potential in China==," said one executive. The world ==celebrates== Silicon Valley as a center of innovation, but many Chinese executives, particularly from China's growing technology sector, ==feel increasingly convinced that they can compete **head-to-head**, engineer by engineer, with the best in Silicon Valley or other innovation hubs==. 
+    
+    12 几周前，我和一群中国高管谈论他们最近的硅谷之行时，他们一致表示对中国充满信心，这也就不足为奇了。“硅谷所取得的成就的确令人赞叹，但现在我认为中国具有最大的潜力。”一位高管说。全世界都在赞扬硅谷是创新中心，但许多中国高管，特别是来自中国不断壮大的科技产业的那些高管，越来越坚信他们可以与硅谷或其他创新中心的精英进行一对一正面交锋。
+    
+    13 Indeed, the country ==has more than its share of world-class companies that are increasingly rising in **rankings** on size, growth, and, most significantly, innovation==. With ==a huge capital investment, an educated and ambitious **workforce**, a can-do spirit, impressive companies, and a **dogged** spirit== to achieve, China is sure to lead in the era of innovation. 
+    
+    13 确实，中国拥有很多世界级公司，它们在规模、发展速度和最重要的创新方面的排名不断上升。凭借大量的资本投入、受过良好教育且雄心勃勃的劳动人口、敢作敢为的精神、令人瞩目的企业以及坚忍不拔的进取精神，中国必将引领创新时代。
+    
+    14 Next time someone tells you China doesn't innovate, suggest that they take a closer look. 
+    
+    14 下次有人告诉你中国没有创新能力时，建议他们更加仔细地看看。
+
+??? info "U1 Reading 2: Dawn of the Chinese Millennials"
+
+    1 As the clock ==struck== twelve to welcome the new year, I noticed that Chinese people of all ages were suddenly posting pictures of themselves at 18 on social media. They **reminisced** about their youth, and **regretfully** **remarked** how fast time had flown. 
+    
+    1 当迎接新年的钟声敲响午夜12点的时候，我注意到各个年龄段的中国人突然都在社交媒体上晒出了他们18岁时的照片。他们追忆似水年华，叹息时光飞逝。
+    
+    2 Curious, I asked my ==colleagues== about the **phenomenon**. Did something happen that led to this **outpouring**? Or was this an annual *Auld Lang Syne*-type ritual? 
+    
+    2 出于好奇，我向同事们了解这种现象。是什么导致了这种现象的涌现？这抑或是一年一度的仪式，就像大家都在新年来临之时唱《美好往昔》一样？
+    
+    3 It turned out to be a **spontaneous** movement to express **amazement** that someone born in 2000 would be an 18-year-old adult this year. This movement eventually evolved into people posting pictures of themselves at that age. 
+    
+    3 这原来是一次人们自发的活动，他们惊叹那些2000年出生的人今年就年满18岁成年了。这个活动最终演变成了人们分享自己18岁的照片。
+    
+    4 Other than feeling old, I started to think about how an 18-year-old Chinese has all the advantages of modern China, including the possibility to develop into global citizens, in contrast to their parents and grandparents. They were the first generation to experience the benefits of ==China's reform and opening up==, which began in 1978. Unlike their parents, who lived through **hardship** and poverty, they have never experienced ==an economic **downturn**==. In fact, China's average GDP growth was nearly 10 percent ==**per annum**== from 1979 to 2010. Born and ==raised== as the country's wealth was rapidly growing, they benefited enormously from economic and social reforms. Also, as most of them are the only child in their family, they are ==the **sole** focus of their parents' and grandparents' love and financial support==. Therefore, their ==spending **capacity**== is more ==generous== than past generations. 
+    
+    4 除了觉得自己老了之外，我开始思考，与他们的父母和祖父母相比，一个18岁的中国人是如何拥有现代中国所赋予他们的所有优势的，包括成长为世界公民的可能性。他们是中国1978年开始的改革开放的第一代受益者。他们的父母经历了苦难和贫穷，但他们却不一样，他们从未经历过经济衰退。事实上，从1979年到2010年，中国国内生产总值的年均增长率接近10%。他们出生和成长于中国财富迅速增长的时期，因此从经济和社会改革中受益匪浅。同时，因为他们大多是家中的独生子女，集父辈与祖父辈的宠爱与经济支持于一身，所以他们的消费能力也比过去几代人都要强。
+    
+    5 They are also ==more educated and globally aware== than their parents. ==About== a quarter of them are ==college graduates== or above, ==as compared to== only three percent in their parents' generation. ==Born as digital natives with information at their fingertips==, these **youngsters** are more **sophisticated**, ==have exposure to== international cultures and ideas, and enjoy a modern healthy **lifestyle**. They ==tend to be== more **individualistic**, **entrepreneurial**, and **confident**. Young people born after 1990 ==tend to== change jobs frequently. However, there's also **considerable** pressure on them to look after their ==aging== parents and even grandparents. As most of them are the only child in the family, they face ==the **daunting** task of== ensuring the health and ==well-being== of their older generations as they ==**navigate** through their own lives==. However, they are generally very positive about the future, as they are confident about China's growing ==status== in the world. 
+    
+    5 和父母相比，他们的受教育程度更高，全球意识也更强。他们中大约有四分之一的人是大学毕业或接受过更高的教育，而他们的父辈中仅有3%的人受过同等教育。他们是天生的数字原住民，对信息了如指掌。他们也更加世故老练，有机会接触到国际文化和思想，并享受现代的健康生活方式。他们往往更具有个性、创业精神和自信心。1990后出生的年轻人往往频繁更换工作。然而，他们要照顾日渐衰老的父母甚至祖父母，压力也相当大。由于他们大多数是家中的独生子女，在应对自己生活的同时，他们还面临着一项艰巨任务——确保老一辈人的健康和幸福。不过，总体来说，他们对未来非常乐观积极，因为他们对中国日益提高的世界地位充满信心。
+    
+    6 In Australia, we would call these young people "millennials" or "Gen Y." ==All sorts of characteristics are **attributed** to millennials such as being tech-**savvy**, **progressive**, environmentally minded, and globally aware==. However, they are also ==**deemed** to be== **self-centered**, **entitled**, ==sheltered==, and even lazy. As the saying goes, ==every generation has its doubts about the one that follows it==. ==Whatever the case may be==, millennials in China are ==a huge phenomenon== that is impacting China and the world in many ways, for example, in its ==consumer behavior==. 
+    
+    6 在澳大利亚，我们称这些年轻人为“千禧一代”或“Y一代”。人们认为千禧一代具有各种特点，比如精通科技、思想进步、有环保意识和全球意识。然而，他们也被认为是以自我为中心的、享有权利的、受庇护的，甚至懒惰的一代。俗话说，每一代人都觉得一代不如一代。不管情况如何，中国的千禧一代是非凡的一代人，他们在很多方面影响着中国和世界，例如，在消费行为方面的影响。
+    
+    7 Naturally, Chinese millennials present a vast market. One study shows that **consumption** by young Chinese spenders under the age of 35 ==accounts for== 65 percent of consumption growth. In addition, consumption by these millennials ==is **forecast** to== grow ==at an annual rate of== 11 percent from 2016 to 2021, ==twice that of== consumers older than 35. In three years, ==the share of== total consumption by the young generation ==is projected to== reach 69 percent, as compared to 31 percent by the older generation. 
+    
+    7 中国的千禧一代自然是一个庞大的市场。一项研究显示，35岁以下的中国年轻人的消费额占消费增长的65%。此外，从2016年到2021年，这些千禧一代的消费额预计将以每年11%的速度增长，这相当于35岁以上消费者的两倍。三年后，年轻一代的消费额有望占到总消费额的69%，而老一代的消费额仅占31%。
+    
+    8 What kind of products and services do these millennials want? According to another study, Chinese millennials spend most on experiences and products where quality matters. Therefore, what's most important for a product is to have the ability to ==speak to== a millennial's ==**aspirations** and sense of identity==, of which being a global citizen and having pride in China are important factors. **Furthermore**, like most young people, millennials in China are also more likely to spend money on things that make their life more comfortable and convenient. And they want these products and services delivered fast. Hence, millennials ==have driven China's **e-commerce** boom==. They are generally eager to experience ==what's new and **trendy**==. ==See now, buy now, and live for today== may be what some Chinese millennials believe in nowadays. 
+    
+    8 这些千禧一代想要什么样的产品和服务呢？另一项研究表明，中国的千禧一代在优质体验和产品上消费最多。因此，一个产品最重要的是要能够表达千禧一代的愿望和自我认同感，其中全球公民的身份和民族自豪感是他们身上的重要特征。此外，和大多数年轻人一样，中国的千禧一代也更愿意花钱买一些东西，让生活更加舒适和方便。他们希望这些产品和服务能够快速送达到他们手上，因此，他们促进了中国电子商务的繁荣。他们普遍热衷于体验新潮的东西。“即看即买”、“活在当下”也许就是如今一些中国千禧一代所秉承的信条。
+    
+    9 After a few days, I managed to find a photograph of myself at 18 as a Grade 12 student in **Melbourne**. However, by that time, the **craze** of posting old pictures of oneself had passed. Chinese millennials have moved on. ==Such is the speed at which these young people move==. To get their attention, we need to move as fast as they do. 
+    
+    9 几天后，我设法找到了一张我18岁时在墨尔本读12年级时的照片。然而，分享自己老照片的热潮在那时已经过去了。中国的千禧一代在继续前行，这就是这些年轻人的行动速度。要想引起他们的注意，我们也需要像他们一样快速前行。
