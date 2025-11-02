@@ -172,7 +172,7 @@
 
 ??? info "U2 Reading2: The secret to remembering travel"
 
-    1 Whenever I look through all those files of things I've saved over the years, I usually ==stumble upon== some long-forgotten newspaper article I have ==**tucked** away==. I give it a **casual** glance, turn it over, then always find that whatever's on the back is more interesting. **Serendipity** seems to ==win out over== planning every time. Travel is like that. No matter how many journals I fill, photos I take, or posts I send, I find that I often "document" the wrong things. 
+    1 Whenever I look through all those ==files of things== I've saved over the years, I usually ==stumble upon== some ==long-forgotten== newspaper article I have ==**tucked** away==. I give it a **casual** glance, turn it over, then always find that ==whatever's== on the back is more interesting. **Serendipity** seems to ==win out over== planning every time. Travel is like that. No matter how many journals I fill, photos I take, or posts I send, I find that I often "document" the wrong things. 
     
     1 每当我翻阅这些年来收藏的一叠叠东西时，我常会无意间看到某篇报纸文章，当时随手一塞，早已经遗忘。我漫不经心地看它一眼，又把报纸翻过来，然后发现写在背面的东西总显得更为有趣。机缘巧合似乎总胜过精心计划。旅行也是这样。无论我写了多少旅行日志，拍摄多少照片，发送多少帖子，我发现自己经常记录了错误的事情。
     
@@ -184,7 +184,7 @@
     
     3 同样，九十年代初在俄罗斯学习时，我对着几个世纪不变的洋葱形圆顶大教堂拍了一卷又一卷的胶片，而对在地铁口外举着牙刷售卖的俄罗斯老奶奶视而不见，这正是这个国家起步迈向资本主义的生动写照，而现在都已经不复存在了。
     
-    4 Not that there's anything wrong with gold-topped churches, of course, but I ended up "capturing" the same Russia people can capture today. Now, when I go on trips, I try to listen to what Future Robert is trying to tell Present Robert to notice, to record, to remember. 
+    4 ==Not that== there's anything wrong with ==gold-topped churches==, of course, ==but== I ended up "capturing" the same Russia people can capture today. Now, when I go on trips, I try to listen to what Future Robert is trying to tell Present Robert to notice, to record, to remember. 
     
     4 当然，拍摄金顶教堂并没有什么错，但结果就是我所拍摄的俄罗斯与今天人们看到的俄罗斯并无二致。所以当我现在出去旅行时，我试着听听未来的罗伯特想要告诉现在的罗伯特需要注意什么，记录什么和记住什么。
     
