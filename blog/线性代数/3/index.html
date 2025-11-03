@@ -1215,7 +1215,7 @@
 
   <h1>第三章 矩阵的运算</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-02T11:49:41.209586+00:00'>2025-11-02</time></span><span data-tippy-content data-tippy-raw='2025-11-02'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-02T11:49:41.209586+00:00'>2025-11-02</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-03'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-03T02:57:42.604761+00:00'>2025-11-03</time></span><span data-tippy-content data-tippy-raw='2025-11-03'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-03T02:57:42.604761+00:00'>2025-11-03</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <details class="info">
 <summary>矩阵的加减法、数乘、乘法和转置</summary>
@@ -1483,6 +1483,7 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 <p>定义</p>
 <p>对于 <span class="arithmatex">\(A_{m\times n}\)</span>，若存在 <span class="arithmatex">\(k\)</span> 阶子式不为 <span class="arithmatex">\(0\)</span>，而任意 <span class="arithmatex">\(k+1\)</span> 阶子式（若有）全为 <span class="arithmatex">\(0\)</span>，则 <span class="arithmatex">\(r(A)=k\)</span>。</p>
 <p><span class="arithmatex">\(r(A_{n\times n})=n\Leftrightarrow |A|\neq 0\Leftrightarrow A\)</span> 可逆。</p>
+<p><span class="arithmatex">\(0\leq r(A)\leq \min\{m,n\}\)</span></p>
 </li>
 <li>
 <p>初等变换不改变矩阵的秩</p>
@@ -1494,21 +1495,53 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 </details>
 </li>
 <li>
+<p>矩阵的运算对秩的影响</p>
+<ul>
+<li>
+<p>转置，数乘，求逆：<span class="arithmatex">\(r(A)=r(A^T)\)</span>，<span class="arithmatex">\(r(cA)=\begin{cases}0,&amp;c=0\\r(A),&amp;c\neq 0\end{cases}\)</span>，<span class="arithmatex">\(r(A_n^{-1})=r(A_n)=n\)</span>（<span class="arithmatex">\(A_n\)</span> 可逆）</p>
+</li>
+<li>
+<p>乘法：</p>
+<ul>
+<li><span class="arithmatex">\(r(A)=r(PA)=r(AQ)=r(PAQ)\)</span>，其中 <span class="arithmatex">\(A_{m\times n}\)</span>，<span class="arithmatex">\(P_{m\times m}\)</span>，<span class="arithmatex">\(Q_{n\times n}\)</span>，且 <span class="arithmatex">\(P,Q\)</span> 可逆</li>
+<li>
+<p><span class="arithmatex">\(\underbrace{r(A)+r(B)-s\leq r(AB)}_{\text{Sylvester 不等式}}\leq \min\{r(A),r(B)\}\)</span>，其中 <span class="arithmatex">\(A_{m\times s},B_{s\times n}\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>
+<p>证明 Sylvester 不等式：</p>
+<p><span class="arithmatex">\(\begin{pmatrix}E&amp;O\\O&amp;AB\end{pmatrix}\xrightarrow{R_2+AR_2}\begin{pmatrix}E&amp;O\\A&amp;AB\end{pmatrix}\xrightarrow{C_2-C_1B}\begin{pmatrix}E&amp;-B\\A&amp;O\end{pmatrix}\xrightarrow{(-1)C_2}\begin{pmatrix}E&amp;B\\A&amp;O\end{pmatrix}\)</span></p>
+<p>则 <span class="arithmatex">\(r(AB)+s=r\begin{pmatrix}E&amp;O\\O&amp;AB\end{pmatrix}=r\begin{pmatrix}E&amp;B\\A&amp;O\end{pmatrix}\geq r\begin{pmatrix}O&amp;B\\A&amp;O\end{pmatrix}=r(A)+r(B)\)</span></p>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p>Frobenius（弗罗贝尼乌斯）不等式：<span class="arithmatex">\(r(ABC)\geq r(AB)+r(BC)-r(B)\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>加减法：<span class="arithmatex">\(r(A\pm B)\leq r(A)+r(B)\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\begin{pmatrix}A&amp;O\\O&amp;B\end{pmatrix}\xrightarrow{R_2+R_1}\begin{pmatrix}A&amp;O\\A&amp;B\end{pmatrix}\xrightarrow{C_1+C_2}\begin{pmatrix}A&amp;O\\A+B&amp;B\end{pmatrix}\)</span></p>
+<p>则 <span class="arithmatex">\(r(A+B)\leq r\begin{pmatrix}A&amp;O\\A+B&amp;B\end{pmatrix}=r\begin{pmatrix}A&amp;O\\A+B&amp;B\end{pmatrix}=r(A)+r(B)\)</span></p>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(r\begin{pmatrix}A&amp;O\\O&amp;B\end{pmatrix}=r(A)+r(B)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(r\begin{pmatrix}A&amp;O\\*&amp;B\end{pmatrix}\geq r(A)+r(B)\)</span></p>
+</li>
+</ul>
+</li>
+<li>
 <p>有关秩的几个重要式子</p>
 <p>设 <span class="arithmatex">\(A\)</span> 是 <span class="arithmatex">\(m\times n\)</span> 的矩阵，<span class="arithmatex">\(B\)</span> 是满足有关矩阵运算要求的矩阵，则：</p>
 <ul>
-<li>
-<p><span class="arithmatex">\(0\leq r(A)\leq \min\{m,n\}\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(r(AB)\leq \min\{r(A),r(B)\}\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(r(A+B)\leq r(A)+r(B)\)</span></p>
-</li>
-<li>
-<p>设 <span class="arithmatex">\(G=\begin{pmatrix}A_{m\times n}&amp;O\\O&amp;B_{s\times t}\end{pmatrix}\)</span> 或 <span class="arithmatex">\(G=\begin{pmatrix}O&amp;A_{m\times n}\\B_{s\times t}&amp;O\end{pmatrix}\)</span>，则 <span class="arithmatex">\(r(G)=r(A)+r(B)\)</span>。</p>
-</li>
 <li>
 <p><span class="arithmatex">\(AB=O\Rightarrow r(A)+r(B)\leq A\)</span> 的列数</p>
 </li>

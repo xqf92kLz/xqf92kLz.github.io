@@ -1179,7 +1179,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-02T11:49:41.208586+00:00'>2025-11-02</time></span><span data-tippy-content data-tippy-raw='2025-11-02'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-02T11:49:41.208586+00:00'>2025-11-02</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-03'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-03T02:57:42.604761+00:00'>2025-11-03</time></span><span data-tippy-content data-tippy-raw='2025-11-03'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-03T02:57:42.604761+00:00'>2025-11-03</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1194,7 +1194,11 @@
 <p>而 <span class="arithmatex">\(f'(x_0)\)</span> 存在，因此 <span class="arithmatex">\(f_-'(x_0)=f_+'(x_0)=f'(x_0)\)</span>，故 <span class="arithmatex">\(f'(x_0)=0\)</span>。</p>
 </details>
 <ul>
-<li>推论：可能取到极值的点，要么不可导，要么导数为 <span class="arithmatex">\(0\)</span>（驻点：导数为 <span class="arithmatex">\(0\)</span> 的点）。</li>
+<li>
+<p>驻点/稳定点：导数为 <span class="arithmatex">\(0\)</span> 的点。</p>
+<p>则极值点一定包含在驻点或导数不存在的点中。</p>
+<p>最值一定包含在区间端点、区间内部的驻点、区间内部导数不存在的点中。 </p>
+</li>
 </ul>
 </li>
 <li>
@@ -1236,6 +1240,20 @@
 <p>若 <span class="arithmatex">\(M\neq m\)</span>：由于 <span class="arithmatex">\(f(a)=f(b)\)</span>，故最大值 <span class="arithmatex">\(M\)</span> 与最小值 <span class="arithmatex">\(m\)</span> 不能同时在端点 <span class="arithmatex">\(a,b\)</span> 取到。不妨设 <span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f(\xi)=M\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=\xi\)</span> 处取到极大值。根据费马定理，<span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
 </li>
 </ul>
+</details>
+<p>几何意义：两端点纵坐标相等的连续曲线 <span class="arithmatex">\(y=f(x)\)</span>，若除端点外曲线上的任意一点都存在不平行于 <span class="arithmatex">\(y\)</span> 轴的切线，则至少在曲线上存在一点 <span class="arithmatex">\((\xi,f(\xi))\)</span>，在该点的切线平行于 <span class="arithmatex">\(x\)</span> 轴。</p>
+<details class="example">
+<summary>例题</summary>
+<p>证明：<span class="arithmatex">\(a_1\cos x+a_2\cos 2x+\cdots+a_n\cos nx=0\)</span> 在 <span class="arithmatex">\((0,\pi)\)</span> 内至少有一个根。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>若考虑 <span class="arithmatex">\(f(x)=a_1\cos x+a_2\cos 2x+\cdots+a_n\cos nx\)</span>，尽管 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([0,\pi]\)</span> 上连续，但 <span class="arithmatex">\(f(0)=\sum_{k=1}^n a_k\)</span>，<span class="arithmatex">\(f(\pi)=\sum_{k=1}^n (-1)^k a_k\)</span>，无法判断 <span class="arithmatex">\(f(0)\cdot f(\pi)\)</span> 的符号。</p>
+</details>
+<p>令 <span class="arithmatex">\(f(x)=a_1\sin x+\dfrac{a_2}2\sin 2x+\cdots+\dfrac{a_n}n\sin nx\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,\pi]\)</span> 上连续，在 <span class="arithmatex">\((0,\pi)\)</span> 内可导，且 <span class="arithmatex">\(f(0)=f(\pi)=0\)</span>。</p>
+<p>根据罗尔定理，<span class="arithmatex">\(\exists \xi \in(0,\pi)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>，而 <span class="arithmatex">\(f'(x)=a_1\cos x+a_2\cos 2x+\cdots+a_n\cos nx\)</span>，故 <span class="arithmatex">\(a_1\cos x+a_2\cos 2x+\cdots+a_n\cos nx=0\)</span> 在 <span class="arithmatex">\((0,\pi)\)</span> 内至少有一个根。</p>
+</details>
 </details>
 <details class="info">
 <summary>推广的罗尔（Rolle）定理</summary>
@@ -1284,6 +1302,29 @@
 </details>
 </details>
 </details>
+<p>几何意义：闭区间 <span class="arithmatex">\([a,b]\)</span> 上的连续曲线 <span class="arithmatex">\(y=f(x)\)</span> 在 <span class="arithmatex">\((a,b)\)</span> 内处处具有不平行于 <span class="arithmatex">\(y\)</span> 轴的切线，则在区间内部该曲线上至少存在一点 <span class="arithmatex">\((\xi,f(\xi))\)</span> 的切线平行于曲线两端点的连线。</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(f'(x)&gt;0\)</span>。证明：若 <span class="arithmatex">\(a&lt;b\)</span>，则 <span class="arithmatex">\(f(a)&lt;f(b)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>根据拉格朗日中值定理，<span class="arithmatex">\(f(b)-f(a)=f'(\xi)(b-a)&gt;0\)</span>，<span class="arithmatex">\(a&lt;\xi&lt;b\)</span></p>
+</details>
+<p>证明：当 <span class="arithmatex">\(0&lt;\alpha&lt;\beta&lt;\dfrac{\pi}2\)</span> 时，有 <span class="arithmatex">\(\dfrac{\beta-\alpha}{\cos^2\alpha}&lt;\tan\beta-\tan\alpha&lt;\dfrac{\beta-\alpha}{\cos^2\beta}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(f(x)=\tan x\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([\alpha,\beta]\)</span> 上连续，在 <span class="arithmatex">\((\alpha,\beta)\)</span> 内可导。</p>
+<p>根据拉格朗日中值定理，<span class="arithmatex">\(f(\beta)-f(\alpha)=f'(\xi)(\beta-\alpha)\)</span>，即 <span class="arithmatex">\(\tan\beta-\tan\alpha=\dfrac{\beta-\alpha}{\cos^2\xi}\)</span>，<span class="arithmatex">\(0&lt;\alpha&lt;\xi&lt;\beta&lt;\dfrac{\pi}2\)</span>。</p>
+<p>而 <span class="arithmatex">\(\dfrac{\beta-\alpha}{\cos^2\alpha}&lt;\dfrac{\beta-\alpha}{\cos^2\xi}&lt;\dfrac{\beta-\alpha}{\cos^2\beta}\)</span>，故 <span class="arithmatex">\(\dfrac{\beta-\alpha}{\cos^2\alpha}&lt;\tan\beta-\tan\alpha&lt;\dfrac{\beta-\alpha}{\cos^2\beta}\)</span>。</p>
+</details>
+<p>证明：当 <span class="arithmatex">\(x&gt;0\)</span> 时，有 <span class="arithmatex">\(\dfrac x {1+x}&lt;\ln(1+x)&lt;x\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(f(t)=\ln t\)</span>，则 <span class="arithmatex">\(f(t)\)</span> 在 <span class="arithmatex">\([1,1+x]\)</span> 上连续，在 <span class="arithmatex">\((1,1+x)\)</span> 内可导。</p>
+<p>根据拉格朗日中值定理，<span class="arithmatex">\(f(1+x)-f(1)=f'(\xi)x\)</span>，即 <span class="arithmatex">\(\ln (1+x)=\dfrac x {\xi}\)</span>，<span class="arithmatex">\(1&lt;\xi&lt;1+x\)</span>。</p>
+<p>而 <span class="arithmatex">\(\dfrac x {1+x}&lt;\dfrac x {\xi}&lt;x\)</span>，故 <span class="arithmatex">\(\dfrac x {1+x}&lt;\ln (1+x)&lt;x\)</span>。</p>
+</details>
+</details>
 </li>
 <li>
 <p>柯西（Cauchy）中值定理：设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(g'(x)\neq 0\)</span>，则 <span class="arithmatex">\(\exist \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}\)</span>。</p>
@@ -1307,6 +1348,17 @@
 <p><span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(F(a)=F(b)=0\)</span>。根据罗尔定理，<span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(F'(\xi)=0\)</span>，即 <span class="arithmatex">\([f(b)-f(a)]g'(x)-[g(b)-g(a)]f'(x)=0\)</span>。</p>
 <p>对 <span class="arithmatex">\(g(x)\)</span>，若 <span class="arithmatex">\(g(a)=g(b)\)</span>，由罗尔定理，<span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(g'(\xi)=0\)</span>，与 <span class="arithmatex">\(g'(x)\neq 0\)</span> 矛盾。因此，<span class="arithmatex">\(g(a)\neq g(b)\)</span>。</p>
 <p>那么由于 <span class="arithmatex">\(g'(\xi)\neq 0\)</span>，<span class="arithmatex">\(g(a)\neq g(b)\)</span>，则 <span class="arithmatex">\(\dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f'(\xi)}{g'(\xi)}\)</span>。</p>
+</details>
+</details>
+<p>几何意义：用参数方程给定的连续曲线，除端点外，若处处有不平行于 <span class="arithmatex">\(y\)</span> 轴的切线，则在曲线上至少存在一点，在该点的切线平行于两端点的连线。</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(x_1x_2&gt;0\)</span>，证明：<span class="arithmatex">\(\exists\xi\)</span> 介于 <span class="arithmatex">\(x_1,x_2\)</span> 之间，<span class="arithmatex">\(x_1e^{x_2}-x_2e^{x_1}=(x_1-x_2)(1-\xi)e^{\xi}\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\Leftrightarrow \dfrac{x_1e^{x_2}-x_2e^{x_1}}{x_1-x_2}=(1-\xi)e^{\xi}\Leftrightarrow \dfrac{\frac{e^{x_2}}{x_2}-\frac{e^{x_1}}{x_1}}{\frac 1 {x_2}-\frac 1 {x_1}}=(1-\xi)e^{\xi}\)</span></p>
+<p>设 <span class="arithmatex">\(f(x)=\dfrac{e^x}x\)</span>，<span class="arithmatex">\(g(x)=\dfrac 1 x\)</span>。<span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([x_1,x_2]\)</span>（或 <span class="arithmatex">\([x_2,x_1]\)</span>）上连续，在 <span class="arithmatex">\((x_1,x_2)\)</span>（或 <span class="arithmatex">\((x_2,x_1)\)</span>）内可导，且 <span class="arithmatex">\(g'(x)\neq 0\)</span>。</p>
+<p>根据柯西中值定理，<span class="arithmatex">\(\exists\xi\)</span> 介于 <span class="arithmatex">\(x_1,x_2\)</span> 之间，使得 <span class="arithmatex">\(\dfrac{f(x_2)-f(x_1)}{g(x_2)-g(x_1)}=\dfrac{f'(\xi)}{g'(\xi)}\)</span>，即 <span class="arithmatex">\(\dfrac{\frac{e^{x_2}}{x_2}-\frac{^{x_1}}{x_1}}{\frac{1}{x_2}-\frac 1 {x_1}}=\dfrac{\frac{\xi e^{\xi}-e^{\xi}}{\xi^2}}{-\frac{1}{\xi^2}}=(1-\xi)e^{\xi}\)</span>。</p>
 </details>
 </details>
 </li>
@@ -1353,16 +1405,6 @@
 <p>罗尔定理：</p>
 <details class="example">
 <summary>例题</summary>
-<p>证明：<span class="arithmatex">\(a_1\cos x+a_2\cos 2x+\cdots+a_n\cos nx=0\)</span> 在 <span class="arithmatex">\((0,\pi)\)</span> 内至少有一个根。</p>
-<details class="note">
-<summary>解答</summary>
-<details class="abstract" open="open">
-<summary>Abstract</summary>
-<p>若考虑 <span class="arithmatex">\(f(x)=a_1\cos x+a_2\cos 2x+\cdots+a_n\cos nx\)</span>，尽管 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([0,\pi]\)</span> 上连续，但 <span class="arithmatex">\(f(0)=\sum_{k=1}^n a_k\)</span>，<span class="arithmatex">\(f(\pi)=\sum_{k=1}^n (-1)^k a_k\)</span>，无法判断 <span class="arithmatex">\(f(0)\cdot f(\pi)\)</span> 的符号。</p>
-</details>
-<p>令 <span class="arithmatex">\(f(x)=a_1\sin x+\dfrac{a_2}2\sin 2x+\cdots+\dfrac{a_n}n\sin nx\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,\pi]\)</span> 上连续，在 <span class="arithmatex">\((0,\pi)\)</span> 内可导，且 <span class="arithmatex">\(f(0)=f(\pi)=0\)</span>。</p>
-<p>根据罗尔定理，<span class="arithmatex">\(\exists \xi \in(0,\pi)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>，而 <span class="arithmatex">\(f'(x)=a_1\cos x+a_2\cos 2x+\cdots+a_n\cos nx\)</span>，故 <span class="arithmatex">\(a_1\cos x+a_2\cos 2x+\cdots+a_n\cos nx=0\)</span> 在 <span class="arithmatex">\((0,\pi)\)</span> 内至少有一个根。</p>
-</details>
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,+\infty)\)</span> 上可导，且 <span class="arithmatex">\(0\leq f(x)\leq \dfrac{x}{x^2+1}\)</span>，证明：<span class="arithmatex">\(\exists \xi,\eta\in(0,+\infty)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>，<span class="arithmatex">\(f'(\eta)=\dfrac{1-\eta^2}{(1+\eta^2)^2}\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
@@ -1421,13 +1463,6 @@
 <p><span class="arithmatex">\(f(a) - f(b) = f'(\xi)(a - b)\)</span>，<span class="arithmatex">\(\xi \in (b, a)\)</span></p>
 <p><span class="arithmatex">\(a^n - b^n = n\xi^{n-1}(a - b)\)</span></p>
 <p>由于 <span class="arithmatex">\(0 &lt; b &lt; \xi &lt; a\)</span>，<span class="arithmatex">\(n &gt; 1\)</span>，有 <span class="arithmatex">\(nb^{n-1}(a - b) &lt; a^n - b^n = n\xi^{n-1}(a - b) &lt; na^{n-1}(a - b)\)</span>。</p>
-</details>
-<p>证明：当 <span class="arithmatex">\(x&gt;0\)</span> 时，<span class="arithmatex">\(\dfrac x {1+x}&lt;\ln(1+x)&lt;x\)</span>。</p>
-<details class="note">
-<summary>解答</summary>
-<p>即证 <span class="arithmatex">\(\dfrac 1{1+x}&lt;\dfrac{\ln(1+x)-\ln(1+0)}{x-0}&lt;1\)</span>。</p>
-<p>令 <span class="arithmatex">\(f(t)=\ln(1+t)\)</span>，则 <span class="arithmatex">\(f(t)\)</span> 在 <span class="arithmatex">\([0,x]\)</span> 上连续，在 <span class="arithmatex">\((0,x)\)</span> 内可导。根据拉格朗日中值定理，<span class="arithmatex">\(\exists \xi\in(0,x)\)</span> 使得 <span class="arithmatex">\(\dfrac{\ln(1+x)}x=\dfrac 11 {1+\xi}\)</span>。</p>
-<p>而 <span class="arithmatex">\(\dfrac 1 {1+x}&lt;\dfrac 1 {1+\xi}&lt;1\)</span>，故 <span class="arithmatex">\(\dfrac 1 {1+x}&lt;\dfrac{\ln(1+x)}x&lt;1\)</span>。</p>
 </details>
 <p>设函数 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上连续，在 <span class="arithmatex">\((0,1)\)</span> 内可导，且 <span class="arithmatex">\(f(0)=0\)</span>，<span class="arithmatex">\(f(1)=1\)</span>，证明：对 <span class="arithmatex">\(\forall a,b&gt;0\)</span>，<span class="arithmatex">\(\exists \xi_1,\xi_2 \in (0,1)\)</span> 且 <span class="arithmatex">\(\xi_1\neq \xi_2\)</span>，使得 <span class="arithmatex">\(\dfrac{a}{f'(\xi_1)} + \dfrac{b}{f'(\xi_2)} = a+b\)</span>。</p>
 <details class="note">

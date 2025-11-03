@@ -1179,7 +1179,7 @@
 
   <h1>第二章 导数与微分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-02T11:49:41.208586+00:00'>2025-11-02</time></span><span data-tippy-content data-tippy-raw='2025-11-02'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-02T11:49:41.208586+00:00'>2025-11-02</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-03'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-03T02:57:42.603761+00:00'>2025-11-03</time></span><span data-tippy-content data-tippy-raw='2025-11-03'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-03T02:57:42.603761+00:00'>2025-11-03</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">导数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1949,6 +1949,39 @@
 </li>
 <li>
 <p>误差估计</p>
+<p>设 <span class="arithmatex">\(x_0\)</span> 为准确数，<span class="arithmatex">\(x^*\)</span> 为 <span class="arithmatex">\(x_0\)</span> 的近似数。则准确数 <span class="arithmatex">\(x_0\)</span> 的：</p>
+<ul>
+<li>
+<p>绝对误差 <span class="arithmatex">\(\Delta x\)</span>：<span class="arithmatex">\(x^*-x_0\)</span></p>
+</li>
+<li>
+<p>绝对误差限 <span class="arithmatex">\(\delta_x\)</span>：使得 <span class="arithmatex">\(|\Delta x|\leq \delta_x\)</span> 的正数 <span class="arithmatex">\(\delta_x\)</span></p>
+</li>
+<li>
+<p>相对误差：<span class="arithmatex">\(\frac{\Delta x}{x_0}\)</span> 或 <span class="arithmatex">\(\frac{\Delta x}{x^*}\)</span></p>
+</li>
+<li>
+<p>相对误差限：<span class="arithmatex">\(\frac{\delta_x}{|x_0|}\)</span> 或 <span class="arithmatex">\(\frac{\delta_x}{|x^*|}\)</span></p>
+</li>
+</ul>
+<p>若 <span class="arithmatex">\(y=f(x)\)</span>，则 <span class="arithmatex">\(|\Delta y|\approx |\text dy|=|f'(x_0)\Delta x|\leq |f'(x_0)|\delta_x\xlongequal{\text{def}}\delta_y\)</span>。</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(y\)</span> 的绝对误差限 <span class="arithmatex">\(\delta_y\)</span>：<span class="arithmatex">\(|f'(x_0)|\delta_x\)</span> 或 <span class="arithmatex">\(|f'(x^*)|\delta_x\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(y\)</span> 的相对误差限：<span class="arithmatex">\(\frac{\delta_y}{|y|}=|\frac{f'(x_0)}{f(x_0)}|\delta_x\)</span> 或 <span class="arithmatex">\(|\frac{f'(x^*)}{f(x^*)}|\delta_x\)</span></p>
+</li>
+</ul>
+<details class="example">
+<summary>例题</summary>
+<p>为了计算出球的体积（精确到 <span class="arithmatex">\(1\%\)</span>），问度量球的直径 <span class="arithmatex">\(D\)</span> 所允许的最大相对误差是多少？</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(V=\dfrac{4\pi}{3}(\dfrac D 2)^3=\dfrac{\pi D^3}{6}\)</span>，<span class="arithmatex">\(\text dV=\dfrac{\pi D^2}{2}\text dD\)</span></p>
+<p><span class="arithmatex">\(|\dfrac{\text dV}{V}|=|\dfrac{\frac{\pi D^2}2 \text dD}{\frac{\pi D^3}{6}}|=3|\dfrac{\text dD}{D}|\leq 1\%\)</span>，则 <span class="arithmatex">\(|\dfrac{\text dD}{D}|\leq 0.33\%\)</span>，即最大相对误差是 <span class="arithmatex">\(0.33\%\)</span>。</p>
+</details>
+</details>
 </li>
 </ul>
 </li>
