@@ -1383,7 +1383,7 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-03'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-03T02:57:42.603761+00:00'>2025-11-03</time></span><span data-tippy-content data-tippy-raw='2025-11-03'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-03T02:57:42.603761+00:00'>2025-11-03</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-03'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-03T15:06:15.457739+00:00'>2025-11-03</time></span><span data-tippy-content data-tippy-raw='2025-11-03'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-03T15:06:15.457739+00:00'>2025-11-03</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2148,6 +2148,21 @@ $$
 <summary>注意</summary>
 <p>若函数 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处不连续，则上述结论不成立。</p>
 <p>如存在有理点列 <span class="arithmatex">\(\{q_n\}\)</span> 满足 <span class="arithmatex">\(\lim\limits_{n\to +\infty}q_n=\sqrt 2\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}D(q_n)=1\)</span>，<span class="arithmatex">\(D(\lim\limits_{n\to q_n})=D(\sqrt 2)=0\)</span>，此时 <span class="arithmatex">\(\lim\limits_{n\to+\infty}D(q_n)\neq D(\lim\limits_{n\to +\infty}q_n)\)</span>（其中 <span class="arithmatex">\(D(x)\)</span> 为狄利克雷函数）。</p>
+</details>
+<details class="info">
+<summary>只有一点连续的函数</summary>
+<ul>
+<li>
+<p>设 <span class="arithmatex">\(f(x)=xD(x)\)</span>：</p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}f(x)=0=f(0)\)</span>，从而 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续。</p>
+<p>当 <span class="arithmatex">\(x_0\neq 0\)</span> 时，存在有理数列 <span class="arithmatex">\(\{q_n\}\)</span> 与无理数列 <span class="arithmatex">\(\{p_n\}\)</span> 满足 <span class="arithmatex">\(\lim\limits_{n\to +\infty}p_n=\lim\limits_{n\to +\infty}q_n=x_0\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}f(p_n)=0\)</span>，<span class="arithmatex">\(\lim\limits_{n\to +\infty}f(q_n)=\lim\limits_{n\to +\infty}q_n=x_0\)</span>，因此 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处极限不存在，从而 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处不连续。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(g(x)=\begin{cases}x^2&amp;(x\in\mathbb Q)\\-x^2&amp;(x\notin\mathbb Q)\end{cases}\)</span>：</p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}g(x)=0=g(0)\)</span>，从而 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续。</p>
+<p>当 <span class="arithmatex">\(x_0\neq 0\)</span> 时，存在有理数列 <span class="arithmatex">\(\{q_n\}\)</span> 与无理数列 <span class="arithmatex">\(\{p_n\}\)</span> 满足 <span class="arithmatex">\(\lim\limits_{n\to +\infty}p_n=\lim\limits_{n\to +\infty}q_n=x_0\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}g(p_n)=-x_0^2\)</span>，<span class="arithmatex">\(\lim\limits_{n\to +\infty}g(q_n)=x_0^2\)</span>，因此 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处极限不存在，从而 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处不连续。</p>
+</li>
+</ul>
 </details>
 </li>
 <li>
@@ -3180,7 +3195,7 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 </details>
 </li>
 <li>
-<p>没考虑等价无穷小的条件而误用。如，<span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\(\cos \frac{\pi x}{2}\)</span> 并不是无穷小量，不能使用无穷小的等价替换，实际上，它的值就是 <span class="arithmatex">\(1\)</span>。</p>
+<p>没考虑等价无穷小的条件而误用。如，<span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\(\cos \frac{\pi x}{2}\)</span> 并不是无穷小量，不能使用无穷小的等价替换，实际上，它的值就是 <span class="arithmatex">\(1\)</span>；<span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\(\sin\frac 1 x\)</span> 并不是无穷小量。</p>
 </li>
 <li>
 <p>注意极限的四则运算法则无法推广到无限项，例如 <span class="arithmatex">\(1^{\infty}\)</span> 不一定是 <span class="arithmatex">\(1\)</span>。</p>
