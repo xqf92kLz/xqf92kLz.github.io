@@ -1,19 +1,19 @@
 
-- [ ] Part I Compound Dictation 10% (Book II 视听说Unit 1-4)
+- [ ] Part I Compound Dictation 10% (Book II 视听说Unit 1-4) 0.5*8+2\*3=10
 
-- [ ] Part II Vocabulary & Structure 15% (Book II Unit 1-4 20个&Book I Unit 1-4 10个 来自词表） 
+- [ ] Part II Vocabulary & Structure 15% (Book II Unit 1-4 20个&Book I Unit 1-4 10个 来自词表) 0.5*30=15
 
-- [ ] Part III Translation 10% 短句翻译  (Book II Unit 1-4)
+- [ ] Part III Translation 10% 短句翻译  (Book II Unit 1-4) 1*10=10
 
-- [ ] Part IV Sentence Completion 10% (给单词首字母和中文）(Book II Unit 1-4 10个&Book I Unit 1-4 10个，单词来自词表)
+- [ ] Part IV Sentence Completion 10% (给单词首字母和中文）(Book II Unit 1-4 10个&Book I Unit 1-4 10个，单词来自词表) 0.5*20=10
 
-- [ ] Part V BankedCloze 10%（15个单词选10个填空，不用词形变换）
+- [ ] Part V BankedCloze 10%（15个单词选10个填空，不用词形变换）1*10=10
 
 	(来自Book II Unit 1-4 ReadingPassages)
 
-- [ ] Part VI Reading 5% (Multiple choice，来自课外)
+- [ ] Part VI Reading 5% (Multiple choice，来自课外) 1*5=5
 
-- [ ] Part VII Writing 15%
+- [ ] Part VII Writing 15% (150words, 30M) 15
 
 ## Part III, Part V
 
@@ -293,7 +293,7 @@
 
 ??? info "U3 Reading2: Our parents discovered leisure. We killed it."
 
-    1 My great aunt loved to press flowers. Often she'd **hike** the mountains, searching for new plant life. She'd look up her treasures in **botany** books, then label and press them for **safekeeping**. A few times, she couldn't find ==entries== at all; she'd discovered plant species that no one had named. She was ==a **hobbyist** by nature==. When not caring for family, she would ==dry **pine needles**== and **weave** them into beautiful decorations. But she was also ==a product of her time==. ==In the post-war era==, hobbies were what people did in their spare time, after work: basketball, cooking, writing poems. These were activities ==people didn't feel whole without==. 
+    1 My great aunt loved to press flowers. Often she'd **hike** the mountains, searching for new plant life. She'd ==look up her treasures in **botany** books==, then label and press them for **safekeeping**. A few times, she couldn't find ==entries== at all; she'd discovered plant species that no one had named. She was ==a **hobbyist** by nature==. When not caring for family, she would ==dry **pine needles**== and **weave** them into beautiful decorations. But she was also ==a product of her time==. ==In the post-war era==, hobbies were what people did in their spare time, after work: basketball, cooking, writing poems. These were activities ==people didn't feel whole without==. 
     
     1 我的姨奶奶喜欢压花。她经常爬山，在山上寻找新的植物。她会在植物学书籍中查找自己发现的宝物，然后给它们贴上标签，做成压花，以便好好保存。有几次，她在书上根本找不到条目，她发现了尚未命名过的植物种类。她是个天生的植物爱好者。当不需要照顾家庭时，她会晾干松针并将它们编织成漂亮的装饰品。但她也是她那个时代的产物。战后，业余爱好是人们在下班后的业余时间里所做的事：打篮球、烹饪、写诗。没有这些活动，大家会觉得生活不完整。
     
