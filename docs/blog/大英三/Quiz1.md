@@ -405,3 +405,7 @@
     7 Ultimately, what's at stake in these findings is not simply the question of how to reduce gender inequality in the world of letters, but also how we imagine and recognize such change. **Quantitative** changes in gender **representation** are not **trivial** and they provide a **noticeable** sense of improvement: This year, more books by women were reviewed. Yet, they may also **disguise** the real site of struggle: our **unconscious** attitudes about the idea of women writing books. Many **publishers** have done a great service in **pursuing** better gender representation. But gender representation does not necessarily equal less gender **discrimination**. The pattern is bigger than a head count — it's also about the patterns of ideas and words, which have proven far more enduring and unchanging than we would have thought. 
     
     7 从根本上来讲，这些研究结果不仅关乎如何减少文学界的性别不平等，而且关乎如何想象并认识这种变化。性别比例在数量上的变化并不是微不足道的，它们能够让人清楚地意识到情况已经有所改善：今年，女性作家的作品受到评论的数量有所增加。然而，这些数量上的变化也有可能掩盖了斗争的根本所在：我们潜意识中对于女性从事写作的态度。很多出版物在改善性别比例方面已经作出了很大的贡献。但是，改善性别比例并不一定等同于减少性别歧视。性别不平等的模式不只关乎人数统计——它还关乎思维模式和语言模式，而这些要比我们原以为的更加历久不变。
+
+## Part IV
+
+（来自 Book II Unit 1-4  & Book I Unit 1-4，给单词首字母和中文）
