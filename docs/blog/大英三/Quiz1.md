@@ -409,3 +409,1165 @@
 ## Part IV
 
 （来自 Book II Unit 1-4  & Book I Unit 1-4，给单词首字母和中文）
+
+??? info "B1U1-1"
+
+    - 就事论事地；不带感情地；实事求是地 m
+
+        ??? note "英文"
+            matter-of-factly
+
+    - 现实的；实际的；实事求是的 r
+
+        ??? note "英文"
+            realistic
+
+    - 生物学 b
+
+        ??? note "英文"
+            biology
+
+    - 非常需要...的；极其需要...的 d
+
+        ??? note "英文"
+            desperate
+
+    - ==朋友；伙伴 b==
+
+        ??? note "英文"
+            buddy
+
+    - 可以达到的；可以获得的 a
+
+        ??? note "英文"
+            attainable
+
+    - ==动物行为学家 e==
+
+        ??? note "英文"
+            ethologist
+
+    - ==命运决定的；命中注定的 f==
+
+        ??? note "英文"
+            fated
+
+    - 大胆创新的 a
+
+        ??? note "英文"
+            adventurous
+
+    - 异国风情的；外国情调的 e
+
+        ??? note "英文"
+            exotic
+
+    - 一系列 s
+
+        ??? note "英文"
+            string
+
+    - 用（线、链等）穿起来 s
+
+        ??? note "英文"
+            string strung strung
+
+    - 全心全意地；全力以赴地 w
+
+        ??? note "英文"
+            whole-heartedly
+
+    - 一心一意地；专心致志地 s
+
+        ??? note "英文"
+            single-mindedly
+
+    - 混乱的；毫无秩序的 c
+
+        ??? note "英文"
+            chaotic
+
+    - 迟到的；延误的 o
+
+        ??? note "英文"
+            overdue
+
+    - 分配，分派，指派（任务） a
+
+        ??? note "英文"
+            assign
+
+    - ==儿科医生 p==
+
+        ??? note "英文"
+            pediatrician
+
+    - 畅销产品；畅销书 b
+
+        ??? note "英文"
+            best-seller
+
+??? info "B1U1-2"
+
+    - 努力；奋斗 s
+
+        ??? note "英文"
+            strive strove striven
+
+    - ==畅销的 b==
+
+        ??? note "英文"
+            best-selling
+
+    - 有吸引力的；有趣的 a
+
+        ??? note "英文"
+            appealing
+
+    - 舌头 t
+
+        ??? note "英文"
+            tougue
+
+    - 忧伤；沮丧；消沉 d
+
+        ??? note "英文"
+            depression
+
+    - 孤独；孤单 i
+
+        ??? note "英文"
+            isolation
+
+    - ==哲学家 p==
+
+        ??? note "英文"
+            philosopher
+
+    - 展开；逐渐呈现；展示 u
+
+        ??? note "英文"
+            unflod
+
+    - ==（使）降低；（使）减少 l==
+
+        ??? note "英文"
+            lessen
+
+    - ==英雄的；英勇的 h==
+
+        ??? note "英文"
+            heroic
+
+    - 健壮；健康 f
+
+        ??? note "英文"
+            fitness
+
+    - 的确；确实 l
+
+        ??? note "英文"
+            literally
+
+    - ==把...做得过分；把...使用过头 o==
+
+        ??? note "英文"
+            overextend
+
+    - 使痴迷；使迷恋；使心神不宁 o
+
+        ??? note "英文"
+            obsess
+
+    - 最大量的 m
+
+        ??? note "英文"
+            maximum
+
+    - ==体育锻炼；训练 w==
+
+        ??? note "英文"
+            workout
+
+    - 表现；表演 p
+
+        ??? note "英文"
+            perform
+
+    - 努力赢得；设法获得 c
+
+        ??? note "英文"
+            chase
+
+    - ==对自己有清醒认知的 g==
+
+        ??? note "英文"
+            grounded
+
+    - ==理性的；有理智的；克制的 g==
+
+        ??? note "英文"
+            grounded
+
+    - ==多产的；丰饶的；富有成效的 p==
+
+        ??? note "英文"
+            productive
+
+    - ==（某团体的）精神特质，道德意识 e==
+
+        ??? note "英文"
+            ethos
+
+??? info "B1U2-1"
+
+	- ==争议；争论；争端；纠纷 d==
+
+		??? note "英文"
+			dispute
+
+	- ==无可争辩的；不可否认的 i==
+
+		??? note "英文"
+			indisputable
+
+	- 解释；说明 e
+
+		??? note "英文"
+			explanation
+
+	- ==简单的；易懂的 s==
+
+		??? note "英文"
+			straightforward
+
+	- 经济学 e
+
+		??? note "英文"
+			economics
+
+	- 经济学家 e
+
+		??? note "英文"
+			economist
+
+	- 挤；捏 s
+
+		??? note "英文"
+			squeeze
+
+	- 支配；控制；左右；影响 d
+
+		??? note "英文"
+			dominate
+
+	- （用机器大量）生产，制造 m
+
+		??? note "英文"
+			manufacture
+
+	- （大量商品的）生产，制造 m
+
+		??? note "英文"
+			manufacture
+
+	- ==制造；制造业 m==
+
+		??? note "英文"
+			manufacturing
+
+	- 收割；收获季节 h
+
+		??? note "英文"
+			harvest
+
+	- （水果或庄稼）成熟的 r
+
+		??? note "英文"
+			ripe
+
+	- （数量或程度上）极大的 i
+
+		??? note "英文"
+			infinite
+
+	- ==（消息）接收到的 i==
+
+		??? note "英文"
+			incoming
+
+	- 处理；应付 h
+
+		??? note "英文"
+			handle
+
+	- （感情上）使（某人）感到不能自持，使不知所措 o
+
+		??? note "英文"
+			overwhelm
+
+	- 有限的；有限制的 f
+
+		??? note "英文"
+			finite
+
+	- ==说明；证明；论证；证实 d==
+
+		??? note "英文"
+			~~domenstrate~~！！demonstrate
+
+	- ==（情况）出乎意料的，令人啼笑皆非的 i==
+
+		??? note "英文"
+			ironic
+
+	- ==不足；短缺 s==
+
+		??? note "英文"
+			scarcity
+
+	- 已承诺（或同意）的事；不得不做的事 c
+
+		??? note "英文"
+			commitment
+
+	- 优先处理的事；当务之急 p
+
+		??? note "英文"
+			priority
+
+	- 确定优先次序 p
+
+		??? note "英文"
+			prioritise
+
+	- 至关重要的；关键性的 c
+
+		??? note "英文"
+			crucial
+
+	- 使感染（某种感情）；影响 i
+
+		??? note "英文"
+			infect
+
+	- 改善；复苏 r
+
+		??? note "英文"
+			recovery
+
+	- ==（坏事的突然）泛滥，蔓延==
+
+		??? note "英文"
+			epidemic
+
+	- 最好的；极端的 u
+
+		??? note "英文"
+			ultimate
+
+	- 低位；身份；职位 s
+
+		??? note "英文"
+			status
+
+	- ==象征 b==
+
+		??? note "英文"
+			badge
+
+	- ==徽章；证章 b==
+
+		??? note "英文"
+			badge
+
+	- 指示物 i
+
+		??? note "英文"
+			indicator
+
+	- 锁匠 l
+
+		??? note "英文"
+			locksmith
+
+	- 报酬；服务费 f
+
+		??? note "英文"
+			fee
+
+	- 抱怨；不满；发牢骚 c
+
+		??? note "英文"
+			complain
+
+	- 重新获得 r
+
+		??? note "英文"
+			regain
+
+	- 接近；进入 a
+
+		??? note "英文"
+			access
+
+??? info "B1U2-2"
+
+	- ==散步；闲逛 s==
+
+		??? note "英文"
+			stroll
+
+	- ==不慌不忙地 l==
+
+		??? note "英文"
+			leisurely
+
+	- ==不慌不忙的 l==
+
+		??? note "英文"
+			leisurely
+
+	- ==溃疡 u==
+
+		??? note "英文"
+			ulcer
+
+	- 手指甲 f
+
+		??? note "英文"
+			fingernail
+
+	- ==虐待 a==
+
+		??? note "英文"
+			abuse
+
+	- ==懦夫；窝囊废 w==
+
+		??? note "英文"
+			wimp
+
+	- 行李 l
+
+		??? note "英文"
+			luggage
+
+	- ==几乎；差不多 p==
+
+		??? note "英文"
+			practically
+
+	- ==无谓的激动（或忧虑、活动）；大惊小怪 f==
+
+		??? note "英文"
+			fuss
+
+	- （使）变皱，起皱 c
+
+		??? note "英文"
+			crush
+
+	- 压坏；压伤；挤压变形 c
+
+		??? note "英文"
+			crush
+
+	- ==密谋；阴谋 c==
+
+		??? note "英文"
+			conspiracy
+
+	- ==航空公司 a==
+
+		??? note "英文"
+			airline
+
+	- （尤指在社交场合）使尴尬，使窘迫 e
+
+		??? note "英文"
+			embarrass
+
+	- 走廊；通道 c
+
+		??? note "英文"
+			corridor
+
+	- 绊脚；绊跌 s
+
+		??? note "英文"
+			stumbl
+
+	- 使用，占用；占据；居住 o
+
+		??? note "英文"
+			occupy
+
+	- ==空着的；闲置的；无人占用的 u==
+
+		??? note "英文"
+			unoccupied
+
+	- ==（做困难或不愉快的事情所需要的）勇气、魄力、决心 g==
+
+		??? note "英文"
+			gut（一般都是 guts）
+
+	- ==厉声说（话） s==
+
+		??? note "英文"
+			snap
+
+	- ==（使）啪的一声折断 s==
+
+		??? note "英文"
+			snap
+
+	- 终身；有生之年；存在期 l
+
+		??? note "英文"
+			lifetime
+
+??? info "B1U3-1"
+
+	- （与某人）摔跤，扭打 w
+
+		??? note "英文"
+			wrestle
+
+	- 结果，后果 o
+
+		??? note "英文"
+			outcome
+
+	- 使（肌肉）绷紧；僵硬 t
+
+		??? note "英文"
+			tense
+
+	- 令人紧张的；令人不安的；令人着急的 t
+
+		??? note "英文"
+			tense
+
+	- ==使劲；竭力；用尽全力 s==
+
+		??? note "英文"
+			strain
+
+	- ==拉伤；扭伤 s==
+
+		??? note "英文"
+			strain
+
+	- ==腕（关节） w==
+
+		??? note "英文"
+			wrist
+
+	- 露齿而笑；咧着嘴笑 g
+
+		??? note "英文"
+			grin
+
+	- ==青少年时期 t==
+
+		??? note "英文"
+			teen（表示青少年时期时，一般都是 teens）
+
+	- ==强壮的；擅长运动的 a==
+
+		??? note "英文"
+			athletic
+
+	- ==运动能力 a==
+
+		??? note "英文"
+			athleticism
+
+	- （由于呼吸困难而）急促吸气 g
+
+		??? note "英文"
+			gasp
+
+	- （尤因惊讶或疼痛而）大声吸气，倒抽气 g
+
+		??? note "英文"
+			gasp
+
+	- ==（从报纸、杂志等上）剪下 c==
+
+		??? note "英文"
+			clip
+
+	- ==剪报==
+
+		??? note "英文"
+			clipping
+
+	- 头盔；钢盔；安全帽 h
+
+		??? note "英文"
+			helmet
+
+	- ==扭打；搏斗 g==
+
+		??? note "英文"
+			grapple
+
+	- ==惯例；老规矩；例行公事 r==
+
+		??? note "英文"
+			ritual
+
+	- ==（为纪念重要宗教或社会事件举行的）仪式，典礼==
+
+		??? note "英文"
+			ritual
+
+	- 好竞争的；求胜心切的 c
+
+		??? note "英文"
+			competitive
+
+	- 手掌；掌部 p
+
+		??? note "英文"
+			palm
+
+	- 扭动（身体） t
+
+		??? note "英文"
+			twist
+
+	- （用手臂、腿或手指）围住（某物） w
+
+		??? note "英文"
+			wrap
+
+	- （用纸或布）包，裹（某物） w
+
+		??? note "英文"
+			wrap
+
+	- 紧握；紧抓 g
+
+		??? note "英文"
+			grip
+
+	- 肘 e
+
+		??? note "英文"
+			elbow
+
+	- ==凹口；凹陷；缺口 i==
+
+		??? note "英文"
+			indentation
+
+	- ==（衣服）令人发痒的 i==
+
+		??? note "英文"
+			itchy
+
+	- ==发痒的 i==
+
+		??? note "英文"
+			itchy
+
+	- ==（因外力或受压而）移动，弯曲，断裂 y==
+
+		??? note "英文"
+			yield
+
+	- ==屈服；让步 y==
+
+		??? note "英文"
+			yield
+
+	- ==产出，得出（结果、答案或消息） y==
+
+		??? note "英文"
+			yield
+
+	- 稳定的；牢固的；不摇晃的 s
+
+		??? note "英文"
+			steady
+
+	- 平稳的；持续的；逐渐的 s
+
+		??? note "英文"
+			steady
+
+	- 颤抖地；抖动地 u
+
+		??? note "英文"
+			unsteadily
+
+	- 握手 h
+
+		??? note "英文"
+			handshake
+
+	- ==吸；吮；啜 s==
+
+		??? note "英文"
+			suck
+
+	- （使）准备迎接（令人不快的事） b
+
+		??? note "英文"
+			brace
+
+	- 喉咙；咽喉 t
+
+		??? note "英文"
+			throat
+
+	- 悲伤；悲痛 s
+
+		??? note "英文"
+			sadness
+
+??? info "B1U3-2"
+
+	- ==梳妆台 d==
+
+		??? note "英文"
+			dresser
+
+	- 衣橱 d
+
+		??? note "英文"
+			dresser
+
+	- ==（松松垮垮地）挂，吊，悬 s==
+
+		??? note "英文"
+			sling slung slung
+
+	- ==（随意而稍用力地）拐，掷，抛 s==
+
+		??? note "英文"
+			sling slung slung
+
+	- ==大于一般的；太大的 o==
+
+		??? note "英文"
+			oversized
+
+	- ==（房屋前后的）游廊，走廊；阳台 p==
+
+		??? note "英文"
+			porch
+
+	- ==（房子或教堂前门外有顶的）入口，门廊 p==
+
+		??? note "英文"
+			porch
+
+	- ==硬纸盒；塑料盒 c==
+
+		??? note "英文"
+			carton
+
+	- ==倒回（录音带或录像带） r==
+
+		??? note "英文"
+			rewind
+
+	- ==小口地喝；抿；呷 s==
+
+		??? note "英文"
+			sip
+
+	- ==（房屋外面的）露台，平台 p==
+
+		??? note "英文"
+			patio
+
+	- 海鸥 s
+
+		??? note "英文"
+			seagull
+
+	- 义务 o
+
+		??? note "英文"
+			obligation
+
+	- 使安心；使放心；使消除疑虑 r
+
+		??? note "英文"
+			reassure
+
+	- 手写的 h
+
+		??? note "英文"
+			handwritten
+
+	- 无耻地；不知羞耻地 s
+
+		??? note "英文"
+			shamelessly
+
+	- 喝醉的 d
+
+		??? note "英文"
+			drunk
+
+	- 雷暴 t
+
+		??? note "英文"
+			thunderstorm
+
+	- （尤指表示喜爱而）抱，拥抱，搂抱 c
+
+		??? note "英文"
+			cuddle
+
+	- 取决于某物 d
+
+		??? note "英文"
+			dependent
+
+	- 依靠的；依赖的 d
+
+		??? note "英文"
+			dependent
+
+??? info "B1U4-1"
+
+	- 随意翻阅，浏览（书刊等） b
+
+		??? note "英文"
+			browse
+
+	- 渴望；期盼 l
+
+		??? note "英文"
+			longing
+
+	- ==通道；过道 a==
+
+		??? note "英文"
+			aisle
+
+	- ==（尤指用手快速地）轻击，轻拍，轻拂，轻弹 f==
+
+		??? note "英文"
+			flick
+
+	- （尤指因紧张或厌烦而）不安宁地，烦躁地，不耐烦地 r
+
+		??? note "英文"
+			restlessly
+
+	- ==厌倦 f==
+
+		??? note "英文"
+			fatigue
+
+	- 疲劳；疲乏；劳累 f
+
+		??? note "英文"
+			fatigue
+
+	- ==不知所措；（行动、决策、运行等）瘫痪，停顿 p==
+
+		??? note "英文"
+			paralysis
+
+	- 瘫痪；麻痹 p
+
+		??? note "英文"
+			paralysis
+
+	- 驴 d
+
+		??? note "英文"
+			donkey
+
+	- 无能力（做某事）的 u
+
+		??? note "英文"
+			unable
+
+	- （作动物饲料用的）干草，饲草 h
+
+		??? note "英文"
+			hay
+
+	- 夸口；夸耀；吹嘘 b
+
+		??? note "英文"
+			boast
+
+	- 指尖 f
+
+		??? note "英文"
+			fingertip
+
+	- 困惑；不确定；混乱 c
+
+		??? note "英文"
+			confusion
+
+	- ==重做；重复（某项科学研究）；复证（某个结果） r==
+
+		??? note "英文"
+			replicate
+
+	- ==养老金；退休金 p==
+
+		??? note "英文"
+			pension
+
+	- 激发；激励；促动；成为...的动机 m
+
+		??? note "英文"
+			motivate
+
+	- 使人失去动力；使人消极 d
+
+		??? note "英文"
+			demotivate
+
+	- ==网络空间 c==
+
+		??? note "英文"
+			cyberspace
+
+	- ==（使）整齐地堆起；摞起 s==
+
+		??? note "英文"
+			stack
+
+	- ==一叠；一堆；一摞 s==
+
+		??? note "英文"
+			stack
+
+	- （知识、活动、思想的）领域，范围 r
+
+		??? note "英文"
+			realm
+
+	- 使恼怒；使生气 a
+
+		??? note "英文"
+			annoy
+
+	- 讨厌的；令人气恼的 a
+
+		??? note "英文"
+			annoying
+
+	- ==优势；显要；突出 d==
+
+		??? note "英文"
+			dominance
+
+	- （计算机信息存储）格式 f
+
+		??? note "英文"
+			format
+
+	- ==总体安排；计划；设计 f==
+
+		??? note "英文"
+			format
+
+	- （生意）繁荣，兴旺，激增 b
+
+		??? note "英文"
+			boom
+
+	- 感染力；吸引力 a
+
+		??? note "英文"
+			appeal
+
+	- 呼吁；恳求 a
+
+		??? note "英文"
+			appeal
+
+	- ==确定；说明；界定 d==
+
+		??? note "英文"
+			define
+
+	- 降低；减少 l
+
+		??? note "英文"
+			lower
+
+	- 赞许；赞成；同意 a
+
+		??? note "英文"
+			approval
+
+	- ==批准；认可 a==
+
+		??? note "英文"
+			approval
+
+	- 拳头 f
+
+		??? note "英文"
+			fist
+
+??? info "B1U4-2"
+
+	- ==不可战胜的；无敌的 i==
+
+		??? note "英文"
+			invincible
+
+	- ==（公共建筑物入口处的）休息厅，门厅 f==
+
+		??? note "英文"
+			foyer
+
+	- 高耸的；高层的 h
+
+		??? note "英文"
+			high-rise
+
+	- 黄昏；傍晚 d
+
+		??? note "英文"
+			dusk
+
+	- ==（人、车辆、货物等）缓慢而零星地移动 t==
+
+		??? note "英文"
+			trickle
+
+	- ==滴；淌；涓涓地流 t==
+
+		??? note "英文"
+			trickle
+
+	- 潦草地写 s
+
+		??? note "英文"
+			scribble
+
+	- 灵感；突然想到的妙计 b
+
+		??? note "英文"
+			brainstorm
+
+	- ==（空间或时间的）中间（的），半途（的）h==
+
+		??? note "英文"
+			halfway
+
+	- 当顾问 c
+
+		??? note "英文"
+			consult
+
+	- ==牡蛎；蚝 o==
+
+		??? note "英文"
+			oyster
+
+	- ==论点；论据 a==
+
+		??? note "英文"
+			argument
+
+	- 争论；争吵；争辩 a
+
+		??? note "英文"
+			argument
+
+	- （对公司或组织的）经营，管理 m
+
+		??? note "英文"
+			management
+
+	- ==包括，跨越（不同的活动领域、团体、时间等）s==
+
+		??? note "英文"
+			straddle
+
+	- ==跨坐；跨立 s==
+
+		??? note "英文"
+			straddle
+
+	- 投入；投资 i
+
+		??? note "英文"
+			invest
+
+	- ==关于人类存在的；存在主义的 e==
+
+		??? note "英文"
+			existential
+
+	- ==（机构或公司的）主管，经理 e==
+
+		??? note "英文"
+			executive
+
+	- 充裕的；丰富的 a
+
+		??? note "英文"
+			abundant
+
+	- 商量；咨询 c
+
+		??? note "英文"
+			consultation
+
+	- ==假定；假设 a==
+
+		??? note "英文"
+			assumption
+
+	- ==必需品 n==
+
+		??? note "英文"
+			necessity
+
+	- 依照逻辑地；合乎逻辑地 l
+
+		??? note "英文"
+			logically
+
+	- 牺牲；献出 s
+
+		??? note "英文"
+			sacrifice
+
+	- ==（被迫）放弃 s==
+
+		??? note "英文"
+			surrender
+
+	- ==不知所措的；（为某事）犯愁的 s==
+
+		??? note "英文"
+			stuck
+
+	- 卡住的；无法移动的；动不了的 s
+
+		??? note "英文"
+			stuck
+
+	- 同时发生地；同步地 s
+
+		??? note "英文"
+			simultaneously
+
+	- ==矛盾的；抵触的 c==
+
+		??? note "英文"
+			contradictory
+
