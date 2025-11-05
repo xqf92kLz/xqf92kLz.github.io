@@ -539,6 +539,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%BE%AE%E7%A7%AF%E5%88%86/%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    期中复习
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1299,7 +1322,7 @@
 
   <h1>汇编入门</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-04'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-04T11:31:36.375864+00:00'>2025-11-04</time></span><span data-tippy-content data-tippy-raw='2025-11-04'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-04T11:31:36.375864+00:00'>2025-11-04</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-05T04:09:43.131772+00:00'>2025-11-05</time></span><span data-tippy-content data-tippy-raw='2025-11-05'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-05T04:09:43.131772+00:00'>2025-11-05</time></span></div></div>
 <p>模板：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">.386</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
@@ -1380,8 +1403,6 @@
 <li>
 <p><code>*</code>：<code>imul</code>（有符号），<code>mul</code>（无符号）</p>
 <p>单操作数（<code>mul</code>，<code>imul</code>）：</p>
-</li>
-</ul>
 <table>
 <thead>
 <tr>
@@ -1418,10 +1439,8 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code>双操作数（`imul`）：
-
-`imul ax,bx`
-</code></pre></div>
+<p>双操作数（<code>imul</code>）：</p>
+<p><code>imul ax,bx</code></p>
 <table>
 <thead>
 <tr>
@@ -1452,7 +1471,7 @@
 </tr>
 </tbody>
 </table>
-<ul>
+</li>
 <li>
 <p><code>/</code>：<code>idiv</code>（有符号），<code>div</code>（无符号）</p>
 <table>
@@ -1496,53 +1515,96 @@
 </tr>
 </tbody>
 </table>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>​  <br />
-​            ??? abstract "示例"
-​  <br />
-                <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="c1">; 相当于mov dx, 0FFFFh</span>
+<details class="abstract">
+<summary>示例</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="c1">; 相当于mov dx, 0FFFFh</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">-6</span><span class="c1">; 相当于mov ax, 0FFFAh</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">          </span><span class="c1">; dx与ax组合起来就是0FFFFFFFAh, 它就是32位的-6  </span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="c1">; 当除数为16位的寄存器或变量时，被除数一定是=dx（高 16 位）:ax（低 16 位）</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nf">idiv</span><span class="w"> </span><span class="no">bx</span><span class="w">   </span><span class="c1">; ax=商=-3=0FFFDh, dx=余数=0=0000h</span>
-</code></pre></div></p>
-<div class="highlight"><pre><span></span><code>- 关系运算：
-
-    - `==`：`je`
-    - `!=`：`jne`
-    - `&gt;`：有符号数 `jg`，无符号数 `ja`
-    - `&lt;`：有符号数 `jl`，无符号数 `jb`
-    - `&gt;=`：有符号数 `jge`，无符号数 `jae`
-    - `&lt;=`：有符号数 `jle`，无符号数 `jbe`
-
-- 逻辑运算：
-
-    - `&amp;&amp;`：用两个嵌套的 if 实现。
-    - `||`：用两个并列的 if 实现。
-    - `!`
-
-- 位运算：
-
-    - `&amp;`：`and al,bl`
-    - `|`：`or al,bl`
-    - `^`：`xor al,bl`
-    - `~`：`not ax`
-    - `&lt;&lt;`：`shl al,1`。最后一个被移动的位会被放到 CF 标志中。
-
-        （与 `jc` 配合：若 CF=1，`jc` 会跳转）
-
-    - `&gt;&gt;`：`shr al,1`（无符号），`sar al,1`（有符号）。最后一个被移动的位会被放到 CF 标志中。
-    - 循环左移 `rol`，循环右移 `ror`。最后一个被移动的位会在被放到另一端的同时放到 CF 标志中。
 </code></pre></div>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>关系运算：</p>
+<ul>
+<li><code>==</code>：<code>je</code></li>
+<li><code>!=</code>：<code>jne</code></li>
+<li><code>&gt;</code>：有符号数 <code>jg</code>，无符号数 <code>ja</code></li>
+<li><code>&lt;</code>：有符号数 <code>jl</code>，无符号数 <code>jb</code></li>
+<li><code>&gt;=</code>：有符号数 <code>jge</code>，无符号数 <code>jae</code></li>
+<li><code>&lt;=</code>：有符号数 <code>jle</code>，无符号数 <code>jbe</code></li>
+</ul>
+</li>
+<li>
+<p>逻辑运算：</p>
+<ul>
+<li><code>&amp;&amp;</code>：用两个嵌套的 if 实现。</li>
+<li><code>||</code>：用两个并列的 if 实现。</li>
+<li><code>!</code></li>
+</ul>
+</li>
+<li>
+<p>位运算：</p>
+<ul>
+<li><code>&amp;</code>：<code>and al,bl</code></li>
+<li><code>|</code>：<code>or al,bl</code></li>
+<li><code>^</code>：<code>xor al,bl</code></li>
+<li><code>~</code>：<code>not ax</code></li>
+<li>
+<p><code>&lt;&lt;</code>：<code>shl al,1</code>。最后一个被移动的位会被放到 CF 标志中。</p>
+<p>（与 <code>jc</code> 配合：若 CF=1，<code>jc</code> 会跳转）</p>
+</li>
+<li>
+<p><code>&gt;&gt;</code>：<code>shr al,1</code>（无符号），<code>sar al,1</code>（有符号）。最后一个被移动的位会被放到 CF 标志中。</p>
+</li>
+<li>循环左移 <code>rol</code>，循环右移 <code>ror</code>。最后一个被移动的位会在被放到另一端的同时放到 CF 标志中。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="cpu">CPU、内存和端口<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h3>
 <ul>
-<li>寄存器</li>
-<li>段地址</li>
+<li>
+<p>逻辑地址（段地址 : 偏移地址）</p>
+<ul>
+<li>
+<p>在 8086 中，可以采用逻辑地址间接访问物理地址。物理地址 = 段地址 × 16 + 偏移地址。其中，段地址存储在 16 位段寄存器（如 <code>cs</code>、<code>ds</code>）中，偏移地址为 16 位值。</p>
+<p>一个段可以表示的内存为 64KB，且段首地址的物理地址的 16 进制表示的个位必然是 0（段首地址 = 段地址 × 16）。</p>
+</li>
+<li>
+<p>引用变量：<code>段寄存器:[偏移地址]</code>（<code>段寄存器:[常数]</code>，<code>段寄存器:[寄存器]</code>，<code>段寄存器:[寄存器+常数]</code>）。段地址只能用段寄存器表示，不能用常数表示。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>宽度修饰</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">宽度修饰词</th>
+<th style="text-align: center;">限定变量的宽度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>byte ptr</code></td>
+<td style="text-align: center;">8 位</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>word ptr</code></td>
+<td style="text-align: center;">16 位</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>dword ptr</code></td>
+<td style="text-align: center;">32 位</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 <h3 id="int21h">int21h 中断<a class="headerlink" href="#int21h" title="Permanent link">&para;</a></h3>
 <p><a href="https://blog.csdn.net/Zach_z/article/details/78576216">常见中断</a> <code>int 21h</code>：（<a href="https://www.uwouni.com/rbrown.htm">中断大全</a>）</p>
