@@ -1043,12 +1043,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B1/" class="md-nav__link">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B1U1-4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    B1
+    B1U1-4
     
   </span>
   
@@ -1232,8 +1232,141 @@
 
   <h1>期中复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-06'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-06T01:25:58.594407+00:00'>2025-11-06</time></span><span data-tippy-content data-tippy-raw='2025-11-06'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-06T01:25:58.594407+00:00'>2025-11-06</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-06'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-06T13:28:36.030585+00:00'>2025-11-06</time></span><span data-tippy-content data-tippy-raw='2025-11-06'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-06T13:28:36.030585+00:00'>2025-11-06</time></span></div></div>
 <h2 id="_1">刷历年卷<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<details class="info" open="open">
+<summary>2024-2025</summary>
+<p>计算 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{e-e^{\cos x}-x^3\sin \frac 1 x}{(\sqrt[3]{1+x^2}-1)\cos x}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{e(1-e^{\cos x-1})-x^3\sin \frac 1 x}{\frac 1 3 x^2}=\lim\limits_{x\to 0}\dfrac{e(1-\cos x)}{\frac 1 3 {x^2}}-\lim\limits_{x\to 0}3x\sin\frac 1 x=\lim\limits_{x\to 0}\dfrac{e\cdot \frac 1 2 {x^2}}{\frac  3 x^2}-0=\dfrac 3 2 e\)</span></p>
+<p>注意：1. 不能一开始就把分子的 <span class="arithmatex">\(e^{\cos x}\)</span> 换成 <span class="arithmatex">\(e\)</span>。2. <span class="arithmatex">\(\sin \frac 1 x\)</span> 不是 <span class="arithmatex">\(x\to 0\)</span> 的无穷小。</p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2023-2024</summary>
+<p>设函数 <span class="arithmatex">\(f_n(x)=x^n+x^{n-1}+\cdots+x-1\)</span>。证明：（1）方程 <span class="arithmatex">\(f_n(x)=0\)</span> 有唯一正根 <span class="arithmatex">\(x_n\)</span>；（2）数列 <span class="arithmatex">\(\{x_n\}\)</span> 收敛并计算 <span class="arithmatex">\(\lim\limits_{n\to +\infty}x_n\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p>（1）</p>
+<p><span class="arithmatex">\(f_n(0)=-1&lt;0\)</span>，<span class="arithmatex">\(f_n(1)=n-1\geq 0\)</span>，且 <span class="arithmatex">\(f_n(x)\)</span> 在 <span class="arithmatex">\([0,+\infty)\)</span> 上连续，则 <span class="arithmatex">\(\exists x_n\in(0,1]\)</span> 使得 <span class="arithmatex">\(f_n(x_n)=0\)</span>。</p>
+<p><span class="arithmatex">\(f_n'(x)=nx^{n-1}+(n-1)x^{n-2}+\cdots+1\)</span>，当 <span class="arithmatex">\(x&gt;0\)</span> 时，<span class="arithmatex">\(f_n'(x)&gt;0\)</span>，则 <span class="arithmatex">\(f_n(x)\)</span> 在 <span class="arithmatex">\((0,+\infty)\)</span> 单调递增。</p>
+<p>故有唯一正根。</p>
+</li>
+<li>
+<p>（2）</p>
+<p><span class="arithmatex">\(f_{n+1}(x_n)=f_n(x_n)+x_n^{n+1}=x_n^{n+1}&gt;0\)</span>，又 <span class="arithmatex">\(f_{n+1}(x)\)</span> 单调递增，且 <span class="arithmatex">\(f_{n+1}(x_{n+1})=0\)</span>，故 <span class="arithmatex">\(x_{n+1}&lt;x_n\)</span>。</p>
+<p>又 <span class="arithmatex">\(x_n&gt;0\)</span>，根据单调有界定理，<span class="arithmatex">\(\{x_n\}\)</span> 收敛。</p>
+<p>设 <span class="arithmatex">\(\lim\limits_{n\to +\infty}x_n=A\)</span>。<span class="arithmatex">\(f_n(x_n)=\dfrac{x_n(x_n^n-1)}{x_n-1}-1=0\)</span>，取极限，因 <span class="arithmatex">\(x_n^n\to 0\)</span>，得 <span class="arithmatex">\(\dfrac {-A}{A-1}-1=0\)</span>。则 <span class="arithmatex">\(A=\dfrac 1 2\)</span>，即 <span class="arithmatex">\(\lim\limits_{n\to +\infty}x_n=\dfrac 1 2\)</span>。</p>
+</li>
+</ul>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2023-2024</summary>
+<p>已知 <span class="arithmatex">\(f(x)=\lim\limits_{n\to \infty}\dfrac{2xe^{n(x-1)}+ax^2+b}{e^{n(x-1)}+1}\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上可导，求常数 <span class="arithmatex">\(a,b\)</span> 的值。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><span class="arithmatex">\(e^{n(x-1)}=(e^{x-1})^n\)</span>，根据 <span class="arithmatex">\(x&lt;1\)</span>、<span class="arithmatex">\(x=1\)</span>、<span class="arithmatex">\(x&gt;1\)</span> 分类讨论 <span class="arithmatex">\(\lim\limits_{n\to \infty}(e^{x-1})^n\)</span> 的值。</p>
+<p><span class="arithmatex">\(f(x)=\begin{cases}2x,&amp;x&gt;1\\1+\frac a 2+\frac b 2,&amp;x=1\\ax^2+b,&amp;x&lt;1\end{cases}\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 1^+}f(x)=\lim\limits_{x\to 1^-}f(x)=f(1)\Rightarrow a+b=2\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(f_+'(1)=\lim\limits_{x\to 1^+}\dfrac{2x-2}{x-1}=2\)</span></p>
+<p><span class="arithmatex">\(f_-'(1)=\lim\limits_{x\to 1^-}\dfrac{ax^2+b-2}{x-1}=\lim\limits_{t\to 0^-}\dfrac{at^2+2at+a+b-2}{t}=\lim\limits_{t\to 0^-}\dfrac{at^2+2at}{t}=2a\)</span></p>
+<p><span class="arithmatex">\(f_+'(1)=f_-'(1)\Rightarrow a=1\)</span></p>
+</li>
+</ul>
+<p>故 <span class="arithmatex">\(a=1,b=1\)</span>。</p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2021-2022</summary>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to +\infty}(\sqrt[3]{x^3+x^2+1}-\sqrt{x^2+x+1})\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>法 1：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;\xlongequal{t=\frac 1 x}\lim\limits_{t \to 0^+}(\sqrt[3]{\frac{1}{t^3} + \frac{1}{t^2} + 1} - \sqrt{\frac{1}{t^2} + \frac{1}{t} + 1})\\
+&amp;=\lim\limits_{t\to 0^+}\frac{\sqrt[3]{1+t+t^3}-\sqrt{1+t+t^2}}{t}\\
+&amp;=\lim\limits_{t\to 0^+}\sqrt{1+t+t^2}\cdot \frac{\frac{\sqrt[3]{1+t+t^3}}{\sqrt{1+t+t^2}}-1}{t}\\
+&amp;=\lim\limits_{t\to 0^+}\frac{e^{\frac 1 3\ln(1+t+t^3)-\frac 1 2 \ln(1+t+t^2)}-1}{t}\\
+&amp;=\lim\limits_{t\to 0^+}\frac{\frac 1 3 \ln(1+t+t^3)-\frac 1 2\ln(1+t+t^2)}t\\
+&amp;=\lim\limits_{t\to 0^+}\frac{\frac 1 3 (t+t^3)-\frac 1 2(t+t^2)}t\\
+&amp;= \frac{1}{3} - \frac{1}{2}\\
+&amp;= -\frac{1}{6}
+\end{aligned}
+\]</div>
+<p>法 2：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;\xlongequal{t=\frac 1 x}\lim\limits_{t \to 0^+}(\sqrt[3]{\frac{1}{t^3} + \frac{1}{t^2} + 1} - \sqrt{\frac{1}{t^2} + \frac{1}{t} + 1})\\
+&amp;=\lim\limits_{t \to 0^+} \frac{\sqrt[3]{1 + t + t^3} - 1}{t} + \lim_{t \to 0^+} \frac{1 - \sqrt{1 + t + t^2}}{t}\\
+&amp;=\lim\limits_{t \to 0^+} \frac{1 + t + t^3 - 1}{t \left( (\sqrt[3]{1 + t + t^3})^2 + \sqrt[3]{1 + t + t^3} + 1 \right)} + \lim_{t \to 0^+} \frac{1 - (1 + t + t^2)}{t(1 + \sqrt{1 + t + t^2})}\\
+&amp;= \lim_{t \to 0^+} \frac{t + t^3}{3t} + \lim_{t \to 0^+} \frac{-t - t^2}{2t}\\
+&amp;= \frac{1}{3} - \frac{1}{2}\\
+&amp;= -\frac{1}{6}
+\end{aligned}
+\]</div>
+<p>法 3：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;=\lim\limits_{x\to +\infty}x\sqrt[3]{1+\frac 1 x+\frac 1 {x^3}}-\lim\limits_{x\to +\infty}x\sqrt[3]{1+\frac 1 x+\frac 1 {x^2}}\\
+&amp;=\lim\limits_{x\to +\infty}x(1+\frac 1 3(\frac 1 x+\frac 1 {x^3})+o(\frac 1 x))-\lim\limits_{x\to +\infty}x(1+\frac 1 2(\frac 1 x+\frac 1 {x^2}+o(\frac 1 x)))\\
+&amp;=\lim\limits_{x\to +\infty}(x+\frac 1 3+o(1))-\lim\limits_{x\to +\infty}(x+\frac 1 2+o(1))\\
+&amp;=-\frac 1 6
+\end{aligned}
+\]</div>
+<p>法 4：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;=\lim\limits_{x\to +\infty}(\sqrt[3]{x^3 + x^2 + 1} - x) - ( \sqrt{x^2 + x + 1} - x)\\
+&amp;=\lim\limits_{x\to +\infty}\frac{x^2 + 1}{x^2 + x\sqrt[3]{x^3 + x^2 + 1} + (\sqrt[3]{x^3 + x^2 + 1})^2}-\lim\limits_{x\to +\infty}\frac{x + 1}{\sqrt{x^2 + x + 1} + x}\\
+&amp;=\frac 1 3-\frac 1 2\\
+&amp;=-\dfrac 1 6
+\end{aligned}
+\]</div>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2020-2021</summary>
+<p>函数 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处有二阶导数，<span class="arithmatex">\(f(2^{-n})=0\,(n=1,2,\cdots,)\)</span>，证明：<span class="arithmatex">\(f''(0)=0\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>记 <span class="arithmatex">\(x_n=2^{-n}\)</span>。</p>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处有二阶导数，故 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(U(0)\)</span> 连续，<span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续。</p>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(f(0)=\lim\limits_{x\to 0}f(x)=\lim\limits_{n\to \infty}f(x_n)=0\)</span>。</p>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(U(0)\)</span> 连续 <span class="arithmatex">\(\Rightarrow\)</span> 对于 <span class="arithmatex">\(x_n\in U(0)\)</span>：<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([x_{n+1},x_n]\)</span> 上连续，在 <span class="arithmatex">\((x_{n+1},x_n)\)</span> 内可导，且 <span class="arithmatex">\(f(x_{n+1})=f(x_n)=0\)</span>。根据罗尔定理，<span class="arithmatex">\(\exists \xi_n\in(x_{n+1},x_n)\)</span> 使得 <span class="arithmatex">\(f'(\xi_n)=0\)</span>。</p>
+<p><span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(f'(0)=\lim\limits_{x\to 0}f'(x)=\lim\limits_{n\to \infty}f'(\xi_n)=0\)</span>。</p>
+<p>则 <span class="arithmatex">\(f''(0)=\lim\limits_{x\to 0}\dfrac{f'(x)-f'(0)}{x-0}=\lim\limits_{n\to \infty}\dfrac{f'(\xi_n)-f'(0)}{\xi_n-0}=\lim\limits_{n\to \infty}\dfrac{0}{\xi_n}=0\)</span>。</p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2019-2020</summary>
+<p>作一个数列 <span class="arithmatex">\(\{x_n\}\)</span>，使得 <span class="arithmatex">\(x_n\in\mathbb Q\)</span> 且 <span class="arithmatex">\(\lim\limits_{n\to \infty}x_n=\sqrt 2\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>法 1：<span class="arithmatex">\(x_n=\frac{[10^n\sqrt 2]}{10^n}\)</span>（十进制近似）</p>
+<p>法 2：用 <span class="arithmatex">\(x_{n+1}=\frac 1 2(x_n+\frac{2}{x_n})\)</span>，<span class="arithmatex">\(x_1=2\)</span> 生成（牛顿迭代法解 <span class="arithmatex">\(f(x)=0\)</span>： 取初始值 <span class="arithmatex">\(x_1\)</span>，然后过 <span class="arithmatex">\((x_n,f(x_n))\)</span> 作 <span class="arithmatex">\(f(x)\)</span> 的切线交 <span class="arithmatex">\(x\)</span> 轴于 <span class="arithmatex">\(x_{n+1}\)</span>，则 <span class="arithmatex">\(x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}\)</span>。本题取 <span class="arithmatex">\(f(x)=x^2-2\)</span>）</p>
+</details>
+<p>设 <span class="arithmatex">\(x_n=\sqrt{1+\sqrt{2+\cdots+\sqrt n}}\)</span>，证明：<span class="arithmatex">\(\lim\limits_{n\to \infty}x_n\)</span> 存在。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p>单调：显然 <span class="arithmatex">\(x_n&lt;x_{n+1}\)</span>。</p>
+</li>
+<li>
+<p>有界：设 <span class="arithmatex">\(y_k=\sqrt{k+\sqrt{(k+1)+\cdots+\sqrt n}}\)</span>，可数学归纳法证明 <span class="arithmatex">\(y_k\leq \sqrt k+1\)</span>（<span class="arithmatex">\(k=n\)</span> 时成立。假设 <span class="arithmatex">\(k+1\)</span> 时成立，则 <span class="arithmatex">\(y_k=\sqrt{k+y_{k+1}}\leq \sqrt{k+(\sqrt{k+1}+1)}\leq \sqrt{k+2\sqrt k+1}\)</span>【利用 <span class="arithmatex">\(\sqrt{k+1}\leq 2\sqrt k\)</span>，<span class="arithmatex">\(k\geq 1\)</span>】<span class="arithmatex">\(=\sqrt k+1\)</span>）。则 <span class="arithmatex">\(x_n\leq 2\)</span>。</p>
+</li>
+</ul>
+</details>
+</details>
 
 
 
