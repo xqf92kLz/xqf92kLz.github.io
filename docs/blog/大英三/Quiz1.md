@@ -203,7 +203,7 @@
     
         7 要改变这种蜻蜓点水式的游览方式，办法其实很简单：只是放慢速度。这并非独到的观点，也并不新颖。维多利亚时代，当摄影刚刚起步时，英国艺术评论家约翰・罗斯金就批评说，游客手上拿了相机以后对周围的注意力反而降低了。他给出的建议是画素描。他认为花点时间随手画下即便是最简单的几笔也能够帮助人们更好地了解一个地方。
     
-        8 That point is certainly ==**echoed** by== many other people. In a newly published book on sketching, the author illustrates how a few **thoughtful** drawings can ==do a good job of== capturing the spirit of an experience. He believes that "sketching uses more of your brain's **capabilities** … creating ==a more detailed, **layered** map==," and I agree with him. 
+        8 That point is certainly ==**echoed** by== many other people. In a newly published book on sketching, the author illustrates how a few **thoughtful** drawings can ==do a good job of capturing the spirit of an experience==. He believes that "sketching uses more of your brain's **capabilities** … creating ==a more detailed, **layered** map==," and I agree with him. 
     
         8 这个观点得到了许多人的响应。在一本新出版的关于素描的书中，作者阐释了具有思想性的图画如何能够很好地表达体验感受的精髓。他认为“素描会调动你大脑的更多功能······创建一幅更为详细、更有层次的图谱”。我赞同他的观点。
     
@@ -259,7 +259,7 @@
     
         4 但是最近，我承受的精神痛苦几乎到了无法忍受的地步。我通过采用新路线和新技术尽力保持我们之间的新鲜感，这样我们就不会对彼此失去兴趣。但是，我仍然被告知要远离你。他们告诉我：“休息一段时间，试试其他方法。”但是，即使我们俩都知道你现在不是我所需要的，你却依然戏弄我、嘲讽我、诱使我继续对你保持忠诚。
     
-        5 Most of my friends hate you — "How can you LOVE running?" they ask. Your name ==doesn't sit well== in our society, either — "running out of money," "running out of time," "running out of reasons / room / patience / options." ==I'm sick of having to explain you（be sick of + 名词 / 代词 /doing sth）==. Others just don't understand. They don't know you ==like I do==. Our ==love-hate, push-pull relationship cannot be put into words==. A lot of times (==namely== 6 a.m. when it's 35 degrees and raining) I don't love you; I hate you. Still, I always find myself running back to you. 
+        5 Most of my friends hate you — "How can you LOVE running?" they ask. Your name ==doesn't sit well in our society==, either — "running out of money," "running out of time," "running out of reasons / room / patience / options." ==I'm sick of having to explain you（be sick of + 名词 / 代词 /doing sth）==. Others just don't understand. They don't know you ==like I do==. Our ==love-hate, push-pull relationship cannot be put into words==. A lot of times (==namely== 6 a.m. when it's 35 degrees and raining) I don't love you; I hate you. Still, I always find myself running back to you. 
     
         5 我的大多数朋友都讨厌你。“你怎么会爱跑步？”他们问。你的名字在我们的社会中也不受待见——“没有钱了”，“没有时间了”，“没有理由/空间/耐心/选择了”。我厌倦了替你解释，那些人就是不明白，他们不像我那样了解你。我们之间爱恨交加、若即若离的关系无法用言语表达。很多时候（也就是说：早上6点，气温达到35度，天下着雨），我并不爱你，我恨你。不过，我总是发现自己又跑回到你身边。
     
@@ -302,15 +302,15 @@
     
         1 我的姨奶奶喜欢压花。她经常爬山，在山上寻找新的植物。她会在植物学书籍中查找自己发现的宝物，然后给它们贴上标签，做成压花，以便好好保存。有几次，她在书上根本找不到条目，她发现了尚未命名过的植物种类。她是个天生的植物爱好者。当不需要照顾家庭时，她会晾干松针并将它们编织成漂亮的装饰品。但她也是她那个时代的产物。战后，业余爱好是人们在下班后的业余时间里所做的事：打篮球、烹饪、写诗。没有这些活动，大家会觉得生活不完整。
     
-        2 My great aunt died not long ago, but she would have a hard time understanding how my generation uses its spare time. For many of us, the hobby is dead. Our work lives have ==**merged** with== our free time, and hobbies ==are now often**indistinguishable** from== second jobs. ==In a culture obsessed with **productivity**==, the hobby has become the next ==**venture**==. 
+        2 My great aunt died not long ago, but she would have a hard time understanding how my generation uses its spare time. For many of us, the hobby is dead. Our work lives have ==**merged** with== our free time, and hobbies ==are now often **indistinguishable** from== second jobs. ==In a culture obsessed with **productivity**==, the hobby has become the next ==**venture**==. 
     
         2 我的姨奶奶不久前去世了，如果她还活着，她会很难理解我这一代人是如何利用业余时间的。对我们许多人来说，业余爱好已经不存在了。我们的工作已经与我们的业余时间融为一体，如今的业余爱好通常与第二份工作没有区别。在一种执迷于生产率的文化中，业余爱好已成为下一个商业项目。
     
-        3 After the US ==survived== two world wars and ==the economic **fragility**== they caused, leisure became more **accessible** for the American ==middle class==. With economic recovery and technological development, **corporations** were able to offer ==structured workweek, job security, higher pay, and paid vacations==, and also let their employees go home at 5 p.m. From ==**disposable** income==    ==a leisure industry== was born — and welcomed by 60 million people. The American road trip, summer camps, and **amusement parks** all competed for ==spare dollars==. People built model planes in their spare time and learned to cook fancy foreign food. Youth culture **emerged** because, for the first time in American history, children were generally not expected to help with work. 
+        3 After the US ==survived== two world wars and ==the economic **fragility**== they caused, leisure became more **accessible** for the American ==middle class==. With economic recovery and technological development, **corporations** were able to offer ==structured workweek, job security, higher pay, and paid vacations==, and also let their employees go home at 5 p.m. From ==**disposable** income==    ==a leisure industry== was born — and welcomed by 60 million people. The American road trip, summer camps, and **amusement parks** all competed for ==spare dollars==. People built model planes in their spare time and learned to cook ==fancy== foreign food. Youth culture **emerged** because, for the first time in American history, children were generally not expected to help with work. 
     
         3 美国挺过了两次世界大战及其导致的经济不稳定之后，它的中产阶级比之前更容易获得休闲时间。随着经济的复苏和技术的发展，企业能够提供规律的工作时间、工作保障、更高的薪水、带薪假期，还让员工在下午5点下班回家。由于有了可支配收入，休闲产业应运而生，并受到了六千万人的欢迎。美国的公路旅行、夏令营和游乐园相互争夺这些闲钱。人们在业余时间制作飞机模型，学习烹饪精美的外国食物。青年文化也出现了，因为在美国历史上，人们第一次不指望孩子来帮忙干活。
     
-        4 Leisure came to define a person's identity during this time, in many cases replacing ==career identity==. Having a hobby was not only possible; it was ==a status symbol==. ==It meant one had time to relax==, a **privilege** previously enjoyed only by the very **wealthy**. The "**automatic** ==nature==" of many jobs led "an increasing number of workers to ==look not to work but to leisure for satisfaction）==," wrote a US writer in the 1950s. 
+        4 Leisure came to define a person's identity during this time, in many cases replacing ==career identity==. Having a hobby was not only possible; it was ==a status symbol==. ==It meant one had time to relax==, a **privilege** previously enjoyed only by the very **wealthy**. The "**automatic** ==nature==" of many jobs led "an increasing number of workers to ==look not to work but to leisure for satisfaction==）," wrote a US writer in the 1950s. 
     
         4 这期间，休闲开始定义一个人的身份。在许多情况下，它取代了职业身份。拥有业余爱好不仅是可能的，而且还是地位的象征。这意味着人们有时间放松身心，而这种特权以前只有非常富有的人才能享有。一位美国作家在二十世纪五十年代写道，许多工作的“自动化性质”导致“越来越多的工人指望从休闲活动中获得满足感，而不是从工作中获得满足感”。
     
@@ -318,7 +318,7 @@
     
         5 但是，战后的繁荣逐渐消失，取而代之的是内乱、石油短缺和经济的不确定性。终身从事一份工作并拥有稳定的养老金这一概念在许多行业中消失了。始于2008年的经济衰退之后，许多年轻人根本无法获得传统的工作，而那些从事这些工作的人也不甚满意。
     
-        6 With fewer reasons to stay in one job, workers began to explore a wider variety of options. For some, these options included turning a hobby into a business. Young people turned to what they loved, what they were good at, ==with an entrepreneurial mindset aimed toward self-employment==. According to a 2015 ==poll==, older Americans' primary concern about their first job was earning money or learning skills. By contrast, 57 percent of millennials ==prioritized doing something that they found **enjoyable** and that made a difference==. Half said they would ==take a pay cut== to find work that ==matched their values==, and would change jobs as their values changed. 
+        6 With fewer reasons to stay in one job, workers began to explore a wider variety of options. For some, these options included ==turning a hobby into a business==. Young people turned to what they loved, what they were good at, ==with an entrepreneurial mindset aimed toward self-employment==. According to a 2015 ==poll==, older Americans' primary concern about their first job was earning money or learning skills. By contrast, 57 percent of millennials ==prioritized doing something that they found **enjoyable** and that made a difference==. Half said they would ==take a pay cut== to find work that ==matched their values==, and would change jobs as their values changed. 
     
         6 由于终身从事一份工作的理由越来越少，人们开始探索更多不同的选择。对于一些人来说，这些选择包括将业余爱好变成一项事业。年轻人带着一种自我创业的企业家心态，转向了自己喜欢和擅长的领域。根据2015年的一项民意调查，老一代美国人做第一份工作时主要关注赚钱或学习技能。相比之下，57%的千禧一代优先考虑做他们认为令人愉快的并且让他们觉得有所作为的事情。一半的千禧一代表示，他们为了找到与其价值观相符的工作宁愿减薪，并会随着自己价值观的改变而更换工作。
     
@@ -346,7 +346,7 @@
     
         1 你喜欢购物吗？你的回答在某种程度上取决于一点，即你是男性还是女性。当然，说“女人喜欢购物而男人不喜欢”，这是泛泛之论——我们认识的人当中肯定都有人不符合这种说法。不过，有证据表明，这一说法也不全然是错误的。一项对2,000名英国人的调查发现，男性逛商店才逛了26分钟就开始觉得无聊，而女性要逛整整两个小时后才会感到厌倦。调查称，八成男性不喜欢陪伴侣购物，45%的男性想方设法避免和伴侣一起购物。夫妻俩一起出门购物，近一半以吵架收场。让丈夫们抓狂的是，他们一下子就买到了需要的东西，而他们的伴侣却还在逛，还要花很长时间才能决定买不买。
     
-        2 If ==there is some **validity** to these generalizations== — and if they are more than just the result of social conditioning — where could these different attitudes to shopping **stem** from? 
+        2 If ==there is some **validity** to these generalizations== — and if they are more than just ==the result of social conditioning== — where could these different attitudes to shopping **stem** from? 
     
         2 如果这些泛泛之论有些道理的话——而且如果它们不仅仅是社会熏陶的产物——那么这些对于购物的不同态度是由什么造成的呢？
     
