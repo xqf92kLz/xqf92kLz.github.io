@@ -1232,7 +1232,7 @@
 
   <h1>期中复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-06'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-06T13:28:36.030585+00:00'>2025-11-06</time></span><span data-tippy-content data-tippy-raw='2025-11-06'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-06T13:28:36.030585+00:00'>2025-11-06</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-07T11:18:50.996720+00:00'>2025-11-07</time></span><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-07T11:18:50.996720+00:00'>2025-11-07</time></span></div></div>
 <h2 id="_1">刷历年卷<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <details class="info" open="open">
 <summary>2024-2025</summary>
@@ -1265,7 +1265,7 @@
 </details>
 </details>
 <details class="info" open="open">
-<summary>2023-2024</summary>
+<summary>2022-2023</summary>
 <p>已知 <span class="arithmatex">\(f(x)=\lim\limits_{n\to \infty}\dfrac{2xe^{n(x-1)}+ax^2+b}{e^{n(x-1)}+1}\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上可导，求常数 <span class="arithmatex">\(a,b\)</span> 的值。</p>
 <details class="note">
 <summary>解答</summary>
@@ -1283,6 +1283,11 @@
 </ul>
 <p>故 <span class="arithmatex">\(a=1,b=1\)</span>。</p>
 </details>
+<p>已知 <span class="arithmatex">\(y=f(x)\)</span> 是满足 <span class="arithmatex">\(e^{x+y}-2xy=e\)</span>，求 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{(y-1)\sin (ex)}{\sqrt{1+2x^2}}-1\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{(y-1)\sin(ex)(\sqrt{1+2x^2}+1)}{2x^2}=\lim\limits_{x\to 0}\dfrac{(y-1)\cdot ex\cdot 2}{2x^2}=e\lim\limits_{x\to 0}\dfrac{y-1}x\)</span>，又 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{y-1}x=\lim\limits_{x\to 0}\dfrac{f(x)-f(0)}{x-0}=f'(0)=\dfrac{2-e}e\)</span>，则 <span class="arithmatex">\(I=2-e\)</span>。</p>
+</details>
 </details>
 <details class="info" open="open">
 <summary>2021-2022</summary>
@@ -1293,11 +1298,8 @@
 <div class="arithmatex">\[
 \begin{aligned}
 &amp;\xlongequal{t=\frac 1 x}\lim\limits_{t \to 0^+}(\sqrt[3]{\frac{1}{t^3} + \frac{1}{t^2} + 1} - \sqrt{\frac{1}{t^2} + \frac{1}{t} + 1})\\
-&amp;=\lim\limits_{t\to 0^+}\frac{\sqrt[3]{1+t+t^3}-\sqrt{1+t+t^2}}{t}\\
-&amp;=\lim\limits_{t\to 0^+}\sqrt{1+t+t^2}\cdot \frac{\frac{\sqrt[3]{1+t+t^3}}{\sqrt{1+t+t^2}}-1}{t}\\
-&amp;=\lim\limits_{t\to 0^+}\frac{e^{\frac 1 3\ln(1+t+t^3)-\frac 1 2 \ln(1+t+t^2)}-1}{t}\\
-&amp;=\lim\limits_{t\to 0^+}\frac{\frac 1 3 \ln(1+t+t^3)-\frac 1 2\ln(1+t+t^2)}t\\
-&amp;=\lim\limits_{t\to 0^+}\frac{\frac 1 3 (t+t^3)-\frac 1 2(t+t^2)}t\\
+&amp;=\lim\limits_{t \to 0^+} \frac{\sqrt[3]{1 + t + t^3} - 1}{t} - \lim_{t \to 0^+} \frac{\sqrt{1 + t + t^2}-1}{t}\\
+&amp;=\lim\limits_{t \to 0^+} \frac{\frac 1 3(t+t^3)}{t} - \lim_{t \to 0^+} \frac{\frac 1 2(t+t^2)}{t}\\
 &amp;= \frac{1}{3} - \frac{1}{2}\\
 &amp;= -\frac{1}{6}
 \end{aligned}
@@ -1306,9 +1308,11 @@
 <div class="arithmatex">\[
 \begin{aligned}
 &amp;\xlongequal{t=\frac 1 x}\lim\limits_{t \to 0^+}(\sqrt[3]{\frac{1}{t^3} + \frac{1}{t^2} + 1} - \sqrt{\frac{1}{t^2} + \frac{1}{t} + 1})\\
-&amp;=\lim\limits_{t \to 0^+} \frac{\sqrt[3]{1 + t + t^3} - 1}{t} + \lim_{t \to 0^+} \frac{1 - \sqrt{1 + t + t^2}}{t}\\
-&amp;=\lim\limits_{t \to 0^+} \frac{1 + t + t^3 - 1}{t \left( (\sqrt[3]{1 + t + t^3})^2 + \sqrt[3]{1 + t + t^3} + 1 \right)} + \lim_{t \to 0^+} \frac{1 - (1 + t + t^2)}{t(1 + \sqrt{1 + t + t^2})}\\
-&amp;= \lim_{t \to 0^+} \frac{t + t^3}{3t} + \lim_{t \to 0^+} \frac{-t - t^2}{2t}\\
+&amp;=\lim\limits_{t\to 0^+}\frac{\sqrt[3]{1+t+t^3}-\sqrt{1+t+t^2}}{t}\\
+&amp;=\lim\limits_{t\to 0^+}\sqrt{1+t+t^2}\cdot \frac{\frac{\sqrt[3]{1+t+t^3}}{\sqrt{1+t+t^2}}-1}{t}\\
+&amp;=\lim\limits_{t\to 0^+}\frac{e^{\frac 1 3\ln(1+t+t^3)-\frac 1 2 \ln(1+t+t^2)}-1}{t}\\
+&amp;=\lim\limits_{t\to 0^+}\frac{\frac 1 3 \ln(1+t+t^3)-\frac 1 2\ln(1+t+t^2)}t\\
+&amp;=\lim\limits_{t\to 0^+}\frac{\frac 1 3 (t+t^3)-\frac 1 2(t+t^2)}t\\
 &amp;= \frac{1}{3} - \frac{1}{2}\\
 &amp;= -\frac{1}{6}
 \end{aligned}
@@ -1362,10 +1366,66 @@
 <p>单调：显然 <span class="arithmatex">\(x_n&lt;x_{n+1}\)</span>。</p>
 </li>
 <li>
-<p>有界：设 <span class="arithmatex">\(y_k=\sqrt{k+\sqrt{(k+1)+\cdots+\sqrt n}}\)</span>，可数学归纳法证明 <span class="arithmatex">\(y_k\leq \sqrt k+1\)</span>（<span class="arithmatex">\(k=n\)</span> 时成立。假设 <span class="arithmatex">\(k+1\)</span> 时成立，则 <span class="arithmatex">\(y_k=\sqrt{k+y_{k+1}}\leq \sqrt{k+(\sqrt{k+1}+1)}\leq \sqrt{k+2\sqrt k+1}\)</span>【利用 <span class="arithmatex">\(\sqrt{k+1}\leq 2\sqrt k\)</span>，<span class="arithmatex">\(k\geq 1\)</span>】<span class="arithmatex">\(=\sqrt k+1\)</span>）。则 <span class="arithmatex">\(x_n\leq 2\)</span>。</p>
+<p>有界：</p>
+<ul>
+<li>
+<p><strong>法 1：</strong>设 <span class="arithmatex">\(y_k=\sqrt{k+\sqrt{(k+1)+\cdots+\sqrt n}}\)</span>，可数学归纳法证明 <span class="arithmatex">\(y_k\leq \sqrt k+1\)</span>（<span class="arithmatex">\(k=n\)</span> 时成立。假设 <span class="arithmatex">\(k+1\)</span> 时成立，则 <span class="arithmatex">\(y_k=\sqrt{k+y_{k+1}}\leq \sqrt{k+(\sqrt{k+1}+1)}\leq \sqrt{k+2\sqrt k+1}\)</span>【利用 <span class="arithmatex">\(\sqrt{k+1}\leq 2\sqrt k\)</span>，<span class="arithmatex">\(k\geq 1\)</span>】<span class="arithmatex">\(=\sqrt k+1\)</span>）。则 <span class="arithmatex">\(x_n\leq 2\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong><span class="arithmatex">\(\frac 1 2 x_n=\sqrt{\frac 1 4+\sqrt{\frac 2 {16}+\sqrt{\frac{3}{256}+\cdots}}}&lt;\sqrt{1+\sqrt{1+\sqrt{1+\cdots}}}&lt;2\)</span>。</p>
+</li>
+</ul>
 </li>
 </ul>
 </details>
+</details>
+<details class="info" open="open">
+<summary>2016-2017</summary>
+<p>设 <span class="arithmatex">\(f(x)=a_1\sin x+a_2\sin 2x+\cdots+a_n\sin nx\)</span>，<span class="arithmatex">\(|f(x)|\leq |\sin x|\)</span>。证明：<span class="arithmatex">\(|a_1+2a_2+\cdots+na_n|\leq 1\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong><span class="arithmatex">\(a_1+2a_2+\cdots+na_n=f'(0)=\lim\limits_{x\to 0}\dfrac{f(x)-f(0)}{x-0}=\lim\limits_{x\to 0}\dfrac{f(x)}x\)</span>。</p>
+<p>则 <span class="arithmatex">\(|a_1+2a_2+\cdots+na_n|=\lim\limits_{x\to 0}|\dfrac{f(x)}x|\leq \lim\limits_{x\to 0}|\dfrac{\sin x}x|=1\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong><span class="arithmatex">\(|f(x)|\leq |\sin x|\Rightarrow |\dfrac{f(x)}x|\leq |\dfrac{\sin x}x|\leq 1\,(x\neq 0)\)</span>，则 <span class="arithmatex">\(|a_1\dfrac{\sin x}x+a_2\dfrac{\sin 2x}x+\cdots+a_n\dfrac{\sin nx}x|\leq 1\)</span>。</p>
+<p>当 <span class="arithmatex">\(x\to 0\)</span> 时，两边同时取极限，得 <span class="arithmatex">\(|a_1+2a_2+\cdots+na_n|\leq 1\)</span>。</p>
+</li>
+</ul>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2015-2016</summary>
+<p>奇函数 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([-1,1]\)</span> 上有二阶导数，且 <span class="arithmatex">\(f(1)=k\,(k&gt;0)\)</span>。证明：（1）<span class="arithmatex">\(\exists \xi\in(0,1)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=k\)</span>。（2）<span class="arithmatex">\(\exists \eta\in(-1,1)\)</span> 使得 <span class="arithmatex">\(f''(\eta)+f'(\eta)=k\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p>（1）</p>
+<p><span class="arithmatex">\(f(0)=0\)</span>，<span class="arithmatex">\(f(1)=k\)</span></p>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上连续，在 <span class="arithmatex">\((0,1)\)</span> 内可导。根据拉格朗日中值定理，<span class="arithmatex">\(\exists \xi\in(0,1)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=\dfrac{f(1)-f(0)}{1-0}=k\)</span>。</p>
+</li>
+<li>
+<p>（2）</p>
+<p><span class="arithmatex">\(f(-1)=-f(1)=-k\)</span>，<span class="arithmatex">\(f(0)=0\)</span></p>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([-1,0]\)</span> 上连续，在 <span class="arithmatex">\((0,1)\)</span> 内可导。根据拉格朗日中值定理，<span class="arithmatex">\(\exists\xi_2\in(-1,0)\)</span> 使得 <span class="arithmatex">\(f'(\xi_2)=\dfrac{f(0)-f(-1)}{0-(-1)}=k\)</span>。</p>
+<p>设 <span class="arithmatex">\(F(x)=e^x(f'(x)-k)\)</span>，则 <span class="arithmatex">\(F'(x)=e^x(f'(x)+f''(x)-k)\)</span>。</p>
+<p><span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([\xi_2,\xi]\)</span> 上连续，在 <span class="arithmatex">\((\xi_2,\xi)\)</span> 内可导，且 <span class="arithmatex">\(F'(\xi)=F'(\xi_2)=0\)</span>。根据罗尔定理，<span class="arithmatex">\(\exists\eta\in(\xi_2,\xi)\)</span> 使得 <span class="arithmatex">\(F'(\eta)=0\)</span>，即 <span class="arithmatex">\(f'(\eta)+f''(\eta)=k\)</span>。</p>
+</li>
+</ul>
+</details>
+</details>
+<details class="warning" open="open">
+<summary>一些踩过的坑</summary>
+<ul>
+<li><span class="arithmatex">\(x\sin\dfrac 1 x\)</span>、<span class="arithmatex">\(x\arctan \dfrac 1 x\)</span> 等，<span class="arithmatex">\(x\to 0\)</span> 时，极限为 <span class="arithmatex">\(0\)</span> 而不是 <span class="arithmatex">\(1\)</span>。手别太快了，看清楚是不是无穷小。</li>
+<li>复合函数求导，复合漏了。如 <span class="arithmatex">\((\sec x)'=-\dfrac{1}{\cos^2 x}\cdot (-\sin x)=\dfrac{\sin x}{\cos^2 x}\)</span> 漏了 <span class="arithmatex">\(\cdot (-\sin x)\)</span>。</li>
+<li><span class="arithmatex">\(n\)</span> 次求导公式记错了。虽然 <span class="arithmatex">\([\ln(1+x)]^{(n)}=(-1)^{n-1}\dfrac{(n-1)!}{(1+x)^n}\)</span>，但是 <span class="arithmatex">\([\ln(1-x)]^{(n)}=-\dfrac{(n-1)!}{(1-x)^n}\)</span>。</li>
+<li><span class="arithmatex">\(-\)</span> 号漏了。如前面 <span class="arithmatex">\(-\)</span> 号后面抄成 <span class="arithmatex">\(+\)</span> 号；<span class="arithmatex">\(\sqrt{1-\sin(x^2)}-1\,(x\to 0)\)</span> 错误替换成了 <span class="arithmatex">\(\dfrac 1 2 \sin (x^2)\)</span>（应该是 <span class="arithmatex">\(-\dfrac 1 2 \sin (x^2)\)</span>）。</li>
+<li><span class="arithmatex">\(\lim\limits_{x\to 0}x^{\alpha}=0\Rightarrow \alpha&gt;0\)</span>，不是 <span class="arithmatex">\(\alpha\geq 1\)</span>。</li>
+</ul>
 </details>
 
 
