@@ -1316,7 +1316,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-07T11:18:50.996720+00:00'>2025-11-07</time></span><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-07T11:18:50.996720+00:00'>2025-11-07</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-07T13:28:57.697837+00:00'>2025-11-07</time></span><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-07T13:28:57.697837+00:00'>2025-11-07</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1461,6 +1461,14 @@
 <p>根据拉格朗日中值定理，<span class="arithmatex">\(f(1+x)-f(1)=f'(\xi)x\)</span>，即 <span class="arithmatex">\(\ln (1+x)=\dfrac x {\xi}\)</span>，<span class="arithmatex">\(1&lt;\xi&lt;1+x\)</span>。</p>
 <p>而 <span class="arithmatex">\(\dfrac x {1+x}&lt;\dfrac x {\xi}&lt;x\)</span>，故 <span class="arithmatex">\(\dfrac x {1+x}&lt;\ln (1+x)&lt;x\)</span>。</p>
 </details>
+<p>设 <span class="arithmatex">\(a &gt; b &gt; 0\)</span>，<span class="arithmatex">\(n &gt; 1\)</span>，证明：<span class="arithmatex">\(nb^{n-1}(a - b) &lt; a^n - b^n &lt; na^{n-1}(a - b)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(f(x) = x^n\)</span>，显然 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([b, a]\)</span> 上连续，在 <span class="arithmatex">\((b, a)\)</span> 内可导，于是由拉格朗日中值定理：</p>
+<p><span class="arithmatex">\(f(a) - f(b) = f'(\xi)(a - b)\)</span>，<span class="arithmatex">\(\xi \in (b, a)\)</span></p>
+<p><span class="arithmatex">\(a^n - b^n = n\xi^{n-1}(a - b)\)</span></p>
+<p>由于 <span class="arithmatex">\(0 &lt; b &lt; \xi &lt; a\)</span>，<span class="arithmatex">\(n &gt; 1\)</span>，有 <span class="arithmatex">\(nb^{n-1}(a - b) &lt; a^n - b^n = n\xi^{n-1}(a - b) &lt; na^{n-1}(a - b)\)</span>。</p>
+</details>
 </details>
 </li>
 <li>
@@ -1522,9 +1530,17 @@
 <p>构造辅助函数</p>
 <details class="tip">
 <summary>Tip</summary>
+<ol>
+<li>
+<p><span class="arithmatex">\((uv)'=u'v+uv'\)</span> 的逆用：</p>
 <ul>
 <li>
-<p><span class="arithmatex">\([x^{\lambda}f(x)]'=x^{\lambda-1}(\lambda f(x)+xf'(x))\)</span></p>
+<p><span class="arithmatex">\([f^{(a-1)}(x)f^{(b)}(x)]'=f^{(a)}(x)f^{(b)}(x)+f^{(a-1)}(x)f^{(b+1)}(x)\)</span></p>
+<p>见到 <span class="arithmatex">\(f^{(a)}f^{(b)}(x)+f^{(a-1)}(x)f^{(b+1)}(x)\)</span>，作 <span class="arithmatex">\(F(x)=f^{(a-1)}(x)f^{(b)}(x)\)</span>。</p>
+<p>如 <span class="arithmatex">\(f(x)f'(x)\)</span> 作 <span class="arithmatex">\(F(x)=f^2(x)\)</span>，<span class="arithmatex">\([f'(x)]^2+f(x)f''(x)\)</span> 作 <span class="arithmatex">\(F(x)=f(x)f'(x)\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\([x^{\lambda}f(x)]'=\lambda x^{\lambda-1}f(x)+x^{\lambda}f'(x)=x^{\lambda-1}(\lambda f(x)+xf'(x))\)</span></p>
 <p>见到 <span class="arithmatex">\(\lambda f(x)+xf'(x)\)</span>，作 <span class="arithmatex">\(F(x)=x^{\lambda}f(x)\)</span>。</p>
 </li>
 <li>
@@ -1532,10 +1548,29 @@
 <p>见到 <span class="arithmatex">\(f'(x)+f(x)\varphi'(x)\)</span>，作 <span class="arithmatex">\(F(x)=f(x)e^{\varphi(x)}\)</span>。</p>
 <p>如 <span class="arithmatex">\(f'(x)+kf(x)\)</span> 作 <span class="arithmatex">\(F(x)=f(x)e^{kx}\)</span>，<span class="arithmatex">\(f'(x)+(\dfrac 1 x-1)f(x)\)</span> 作 <span class="arithmatex">\(F(x)=f(x)e^{\ln x-x}=f(x)xe^{-x}\)</span>。</p>
 </li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\((\dfrac u v)'=\dfrac{u'v-uv'}{v^2}\)</span> 的逆用：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\([\dfrac{f(x)}{x}]'=\dfrac{f'(x)x-f(x)}{x^2}\)</span></p>
+<p>见到 <span class="arithmatex">\(f'(x)x-f(x),x\neq 0\)</span>，作 <span class="arithmatex">\(F(x)=\dfrac{f(x)}x\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\([\dfrac{f'(x)}{f(x)}]'=\dfrac{f''(x)f(x)-[f'(x)]^2)}{f^2(x)}\)</span></p>
+<p>见到 <span class="arithmatex">\(f''(x)f(x)-[f'(x)]^2,f(x)\neq 0\)</span>，作 <span class="arithmatex">\(F(x)=\dfrac{f'(x)}{f(x)}\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\([\ln f(x)]'=\dfrac{f'(x)}{f(x)}\)</span>，<span class="arithmatex">\([\ln f(x)]''=[\dfrac{f'(x)}{f(x)}]'=\dfrac{f''(x)f(x)-[f'(x)]^2}{f^2(x)}\)</span></p>
+<p>j见到 <span class="arithmatex">\(f''(x)f(x)-[f'(x)]^2,f(x)\neq 0\)</span>，也可考虑作 <span class="arithmatex">\(F(x)=\ln f(x)\)</span>。</p>
+</li>
+</ul>
+</li>
 <li>
 <p>常数的处理：如 <span class="arithmatex">\(f'(x)+f(x)=1\)</span>，<span class="arithmatex">\(\Rightarrow [f(x)-1]'+f(x)-1=0\)</span>，构造 <span class="arithmatex">\(F(x)=e^x[f(x)-1]\)</span>。<span class="arithmatex">\(f'(x)-\lambda[f(x)-x]=1\)</span>，<span class="arithmatex">\(\Rightarrow [f(x)-x]'-\lambda[f(x)-x]=0\)</span>，构造 <span class="arithmatex">\(F(x)=e^{-\lambda x}[f(x)-x]\)</span>。</p>
 </li>
-</ul>
+</ol>
 </details>
 </li>
 <li>
@@ -1593,14 +1628,6 @@
 <p>拉格朗日中值定理：见到“<span class="arithmatex">\(f-f\)</span>”或者“<span class="arithmatex">\(f\)</span> 与 <span class="arithmatex">\(f'\)</span> 关系”时</p>
 <details class="example">
 <summary>例题</summary>
-<p>设 <span class="arithmatex">\(a &gt; b &gt; 0\)</span>，<span class="arithmatex">\(n &gt; 1\)</span>，证明：<span class="arithmatex">\(nb^{n-1}(a - b) &lt; a^n - b^n &lt; na^{n-1}(a - b)\)</span>。</p>
-<details class="note">
-<summary>解答</summary>
-<p>设 <span class="arithmatex">\(f(x) = x^n\)</span>，显然 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([b, a]\)</span> 上连续，在 <span class="arithmatex">\((b, a)\)</span> 内可导，于是由拉格朗日中值定理：</p>
-<p><span class="arithmatex">\(f(a) - f(b) = f'(\xi)(a - b)\)</span>，<span class="arithmatex">\(\xi \in (b, a)\)</span></p>
-<p><span class="arithmatex">\(a^n - b^n = n\xi^{n-1}(a - b)\)</span></p>
-<p>由于 <span class="arithmatex">\(0 &lt; b &lt; \xi &lt; a\)</span>，<span class="arithmatex">\(n &gt; 1\)</span>，有 <span class="arithmatex">\(nb^{n-1}(a - b) &lt; a^n - b^n = n\xi^{n-1}(a - b) &lt; na^{n-1}(a - b)\)</span>。</p>
-</details>
 <p>设函数 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上连续，在 <span class="arithmatex">\((0,1)\)</span> 内可导，且 <span class="arithmatex">\(f(0)=0\)</span>，<span class="arithmatex">\(f(1)=1\)</span>，证明：对 <span class="arithmatex">\(\forall a,b&gt;0\)</span>，<span class="arithmatex">\(\exists \xi_1,\xi_2 \in (0,1)\)</span> 且 <span class="arithmatex">\(\xi_1\neq \xi_2\)</span>，使得 <span class="arithmatex">\(\dfrac{a}{f'(\xi_1)} + \dfrac{b}{f'(\xi_2)} = a+b\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
@@ -1657,6 +1684,62 @@
 <summary>注意</summary>
 <p>一般情况下，<span class="arithmatex">\(f'(x_0)=\lim\limits_{x\to x_0}f'(x)\)</span> 不一定成立，如 <span class="arithmatex">\(f(x)=\begin{cases}x^2\sin \frac 1 x&amp;(x\neq 0)\\0&amp;(x=0)\end{cases}\)</span>，<span class="arithmatex">\(f'(0)=\lim\limits_{x\to 0}\dfrac{f(x)-f(0)}{x}=0\)</span>，但 <span class="arithmatex">\(\lim\limits_{x\to x_0}f'(x)=\lim\limits_{x\to x_0}2x\sin \dfrac 1 x-\cos\dfrac 1 x\)</span> 不存在。</p>
 <p>只有 <span class="arithmatex">\(f'(x_0)\)</span> 和 <span class="arithmatex">\(\lim\limits_{x\to x_0}f'(x)\)</span> 都存在，才有 <span class="arithmatex">\(f'(x_0)=\lim\limits_{x\to x_0}f'(x)\)</span>。（<span class="arithmatex">\(f'(x_0)\)</span> 存在 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续，<span class="arithmatex">\(\lim\limits_{x\to x_0}f'(x)\)</span> 存在 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 有定义）</p>
+</details>
+</details>
+</li>
+<li>
+<p>课本课后习题</p>
+<details class="example">
+<summary>例题</summary>
+<p>证明方程 <span class="arithmatex">\(x^3-3x+c=0\)</span>（<span class="arithmatex">\(c\)</span> 为常数）在区间 <span class="arithmatex">\((-1,1)\)</span> 内至多只有一个实根。</p>
+<details class="note">
+<summary>解答</summary>
+<p>反证法。设 <span class="arithmatex">\(f(x)=x^3-3x+c\)</span>，假设 <span class="arithmatex">\(-1&lt;x_1&lt;x_2&lt;1\)</span> 且 <span class="arithmatex">\(f(x_1)=f(x_2)=0\)</span>。</p>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([x_1,x_2]\)</span> 上连续，在 <span class="arithmatex">\((x_1,x_2)\)</span> 内可导，且 <span class="arithmatex">\(f(x_1)=f(x_2)=0\)</span>。根据罗尔定理，<span class="arithmatex">\(\exists \xi\in(x_1,x_2)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>，即 <span class="arithmatex">\(3\xi^2-3=0\)</span>，解得 <span class="arithmatex">\(\xi=\pm 1\)</span>，这与 <span class="arithmatex">\(\xi\in(-1,1)\)</span> 矛盾。</p>
+<p>故方程在 <span class="arithmatex">\((-1,1)\)</span> 内至多只有一个实根。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 和 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上存在二阶导数，并且 <span class="arithmatex">\(g''(x)\neq 0\)</span>，<span class="arithmatex">\(f(a)=f(b)=g(a)=g(b)=0\)</span>，证明：（1）在 <span class="arithmatex">\((a,b)\)</span> 内 <span class="arithmatex">\(g(x)\neq 0\)</span>；（2）在 <span class="arithmatex">\((a,b)\)</span> 内，至少存在一点 <span class="arithmatex">\(\xi\)</span> 使得 <span class="arithmatex">\(\dfrac{f(\xi)}{g(\xi)}=\dfrac{f''(\xi)}{g''(\xi)}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p>（1）</p>
+<p>反证法，用三次罗尔定理。</p>
+</li>
+<li>
+<p>（2）</p>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(f(x)g''(x)-g(x)f''(x)=0\)</span></p>
+<p><span class="arithmatex">\(f'(x)g'(x)+f(x)g''(x)-g'(x)f'(x)-g(x)f''(x)=0\)</span></p>
+<p><span class="arithmatex">\([f(x)g'(x)]'-[g(x)f'(x)]'=0\)</span></p>
+</details>
+<p>设 <span class="arithmatex">\(F(x)=f(x)g'(x)-g(x)f'(x)\)</span>，则 <span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(F(a)=F(b)=0\)</span>。根据罗尔定理，<span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(F'(\xi)=0\)</span>，即 <span class="arithmatex">\(f(\xi)g''(\xi)-g(\xi)f''(\xi)=0\)</span>，即 <span class="arithmatex">\(\dfrac{f(\xi)}{g(\xi)}=\dfrac{f''(\xi)}{g''(\xi)}\)</span>。</p>
+</li>
+</ul>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,+\infty)\)</span> 上连续，<span class="arithmatex">\(f''(x)\)</span> 在 <span class="arithmatex">\((a,+\infty)\)</span> 内存在且大于 <span class="arithmatex">\(0\)</span>，证明：<span class="arithmatex">\(F(x)=\dfrac{f(x)-f(a)}{x-a}\,(x&gt;a)\)</span> 在 <span class="arithmatex">\((a,+\infty)\)</span> 内递增。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(F'(x)=\dfrac{f'(x)(x-a)-[f(x)-f(a)]}{(x-a)^2}\)</span>。</p>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,x]\)</span> 上连续，在 <span class="arithmatex">\((a,x)\)</span> 内可导。根据拉格朗日中值定理，<span class="arithmatex">\(\exists \xi\in(a,x)\)</span> 使得 <span class="arithmatex">\(f(x)-f(a)=f'(\xi)(x-a)\)</span>。</p>
+<p>则 <span class="arithmatex">\(F'(x)=\dfrac{f'(x)(x-a)-f'(\xi)(x-a)}{(x-a)^2}=\dfrac{f'(x)-f'(\xi)}{x-a}\)</span>。</p>
+<p><span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\([\xi,x]\)</span> 上连续，在 <span class="arithmatex">\((\xi,x)\)</span> 内可导。根据拉格朗日中值定理，<span class="arithmatex">\(\exists \eta\in(\xi,x)\)</span> 使得 <span class="arithmatex">\(f'(x)-f'(\xi)=f''(\eta)(x-\xi)\)</span>。</p>
+<p>则 <span class="arithmatex">\(F'(x)=\dfrac{f''(\eta)(x-\xi)}{x-a}&gt;0\)</span>。故 <span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\((a,+\infty)\)</span> 单调递增。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(f(x)g'(x)\neq f'(x)g(x)\)</span>。证明：介于 <span class="arithmatex">\(f(x)\)</span> 的两个零点之间，至少有一个 <span class="arithmatex">\(g(x)\)</span> 的零点。</p>
+<details class="note">
+<summary>解答</summary>
+<p>反证法。假设 <span class="arithmatex">\(f(x_1)=f(x_2)=0\,(x_1&lt;x_2)\)</span>，且 <span class="arithmatex">\(\forall x\in[x_1,x_2],g(x)\neq 0\)</span>。</p>
+<p>设 <span class="arithmatex">\(F(x)=\dfrac{f(x)}{g(x)}\)</span>，则 <span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([x_1,x_2]\)</span> 上连续，在 <span class="arithmatex">\((x_1,x_2)\)</span> 内可导，且 <span class="arithmatex">\(F(x_1)=F(x_2)=0\)</span>。根据罗尔定理，<span class="arithmatex">\(\exists \xi\in(x_1,x_2)\)</span> 使得 <span class="arithmatex">\(F'(\xi)=0\)</span>，即 <span class="arithmatex">\(\dfrac{f'(\xi)g(\xi)-f(\xi)g'(\xi)}{g^2(\xi)}\)</span>，即 <span class="arithmatex">\(f(\xi)g'(\xi)=f'(\xi)g(\xi)\)</span>，这与 <span class="arithmatex">\(f(x)g'(x)\neq f'(x)g(x)\)</span> 矛盾。</p>
+<p>故介于 <span class="arithmatex">\(f(x)\)</span> 的两个零点之间，至少有一个 <span class="arithmatex">\(g(x)\)</span> 的零点。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(f'(x)\neq 0\)</span>。证明：<span class="arithmatex">\(\exists \xi,\tau\in(a,b)\)</span> 使得 <span class="arithmatex">\(\dfrac{f'(\xi)}{f'(\tau)}=\dfrac{e^b-e^a}{b-a}e^{-\tau}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导。根据拉格朗日中值定理，<span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=\dfrac{f(b)-f(a)}{b-a}\)</span>。</p>
+<p><span class="arithmatex">\(f(x)\)</span> 和 <span class="arithmatex">\(e^x\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\((e^x)'=e^x\neq 0\)</span>。根据柯西中值定理，<span class="arithmatex">\(\exists\tau\in(a,b)\)</span> 使得 <span class="arithmatex">\(f'(\tau)=e^{\tau}\dfrac{f(b)-f(a)}{e^b-e^a}\)</span>。</p>
+<p>则 <span class="arithmatex">\(\dfrac{f'(\xi)}{f'(\tau)}=\dfrac{e^b-e^a}{b-a}e^{-\tau}\)</span>。</p>
 </details>
 </details>
 </li>

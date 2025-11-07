@@ -1316,7 +1316,7 @@
 
   <h1>第二章 导数与微分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-07T11:18:50.996720+00:00'>2025-11-07</time></span><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-07T11:18:50.996720+00:00'>2025-11-07</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-07T13:28:57.697837+00:00'>2025-11-07</time></span><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-07T13:28:57.697837+00:00'>2025-11-07</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">导数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2223,6 +2223,24 @@
 <summary>Tip</summary>
 <p>给出可导的条件，相当于有可导（左右导数相等）和连续（左右极限相等）两个条件。</p>
 </details>
+</details>
+</details>
+</li>
+<li>
+<p>课本课后习题</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((a,b)\)</span> 上有定义，<span class="arithmatex">\(x_0\in(a,b)\)</span>，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处可导。设数列 <span class="arithmatex">\(\{x_n\},\{y_n\}\)</span> 满足 <span class="arithmatex">\(a&lt;x_n&lt;x_0&lt;y_n&lt;b\)</span>，且 <span class="arithmatex">\(\lim\limits_{n\to \infty}x_n=x_0\)</span>，<span class="arithmatex">\(\lim\limits_{n\to \infty}y_n=x_0\)</span>。证明：<span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{f(y_n)-f(x_n)}{y_n-x_n}=f'(x_0)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{f(y_n)-f(x_n)}{y_n-x_n}=\lim\limits_{n\to \infty}\dfrac{f(y_n)-f(x_0)}{y_n-x_n}+\dfrac{f(x_0)-f(x_n)}{y_n-x_n}=\lim\limits_{n\to \infty}\dfrac{f(y_n)-f(x_0)}{y_n-x_0}\cdot\dfrac{y_n-x_0}{y_n-x_n}+\dfrac{f(x_0)-f(x_n)}{x_0-x_n}\cdot \dfrac{x_0-x_n}{y_n-x_n}=\lim\limits_{n\to \infty}f'(x_0)(\dfrac{y_n-x_0}{y_n-x_n}+\dfrac{x_0-x_n}{y_n-x_n})=f'(x_0)\)</span></p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x\neq 0\)</span> 时可导，且对任意非零数 <span class="arithmatex">\(x,y\)</span> 均有 <span class="arithmatex">\(f(xy)=f(x)+f(y)\)</span>，又 <span class="arithmatex">\(f’(1)\)</span> 存在，证明当 <span class="arithmatex">\(x\neq 0\)</span> 时，<span class="arithmatex">\(f(x)\)</span> 可导。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(f'(x)=\lim\limits_{\Delta x\to 0}\dfrac{f(x+\Delta x)-f(x)}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{f[x(1+\frac{\Delta x}x)]-f(x)}{\Delta x}=\lim\limits_{\Delta x\to 0}\dfrac{f(1+\frac{\Delta x}x)}{\Delta x}=\dfrac 1 x\lim\limits_{\Delta x\to 0}\dfrac{f(1+\frac{\Delta x}x)}{\frac{\Delta x}x}\)</span></p>
+<p>又 <span class="arithmatex">\(f(1\cdot y)=f(1)+f(y)\Rightarrow f(1)=0\)</span></p>
+<p>则 <span class="arithmatex">\(f'(x)=\dfrac 1 x\lim\limits_{\Delta x\to 0}\dfrac{f(1+\frac{\Delta x}x)-f(1)}{\frac{\Delta x}x}=\dfrac 1 x f'(1)\)</span>。故 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x\neq 0\)</span> 时处处可导。</p>
 </details>
 </details>
 </li>
