@@ -467,7 +467,7 @@
 
 ??? note "第一次作业 10.1"
 
-    ??? note "AX为正时计算2*AX否则计算AX的平方"
+    ??? note "1 AX为正时计算2*AX否则计算AX的平方"
     
         ```asm
         .386
@@ -492,7 +492,7 @@
         end main
         ```
     
-    ??? note "判断素数"
+    ??? note "2 判断素数"
     
         ```asm
         .386
@@ -666,6 +666,159 @@
            cmp si, di
            jle next_row
         exit:   
+           mov ah, 4Ch
+           int 21h
+        code ends
+        end main
+        ```
+        
+??? note "第三次作业 11.6"
+
+ 	??? note "1 用两头对称交换法倒置一个字符串"
+
+        ```asm
+        .386
+        data segment use16
+        s db 10 dup(' '), 0
+        data ends
+
+        code segment use16
+        assume cs:code, ds:data
+        main:
+           mov ax, seg s      ; seg s表示s的段地址
+           mov ds, ax         ; ds=数组s的段地址
+           mov si, offset s   ; offset s表示s的偏移地址
+           mov ebx, 7FFFFFFFh ; ebx=待转化的32位数，其值在评测时会改变
+           mov ebp, 10        ; ebp = 除数
+        again:   
+           mov edx, 0         ; 清除64位被除数(由edx、eax拼接)的高32位
+           mov eax, ebx       ; eax=64位被除数的低32位
+           div ebp            ; edx、eax / ebp = eax..edx, 商为eax, 余数为edx
+           add edx, '0'       ; 把edx中的余数转化成数字字符, 例如7转化成'7'
+           mov ds:[si], dl    ; 把上条指令运算结果edx中的低8位dl保存到ds:[si]中
+                              ; 这里不需要保存整个edx, 因为edx的高24位一定等于0
+           add si, 1
+           mov ebx, eax       ; 更新被除数
+           cmp eax, 0         ; 若商≠0则...
+           jne again          ; ==>again
+        done:   
+           mov byte ptr ds:[si], 0 ; 在字符串末尾填入结束标志'\0'
+           mov di, si
+           sub di, 1               ; ds:di -> s的末元素
+           mov si, offset s        ; ds:si -> s的首元素
+           ;#1_begin------------------
+        reverse:
+            cmp si,di
+            jge done_reverse
+
+            mov dl,ds:[si]
+            mov al,ds:[di]
+            mov ds:[si],al
+            mov ds:[di],dl
+
+            add si,1
+            sub di,1
+
+            jmp reverse
+        done_reverse:	;<--第1空, 请把解答写在分号左边, 可填多条指令
+           ;#1_end====================   
+        output:
+           mov si, offset s
+        output_next:   
+           mov ah, 2
+           mov dl, ds:[si]
+           cmp dl, 0
+           je exit
+           int 21h
+           add si, 1
+           jmp output_next
+        exit:  
+           mov ah, 4Ch
+           mov al, 0
+           int 21h
+        code ends
+        end main
+        ```
+
+	??? note "2 金字塔"
+
+        ```asm
+        data segment
+        c    db 0
+        rows dw 0
+        spaces_on_this_row dw 0
+        digits_on_this_row dw 0
+        data ends
+
+        code segment
+        assume cs:code, ds:data
+        main:
+           mov ax, data
+           mov ds, ax
+           mov ah, 1
+           int 21h       ; AL=getchar()
+           mov [c], al   ; 保存输入的字符到变量c中
+           sub al, '0'   ; 把输入的数字字符脱掉引号
+           mov ah, 0     ; AX的高8位清零
+           mov [rows], ax; 总共需要输出的行数保存到变量rows中
+           dec ax        ; ax--
+           mov [spaces_on_this_row], ax; 首行需要输出的空格的个数
+           mov [digits_on_this_row], 1 ; 首行需要输出的数字的个数
+           cmp [rows], 0
+           je exit
+           mov ah, 2
+           mov dl, 0Dh
+           int 21h; 输出回车
+           mov ah, 2
+           mov dl, 0Ah
+           int 21h; 输出换行
+        ;#1_begin-------------------
+            mov cx,[rows]
+        print:
+            mov bx,[spaces_on_this_row]
+            print_spaces:
+                cmp bx,0
+                je done_spaces
+
+                mov ah,2
+                mov dl,' '
+                int 21h
+
+                sub bx,1
+                cmp bx,0
+                ja print_spaces
+            done_spaces:
+
+            mov bx,[digits_on_this_row]
+            print_digits:
+                cmp bx,0
+                je done_digits
+
+                mov ah,2
+                mov dl,[c]
+                int 21h
+
+                sub bx,1
+                cmp bx,0
+                ja print_digits
+            done_digits:
+
+            mov ah,2
+            mov dl,0Dh
+            int 21h
+
+            mov ah,2
+            mov dl,0Ah
+            int 21h
+
+            sub [spaces_on_this_row],1
+            add [digits_on_this_row],2
+
+            sub cx,1
+            cmp cx,0
+            ja print	;<--第1空, 请把解答写在分号左边, 可填多条指令
+        ;#1_end=====================
+        exit:
            mov ah, 4Ch
            int 21h
         code ends
