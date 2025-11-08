@@ -1520,14 +1520,16 @@
 
   <h1>第一章 函数与极限</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-07T13:28:57.696837+00:00'>2025-11-07</time></span><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-07T13:28:57.696837+00:00'>2025-11-07</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-08T04:51:56.588485+00:00'>2025-11-08</time></span><span data-tippy-content data-tippy-raw='2025-11-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-08T04:51:56.588485+00:00'>2025-11-08</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>基本初等函数：六类（常值函数，幂函数，指数函数，对数函数，三角函数，反三角函数）。</p>
-<p>初等函数：由基本初等函数经过有限次四则运算与复合运算所得到的函数。
-- 狄利克雷函数 <span class="arithmatex">\(D(x)=[x\in\mathbb Q]\)</span> 是周期函数（任意非零有理数都是 <span class="arithmatex">\(D(x)\)</span> 的周期），但是无最小正周期。</p>
+<p>初等函数：由基本初等函数经过有限次四则运算与复合运算所得到的函数。</p>
+</li>
+<li>
+<p>狄利克雷函数 <span class="arithmatex">\(D(x)=[x\in\mathbb Q]\)</span> 是周期函数（任意非零有理数都是 <span class="arithmatex">\(D(x)\)</span> 的周期），但是无最小正周期。</p>
 </li>
 <li>
 <p>有界集：<span class="arithmatex">\(\exists M&gt;0\)</span>，对 <span class="arithmatex">\(\forall x\in A\)</span>，都有 <span class="arithmatex">\(|x|\leq M\)</span>。</p>
@@ -1549,7 +1551,11 @@
 <p>如 <span class="arithmatex">\(\sup(0,2)=2\)</span>，<span class="arithmatex">\(\inf\{1,\frac 1 2,\frac 1 3,\cdots\}=0\)</span>。</p>
 </li>
 <li>
-<p>确界原理：非空有界的实数集必有上下确界。（但未必存在最大（小）元）</p>
+<p><strong>确界原理：</strong>非空有界的实数集必有上下确界。（但未必存在最大（小）元）</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>非空有界的有理数集不一定有有理数范围内的上下确界（如 <span class="arithmatex">\(\{x\in \mathbb Q\mid x^2&lt;2\}\)</span>，上确界是无理数 <span class="arithmatex">\(\sqrt 2\)</span>）。非空有界的无理数集不一定有无理数范围内的上下确界。</p>
+</details>
 </li>
 <li>
 <p>有界函数，无界函数</p>
@@ -1559,6 +1565,10 @@
 <ul>
 <li>
 <p>数列极限的概念</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>“若数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛于 <span class="arithmatex">\(A\in\mathbb R\)</span>，则 <span class="arithmatex">\(\exists E&gt;0\)</span>，对 <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|a_n-A|&lt;\varepsilon\)</span>”以及“对数列 <span class="arithmatex">\(\{a_n\}\)</span> 与常数 <span class="arithmatex">\(A\)</span>，若 <span class="arithmatex">\(\exists \varepsilon_0&gt;0\)</span>，对 <span class="arithmatex">\(\forall N&gt;0\)</span>，<span class="arithmatex">\(\exists n_0&gt;N\)</span>，有 <span class="arithmatex">\(|a_{n_0}-A|\geq \varepsilon_0\)</span>，则数列 <span class="arithmatex">\(\{a_n\}\)</span> 发散”的表述都是错误的！</p>
+</details>
 </li>
 <li>
 <p>收敛数列的性质</p>
@@ -1687,8 +1697,8 @@
 <p>数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\{a_n\}\)</span> 的任一子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span> 都收敛且极限相等。</p>
 <details class="note">
 <summary>证明</summary>
-<p><span class="arithmatex">\(\Rightarrow\)</span>：<span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|a_n-a|&lt;\varepsilon\)</span>。对于子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span>，取 <span class="arithmatex">\(K=N\)</span>，当 <span class="arithmatex">\(k&gt;K\)</span> 时，有 <span class="arithmatex">\(n_k\geq k&gt;L=N\)</span>，有 <span class="arithmatex">\(|a_{n_k}-a|&lt;\varepsilon\)</span>。所以 <span class="arithmatex">\(\lim\limits_{k\to\infty}a_{n_k}=a\)</span>。</p>
-<p><span class="arithmatex">\(\Leftrightarrow\)</span>：由于 <span class="arithmatex">\(\{a_n\}\)</span> 本身就是 <span class="arithmatex">\(\{a_n\}\)</span> 的一个子列，故 <span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
+<p><span class="arithmatex">\(\Rightarrow\)</span>：<span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists N\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，有 <span class="arithmatex">\(|a_n-a|&lt;\varepsilon\)</span>。对于子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span>，取 <span class="arithmatex">\(K=N\)</span>，当 <span class="arithmatex">\(k&gt;K\)</span> 时，有 <span class="arithmatex">\(n_k\geq k&gt;K=N\)</span>，有 <span class="arithmatex">\(|a_{n_k}-a|&lt;\varepsilon\)</span>。所以 <span class="arithmatex">\(\lim\limits_{k\to\infty}a_{n_k}=a\)</span>。</p>
+<p><span class="arithmatex">\(\Leftarrow\)</span>：由于 <span class="arithmatex">\(\{a_n\}\)</span> 本身就是 <span class="arithmatex">\(\{a_n\}\)</span> 的一个子列，故 <span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
 </details>
 <p>数列 <span class="arithmatex">\(\{a_n\}\)</span> 发散 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\{a_n\}\)</span> 中有两个子列极限存在但不相等，或有一个子列极限不存在。</p>
 <details class="info" open="open">
@@ -1698,7 +1708,7 @@
 <details class="note">
 <summary>证明</summary>
 <p><span class="arithmatex">\(\Rightarrow\)</span>：易证，取 <span class="arithmatex">\(K=N\)</span>。</p>
-<p><span class="arithmatex">\(\Leftrightarrow\)</span>：设 <span class="arithmatex">\(\{a_{2n-1}\},\{a_{2n}\},\{a_{3n}\}\)</span> 极限分别为 <span class="arithmatex">\(A,B,C\)</span>。由于 <span class="arithmatex">\(\{a_{6n-3}\}\)</span> 收敛，且为 <span class="arithmatex">\(\{a_{2n-1}\},\{a_{3n}\}\)</span> 的子列，所以 <span class="arithmatex">\(A=C\)</span>。由于 <span class="arithmatex">\(\{a_{6n}\}\)</span> 收敛，且为 <span class="arithmatex">\(\{a_{2n}\},\{a_{3n}\}\)</span> 的子列，所以 <span class="arithmatex">\(B=C\)</span>。故 <span class="arithmatex">\(A=B\)</span>，即 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_{2n-1}=\lim\limits_{n\to \infty}a_{2n}=A\)</span>。从而，<span class="arithmatex">\(\{a_n\}\)</span> 收敛，且 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=A\)</span>。</p>
+<p><span class="arithmatex">\(\Leftarrow\)</span>：设 <span class="arithmatex">\(\{a_{2n-1}\},\{a_{2n}\},\{a_{3n}\}\)</span> 极限分别为 <span class="arithmatex">\(A,B,C\)</span>。由于 <span class="arithmatex">\(\{a_{6n-3}\}\)</span> 收敛，且为 <span class="arithmatex">\(\{a_{2n-1}\},\{a_{3n}\}\)</span> 的子列，所以 <span class="arithmatex">\(A=C\)</span>。由于 <span class="arithmatex">\(\{a_{6n}\}\)</span> 收敛，且为 <span class="arithmatex">\(\{a_{2n}\},\{a_{3n}\}\)</span> 的子列，所以 <span class="arithmatex">\(B=C\)</span>。故 <span class="arithmatex">\(A=B\)</span>，即 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_{2n-1}=\lim\limits_{n\to \infty}a_{2n}=A\)</span>。从而，<span class="arithmatex">\(\{a_n\}\)</span> 收敛，且 <span class="arithmatex">\(\lim\limits_{n\to \infty}a_n=A\)</span>。</p>
 </details>
 <p>任何数列都存在单调子列。</p>
 <details class="note">
@@ -2296,7 +2306,7 @@ $$
 <details class="warning" open="open">
 <summary>注意</summary>
 <p>若函数 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处不连续，则上述结论不成立。</p>
-<p>如存在有理点列 <span class="arithmatex">\(\{q_n\}\)</span> 满足 <span class="arithmatex">\(\lim\limits_{n\to +\infty}q_n=\sqrt 2\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}D(q_n)=1\)</span>，<span class="arithmatex">\(D(\lim\limits_{n\to q_n})=D(\sqrt 2)=0\)</span>，此时 <span class="arithmatex">\(\lim\limits_{n\to+\infty}D(q_n)\neq D(\lim\limits_{n\to +\infty}q_n)\)</span>（其中 <span class="arithmatex">\(D(x)\)</span> 为狄利克雷函数）。</p>
+<p>如存在有理点列 <span class="arithmatex">\(\{q_n\}\)</span> 满足 <span class="arithmatex">\(\lim\limits_{n\to +\infty}q_n=\sqrt 2\)</span>，但 <span class="arithmatex">\(\lim\limits_{n\to +\infty}D(q_n)=1\)</span>，<span class="arithmatex">\(D(\lim\limits_{n\to +\infty}q_n)=D(\sqrt 2)=0\)</span>，此时 <span class="arithmatex">\(\lim\limits_{n\to+\infty}D(q_n)\neq D(\lim\limits_{n\to +\infty}q_n)\)</span>（其中 <span class="arithmatex">\(D(x)\)</span> 为狄利克雷函数）。</p>
 </details>
 <details class="info">
 <summary>只有一点连续的函数</summary>
@@ -2660,7 +2670,7 @@ $$
 <p><span class="arithmatex">\(\lim\limits_{x\to \infty}(1+\frac 1 x)^x=e\)</span>。</p>
 <details class="note">
 <summary>证明</summary>
-<p>当 <span class="arithmatex">\(x&gt;0\)</span> 时，有 <span class="arithmatex">\((1+\frac{1}{[x]+1})^{[x]}&lt;(1+\frac 1 x)^x&lt;(1+\frac{1}{[x]})^{[x]+1}\)</span>，而 <span class="arithmatex">\(\lim\limits_{x\to +\infty}(1+\frac{1}{[x]+1})^{[x]}=e=\lim\limits_{x\to +\infty}(1+\frac{1}{[x]})^{[x]+1}\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to \infty}(1+\frac 1 x)^x=e\)</span>。</p>
+<p>当 <span class="arithmatex">\(x&gt;0\)</span> 时，有 <span class="arithmatex">\((1+\frac{1}{[x]+1})^{[x]}&lt;(1+\frac 1 x)^x&lt;(1+\frac{1}{[x]})^{[x]+1}\)</span>，而 <span class="arithmatex">\(\lim\limits_{x\to +\infty}(1+\frac{1}{[x]+1})^{[x]}=e=\lim\limits_{x\to +\infty}(1+\frac{1}{[x]})^{[x]+1}\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to +\infty}(1+\frac 1 x)^x=e\)</span>。</p>
 <details class="tip" open="open">
 <summary>Tip</summary>
 <p>在数列极限中已证 <span class="arithmatex">\(\lim\limits_{n\to \infty}(1+\frac 1 n)^n=e\)</span>。</p>
@@ -3305,7 +3315,7 @@ I_n&amp;=\lim\limits_{x\to 0}\frac{1-\frac 1 2 (1^2+2^2+\cdots+n^2)x^2+o(x^2)-1}
 <p><span class="arithmatex">\(\dfrac b x-1&lt;[\dfrac b x]\leq \dfrac b x\)</span></p>
 <ul>
 <li>
-<p>当 <span class="arithmatex">\(x&gt;0\)</span> 时，<span class="arithmatex">\(\dfrac b x-\dfrac x a&lt;\dfrac x a[\dfrac b x]\leq \dfrac b a\)</span></p>
+<p>当 <span class="arithmatex">\(x&gt;0\)</span> 时，<span class="arithmatex">\(\dfrac b a-\dfrac x a&lt;\dfrac x a[\dfrac b x]\leq \dfrac b a\)</span></p>
 <p><span class="arithmatex">\(\lim\limits_{x\to 0^+}(\dfrac b a-\dfrac x a)=\dfrac  b a\)</span></p>
 <p>由夹逼定理，<span class="arithmatex">\(\lim\limits_{x\to 0^+}\dfrac x a[\dfrac b x]=\dfrac b a\)</span>。</p>
 </li>

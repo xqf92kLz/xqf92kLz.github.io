@@ -1316,7 +1316,7 @@
 
   <h1>第二章 导数与微分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-07T13:28:57.697837+00:00'>2025-11-07</time></span><span data-tippy-content data-tippy-raw='2025-11-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-07T13:28:57.697837+00:00'>2025-11-07</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-08T04:51:56.588485+00:00'>2025-11-08</time></span><span data-tippy-content data-tippy-raw='2025-11-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-08T04:51:56.588485+00:00'>2025-11-08</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">导数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1718,7 +1718,7 @@
 <p>所以，当 <span class="arithmatex">\(\Delta x\neq 0\)</span> 时，<span class="arithmatex">\(\Delta y\neq 0\)</span>；同理，当 <span class="arithmatex">\(\Delta y\neq 0\)</span> 时，<span class="arithmatex">\(\Delta x\neq 0\)</span>。</p>
 </li>
 </ol>
-<p>故 <span class="arithmatex">\(\varphi'(y)=\lim\limits_{\Delta y\to 0}\dfrac{\Delta y}{\Delta y}=\lim\limits_{\Delta x\to 0}\dfrac{1}{\frac{\Delta y}{\Delta x}}=\dfrac{1}{f'(x)}\)</span>。</p>
+<p>故 <span class="arithmatex">\(\varphi'(y)=\lim\limits_{\Delta y\to 0}\dfrac{\Delta x}{\Delta y}=\lim\limits_{\Delta x\to 0}\dfrac{1}{\frac{\Delta y}{\Delta x}}=\dfrac{1}{f'(x)}\)</span>。</p>
 </details>
 <details class="info" open="open">
 <summary>Info</summary>
@@ -1857,7 +1857,6 @@
 <p><span class="arithmatex">\({(\ln x)}^{(n)}=(-1)^{n-1}\frac{(n-1)!}{x^n}\,(x&gt;0)\)</span></p>
 <p><span class="arithmatex">\({[\ln(1+x)]}^{(n)}=(-1)^{n-1}\frac{(n-1)!}{(1+x)^n}\,(x&gt;-1)\)</span></p>
 <p><span class="arithmatex">\({[(x+x_0)^m]}^{(n)}=m(m-1)(m-2)\cdots(m-n+1)(x+x_0)^{m-n}\)</span></p>
-<p><span class="arithmatex">\({(\frac{1}{x+a})}^{(n)}=\frac{(-1)^n n!}{(x+a)^{n+1}}\)</span></p>
 <p>注意 <span class="arithmatex">\([f(ax+b)]^{(n)}=a^nf^{(n)}(ax+b)\)</span>（复合函数求导），如 <span class="arithmatex">\([\ln(1-x)]^{(n)}=-\frac{(n-1)!}{(1-x)^n}\)</span>。</p>
 </li>
 <li>
@@ -2015,7 +2014,7 @@
 <details class="note">
 <summary>证明</summary>
 <p><span class="arithmatex">\(\Rightarrow\)</span>：由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可微，则 <span class="arithmatex">\(\Delta y=A\Delta x+o(\Delta x)\,(\Delta x\to 0)\)</span>，故 <span class="arithmatex">\(f'(x_0)=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\to 0}(A+\dfrac{o(\Delta x)}{\Delta x})=A\)</span>，所以 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可导。</p>
-<p><span class="arithmatex">\(\Leftrightarrow\)</span>：由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可导，则 <span class="arithmatex">\(f'(x_0)=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}\Rightarrow\dfrac{\Delta y}{\Delta x}=f'(x_0)+o(\Delta x)\)</span>，所以 <span class="arithmatex">\(\Delta y=f'(x_0)\Delta x+o(\Delta x)\)</span>，从而 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可微。</p>
+<p><span class="arithmatex">\(\Leftarrow\)</span>：由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可导，则 <span class="arithmatex">\(f'(x_0)=\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}\Rightarrow\dfrac{\Delta y}{\Delta x}=f'(x_0)+o(\Delta x)\)</span>，所以 <span class="arithmatex">\(\Delta y=f'(x_0)\Delta x+o(\Delta x)\)</span>，从而 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可微。</p>
 </details>
 </li>
 <li>
