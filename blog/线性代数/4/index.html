@@ -1262,50 +1262,184 @@
 
   <h1>第四章 $n$ 元向量空间</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-08T05:27:41.816292+00:00'>2025-11-08</time></span><span data-tippy-content data-tippy-raw='2025-11-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-08T05:27:41.816292+00:00'>2025-11-08</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-09'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-09T14:26:24.092797+00:00'>2025-11-09</time></span><span data-tippy-content data-tippy-raw='2025-11-09'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-09T14:26:24.092797+00:00'>2025-11-09</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">向量组的线性关系<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>概念</p>
 <ul>
 <li>线性组合</li>
 <li>
 <p>线性表示/线性表出</p>
-<p>向量 <span class="arithmatex">\(\beta\)</span> 可由向量组 <span class="arithmatex">\(\alpha_1,\alpha_2,\cdots,\alpha_n\)</span> 线性表示 <span class="arithmatex">\(\Leftrightarrow \alpha_1x_1+\alpha_2x_2+\cdots+\alpha_nx_n=\beta\)</span> 有解 <span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\alpha_1&amp;\alpha_2&amp;\cdots&amp;\alpha_n\end{pmatrix}=r\begin{pmatrix}\alpha_1&amp;\alpha_2&amp;\cdots&amp;\alpha_n&amp;\beta\end{pmatrix}\)</span>（<span class="arithmatex">\(r=n\)</span> 唯一表示，<span class="arithmatex">\(r&lt;n\)</span> 无穷多表示）</p>
-<p>向量 <span class="arithmatex">\(\beta\)</span> 不能由向量组 <span class="arithmatex">\(\alpha_1,\alpha_2,\cdots,\alpha_n\)</span> 线性表示 <span class="arithmatex">\(\Leftrightarrow \alpha_1x_1+\alpha_2x_2+\cdots+\alpha_nx_n=\beta\)</span> 无解 <span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\alpha_1&amp;\alpha_2&amp;\cdots&amp;\alpha_n\end{pmatrix}\neq r\begin{pmatrix}\alpha_1&amp;\alpha_2&amp;\cdots&amp;\alpha_n&amp;\beta\end{pmatrix}\)</span></p>
-</li>
-<li>
-<p>线性相关，线性无关</p>
-<p>向量组 <span class="arithmatex">\(\alpha_1,\alpha_2,\cdots,\alpha_m\)</span> 线性相关 <span class="arithmatex">\(\Leftrightarrow x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=0\)</span> 有非零解  <span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\alpha_1&amp;\alpha_2&amp;\cdots&amp;\alpha_m\end{pmatrix}&lt;n\)</span></p>
-</li>
-</ul>
-</li>
-<li>
-<p>定理</p>
+<details class="info">
+<summary>向量组线性表示的等价命题</summary>
 <ul>
 <li>
-<p>若向量组 <span class="arithmatex">\(\alpha_1,\alpha_2,\cdots,\alpha_n\)</span> 线性无关，而 <span class="arithmatex">\(\beta,\alpha_1,\alpha_2,\cdots,\alpha_n\)</span> 线性相关，则 <span class="arithmatex">\(\beta\)</span> 可由 <span class="arithmatex">\(\alpha_1,\alpha_2,\cdots,\alpha_n\)</span> 线性表示，且表示法唯一。</p>
-<details class="note">
-<summary>证明</summary>
-<ul>
-<li>
-<p><span class="arithmatex">\(\beta,\alpha_1,\alpha_2,\cdots,\alpha_n\)</span> 线性相关 <span class="arithmatex">\(\Rightarrow \exists\)</span> 不全为 <span class="arithmatex">\(0\)</span> 的数 <span class="arithmatex">\(k,k_1,k_2,\cdots,k_n\)</span> 使得 <span class="arithmatex">\(k\beta+k_1\alpha_1+k_2\alpha_2+\cdots+k_n\alpha_n=0\)</span>。</p>
-<p>可知 <span class="arithmatex">\(k\neq 0\)</span>（如果 <span class="arithmatex">\(k=0\)</span>，则由 <span class="arithmatex">\(\alpha_1,\alpha_2,\cdots,\alpha_n\)</span> 线性无关，得 <span class="arithmatex">\(k_1,k_2,\cdots,k_n\)</span> 必须全为 <span class="arithmatex">\(0\)</span>，这与 <span class="arithmatex">\(k,k_1,k_2,\cdots,k_n\)</span> 不全为 <span class="arithmatex">\(0\)</span> 矛盾）。</p>
-<p>则 <span class="arithmatex">\(\beta=-\dfrac{k_1}k\alpha_1-\dfrac{k_2}k\alpha_2-\cdots-\dfrac{k_n}k\alpha_n\)</span>。</p>
+<p>向量 <span class="arithmatex">\(\boldsymbol{\beta}\)</span> 可由向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性表示且表示法唯一</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 存在且仅存在一组常数 <span class="arithmatex">\(k_1,k_2,\cdots,k_s\)</span> 使得 <span class="arithmatex">\(k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_n\boldsymbol{\alpha}_n=\boldsymbol{\beta}\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 非齐次线性方程组 <span class="arithmatex">\(\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\begin{pmatrix}x_1\\x_2\\ \vdots\\x_n\end{pmatrix}=\boldsymbol{\beta}\)</span> 有唯一解</p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}\end{pmatrix}=n\)</span></p>
+<p>若 <span class="arithmatex">\(\boldsymbol{\alpha}_i\)</span> 和 <span class="arithmatex">\(\boldsymbol{\beta}\)</span> 是 <span class="arithmatex">\(n\)</span> 维向量，那么也 <span class="arithmatex">\(\Leftrightarrow \begin{vmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{vmatrix}\neq 0\)</span></p>
 </li>
 <li>
-<p>再证表示法唯一：</p>
-<p>设有两种不同的表示法 <span class="arithmatex">\(\beta=l_1\alpha_1+l_2\alpha_2+\cdots+l_n\alpha_n=h_1\alpha_1+h_2\alpha_2+\cdots+h_n\alpha_n\)</span>，<span class="arithmatex">\(\Rightarrow (l_1-h_1)\alpha_1+(l_2-h_2)\alpha_2+\cdots+(l_n-h_n)\alpha_n=0\)</span>。</p>
-<p>因为 <span class="arithmatex">\(\alpha_1,\alpha_2,\cdots,\alpha_n\)</span> 线性无关，所以必有 <span class="arithmatex">\(l_i-h_i=0\,(i=1,2,\cdots,n)\)</span>，这与假设矛盾。</p>
-<p>故 <span class="arithmatex">\(\beta\)</span> 由 <span class="arithmatex">\(\alpha_1,\alpha_2,\cdots,\alpha_n\)</span> 线性表示的表示法唯一。</p>
+<p>向量 <span class="arithmatex">\(\boldsymbol{\beta}\)</span> 可由向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性表示且表示法不唯一（无穷多种）</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 存在无穷多组常数 <span class="arithmatex">\(k_1,k_2,\cdots,k_s\)</span> 使得 <span class="arithmatex">\(k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_n\boldsymbol{\alpha}_n=\boldsymbol{\beta}\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 非齐次线性方程组 <span class="arithmatex">\(\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\begin{pmatrix}x_1\\x_2\\ \vdots\\x_n\end{pmatrix}=\boldsymbol{\beta}\)</span> 有无穷多解</p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}\end{pmatrix}&lt;n\)</span></p>
+</li>
+<li>
+<p>向量 <span class="arithmatex">\(\boldsymbol{\beta}\)</span> 不可由向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性表示</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 不存在一组常数 <span class="arithmatex">\(k_1,k_2,\cdots,k_s\)</span> 使得 <span class="arithmatex">\(k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_n\boldsymbol{\alpha}_n=\boldsymbol{\beta}\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 非齐次线性方程组 <span class="arithmatex">\(\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\begin{pmatrix}x_1\\x_2\\ \vdots\\x_n\end{pmatrix}=\boldsymbol{\beta}\)</span> 无解</p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}&lt;r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}+1=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}\end{pmatrix}\)</span></p>
+</li>
+<li>
+<p>向量组 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 可由向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性表示</p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}\leq r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\)</span>（被表示的秩不大）</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<ul>
+<li>
+<p><span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}\leq r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\)</span> 推不出向量组 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 可由向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性表示。不过 <span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}&gt; r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\)</span> 能推出向量组 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 一定不可由向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性表示。</p>
+</li>
+<li>
+<p>若向量组 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 不可由向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性表示，无法确定 <span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}\)</span> 和 <span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\)</span> 的大小关系。</p>
 </li>
 </ul>
 </details>
 </li>
 </ul>
+</details>
+</li>
+<li>
+<p>线性相关，线性无关</p>
+<p>单个零向量线性相关；单个非零向量线性无关。</p>
+<p>含有零向量的向量组必线性相关。</p>
+<p>两个向量线性相关的充要条件是对应分量成比例。</p>
+<details class="info">
+<summary>向量组线性相关（无关）的等价命题</summary>
+<ul>
+<li>
+<p>向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性相关</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 齐次线性方程组 <span class="arithmatex">\(x_1\boldsymbol{\alpha}_1+x_2\boldsymbol{\alpha}_2+\cdots+x_s\boldsymbol{\alpha}_s=0\)</span> 有非零解</p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_s\end{pmatrix}&lt;s\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow \boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 至少有一个向量可由其余 <span class="arithmatex">\(s-1\)</span> 个向量线性表示</p>
+<p>若 <span class="arithmatex">\(\boldsymbol{\alpha}_i\)</span> 是 <span class="arithmatex">\(s\)</span> 维向量，那么也 <span class="arithmatex">\(\Leftrightarrow \begin{vmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_s\end{vmatrix}=0\Leftrightarrow \begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_s\end{pmatrix}\)</span> 不可逆</p>
+<p>推论：多于 <span class="arithmatex">\(n\)</span> 个 <span class="arithmatex">\(n\)</span> 维向量一定线性相关</p>
+</li>
+<li>
+<p>向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性无关</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 齐次线性方程组 <span class="arithmatex">\(x_1\boldsymbol{\alpha}_1+x_2\boldsymbol{\alpha}_2+\cdots+x_s\boldsymbol{\alpha}_s=0\)</span> 只有零解</p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_s\end{pmatrix}=s\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow \boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 中每一个向量都不能由其余 <span class="arithmatex">\(s-1\)</span> 个向量线性表示</p>
 </li>
 </ul>
+</details>
+</li>
+<li>
+<p>向量组等价</p>
+<ul>
+<li>定义：每个一个向量组的每一个向量都能由另一个向量组线性表示。</li>
+<li>
+<p>定理：向量组 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 和向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 等价</p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\!\!&amp;\!\!\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\)</span></p>
+<p>三秩连等，缺一不可</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 可由 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性表示</p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 可由 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 线性表示</p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\!\!&amp;\!\!\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\)</span></p>
+<p>即 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 与 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 等价</p>
+<p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}\)</span></p>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>重要定理和结论</p>
+<ul>
+<li>
+<p>若向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 中有一部分向量线性相关，则整个向量组必线性相关。</p>
+<p>若向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性无关，则其中任一部分向量组必线性无关。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\cdots,\boldsymbol{\alpha}_t,\boldsymbol{\alpha}_{t+1},\cdots,\boldsymbol{\alpha}_s\)</span> 中，<span class="arithmatex">\(\boldsymbol{\alpha}_1,\cdots,\boldsymbol{\alpha}_t\)</span> 线性相关。</p>
+<p>不妨设 <span class="arithmatex">\(\boldsymbol{\alpha}_1=k_2\boldsymbol{\alpha}_2+\cdots+k_t\boldsymbol{\alpha}_t\)</span>，则 <span class="arithmatex">\(\boldsymbol{\alpha}_1=k_2\boldsymbol{\alpha}_2+\cdots+k_t\boldsymbol{\alpha}_t+0\cdot \boldsymbol{\alpha}_{t+1}+\cdots+\boldsymbol{\alpha}_s\)</span>。</p>
+<p>即 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性相关。</p>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(n\)</span> 维向量 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性无关，则把这些向量各自添加 <span class="arithmatex">\(m\)</span> 个分量所得到的新 <span class="arithmatex">\(m+n\)</span> 维向量组（即接长组）必线性无关；若 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性相关，那么它们各去掉对应的 <span class="arithmatex">\(m\)</span> 个分量所得到的新向量组也是线性相关的。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性无关，延长组 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span></p>
+<p><span class="arithmatex">\(s=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_s\end{pmatrix}\leq r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}\leq s\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}=s\)</span></p>
+</details>
+</li>
+<li>
+<p>若向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性无关，而 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n,\boldsymbol{\beta}\)</span> 线性相关，则 <span class="arithmatex">\(\boldsymbol{\beta}\)</span> 可由 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性表示，且表示法唯一。</p>
+<details class="note">
+<summary>证明</summary>
+<details class="note">
+<summary>法 1</summary>
+<ul>
+<li>
+<p><span class="arithmatex">\(\boldsymbol{\beta},\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性相关 <span class="arithmatex">\(\Rightarrow \exists\)</span> 不全为 <span class="arithmatex">\(0\)</span> 的数 <span class="arithmatex">\(k,k_1,k_2,\cdots,k_n\)</span> 使得 <span class="arithmatex">\(k\boldsymbol{\beta}+k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_n\boldsymbol{\alpha}_n=0\)</span>。</p>
+<p>可知 <span class="arithmatex">\(k\neq 0\)</span>（如果 <span class="arithmatex">\(k=0\)</span>，则由 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性无关，得 <span class="arithmatex">\(k_1,k_2,\cdots,k_n\)</span> 必须全为 <span class="arithmatex">\(0\)</span>，这与 <span class="arithmatex">\(k,k_1,k_2,\cdots,k_n\)</span> 不全为 <span class="arithmatex">\(0\)</span> 矛盾）。</p>
+<p>则 <span class="arithmatex">\(\boldsymbol{\beta}=-\dfrac{k_1}k\boldsymbol{\alpha}_1-\dfrac{k_2}k\boldsymbol{\alpha}_2-\cdots-\dfrac{k_n}k\boldsymbol{\alpha}_n\)</span>。</p>
+</li>
+<li>
+<p>再证表示法唯一：</p>
+<p>设有两种不同的表示法 <span class="arithmatex">\(\boldsymbol{\beta}=l_1\boldsymbol{\alpha}_1+l_2\boldsymbol{\alpha}_2+\cdots+l_n\boldsymbol{\alpha}_n=h_1\boldsymbol{\alpha}_1+h_2\boldsymbol{\alpha}_2+\cdots+h_n\boldsymbol{\alpha}_n\)</span>，<span class="arithmatex">\(\Rightarrow (l_1-h_1)\boldsymbol{\alpha}_1+(l_2-h_2)\boldsymbol{\alpha}_2+\cdots+(l_n-h_n)\boldsymbol{\alpha}_n=0\)</span>。</p>
+<p>因为 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性无关，所以必有 <span class="arithmatex">\(l_i-h_i=0\,(i=1,2,\cdots,n)\)</span>，这与假设矛盾。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>用无关向量组去表示另一向量，表示法必唯一（若能表示）。</p>
+</details>
+<p>故 <span class="arithmatex">\(\boldsymbol{\beta}\)</span> 由 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性表示的表示法唯一。</p>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary>法 2</summary>
+<p>即证 <span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}\end{pmatrix}=n\)</span>。</p>
+<ol>
+<li>因为 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性无关，所以 <span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}=n\)</span>。</li>
+<li>因为 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n,\boldsymbol{\beta}\)</span> 线性相关，所以 <span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}\end{pmatrix}&lt;n+1\)</span>。</li>
+<li><span class="arithmatex">\(n=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\leq r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}\end{pmatrix}&lt;n+1\)</span>，所以 <span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}\end{pmatrix}=n\)</span>。</li>
+</ol>
+</details>
+</details>
+</li>
+<li>
+<p>向量组 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 可由向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性表示，且 <span class="arithmatex">\(s&gt;n\)</span>，则 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 线性相关。（多由少表示，多必相关）</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}\leq r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\)</span>【被表示的秩不大】<span class="arithmatex">\(\leq n&lt;s\)</span></p>
+</details>
+<p>向量组 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 线性无关，且可由 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 表示，则 <span class="arithmatex">\(s\leq n\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(s=r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}\leq r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\leq n\)</span></p>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>极大线性无关组</p>
+<p>含有非零向量的向量组一定存在极大线性无关组。</p>
+<p>向量组中任一个向量均可由向量组的极大线性无关组表示。</p>
+<p>向量组的极大线性无关组不唯一，但所包含的向量格式一定相等。</p>
+</li>
+</ul>
+<p><span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span></p>
+<p><span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\!\!&amp;\!\!\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\)</span></p>
 
 
 
