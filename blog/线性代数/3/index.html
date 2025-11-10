@@ -814,6 +814,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    期中复习
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1352,7 +1375,7 @@
 
   <h1>第三章 矩阵的运算</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-09'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-09T14:26:24.092797+00:00'>2025-11-09</time></span><span data-tippy-content data-tippy-raw='2025-11-09'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-09T14:26:24.092797+00:00'>2025-11-09</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-10T04:47:16.223681+00:00'>2025-11-10</time></span><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-10T04:47:16.223681+00:00'>2025-11-10</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <details class="info">
 <summary>矩阵的加减法、数乘、乘法和转置</summary>
@@ -1509,6 +1532,21 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 <summary>证明</summary>
 <p>若 <span class="arithmatex">\(|A|\neq 0\)</span>：<span class="arithmatex">\(|A^*|=||A|A^{-1}|=|A|^n\cdot |A|^{-1}=|A|^{n-1}\)</span></p>
 <p>若 <span class="arithmatex">\(|A|=0\)</span>：反证。假设 <span class="arithmatex">\(|A^*|\neq 0\)</span>，则 <span class="arithmatex">\((A^{*})^{-1}\)</span> 存在，又 <span class="arithmatex">\(AA^*=|A|E=O\Rightarrow A A^*(A^{*})^{-1}=O\cdot (A^*)^{-1}\Rightarrow A=O\Rightarrow A^*=O\)</span>，与 <span class="arithmatex">\(|A^*|\neq 0\)</span> 矛盾。故 <span class="arithmatex">\(|A^{*}|=0\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\(A\)</span> 可逆 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(A^*\)</span> 可逆</p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li><span class="arithmatex">\(\Rightarrow\)</span>：若 <span class="arithmatex">\(A\)</span> 可逆，可知 <span class="arithmatex">\(|A|\neq 0\)</span>，又由 <span class="arithmatex">\(AA^*=|A|E\)</span>，有 <span class="arithmatex">\(\dfrac A {|A|}A^*=E\)</span>，即有 <span class="arithmatex">\(A^*\)</span> 可逆，且 <span class="arithmatex">\((A^*)^{-1}=\dfrac{A}{|A|}\)</span>。</li>
+<li><span class="arithmatex">\(\Leftarrow\)</span>：若 <span class="arithmatex">\(A^*\)</span> 可逆，用反证法，假设 <span class="arithmatex">\(A\)</span> 不可逆，则 <span class="arithmatex">\(AA^*=|A|E=O\)</span>，易得 <span class="arithmatex">\(A=O\)</span>。此时 <span class="arithmatex">\(A\)</span> 的全部代数余子式 <span class="arithmatex">\(A_{ij}=0\)</span>，其伴随矩阵 <span class="arithmatex">\(A^*=O\)</span>，与 <span class="arithmatex">\(A^*\)</span> 可逆矛盾。</li>
+</ul>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>若 <span class="arithmatex">\(AB=O\)</span> 且 <span class="arithmatex">\(B\)</span> 可逆，则 <span class="arithmatex">\(A=O\)</span>：因为等式两边同时乘以 <span class="arithmatex">\(B^{-1}\)</span> 可得 <span class="arithmatex">\(ABB^{-1}=OB^{-1}\)</span>，即 <span class="arithmatex">\(A=O\)</span>。</p>
+</details>
+</details>
+</details>
 </details>
 </li>
 <li>
@@ -1732,7 +1770,7 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 <li>
 <p><span class="arithmatex">\(|kA|=k^n|A|\)</span></p>
 <p><span class="arithmatex">\((kA)^T=kA^T\)</span></p>
-<p><span class="arithmatex">\((kA)^{-1}=\frac 1 k A^{-1}\)</span></p>
+<p><span class="arithmatex">\((kA)^{-1}=\dfrac 1 k A^{-1}\,(k\neq 0)\)</span></p>
 <p><span class="arithmatex">\((kA)^*=k^{n-1}A^*\)</span></p>
 </li>
 <li>
@@ -1742,16 +1780,21 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 <p><span class="arithmatex">\((A+B)^*\neq A^*+B^*\)</span></p>
 </li>
 <li>
-<p><span class="arithmatex">\(|AB|=|A||B|=|B||A|\)</span></p>
-<p><span class="arithmatex">\((AB)^T=B^TA^T\)</span></p>
-<p><span class="arithmatex">\((AB)^{-1}=B^{-1}A^{-1}\)</span></p>
-<p><span class="arithmatex">\((AB)^*=B^*A^*\)</span></p>
-</li>
-<li>
 <p><span class="arithmatex">\((A^T)^{-1}=(A^{-1})^T\)</span></p>
 <p><span class="arithmatex">\((A^*)^{-1}=(A^{-1})^*\)</span></p>
 <p><span class="arithmatex">\((A^T)^*=(A^*)^T\)</span></p>
 </li>
+<li>
+<p><span class="arithmatex">\(|AB|=|A||B|=|B||A|\)</span></p>
+<p><span class="arithmatex">\((AB)^T=B^TA^T\)</span></p>
+<p><span class="arithmatex">\((AB)^{-1}=B^{-1}A^{-1}\)</span></p>
+<p><span class="arithmatex">\((AB)^*=B^*A^*\)</span></p>
+<p>推论：<span class="arithmatex">\((A^k)^{-1}=(A^{-1})^k\)</span>，<span class="arithmatex">\((A^k)^T=(A^T)^k\)</span>，<span class="arithmatex">\((A^k)^*=(A^*)^k\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((A^{-1})^{-1}=A\)</span>，<span class="arithmatex">\((A^T)^T=A\)</span>，<span class="arithmatex">\((A^*)^*=|A|^{n-2}A\)</span>（二阶有 <span class="arithmatex">\((A^*)^*=A\)</span>），<span class="arithmatex">\((A^k)^k=A^{k^2}\)</span></p>
+</li>
+<li><span class="arithmatex">\(|A^{-1}|=\dfrac 1 {|A|}\)</span>，<span class="arithmatex">\(|A^T|=|A|\)</span>，<span class="arithmatex">\(|A^*|=|A|^{n-1}\)</span>，<span class="arithmatex">\(|A^k|=|A|^k\)</span></li>
 </ul>
 <h2 id="_7">题目<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
