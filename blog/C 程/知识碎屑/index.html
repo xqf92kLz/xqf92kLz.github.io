@@ -95,6 +95,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#static" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -787,6 +792,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    知识碎屑
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -798,6 +816,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#static" class="md-nav__link">
+    <span class="md-ellipsis">
+      静态局部变量 static
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      实数数据的存储
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      转义字符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      输入输出
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型转换
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符优先级和结合性
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1178,6 +1267,68 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#static" class="md-nav__link">
+    <span class="md-ellipsis">
+      静态局部变量 static
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      实数数据的存储
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      转义字符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      输入输出
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型转换
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符优先级和结合性
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1194,7 +1345,44 @@
 
   <h1>知识碎屑</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-10T04:47:16.218681+00:00'>2025-11-10</time></span><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-10T04:47:16.218681+00:00'>2025-11-10</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-10T07:50:49.029488+00:00'>2025-11-10</time></span><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-10T07:50:49.029488+00:00'>2025-11-10</time></span></div></div>
+<h4 id="static">静态局部变量 static<a class="headerlink" href="#static" title="Permanent link">&para;</a></h4>
+<p>生命周期贯穿整个程序执行过程（这点和全局变量一样），但作用域仅局限于定义它的局部范围（如函数内部）。</p>
+<h4 id="_1">实数数据的存储<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>规格化数的形式是为 1.M × 2^e，但 E 有下限，所以还会有非规格化数 0.M  × 2^e。</p>
+<p>IEEE 754 标准的浮点数：符号位（S） + 指数位（E，= 实际指数 e + 偏移量） + 尾数位（M，不含小数点前的 1）。</p>
+<p>科学计数法的小数部分（不含小数点前的 1）。</p>
+<ul>
+<li>单精度（32 位）：1 位符号位 + 8 位指数位（范围 0~255。偏移量为 127，实际指数范围为 -126 ~ +127） + 23 位尾数位（实际有效数字是 1.M，共 24 位：1 位隐含的 1 + 23 位存储的 M）</li>
+<li>双精度（64 位）：1 位符号位 + 11 位指数位（范围 0~2047。偏移量为 1023，实际指数范围为 -1022 ~ +1023） + 52 位尾数位（实际有效数字是 1.M，共 53 位：1 位隐含的 1 + 52 位存储的 M）</li>
+</ul>
+<h4 id="_2">转义字符<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p><code>\n</code>，<code>\t</code>，<code>\\</code>，<code>\"</code>，<code>\'</code></p>
+<p><code>\ddd</code> 1~3 位八进制整数所代表的字符（如 <code>\102</code> 表示 ASCII 码是八进制数 102 的字符）</p>
+<p><code>\xhh</code> 1~2 位十六进制整数所代表的字符（如 <code>\x41</code> 表示 ASCII 码是十六进制数 41 的字符）</p>
+<h4 id="_3">输入输出<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>整型：</p>
+<ul>
+<li>
+<p>十进制：int <code>%d</code>，long <code>%ld</code>，unsigned <code>%u</code>，unsigned long <code>%lu</code></p>
+<p>八进制：<code>%o</code>，<code>%lo</code>，<code>%o</code>，<code>%lo</code></p>
+<p>十六进制：<code>%x</code>，<code>%lx</code>，<code>%x</code>，<code>%lx</code></p>
+<p>指定输出宽度为 m（若实际位数 &lt;m，左端补空格；若实际位数 ≥ m，按实际位数）：<code>%md</code></p>
+</li>
+</ul>
+<p>实型：</p>
+<ul>
+<li>
+<p>小数形式：float <code>%f</code>，double <code>%lf</code></p>
+<p>指数形式：<code>%e</code>，<code>%le</code></p>
+<p>指定输出宽度为 m（左端补空格）、保留 n 位小数：<code>%m.nf</code></p>
+</li>
+</ul>
+<h4 id="_4">类型转换<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>非赋值运算的类型转换</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/vdq6hikh.png" style="zoom:33%;" /></p>
+<p>短 → 长，<strong>有符号 → 无符号</strong></p>
+<h4 id="_5">运算符优先级和结合性<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 
 
 
