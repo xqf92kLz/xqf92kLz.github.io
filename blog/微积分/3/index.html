@@ -595,7 +595,7 @@
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      未定式的极限
+      洛必达法则
     </span>
   </a>
   
@@ -1292,7 +1292,7 @@
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      未定式的极限
+      洛必达法则
     </span>
   </a>
   
@@ -1339,7 +1339,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-10T11:08:08.819154+00:00'>2025-11-10</time></span><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-10T11:08:08.819154+00:00'>2025-11-10</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-10T15:23:16.526687+00:00'>2025-11-10</time></span><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-10T15:23:16.526687+00:00'>2025-11-10</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1534,11 +1534,81 @@
 <p>函数的单调区间与极值</p>
 </li>
 </ul>
-<h3 id="_3">未定式的极限<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_3">洛必达法则<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li><span class="arithmatex">\(\frac 0 0\)</span> 型未定式的极限</li>
-<li><span class="arithmatex">\(\frac{\infty}{\infty}\)</span> 型未定式的极限</li>
-<li>其他类型未定式的极限</li>
+<li>
+<p><span class="arithmatex">\(\frac 0 0\)</span> 型</p>
+<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内满足：① <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=\lim\limits_{x\to x_0}g(x)=0\)</span>；② <span class="arithmatex">\(f(x),g(x)\)</span> 可导且 <span class="arithmatex">\(g'(x)\neq 0\)</span>；③ <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f'(x)}{g'(x)}=A\)</span>（常数或 <span class="arithmatex">\(\infty\)</span>），则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\frac{f'(x)}{g'(x)}=A\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>重新定义 <span class="arithmatex">\(f(x_0)=g(x_0)=0\)</span>，则 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 内连续。</p>
+<p>则 <span class="arithmatex">\(\forall x\in\mathring U(x_0)\)</span>，<span class="arithmatex">\(f(x),g(x)\)</span> 在以 <span class="arithmatex">\(x_0,x\)</span> 为端点的闭区间上满足柯西中值定理的条件，则 <span class="arithmatex">\(\exists \xi\)</span> 介于 <span class="arithmatex">\(x_0\)</span> 与 <span class="arithmatex">\(x\)</span> 之间，使得 <span class="arithmatex">\(\dfrac{f(x)-f(x_0)}{g(x)-g(x_0)}=\dfrac{f'(\xi)}{g'(\xi)}\)</span>，即 <span class="arithmatex">\(\dfrac{f(x)}{g(x)}=\dfrac{f'(\xi)}{g'(\xi)}\)</span>。</p>
+<p>两边取极限，<span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\dfrac{f'(\xi)}{g'(\xi)}=\lim\limits_{\xi\to x_0}\dfrac{f'(\xi)}{g'(\xi)}=A\)</span>。</p>
+<p><span class="arithmatex">\(A\)</span> 无穷大怎么办？</p>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{*}{\infty}\)</span> 型</p>
+<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内满足：① <span class="arithmatex">\(\lim\limits_{x\to x_0}g(x)=\infty\)</span>；② <span class="arithmatex">\(f(x),g(x)\)</span> 可导且 <span class="arithmatex">\(g'(x)\neq 0\)</span>；③ <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f'(x)}{g'(x)}=A\)</span>（常数或 <span class="arithmatex">\(\infty\)</span>），则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\frac{f'(x)}{g'(x)}=A\)</span>。</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算：（1）<span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{x+\sin x}{x-\sin x}\)</span>；（2）<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{x^2\sin\frac 1 x}{e^x-1}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>（1）本题为 <span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span> 型极限，若用洛必达法则，有 <span class="arithmatex">\(I_1=\lim\limits_{x\to \infty}\dfrac{1+\cos x}{1-\cos x}\)</span>，但后者极限并不存在，因此不能用洛必达法则。</p>
+<p>（2）本题为 <span class="arithmatex">\(\dfrac 0 0\)</span> 型极限，若用洛必达法则，有 <span class="arithmatex">\(I_2=\lim\limits_{x\to 0}\dfrac{2x\sin \frac 1 x-\cos\frac 1 x}{e^x}\)</span>，此极限不存在，因此不能用洛必达法则。</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>使用洛必达法则时，应注意：所求极限为 <span class="arithmatex">\(\frac 0 0\)</span> 或 <span class="arithmatex">\(\frac * {\infty}\)</span> 型；分子分母的导数存在；导数比 <span class="arithmatex">\(\frac{f'(x)}{g'(x)}\)</span> 的极限存在。</p>
+</details>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,+\infty)\)</span> 上可导，且 <span class="arithmatex">\(\lim\limits_{x\to +\infty}[f(x)+f'(x)]=a\in\mathbb R\)</span>，计算：<span class="arithmatex">\(\lim\limits_{x\to +\infty}f'(x)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>由于已知 <span class="arithmatex">\(\lim\limits_{x\to +\infty}[f(x)+f'(x)]=a\in\mathbb R\)</span>，所以 <span class="arithmatex">\(\lim\limits_{x\to +\infty}f'(x)=a-\lim\limits_{x\to +\infty}f(x)\)</span>，转化成求 <span class="arithmatex">\(\lim\limits_{x\to +\infty}f(x)\)</span>。</p>
+<p>而看到 <span class="arithmatex">\(f(x)+f'(x)\)</span> 可以想到 <span class="arithmatex">\([e^xf(x)]'=e^x[f(x)+f'(x)]\)</span>。</p>
+</details>
+<p><span class="arithmatex">\(\lim\limits_{x\to +\infty}f(x)=\lim\limits_{x\to +\infty}\dfrac{e^xf(x)}{e^x}=\lim\limits_{x\to +\infty}\dfrac{e^xf(x)+e^xf'(x)}{e^x}\)</span>【用到 <span class="arithmatex">\(\dfrac{*}{\infty}\)</span> 型极限】<span class="arithmatex">\(=\lim\limits_{x\to +\infty}[f(x)+f'(x)]=a\)</span>。</p>
+<p>则 <span class="arithmatex">\(\lim\limits_{x\to +\infty}f'(x)=\lim\limits_{x\to +\infty}[f(x)+f'(x)]-\lim\limits_{x\to +\infty}f(x)=0\)</span>。</p>
+</details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\cot^2 x)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\tan^2 x})=\lim\limits_{x\to 0}\dfrac{\tan^2 x-x^2}{x^4}\)</span>【若此处直接用洛必达法则，计算量会很大】<span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\tan x-x}{x^3}\cdot \dfrac{\tan x+x}x=2\lim\limits_{x\to 0}\dfrac{\sec^2 x-1}{3x^3}=\dfrac 2 3 \lim\limits_{x\to 0}\dfrac{\tan^2 x}{x^2}=\dfrac 2 3\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\arcsin^2 x})\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{\arcsin x+x}x\cdot \dfrac{\arcsin x-x}{x^3}=2\lim\limits_{x\to 0}\dfrac{\frac 1 {\sqrt{1-x^2}}-1}{3x^2}=2\lim\limits_{x\to 0}\dfrac{-\frac 1 2 (-x^2)}{3x^2}\)</span>【无穷小等价替换】<span class="arithmatex">\(=\dfrac 1 3\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{(1+x)^{\frac 1 x}-e}x\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{e^{\frac{\ln(1+x)}x}-e}x=e\lim\limits_{x\to 0}\dfrac{e^{\frac{\ln(1+x)-x}x}-1}{x}=e\lim\limits_{x\to 0}\dfrac{\ln(1+x)-x}{x^2}\)</span>【无穷小等价替换】<span class="arithmatex">\(=e\lim\limits_{x\to 0}\dfrac{\frac 1 {1+x}-1}{2x}=-\dfrac 1 2 e\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{n\to +\infty}n[(1+\dfrac 1 n)^n-e]\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>由上题，根据归结原理，有 <span class="arithmatex">\(I=\lim\limits_{x\to 0+0}\dfrac{(1+x)^{\frac 1 x}-e}x=-\dfrac e 2\)</span>。</p>
+</details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{n\to +\infty}n[(1+\dfrac 1 n)^n-(1+\dfrac 1 {3n})^{3n}]\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\lim\limits_{n\to +\infty}n[((1+\dfrac 1 n)^n-e)-((1+\dfrac 1 {3n})^{3n}-e)]=\lim\limits_{n\to +\infty}n[(1+\dfrac 1 n)^n-e]+\dfrac 1 3 \lim\limits_{n\to +\infty}3n[(1+\dfrac 1 {3n})^{3n}-e]=-\dfrac e 2-\dfrac 1 3(-\dfrac e 2)=-\dfrac e 3\)</span></p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)=\begin{cases}(1+x)^{\frac 1 x}&amp;(x\neq 0,-1&lt;x&lt;1)\\e&amp;(x=0)\end{cases}\)</span>，证明：<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处可导，且导函数在 <span class="arithmatex">\(x=0\)</span> 处连续。</p>
+<details class="note">
+<summary>解答</summary>
+<p>（1）<span class="arithmatex">\(f'(0)=\lim\limits_{x\to 0}\dfrac{(1+x)^{\frac 1 x}-e}x=-\dfrac 1 2 e\)</span></p>
+<p>（2）当 <span class="arithmatex">\(x\neq 0\)</span> 时，<span class="arithmatex">\(f'(x)=(e^{\frac{\ln(1+x)}x})'=(1+x)^{\frac 1 x}\dfrac{\frac x {1+x}-\ln(1+x)}{x^2}\)</span>。<span class="arithmatex">\(\lim\limits_{x\to 0}f'(x)=e\lim\limits_{x\to 0}\dfrac{\frac x {1+x}-\ln(1+x)}{x^2}=e\lim\limits_{x\to 0}\dfrac{\frac 1 {(1+x)^2}-\frac 1 {1+x}}{2x}=-\dfrac 1 2 e\)</span>。因此，<span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续。</p>
+</details>
+</details>
+</li>
+<li>
+<p>其他类型未定式的极限</p>
+</li>
 </ul>
 <h3 id="_4">泰勒定理及应用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1566,12 +1636,12 @@
 <p><span class="arithmatex">\([x^{\lambda}f(x)]'=\lambda x^{\lambda-1}f(x)+x^{\lambda}f'(x)=x^{\lambda-1}(\lambda f(x)+xf'(x))\)</span></p>
 <p>见到 <span class="arithmatex">\(\lambda f(x)+xf'(x)\)</span>，作 <span class="arithmatex">\(F(x)=x^{\lambda}f(x)\)</span>。</p>
 </li>
+</ul>
+</li>
 <li>
 <p><span class="arithmatex">\([f(x)e^{\varphi(x)}]'=[f'(x)+f(x)\varphi'(x)]e^{\varphi(x)}\)</span></p>
 <p>见到 <span class="arithmatex">\(f'(x)+f(x)\varphi'(x)\)</span>，作 <span class="arithmatex">\(F(x)=f(x)e^{\varphi(x)}\)</span>。</p>
 <p>如 <span class="arithmatex">\(f'(x)+kf(x)\)</span> 作 <span class="arithmatex">\(F(x)=f(x)e^{kx}\)</span>，<span class="arithmatex">\(f'(x)+(\dfrac 1 x-1)f(x)\)</span> 作 <span class="arithmatex">\(F(x)=f(x)e^{\ln x-x}=f(x)xe^{-x}\)</span>。</p>
-</li>
-</ul>
 </li>
 <li>
 <p><span class="arithmatex">\((\dfrac u v)'=\dfrac{u'v-uv'}{v^2}\)</span> 的逆用：</p>
