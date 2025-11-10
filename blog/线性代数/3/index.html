@@ -1375,7 +1375,7 @@
 
   <h1>第三章 矩阵的运算</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-10T07:50:49.033488+00:00'>2025-11-10</time></span><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-10T07:50:49.033488+00:00'>2025-11-10</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-10T11:08:08.820154+00:00'>2025-11-10</time></span><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-10T11:08:08.820154+00:00'>2025-11-10</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <details class="info">
 <summary>矩阵的加减法、数乘、乘法和转置</summary>
@@ -1550,7 +1550,7 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 </details>
 </li>
 <li>
-<p>当 <span class="arithmatex">\(|A|\neq 0\)</span> 时，有：</p>
+<p>下面没写 <span class="arithmatex">\(A^{-1}\)</span> 的都是 <span class="arithmatex">\(|A|=0\)</span> 也成立：</p>
 <ul>
 <li>
 <p><span class="arithmatex">\(A^*=|A|A^{-1}\)</span>，<span class="arithmatex">\(A^{-1}=\frac{A^*}{|A|}\)</span>，<span class="arithmatex">\(A=|A|(A^*)^{-1}\)</span></p>
@@ -1560,7 +1560,7 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 </li>
 </ul>
 <details class="note">
-<summary>证明</summary>
+<summary>证明（仅证明 <span class="arithmatex">\(|A|\neq 0\)</span> 的情况）</summary>
 <ul>
 <li>
 <p>利用 <span class="arithmatex">\(AA^*=|A|E\)</span>：</p>
@@ -1590,17 +1590,45 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 <h3 id="_3">分块矩阵<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>分块矩阵的积</p>
-<p>前提条件：1. 分块前可以乘（<span class="arithmatex">\(A\)</span> 列数等于 <span class="arithmatex">\(B\)</span> 行数）；2. 分块完可以乘（<span class="arithmatex">\(A\)</span> 列分块方式与 <span class="arithmatex">\(B\)</span> 行分块方式一致）</p>
+<p>分块矩阵的定义</p>
+<p>将矩阵 <span class="arithmatex">\(A\)</span> 用若干条纵线和横线分成许多个小矩阵，每一个小矩阵称为 <span class="arithmatex">\(A\)</span> 的子块，以子块为元素的形式上的矩阵称为分块矩阵。</p>
 </li>
 <li>
-<p>分块矩阵的转置：块之间转置，块内也转置。</p>
+<p>分块矩阵的运算</p>
+<p>分块矩阵的运算规则与普通矩阵的运算规则类似。</p>
+<ul>
+<li>加法：两个矩阵同型且采用相同的分块法。</li>
+<li>数乘</li>
+<li>乘法：1. 分块前可以乘（<span class="arithmatex">\(A\)</span> 列数等于 <span class="arithmatex">\(B\)</span> 行数）；2. 分块完可以乘（<span class="arithmatex">\(A\)</span> 列分块方式与 <span class="arithmatex">\(B\)</span> 行分块方式一致）</li>
+<li>
+<p>转置：块之间转置，块内也转置。</p>
+<p><span class="arithmatex">\(\begin{pmatrix} A_{11} &amp; A_{12} &amp; \cdots &amp; A_{1k} \\ A_{21} &amp; A_{22} &amp; \cdots &amp; A_{2k} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ A_{m1} &amp; A_{m2} &amp; \cdots &amp; A_{mk} \end{pmatrix}^T = \begin{pmatrix} A_{11}^T &amp; A_{21}^T &amp; \cdots &amp; A_{m1}^T \\ A_{12}^T &amp; A_{22}^T &amp; \cdots &amp; A_{m2}^T \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ A_{1k}^T &amp; A_{2k}^T &amp; \cdots &amp; A_{mk}^T \end{pmatrix}\)</span></p>
 </li>
 <li>
-<p>分块矩阵的求逆：<span class="arithmatex">\(\begin{pmatrix}A&amp;O\\C&amp;B\end{pmatrix}^{-1}=\begin{pmatrix}A^{-1}&amp;O\\-B^{-1}CA^{-1}&amp;B^{-1}\end{pmatrix}\)</span></p>
+<p>分块三角矩阵的逆矩阵</p>
+<p><span class="arithmatex">\(\begin{pmatrix} A_m &amp; C \\ O &amp; B_n \end{pmatrix}^{-1} = \begin{pmatrix} A^{-1} &amp; -A^{-1}CB^{-1} \\ O &amp; B^{-1} \end{pmatrix}\)</span>，<span class="arithmatex">\(\begin{pmatrix} A_m &amp; O \\ C &amp; B_n \end{pmatrix}^{-1} = \begin{pmatrix} A^{-1} &amp; O \\ -B^{-1}CA^{-1} &amp; B^{-1} \end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\begin{pmatrix} C &amp; A_m \\ B_n &amp; O \end{pmatrix}^{-1} = \begin{pmatrix} O &amp; B^{-1} \\ A^{-1} &amp; -A^{-1}CB^{-1} \end{pmatrix}\)</span>，<span class="arithmatex">\(\begin{pmatrix} O &amp; A_m \\ B_n &amp; C \end{pmatrix}^{-1} = \begin{pmatrix} -B^{-1}CA^{-1} &amp; B^{-1} \\ A^{-1} &amp; O \end{pmatrix}\)</span></p>
+<p>主：位置不动，直接逆。副：位置对换，再逆。</p>
+<p><span class="arithmatex">\(C\)</span>：添 <span class="arithmatex">\(-\)</span>，然后同行靠左，同列靠右。</p>
 </li>
 <li>
-<p>准对角矩阵 <span class="arithmatex">\(A=\text{diag}(A_,A_2,\cdots,A_s)\)</span>，其中 <span class="arithmatex">\(A,A_i\)</span> 都是方阵。运算类比对角矩阵。</p>
+<p>分块（副）对角矩阵的逆矩阵（假设每个子块都可逆）</p>
+<p><span class="arithmatex">\(\begin{pmatrix} A_1 &amp; &amp; &amp; \\ &amp; A_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; A_n \end{pmatrix}^{-1} = \begin{pmatrix} A_1^{-1} &amp; &amp; &amp; \\ &amp; A_2^{-1} &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; A_n^{-1}\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\begin{pmatrix} &amp; &amp; &amp; A_1 \\ &amp; &amp; A_2 &amp; \\ &amp; \ddots &amp; &amp; \\ A_n &amp; &amp; &amp; \end{pmatrix}^{-1} = \begin{pmatrix} &amp; &amp; &amp; A_{\textcolor{red}n}^{-1} \\ &amp; &amp; A_{\textcolor{red}2}^{-1} &amp; \\ &amp; \ddots &amp; &amp; \\ A_{\textcolor{red}1}^{-1} &amp; &amp; &amp; \end{pmatrix}\)</span></p>
+</li>
+<li>
+<p>分块对角矩阵的幂</p>
+<p><span class="arithmatex">\(\begin{pmatrix} A_1 &amp; &amp; &amp; \\ &amp; A_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; A_n \end{pmatrix}^n = \begin{pmatrix} A_1^n &amp; &amp; &amp; \\ &amp; A_2^n &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; A_n^n \end{pmatrix}\)</span></p>
+<p>注：分块副对角矩阵的幂无此规律。</p>
+</li>
+<li>
+<p>拉普拉斯公式</p>
+<p>① <span class="arithmatex">\(\begin{vmatrix} A_m &amp; O \\ * &amp; B_n \end{vmatrix} = |A||B|, \quad \begin{vmatrix} A_m &amp; * \\ O &amp; B_n \end{vmatrix} = |A||B|\)</span></p>
+<p>② $ \begin{vmatrix} O &amp; A_m \ B_n &amp; * \end{vmatrix} = (-1)^{mn}|A||B|, \quad \begin{vmatrix} * &amp; A_m \ B_n &amp; O \end{vmatrix} = (-1)^{mn}|A||B|$</p>
+<p>③ 若 <span class="arithmatex">\(A=\begin{pmatrix} A_1 &amp; &amp; &amp; \\ &amp; A_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; A_k \end{pmatrix}\)</span> 则 <span class="arithmatex">\(|A| = |A_1||A_2|\cdots|A_k|\)</span></p>
+<p>注：设 <span class="arithmatex">\(G = \begin{pmatrix} A &amp; B \\ C &amp; D \end{pmatrix}\)</span> 为 <span class="arithmatex">\(k(k \geq 3)\)</span> 阶分块矩阵，且 <span class="arithmatex">\(|G| \neq 0\)</span> ，则一般 ① <span class="arithmatex">\(|G|\neq |AD - BC|\)</span> ；②  <span class="arithmatex">\(G^*\neq \begin{pmatrix} D &amp; -B \\ -C &amp; A \end{pmatrix}\)</span> ；③  <span class="arithmatex">\(G^{-1}\neq\dfrac{1}{|G|}\begin{pmatrix} D &amp; -B \\ -C &amp; A \end{pmatrix}\)</span>。</p>
+</li>
+</ul>
 </li>
 </ul>
 <h3 id="_4">初等变换与初等矩阵<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
@@ -1801,12 +1829,13 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 <li>
 <p>方阵的迹：<span class="arithmatex">\(\text{tr}(A_{n\times n})=\sum_{i=1}^n a_{ii}\)</span>。<span class="arithmatex">\(\text{tr}(A\pm B)=\text{tr}(A)\pm \text{tr}(B)\)</span>，<span class="arithmatex">\(\text{tr}(kA)=k\text{tr}(A)\)</span>，<span class="arithmatex">\(\text{tr}(AB)=\text{tr}(BA)\)</span></p>
 <p>虽然一般 <span class="arithmatex">\(AB\neq BA\)</span>，但是 <span class="arithmatex">\(|AB|=|BA|\)</span>、<span class="arithmatex">\(\text{tr}(AB)=\text{tr}(BA)\)</span>（<span class="arithmatex">\(A,B\)</span> 均为方阵）。</p>
+<p><span class="arithmatex">\(\text{tr}(\alpha\beta^T)=\beta^T\alpha\)</span></p>
 </li>
 <li>
-<p>求 <span class="arithmatex">\(A^n\)</span> 的基本思路：</p>
+<p>方阵的幂：</p>
 <ol>
 <li>
-<p>若 <span class="arithmatex">\(A\)</span> 是方阵，<span class="arithmatex">\(r(A)=1\)</span>：<span class="arithmatex">\(A^n=[\text{tr}(A)]^{n-1}A\)</span></p>
+<p>若 <span class="arithmatex">\(A\)</span> 各行（列）成比例，即 <span class="arithmatex">\(r(A)=1\)</span>：<span class="arithmatex">\(A^n=[\text{tr}(A)]^{n-1}A\)</span></p>
 <details class="note">
 <summary>证明</summary>
 <p>利用 <span class="arithmatex">\(A_{1\times n}B_{n\times 1}=C_{1 \times 1}\)</span>，<span class="arithmatex">\(A_{n\times 1}\times B_{1\times n}=C_{n\times n}\)</span>：</p>
@@ -1828,6 +1857,28 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 </details>
 </li>
 </ol>
+</li>
+<li>
+<p>方阵的多项式</p>
+<ul>
+<li>定义：设 <span class="arithmatex">\(x\)</span> 的 <span class="arithmatex">\(k\)</span> 次多项式 <span class="arithmatex">\(f(x)=a_kx^k+a_{k-1}x^{k-1}+\cdots+a_1x+a_0\)</span>，<span class="arithmatex">\(A\)</span> 是 <span class="arithmatex">\(n\)</span> 阶矩阵，称 <span class="arithmatex">\(f(A)=a_kA^k+a_{k-1}A^{k-1}+\cdots+a_1A+a_0E_n\)</span> 为矩阵 <span class="arithmatex">\(A\)</span> 的一个 <span class="arithmatex">\(k\)</span> 次多项式。（只有 <span class="arithmatex">\(A,E\)</span>，不能混入 <span class="arithmatex">\(B\)</span>）</li>
+<li>性质：<ul>
+<li>矩阵 <span class="arithmatex">\(A\)</span> 的两个多项式 <span class="arithmatex">\(f(A)\)</span> 和 <span class="arithmatex">\(\varphi(A)\)</span> 总是可交换的。（因为 <span class="arithmatex">\(A^k,A^l,E\)</span> 都可交换）</li>
+<li>矩阵 <span class="arithmatex">\(A\)</span> 的多项式可以像数的多项式一样相乘或因式分解。例如 <span class="arithmatex">\(A^2+2A-3E=(A+3E)(A-E)\)</span>，<span class="arithmatex">\((A+E)(E-2A)=-2A^2-A+E\)</span>。</li>
+<li>若 <span class="arithmatex">\(A = \begin{pmatrix} \lambda_1 &amp;&amp;&amp; \\ &amp; \lambda_2 &amp;&amp; \\ &amp;&amp; \ddots &amp; \\ &amp;&amp;&amp; \lambda_n \end{pmatrix}\)</span> 为对角矩阵，则 <span class="arithmatex">\(f(A) = a_0 E + a_1 A + \cdots + a_m A^m= \begin{pmatrix} f(\lambda_1) &amp;&amp;&amp; \\ &amp; f(\lambda_2) &amp;&amp; \\ &amp;&amp; \ddots &amp; \\ &amp;&amp;&amp; f(\lambda_n) \end{pmatrix}\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>反对称矩阵：<span class="arithmatex">\(A^T=-A\)</span></p>
+<p>反对称矩阵的主对角元 <span class="arithmatex">\(a_{ii}\)</span> 全为 <span class="arithmatex">\(0\)</span>。</p>
+<p>对于奇数阶的反对称矩阵 <span class="arithmatex">\(A\)</span>，有 <span class="arithmatex">\(|A|=0\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(A\)</span> 为 <span class="arithmatex">\(n\)</span> 阶反对称阵。<span class="arithmatex">\(A^T=-A\Rightarrow |A^T|=|-A|\Rightarrow |A|=(-1)^n|A|\)</span>，<span class="arithmatex">\(n\)</span> 为奇数时 <span class="arithmatex">\(|A|=-|A|\)</span>，即 <span class="arithmatex">\(|A|=0\)</span>。</p>
+</details>
+<p>任意一个 <span class="arithmatex">\(n\)</span> 阶矩阵 <span class="arithmatex">\(A\)</span> 都可以表示成一个对称矩阵与一个反对称矩阵的和，即 <span class="arithmatex">\(A=\frac 1 2 (A+A^T)+\frac 1 2(A-A^T)\)</span>。（因为 <span class="arithmatex">\((A+A^T)^T=A^T+A\)</span>，<span class="arithmatex">\((A-A^T)^T=A^T-A\)</span>）</p>
 </li>
 <li>
 <p>求逆矩阵</p>
