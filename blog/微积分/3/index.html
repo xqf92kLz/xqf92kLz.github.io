@@ -1239,6 +1239,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    B2U5 The power of words
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1339,7 +1362,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-10T15:23:16.526687+00:00'>2025-11-10</time></span><span data-tippy-content data-tippy-raw='2025-11-10'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-10T15:23:16.526687+00:00'>2025-11-10</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-11'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-11T06:17:01.276123+00:00'>2025-11-11</time></span><span data-tippy-content data-tippy-raw='2025-11-11'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-11T06:17:01.276123+00:00'>2025-11-11</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1550,18 +1573,35 @@
 <li>
 <p><span class="arithmatex">\(\frac{*}{\infty}\)</span> 型</p>
 <p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内满足：① <span class="arithmatex">\(\lim\limits_{x\to x_0}g(x)=\infty\)</span>；② <span class="arithmatex">\(f(x),g(x)\)</span> 可导且 <span class="arithmatex">\(g'(x)\neq 0\)</span>；③ <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f'(x)}{g'(x)}=A\)</span>（常数或 <span class="arithmatex">\(\infty\)</span>），则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\frac{f'(x)}{g'(x)}=A\)</span>。</p>
+<details class="warning">
+<summary>注意</summary>
+<p>使用洛必达法则时，应注意：所求极限为 <span class="arithmatex">\(\dfrac 0 0\)</span> 或 <span class="arithmatex">\(\dfrac * {\infty}\)</span> 型；分子分母的导数存在；导数比 <span class="arithmatex">\(\frac{f'(x)}{g'(x)}\)</span> 的极限存在（如 <span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{x+\sin x}{x-\sin x}\)</span> 为 <span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span> 型极限，但 <span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{1+\cos x}{1-\cos x}\)</span> 不存在，故不能用洛必达法则；<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{x^2\sin\frac 1 x}{e^x-1}\)</span> 为 <span class="arithmatex">\(\dfrac 0 0\)</span> 型极限，但 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{2x\sin \frac 1 x-\cos\frac 1 x}{e^x}\)</span> 不存在，故不能用洛必达法则）。</p>
+</details>
+</li>
+<li>
+<p>其他类型未定式的极限</p>
+<p><span class="arithmatex">\(0\cdot \infty=0\cdot \frac 1 {0}\)</span> 或 <span class="arithmatex">\(=\frac{1}{\infty}\cdot \infty\)</span></p>
+<p><span class="arithmatex">\(1^{\infty}=e^{\infty\cdot 0}\)</span></p>
+<p><span class="arithmatex">\(0^0=e^{0\cdot \infty}\)</span></p>
+<p><span class="arithmatex">\(\infty^0=e^{0\cdot \infty}\)</span></p>
+<details class="info">
+<summary>结合对无穷小量阶的估计</summary>
 <details class="example">
 <summary>例题</summary>
-<p>计算：（1）<span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{x+\sin x}{x-\sin x}\)</span>；（2）<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{x^2\sin\frac 1 x}{e^x-1}\)</span>。</p>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\cot^2 x)\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
-<p>（1）本题为 <span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span> 型极限，若用洛必达法则，有 <span class="arithmatex">\(I_1=\lim\limits_{x\to \infty}\dfrac{1+\cos x}{1-\cos x}\)</span>，但后者极限并不存在，因此不能用洛必达法则。</p>
-<p>（2）本题为 <span class="arithmatex">\(\dfrac 0 0\)</span> 型极限，若用洛必达法则，有 <span class="arithmatex">\(I_2=\lim\limits_{x\to 0}\dfrac{2x\sin \frac 1 x-\cos\frac 1 x}{e^x}\)</span>，此极限不存在，因此不能用洛必达法则。</p>
-<details class="warning" open="open">
-<summary>注意</summary>
-<p>使用洛必达法则时，应注意：所求极限为 <span class="arithmatex">\(\frac 0 0\)</span> 或 <span class="arithmatex">\(\frac * {\infty}\)</span> 型；分子分母的导数存在；导数比 <span class="arithmatex">\(\frac{f'(x)}{g'(x)}\)</span> 的极限存在。</p>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\tan^2 x})=\lim\limits_{x\to 0}\dfrac{\tan^2 x-x^2}{x^4}\)</span>【若此处直接用洛必达法则，计算量会很大】<span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\tan x-x}{x^3}\cdot \dfrac{\tan x+x}x=2\lim\limits_{x\to 0}\dfrac{\sec^2 x-1}{3x^3}=\dfrac 2 3 \lim\limits_{x\to 0}\dfrac{\tan^2 x}{x^2}=\dfrac 2 3\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\arcsin^2 x})\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{\arcsin x+x}x\cdot \dfrac{\arcsin x-x}{x^3}=2\lim\limits_{x\to 0}\dfrac{\frac 1 {\sqrt{1-x^2}}-1}{3x^2}=2\lim\limits_{x\to 0}\dfrac{-\frac 1 2 (-x^2)}{3x^2}\)</span>【无穷小等价替换】<span class="arithmatex">\(=\dfrac 1 3\)</span></p>
 </details>
 </details>
+</details>
+<details class="example">
+<summary>例题</summary>
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,+\infty)\)</span> 上可导，且 <span class="arithmatex">\(\lim\limits_{x\to +\infty}[f(x)+f'(x)]=a\in\mathbb R\)</span>，计算：<span class="arithmatex">\(\lim\limits_{x\to +\infty}f'(x)\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
@@ -1572,16 +1612,6 @@
 </details>
 <p><span class="arithmatex">\(\lim\limits_{x\to +\infty}f(x)=\lim\limits_{x\to +\infty}\dfrac{e^xf(x)}{e^x}=\lim\limits_{x\to +\infty}\dfrac{e^xf(x)+e^xf'(x)}{e^x}\)</span>【用到 <span class="arithmatex">\(\dfrac{*}{\infty}\)</span> 型极限】<span class="arithmatex">\(=\lim\limits_{x\to +\infty}[f(x)+f'(x)]=a\)</span>。</p>
 <p>则 <span class="arithmatex">\(\lim\limits_{x\to +\infty}f'(x)=\lim\limits_{x\to +\infty}[f(x)+f'(x)]-\lim\limits_{x\to +\infty}f(x)=0\)</span>。</p>
-</details>
-<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\cot^2 x)\)</span>。</p>
-<details class="note">
-<summary>解答</summary>
-<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\tan^2 x})=\lim\limits_{x\to 0}\dfrac{\tan^2 x-x^2}{x^4}\)</span>【若此处直接用洛必达法则，计算量会很大】<span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\tan x-x}{x^3}\cdot \dfrac{\tan x+x}x=2\lim\limits_{x\to 0}\dfrac{\sec^2 x-1}{3x^3}=\dfrac 2 3 \lim\limits_{x\to 0}\dfrac{\tan^2 x}{x^2}=\dfrac 2 3\)</span></p>
-</details>
-<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\arcsin^2 x})\)</span>。</p>
-<details class="note">
-<summary>解答</summary>
-<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{\arcsin x+x}x\cdot \dfrac{\arcsin x-x}{x^3}=2\lim\limits_{x\to 0}\dfrac{\frac 1 {\sqrt{1-x^2}}-1}{3x^2}=2\lim\limits_{x\to 0}\dfrac{-\frac 1 2 (-x^2)}{3x^2}\)</span>【无穷小等价替换】<span class="arithmatex">\(=\dfrac 1 3\)</span></p>
 </details>
 <p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{(1+x)^{\frac 1 x}-e}x\)</span>。</p>
 <details class="note">
@@ -1606,16 +1636,30 @@
 </details>
 </details>
 </li>
-<li>
-<p>其他类型未定式的极限</p>
-</li>
 </ul>
 <h3 id="_4">泰勒定理及应用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>泰勒定理</li>
-<li>几个常用函数的麦克劳林公式</li>
-<li>带有佩亚诺余项的泰勒公式</li>
-<li>泰勒公式的应用</li>
+<li>
+<p>泰勒定理</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上 <span class="arithmatex">\(n\)</span> 阶连续可导，在 <span class="arithmatex">\(I\)</span> 内部存在 <span class="arithmatex">\(n+\)</span> 阶导数，<span class="arithmatex">\(x_0\in I\)</span>，任给 <span class="arithmatex">\(x\in I\)</span>，且 <span class="arithmatex">\(x\neq x_0\)</span>，有 <span class="arithmatex">\(f(x)=P_n(x)+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span>，其中 <span class="arithmatex">\(\xi\)</span> 是介于 <span class="arithmatex">\(x_0\)</span> 与 <span class="arithmatex">\(x\)</span> 之间的某一点，<span class="arithmatex">\(P_n(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\)</span> 称为 <span class="arithmatex">\(n\)</span> 次泰勒多项式。</p>
+<p><span class="arithmatex">\(\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span> 称为 <span class="arithmatex">\(n\)</span> 阶泰勒公式的拉格朗日余项，记作 <span class="arithmatex">\(R_n(x)\)</span>。</p>
+</li>
+<li>
+<p>几个常用函数的麦克劳林公式</p>
+<p><span class="arithmatex">\(e^x=1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+\frac{e^{\theta x}}{(n+1)!}x^{n+1}\)</span>，<span class="arithmatex">\(0&lt;\theta&lt;1\)</span></p>
+<p><span class="arithmatex">\(\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots+(-1)^m\frac{x^{2m+1}}{(2m+1)!}+\frac{\sin(m\pi+\pi+\theta x)}{(2m+2)!}x^{2m+2}\)</span>，<span class="arithmatex">\(0&lt;\theta&lt;1\)</span></p>
+<p><span class="arithmatex">\(\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}+\cdots+(-1)^m\frac{x^{2m}}{(2m)!}+\frac{\cos(\theta x+m\pi+\pi)}{(2m+2)!}x^{2m+2}\)</span></p>
+<p><span class="arithmatex">\(\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots+\frac{(-1)^{n-1}x^n}{n}+\frac{(-1)^nx^{n+1}}{(n+1)(1+\theta x)^{n+1})}\)</span></p>
+<p><span class="arithmatex">\((1+x)^{\alpha}=1+\alpha x+\frac{\alpha(\alpha-1)}{2!}x^2+\cdots+\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n+\frac{\alpha(\alpha-1)\cdots(\alpha-n)}{(n+1)!}\frac{x^{n+1}}{(1+\theta x)^{n+1-\alpha}}\)</span></p>
+</li>
+<li>
+<p>带有佩亚诺余项的泰勒公式</p>
+<p>佩亚诺（Peano）定理：若 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处存在 <span class="arithmatex">\(n\)</span> 阶导数，则 <span class="arithmatex">\(f(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+o((x-x_0)^n)\,(x\to x_0)\)</span></p>
+<p>称 <span class="arithmatex">\(R_n=o((x-x_0)^n)\)</span> 为泰勒公式的佩亚诺（Peano）余项。</p>
+</li>
+<li>
+<p>泰勒公式的应用</p>
+</li>
 </ul>
 <h2 id="_5">题目<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
