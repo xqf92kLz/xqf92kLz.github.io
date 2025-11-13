@@ -1744,7 +1744,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-12'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-12T13:07:43.274969+00:00'>2025-11-12</time></span><span data-tippy-content data-tippy-raw='2025-11-12'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-12T13:07:43.274969+00:00'>2025-11-12</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-13T10:52:18.117816+00:00'>2025-11-13</time></span><span data-tippy-content data-tippy-raw='2025-11-13'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-13T10:52:18.117816+00:00'>2025-11-13</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1971,16 +1971,13 @@
 <details class="example">
 <summary>例题</summary>
 <p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\cot^2 x)\)</span>。</p>
-<details class="note">
-<summary>解答</summary>
-<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\tan^2 x})=\lim\limits_{x\to 0}\dfrac{\tan^2 x-x^2}{x^4}\)</span>【若此处直接用洛必达法则，计算量会很大】<span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\tan x-x}{x^3}\cdot \dfrac{\tan x+x}x=2\lim\limits_{x\to 0}\dfrac{\sec^2 x-1}{3x^3}=\dfrac 2 3 \lim\limits_{x\to 0}\dfrac{\tan^2 x}{x^2}=\dfrac 2 3\)</span></p>
 </details>
-<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\arcsin^2 x})\)</span>。</p>
-<details class="note">
-<summary>解答</summary>
-<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{\arcsin x+x}x\cdot \dfrac{\arcsin x-x}{x^3}=2\lim\limits_{x\to 0}\dfrac{\frac 1 {\sqrt{1-x^2}}-1}{3x^2}=2\lim\limits_{x\to 0}\dfrac{-\frac 1 2 (-x^2)}{3x^2}\)</span>【无穷小等价替换】<span class="arithmatex">\(=\dfrac 1 3\)</span></p>
-</details>
-</details>
+<p>??? note "解答"
+      <span class="arithmatex">\(I=\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\tan^2 x})=\lim\limits_{x\to 0}\dfrac{\tan^2 x-x^2}{x^4}\)</span>【若此处直接用洛必达法则，计算量会很大】<span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\tan x-x}{x^3}\cdot \dfrac{\tan x+x}x=2\lim\limits_{x\to 0}\dfrac{\sec^2 x-1}{3x^3}=\dfrac 2 3 \lim\limits_{x\to 0}\dfrac{\tan^2 x}{x^2}=\dfrac 2 3\)</span></p>
+<div class="highlight"><pre><span></span><code>计算：$\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\arcsin^2 x})$。
+</code></pre></div>
+<p>??? note "解答"
+      <span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{\arcsin x+x}x\cdot \dfrac{\arcsin x-x}{x^3}=2\lim\limits_{x\to 0}\dfrac{\frac 1 {\sqrt{1-x^2}}-1}{3x^2}=2\lim\limits_{x\to 0}\dfrac{-\frac 1 2 (-x^2)}{3x^2}\)</span>【无穷小等价替换】<span class="arithmatex">\(=\dfrac 1 3\)</span></p>
 </details>
 <details class="example">
 <summary>例题</summary>
@@ -2022,9 +2019,54 @@
 <h3 id="_4">泰勒定理及应用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>泰勒定理</p>
-<p>设 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上 <span class="arithmatex">\(n\)</span> 阶连续可导，在 <span class="arithmatex">\(I\)</span> 内部存在 <span class="arithmatex">\(n+\)</span> 阶导数，<span class="arithmatex">\(x_0\in I\)</span>，任给 <span class="arithmatex">\(x\in I\)</span>，且 <span class="arithmatex">\(x\neq x_0\)</span>，有 <span class="arithmatex">\(f(x)=P_n(x)+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span>，其中 <span class="arithmatex">\(\xi\)</span> 是介于 <span class="arithmatex">\(x_0\)</span> 与 <span class="arithmatex">\(x\)</span> 之间的某一点，<span class="arithmatex">\(P_n(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\)</span> 称为 <span class="arithmatex">\(n\)</span> 次泰勒多项式。</p>
-<p><span class="arithmatex">\(\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span> 称为 <span class="arithmatex">\(n\)</span> 阶泰勒公式的拉格朗日余项，记作 <span class="arithmatex">\(R_n(x)\)</span>。</p>
+<p>泰勒（Taylor）多项式：</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处 <span class="arithmatex">\(n\)</span> 阶可导，泰勒多项式 <span class="arithmatex">\(P_n(x)=\sum_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k\)</span>。</p>
+<p>多项式 <span class="arithmatex">\(P_n(x)\)</span> 与函数 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处有 <span class="arithmatex">\(n\)</span> 次接近：<span class="arithmatex">\(f(x)\)</span> 与 <span class="arithmatex">\(P_n(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处的 <span class="arithmatex">\(k\)</span> 阶导数均相等（<span class="arithmatex">\(k=0,1,\cdots,n\)</span>）。</p>
+<p>误差函数 <span class="arithmatex">\(R_n(x)=f(x)-P_n(x)\)</span> 称为泰勒余项。</p>
+</li>
+<li>
+<p>带佩亚诺（Peano）余项的泰勒公式：</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处 <span class="arithmatex">\(n\)</span> 阶可导，则 <span class="arithmatex">\(R_n(x)=o((x-x_0)^n)\,(x\to x_0)\)</span>（佩亚诺余项）。即 <span class="arithmatex">\(f(x)=\sum_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k+o((x-x_0)^n)\,(x\to x_0)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\begin{aligned}\lim\limits_{x\to x_0}\dfrac{R_n(x)}{(x-x_0)^n}&amp;=\lim\limits_{x\to x_0}\dfrac{f(x)-P_n(x)}{(x-x_0)^n}\\&amp;\xlongequal{(n-1)\,次洛必达法则}\lim\limits_{x\to x_0}\dfrac{f^{(n-1)}(x)-P_n^{(n-1)}(x)}{n!(x-x_0)}\\&amp;=\dfrac{1}{n!}\lim\limits_{x\to x_0}\dfrac{f^{(n-1)}(x)-[f^{(n-1)}(x_0)+f^{(n)}(x_0)(x-x_0)]}{x-x_0}\\&amp;=\dfrac{1}{n!}\lim\limits_{x\to x_0}(\dfrac{f^{(n-1)}(x)-f^{(n-1)}(x_0)}{x-x_0}-\dfrac{f^{(n)}(x_0)(x-x_0)}{x-x_0})\\&amp;=\dfrac{1}{n!}(f^{(n)}(x_0)-f^{(n)}(x_0))\\&amp;=0\end{aligned}\)</span></p>
+</details>
+<details class="info">
+<summary>常见函数的泰勒展开-佩亚诺余项</summary>
+<p><span class="arithmatex">\(e^x=1+x+\dfrac{x^2}{2!}+\cdots+\dfrac{x^n}{n!}+o(x^n)\)</span></p>
+<p><span class="arithmatex">\(\sin x=x-\dfrac{x^3}{3!}+\dfrac{x^5}{5!}-\dfrac{x^7}{7!}+\cdots+(-1)^{n-1}\dfrac{x^{2n-1}}{(2n-1)!}+o(x^{2n})\)</span></p>
+<p><span class="arithmatex">\(\cos x=1-\dfrac{x^2}{2!}+\dfrac{x^4}{4!}+\cdots+(-1)^n\dfrac{x^{2n}}{(2n)!}+o(x^{2n+1})\)</span></p>
+<p><span class="arithmatex">\(\ln(1+x)=x-\dfrac{x^2}{2}+\dfrac{x^3}{3}-\dfrac{x^4}{4}+\cdots+(-1)^{n-1}\dfrac{x^n}{n}+o(x^n)\)</span></p>
+<p><span class="arithmatex">\((1+x)^{\alpha}=1+\alpha x+\dfrac{\alpha(\alpha-1)}{2!}x^2+\cdots+\dfrac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n+o(x^n)\)</span></p>
+<p><span class="arithmatex">\(\tan x=x+\dfrac 1 3 x^3+\dfrac 2{15}x^5+\dfrac{17}{315}x^7+o(x^5)\)</span></p>
+<p><span class="arithmatex">\(\arcsin x=x+\dfrac 1 6 x^3+\dfrac 3 {40}x^5+\dfrac 5 {112}x^7+o(x^7)\)</span></p>
+<p><span class="arithmatex">\(\arctan x=x-\dfrac{x^3}3+\dfrac{x^5}5-\dfrac{x^7}7+\cdots+\dfrac{(-1)^n}{2n+1}x^{2n+1}+o(x^{2n+1})\)</span></p>
+<p><span class="arithmatex">\(x\cot x=1-\dfrac 1 3 x^2-\dfrac 1 {45}x^4-\dfrac 2 {945}x^6+o(x^6)\)</span></p>
+<p><span class="arithmatex">\(\sec x=1+\dfrac 1 2 x^2+\dfrac 5 {24}x^4+\dfrac{61}{720}x^6+o(x^6)\)</span></p>
+<p><span class="arithmatex">\(x\csc x=1+\dfrac 1 6 x^2+\dfrac 7 {360}x^4+\dfrac{31}{15120}x^6+o(x^6)\)</span></p>
+<p><span class="arithmatex">\((1+x)^{\dfrac 1 x}=e-\dfrac e 2 x+\dfrac{11}{24}ex^2-\dfrac{7}{16}ex^3+o(x^3)\)</span></p>
+</details>
+</li>
+<li>
+<p>带拉格朗日余项的泰勒公式：</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有 <span class="arithmatex">\(n\)</span> 阶连续导数，在 <span class="arithmatex">\((a,b)\)</span> 内 <span class="arithmatex">\((n+1)\)</span> 阶可导，则对 <span class="arithmatex">\(\forall x,x_0\in[a,b]\,(x\neq x_0)\)</span>，<span class="arithmatex">\(\exists \xi=x_0+\theta(x-x_0)\in(a,b)\)</span>（其中 <span class="arithmatex">\(\theta\in(0,1)\)</span>），使得 <span class="arithmatex">\(R_n=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span>（拉格朗日余项）。</p>
+<p>即 <span class="arithmatex">\(f(x)=\sum_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<details class="note">
+<summary>法 1</summary>
+<p><span class="arithmatex">\(R_n^{(k)}(x_0)=0\,(k=0,1,\cdots,n)\)</span></p>
+<p>对 <span class="arithmatex">\(R_n(x)\)</span> 和 <span class="arithmatex">\(g(x)=(x-x_0)^{n+1}\)</span> 在区间 <span class="arithmatex">\([x,x_0]\)</span> 或 <span class="arithmatex">\([x_0,x]\)</span> 上应用柯西中值定理，有：</p>
+<p><span class="arithmatex">\(\begin{aligned}\dfrac{R_n(x)}{(x-x_0)^{n+1}}&amp;=\dfrac{R_n(x)-R_n(x_0)}{g(x)-g(x_0)}=\dfrac{R_n'(\xi_1)}{g'(\xi_1)}\\&amp;=\dfrac{R_n'(\xi_1)-R_n'(x_0)}{g'(\xi_1)-g'(x_0)}=\dfrac{R''(\xi_2)}{g''(\xi_2)}\\&amp;=\cdots\\&amp;=\dfrac{R_n^{(n)}(\xi_n)-R_n^{(n)}(x_0)}{g^{(n)}(\xi_n)-g^{(n)}(x_0)}=\dfrac{R_n^{(n+1)}(\xi)}{g^{(n+1)}(\xi)}\\&amp;=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}\end{aligned}\)</span></p>
+</details>
+<details class="note">
+<summary>法 2</summary>
+<p>设 <span class="arithmatex">\(F(t)=f(x)-\sum_{k=0}^n\dfrac{f^{(k)}(t)}{k!}(x-t)^k\)</span>，则 <span class="arithmatex">\(F(x)=0\)</span>，<span class="arithmatex">\(F(x_0)=R_n(x)\)</span>。</p>
+<p><span class="arithmatex">\(F'(t)=-\sum_{k=0}^n[\dfrac{f^{(k+1)}(t)}{k!}\cdot (x-t)^k+\dfrac{f^{(k)}(t)}{k!}\cdot k(x-t)^{k-1}\cdot (-1)]=-\sum_{k=0}^n[\dfrac{f^{(k+1)}(t)}{k!}\cdot (x-t)^k-\dfrac{f^{(k)}(t)}{(k-1)!}(x-t)^{k-1}]=-\dfrac{f^{(n+1)}(t)}{n!}(x-t)^n\)</span></p>
+<p>对 <span class="arithmatex">\(F(t)\)</span> 和 <span class="arithmatex">\(G(t)=(x-t)^{n+1}\)</span> 在区间 <span class="arithmatex">\([x,x_0]\)</span> 或 <span class="arithmatex">\([x_0,x]\)</span> 上应用柯西中值定理，则 <span class="arithmatex">\(\exists \xi\in(x,x_0)\)</span> 或 <span class="arithmatex">\((x_0,x)\)</span> 使得 <span class="arithmatex">\(\dfrac{F(x_0)-F(x)}{G(x_0)-G(x)}=\dfrac{F'(\xi)}{G'(\xi)}\)</span>，即 <span class="arithmatex">\(\dfrac{R_n(x)-0}{(x-x_0)^{n+1}-0}=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}\)</span>。</p>
+<p>故 <span class="arithmatex">\(R_n(x)=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span>。</p>
+</details>
+</details>
 </li>
 <li>
 <p>几个常用函数的麦克劳林公式</p>
@@ -2033,11 +2075,6 @@
 <p><span class="arithmatex">\(\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}+\cdots+(-1)^m\frac{x^{2m}}{(2m)!}+\frac{\cos(\theta x+m\pi+\pi)}{(2m+2)!}x^{2m+2}\)</span></p>
 <p><span class="arithmatex">\(\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots+\frac{(-1)^{n-1}x^n}{n}+\frac{(-1)^nx^{n+1}}{(n+1)(1+\theta x)^{n+1})}\)</span></p>
 <p><span class="arithmatex">\((1+x)^{\alpha}=1+\alpha x+\frac{\alpha(\alpha-1)}{2!}x^2+\cdots+\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n+\frac{\alpha(\alpha-1)\cdots(\alpha-n)}{(n+1)!}\frac{x^{n+1}}{(1+\theta x)^{n+1-\alpha}}\)</span></p>
-</li>
-<li>
-<p>带有佩亚诺余项的泰勒公式</p>
-<p>佩亚诺（Peano）定理：若 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处存在 <span class="arithmatex">\(n\)</span> 阶导数，则 <span class="arithmatex">\(f(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+o((x-x_0)^n)\,(x\to x_0)\)</span></p>
-<p>称 <span class="arithmatex">\(R_n=o((x-x_0)^n)\)</span> 为泰勒公式的佩亚诺（Peano）余项。</p>
 </li>
 <li>
 <p>泰勒公式的应用</p>
