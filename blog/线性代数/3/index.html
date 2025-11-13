@@ -1788,7 +1788,7 @@
 
   <h1>第三章 矩阵的运算</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-13T10:52:18.118816+00:00'>2025-11-13</time></span><span data-tippy-content data-tippy-raw='2025-11-13'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-13T10:52:18.118816+00:00'>2025-11-13</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-13T14:13:25.016284+00:00'>2025-11-13</time></span><span data-tippy-content data-tippy-raw='2025-11-13'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-13T14:13:25.016284+00:00'>2025-11-13</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <details class="info">
 <summary>矩阵的加减法、数乘、乘法和转置</summary>
@@ -2364,7 +2364,7 @@ D. <span class="arithmatex">\(B+E\)</span> 为可逆矩阵</p>
 </ul>
 </li>
 <li>
-<p>设 <span class="arithmatex">\(A=P\begin{pmatrix}E_{r(A)}&amp;O\\O&amp;O\end{pmatrix}Q\)</span> 的一类证明题</p>
+<p>设 <span class="arithmatex">\(A=P\begin{pmatrix}E_{r(A)}&amp;O\\O&amp;O\end{pmatrix}Q\)</span> 的一类证明题/构造题</p>
 <details class="example">
 <summary>例题</summary>
 <p>设 <span class="arithmatex">\(r(A_{m\times n})=m\,(m\leq n)\)</span>，则存在 <span class="arithmatex">\(B_{n\times m}\)</span> 使得 <span class="arithmatex">\(AB=E_m\)</span>。</p>
@@ -2398,6 +2398,28 @@ D. <span class="arithmatex">\(B+E\)</span> 为可逆矩阵</p>
 <p>设 <span class="arithmatex">\(A=P\begin{pmatrix}1&amp;0&amp;\cdots&amp;0\\0&amp;0&amp;\cdots&amp;0\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\0&amp;0&amp;\cdots&amp;0\end{pmatrix}Q\)</span>，则 <span class="arithmatex">\(A=P\begin{pmatrix}1\\0\\\vdots\\0\end{pmatrix}\cdot \begin{pmatrix}1&amp;0&amp;\cdots&amp;0\end{pmatrix}Q=\begin{pmatrix}p_{11}\\p_{21}\\\vdots\\p_{n1}\end{pmatrix}\begin{pmatrix}q_{11}&amp;q_{12}&amp;\cdots&amp;q_{1n}\end{pmatrix}\)</span>。</p>
 <p>由于 <span class="arithmatex">\(P,Q\)</span> 可逆，显然 <span class="arithmatex">\(\begin{pmatrix}p_{11}\\p_{21}\\\vdots\\p_{n1}\end{pmatrix}\)</span> 和 <span class="arithmatex">\(\begin{pmatrix}q_{11}&amp;q_{12}&amp;\cdots&amp;q_{1n}\end{pmatrix}\)</span> 不全为 <span class="arithmatex">\(0\)</span>。</p>
 </details>
+<p>设 <span class="arithmatex">\(A_{n\times n}\)</span>，<span class="arithmatex">\(r(A)=r&gt;0\)</span>。证明：<span class="arithmatex">\(\exists B,C\)</span> 使得 <span class="arithmatex">\(r(B)=r(c)=r\)</span> 且 <span class="arithmatex">\(AB=CA\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(A=P\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}Q\)</span>。</p>
+<p><span class="arithmatex">\(P\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}QB=CP\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}Q\)</span></p>
+<p><span class="arithmatex">\(P\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}QQ^{-1}\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}Q=P\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}P^{-1}P\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}Q\)</span></p>
+<p>取 <span class="arithmatex">\(B=Q^{-1}\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}Q\)</span>，<span class="arithmatex">\(C=P\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}P^{-1}\)</span> 即可。</p>
+</details>
+<p>设 <span class="arithmatex">\(A_{n\times n}\)</span>，证明：存在对称矩阵 <span class="arithmatex">\(S\)</span> 和可逆矩阵 <span class="arithmatex">\(P\)</span> 使得 <span class="arithmatex">\(A=SP\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(A=B\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}Q\)</span>。</p>
+<p><span class="arithmatex">\(A=B\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}B^T(B^T)^{-1}Q\)</span></p>
+<p>取 <span class="arithmatex">\(S=B\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}B^T\)</span>，<span class="arithmatex">\(P=(B^T)^{-1}Q\)</span> 即可。</p>
+</details>
+<p>设 <span class="arithmatex">\(A_{n\times n}\)</span>，证明：存在可逆矩阵 <span class="arithmatex">\(B\)</span> 和满足 <span class="arithmatex">\(C=C^2\)</span> 的 <span class="arithmatex">\(C\)</span>，使得 <span class="arithmatex">\(A=BC\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(A=P\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}Q\)</span>。</p>
+<p><span class="arithmatex">\(A=PQQ^{-1}\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}Q\)</span></p>
+<p>取 <span class="arithmatex">\(B=PQ\)</span>，<span class="arithmatex">\(C=Q^{-1}\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}Q\)</span> 即可。</p>
+</details>
 </details>
 </li>
 <li>
@@ -2411,10 +2433,40 @@ D. <span class="arithmatex">\(B+E\)</span> 为可逆矩阵</p>
 <p><span class="arithmatex">\(B_{m\times s}X_{s\times 1}=c_{m\times 1}\)</span> 无解 <span class="arithmatex">\(\Rightarrow r(B|c)=r(B)+1\)</span></p>
 <p>则 <span class="arithmatex">\(r(A,B,d,c)\leq r(A|d)+r(B|c)\leq r(A)+r(B)+1\)</span>。</p>
 </details>
+<p>设 <span class="arithmatex">\(n\)</span> 阶实方阵 <span class="arithmatex">\(A\)</span> 满足 <span class="arithmatex">\(A^2=A\)</span>，证明：<span class="arithmatex">\(r(A)+r(A-E)=n\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li><span class="arithmatex">\(A^2-A=O\Rightarrow A(A-E)=O\Rightarrow r(A)+r(A-E)\leq n\)</span></li>
+<li><span class="arithmatex">\(r(A)+r(A-E)\geq r(A-(A-E))=r(E)\Rightarrow r(A)+r(A-E)\geq n\)</span></li>
+</ul>
+<p>故 <span class="arithmatex">\(r(A)+r(A-E)=n\)</span>。</p>
+</details>
 </details>
 </li>
 <li>
 <p>构造分块矩阵的一类题</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(A_{n\times n},B_{n\times n}\)</span>，证明：<span class="arithmatex">\(r\begin{pmatrix}A&amp;B\\B&amp;A\end{pmatrix}\geq r(A+B)+r(A-B)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\begin{pmatrix}A&amp;B\\B&amp;A\end{pmatrix}\xrightarrow{R_1-R_2}\begin{pmatrix}A-B&amp;B-A\\B&amp;A\end{pmatrix}\xrightarrow{C_1+C_2}\begin{pmatrix}O&amp;B-A\\A+B&amp;A\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(r\begin{pmatrix}A&amp;B\\B&amp;A\end{pmatrix}=r\begin{pmatrix}O&amp;A-B\\A+B&amp;A\end{pmatrix}\geq r\begin{pmatrix}O&amp;A-B\\A+B&amp;O\end{pmatrix}=r(A+B)+r(A-B)\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>拆分矩阵</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(A=\begin{pmatrix}3&amp;1&amp;0\\0&amp;3&amp;1\\0&amp;0&amp;3\end{pmatrix}\)</span>，求一个三次实系数多项式 <span class="arithmatex">\(f(x)=x^3+ax^2+bx+c\)</span> 使得 <span class="arithmatex">\(f(A)\)</span> 为三阶零方阵。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(N=A-3E\)</span>，则 <span class="arithmatex">\(N^3=O\)</span>。</p>
+<p><span class="arithmatex">\((A-3E)^3=O\Rightarrow A^3-9A^2+27A-27E=O\)</span>，故 <span class="arithmatex">\(a=-9,b=27,c=-27\)</span>。</p>
+</details>
+</details>
 </li>
 <li>
 <p>“摄动法” 处理 “不可逆情形”</p>
