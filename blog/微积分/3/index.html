@@ -1744,7 +1744,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-15T08:32:01.669497+00:00'>2025-11-15</time></span><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-15T08:32:01.669497+00:00'>2025-11-15</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-15T10:21:37.735779+00:00'>2025-11-15</time></span><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-15T10:21:37.735779+00:00'>2025-11-15</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1971,13 +1971,16 @@
 <details class="example">
 <summary>例题</summary>
 <p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\cot^2 x)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\tan^2 x})=\lim\limits_{x\to 0}\dfrac{\tan^2 x-x^2}{x^4}\)</span>【若此处直接用洛必达法则，计算量会很大】<span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\tan x-x}{x^3}\cdot \dfrac{\tan x+x}x=2\lim\limits_{x\to 0}\dfrac{\sec^2 x-1}{3x^3}=\dfrac 2 3 \lim\limits_{x\to 0}\dfrac{\tan^2 x}{x^2}=\dfrac 2 3\)</span></p>
 </details>
-<p>??? note "解答"
-      <span class="arithmatex">\(I=\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\tan^2 x})=\lim\limits_{x\to 0}\dfrac{\tan^2 x-x^2}{x^4}\)</span>【若此处直接用洛必达法则，计算量会很大】<span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\tan x-x}{x^3}\cdot \dfrac{\tan x+x}x=2\lim\limits_{x\to 0}\dfrac{\sec^2 x-1}{3x^3}=\dfrac 2 3 \lim\limits_{x\to 0}\dfrac{\tan^2 x}{x^2}=\dfrac 2 3\)</span></p>
-<div class="highlight"><pre><span></span><code>计算：$\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\arcsin^2 x})$。
-</code></pre></div>
-<p>??? note "解答"
-      <span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{\arcsin x+x}x\cdot \dfrac{\arcsin x-x}{x^3}=2\lim\limits_{x\to 0}\dfrac{\frac 1 {\sqrt{1-x^2}}-1}{3x^2}=2\lim\limits_{x\to 0}\dfrac{-\frac 1 2 (-x^2)}{3x^2}\)</span>【无穷小等价替换】<span class="arithmatex">\(=\dfrac 1 3\)</span></p>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\arcsin^2 x})\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(<span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{\arcsin x+x}x\cdot \dfrac{\arcsin x-x}{x^3}=2\lim\limits_{x\to 0}\dfrac{\frac 1 {\sqrt{1-x^2}}-1}{3x^2}=2\lim\limits_{x\to 0}\dfrac{-\frac 1 2 (-x^2)}{3x^2}\)</span>【无穷小等价替换】\)</span>=\dfrac 1 3$</p>
+</details>
+</details>
 </details>
 <details class="example">
 <summary>例题</summary>
@@ -2067,14 +2070,15 @@
 <p>故 <span class="arithmatex">\(R_n(x)=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span>。</p>
 </details>
 </details>
-</li>
-<li>
-<p>几个常用函数的麦克劳林公式</p>
-<p><span class="arithmatex">\(e^x=1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+\frac{e^{\theta x}}{(n+1)!}x^{n+1}\)</span>，<span class="arithmatex">\(0&lt;\theta&lt;1\)</span></p>
-<p><span class="arithmatex">\(\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots+(-1)^m\frac{x^{2m+1}}{(2m+1)!}+\frac{\sin(m\pi+\pi+\theta x)}{(2m+2)!}x^{2m+2}\)</span>，<span class="arithmatex">\(0&lt;\theta&lt;1\)</span></p>
-<p><span class="arithmatex">\(\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}+\cdots+(-1)^m\frac{x^{2m}}{(2m)!}+\frac{\cos(\theta x+m\pi+\pi)}{(2m+2)!}x^{2m+2}\)</span></p>
-<p><span class="arithmatex">\(\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots+\frac{(-1)^{n-1}x^n}{n}+\frac{(-1)^nx^{n+1}}{(n+1)(1+\theta x)^{n+1})}\)</span></p>
-<p><span class="arithmatex">\((1+x)^{\alpha}=1+\alpha x+\frac{\alpha(\alpha-1)}{2!}x^2+\cdots+\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n+\frac{\alpha(\alpha-1)\cdots(\alpha-n)}{(n+1)!}\frac{x^{n+1}}{(1+\theta x)^{n+1-\alpha}}\)</span></p>
+<p>麦克劳林公式：<span class="arithmatex">\(x_0=0\)</span> 时，<span class="arithmatex">\(R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}=\frac{f^{(n+1)}(\theta x)}{(n+1)!}x^{n+1},0&lt;\theta&lt;1\)</span>。</p>
+<details class="info">
+<summary>常见函数的麦克劳林公式</summary>
+<p><span class="arithmatex">\(e^x=1+x+\dfrac{x^2}{2!}+\cdots+\dfrac{x^n}{n!}+\dfrac{e^{\theta x}}{(n+1)!}x^{n+1},0&lt;\theta&lt;1\)</span></p>
+<p><span class="arithmatex">\(\sin x=x-\dfrac{x^3}{3!}+\dfrac{x^5}{5!}-\dfrac{x^7}{7!}+\cdots+(-1)^{n-1}\dfrac{x^{2n-1}}{(2n-1)!}+(-1)^n\dfrac{\cos\theta x}{(2n+1)!}x^{2n+1},0&lt;\theta&lt;1\)</span></p>
+<p><span class="arithmatex">\(\cos x=1-\dfrac{x^2}{2!}+\dfrac{x^4}{4!}+\cdots+(-1)^n\dfrac{x^{2n}}{(2n)!}+(-1)^{n+1}\dfrac{\cos\theta x}{(2n+2)!}x^{2n+2},0&lt;\theta&lt;1\)</span></p>
+<p><span class="arithmatex">\(\ln(1+x)=x-\dfrac{x^2}{2}+\dfrac{x^3}{3}-\dfrac{x^4}{4}+\cdots+(-1)^{n-1}\dfrac{x^n}{n}+(-1)^n \dfrac{x^{n+1}}{(n+1)(1+\theta x)^{n+1}},0&lt;\theta&lt;1\)</span></p>
+<p><span class="arithmatex">\((1+x)^{\alpha}=1+\alpha x+\dfrac{\alpha(\alpha-1)}{2!}x^2+\cdots+\dfrac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n+\dfrac{\alpha(\alpha-1)\cdots(\alpha-n)}{(n+1)!}(1+\theta x)^{\alpha-n-1}x^{n+1},0&lt;\theta&lt;1\)</span></p>
+</details>
 </li>
 <li>
 <p>泰勒公式的应用</p>
