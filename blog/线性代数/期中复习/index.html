@@ -903,6 +903,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小结论
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LU 分解
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        摄动法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        刷历年卷
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1691,6 +1735,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小结论
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LU 分解
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        摄动法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        刷历年卷
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1710,7 +1798,7 @@
 
   <h1>期中复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-15T02:20:19.772538+00:00'>2025-11-15</time></span><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-15T02:20:19.772538+00:00'>2025-11-15</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-15T08:32:01.671496+00:00'>2025-11-15</time></span><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-15T08:32:01.671496+00:00'>2025-11-15</time></span></div></div>
 <p>《从 0 开始刷题》</p>
 <h2 id="_1">行列式展开<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1724,9 +1812,17 @@
 <li>
 <p>特殊矩阵：</p>
 <ul>
+<li>对称矩阵：<span class="arithmatex">\(A=A^T\)</span><ul>
+<li>能写成 <span class="arithmatex">\(A\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}A^T\)</span> 的形式</li>
+</ul>
+</li>
 <li>正交矩阵：<span class="arithmatex">\(A^TA=AA^T=E\)</span></li>
 <li>幂零矩阵：<span class="arithmatex">\(\exists m&gt;0\)</span>，<span class="arithmatex">\(A^m=O\)</span></li>
-<li>幂等矩阵：<span class="arithmatex">\(A^2=A\)</span>（<span class="arithmatex">\(A(E-A)=O\)</span>，则 <span class="arithmatex">\(r(A)+r(E-A)\leq n\)</span>。又 <span class="arithmatex">\(r(A)+r(E-A)\geq r(E)=n\)</span>，则 <span class="arithmatex">\(r(A)+r(A-E)=n\)</span>）</li>
+<li>幂等矩阵：<span class="arithmatex">\(A^2=A\)</span><ul>
+<li><span class="arithmatex">\(A(E-A)=O\)</span>，则 <span class="arithmatex">\(r(A)+r(E-A)\leq n\)</span>。又 <span class="arithmatex">\(r(A)+r(E-A)\geq r(E)=n\)</span>，则 <span class="arithmatex">\(r(A)+r(A-E)=n\)</span></li>
+<li>能写成 <span class="arithmatex">\(P\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}P^{-1}\)</span> 的形式</li>
+</ul>
+</li>
 <li>对合矩阵：<span class="arithmatex">\(A^2=E\)</span>（<span class="arithmatex">\(A=A^{-1}\)</span>）</li>
 </ul>
 </li>
@@ -1734,7 +1830,7 @@
 <p>变换</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(E\)</span> 的替换：</p>
+<p><span class="arithmatex">\(E\)</span> 的替换（注意有时要主动乘一个 <span class="arithmatex">\(E\)</span>）：</p>
 <details class="example" open="open">
 <summary>例题</summary>
 <p>设 <span class="arithmatex">\(A,B,C\in\mathbb P^{n\times n}\)</span>，且 <span class="arithmatex">\(AB=BC=CA=E\)</span>，求 <span class="arithmatex">\(A^2+B^2+C^2\)</span>。</p>
@@ -1773,7 +1869,7 @@
 </details>
 <details class="tip" open="open">
 <summary>Tip</summary>
-<p><span class="arithmatex">\(E+AB=(B^{-1}+A)B=A(A^{-1}+B)\)</span></p>
+<p><span class="arithmatex">\(E+AB=(B^{-1}+A)B=A(A^{-1}+B)\)</span>，<span class="arithmatex">\(E+A^{-1}BA=A^{-1}A+A^{-1}BA=A^{-1}(E+B)A\)</span></p>
 </details>
 </details>
 </li>
@@ -1794,8 +1890,8 @@
 <details class="note">
 <summary>解答</summary>
 <p><span class="arithmatex">\(\Rightarrow\)</span>：设 <span class="arithmatex">\(AB\)</span> 是对合矩阵，即有 <span class="arithmatex">\(E=(AB)^2=ABAB\)</span>，两边同时左乘 <span class="arithmatex">\(A\)</span> 右乘 <span class="arithmatex">\(B\)</span>，得 <span class="arithmatex">\(AEB=AABABB\Rightarrow AB=BA\)</span>。</p>
-<p><span class="arithmatex">\(\Leftarrow\)</span>：设 <span class="arithmatex">\(AB=BA\)</span>，两边同时右乘 <span class="arithmatex">\(AB\)</span>，得 <span class="arithmatex">\(ABAB=BAAB\Rightarrow (AB)^2=E\)</span>，故 <span class="arithmatex">\(AB\)</span> 为对合矩阵。</p>
 </details>
+<p><span class="arithmatex">\(\Leftarrow\)</span>：设 <span class="arithmatex">\(AB=BA\)</span>，两边同时右乘 <span class="arithmatex">\(AB\)</span>，得 <span class="arithmatex">\(ABAB=BAAB\Rightarrow (AB)^2=E\)</span>，故 <span class="arithmatex">\(AB\)</span> 为对合矩阵。</p>
 </details>
 </li>
 </ul>
@@ -1943,10 +2039,12 @@
 <li>
 <p><strong>法 1：</strong></p>
 <p>由于 <span class="arithmatex">\(E-A-B\)</span> 可逆，有 <span class="arithmatex">\(r(E-A-B)=n\)</span>。<span class="arithmatex">\(r(E-A)+r(B)\geq r(E-A-B)\Rightarrow r(B)\geq n-r(E-A)\)</span>。</p>
+</li>
+</ul>
 <p><span class="arithmatex">\(A^2=A\Rightarrow A(E-A)=O\)</span>，则 <span class="arithmatex">\(r(A)+r(E-A)\leq n\)</span>，<span class="arithmatex">\(r(A)\leq n-r(E-A)\)</span>。</p>
 <p>则有 <span class="arithmatex">\(r(B)\geq n-r(E-A)\geq r(A)\)</span>。</p>
 <p>交换 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 的角色，同理可证 <span class="arithmatex">\(r(A)\geq r(B)\)</span>，因此 <span class="arithmatex">\(r(A)=r(B)\)</span>。</p>
-</li>
+<ul>
 <li>
 <p><strong>法 2：</strong></p>
 <p><span class="arithmatex">\(A(E-A-B)=A-A^2-A=-AB\)</span></p>
@@ -1967,6 +2065,120 @@
 </details>
 </li>
 </ul>
+<h2 id="_5">小结论<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>分块矩阵的行列式公式：</p>
+<p>若 <span class="arithmatex">\(A\)</span> 可逆，则 <span class="arithmatex">\(\begin{vmatrix}A&amp;B\\C&amp;D\end{vmatrix}=|A||D-CA^{-1}B|\)</span>。</p>
+<p>若 <span class="arithmatex">\(D\)</span> 可逆，则 <span class="arithmatex">\(\begin{vmatrix}A&amp;B\\C&amp;D\end{vmatrix}=|D||A-BD^{-1}C|\)</span>。</p>
+<p>若 <span class="arithmatex">\(A,D\)</span> 都可逆，则 <span class="arithmatex">\(|A||D-CA^{-1}B|=|D||A-BD^{-1}C|\)</span>。如果用 <span class="arithmatex">\(-B\)</span> 代替 <span class="arithmatex">\(B\)</span>，可得 <span class="arithmatex">\(|A||D+CA^{-1}B|=|D||A+BD^{-1}C|\)</span>。</p>
+<details class="note" open="open">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\begin{pmatrix}A&amp;B\\C&amp;D\end{pmatrix}\xrightarrow{R_2-CA^{-1}R_1}\begin{pmatrix}A&amp;B\\O&amp;D-CA^{-1}B\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\begin{pmatrix}A&amp;B\\C&amp;D\end{pmatrix}\xrightarrow{R_1-BD^{-1}R_2}\begin{pmatrix}A-BD^{-1}C&amp;O\\C&amp;D\end{pmatrix}\)</span></p>
+</details>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(u,v\)</span> 是 <span class="arithmatex">\(n\)</span> 维列向量，则 <span class="arithmatex">\(|E_n+uv^T|=1+v^Tu\)</span>。</p>
+<details class="note" open="open">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\begin{pmatrix}E_n+uv_T&amp;u\\O&amp;1\end{pmatrix}\xrightarrow{C_1-C_2v_T}\begin{pmatrix}E_n&amp;u\\-v_T&amp;1\end{pmatrix}\)</span></p>
+<p>前者的行列式为 <span class="arithmatex">\(|E_n+uv^T|\)</span> <span class="arithmatex">\(|E_n||1+v^Tu|\)</span>，后者的行列式为 <span class="arithmatex">\(|E_n||1+v^Tu|\)</span>（根据分块矩阵的行列式公式）</p>
+</details>
+</li>
+<li>
+<p>矩阵行列式定理：设 <span class="arithmatex">\(A\)</span> 是 <span class="arithmatex">\(n\)</span> 阶可逆矩阵，<span class="arithmatex">\(u,v\)</span> 是 <span class="arithmatex">\(n\)</span> 维列向量，则 <span class="arithmatex">\(|A+uv^T|=|A||1+v^TA^{-1}u|\)</span>。</p>
+<details class="note" open="open">
+<summary>证明</summary>
+<p><span class="arithmatex">\(|A+uv^T|=|A(E+A^{-1}uv^T)|=|A||E+A^{-1}uv^T|=|A||1+v^TA^{-1}u|\)</span>【因为 <span class="arithmatex">\(|E+uv^T|=|1+v^Tu|\)</span>】</p>
+</details>
+</li>
+</ul>
+<h2 id="lu">LU 分解<a class="headerlink" href="#lu" title="Permanent link">&para;</a></h2>
+<h2 id="_6">摄动法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li>设 <span class="arithmatex">\(A\in\mathbb P^{n\times n}\)</span>，<span class="arithmatex">\(f(t)=|tE_n+A|\)</span>。由于 <span class="arithmatex">\(f(t)\)</span> 是关于 <span class="arithmatex">\(t\)</span> 的多项式且 <span class="arithmatex">\(t^n\)</span> 项系数为 <span class="arithmatex">\(1\)</span>，所以当 <span class="arithmatex">\(t\)</span> 充分大时，<span class="arithmatex">\(f(t)&gt;0\)</span>。</li>
+</ul>
+<h2 id="_7">刷历年卷<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<details class="info" open="open">
+<summary>2020-2021</summary>
+<p>设 <span class="arithmatex">\(A\in\mathbb P^{n\times n}\)</span>，<span class="arithmatex">\(a_{ij}=1\)</span>。</p>
+<p>（1）求 <span class="arithmatex">\(a,b\)</span> 使得 <span class="arithmatex">\(aA^2+bA=O\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(A^2=nA\)</span></p>
+<p><span class="arithmatex">\((an+b)A=O\)</span></p>
+<p>取 <span class="arithmatex">\(a=1,b=-n\)</span></p>
+</details>
+<p>（4）求 <span class="arithmatex">\((A+E)^{-1}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(A^2-nA+?E=?E\)</span></p>
+<p><span class="arithmatex">\((A+E)(A-(n+1)E)=-(n+1)E\)</span></p>
+<p><span class="arithmatex">\((A+E)^{-1}=E-\dfrac{1}{n+1}A\)</span></p>
+</details>
+<p>设 <span class="arithmatex">\(A,B\in\mathbb P^{n\times n}\)</span>，证明：<span class="arithmatex">\(r(A)=r(AB)\Leftrightarrow \exists C,A=ABC\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><span class="arithmatex">\(\Rightarrow\)</span>：</p>
+<p><span class="arithmatex">\(A\)</span> 的第 <span class="arithmatex">\(i\)</span> 列 <span class="arithmatex">\(\boldsymbol a_i\)</span> 可以表示为 <span class="arithmatex">\(AB\)</span> 的列的线性组合（因为 <span class="arithmatex">\(r(AB)=r(AB,\boldsymbol_i)\)</span>）：<span class="arithmatex">\(\boldsymbol a_i=(AB)\boldsymbol c_i\)</span>，其中 <span class="arithmatex">\(\boldsymbol c_i\)</span> 是一个 <span class="arithmatex">\(n\)</span> 维列向量。</p>
+<p>取 <span class="arithmatex">\(C=(\boldsymbol_1,\boldsymbol_2,\cdots,\boldsymbol_n)\)</span> 即可。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span>：</p>
+<p><span class="arithmatex">\(r(A)=r(ABC)\leq r(AB)\leq r(A)\)</span>，则 <span class="arithmatex">\(r(A)=r(AB)\)</span>。</p>
+</li>
+</ul>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2018-2019</summary>
+<p>设 <span class="arithmatex">\(AA^T=E\)</span>，<span class="arithmatex">\(|A|&lt;0\)</span>，求 <span class="arithmatex">\(|A+E|\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>先 <span class="arithmatex">\(E\)</span> 的替换；<span class="arithmatex">\(|A+E|=|A+AA^T|=|A||E+A^T|\)</span></p>
+<p>注意到 <span class="arithmatex">\(|E+A^T|=|(E+A)^T|=|E+A|\)</span></p>
+<p>则 <span class="arithmatex">\(|A+E|(1-|A|)=0\)</span></p>
+<p>又 <span class="arithmatex">\(1-|A|&gt;0\)</span>，则 <span class="arithmatex">\(|A+E|=0\)</span></p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2018-2019</summary>
+<p>设 <span class="arithmatex">\(A=A^T\)</span>，<span class="arithmatex">\(|A|=0\)</span>，证明：<span class="arithmatex">\(A_{ii}A_{jj}=(A_{ij})^2\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(|A|=0\)</span>，则 <span class="arithmatex">\(r(A^*)\leq 1\)</span></p>
+<p>则 <span class="arithmatex">\(\begin{vmatrix}A_{ii}&amp;A_{ij\\A_{ji}&amp;A_{jj}\end{vmatrix}=0\)</span>，则 <span class="arithmatex">\(A_{ii}A_{jj}=A_{ij}A_{ji}=(A_{ij})^2\)</span>【<span class="arithmatex">\(A\)</span> 对称 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(A^*\)</span> 对称】</p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2017-2018</summary>
+<p>设 <span class="arithmatex">\(A^3=2E\)</span>，<span class="arithmatex">\(B=A^2-2A+E\)</span>，证明 <span class="arithmatex">\(B\)</span> 可逆，并求 <span class="arithmatex">\(B^{-1}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\((A-E)(A^2+A+E)=E\)</span>，则 <span class="arithmatex">\((A-E)^{-1}=A^2+A+E\)</span></p>
+<p><span class="arithmatex">\(B=(A-E)^2\)</span>，则 <span class="arithmatex">\(B^{-1}=[(A-E)^{-1}]^2=(A^2+A+E)^2=3A^2+4A+5E\)</span></p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2017-2018</summary>
+<p>设 <span class="arithmatex">\(A,B,C,D\in\mathbb P^{n\times n}\)</span>，证明：当 <span class="arithmatex">\(AC=CA\)</span> 时，有 <span class="arithmatex">\(\begin{vmatrix}A&amp;D\\C&amp;B\end{vmatrix}=|AB-CD|\)</span>。 </p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(A\)</span> 可逆时，<span class="arithmatex">\(\begin{vmatrix}A&amp;&amp;D\\C&amp;B\end{vmatrix}=|A||B-CA^{-1}D|=|AB-ACA^{-1}D|=|AB-CD|\)</span></p>
+<p><span class="arithmatex">\(A\)</span> 不可逆时，由于当 <span class="arithmatex">\(t\)</span> 充分大时 <span class="arithmatex">\(|tE_n+A|&gt;0\)</span>，<span class="arithmatex">\(\begin{vmatrix}tE_n+A&amp;&amp;D\\C&amp;B\end{vmatrix}=|(tE_n+A)B-CD|\)</span>，等式两边关于 <span class="arithmatex">\(t\)</span> 的多项式常数项相等，故 <span class="arithmatex">\(\begin{vmatrix}A&amp;D\\C&amp;B\end{vmatrix}=|AB-CD|\)</span>。</p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2016-2017</summary>
+<p>把 <span class="arithmatex">\(\begin{pmatrix}a&amp;0\\0&amp;\frac 1 a\end{pmatrix}\)</span> 表示成若干个 <span class="arithmatex">\(\begin{pmatrix}1&amp;x\\0&amp;1\end{pmatrix}\)</span> 和 <span class="arithmatex">\(\begin{pmatrix}1&amp;0\\y&amp;1\end{pmatrix}\)</span> 型的乘积。</p>
+<details class="note">
+<summary>解答</summary>
+<p>利用第三种初等变换</p>
+</details>
+</details>
 
 
 
