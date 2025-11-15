@@ -1744,7 +1744,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-15T14:01:28.026178+00:00'>2025-11-15</time></span><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-15T14:01:28.026178+00:00'>2025-11-15</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-15T15:36:42.601370+00:00'>2025-11-15</time></span><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-15T15:36:42.601370+00:00'>2025-11-15</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1937,6 +1937,49 @@
 </li>
 <li>
 <p>函数的单调区间与极值</p>
+<ul>
+<li>
+<p>函数的极值：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 内有定义，若 <span class="arithmatex">\(\exists \delta&gt;0\)</span>，对 <span class="arithmatex">\(\forall x\in U(x_0,\delta)\)</span> 均有 <span class="arithmatex">\(f(x)\geq f(x_0)\)</span>（或 <span class="arithmatex">\(f(x)\leq f(x_0)\)</span>），则称 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极大值（或极小值）。</p>
+</li>
+<li>
+<p>极值存在的必要条件（费马定理）：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极值，且 <span class="arithmatex">\(f'(x_0)\)</span> 存在，则 <span class="arithmatex">\(f'(x_0)=0\)</span>。</p>
+</li>
+<li>
+<p>极值存在的充分条件：</p>
+<ul>
+<li>
+<p>第一充分条件：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续，且 <span class="arithmatex">\(\exists \delta&gt;0\)</span>，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0,\delta)\)</span> 可导，</p>
+<ol>
+<li>当 <span class="arithmatex">\(x\in \mathring U_-(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&gt;0\)</span>；当 <span class="arithmatex">\(x\in \mathring U_+(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&lt;0\)</span>；则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极大值。</li>
+<li>当 <span class="arithmatex">\(x\in\mathring U_+(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&lt;0\)</span>；当 <span class="arithmatex">\(x\in\mathring U_+(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&gt;0\)</span>；则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极小值。</li>
+<li>若 <span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0,\delta)\)</span> 内不变号，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处没有极值。</li>
+</ol>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>① 这仅仅是充分条件，不是充要条件。也就是说，若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处取极大值，不一定 <span class="arithmatex">\(\exists\delta&gt;0\)</span>，使得 <span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(\mathring U_-(x_0,\delta)\)</span> 内 <span class="arithmatex">\(&gt;0\)</span>，在 <span class="arithmatex">\(\mathring U_+(x_0,\delta)\)</span> 内 <span class="arithmatex">\(&lt;0\)</span>。</p>
+<p>例如 <span class="arithmatex">\(f(x)=\begin{cases}x^2(1+\sin\frac 1 x)&amp;(x\neq 0)\\0&amp;(x=0)\end{cases}\)</span>：<span class="arithmatex">\(f(x)\geq 0\)</span>，故 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处取极小值。当 <span class="arithmatex">\(x\neq 0\)</span> 时，<span class="arithmatex">\(f'(x)=2x(1+\sin\dfrac 1 x)-\cos\dfrac 1 x\)</span>，<span class="arithmatex">\(f'(\dfrac 1 {2n\pi})=\dfrac 1 {n\pi}-1&lt;0\)</span>，<span class="arithmatex">\(f'(\dfrac{1}{2n\pi+\pi})=\dfrac{2}{2n\pi+\pi}+1&gt;0\)</span>。</p>
+<p>② <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续的前提条件不能漏。</p>
+<p>③ <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处不一定可导，只要 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0,\delta)\)</span> 内可导就行。</p>
+</details>
+</li>
+<li>
+<p>第二充分条件：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处二阶可导，且 <span class="arithmatex">\(f'(x_0)=0\)</span>，</p>
+<ol>
+<li>若 <span class="arithmatex">\(f''(x_0)&gt;0\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极小值。</li>
+<li>若 <span class="arithmatex">\(f''(x_0)&lt;0\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极大值。</li>
+<li>若 <span class="arithmatex">\(f''(x_0)=0\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可能有极值，也可能没有极值。</li>
+</ol>
+</li>
+<li>
+<p>第三充分条件：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内存在 <span class="arithmatex">\((n-1)\)</span> 阶导数，在 <span class="arithmatex">\(x_0\)</span> 处 <span class="arithmatex">\(n\)</span> 阶可导，且 <span class="arithmatex">\(f^{(k)}(x_0)=0\,(k=1,2,\cdots,n-1)\)</span>，<span class="arithmatex">\(f^{(n)}(x_0)\neq 0\)</span>，则</p>
+<ol>
+<li>当 <span class="arithmatex">\(n\)</span> 为偶数时，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处取极值；且当 <span class="arithmatex">\(f^{(n)}(x_0)&gt;0\)</span> 时，有极小值；当 <span class="arithmatex">\(f^{(n)}(x_0)&lt;0\)</span> 时，有极大值。</li>
+<li>当 <span class="arithmatex">\(n\)</span> 为奇数时，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处没有极值。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <h3 id="_3">洛必达法则<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
