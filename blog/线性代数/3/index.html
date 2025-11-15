@@ -1788,7 +1788,7 @@
 
   <h1>第三章 矩阵的运算</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-13T14:13:25.016284+00:00'>2025-11-13</time></span><span data-tippy-content data-tippy-raw='2025-11-13'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-13T14:13:25.016284+00:00'>2025-11-13</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-15T02:20:19.772538+00:00'>2025-11-15</time></span><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-15T02:20:19.772538+00:00'>2025-11-15</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <details class="info">
 <summary>矩阵的加减法、数乘、乘法和转置</summary>
@@ -2091,6 +2091,7 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 <p><span class="arithmatex">\(\left(\begin{array}{c:c}A &amp; B \\\end{array}\right)\xrightarrow{\text{初等行变换}}\left(\begin{array}{c:c}A^{-1}A &amp; A^{-1}B \\\end{array}\right)=\left(\begin{array}{c:c}E &amp; A^{-1}B \\\end{array}\right)\)</span></p>
 <p>即，<span class="arithmatex">\(A^{-1}A=P_1\cdots P_sA=E\)</span>，<span class="arithmatex">\(A^{-1}B=P_1\cdots P_sB=A^{-1}B\)</span>，也就是 <span class="arithmatex">\(A\)</span> 经过一系列初等行变换得到 <span class="arithmatex">\(E\)</span> 时，<span class="arithmatex">\(B\)</span> 经过同样的初等行变换得到 <span class="arithmatex">\(A^{-1}B\)</span></p>
 </details>
+<p><span class="arithmatex">\(\begin{pmatrix}A&amp;E\\E&amp;O\end{pmatrix}\xrightarrow{初等行,列变换}\begin{pmatrix}E&amp;C\\B&amp;O\end{pmatrix}\)</span>，则 <span class="arithmatex">\(A^{-1}=BC\)</span></p>
 </li>
 </ul>
 <h3 id="_5">矩阵的秩<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
@@ -2176,7 +2177,7 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 <p>若 <span class="arithmatex">\(r(A)=n-1\)</span>：</p>
 <details class="abstract" open="open">
 <summary>Abstract</summary>
-<p>证 <span class="arithmatex">\(r(A^*)=1\)</span>，只需证 $r(A^*)\geq $ 和 <span class="arithmatex">\(r(A^*)\leq 1\)</span>。</p>
+<p>证 <span class="arithmatex">\(r(A^*)=1\)</span>，只需证 <span class="arithmatex">\(r(A^*)\geq 1\)</span> 和 <span class="arithmatex">\(r(A^*)\leq 1\)</span>。</p>
 <ol>
 <li>
 <p>前者：即证 <span class="arithmatex">\(A^*\neq O\)</span>，即存在 <span class="arithmatex">\(A_{i,j}\neq 0\)</span>。</p>

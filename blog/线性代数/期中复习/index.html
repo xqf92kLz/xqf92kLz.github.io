@@ -863,7 +863,40 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        刷历年卷
+        行列式展开
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵运算
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        逆矩阵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵的秩
       
     </span>
   </a>
@@ -1618,7 +1651,40 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        刷历年卷
+        行列式展开
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵运算
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        逆矩阵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵的秩
       
     </span>
   </a>
@@ -1644,11 +1710,263 @@
 
   <h1>期中复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-13T14:13:25.016284+00:00'>2025-11-13</time></span><span data-tippy-content data-tippy-raw='2025-11-13'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-13T14:13:25.016284+00:00'>2025-11-13</time></span></div></div>
-<h2 id="_1">刷历年卷<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<details class="info">
-<summary>2016-2017</summary>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-15T02:20:19.772538+00:00'>2025-11-15</time></span><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-15T02:20:19.772538+00:00'>2025-11-15</time></span></div></div>
+<p>《从 0 开始刷题》</p>
+<h2 id="_1">行列式展开<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><span class="arithmatex">\(|A|=\sum_{j=1}^n a_{ij}A_{ij}\)</span></p>
+<p>看到 <span class="arithmatex">\(a_{ij}\)</span> 和 <span class="arithmatex">\(A_{ij}\)</span> 同时出现可以写一下这个式子。比如，有 <span class="arithmatex">\(a_{ij}=A_{ij}\)</span>，<span class="arithmatex">\(a_{i1}\neq 0\)</span>，即可推出 <span class="arithmatex">\(|A|=\sum_{j=1}^n a_{ij}^2\neq 0\)</span>。</p>
+</li>
+</ul>
+<h2 id="_2">矩阵运算<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>特殊矩阵：</p>
+<ul>
+<li>正交矩阵：<span class="arithmatex">\(A^TA=AA^T=E\)</span></li>
+<li>幂零矩阵：<span class="arithmatex">\(\exists m&gt;0\)</span>，<span class="arithmatex">\(A^m=O\)</span></li>
+<li>幂等矩阵：<span class="arithmatex">\(A^2=A\)</span>（<span class="arithmatex">\(A(E-A)=O\)</span>，则 <span class="arithmatex">\(r(A)+r(E-A)\leq n\)</span>。又 <span class="arithmatex">\(r(A)+r(E-A)\geq r(E)=n\)</span>，则 <span class="arithmatex">\(r(A)+r(A-E)=n\)</span>）</li>
+<li>对合矩阵：<span class="arithmatex">\(A^2=E\)</span>（<span class="arithmatex">\(A=A^{-1}\)</span>）</li>
+</ul>
+</li>
+<li>
+<p>变换</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(E\)</span> 的替换：</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(A,B,C\in\mathbb P^{n\times n}\)</span>，且 <span class="arithmatex">\(AB=BC=CA=E\)</span>，求 <span class="arithmatex">\(A^2+B^2+C^2\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(A^2=A(BC)A=(AB)(CA)=E\)</span></p>
+<p><span class="arithmatex">\(B^2=B(CA)B=(BC)(AB)=E\)</span></p>
+<p><span class="arithmatex">\(C^2=C(AB)C=(CA)(BC)=E\)</span></p>
+<p>故 <span class="arithmatex">\(A^2+B^2+C^2=3E\)</span></p>
 </details>
+<p>设 <span class="arithmatex">\(A,B\in\mathbb P^{n\times n}\)</span>，<span class="arithmatex">\(AA^T=E\)</span>，<span class="arithmatex">\(BB^T=E\)</span>，<span class="arithmatex">\(|A|+|B|=0\)</span>，求 <span class="arithmatex">\(|A+B|\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(A+B=AB^TB+AA^TB=A(B^T+A^T)B=A(A+B)^TB\)</span></p>
+<p><span class="arithmatex">\(|A+B|=|A||(A+B)^T||B|\)</span></p>
+<p><span class="arithmatex">\((1-|A||B|)|A+B|=0\)</span></p>
+<p>又 <span class="arithmatex">\(|A|=\pm 1\)</span>，<span class="arithmatex">\(|B|=\pm 1\)</span>，<span class="arithmatex">\(|A|=-|B|\)</span>，故 <span class="arithmatex">\(|A||B|=-1\)</span>，<span class="arithmatex">\(1-|A||B|=2\neq 0\)</span>。</p>
+<p>故 <span class="arithmatex">\(|A+B|=0\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(A,B\in\mathbb P^{n\times n}\)</span>，且 <span class="arithmatex">\(E+AB\)</span> 可逆，化简：<span class="arithmatex">\((E+BA)[E-B(E+AB)^{-1}A]\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\begin{aligned}&amp;=E-B(E+AB)^{-1}A+[BA-BAB(E+AB)^{-1}A]\\&amp;=E-B(E+AB)^{-1}A+B(E-AB(E+AB)^{-1})A\\&amp;=E-B(E+AB)^{-1}A+B((E+AB)(E+AB)^{-1}-AB(E+AB)^{-1})A\\&amp;=E-B(E+AB)^{-1}A+B(E+AB)^{-1}A\\&amp;=E\end{aligned}\)</span></p>
+<p>其中最关键的是 <span class="arithmatex">\(E-AB(E+AB)^{-1}=(E+AB)(E+AB)^{-1}-AB(E+AB)^{-1}=(E+AB)^{-1}\)</span> 这步。</p>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\(E=AA^{-1}\)</span></p>
+</details>
+<p>设 <span class="arithmatex">\(A\)</span> 为 <span class="arithmatex">\(n\)</span> 阶对称阵，<span class="arithmatex">\(A\)</span> 可逆，<span class="arithmatex">\((A-B)^2=E\)</span>，化简：<span class="arithmatex">\((E+A^{-1}B^T)^T(E-BA^{-1})^{-1}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\((E+A^{-1}B^T)^T=E+B(A^{-1})^T=E+B(A^T)^{-1}=E+BA^{-1}=(A+B)A^{-1}\)</span>【<span class="arithmatex">\(E=AA^{-1}\)</span>】</p>
+<p><span class="arithmatex">\((E-BA^{-1})^{-1}=((A-B)A^{-1})^{-1}=A(A-B)^{-1}\)</span></p>
+<p>则 <span class="arithmatex">\((E+A^{-1}B^T)^T(E-BA^{-1})^{-1}=(A+B)A^{-1}A(A-B)^{-1}=(A+B)(A-B)^{-1}=(A+B)(A-B)\)</span>【<span class="arithmatex">\((A-B)^2=E\Rightarrow (A-B)^{-1}=A-B\)</span>】</p>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\(E+AB=(B^{-1}+A)B=A(A^{-1}+B)\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>构造新等式，如利用幂等性</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(A,B\in\mathbb P^{n\times n}\)</span>，<span class="arithmatex">\(A^2=A\)</span>，<span class="arithmatex">\(B^2=B\)</span>，<span class="arithmatex">\((A-B)^2=A+B\)</span>，证明：<span class="arithmatex">\(AB=BA=O\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\((A-B)^2=A^2-AB-BA+B^2=A+B\Rightarrow AB+BA=O\)</span> ①</p>
+<p>① 式左乘 <span class="arithmatex">\(A\)</span>，又 <span class="arithmatex">\(A^2=A\)</span>，有 <span class="arithmatex">\(AB+ABA=O\)</span></p>
+<p>① 式右乘 <span class="arithmatex">\(A\)</span>，<span class="arithmatex">\(ABA+BA=O\)</span></p>
+<p>得 <span class="arithmatex">\(AB=BA\)</span> ②</p>
+<p>①② <span class="arithmatex">\(\Rightarrow AB=BA=O\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(A,B\)</span> 都是对合矩阵，证明：<span class="arithmatex">\(AB\)</span> 是对合矩阵 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 乘法可交换。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\Rightarrow\)</span>：设 <span class="arithmatex">\(AB\)</span> 是对合矩阵，即有 <span class="arithmatex">\(E=(AB)^2=ABAB\)</span>，两边同时左乘 <span class="arithmatex">\(A\)</span> 右乘 <span class="arithmatex">\(B\)</span>，得 <span class="arithmatex">\(AEB=AABABB\Rightarrow AB=BA\)</span>。</p>
+<p><span class="arithmatex">\(\Leftarrow\)</span>：设 <span class="arithmatex">\(AB=BA\)</span>，两边同时右乘 <span class="arithmatex">\(AB\)</span>，得 <span class="arithmatex">\(ABAB=BAAB\Rightarrow (AB)^2=E\)</span>，故 <span class="arithmatex">\(AB\)</span> 为对合矩阵。</p>
+</details>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>矩阵的幂</p>
+<ul>
+<li>数学归纳法：先求出次数较低的幂，观察，再归纳证明</li>
+<li>将矩阵拆分成两个可交换矩阵的和，再二项式定理展开</li>
+<li><span class="arithmatex">\((\alpha^T\beta)^n=(\beta\alpha^T)^{n-1}A\)</span></li>
+<li>
+<p>注意到低次幂为 <span class="arithmatex">\(O\)</span>，则后续高次幂也是 <span class="arithmatex">\(O\)</span>。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(A=\begin{pmatrix}1&amp;0&amp;1\\0&amp;2&amp;0\\1&amp;0&amp;1\end{pmatrix}\)</span>，<span class="arithmatex">\(n\geq 2\)</span>，求 <span class="arithmatex">\(A^n-2A^{n-1}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(A^n-2A^{n-1}=A^{n-1}(A-2E)\)</span></p>
+<p><span class="arithmatex">\(n=2\)</span> 时，<span class="arithmatex">\(A(A-2E)=O\)</span>；<span class="arithmatex">\(n&gt;2\)</span> 时，<span class="arithmatex">\(A^{n-2}\cdot A(A-2E)=O\)</span>。</p>
+<p>故答案是 <span class="arithmatex">\(O\)</span>。</p>
+</details>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>矩阵的乘法交换性</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>证明：与任意 <span class="arithmatex">\(n\)</span> 阶方阵乘法可交换的方阵 <span class="arithmatex">\(A\)</span> 一定是数量矩阵。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(E_{ij}\)</span> 表示第 <span class="arithmatex">\(i\)</span> 行第 <span class="arithmatex">\(j\)</span> 列的元素为 <span class="arithmatex">\(1\)</span>，其他元素全为 <span class="arithmatex">\(0\)</span> 的 <span class="arithmatex">\(n\)</span> 阶方阵。</p>
+<p><span class="arithmatex">\(AE_{ij}\)</span> 的第 <span class="arithmatex">\(j\)</span> 列是 <span class="arithmatex">\(A\)</span> 的第 <span class="arithmatex">\(i\)</span> 列，其余元素为 <span class="arithmatex">\(0\)</span>。<span class="arithmatex">\((AE_{ij})_{ij}=a_{ii}\)</span>。</p>
+<p><span class="arithmatex">\(E_{ij}A\)</span> 的第 <span class="arithmatex">\(i\)</span> 行是 <span class="arithmatex">\(A\)</span> 的第 <span class="arithmatex">\(j\)</span> 行，其余元素为 <span class="arithmatex">\(0\)</span>。<span class="arithmatex">\((E_{ij}A)_{ij}=a_{jj}\)</span>。</p>
+<p><span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(E_{ij}\)</span> 可交换 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(A\)</span> 为数量矩阵。</p>
+</details>
+</details>
+</li>
+<li>
+<p>注意矩阵的运算规律和行列式的性质之间的联系和区别</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设四阶矩阵 <span class="arithmatex">\(A=(\alpha,\gamma_2,\gamma_3,\gamma_4)\)</span>，<span class="arithmatex">\(B=(\beta,\gamma_2,\gamma_3,\gamma_4)\)</span>，其中 <span class="arithmatex">\(\alpha,\beta,\gamma_2,\gamma_3,\gamma_4\)</span> 均为四维列向量，且已知 <span class="arithmatex">\(|A|=4,|B|=1\)</span>，求 <span class="arithmatex">\(|A+B|\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(|A+B|=|\alpha+\beta,2\gamma_2,2\gamma_3,2\gamma_4|=8|\alpha+\beta,\gamma_2,\gamma_3,\gamma_4|=8(|A|+|B|)=40\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>观察矩阵规模</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(A\)</span> 为 <span class="arithmatex">\(n\)</span> 阶反对称矩阵，证明：对于任意 <span class="arithmatex">\(n\)</span> 维列向量 <span class="arithmatex">\(\alpha\)</span>，都有 <span class="arithmatex">\(\alpha^TA\alpha=0\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\((\alpha^TA\alpha)^T=\alpha^TA^T\alpha=-\alpha^TA\alpha\)</span></p>
+<p>然后注意到 <span class="arithmatex">\(\alpha^TA\alpha\)</span> 是一个数，所以转置就是本身，即 <span class="arithmatex">\((\alpha^TA\alpha)^T=\alpha^TA\alpha\)</span>。</p>
+<p>故 <span class="arithmatex">\(\alpha^TA\alpha=0\)</span>。</p>
+</details>
+</details>
+</li>
+</ul>
+<h2 id="_3">逆矩阵<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>可逆的上（下）三角矩阵的逆矩阵仍为上（下）三角矩阵</p>
+</li>
+<li>
+<p>利用定义求逆矩阵</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(A^k=O\,(k&gt;0)\)</span>，<span class="arithmatex">\(E-A\)</span> 可逆，求 <span class="arithmatex">\((E-A)^{-1}\)</span>，<span class="arithmatex">\((E+A)^{-1}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\((E-A)(E+A+A^2+\cdots+A^{k-1})=E+A+\cdots+A^{k-1}-A-A^2-\cdots-A^{k-1}-A^k=E-A^k=E\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow (E-A)^{-1}=E+A+A^2+\cdots+A^{k-1}\)</span></p>
+<p><span class="arithmatex">\((E+A)(E-A+A^2-A^3+\cdots+(-1)^{k-1}A^{k-1})=E+(-1)^{k-1}A^{k-1}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow (E+A)^{-1}=E-A+A^2-A^3+\cdots+(-1)^{k-1}A^{k-1}\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>用行列式判定矩阵的可逆性</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(A,B\in\mathbb P^{n\times n}\)</span>，<span class="arithmatex">\(|B|\neq 0\)</span>，<span class="arithmatex">\(A-E\)</span> 可逆，<span class="arithmatex">\((A-E)^{-1}=(B-E)^T\)</span>，证明：<span class="arithmatex">\(A\)</span> 可逆。</p>
+<details class="note">
+<summary>解答</summary>
+<p>由于 <span class="arithmatex">\((A-E)^{-1}=(B-E)^T\)</span>，则 <span class="arithmatex">\((A-E)(B-E)^T=(A-E)(B^T-E)=AB^T-A-B^T+E=E\)</span>，则 <span class="arithmatex">\(A=B^T(B^T-E)^{-1}=B^T(A-E)\)</span>，<span class="arithmatex">\(|A|=|B||A-E|\neq 0\)</span>，故 <span class="arithmatex">\(A\)</span> 可逆。</p>
+</details>
+</details>
+</li>
+</ul>
+<h2 id="_4">矩阵的秩<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>利用常见公式求矩阵的秩</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(A\in\mathbb P^{4\times 3}\)</span>，<span class="arithmatex">\(r(A)=2\)</span>，<span class="arithmatex">\(B=\begin{pmatrix}1&amp;0&amp;2\\0&amp;2&amp;0\\-1&amp;0&amp;3\end{pmatrix}\)</span>，求 <span class="arithmatex">\(r(AB)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(|B|=10\neq 0\)</span>，故 <span class="arithmatex">\(B\)</span> 可逆，<span class="arithmatex">\(r(AB)=r(A)=2\)</span>。</p>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>求秩可以把可逆矩阵因子扔掉</p>
+</details>
+<p>设 <span class="arithmatex">\(A=\begin{pmatrix}a&amp;b&amp;b\\b&amp;a&amp;b\\b&amp;b&amp;a\end{pmatrix}\)</span>，<span class="arithmatex">\(r(A^*)=1\)</span>，求 <span class="arithmatex">\(a,b\)</span> 关系。</p>
+<details class="note">
+<summary>解答</summary>
+<p>因为 <span class="arithmatex">\(r(A^*)=1\)</span>，所以 <span class="arithmatex">\(r(A)=2&lt;3\)</span>，从而 <span class="arithmatex">\(|A|=0\)</span>。</p>
+<p><span class="arithmatex">\(|A|=(a+2b)(a-b)^2=0\)</span> 得 <span class="arithmatex">\(a+2b=0\)</span> 或 <span class="arithmatex">\(a=b\)</span>。</p>
+<p>当 <span class="arithmatex">\(a=b\)</span> 时，<span class="arithmatex">\(r(A)=1\)</span>，舍去。所以 <span class="arithmatex">\(a+2b=0\)</span> 且 <span class="arithmatex">\(a\neq b\)</span>。</p>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>注意 <span class="arithmatex">\(r(A)\)</span> 和 <span class="arithmatex">\(r(A^*)\)</span> 之间有关系</p>
+</details>
+<p>设 <span class="arithmatex">\(A,B\in\mathbb P^{4\times 4}\)</span>，<span class="arithmatex">\(r(A)=3\)</span>，<span class="arithmatex">\(r(B)=4\)</span>，求 <span class="arithmatex">\(r(A^*B^*)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(r(A)=3\Rightarrow r(A^*)=1\)</span></p>
+<p><span class="arithmatex">\(r(B)=4\Rightarrow r(B^*)=4\)</span>，从而 <span class="arithmatex">\(B^*\)</span> 可逆</p>
+<p><span class="arithmatex">\(r(A^*B^*)=r(A^*)=1\)</span></p>
+</details>
+<p>设 <span class="arithmatex">\(A\in\mathbb P^{2\times 2}\)</span>，<span class="arithmatex">\(A^2=E\)</span>，<span class="arithmatex">\(A\neq \pm E\)</span>。证明：<span class="arithmatex">\(r(A+E)=r(A-E)=1\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\((A+E)(A-E)=O\Rightarrow r(A+E)+r(A-E)\leq 2\)</span>，又 <span class="arithmatex">\(A\neq \pm E\)</span>，即 <span class="arithmatex">\(r(A+E)=r(A-E)\neq 0\)</span>，故 <span class="arithmatex">\(r(A+E)=r(A-E)=1\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(A\in\mathbb P^{n\times n}\)</span>，<span class="arithmatex">\(A^2=E\)</span>，证明：<span class="arithmatex">\(r(A+E)+r(A-E)=n\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\((A+E)(A-E)=O\Rightarrow r(A+E)+r(A-E)\leq n\)</span></p>
+<p>又 <span class="arithmatex">\(r(A+E)+r(A-E)\geq r[(A+E)-(A-E)]=n\)</span></p>
+<p>故 <span class="arithmatex">\(r(A+E)+r(A-E)=n\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(A,B\in\mathbb P^{n\times n}\)</span>，<span class="arithmatex">\(A^2=A\)</span>，<span class="arithmatex">\(B^2=B\)</span>，<span class="arithmatex">\(E-A-B\)</span> 可逆，证明：<span class="arithmatex">\(r(A)=r(B)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>由于 <span class="arithmatex">\(E-A-B\)</span> 可逆，有 <span class="arithmatex">\(r(E-A-B)=n\)</span>。<span class="arithmatex">\(r(E-A)+r(B)\geq r(E-A-B)\Rightarrow r(B)\geq n-r(E-A)\)</span>。</p>
+<p><span class="arithmatex">\(A^2=A\Rightarrow A(E-A)=O\)</span>，则 <span class="arithmatex">\(r(A)+r(E-A)\leq n\)</span>，<span class="arithmatex">\(r(A)\leq n-r(E-A)\)</span>。</p>
+<p>则有 <span class="arithmatex">\(r(B)\geq n-r(E-A)\geq r(A)\)</span>。</p>
+<p>交换 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 的角色，同理可证 <span class="arithmatex">\(r(A)\geq r(B)\)</span>，因此 <span class="arithmatex">\(r(A)=r(B)\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(A(E-A-B)=A-A^2-A=-AB\)</span></p>
+<p>又 <span class="arithmatex">\(E-A-B\)</span> 可逆，则 <span class="arithmatex">\(r(A)=r(AB)\)</span></p>
+<p><span class="arithmatex">\(B(E-A-B)=B-AB-B^2=-AB\)</span>，则 <span class="arithmatex">\(r(B)=r(AB)\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow r(A)=r(B)\)</span></p>
+</li>
+</ul>
+</details>
+<p>求满足 <span class="arithmatex">\(A^*=A\)</span> 的所有 <span class="arithmatex">\(n\)</span> 阶方阵 <span class="arithmatex">\(A\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>若 <span class="arithmatex">\(r(A)&lt;n-1\)</span>，则 <span class="arithmatex">\(r(A^*)=0\)</span>，<span class="arithmatex">\(A^*=O\)</span>，此时只有 <span class="arithmatex">\(A=O\)</span> 时有 <span class="arithmatex">\(A^*=A\)</span>。</p>
+<p>若 <span class="arithmatex">\(r(A)=n-1\)</span>，则 <span class="arithmatex">\(r(A^*)=1\)</span>。当 <span class="arithmatex">\(n&gt;2\)</span> 时，显然 <span class="arithmatex">\(A^*\neq A\)</span>；当 <span class="arithmatex">\(n=2\)</span> 时，<span class="arithmatex">\(A=\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}\)</span>，<span class="arithmatex">\(A^*=\begin{pmatrix}d&amp;-b\\-c&amp;a\end{pmatrix}\)</span>，只有 <span class="arithmatex">\(a=d,b=c=0\)</span> 才有 <span class="arithmatex">\(A=A^*\)</span>，然而此时 <span class="arithmatex">\(A=\begin{pmatrix}a&amp;0\\0&amp;a\end{pmatrix}\)</span> 与 <span class="arithmatex">\(r(A)=1\)</span> 矛盾。故 <span class="arithmatex">\(A^*\neq A\)</span>。</p>
+<p>若 <span class="arithmatex">\(r(A)=n\)</span>，则 <span class="arithmatex">\(r(A^*)=n\)</span>，于是 <span class="arithmatex">\(A=A^*\Leftrightarrow A^2=|A|E\)</span>。</p>
+<p>综上，满足 <span class="arithmatex">\(A^*=A\)</span> 的方阵是：零方阵及适合 <span class="arithmatex">\(A^2=|A|E\)</span> 的所有可逆方阵。</p>
+</details>
+</details>
+</li>
+</ul>
 
 
 
