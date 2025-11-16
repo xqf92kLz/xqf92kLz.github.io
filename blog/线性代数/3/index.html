@@ -1788,7 +1788,7 @@
 
   <h1>第三章 矩阵的运算</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-16T03:47:11.853539+00:00'>2025-11-16</time></span><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-16T03:47:11.853539+00:00'>2025-11-16</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-16T05:19:16.367120+00:00'>2025-11-16</time></span><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-16T05:19:16.367120+00:00'>2025-11-16</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <details class="info">
 <summary>矩阵的加减法、数乘、乘法和转置</summary>
@@ -2092,6 +2092,10 @@ A \times \text{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) = \begin{pmatrix} 
 <p>即，<span class="arithmatex">\(A^{-1}A=P_1\cdots P_sA=E\)</span>，<span class="arithmatex">\(A^{-1}B=P_1\cdots P_sB=A^{-1}B\)</span>，也就是 <span class="arithmatex">\(A\)</span> 经过一系列初等行变换得到 <span class="arithmatex">\(E\)</span> 时，<span class="arithmatex">\(B\)</span> 经过同样的初等行变换得到 <span class="arithmatex">\(A^{-1}B\)</span></p>
 </details>
 <p><span class="arithmatex">\(\begin{pmatrix}A&amp;E\\E&amp;O\end{pmatrix}\xrightarrow{初等行,列变换}\begin{pmatrix}E&amp;C\\B&amp;O\end{pmatrix}\)</span>，则 <span class="arithmatex">\(A^{-1}=BC\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(CAB=E\)</span>，即 <span class="arithmatex">\(A=C^{-1}B^{-1}\)</span>，<span class="arithmatex">\(A^{-1}=BC\)</span>。</p>
+</details>
 </li>
 </ul>
 <h3 id="_5">矩阵的秩<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
