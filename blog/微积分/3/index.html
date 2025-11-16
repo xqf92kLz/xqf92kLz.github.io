@@ -1744,7 +1744,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-16T05:29:57.399422+00:00'>2025-11-16</time></span><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-16T05:29:57.399422+00:00'>2025-11-16</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-16T14:26:46.512512+00:00'>2025-11-16</time></span><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-16T14:26:46.512512+00:00'>2025-11-16</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2009,24 +2009,48 @@
 <p><span class="arithmatex">\(1^{\infty}=e^{\infty\cdot 0}\)</span></p>
 <p><span class="arithmatex">\(0^0=e^{0\cdot \infty}\)</span></p>
 <p><span class="arithmatex">\(\infty^0=e^{0\cdot \infty}\)</span></p>
-<details class="info">
-<summary>结合对无穷小量阶的估计</summary>
 <details class="example">
 <summary>例题</summary>
+<details class="example">
+<summary>结合无穷小量的等价替换</summary>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\arctan x-x}{\ln(1+x)\cdot \sqrt{1+2x^2}}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{\arctan x-x}{x\cdot \frac 1 2 2x^2}=-\dfrac 1 3\)</span></p>
+</details>
+</details>
+<details class="example">
+<summary>结合对无穷小量阶的估计</summary>
+<details class="tip" open="open">
+<summary>性质</summary>
+<p>若 <span class="arithmatex">\(x\to x_0\)</span> 时，<span class="arithmatex">\(f(x)\sim g(x)\)</span>，则 <span class="arithmatex">\(f(x)-g(x)\)</span> 是比 <span class="arithmatex">\(f(x)\)</span> 更高阶的无穷小量：<span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)-g(x)}{f(x)}=\lim\limits_{x\to x_0}(1-\dfrac{g(x)}{f(x)}))=1-1=0\)</span>。</p>
+<p>eg：当 <span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\(\tan x\sim x\)</span>，则 <span class="arithmatex">\(\tan x-x\)</span> 是比 <span class="arithmatex">\(x\)</span> 更高阶的无穷小量。而 <span class="arithmatex">\(\tan x\)</span> 与 <span class="arithmatex">\(x\)</span> 均为奇函数，则 <span class="arithmatex">\(\tan x-x\)</span> 的阶数至少为 <span class="arithmatex">\(3\)</span> 阶无穷小量。事实上，<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\tan x-x}{x^3}=\lim\limits_{x\to 0}\dfrac{\sec^2 x-1}{3x^2}=\dfrac 1 3 \lim\limits_{x\to 0}\dfrac{\tan^2 x}{x^2}=\dfrac 1 3\)</span>。所以，当 <span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\(\tan x-x\)</span> 为 <span class="arithmatex">\(3\)</span> 阶无穷小量。</p>
+<p>若函数 <span class="arithmatex">\(f(x),g(x)\)</span> 满足 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=\lim\limits_{x\to x_0}g(x)=0\)</span>，且 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内可导：</p>
+<ul>
+<li>若 <span class="arithmatex">\(f(x)=f_1(x)+f_2(x)\)</span>，而 <span class="arithmatex">\(f_1(x)\)</span> 是与 <span class="arithmatex">\(g(x)\)</span> 同阶的无穷小量，且 <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f_1(x)}{g(x)}=A\,(\neq 0)\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)}{g(x)}=A+\lim\limits_{x\to x_0}\dfrac{f_2(x)}{g(x)}\)</span>。</li>
+<li>若 <span class="arithmatex">\(f(x)=f_1(x)+f_2(x)\)</span>，而 <span class="arithmatex">\(f_1(x)\)</span> 是比 <span class="arithmatex">\(g(x)\)</span> 更高阶的无穷小量，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)}{g(x)}=0+\lim\limits_{x\to x_0}\dfrac{f_2(x)}{g(x)}=\lim\limits_{x\to x_0}\dfrac{f_2(x)}{g(x)}\)</span>。</li>
+</ul>
+</details>
 <p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\cot^2 x)\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
-<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\tan^2 x})=\lim\limits_{x\to 0}\dfrac{\tan^2 x-x^2}{x^4}\)</span>【若此处直接用洛必达法则，计算量会很大】<span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\tan x-x}{x^3}\cdot \dfrac{\tan x+x}x=2\lim\limits_{x\to 0}\dfrac{\sec^2 x-1}{3x^3}=\dfrac 2 3 \lim\limits_{x\to 0}\dfrac{\tan^2 x}{x^2}=\dfrac 2 3\)</span></p>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\tan^2 x})=\lim\limits_{x\to 0}\dfrac{\tan^2 x-x^2}{x^4}=\lim\limits_{x\to 0}\dfrac{(\tan x-x)(\tan x+x)}{x^4}=\lim\limits_{x\to 0}\dfrac{\tan x-x}{x^3}\cdot \dfrac{\tan x+x}x=2\lim\limits_{x\to 0}\dfrac{\sec^2 x-1}{3x^3}=\dfrac 2 3 \lim\limits_{x\to 0}\dfrac{\tan^2 x}{x^2}=\dfrac 2 3\)</span></p>
 </details>
 <p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}(\dfrac 1 {x^2}-\dfrac 1 {\arcsin^2 x})\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
-<p><span class="arithmatex">\(<span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{\arcsin x+x}x\cdot \dfrac{\arcsin x-x}{x^3}=2\lim\limits_{x\to 0}\dfrac{\frac 1 {\sqrt{1-x^2}}-1}{3x^2}=2\lim\limits_{x\to 0}\dfrac{-\frac 1 2 (-x^2)}{3x^2}\)</span>【无穷小等价替换】\)</span>=\dfrac 1 3$</p>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{(\arcsin x+x)(\arcsin x-x)}{x^2\arcsin^2 x}=\lim\limits_{x\to 0}\dfrac{\arcsin x+x}x\cdot \dfrac{\arcsin x-x}{x^3}=2\lim\limits_{x\to 0}\dfrac{\frac 1 {\sqrt{1-x^2}}-1}{3x^2}=2\lim\limits_{x\to 0}\dfrac{-\frac 1 2 (-x^2)}{3x^2}\)</span>【无穷小等价替换】<span class="arithmatex">\(=\dfrac 1 3\)</span></p>
 </details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\arctan x-x+x^4\cos\frac 1 x}{x^3}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>本题不能直接用洛必达法则，因为 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{x^4\cos\frac 1 x}{x^3}=\lim\limits_{x\to 0}\dfrac{4x^3\cos\frac 1 x+x^2\sin\frac 1 x}{3x^2}=\dfrac 1 3\lim\limits_{x\to 0}(4x\cos\frac 1 x+\sin\frac 1 x)\)</span> 不存在。</p>
+<p>当 <span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\(x^4\cos\frac 1 x\)</span> 是比 <span class="arithmatex">\(3\)</span> 阶高，而比 <span class="arithmatex">\(4\)</span> 阶低的无穷小量。</p>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{\arctan x-x}{x^3}+\lim\limits_{x\to 0}\dfrac{x^4\cos\frac 1 x}{x^3}=-\dfrac 1 3+\lim\limits_{x\to 0}(x\cos\frac 1 x)=-\dfrac 1 3\)</span></p>
 </details>
 </details>
 <details class="example">
-<summary>例题</summary>
+<summary>其他</summary>
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,+\infty)\)</span> 上可导，且 <span class="arithmatex">\(\lim\limits_{x\to +\infty}[f(x)+f'(x)]=a\in\mathbb R\)</span>，计算：<span class="arithmatex">\(\lim\limits_{x\to +\infty}f'(x)\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
@@ -2059,6 +2083,46 @@
 <p>（1）<span class="arithmatex">\(f'(0)=\lim\limits_{x\to 0}\dfrac{(1+x)^{\frac 1 x}-e}x=-\dfrac 1 2 e\)</span></p>
 <p>（2）当 <span class="arithmatex">\(x\neq 0\)</span> 时，<span class="arithmatex">\(f'(x)=(e^{\frac{\ln(1+x)}x})'=(1+x)^{\frac 1 x}\dfrac{\frac x {1+x}-\ln(1+x)}{x^2}\)</span>。<span class="arithmatex">\(\lim\limits_{x\to 0}f'(x)=e\lim\limits_{x\to 0}\dfrac{\frac x {1+x}-\ln(1+x)}{x^2}=e\lim\limits_{x\to 0}\dfrac{\frac 1 {(1+x)^2}-\frac 1 {1+x}}{2x}=-\dfrac 1 2 e\)</span>。因此，<span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续。</p>
 </details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处二阶可导，<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{f(x)}x=0\)</span>，<span class="arithmatex">\(f''(0)=4\)</span>，求 <span class="arithmatex">\(\lim\limits_{x\to 0}(1+\dfrac{f(x)}x)^{\frac 1 x}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}(1+\dfrac{f(x)}x)^{\frac{x}{f(x)}\cdot \frac{f(x)}{x^2}}=e^{\lim\limits_{x\to 0}\frac{f(x)}{x^2}}\)</span></p>
+<details class="failure" open="open">
+<summary>错解</summary>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{f(x)}{x^2}=\lim\limits_{x\to 0}\dfrac{f'(x)}{2x}=\lim\limits_{x\to 0}\dfrac{f''(x)}2=\dfrac 1 2f''(0)=2\)</span></p>
+<p>错因：</p>
+<p>① 题目仅告诉我们 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处二阶可导，没有说 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(0)\)</span> 二阶可导，所以 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{f'(x)}{2x}=\lim\limits_{x\to 0}\dfrac{f''(x)}2\)</span> 这步是错的。</p>
+<p>② <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处二阶可导，即 <span class="arithmatex">\(f''(0)\)</span> 存在，但 <span class="arithmatex">\(f''(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处不一定连续，所以 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{f''(x)}2=\dfrac 1 2f''(0)\)</span> 这步是错的。</p>
+</details>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处二阶可导，则 <span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(U(0)\)</span> 存在，<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{f(x)}{x^2}=\lim\limits_{x\to 0}\dfrac{f'(x)}{2x}\)</span>。</p>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处二阶可导，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处连续，则 <span class="arithmatex">\(f(0)=\lim\limits_{x\to 0}f(x)=\lim\limits_{x\to 0}\dfrac{f(x)}x\cdot x=0\)</span>，<span class="arithmatex">\(f'(0)=\lim\limits_{x\to 0}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\to 0}\dfrac{f(x)}x=0\)</span>，从而 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{f'(x)}{x}=\lim\limits_{x\to 0}\dfrac{f'(x)-f'(0)}x=f''(0)=4\)</span>。</p>
+<p>故 <span class="arithmatex">\(I=e^{\frac 4 2}=e^2\)</span>。</p>
+</details>
+<p>若 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sin 3x-xf(x)}{x^3}=0\)</span>，求 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{3-f(x)}{x^2}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li><strong>法 1：</strong><span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{3x-xf(x)}{x^3}=\lim\limits_{x\to 0}\dfrac{3x-\sin 3x}{x^3}+\lim\limits_{x\to 0}\dfrac{\sin 3x-xf(x)}{x^3}=\lim\limits_{x\to 0}\dfrac{3x-\sin 3x}{x^3}=\lim\limits_{x\to 0}\dfrac{3-3\cos 3x}{3x^2}=\lim\limits_{x\to 0}\dfrac{9\sin 3x}{6x}=\dfrac 9 2\)</span></li>
+<li><strong>法 2：</strong><span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sin 3x-xf(x)}{x^3}=\lim\limits_{x\to 0}\dfrac{3x-\frac{(3x)^3}{6}+o(x^3)-xf(x)}{x^3}=\lim\limits_{x\to 0}\dfrac{3-f(x)}{x^2}-\dfrac 9 2=0\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{3-f(x)}{x^2}=\dfrac 9 2\)</span>。</li>
+</ul>
+</details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\tan x-\tan (\sin x)}{x^3}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>根据拉格朗日中值定理，<span class="arithmatex">\(\exists \xi\in(\sin x,x)\)</span> 或 <span class="arithmatex">\((x,\sin x)\)</span> 使得 <span class="arithmatex">\(\tan x-\tan (\sin x)=\sec^2 \xi(x-\sin x)\)</span>。</p>
+<p><span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\(\xi\to 0\)</span></p>
+<p><span class="arithmatex">\(I=\lim\limits_{x\to 0}\dfrac{\sec^2 \xi(x-\sin x)}{x^3}=\lim\limits_{x\to 0}\dfrac{x-\sin x}{x^3}=\lim\limits_{x\to 0}\dfrac{1-\cos x}{3x^2}=\dfrac 1 6\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;=\lim\limits_{x\to 0}\dfrac{(\tan x-\sin x)+(\sin x-\tan(\sin x))}{x^3}\\&amp;=\lim\limits_{x\to 0}\dfrac{\tan x-\sin x}{x^3}+\lim\limits_{x\to 0}\dfrac{\sin x-\tan(\sin x)}{\sin^3 x}\\&amp;=\lim\limits_{x\to 0}\dfrac{\tan x(1-\cos x)}{x^3}+\lim\limits_{u\to 0}\dfrac{u-\tan u}{u^3}\\&amp;=\dfrac 1 2+\lim\limits_{u\to 0}\dfrac{1-\sec^2 u}{3u^2}\\&amp;=\dfrac 1 2-\dfrac 1 6\\&amp;=\dfrac 1 3\end{aligned}\)</span></p>
+</li>
+</ul>
+</details>
+</details>
 </details>
 </li>
 </ul>
@@ -2090,7 +2154,31 @@
 <p><span class="arithmatex">\(x\cot x=1-\dfrac 1 3 x^2-\dfrac 1 {45}x^4-\dfrac 2 {945}x^6+o(x^6)\)</span></p>
 <p><span class="arithmatex">\(\sec x=1+\dfrac 1 2 x^2+\dfrac 5 {24}x^4+\dfrac{61}{720}x^6+o(x^6)\)</span></p>
 <p><span class="arithmatex">\(x\csc x=1+\dfrac 1 6 x^2+\dfrac 7 {360}x^4+\dfrac{31}{15120}x^6+o(x^6)\)</span></p>
-<p><span class="arithmatex">\((1+x)^{\dfrac 1 x}=e-\dfrac e 2 x+\dfrac{11}{24}ex^2-\dfrac{7}{16}ex^3+o(x^3)\)</span></p>
+<p><span class="arithmatex">\((1+x)^{\frac 1 x}=e-\dfrac e 2 x+\dfrac{11}{24}ex^2-\dfrac{7}{16}ex^3+o(x^3)\)</span></p>
+</details>
+<details class="example">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\sin x^2+x\ln(1-x)}{x^3}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{(x^2-\dfrac{x^6}{3!}+o(x^6))+x(-x-\frac{x^2}2+o(x^2))}{x^3}=\lim\limits_{x\to 0}\dfrac{-\frac 1 2 x^3+o(x^3)}{x^3}=-\dfrac 1 2\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{e^{x^2}+2\cos x-3}{x^4}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{(1+x^2+\frac 1 2 x^4+o(x^4))+2(1-\frac {x^2}2+\frac{x^4}{4!}+o(x^4))-3}{x^4}=\lim\limits_{x\to 0}\dfrac{(\frac 1 2+\frac 1 {12})x^4+o(x^4)}{x^4}=\dfrac 7{12}\)</span></p>
+</details>
+<p>假设 <span class="arithmatex">\(x\to 0\)</span> 时 <span class="arithmatex">\(\sin^3 x-x^3\cos x\)</span> 与 <span class="arithmatex">\(Ax^{\alpha}\)</span> 为等价无穷小量，求 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(\alpha\)</span> 的值。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>当 <span class="arithmatex">\(x\to 0\)</span> 时，<span class="arithmatex">\(\sin^3 x\sim x^3\cos x\)</span>，而 <span class="arithmatex">\(\sin^3-x^3\cos x\)</span> 为奇函数，所以 <span class="arithmatex">\(\sin^3 x-x^3\cos x\)</span> 是比 <span class="arithmatex">\(x^3\)</span> 更高阶的无穷小量，且至少是 <span class="arithmatex">\(5\)</span> 阶无穷小量。</p>
+<p><span class="arithmatex">\(\sin^3 x=(x-\dfrac 1 6 x^3+o(x^3))^3\)</span> 的展开式中，不仅含有 <span class="arithmatex">\(x^5\)</span>，也含有 <span class="arithmatex">\(x^7\)</span>。为了避免 <span class="arithmatex">\(x^5\)</span> 项抵消而需要用到 <span class="arithmatex">\(x^7\)</span> 时 <span class="arithmatex">\(x^7\)</span> 项的系数正确，要将 <span class="arithmatex">\(\sin^3 x\)</span> 的展开式精确到 <span class="arithmatex">\((x-\dfrac 1 6 x^3+\dfrac 1 {120}x^5+o(x^5))^3\)</span>。</p>
+</details>
+<p><span class="arithmatex">\(\sin^3 x-x^3\cos x=(x-\dfrac{x^3}6+\dfrac{x^5}{120}+o(x^5))^3-x^3(1-\dfrac{x^2}2+\dfrac{x^4}{24}+o(x^4))=(x^3-\dfrac 1 2 x^5+(\dfrac 1 {40}+\dfrac 1 {12})x^7+o(x^7))-(x^3-\dfrac 1 2 x^5+\dfrac{1}{24}x^7+o(x^7))=\dfrac 1 {15}x^7+o(x^7)\)</span></p>
+<p>则 <span class="arithmatex">\(A=\dfrac 1 {15}\)</span>，<span class="arithmatex">\(\alpha=7\)</span>。</p>
+</details>
 </details>
 </li>
 <li>
@@ -2113,7 +2201,7 @@
 <p>故 <span class="arithmatex">\(R_n(x)=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span>。</p>
 </details>
 </details>
-<p>麦克劳林公式：<span class="arithmatex">\(x_0=0\)</span> 时，<span class="arithmatex">\(R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}=\frac{f^{(n+1)}(\theta x)}{(n+1)!}x^{n+1},0&lt;\theta&lt;1\)</span>。</p>
+<p>麦克劳林（Maclaurin）公式：<span class="arithmatex">\(x_0=0\)</span> 时，<span class="arithmatex">\(R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}=\frac{f^{(n+1)}(\theta x)}{(n+1)!}x^{n+1},0&lt;\theta&lt;1\)</span>。</p>
 <details class="info">
 <summary>常见函数的麦克劳林公式</summary>
 <p><span class="arithmatex">\(e^x=1+x+\dfrac{x^2}{2!}+\cdots+\dfrac{x^n}{n!}+\dfrac{e^{\theta x}}{(n+1)!}x^{n+1},0&lt;\theta&lt;1\)</span></p>
@@ -2122,9 +2210,137 @@
 <p><span class="arithmatex">\(\ln(1+x)=x-\dfrac{x^2}{2}+\dfrac{x^3}{3}-\dfrac{x^4}{4}+\cdots+(-1)^{n-1}\dfrac{x^n}{n}+(-1)^n \dfrac{x^{n+1}}{(n+1)(1+\theta x)^{n+1}},0&lt;\theta&lt;1\)</span></p>
 <p><span class="arithmatex">\((1+x)^{\alpha}=1+\alpha x+\dfrac{\alpha(\alpha-1)}{2!}x^2+\cdots+\dfrac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n+\dfrac{\alpha(\alpha-1)\cdots(\alpha-n)}{(n+1)!}(1+\theta x)^{\alpha-n-1}x^{n+1},0&lt;\theta&lt;1\)</span></p>
 </details>
+<details class="example">
+<summary>例题</summary>
+<p>证明：当 <span class="arithmatex">\(x&gt;0\)</span> 时，<span class="arithmatex">\(\forall n\in\mathbb N^*\)</span>，均有 <span class="arithmatex">\(x-\dfrac{x^2}2+\dfrac{x^3}3-\cdots-\dfrac{x^{2n}}{2n}&lt;\ln(1+x)&lt;x-\dfrac{x^2}2+\dfrac{x^3}3-\cdots+\dfrac{x^{2n-1}}{2n-1}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>由 <span class="arithmatex">\(\ln(1+x)\)</span> 的麦克劳林展开式，可得 <span class="arithmatex">\(R_n(x)=\ln(1+x)-(x-\dfrac{x^2}2+\dfrac{x^3}3+\cdots+(-1)^{n-1}\dfrac{x^n}n)=(-1)^n\dfrac{x^{n+1}}{(n+1)(1+\theta x)^{n+1}}\)</span>，<span class="arithmatex">\(\theta\in(0,1)\)</span>。</p>
+<p>当 <span class="arithmatex">\(n\)</span> 为偶数时，<span class="arithmatex">\(R_n(x)&gt;0\)</span>；当 <span class="arithmatex">\(n\)</span> 为奇数时，<span class="arithmatex">\(R_n(x)&lt;0\)</span>，故 <span class="arithmatex">\(x-\dfrac{x^2}2+\dfrac{x^3}3-\cdots-\dfrac{x^{2n}}{2n}&lt;\ln(1+x)&lt;x-\dfrac{x^2}2+\dfrac{x^3}3-\cdots+\dfrac{x^{2n-1}}{2n-1}\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=x_0\)</span> 处 <span class="arithmatex">\((n+1)\)</span> 阶可导，且 <span class="arithmatex">\(f^{(n+1)}(x_0)\neq 0\)</span>，<span class="arithmatex">\(f(x_0+h)=f(x_0)+f'(x_0)h+\dfrac{f''(x_0)}2h^2+\cdots+\dfrac{f^{(n-1)}(x_0)}{(n-1)!}h^{n-1}+\dfrac{f^{(n)}(x_0+\theta_nh)}{n!}h^n\)</span>，其中 <span class="arithmatex">\(0&lt;\theta_n&lt;1\)</span>。证明：<span class="arithmatex">\(\lim\limits_{h\to 0}\theta_n=\dfrac 1{n+1}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>对比：</p>
+<ul>
+<li><span class="arithmatex">\(n-1\)</span> 次泰勒展开的拉格朗日余项形式：<span class="arithmatex">\(f(x_0+h)=f(x_0)+f'(x_0)h+\dfrac{f''(x_0)}2h^2+\cdots+\dfrac{f^{(n-1)}(x_0)}{(n-1)!}h^{n-1}+\dfrac{f^{(n)}(x_0+\theta_nh)}{n!}h^n\)</span></li>
+<li><span class="arithmatex">\(n+1\)</span> 次泰勒展开的佩亚诺余项形式：<span class="arithmatex">\(f(x_0+h)=f(x_0)+f'(x_0)h+\dfrac{f''(x_0)}2h^2+\cdots+\dfrac{f^{(n-1)}(x_0)}{(n-1)!}h^{n-1}+\dfrac{f^{(n)}(x_0)}{n!}h^n+\dfrac{f^{(n+1)}(x_0)}{(n+1)!}h^{n+1}+o(h^{n+1})\)</span></li>
+</ul>
+<p><span class="arithmatex">\(\Rightarrow\dfrac{f^{(n)}(x_0+\theta_nh)}{n!}h^n=\dfrac{f^{(n)}(x_0)}{n!}h^n+\dfrac{f^{(n+1)}(x_0)}{(n+1)!}h^{n+1}+o(h^{n+1})\)</span></p>
+<p>即 <span class="arithmatex">\(\dfrac{f^{(n)}(x_0+\theta_nh)-f^{(n)}(x_0)}{h}=\dfrac{f^{(n+1)}(x_0)}{n+1}+o(1)\)</span></p>
+<p>则 <span class="arithmatex">\(\lim\limits_{h\to 0}\dfrac{f^{(n)}(x_0+\theta_nh)-f^{(n)}(x_0)}{h}=\lim\limits_{h\to 0}\dfrac{f^{(n)}(x_0+\theta_nh)-f^{(n)}(x_0)}{\theta_nh}\cdot \theta_n=f^{(n+1)}(x_0)\lim\limits_{h\to 0}\theta_n=\dfrac{f^{(n+1)}(x_0)} {n+1}\)</span></p>
+<p>又 <span class="arithmatex">\(f^{(n+1)}(x_0)\neq 0\)</span>，因此 <span class="arithmatex">\(\lim\limits_{h\to 0}\theta_n=\dfrac 1 {n+1}\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>复合函数的泰勒展开</p>
+<p><span class="arithmatex">\(f(g(x))\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处展开：将 <span class="arithmatex">\(u=g(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处的展开式，代入 <span class="arithmatex">\(f(u)\)</span> 在点 <span class="arithmatex">\(u_0=g(x_0)\)</span> 的展开式中。</p>
+<details class="example">
+<summary>例题</summary>
+<p>将 <span class="arithmatex">\((1+\dfrac 1 n)^n\)</span> 进行麦克劳林展开，精确到 <span class="arithmatex">\(o(\dfrac 1 {n^2})\)</span>，并计算：（1）<span class="arithmatex">\(\lim\limits_{n\to +\infty}n((1+\dfrac 1 n)^n-e)=a\)</span>；（2）<span class="arithmatex">\(\lim\limits_{n\to +\infty}n[n((1+\dfrac 1 n)^n-e)-a]\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\((1+\dfrac 1 n)^n=e^{n\ln(1+\frac 1 n)}=e^{n(\frac 1 n-\frac 1 {2n^2}+\frac 1 {3n^3}+o(\frac 1 {n^3}))}=e^{1-\frac 1 {2n}+\frac{1}{3n^2}+o(\frac 1 {n^2})}=e\cdot e^{-\frac 1 {2n}+\frac 1 {3n^2}+o(\frac 1 {n^2})}\)</span>【将“<span class="arithmatex">\(e^1\)</span>”转化成“<span class="arithmatex">\(e^0\)</span>”】<span class="arithmatex">\(=e[1+(-\dfrac 1 {2n}+\dfrac 1 {3n^2}+o(\dfrac 1 {n^2}))+\dfrac 1 2(-\dfrac 1 {2n}+\dfrac 1 {3n^2}+o(\dfrac 1 {n^2}))^2+o(\dfrac 1 {n^2})]=e[1-\dfrac 1 {2n}+(\dfrac 1 3+\dfrac 1 8)\dfrac 1 {n^2}+o(\dfrac 1 {n^2})]=e-\dfrac e 2\cdot \dfrac 1 n+\dfrac{11}{24}e\cdot \dfrac 1 {n^2}+o(\dfrac 1 {n^2})\)</span></p>
+<p>（1）<span class="arithmatex">\(a=\lim\limits_{n\to +\infty}n[-\dfrac e 2\cdot \dfrac 1 n+\dfrac{11}{24}e\cdot \dfrac 1 {n^2}+o(\dfrac 1 {n^2})]=-\dfrac e 2\)</span></p>
+<p>（2）<span class="arithmatex">\(I=\lim\limits_{n\to +\infty}n[-\dfrac e 2+\dfrac{11}{24}e\cdot \dfrac 1 n+o(\dfrac 1 n)-\dfrac e 2]=\dfrac{11}{24}e\)</span></p>
+</details>
+</details>
 </li>
 <li>
 <p>泰勒公式的应用</p>
+<details class="example">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上连续，在 <span class="arithmatex">\((0,1)\)</span> 内二阶可导，且 <span class="arithmatex">\(f(0)=f(1)=0\)</span>，<span class="arithmatex">\(\min\limits_{0\leq x\leq 1}\{f(x)\}=-1\)</span>。证明：<span class="arithmatex">\(\exists\xi\in(0,1)\)</span> 使得 <span class="arithmatex">\(f''(\xi)\geq 8\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>注意到题目没有给出 <span class="arithmatex">\(f'\)</span> 的相关信息。</p>
+<p>法 1：泰勒展开，为了展开时不出现 <span class="arithmatex">\(f'\)</span>，考虑在 <span class="arithmatex">\(f'(c)=0\)</span> 的点 <span class="arithmatex">\(c\)</span> 处展开。</p>
+<p>法 2：构造一个有多个零点的辅助函数，多次应用罗尔定理。注意到 <span class="arithmatex">\(f(0)=f(1)=0,f(c)=-1\)</span>，<span class="arithmatex">\(x(x-1)\)</span> 在 <span class="arithmatex">\(x=0,1\)</span> 处都为 <span class="arithmatex">\(0\)</span>，<span class="arithmatex">\(\dfrac{2}{c(1-c)}\geq 8\)</span>，构造 <span class="arithmatex">\(F(x)=f(x)-\dfrac 1 {c(1-c)}x(x-1)\)</span>，这样就有 <span class="arithmatex">\(F(0)=F(c)=F(1)\)</span> 且 <span class="arithmatex">\(F''(\xi)=f''(\xi)-\dfrac 2 {c(c-1)}=0\Rightarrow f''(\xi)\geq 8\)</span>。</p>
+<p>法 3：另辟蹊径。构造 <span class="arithmatex">\(p(x)=4x(x-1)\)</span>，则 <span class="arithmatex">\(p(0)=p(1)=0\)</span>，最小值 <span class="arithmatex">\(p(\dfrac 1 2)=-1\)</span>，<span class="arithmatex">\(p''(x)=8\)</span>。那么证明 <span class="arithmatex">\(\exists\xi\)</span> 使得 <span class="arithmatex">\(f''(\xi)\geq 8\)</span> 即证 <span class="arithmatex">\(\exists \xi\)</span> 使得 <span class="arithmatex">\([f(x)-p(x)]''\geq 0\)</span>。反证，令 <span class="arithmatex">\(F(x)=f(x)-p(x)\)</span>，假设 <span class="arithmatex">\(\forall x\in(0,1)\)</span> 均 <span class="arithmatex">\(F''(x)&lt;0\)</span>，则 <span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上是凸函数，则 <span class="arithmatex">\(\forall x\in(0,1)\)</span> 均 <span class="arithmatex">\(F(x)&gt;0\)</span>，则 <span class="arithmatex">\(f(x)&gt;p(x)\geq -1\)</span>，与 <span class="arithmatex">\(\min\limits_{0\leq x\leq 1}\{f(x)\}=-1\)</span> 矛盾。</p>
+<p>法 4：转化为证明 <span class="arithmatex">\(\exists \xi\)</span> 使得 <span class="arithmatex">\(f''(\xi)=8\)</span>，即 <span class="arithmatex">\(F''(\xi)=0\)</span>。发现 <span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\((0,1)\)</span> 有零点，所以用两次罗尔定理即证。</p>
+</details>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>不妨设 <span class="arithmatex">\(f(c)=\min\limits_{0\leq x\leq 1}\{f(x)\}=-1\)</span>。由于 <span class="arithmatex">\(f(0)=f(1)=0\)</span>，故 <span class="arithmatex">\(c\in(0,1)\)</span>。故 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=c\)</span> 处取极小值，根据费马定理，<span class="arithmatex">\(f'(c)=0\)</span>。</p>
+<p>将 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=c\)</span> 处泰勒展开，则对 <span class="arithmatex">\(\forall x\in[0,1]\)</span>，<span class="arithmatex">\(\exists \eta\in(0,1)\)</span> 使得 <span class="arithmatex">\(f(x)=f(c)+f'(c)(x-c)+\dfrac{f''(\eta)}2(x-c)^2=-1+\dfrac{f''(\eta)}2(x-c)^2\)</span>。</p>
+<p>代入 <span class="arithmatex">\(x=0\)</span>，得 <span class="arithmatex">\(f''(\eta_1)=\dfrac 2 {c^2}\)</span>；代入 <span class="arithmatex">\(x=1\)</span>，得 <span class="arithmatex">\(f''(\eta_2)=\dfrac 2 {(1-c)^2}\)</span>。</p>
+<p>若 <span class="arithmatex">\(0&lt;c\leq \dfrac 1 2\)</span>，<span class="arithmatex">\(f''(\eta)\geq 8\)</span>；若 <span class="arithmatex">\(\dfrac 1 2&lt;c&lt;1\)</span>，则 <span class="arithmatex">\(f''(\eta_2)&gt;8\)</span>。故 <span class="arithmatex">\(\exists \xi\in(0,1)\)</span> 使得 <span class="arithmatex">\(f''(\xi)\geq 8\)</span>。</p>
+<p>（或：<span class="arithmatex">\(f''(\eta_1)f''(\eta_2)=\dfrac{4}{(c(1-c))^2}\geq \dfrac 4 {(\frac 1 4)^2}=64\)</span>，故 <span class="arithmatex">\(\max\{f''(\eta_1),f''(\eta_2)\}\geq 8\)</span>）</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p>设 <span class="arithmatex">\(f(c)=\min\limits_{0\leq x\leq 1}\{f(x)\}=-1\)</span>。</p>
+<p>设 <span class="arithmatex">\(F(x)=f(x)-\dfrac 1 {c(1-c)}x(x-1)\)</span>，则 <span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上连续，在 <span class="arithmatex">\((0,1)\)</span> 内二阶可导，且 <span class="arithmatex">\(F(0)=F(c)=F(1)=0\)</span>。用两次罗尔定理，可得 <span class="arithmatex">\(\exists\xi\in(0,1)\)</span> 使得 <span class="arithmatex">\(F''(\xi)=0\)</span>，从而 <span class="arithmatex">\(F''(\xi)=\dfrac 2 {c(1-c)}\geq 8\)</span>。</p>
+</li>
+<li>
+<p><strong>法 3：</strong></p>
+<p>设 <span class="arithmatex">\(F(x)=f(x)-(4x^2-4x)\)</span>。则 <span class="arithmatex">\(F(0)=F(1)=0\)</span>，<span class="arithmatex">\(F''(x)=f''(x)-8\)</span>。</p>
+<p>假设 <span class="arithmatex">\(\forall x\in(0,1)\)</span> 均有 <span class="arithmatex">\(f''(x)&lt;8\)</span>，则 <span class="arithmatex">\(F''(x)=f''(x)-8&lt;0\)</span>，从而 <span class="arithmatex">\(F(x)\)</span> 是 <span class="arithmatex">\([0,1]\)</span> 上的凸函数。</p>
+<p>因此，对 <span class="arithmatex">\(\forall x\in(0,1)\)</span> 均有 <span class="arithmatex">\(F(x)=F((1-x)\cdot 0+x\cdot 1)&gt;(1-x)F(0)+xF(1)=0\)</span>。</p>
+<p>进而 <span class="arithmatex">\(f(x)&gt;4x^2-4x=(2x-1)^2-1\geq -1\)</span>，这与 <span class="arithmatex">\(\min\limits_{0\leq x\leq 1}\{f(x)\}=-1\)</span> 矛盾。</p>
+<p>因此 <span class="arithmatex">\(\exists \xi\in(0,1)\)</span> 使得 <span class="arithmatex">\(f''(\xi)\geq 8\)</span>。</p>
+</li>
+<li>
+<p><strong>法 4：</strong></p>
+<p>不妨设 <span class="arithmatex">\(f(x)=\min\limits_{0\leq x\leq 1}\{f(x)\}=-1\)</span>。</p>
+<p>设 <span class="arithmatex">\(F(x)=f(x)-(4x^2-4x)\)</span>。</p>
+<ol>
+<li>
+<p>若 <span class="arithmatex">\(f(\dfrac 1 2)=-1\)</span>，则 <span class="arithmatex">\(F(0)=F(\dfrac 1 2)=F(1)=0\)</span>，用两次罗尔定理，可得 <span class="arithmatex">\(\exists\xi\in(0,1)\)</span> 使得 <span class="arithmatex">\(F''(\xi)=0\)</span>，从而 <span class="arithmatex">\(f''(\xi)=8\)</span>。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(f(\dfrac 1 2)\neq -1\)</span>，则 <span class="arithmatex">\(f(\dfrac 1 2)&gt;-1\)</span>，<span class="arithmatex">\(c\neq \dfrac 1 2\)</span>。进而 <span class="arithmatex">\(F(\dfrac 1 2)=f(\dfrac 1 2)-(-1)&gt;0\)</span>，<span class="arithmatex">\(F(c)=-1-((2c-1)^2-1)=-(2c-1)^2&lt;0\)</span>。根据零点存在定理，<span class="arithmatex">\(\exists\)</span> 介于 <span class="arithmatex">\(\dfrac 1 2\)</span> 和 <span class="arithmatex">\(c\)</span> 之间的 <span class="arithmatex">\(x_0\)</span> 满足 <span class="arithmatex">\(F(x_0)=0\)</span>。又 <span class="arithmatex">\(F(0)=F(1)=0\)</span>，用两次罗尔定理，可得 <span class="arithmatex">\(\exists\xi\in(0,1)\)</span> 使得 <span class="arithmatex">\(F''(\xi)=0\)</span>，从而 <span class="arithmatex">\(f''(\xi)=8\)</span>。</p>
+</li>
+</ol>
+</li>
+</ul>
+</details>
+<details class="tip">
+<summary>中点展开，端点代入</summary>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有 <span class="arithmatex">\(3\)</span> 阶连续倒数，在 <span class="arithmatex">\(x_0=\dfrac{a+b}2\)</span> 处泰勒展开，则：对 <span class="arithmatex">\(\forall x\in[a,b]\)</span>，<span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f(x)=f(x_0)+f'(x_0)(x-x_0)+\dfrac{f''(x_0)}2(x-x_0)^2+\dfrac{f'''(x_0)}{6}(x-x_0)^3\)</span>。</p>
+<p>代入 <span class="arithmatex">\(x=a\)</span>，则 <span class="arithmatex">\(f(a)=f(x_0)+f'(x_0)(a-x_0)+\dfrac{f''(x_0)}2(a-x_0)^2+\dfrac{f'''(\xi_1))}6(a-x_0)^3\)</span></p>
+<p>代入 <span class="arithmatex">\(x=b\)</span>，则 <span class="arithmatex">\(f(b)=f(x_0)+f'(x_0)(b-x_0)+\dfrac{f''(x_0)}2(b-x_0)^2+\dfrac{f'''(\xi_2)}6(b-x_0)^3\)</span></p>
+<p>【若题目不给二阶导数信息】</p>
+<p>两式相减，有 <span class="arithmatex">\(f(b)-f(a)=(b-a)f'(x_0)+\dfrac{f'''(\xi_2)+f'''(\xi_1)}2\cdot\dfrac{(b-a)^3}{24}\)</span></p>
+<p><span class="arithmatex">\(\dfrac{f'''(\xi_2)+f'''(\xi_1)}2=\dfrac{24}{(b-a)^3}(f(b)-f(a))\)</span></p>
+<p>若 <span class="arithmatex">\(f'(x_0)=0\)</span>，则 <span class="arithmatex">\(\dfrac{f'''(\xi_2)+f'''(\xi_1)}2=\dfrac{24}{(b-a)^3}(f(b)-f(a))\)</span>。</p>
+<ul>
+<li>
+<p>根据导函数的介值性，<span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f'''(\xi)=\dfrac{24}{(b-a)^3}(f(b)-f(a))\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\exists\xi\in\{\xi_1,\xi_2\}\)</span> 使得 <span class="arithmatex">\(f'''(\xi)\geq \dfrac{24}{(b-a)^3}(f(b)-f(a))\)</span>。</p>
+</li>
+</ul>
+<p>【若题目不给一阶导数信息】</p>
+<p>两式相加，有 <span class="arithmatex">\(f(a)+f(b)=2f(x_0)+\dfrac{f''(x_0)}{4}(b-a)^2+\dfrac{f'''(\xi_2)-f'''(\xi_1)}2\cdot\dfrac{(b-a)^3}{24}\)</span></p>
+<p>若 <span class="arithmatex">\(f''(x_0)=0\)</span>，<span class="arithmatex">\(M=\max\limits_{a\leq x\leq b}\{|f'''(x)|\}\)</span>，则 <span class="arithmatex">\(M\geq |\dfrac{f'''(\xi_2)-f'''(\xi_1)}2|=\dfrac{24}{(b-a)^3}|f(b)+f(a)-2f(\dfrac{a+b}2)|\)</span>，即 <span class="arithmatex">\(|f(b)+f(a)-2f(\dfrac{a+b}2)|\leq \dfrac{(b-a)^3}{24}M\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内二阶可导。证明：<span class="arithmatex">\(\exists c\in(a,b)\)</span> 使得 <span class="arithmatex">\(f(a)-2f(\dfrac{a+b}2)+f(b)=\dfrac{(b-a)^2}4f''(c)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>在 <span class="arithmatex">\(x_0=\dfrac{a+b}2\)</span> 处泰勒展开，则对 <span class="arithmatex">\(\forall x\in[a,b]\)</span>，<span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f(x)=f(x_0)+f'(x_0)(x-x_0)+\dfrac{f''(\xi)}2(x-x_0)^2\)</span>。</p>
+<p>代入 <span class="arithmatex">\(x=a\)</span>：<span class="arithmatex">\(f(a)=f(x_0)+f'(x_0)(a-x_0)+\dfrac{f''(\xi_1)}2(a-x_0)^2\)</span>。</p>
+<p>代入 <span class="arithmatex">\(x=b\)</span>：<span class="arithmatex">\(f(b)=f(x_0)+f'(x_0)(b-x_0)+\dfrac{f''(\xi_2)}2(b-x_0)^2\)</span>。</p>
+<p>两式相加，<span class="arithmatex">\(f(a)-2f(\dfrac{a+b}2)+f(b)=\dfrac{(b-a)^2}4\cdot \dfrac{f''(\xi_1)+f''(\xi_2)}2\)</span>。</p>
+<p>根据达布定理，<span class="arithmatex">\(\exists c\in(a,b)\)</span> 使得 <span class="arithmatex">\(f''(c)=\dfrac{f''(\xi_1)+f''(\xi_2)}2\)</span>。因此 <span class="arithmatex">\(f(a)-2f(\dfrac{a+b}2)+f(b)=\dfrac{(b-a)^2}4f''(c)\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p>过点 <span class="arithmatex">\((a,f(a)),(x_0,f(x_0)),(b,f(b))\)</span> 的二次曲线为 <span class="arithmatex">\(g(x)=\dfrac{(x-x_0)(x-b)}{(a-x_0)(a-b)}f(a)+\dfrac{(x-a)(x-b)}{(x_0-a)(x_0-b)}f(x_0)+\dfrac{(x-a)(x-x_0)}{(b-a)(b-x_0)}f(b)\)</span>【拉格朗日插值】。</p>
+<p>设 <span class="arithmatex">\(F(x)=f(x)-g(x)\)</span>，则 <span class="arithmatex">\(F''(x)=f''(x)-\dfrac{4}{(b-a)^2}[f(a)-2f(x_0)+f(b)]\)</span>。</p>
+<p><span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内二阶可导，且 <span class="arithmatex">\(F(a)=F(x_0)=F(b)=0\)</span>。根据罗尔定理，<span class="arithmatex">\(\exists c\in(a,b)\)</span> 使得 <span class="arithmatex">\(F''(c)=0\)</span>，即 <span class="arithmatex">\(f(a)-2f(x_0)+f(b)=\dfrac{(b-a)^2}4f''(c)\)</span>。</p>
+</li>
+</ul>
+</details>
+</details>
 </li>
 </ul>
 <h2 id="_5">题目<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
@@ -2183,7 +2399,7 @@
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,+\infty)\)</span> 上可导，且 <span class="arithmatex">\(0\leq f(x)\leq \dfrac{x}{x^2+1}\)</span>，证明：<span class="arithmatex">\(\exists \xi,\eta\in(0,+\infty)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>，<span class="arithmatex">\(f'(\eta)=\dfrac{1-\eta^2}{(1+\eta^2)^2}\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
-<p>由夹逼定理可得 <span class="arithmatex">\(\lim\limits_{x\to +\infty}f(x)=0\)</span>，而 <span class="arithmatex">\(f(0)=0\)</span>。根据推广的 Rolle 定理，<span class="arithmatex">\(\exists\xi\in(0,+\infty)\)</span> 使 <span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
+<p>由夹逼定理可得 <span class="arithmatex">\(\lim\limits_{x\to +\infty}f(x)=0\)</span>，而 <span class="arithmatex">\(f(0)=0\)</span>。根据推广的罗尔定理，<span class="arithmatex">\(\exists\xi\in(0,+\infty)\)</span> 使 <span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
 <details class="abstract" open="open">
 <summary>Abstract</summary>
 <p><span class="arithmatex">\(\dfrac{1-x^2}{(1+x^2)^2}-f'(x)=0\Rightarrow [\dfrac x {x^2+1}-f(x)]'=0\)</span></p>
@@ -2205,7 +2421,7 @@
 <p>令 <span class="arithmatex">\(K=\dfrac{2f(x)}{(x-a)(x-b)}\)</span>，<span class="arithmatex">\(F(t)=f(t)-\dfrac K 2(t-a)(t-b)\)</span>，则 <span class="arithmatex">\(F(a)=F(x)=F(b)=0\)</span>。</p>
 <p>对 <span class="arithmatex">\(F(t)\)</span> 在区间 <span class="arithmatex">\([a,x],[x,b]\)</span> 上应用罗尔定理，可得 <span class="arithmatex">\(\exists x_1\in(a,x),x_2\in(x,b)\)</span> 使得 <span class="arithmatex">\(F'(x_1)=F'(x_2)=0\)</span>。</p>
 <p>再在区间 <span class="arithmatex">\([x_1,x_2]\)</span> 上应用罗尔定理，<span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(F''(\xi)=0\)</span>。</p>
-<p>而 <span class="arithmatex">\(F''(x)=f''(x)-K\)</span>，故 f''(\xi)=K$，即 <span class="arithmatex">\(2f(x)=f''(\xi)(x-a)(x-b)\)</span>。</p>
+<p>而 <span class="arithmatex">\(F''(x)=f''(x)-K\)</span>，故 <span class="arithmatex">\(f''(\xi)=K\)</span>，即 <span class="arithmatex">\(2f(x)=f''(\xi)(x-a)(x-b)\)</span>。</p>
 </details>
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上 <span class="arithmatex">\(3\)</span> 阶可导，且 <span class="arithmatex">\(f(a)=f'(a)=f(b)=0\)</span>。证明：对 <span class="arithmatex">\(\forall x\in(a,b)\)</span>，<span class="arithmatex">\(\exists \xi\in(a,b)\)</span>，使得 <span class="arithmatex">\(6f(x)=f'''(\xi)(x-a)^2 (x-b)\)</span>。</p>
 <details class="note">
