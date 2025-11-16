@@ -1954,7 +1954,7 @@
 
   <h1>期中复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-16T05:19:16.367120+00:00'>2025-11-16</time></span><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-16T05:19:16.367120+00:00'>2025-11-16</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-16T05:29:57.400422+00:00'>2025-11-16</time></span><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-16T05:29:57.400422+00:00'>2025-11-16</time></span></div></div>
 <h2 id="_1">易错点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <details class="warning" open="open">
 <summary>注意</summary>
@@ -2379,13 +2379,12 @@
 </li>
 <li>
 <p>P85.12：设 <span class="arithmatex">\(A\)</span> 是一个 <span class="arithmatex">\(n\)</span> 阶可逆矩阵，向量 <span class="arithmatex">\(\alpha,\beta\in\mathbb P^n\)</span>，证明：<span class="arithmatex">\(r(A+\alpha\beta^T)\geq n-1\)</span>。</p>
+<details class="note" open="open">
+<summary>解答</summary>
+<p>即证 <span class="arithmatex">\(r(A+\alpha\beta^T)+1\geq n\)</span>。</p>
+<p><span class="arithmatex">\(\begin{pmatrix}A+\alpha\beta^T&amp;O\\O&amp;1\end{pmatrix}\xrightarrow{R_1+\alpha R_2}\begin{pmatrix}A+\alpha\beta^T&amp;\alpha\\O&amp;1\end{pmatrix}\xrightarrow{C_1+C_2(-\beta^T)}\begin{pmatrix}A&amp;\alpha\\-\beta^T&amp;1\end{pmatrix}\xrightarrow{R_2+\beta^TA^{-1}R_1}\begin{pmatrix}A&amp;\alpha\\O&amp;1+\beta^TA^{-1}\alpha\end{pmatrix}\)</span></p>
+</details>
 </li>
-</ul>
-<p>???+ note "解答"
-    即证 <span class="arithmatex">\(r(A+\alpha\beta^T)+1\geq n\)</span>。</p>
-<div class="highlight"><pre><span></span><code>$\begin{pmatrix}A+\alpha\beta^T&amp;O\\O&amp;1\end{pmatrix}\xrightarrow{R_1+\alpha R_2}\begin{pmatrix}A+\alpha\beta^T&amp;\alpha\\O&amp;1\end{pmatrix}\xrightarrow{C_1+C_2(-\beta^T)}\begin{pmatrix}A&amp;\alpha\\-\beta^T&amp;1\end{pmatrix}\xrightarrow{R_2+\beta^TA^{-1}R_1}\begin{pmatrix}A&amp;\alpha\\O&amp;1+\beta^TA^{-1}\alpha\end{pmatrix}$
-</code></pre></div>
-<ul>
 <li>
 <p>P83.56（3）：注意 <span class="arithmatex">\(A^k=O\Rightarrow |A|^k=0\Rightarrow |A|=0\)</span>，又 <span class="arithmatex">\(A\in\mathbb P^{2\times 2}\)</span>，故 <span class="arithmatex">\(r(A)=1\)</span>，然后用秩一矩阵的幂的结论。</p>
 </li>
