@@ -1932,7 +1932,7 @@
 
   <h1>期中复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-15T15:36:42.603370+00:00'>2025-11-15</time></span><span data-tippy-content data-tippy-raw='2025-11-15'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-15T15:36:42.603370+00:00'>2025-11-15</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-16T03:47:11.853539+00:00'>2025-11-16</time></span><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-16T03:47:11.853539+00:00'>2025-11-16</time></span></div></div>
 <h2 id="_1">刷题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>《从 0 开始刷题》</p>
 <h3 id="_2">行列式展开<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -1944,9 +1944,7 @@
 </ul>
 <h3 id="_3">矩阵运算<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li>
-<p>特殊矩阵：</p>
-<ul>
+<li>特殊矩阵：<ul>
 <li>对称矩阵：<span class="arithmatex">\(A=A^T\)</span><ul>
 <li>能写成 <span class="arithmatex">\(A\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}A^T\)</span> 的形式</li>
 </ul>
@@ -1958,7 +1956,10 @@
 <li>能写成 <span class="arithmatex">\(P\begin{pmatrix}E_r&amp;O\\O&amp;O\end{pmatrix}P^{-1}\)</span> 的形式</li>
 </ul>
 </li>
-<li>对合矩阵：<span class="arithmatex">\(A^2=E\)</span>（<span class="arithmatex">\(A=A^{-1}\)</span>）</li>
+<li>对合矩阵：<span class="arithmatex">\(A^2=E\)</span>（<span class="arithmatex">\(A=A^{-1}\)</span>）<ul>
+<li><span class="arithmatex">\((A+E)(A-E)=O\)</span>，则 <span class="arithmatex">\(r(A+E)+r(A-E)\leq n\)</span>。又 <span class="arithmatex">\(r(A+E)+r(A-E)\geq r(2E)=n\)</span>，则 <span class="arithmatex">\(r(A+E)+r(A-E)=n\)</span></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -2174,15 +2175,13 @@
 <li>
 <p><strong>法 1：</strong></p>
 <p>由于 <span class="arithmatex">\(E-A-B\)</span> 可逆，有 <span class="arithmatex">\(r(E-A-B)=n\)</span>。<span class="arithmatex">\(r(E-A)+r(B)\geq r(E-A-B)\Rightarrow r(B)\geq n-r(E-A)\)</span>。</p>
-</li>
-</ul>
 <p><span class="arithmatex">\(A^2=A\Rightarrow A(E-A)=O\)</span>，则 <span class="arithmatex">\(r(A)+r(E-A)\leq n\)</span>，<span class="arithmatex">\(r(A)\leq n-r(E-A)\)</span>。</p>
 <p>则有 <span class="arithmatex">\(r(B)\geq n-r(E-A)\geq r(A)\)</span>。</p>
 <p>交换 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 的角色，同理可证 <span class="arithmatex">\(r(A)\geq r(B)\)</span>，因此 <span class="arithmatex">\(r(A)=r(B)\)</span>。</p>
-<ul>
+</li>
 <li>
 <p><strong>法 2：</strong></p>
-<p><span class="arithmatex">\(A(E-A-B)=A-A^2-A=-AB\)</span></p>
+<p><span class="arithmatex">\(A(E-A-B)=A-A^2-AB=-AB\)</span></p>
 <p>又 <span class="arithmatex">\(E-A-B\)</span> 可逆，则 <span class="arithmatex">\(r(A)=r(AB)\)</span></p>
 <p><span class="arithmatex">\(B(E-A-B)=B-AB-B^2=-AB\)</span>，则 <span class="arithmatex">\(r(B)=r(AB)\)</span></p>
 <p><span class="arithmatex">\(\Rightarrow r(A)=r(B)\)</span></p>
@@ -2203,7 +2202,7 @@
 <h3 id="_6">小结论<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>分块矩阵的行列式公式：</p>
+<p>行列式降价公式：</p>
 <p>若 <span class="arithmatex">\(A\)</span> 可逆，则 <span class="arithmatex">\(\begin{vmatrix}A&amp;B\\C&amp;D\end{vmatrix}=|A||D-CA^{-1}B|\)</span>。</p>
 <p>若 <span class="arithmatex">\(D\)</span> 可逆，则 <span class="arithmatex">\(\begin{vmatrix}A&amp;B\\C&amp;D\end{vmatrix}=|D||A-BD^{-1}C|\)</span>。</p>
 <p>若 <span class="arithmatex">\(A,D\)</span> 都可逆，则 <span class="arithmatex">\(|A||D-CA^{-1}B|=|D||A-BD^{-1}C|\)</span>。如果用 <span class="arithmatex">\(-B\)</span> 代替 <span class="arithmatex">\(B\)</span>，可得 <span class="arithmatex">\(|A||D+CA^{-1}B|=|D||A+BD^{-1}C|\)</span>。</p>
@@ -2217,15 +2216,16 @@
 <p>设 <span class="arithmatex">\(u,v\)</span> 是 <span class="arithmatex">\(n\)</span> 维列向量，则 <span class="arithmatex">\(|E_n+uv^T|=1+v^Tu\)</span>。</p>
 <details class="note" open="open">
 <summary>证明</summary>
-<p><span class="arithmatex">\(\begin{pmatrix}E_n+uv_T&amp;u\\O&amp;1\end{pmatrix}\xrightarrow{C_1-C_2v_T}\begin{pmatrix}E_n&amp;u\\-v_T&amp;1\end{pmatrix}\)</span></p>
-<p>前者的行列式为 <span class="arithmatex">\(|E_n+uv^T|\)</span>，后者的行列式为 <span class="arithmatex">\(|E_n||1+v^Tu|\)</span>（根据分块矩阵的行列式公式）</p>
+<p><span class="arithmatex">\(\begin{pmatrix}E_n&amp;u\\v^T&amp;-1\end{pmatrix}\)</span></p>
+<p>由行列式降价公式，<span class="arithmatex">\(-1-v^Tu=-|E_n+uv^T|\)</span>，得证。</p>
 </details>
 </li>
 <li>
 <p>矩阵行列式定理：设 <span class="arithmatex">\(A\)</span> 是 <span class="arithmatex">\(n\)</span> 阶可逆矩阵，<span class="arithmatex">\(u,v\)</span> 是 <span class="arithmatex">\(n\)</span> 维列向量，则 <span class="arithmatex">\(|A+uv^T|=|A||1+v^TA^{-1}u|\)</span>。</p>
 <details class="note" open="open">
 <summary>证明</summary>
-<p><span class="arithmatex">\(|A+uv^T|=|A(E+A^{-1}uv^T)|=|A||E+A^{-1}uv^T|=|A||1+v^TA^{-1}u|\)</span>【因为 <span class="arithmatex">\(|E+uv^T|=|1+v^Tu|\)</span>】</p>
+<p><span class="arithmatex">\(\begin{pmatrix}A&amp;u\\v^T&amp;-1\end{pmatrix}\)</span></p>
+<p>由行列式降价公式，<span class="arithmatex">\(|A||-1-v^TA^{-1}u|=-|A+uv^T|\)</span>，得证。</p>
 </details>
 </li>
 </ul>
