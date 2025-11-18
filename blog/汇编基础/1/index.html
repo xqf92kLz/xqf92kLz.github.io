@@ -1378,17 +1378,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CPU、内存和端口
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#int21h" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1426,6 +1415,39 @@
     <span class="md-ellipsis">
       
         函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPU、内存和端口
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数组
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        显卡内存
       
     </span>
   </a>
@@ -1681,17 +1703,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CPU、内存和端口
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#int21h" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1735,6 +1746,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPU、内存和端口
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数组
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        显卡内存
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1754,18 +1798,21 @@
 
   <h1>汇编入门</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-16T14:26:46.513512+00:00'>2025-11-16</time></span><span data-tippy-content data-tippy-raw='2025-11-16'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-16T14:26:46.513512+00:00'>2025-11-16</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-18T10:53:33.946635+00:00'>2025-11-18</time></span><span data-tippy-content data-tippy-raw='2025-11-18'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-18T10:53:33.946635+00:00'>2025-11-18</time></span></div></div>
 <p>模板：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">.386</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nl">main:</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">data</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nf">data</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span><span class="p">,</span><span class="no">ds</span><span class="p">:</span><span class="no">data</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nl">main:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
 </code></pre></div>
 <h3 id="_1">数据的表示与运算<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1998,46 +2045,6 @@
 </ul>
 </li>
 </ul>
-<h3 id="cpu">CPU、内存和端口<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>逻辑地址（段地址 : 偏移地址）</p>
-<ul>
-<li>
-<p>在 8086 中，可以采用逻辑地址间接访问物理地址。物理地址 = 段地址 × 16 + 偏移地址。其中，段地址存储在 16 位段寄存器（如 <code>cs</code>、<code>ds</code>）中，偏移地址为 16 位值。</p>
-<p>一个段可以表示的内存为 64KB，且段首地址的物理地址的 16 进制表示的个位必然是 0（段首地址 = 段地址 × 16）。</p>
-</li>
-<li>
-<p>引用变量：<code>段寄存器:[偏移地址]</code>（<code>段寄存器:[常数]</code>，<code>段寄存器:[寄存器]</code>，<code>段寄存器:[寄存器+常数]</code>）。段地址只能用段寄存器表示，不能用常数表示。</p>
-</li>
-</ul>
-</li>
-<li>
-<p>宽度修饰</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">宽度修饰词</th>
-<th style="text-align: center;">限定变量的宽度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code>byte ptr</code></td>
-<td style="text-align: center;">8 位</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>word ptr</code></td>
-<td style="text-align: center;">16 位</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>dword ptr</code></td>
-<td style="text-align: center;">32 位</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
 <h3 id="int21h">int21h 中断<a class="headerlink" href="#int21h" title="Permanent link">&para;</a></h3>
 <p><a href="https://blog.csdn.net/Zach_z/article/details/78576216">常见中断</a> <code>int 21h</code>：（<a href="https://www.uwouni.com/rbrown.htm">中断大全</a>）</p>
 <table>
@@ -2114,6 +2121,144 @@
 </details>
 <h3 id="_4">函数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>写在 <code>main</code> 前面，用 <code>call</code> 调用，用 <code>ret</code> 返回</p>
+<h3 id="cpu">CPU、内存和端口<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>逻辑地址（段地址 : 偏移地址）</p>
+<ul>
+<li>
+<p>在 8086 中，可以采用逻辑地址间接访问物理地址。物理地址 = 段地址 × 16 + 偏移地址。其中，段地址存储在 16 位段寄存器（如 <code>cs</code>、<code>ds</code>）中，偏移地址为 16 位值。</p>
+<p>一个段可以表示的内存为 64KB，且段首地址的物理地址的 16 进制表示的个位必然是 0（段首地址 = 段地址 × 16）。</p>
+</li>
+<li>
+<p>引用变量：<code>段寄存器:[偏移地址]</code>（<code>段寄存器:[常数]</code>，<code>段寄存器:[寄存器]</code>，<code>段寄存器:[寄存器+常数]</code>）。段地址只能用段寄存器表示，不能用常数表示。</p>
+</li>
+<li><code>seg s</code> 获取变量 s 所在段的段地址，<code>offset s</code> 获取 s 在段内的偏移地址。</li>
+</ul>
+</li>
+<li>
+<p>宽度修饰</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">宽度修饰词</th>
+<th style="text-align: center;">限定变量的宽度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>byte ptr</code></td>
+<td style="text-align: center;">8 位</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>word ptr</code></td>
+<td style="text-align: center;">16 位</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>dword ptr</code></td>
+<td style="text-align: center;">32 位</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="_5">数组<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>数组的定义</p>
+<ul>
+<li>
+<p>字节（byte）类型</p>
+<p>db（define byte），对应 C 语言的 char 类型（可表示有符号 / 无符号字符）。</p>
+<p><code>char a[100] = {'\0'};</code> → <code>a db 100 dup(0)</code>（dup：duplicate 重复。dup 可嵌套使用）</p>
+<p><code>char a[3] = {1, 2, 3};</code> → <code>a db 1, 2, 3</code></p>
+<p><code>char a[100];</code> → <code>a db 100 dup(?)</code>（编译时默认 0）</p>
+<p><code>char a[] = "Hello";</code> → <code>a db "Hello", 0</code>（需手动补 '\0'）</p>
+<p><code>char a[] = "Hello\0World";</code> → <code>a db "Hello", 0, "World", 0</code></p>
+<p><code>char a[] = "Hello\n";</code> → <code>a db "Hello", 0Dh, 0Ah, 0</code> 或 <code>a db "Hello", 13, 10, 0</code> 或 <code>a db "Hello", 15Q, 12Q, 0</code>（Q 表示八进制数）或 <code>a db "Hello", 00001101B, 00001010B, 0</code></p>
+</li>
+<li>
+<p>字（word）类型</p>
+<p>dw（define word），1 字 = 2 字节 = 16 位，对应 C 语言的 short int（可表示有符号 / 无符号短整型）。</p>
+<p><code>short int a[3]={0x1234, 0x5678, 0xABCD};</code> → <code>a dw 1234h, 5678h, 0ABCDh</code></p>
+</li>
+<li>
+<p>双字（double word）类型</p>
+<p>dd（define double word），1 双字 = 4 字节 = 32 位，对应 C 语言的 long int（可表示有符号 / 无符号长整型）。</p>
+<p><code>long int a[3] = {0x100, 0x200, 0x300};</code> → <code>a dd 100h, 200h, 300h</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>数组的引用</p>
+<ul>
+<li>
+<p>地址计算规则</p>
+<p>汇编中指针 q 的 q+i 表示：(unsigned int)q + i（偏移量直接加 i，不乘元素大小）。</p>
+<p><code>b dw 1234h, 5678h, 0ABCDh</code>，定义了 3 个字元素，每个元素占 2 字节。按小端序存储，每个元素的低字节在低地址、高字节在高地址。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">值</th>
+<th style="text-align: center;">12h</th>
+<th style="text-align: center;">34h</th>
+<th style="text-align: center;">56h</th>
+<th style="text-align: center;">78h</th>
+<th style="text-align: center;">0ABh</th>
+<th style="text-align: center;">0CDh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">地址</td>
+<td style="text-align: center;">b+1</td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">b+3</td>
+<td style="text-align: center;">b+2</td>
+<td style="text-align: center;">b+5</td>
+<td style="text-align: center;">b+4</td>
+</tr>
+</tbody>
+</table>
+<p><code>mov ax,b[2]</code>，b[2] 表示地址 b+2，又 ax 是 16 位寄存器，会访问 b+2（低字节），b+3（高字节），所以 ax 的值是 5678h。同理，<code>mov ax,b[1]</code>，ax 的值是 7812h。</p>
+</li>
+<li>
+<p>段寄存器设置</p>
+<p><code>assume cs:code, ds:data</code></p>
+<p><code>mov ax, data</code>，<code>mov ds, ax</code></p>
+</li>
+<li>
+<p>元素访问</p>
+<p>一条指令不能同时访问两个变量（如 <code>add c[0], c[1]</code> 非法，需先将 <code>c[1]</code> 存入寄存器）。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">显卡内存<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>文本模式下，显卡内存的段地址固定为 0B800h。</p>
+<p>每个字符占 2 字节：低地址字节存储字符的 ASCII 码，高地址字节存储字符的颜色属性。</p>
+<p>颜色属性字节（8 位）的高 4 位（背景色）和低 4 位（前景色）均采用 3 位 RGB 编码（红、绿、蓝）+ 1 位亮度位。如 17h，高 4 位 1h（0001B）→ 蓝色背景，低 4 位 7h（0111B，红 + 绿 + 蓝）→ 白色前景。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nl">main:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">B800h</span><span class="c1">; B800h是显卡内存的段地址</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">ds</span><span class="p">:[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span><span class="c1">; 待输出字符的ASCII码</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">ds</span><span class="p">:[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="mi">17</span><span class="no">h</span><span class="c1">; 待输出字符的颜色</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">                           </span><span class="c1">; 高4位是背景色, 低4位是前景色</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">                           </span><span class="c1">; 1=蓝色背景, 7=白色前景</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">                           </span><span class="c1">; 1=0001      7=0111</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">                           </span><span class="c1">;    RGB         RGB</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+</code></pre></div>
+</li>
+</ul>
 
 
 
