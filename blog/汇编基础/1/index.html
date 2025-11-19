@@ -1454,6 +1454,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#int16h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int16h 中断
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1779,6 +1790,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#int16h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int16h 中断
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1798,21 +1820,20 @@
 
   <h1>汇编入门</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-18T10:53:33.946635+00:00'>2025-11-18</time></span><span data-tippy-content data-tippy-raw='2025-11-18'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-18T10:53:33.946635+00:00'>2025-11-18</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-19'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-19T07:50:39.012028+00:00'>2025-11-19</time></span><span data-tippy-content data-tippy-raw='2025-11-19'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-19T07:50:39.012028+00:00'>2025-11-19</time></span></div></div>
 <p>模板：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">.386</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">data</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nf">data</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span><span class="p">,</span><span class="no">ds</span><span class="p">:</span><span class="no">data</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nl">main:</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">data</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span><span class="p">,</span><span class="no">ds</span><span class="p">:</span><span class="no">data</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nl">main:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
 </code></pre></div>
 <h3 id="_1">数据的表示与运算<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2133,7 +2154,7 @@
 <li>
 <p>引用变量：<code>段寄存器:[偏移地址]</code>（<code>段寄存器:[常数]</code>，<code>段寄存器:[寄存器]</code>，<code>段寄存器:[寄存器+常数]</code>）。段地址只能用段寄存器表示，不能用常数表示。</p>
 </li>
-<li><code>seg s</code> 获取变量 s 所在段的段地址，<code>offset s</code> 获取 s 在段内的偏移地址。</li>
+<li><code>seg s</code> 获取变量 s 所在段的段地址，<code>offset s</code> 获取 s 在段内的偏移地址。<code>bx</code>、<code>bp</code>、<code>si</code>、<code>di</code> 均可用作偏移地址。</li>
 </ul>
 </li>
 <li>
@@ -2168,8 +2189,7 @@
 <p>数组的定义</p>
 <ul>
 <li>
-<p>字节（byte）类型</p>
-<p>db（define byte），对应 C 语言的 char 类型（可表示有符号 / 无符号字符）。</p>
+<p>字节（byte）类型：db（8 位）</p>
 <p><code>char a[100] = {'\0'};</code> → <code>a db 100 dup(0)</code>（dup：duplicate 重复。dup 可嵌套使用）</p>
 <p><code>char a[3] = {1, 2, 3};</code> → <code>a db 1, 2, 3</code></p>
 <p><code>char a[100];</code> → <code>a db 100 dup(?)</code>（编译时默认 0）</p>
@@ -2178,13 +2198,11 @@
 <p><code>char a[] = "Hello\n";</code> → <code>a db "Hello", 0Dh, 0Ah, 0</code> 或 <code>a db "Hello", 13, 10, 0</code> 或 <code>a db "Hello", 15Q, 12Q, 0</code>（Q 表示八进制数）或 <code>a db "Hello", 00001101B, 00001010B, 0</code></p>
 </li>
 <li>
-<p>字（word）类型</p>
-<p>dw（define word），1 字 = 2 字节 = 16 位，对应 C 语言的 short int（可表示有符号 / 无符号短整型）。</p>
+<p>字（word）类型：dw（16 位）</p>
 <p><code>short int a[3]={0x1234, 0x5678, 0xABCD};</code> → <code>a dw 1234h, 5678h, 0ABCDh</code></p>
 </li>
 <li>
-<p>双字（double word）类型</p>
-<p>dd（define double word），1 双字 = 4 字节 = 32 位，对应 C 语言的 long int（可表示有符号 / 无符号长整型）。</p>
+<p>双字（double word）类型：dd（32 位）</p>
 <p><code>long int a[3] = {0x100, 0x200, 0x300};</code> → <code>a dd 100h, 200h, 300h</code></p>
 </li>
 </ul>
@@ -2237,9 +2255,9 @@
 <h2 id="_6">显卡内存<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>文本模式下，显卡内存的段地址固定为 0B800h。</p>
-<p>每个字符占 2 字节：低地址字节存储字符的 ASCII 码，高地址字节存储字符的颜色属性。</p>
-<p>颜色属性字节（8 位）的高 4 位（背景色）和低 4 位（前景色）均采用 3 位 RGB 编码（红、绿、蓝）+ 1 位亮度位。如 17h，高 4 位 1h（0001B）→ 蓝色背景，低 4 位 7h（0111B，红 + 绿 + 蓝）→ 白色前景。</p>
+<p>文本模式下，显卡内存的段地址固定为 0B800h，整个屏幕的显示内容都存储在该段内。</p>
+<p>每个字符占 2 字节：低地址字节存储字符的 ASCII 码（8 位），高地址字节存储字符的颜色属性（8 位，其中低 4 位为前景色，高 4 位为背景色。4 位表示 3 位 RGB 编码和 1 位亮度位）。</p>
+<p>25 行 × 80 列，屏幕上的每个位置对应的显存偏移地址计算公式为：偏移地址 = (行号 × 80 + 列号) × 2。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nl">main:</span>
@@ -2259,6 +2277,49 @@
 </code></pre></div>
 </li>
 </ul>
+<h2 id="int16h">int16h  中断<a class="headerlink" href="#int16h" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AH</th>
+<th style="text-align: left;">功能</th>
+<th style="text-align: left;">输入字符</th>
+<th style="text-align: left;">返回参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">00</td>
+<td style="text-align: left;">读取键盘输入</td>
+<td style="text-align: left;">可打印字符</td>
+<td style="text-align: left;">AL=按键的 ASCII 码、AH=按键扫描码</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">上方向键</td>
+<td style="text-align: left;">AL=00h、AH=48h</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">下方向键</td>
+<td style="text-align: left;">AL=00h、AH=50h</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">左方向键</td>
+<td style="text-align: left;">AL=00h、AH=4Bh</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">右方向键</td>
+<td style="text-align: left;">AL=00h、AH=4Dh</td>
+</tr>
+</tbody>
+</table>
 
 
 
