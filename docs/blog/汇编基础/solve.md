@@ -463,6 +463,368 @@
     ;==========请把以上代码保存到src\main.asm==============================
     ```
 
+??? note "6 输入一行字符串提取16进制字符"
+
+    ```asm
+    data segment
+    sth db 10h dup(0)
+    s db 100h dup('S')
+    t db 100h dup('T')
+    data ends
+    code segment
+    assume cs:code, ds:data
+    main:
+       mov ax, data
+       mov ds, ax
+       mov bx, 0
+    input_next:
+       mov ah, 1
+       int 21h; AL=getchar()
+       cmp al, 0Dh; 判断是否为回车键
+       je input_done
+       mov s[bx], al
+       add bx, 1                     
+       jmp input_next
+    input_done:
+       mov s[bx], 0
+    ;#1_begin------------------------
+        mov bx,0
+        mov si,0
+    do:
+        mov al,s[bx]
+        cmp al,0
+        je do_end
+        cmp al,'a'
+        jge lower
+            cmp al,'A'
+            jge upper
+            digit:
+                cmp al,'0'
+                jge ok1_digit
+                    jmp not_lower_end
+                ok1_digit:
+                cmp al,'9'
+                jle ok2_digit
+                    jmp not_lower_end
+                ok2_digit:
+                    mov t[si],al
+                    add si,1
+                jmp not_lower_end
+            upper:
+                cmp al,'F'
+                jle ok_upper
+                    jmp upper_end
+                ok_upper:
+                    mov t[si],al
+                    add si,1
+                upper_end:
+            not_lower_end:
+            jmp check_end
+        lower:
+            cmp al,'f'
+            jle ok_lower
+                jmp lower_end
+            ok_lower:
+                sub al,32
+                mov t[si],al
+                add si,1
+            lower_end:
+        check_end:
+        add bx,1
+        jmp do
+    do_end:
+        mov t[si],0;<--第1空, 请把解答写在分号左边, 可填多条指令
+    ;#1_end==========================
+    exit:
+       mov ah, 4Ch
+       int 21h
+    code ends
+    end main
+    ```
+
+??? note "7 写显卡内存输出ASCII字符及其16进制ASCII码"
+    ```asm
+    ;本题要求:
+    ;以下程序的功能是从键盘输入一个十六进制数，
+    ;该十六进制数一共2位，其中十位保存到buf[0]
+    ;中，个位保存到buf[1]中，无论十位还是个位
+    ;只要输入的是字母则一定是大写形式。接下去
+    ;按以下步骤从屏幕第0行起输出16行内容，每行
+    ;都输出字符c+i(i为屏幕行号)及其16进制ASCII码:
+    ;(1)把buf[0]及buf[1]中的十六进制字符脱去引号
+    ;(2)计算buf[0]<<4 | buf[1]的值并保存到变量c中
+    ;(3)i=0
+    ;(4)在(0,i)处显示字符c, 颜色为7Ch
+    ;(5)在(1,i)处显示字符c的2位十六进制ASCII码, 颜色为1Ah
+    ;(6)c++
+    ;(7)i++
+    ;(8)if(i<16) goto (4)
+    ;(9)结束程序运行
+
+    .386
+    data segment use16
+    buf db 0, 0
+    c   db 0
+    hex db 0, 0
+    data ends
+    
+    code segment use16
+    assume cs:code, ds:data
+    main:
+       mov ax, data
+       mov ds, ax
+       mov ax, 0B800h
+       mov es, ax
+       mov di, 0
+       ;
+       mov ah, 1
+       int 21h
+       mov buf[0], al
+       mov ah, 1
+       int 21h
+       mov buf[1], al
+    ;请在#1_begin和#1_end之间补充代码实现以下功能:
+    ;(1)把buf[0]及buf[1]中的十六进制字符脱去引号
+    ;(2)计算buf[0]<<4 | buf[1]的值并保存到变量c中
+    ;(3)i=0
+    ;(4)在(0,i)处显示字符c, 颜色为7Ch
+    ;(5)在(1,i)处显示字符c的2位十六进制ASCII码, 颜色为1Ah
+    ;(6)c++
+    ;(7)i++
+    ;(8)if(i<16) goto (4)
+    ;(9)结束程序运行
+    ;#1_begin-------------------------------------
+    
+        mov al,buf[0]
+        call remove_quotation_mark
+        mov buf[0],al
+    
+        mov al,buf[1]
+        call remove_quotation_mark
+        mov buf[1],al
+    
+        mov al,buf[0]
+        shl al,4
+        or al,buf[1]
+        mov c,al
+    
+        mov bx,0
+    do:
+        cmp bx,16
+        jge done
+    
+        mov al,c
+        mov es:[di],al
+        mov byte ptr es:[di+1],7Ch
+    
+        mov hex[0],al
+        shr hex[0],4
+    
+        mov hex[1],al
+        and hex[1],0Fh
+    
+        mov al,hex[0]
+        call add_quotation_mark
+        mov hex[0],al
+        mov es:[di+2],al
+    
+        mov al,hex[1]
+        call add_quotation_mark
+        mov hex[1],al
+        mov es:[di+4],al
+
+
+        mov byte ptr es:[di+3],1Ah
+        mov byte ptr es:[di+5],1Ah
+    
+        add di,160
+        add bx,1
+        add c,1
+        jmp do
+    
+    remove_quotation_mark:
+        cmp al,'0'
+        jge geq_0
+            sub al,'A'
+            add al,10
+            jmp done1
+        geq_0:
+            cmp al,'9'
+            jle leq_9
+                sub al,'A'
+                add al,10
+                jmp done2
+            leq_9:
+                sub al,'0'
+            done2:
+        done1:
+        ret
+    
+    add_quotation_mark:
+        cmp al,0
+        jge geq_0_
+            add al,'A'
+            sub al,10
+            jmp done3
+        geq_0_:
+            cmp al,9
+            jle leq_9_
+                add al,'A'
+                sub al,10
+                jmp done4
+            leq_9_:
+                add al,'0'
+            done4:
+        done3:
+        ret
+    
+    done:
+    ;#1_end=======================================
+       mov ah, 4Ch
+       int 21h
+    code ends
+    end main
+    ```
+
+??? note "10 输入一个十六进制字符串,转化成整数,统计该整数二进制位值=1的位数"
+
+    ```asm
+    ;本题要求:
+    comment %
+    以下程序的功能是从键盘输入一个大写十六进制字符串并保存到数组buf中，
+    该字符串的长度≤4，再把buf中的十六进制串转化成整数并保存到变量abc中，
+    最后以十进制格式输出abc的二进制位值=1的位数。
+    %
+    ;==========请把以下代码保存到src\main.asm==============================
+    ;==========选中main.sh及src文件夹->右键->压缩成submit.zip提交==========
+    .386
+    data segment use16
+    buf db 10 dup(0) ; buf用来存放输入的十六进制字符
+    abc dw 0         ; abc用来存放由buf中的十六进制字符串转化得来的整数值
+    data ends
+    
+    code segment use16
+    assume cs:code, ds:data
+    main:
+       mov ax, data
+       mov ds, ax
+       mov cx, 4      ; 最多输入4个十六进制字符
+       mov si, 0      ; si是buf的下标
+    input_next:   
+       mov ah, 1
+       int 21h        ; AL=getchar()
+       cmp al, 0Dh    ; 若AL==回车符
+       je input_done  ;    =>input_done
+       mov buf[si], al; buf[si] = AL
+       add si, 1      ; si++
+       sub cx, 1
+       jnz input_next
+    input_done: 
+       mov buf[si], 0 ; buf[si] = '\0'
+       mov ah, 2
+       mov dl, 0Dh
+       int 21h        ; 输出回车符
+       mov ah, 2
+       mov dl, 0Ah
+       int 21h        ; 输出换行符
+       ;   
+    ;请在#1_begin和#1_end之间补充代码实现以下功能:
+    ;把buf中的十六进制串转化成整数并保存到变量abc中，
+    ;再以十进制格式输出abc的二进制位值=1的位数
+    ;#1_begin-------------------------------------
+        mov si,0
+        mov bx,0
+        mov ax,0
+    do:
+        cmp buf[si],0
+        je done
+    
+        mov al,buf[si]
+    
+        cmp buf[si],'9'
+        jle digit
+            sub al,'A'
+            add al,10
+            jmp done0
+        digit:
+            sub al,'0'
+        done0:
+    
+        shl abc,4
+        or abc,ax
+    
+        add si,1
+        jmp do
+    done:
+        mov ax,0
+    do2:
+        cmp abc,0
+        je done2
+    
+        mov bx,abc
+        and bx,1
+        cmp bx,1
+        je count1
+            jmp done3
+        count1:
+            add ax,1
+        done3:
+    
+        shr abc,1
+        jmp do2
+    done2:
+    
+    cmp ax,0
+    je print0
+    
+        mov bx,0
+        mov dx,0
+        mov cl,10
+    do3:
+        cmp ax,0
+        je done4
+    
+        div cl
+    
+        mov dl,ah
+        push dx
+        mov ah,0
+    
+        add bx,1
+        jmp do3
+    done4:
+    
+    print:
+        cmp bx,0
+        je exit
+    
+        mov ah,2
+        pop dx
+        add dx,'0'
+        int 21h
+    
+        sub bx,1
+        jmp print
+    
+    print0:
+        mov ah,2
+        mov dl,'0'
+        int 21h
+    ;#1_end========================================
+    exit:
+       mov ah, 2
+       mov dl, 0Dh
+       int 21h
+       mov ah, 2
+       mov dl, 0Ah
+       int 21h
+       mov ah, 4Ch
+       int 21h
+    code ends
+    end main
+    ;==========请把以上代码保存到src\main.asm==============================
+    ```
+
 ## 作业
 
 ??? note "第一次作业 10.1"
@@ -833,7 +1195,7 @@
         sth db 10h dup(0)
         s db "abc123", 0; 此数组的内容在judge时会发生变化
         data ends
-
+    
         code segment
         assume cs:code, ds:data
         main:
@@ -854,11 +1216,11 @@
             mov al,ds:[si]
             cmp al,0
             je done2
-
+    
             pop dx
             mov ah,2
             int 21h
-
+    
             add si,1
             jmp do2
         done2:                              ;<--第1空, 请把解答写在分号左边, 可填多条指令
@@ -870,9 +1232,9 @@
         code ends
         end main
         ```
-
-	??? note "2 输入一行字符串提取16进制字符"
-
+    
+    ??? note "2 输入一行字符串提取16进制字符"
+    
         ```asm
         data segment
         sth db 10h dup(0)
