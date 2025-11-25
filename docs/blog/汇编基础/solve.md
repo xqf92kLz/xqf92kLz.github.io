@@ -393,75 +393,6 @@
     ;==========请把以上代码保存到src\main.asm==============================
     ```
 
-??? note "13 输出九九乘法表"
-
-    ```asm
-    ;本题要求:
-    comment %
-    以下程序的功能是输出九九乘法表
-    %
-    ;==========请把以下代码保存到src\main.asm==============================
-    ;==========选中main.sh及src文件夹->右键->压缩成submit.zip提交==========
-    data segment
-    s  db "1*1= 1  ", '$'  ; s[0]=被乘数+'0', s[2]=乘数+'0'，s[4]=乘积的十位+'0' 
-                           ; （若乘积为个位数则s[4]=' '），s[5]=乘积的个位+'0'
-                           ; 一个乘法算式总共包含8个字符，故文本模式下每行（80列）
-                           ; 足够输出9个算式
-    cr db 0Dh, 0Ah, '$'    ; 定义一个由回车及换行构成的字符串
-    data ends
-    
-    code segment
-    assume cs:code, ds:data
-    main:
-       mov ax, data
-       mov ds, ax
-    ;请在#1_begin和#1_end之间补充代码输出九九乘法表
-    ;#1_begin-------------------------------------
-    outer:
-        mov al,s[0]
-        mov s[2],al
-        inner:
-            mov al,s[0]
-            sub al,'0'
-            mov bl,s[2]
-            sub bl,'0'
-            mul bl
-            mov dl,10
-            div dl
-            cmp al,0
-            je equal0
-                mov s[4],al
-                add s[4],'0'
-                jmp done
-            equal0:
-                mov s[4],' '
-            done:
-            mov s[5],ah
-            add s[5],'0'
-    
-            mov ah,9
-            mov dx,offset s
-            int 21h
-    
-            add s[2],1
-            cmp s[2],'9'
-            jbe inner
-    
-        mov ah,9
-        mov dx,offset cr
-        int 21h
-    
-        add s[0],1
-        cmp s[0],'9'
-        jbe outer
-    ;#1_end========================================
-    exit:                
-       mov ah, 4Ch
-       int 21h             ; 结束程序运行
-    code ends
-    end main
-    ;==========请把以上代码保存到src\main.asm==============================
-    ```
 
 ??? note "6 输入一行字符串提取16进制字符"
 
@@ -818,6 +749,140 @@
        mov ah, 2
        mov dl, 0Ah
        int 21h
+       mov ah, 4Ch
+       int 21h
+    code ends
+    end main
+    ;==========请把以上代码保存到src\main.asm==============================
+    ```
+
+??? note "13 输出九九乘法表"
+
+    ```asm
+    ;本题要求:
+    comment %
+    以下程序的功能是输出九九乘法表
+    %
+    ;==========请把以下代码保存到src\main.asm==============================
+    ;==========选中main.sh及src文件夹->右键->压缩成submit.zip提交==========
+    data segment
+    s  db "1*1= 1  ", '$'  ; s[0]=被乘数+'0', s[2]=乘数+'0'，s[4]=乘积的十位+'0' 
+                           ; （若乘积为个位数则s[4]=' '），s[5]=乘积的个位+'0'
+                           ; 一个乘法算式总共包含8个字符，故文本模式下每行（80列）
+                           ; 足够输出9个算式
+    cr db 0Dh, 0Ah, '$'    ; 定义一个由回车及换行构成的字符串
+    data ends
+    
+    code segment
+    assume cs:code, ds:data
+    main:
+       mov ax, data
+       mov ds, ax
+    ;请在#1_begin和#1_end之间补充代码输出九九乘法表
+    ;#1_begin-------------------------------------
+    outer:
+        mov al,s[0]
+        mov s[2],al
+        inner:
+            mov al,s[0]
+            sub al,'0'
+            mov bl,s[2]
+            sub bl,'0'
+            mul bl
+            mov dl,10
+            div dl
+            cmp al,0
+            je equal0
+                mov s[4],al
+                add s[4],'0'
+                jmp done
+            equal0:
+                mov s[4],' '
+            done:
+            mov s[5],ah
+            add s[5],'0'
+    
+            mov ah,9
+            mov dx,offset s
+            int 21h
+    
+            add s[2],1
+            cmp s[2],'9'
+            jbe inner
+    
+        mov ah,9
+        mov dx,offset cr
+        int 21h
+    
+        add s[0],1
+        cmp s[0],'9'
+        jbe outer
+    ;#1_end========================================
+    exit:                
+       mov ah, 4Ch
+       int 21h             ; 结束程序运行
+    code ends
+    end main
+    ;==========请把以上代码保存到src\main.asm==============================
+    ```
+
+??? note "14 把二进制字符串转化成整数"
+
+    ```asm
+    ;本题要求:
+    comment %
+    以下程序的功能是从键盘输入一个长度不超过16个字符的二进制字符串，
+    再把该字符串转化成整数并保存到变量abc中
+    %
+    ;==========请把以下代码保存到src\main.asm==============================
+    ;==========选中main.sh及src文件夹->右键->压缩成submit.zip提交==========
+    .386
+    data segment use16
+    buf db 17 dup(0) ; buf用来存放输入的二进制字符串
+    abc dw 0         ; abc用来存放由buf中的二进制字符串转化得来的整数值
+    data ends
+
+    code segment use16
+    assume cs:code, ds:data
+    main:
+       mov ax, data
+       mov ds, ax
+       mov cx, 16     ; 最多输入16个二进制字符
+       mov si, 0      ; si是buf的下标
+    input_next:   
+       mov ah, 1
+       int 21h        ; AL=getchar()
+       cmp al, 0Dh    ; 若AL==回车符
+       je input_done  ;    =>input_done
+       mov buf[si], al; buf[si] = AL
+       add si, 1      ; si++
+       sub cx, 1
+       jnz input_next
+    input_done: 
+       mov buf[si], 0 ; buf[si] = '\0'
+       mov ah, 2
+       mov dl, 0Dh
+       int 21h        ; 输出回车符
+       mov ah, 2
+       mov dl, 0Ah
+       int 21h        ; 输出换行符
+       ;   
+    ;请在#1_begin和#1_end之间补充代码实现以下功能:
+    ;把buf中的二进制串转化成整数并保存到变量abc中
+    ;#1_begin-------------------------------------
+        mov si,0
+        mov ax,0
+    do:
+        mov al,buf[si]
+        cmp al,0
+        je exit
+        shl abc,1
+        add abc,ax
+        sub abc,'0'
+        add si,1
+        jmp do
+    ;#1_end========================================
+    exit:
        mov ah, 4Ch
        int 21h
     code ends
