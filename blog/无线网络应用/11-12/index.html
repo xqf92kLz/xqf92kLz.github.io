@@ -14,6 +14,8 @@
         <link rel="prev" href="../4/">
       
       
+        <link rel="next" href="../00/">
+      
       
         
       
@@ -1670,6 +1672,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    无线技术
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AE%9E%E9%AA%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1712,7 +1770,7 @@
 
   <h1>模块 11-12：IPv4 和 IPv6</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-26'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-26T09:20:07.257489+00:00'>2025-11-26</time></span><span data-tippy-content data-tippy-raw='2025-11-26'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-26T09:20:07.257489+00:00'>2025-11-26</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-26'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-26T12:04:05.574539+00:00'>2025-11-26</time></span><span data-tippy-content data-tippy-raw='2025-11-26'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-26T12:04:05.574539+00:00'>2025-11-26</time></span></div></div>
 <p>第三次课</p>
 <ul>
 <li>
@@ -1892,7 +1950,13 @@
 </ul>
 </li>
 <li>比喻：类似公司前台，通过“总机号码（公有地址）”转接“内部分机号（私有地址）”。</li>
-<li>路由器接口要求：LAN 口（内网）与 WAN 口（外网）IP 必须属于不同网络。</li>
+<li>路由器接口要求：<ul>
+<li>常规情况：路由器 WAN 口（外网口）分配 ISP 提供的公有地址，LAN 口（内网口）分配私有地址，二者必须属于不同网络（网络部分不同）。</li>
+<li>特殊情况（如家用无线路由器）：WAN 口也可能是私有地址，但仍需与 LAN 口的私有地址分属不同网络。</li>
+</ul>
+</li>
+<li>实际实例：浙江大学内网使用 10.* 类 A 私有地址，校内设备通信无需转换；当需访问外网时，通过 NAT 将 10.* 地址转为浙大公有地址（210.32.*.*、222.205.*.* 等），再接入 Internet。</li>
+<li>额外优势：私有地址仅在本地网络可见，外部无法直接 Ping 通或访问，间接提升了内网安全性。</li>
 </ul>
 </li>
 <li>特殊 IPv4 地址<ul>
@@ -1909,15 +1973,19 @@
 </li>
 <li>（2）广播地址<ul>
 <li>用途：一对所有通信，本地网络（广播域）所有主机接收数据包。</li>
-<li>IP 格式：主机部分全 1（如 C 类 192.168.1.0 的广播地址为 192.168.1.255）。</li>
-<li>MAC 格式：FF-FF-FF-FF-FF-FF（48 位全 1）。</li>
-<li>应用：ARP、DHCP 等协议依赖广播。</li>
+<li>
+<p>分类与格式：</p>
+<ul>
+<li>定向广播地址：IP 地址主机部分全 1（如 C 类 192.168.1.0 网络的广播地址为 192.168.1.255，B 类 172.16.0.0 网络的广播地址为 172.16.255.255）。</li>
+<li>受限广播地址：255.255.255.255，仅在本地子网内广播，不被路由器转发
+            - MAC 格式：FF-FF-FF-FF-FF-FF（48 位全 1）。
+            - 应用：ARP、DHCP 等协议依赖广播。
+        - （3）组播地址
+            - 用途：一对多通信（如远程游戏、视频会议）。
+            - IP 范围：224.0.0.0-239.255.255.255（D 类地址），仅作为目的地址，源地址为单播。
+            - MAC 格式：以 01-00-5E 开头，后缀 6 个十六进制字符换算自组播 IP 的低 23 位（如组播 IP 224.15.100.197，二进制为 11100000.00001111.01100100.11000101，提取低 23 位 0001111.01100100.11000101，换算为十六进制是 0F-64-C5，最终组播 MAC 为 01-00-5E-0F-64-C5）。</li>
 </ul>
 </li>
-<li>（3）组播地址<ul>
-<li>用途：一对多通信（如远程游戏、视频会议）。</li>
-<li>IP 范围：224.0.0.0-239.255.255.255（D 类地址），仅作为目的地址，源地址为单播。</li>
-<li>MAC 格式：以 01-00-5E 开头，后 23 位取自组播 IP 的低 23 位。</li>
 </ul>
 </li>
 </ul>
@@ -1933,14 +2001,14 @@
 </ul>
 </li>
 <li>IPv6 地址结构与表示方法<ul>
-<li>本质：128 位二进制数，分为 8 组 16 位二进制数，每组用十六进制表示（不区分大小写）。</li>
-<li>格式：x:x:x:x:x:x:x:x（如 2031:0000:130F:0000:0000:09C0:876A:130B）。</li>
+<li>本质：128 位二进制数，按 16 位为一组划分，共 8 组，每组转换为十六进制表示（字符 A-F 不区分大小写）。</li>
+<li>标准格式：x:x:x:x:x:x:x:x（每组为 16 位十六进制数），示例：2031:0000:130F:0000:0000:09C0:876A:130B。</li>
 <li>简化规则：<ul>
-<li>组内前导零可省略（如 09C0→9C0）。</li>
-<li>连续零组可缩写为“::”，每个地址仅用一次（如 0:0:0:0:0:0:0:1→::1）。</li>
+<li>组内前导零可省略：如 09C0→9C0、0029→29、0000→0。</li>
+<li>连续零组缩写为 “::”：仅能使用一次（避免歧义），例：0:0:0:0:0:0:0:1→::1（对应 IPv4 的 127.0.0.1）；2031:0000:130F:0000:0000:09C0:876A:130B→2031:0:130F::9C0:876A:130B（错误示例：不可写成 2031::130F::9C0:876A:130B）。</li>
 </ul>
 </li>
-<li>前缀长度：类似 IPv4 子网掩码，用“/前缀长度”表示（范围 0-128，典型为/64），前半部分为前缀（网络部分），后半部分为接口 ID（主机部分）。</li>
+<li>前缀长度：类似 IPv4 子网掩码，用 “/ 前缀长度” 表示（范围 0-128），典型为 /64（前 64 位为网络前缀，后 64 位为接口 ID，即主机部分）。</li>
 </ul>
 </li>
 <li>IPv6 地址类型<ul>
