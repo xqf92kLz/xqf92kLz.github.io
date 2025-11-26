@@ -1712,7 +1712,7 @@
 
   <h1>模块 11-12：IPv4 和 IPv6</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-26'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-26T08:41:03.756499+00:00'>2025-11-26</time></span><span data-tippy-content data-tippy-raw='2025-11-26'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-26T08:41:03.756499+00:00'>2025-11-26</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-26'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-26T09:08:10.187166+00:00'>2025-11-26</time></span><span data-tippy-content data-tippy-raw='2025-11-26'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-26T09:08:10.187166+00:00'>2025-11-26</time></span></div></div>
 <p>第三次课</p>
 <ul>
 <li>
@@ -1785,58 +1785,79 @@
 <tr>
 <th>地址类</th>
 <th>第一个八位字节范围</th>
-<th>网络部分/主机部分</th>
+<th>地址最高位特征</th>
+<th>网络部分 / 主机部分</th>
 <th>默认子网掩码</th>
+<th>可容纳网络数</th>
+<th>每个网络可容纳主机数</th>
 <th>适用场景</th>
-<th>可容纳主机数（约）</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>A 类</td>
 <td>1-127</td>
-<td>1 个八位字节/3 个八位字节</td>
+<td>最高位为 0</td>
+<td>1 个八位字节 / 3 个八位字节</td>
 <td>255.0.0.0（/8）</td>
+<td>2^(8-1)-2=126</td>
+<td>2^24-2=16777214（约 1600 万）</td>
 <td>大型组织</td>
-<td>2²⁴-2≈1600 万</td>
 </tr>
 <tr>
 <td>B 类</td>
 <td>128-191</td>
-<td>2 个八位字节/2 个八位字节</td>
+<td>最高两位为 10</td>
+<td>2 个八位字节 / 2 个八位字节</td>
 <td>255.255.0.0（/16）</td>
+<td>2^(16-2)-2=65534</td>
+<td>2^16-2=65534（约 6.5 万）</td>
 <td>中型网络</td>
-<td>2¹⁶-2≈6.5 万</td>
 </tr>
 <tr>
 <td>C 类</td>
 <td>192-223</td>
-<td>3 个八位字节/1 个八位字节</td>
+<td>最高三位为 110</td>
+<td>3 个八位字节 / 1 个八位字节</td>
 <td>255.255.255.0（/24）</td>
+<td>2^(24-3)-2=2097150</td>
+<td>2^8-2=254</td>
 <td>小型网络</td>
-<td>2⁸-2=254</td>
 </tr>
 <tr>
 <td>D 类</td>
 <td>224-239</td>
+<td>最高四位为 1110</td>
 <td>-（组播专用）</td>
 <td>-</td>
+<td>无（组播地址池）</td>
+<td>无（不可分配给主机）</td>
 <td>组播通信</td>
-<td>-</td>
 </tr>
 <tr>
 <td>E 类</td>
 <td>240-255</td>
+<td>最高四位为 1111</td>
 <td>-（实验专用）</td>
 <td>-</td>
+<td>无（预留未分配）</td>
+<td>无（不可分配给主机）</td>
 <td>科研测试</td>
-<td>-</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li>
+<p>补充说明：</p>
+<ul>
+<li>可容纳网络数计算逻辑：网络部分需扣除 “全 0”（网络地址无效）和 “全 1”（广播地址无效）的特殊情况，故减去 2；A 类最高位固定为 0（占 1 位），网络位实际可用 7 位；B 类最高两位固定为 10（占 2 位），网络位实际可用 14 位；C 类最高三位固定为 110（占 3 位），网络位实际可用 21 位。</li>
+<li>每个网络可容纳主机数计算逻辑：主机部分扣除 “全 0”（网络地址）和 “全 1”（广播地址）的特殊情况，故减去 2。</li>
+</ul>
 </li>
 <li>
-<p>示例：清华 166.111.<em>.</em>（B 类）、浙大 210.32.<em>.</em>（C 类）、北大 162.105.<em>.</em>（B 类）。</p>
+<p>示例：清华 166.111.*.*（B 类），浙大 210.32.*.*（C 类）、后来 222.205.*.*（C 类），北大 162.105.*.*（B 类）。</p>
+</li>
+</ul>
 </li>
 </ul>
 </li>
