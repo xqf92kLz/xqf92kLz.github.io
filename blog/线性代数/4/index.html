@@ -968,6 +968,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 矩阵的特征值理论与相似对角化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1962,7 +1990,7 @@
 
   <h1>第四章 $n$ 元向量空间</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-26'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-26T12:04:05.576540+00:00'>2025-11-26</time></span><span data-tippy-content data-tippy-raw='2025-11-26'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-26T12:04:05.576540+00:00'>2025-11-26</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-27'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-27T14:58:49.351396+00:00'>2025-11-27</time></span><span data-tippy-content data-tippy-raw='2025-11-27'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-27T14:58:49.351396+00:00'>2025-11-27</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">向量组<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2295,6 +2323,37 @@
 <h3 id="_5">欧式空间<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h2 id="_6">题目<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
+<li>
+<p>求齐次线性方程组的通解</p>
+<ul>
+<li>法 1：高斯消元</li>
+<li>
+<p>法 2：求基础解系，利用齐次方程组解的结构求解</p>
+<ol>
+<li>
+<p>常规解法：</p>
+<p>① 对系数矩阵做初等行变换；② 写同解方程；③ 拎出基础解系。</p>
+</li>
+<li>
+<p>快速解法：</p>
+<p>① 对系数矩阵 <span class="arithmatex">\(A\)</span> 做初等行变换变成“行最简”（每个台阶上有一个主元列就行了）；</p>
+<p>② 依次给每一个自由未知量赋 <span class="arithmatex">\(1\)</span>，其余自由未知量全赋 <span class="arithmatex">\(0\)</span>，得 <span class="arithmatex">\(n-r(A)\)</span> 个无关解（即基础解系）。这个解很容易写出，因为主元的值就是主元对应行、该 <span class="arithmatex">\(1\)</span> 自由未知量对应列的系数取反，直接把该 <span class="arithmatex">\(1\)</span> 自由未知量对应列反号顺抄即可。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>求非齐次线性方程组的通解</p>
+<ul>
+<li>法 1：高斯消元</li>
+<li>
+<p>法 2：利用非齐次方程组解的结构求解</p>
+<p>① “齐通”：求 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 基础解系。</p>
+<p>② “非齐特”：自由未知量全部赋 <span class="arithmatex">\(0\)</span>，得出一个特解。这个解很容易写出，直接把常数项顺抄即可。</p>
+</li>
+</ul>
+</li>
 <li>
 <details class="example">
 <summary>例题</summary>
