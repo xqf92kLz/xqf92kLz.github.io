@@ -1798,15 +1798,16 @@
 
   <h1>踩过的坑</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-02T01:58:47.037218+00:00'>2025-12-02</time></span><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-12-02T01:58:47.037218+00:00'>2025-12-02</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-02T15:44:47.689831+00:00'>2025-12-02</time></span><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-12-02T15:44:47.689831+00:00'>2025-12-02</time></span></div></div>
 <details class="warning" open="open">
 <summary>常见错误</summary>
 <ul>
-<li>没看清题目：如直接忽略了题目叙述“假设赋值运算符的优先级比算术运算符高”；“三个字符 <code>'Q'</code>”误以为是 <code>QQQ</code> 的意思；<code>number</code> 抄成 <code>num</code>。</li>
+<li>没看清题目：如直接忽略了题目叙述“假设赋值运算符的优先级比算术运算符高”；“三个字符 <code>'Q'</code>”误以为是 <code>QQQ</code> 的意思；<code>number</code> 抄成 <code>num</code></li>
+<li>没仔细看代码段：如 <code>for(;;;);</code> 的 <code>;</code>，<code>while</code> 里没写 <code>i++</code>（但是问 <code>while</code> 结束时 <code>i</code> 是多少。实际上死循环）</li>
 </ul>
 </details>
 <details class="example">
-<summary>一些错题</summary>
+<summary>第一次小测前错题</summary>
 <p>对于以下代码：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);;</span>
@@ -1851,6 +1852,51 @@
 <details class="note">
 <summary>解答</summary>
 <p>答案：A（不是 C）</p>
+<p>注意与下面这题区分：</p>
+<details class="info">
+<summary>Info</summary>
+</details>
+</details>
+</details>
+<p>若变量已正确定义，以下while循环正常结束时，累加到pi的最后一项item的值满足（ ）。</p>
+<div class="highlight"><pre><span></span><code>        ```cpp
+        flag = 1;
+        denominator = 1;
+        item = 1.0;
+        pi = 0;
+        while(fabs(item) &gt;= 0.0001){
+            pi = pi + item;
+            flag = -flag;
+            denominator = denominator + 2;
+            item = flag * 1.0 / denominator;
+        }
+        ```
+</code></pre></div>
+<p>A. item的绝对值小于0.0001；B. item的绝对值大于0.0001；C. item的绝对值大于等于0.0001；D. item的绝对值小于等于0.0001</p>
+<div class="highlight"><pre><span></span><code>        答案：C（不是 A）
+</code></pre></div>
+<details class="example">
+<summary>第二次小测前错题</summary>
+<p>while语句的一般形式如下，其中的循环体语句只能是一条语句。T or F</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">表达式</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">循环体语句</span>
+</code></pre></div>
+<details class="note">
+<summary>解答</summary>
+<p>答案：T（不是 F）。</p>
+<p>没有大括号。</p>
+</details>
+<p>数组定义后，数组名的值是一个地址，可以被修改。 T or F</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：F（不是 T）。</p>
+<p>C 语言中数组名的本质是 “地址常量”。数组定义后，其在内存中的存储位置是固定的。</p>
+</details>
+<p>数组定义后，只能引用单个的数组元素，而不能一次引用整个数组。T or F</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：T（不是 F）。</p>
+<p>函数参数 <code>int a[]</code> 不是整体引用数组，它就是 <code>int *a</code>，是在传递一个指针。</p>
 </details>
 </details>
 

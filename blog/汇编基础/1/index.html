@@ -1549,6 +1549,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        堆栈段
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2025,6 +2036,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        堆栈段
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2044,7 +2066,7 @@
 
   <h1>汇编入门</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-02T01:58:47.043218+00:00'>2025-12-02</time></span><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-12-02T01:58:47.043218+00:00'>2025-12-02</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-02T15:44:47.696831+00:00'>2025-12-02</time></span><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-12-02T15:44:47.696831+00:00'>2025-12-02</time></span></div></div>
 <p>模板：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">.386</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">data</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
@@ -2376,9 +2398,21 @@
 <p>一个段可以表示的内存为 64KB，且段首地址的物理地址的 16 进制表示的个位必然是 0（段首地址 = 段地址 × 16）。</p>
 </li>
 <li>
-<p>引用变量：<code>段寄存器:[偏移地址]</code>（<code>段寄存器:[常数]</code>，<code>段寄存器:[寄存器]</code>，<code>段寄存器:[寄存器+常数]</code>）。段地址只能用段寄存器表示，不能用常数表示。</p>
+<p>引用变量：段地址只能用段寄存器表示，不能用常数表示。偏移地址可以常数表示。</p>
+<ul>
+<li>直接寻址：<code>段寄存器:[偏移地址（常数）]</code></li>
+<li>
+<p>间接寻址：只有 <code>bx</code>、<code>bp</code>、<code>si</code>、<code>di</code> 才可以放在 <code>[]</code> 内表示变量的偏移地址。</p>
+<p>① <code>段寄存器:[寄存器]</code></p>
+<p>② <code>段寄存器:[寄存器±常数]</code></p>
+<p>③ <code>段寄存器:[寄存器+寄存器]</code>：只能用 <code>[bx+si],[bx+di],[bp+si],[bp+di]</code>，不能 <code>[bx+bp],[si+di]</code></p>
+<p>④ <code>段寄存器:[寄存器+寄存器±常数]</code>：不能  <code>[bx+bp±常数],[si+di±常数]</code></p>
 </li>
-<li><code>seg s</code> 获取变量 s 所在段的段地址，<code>offset s</code> 获取 s 在段内的偏移地址。<code>bx</code>、<code>bp</code>、<code>si</code>、<code>di</code> 均可用作偏移地址。</li>
+</ul>
+</li>
+<li>
+<p><code>seg s</code> 获取变量 s 所在段的段地址，<code>offset s</code> 获取 s 在段内的偏移地址。</p>
+</li>
 </ul>
 </li>
 <li>
@@ -2482,23 +2516,23 @@
 <p>文本模式下，显卡内存的段地址固定为 0B800h，整个屏幕的显示内容都存储在该段内。</p>
 <p>每个字符占 2 字节：低地址字节存储字符的 ASCII 码（8 位），高地址字节存储字符的颜色属性（8 位，其中低 4 位为前景色，高 4 位为背景色。4 位表示 3 位 RGB 编码和 1 位亮度位）。</p>
 <p>25 行 × 80 列，屏幕上的每个位置对应的显存偏移地址计算公式为：偏移地址 = (行号 × 80 + 列号) × 2。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nl">main:</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">B800h</span><span class="c1">; B800h是显卡内存的段地址</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">ds</span><span class="p">:[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span><span class="c1">; 待输出字符的ASCII码</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">ds</span><span class="p">:[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="mi">17</span><span class="no">h</span><span class="c1">; 待输出字符的颜色</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">                           </span><span class="c1">; 高4位是背景色, 低4位是前景色</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">                           </span><span class="c1">; 1=蓝色背景, 7=白色前景</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">                           </span><span class="c1">; 1=0001      7=0111</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">                           </span><span class="c1">;    RGB         RGB</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
-</code></pre></div>
+<p>```asm
+code segment
+assume cs:code
+main:
+   mov ax, 0B800h; B800h是显卡内存的段地址
+   mov ds, ax
+   mov byte ptr ds:[0], 'A'; 待输出字符的ASCII码
+   mov byte ptr ds:[1], 17h; 待输出字符的颜色
+                           ; 高4位是背景色, 低4位是前景色
+                           ; 1=蓝色背景, 7=白色前景
+                           ; 1=0001      7=0111
+                           ;    RGB         RGB</p>
+<p>mov ah, 4Ch
+   int 21h
+code ends
+end main
+  ```</p>
 </li>
 </ul>
 <h2 id="int16h">int16h  中断<a class="headerlink" href="#int16h" title="Permanent link">&para;</a></h2>
@@ -2544,6 +2578,7 @@
 </tr>
 </tbody>
 </table>
+<h2 id="_7">堆栈段<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 
 
 
