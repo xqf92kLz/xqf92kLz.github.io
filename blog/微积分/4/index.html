@@ -717,7 +717,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        不定积分的几种基本方法
+        不定积分的积分法
       
     </span>
   </a>
@@ -726,6 +726,17 @@
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不定积分的几种基本方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         某些特殊类型函数的不定积分
@@ -1904,7 +1915,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        不定积分的几种基本方法
+        不定积分的积分法
       
     </span>
   </a>
@@ -1913,6 +1924,17 @@
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不定积分的几种基本方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         某些特殊类型函数的不定积分
@@ -1946,26 +1968,26 @@
 
   <h1>第四章 不定积分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-11-27'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-11-27T14:58:49.348396+00:00'>2025-11-27</time></span><span data-tippy-content data-tippy-raw='2025-11-27'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-11-27T14:58:49.348396+00:00'>2025-11-27</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-02T01:58:47.042218+00:00'>2025-12-02</time></span><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-12-02T01:58:47.042218+00:00'>2025-12-02</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">不定积分的概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>原函数：设 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上有定义，若存在可导函数 <span class="arithmatex">\(F(x)\)</span> 满足 <span class="arithmatex">\(\forall x\in I,F'(x)=f(x)\)</span>，则称 <span class="arithmatex">\(F(x)\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上的一个原函数。</p>
+<p>原函数与不定积分：设 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上有定义，若存在可导函数 <span class="arithmatex">\(F(x)\)</span> 满足 <span class="arithmatex">\(\forall x\in I\)</span> 都有 <span class="arithmatex">\(F'(x)=f(x)\)</span>，则称 <span class="arithmatex">\(F(x)\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上的一个原函数，称 <span class="arithmatex">\(\int f(x)\text dx=F(x)+C\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上的不定积分。其中，<span class="arithmatex">\(f(x)\)</span> 称为被积函数，<span class="arithmatex">\(f(x)\text dx\)</span> 称为被积表达式，<span class="arithmatex">\(x\)</span> 称为积分变量，<span class="arithmatex">\(C\)</span> 称为积分常数，<span class="arithmatex">\(\int\)</span> 称为不定积分号。</p>
+<p>注：谈到 <span class="arithmatex">\(f(x)\)</span> 的原函数与不定积分，必须指明 <span class="arithmatex">\(f(x)\)</span> 所定义的区间 <span class="arithmatex">\(I\)</span>。</p>
 <details class="info" open="open">
-<summary>原函数的存在性-不定积分的可积</summary>
+<summary>原函数（不定积分）存在定理</summary>
 <ul>
 <li>
-<p>连续函数一定存在原函数。（非连续函数也可能有原函数）</p>
+<p>连续函数 <span class="arithmatex">\(f(x)\)</span> 必有原函数 <span class="arithmatex">\(F(x)\)</span>。</p>
 </li>
 <li>
-<p>含第一类间断点的函数，不存在原函数。（含第二类间断点的函数，可能存在原函数。如 <span class="arithmatex">\(F(x)=\begin{cases}x^2\sin\frac 1 x&amp;(x\neq 0)\\0&amp;(x=0)\end{cases}\)</span>，设 <span class="arithmatex">\(f(x)=F'(x)\)</span>，则 <span class="arithmatex">\(x=0\)</span> 是 <span class="arithmatex">\(f(x)\)</span> 的第二类间断点，但其存在原函数 <span class="arithmatex">\(F(x)\)</span>）</p>
+<p>含有第一类间断点（可去间断点，跳跃间断点）和无穷间断点的函数 <span class="arithmatex">\(f(x)\)</span> 在包含该间断点的区间内必没有原函数 <span class="arithmatex">\(F(x)\)</span>。</p>
+<p>注：含有振荡间断点的函数可能有原函数也可能没有原函数。如 <span class="arithmatex">\(f(x)=\begin{cases}2x\sin\frac 1 x-\cos \frac 1 x&amp;(x\neq 0)\\0&amp;(x=0)\end{cases}\)</span> 在 <span class="arithmatex">\((-\infty,+\infty)\)</span> 上不连续，有振荡间断点 <span class="arithmatex">\(x=0\)</span>，但它在 <span class="arithmatex">\((-\infty,+\infty)\)</span> 上存在原函数 <span class="arithmatex">\(F(x)=\begin{cases}x^2\sin\frac 1 x&amp;(x\neq 0)\\0&amp;(x=0)\end{cases}\)</span>；而 <span class="arithmatex">\(f(x)=\begin{cases}\frac 1 x\sin\frac 1 x&amp;(x\neq 0)\\0&amp;(x=0)\end{cases}\)</span> 在 <span class="arithmatex">\((-\infty,+\infty)\)</span> 上也有一个振荡间断点 <span class="arithmatex">\(x=0\)</span>，它在 <span class="arithmatex">\((-\infty,+\infty)\)</span> 上没有原函数。</p>
 </li>
 </ul>
+<p>注：综合以上几点，可以得出，可导函数 <span class="arithmatex">\(F(x)\)</span> 求导后的函数 <span class="arithmatex">\(F'(x)=f(x)\)</span> 要么连续，要么不含第一类间断点和无穷间断点。</p>
 </details>
-</li>
-<li>
-<p>不定积分：<span class="arithmatex">\(f(x)\)</span> 的所有原函数组成的集合称为 <span class="arithmatex">\(f(x)\)</span> 的不定积分，记作 <span class="arithmatex">\(\int f(x)\text dx\)</span>。若 <span class="arithmatex">\(F'(x)=f(x)\)</span>，则 <span class="arithmatex">\(\int f(x)\text dx=F(x)+C\)</span>，其中，<span class="arithmatex">\(f(x)\)</span> 称为被积函数，<span class="arithmatex">\(f(x)\text dx\)</span> 称为被积表达式，<span class="arithmatex">\(x\)</span> 称为积分变量，<span class="arithmatex">\(C\)</span> 称为积分常数，<span class="arithmatex">\(\int\)</span> 称为不定积分号。</p>
 </li>
 <li>
 <p>不定积分的性质</p>
@@ -1977,13 +1999,54 @@
 <li><span class="arithmatex">\(\int kf(x)\text dx=k\int f(x)\text dx\)</span></li>
 </ul>
 </li>
+</ul>
+<h3 id="_3">不定积分的积分法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
 <li>
-<p>基本积分</p>
-<p><span class="arithmatex">\(\int \text dx=x+C\)</span></p>
-<p><span class="arithmatex">\(\int x^{\alpha}\text dx=\frac{x^{\alpha +1}}{\alpha+1}+C\,(\alpha\neq -1)\)</span>，<span class="arithmatex">\(\int \frac 1 x \text dx=\ln |x|+C\)</span>，<span class="arithmatex">\(\int a^x\text dx=\frac{a^x}{\ln a}+C\,(a&gt;0,a\neq 1)\)</span>，<span class="arithmatex">\(\int e^x\text dx=e^x+C\)</span></p>
-<p><span class="arithmatex">\(\int \cos x\text dx=\sin x+C\)</span>，<span class="arithmatex">\(\int \sin x\text dx=-\cos x+C\)</span>，<span class="arithmatex">\(\int \sec^2 x\text dx=\tan x+C\)</span>，<span class="arithmatex">\(\int \sec x\tan x\text dx=\sec x+C\)</span>，<span class="arithmatex">\(\int \csc^2 x\text dx=-\cot x+C\)</span>，<span class="arithmatex">\(\int \csc x\cot x\text dx=-\csc x+C\)</span></p>
-<p><span class="arithmatex">\(\int \frac{\text dx}{\sqrt{1-x^2}}=\arcsin x+C\)</span> 或 <span class="arithmatex">\(-\arccos x+C\)</span>，<span class="arithmatex">\(\int \frac{\text dx}{1+x^2}=\arctan x+C\)</span> 或 <span class="arithmatex">\(-\text{arccot }x+C\)</span></p>
-<p><span class="arithmatex">\(\int \text{sinh }x\text dx=\text{cosh }x+C\)</span>，<span class="arithmatex">\(\int \text{cosh }x\text dx=\text{sinh }x+C\)</span></p>
+<p>基本积分公式</p>
+<ul>
+<li>
+<p>① <span class="arithmatex">\(\int x^{\alpha}\text dx=\dfrac{x^{\alpha +1}}{\alpha+1}+C\,(\alpha\neq -1)\)</span>，特别地，<span class="arithmatex">\(\int \dfrac 1 {x^2}\text dx=-\dfrac 1 x +C\)</span>，<span class="arithmatex">\(\int \dfrac{1}{\sqrt x}\text dx=2\sqrt x+C\)</span></p>
+</li>
+<li>
+<p>② <span class="arithmatex">\(\int \dfrac 1 x \text dx=\ln |x|+C\)</span></p>
+</li>
+<li>
+<p>③ <span class="arithmatex">\(\int a^x\text dx=\dfrac{a^x}{\ln a}+C\,(a&gt;0,a\neq 1)\)</span>；<span class="arithmatex">\(\int e^x\text dx=e^x+C\)</span></p>
+</li>
+<li>
+<p>④ <span class="arithmatex">\(\int \sin x\text dx=-\cos x+C\)</span>；<span class="arithmatex">\(\int \cos x\text dx=\sin x+C\)</span></p>
+<p><span class="arithmatex">\(\int \tan x\text dx=-\ln|\cos x|+C\)</span>；<span class="arithmatex">\(\int \cot x\text dx=\ln|\sin x|+C\)</span></p>
+<p><span class="arithmatex">\(\int\dfrac{\text dx}{\cos x}=\int \sec x\text dx=\ln|\sec x+\tan x|+C\)</span></p>
+<p><span class="arithmatex">\(\int\dfrac{\text dx}{\sin x}=\int \csc x\text dx=\ln|\csc x-\cot x|+C\)</span></p>
+<p><span class="arithmatex">\(\int \sec^2 x\text dx=\tan x+C\)</span>；<span class="arithmatex">\(\int \csc^2 x\text dx=-\cot x+C\)</span></p>
+<p><span class="arithmatex">\(\int \sec x\tan x\text dx=\sec x+C\)</span>；<span class="arithmatex">\(\int \csc x\cot x\text dx=-\csc x+C\)</span></p>
+</li>
+<li>
+<p>⑤ <span class="arithmatex">\(\int \dfrac{1}{1+x^2}\text dx=\arctan x+C\)</span></p>
+<p><span class="arithmatex">\(\int\dfrac 1 {a^2+x^2}\text dx=\dfrac 1 a\arctan\dfrac x a+C\,(a&gt;0)\)</span></p>
+</li>
+<li>
+<p>⑥ <span class="arithmatex">\(\int\dfrac 1 {1-x^2}\text dx=\arcsin x+C\)</span></p>
+<p><span class="arithmatex">\(\int\dfrac{1}{\sqrt{a^2-x^2}}\text dx=\arcsin\dfrac x a+C\,(a&gt;0)\)</span></p>
+</li>
+<li>
+<p>⑦ <span class="arithmatex">\(\int\dfrac 1 {\sqrt{x^2+a^2}}\text dx=\ln(x+\sqrt{x^2+a^2})+C\)</span>（常见 <span class="arithmatex">\(a=1\)</span>）</p>
+<p><span class="arithmatex">\(\int\dfrac 1 {\sqrt{x^2-a^2}}\text dx=\ln|x+\sqrt{x^2-a^2}|+C\,(|x|&gt;|a|)\)</span></p>
+</li>
+<li>
+<p>⑧ <span class="arithmatex">\(\int\dfrac{1}{x^2-a^2}\text dx=\dfrac 1 {2a}\ln|\dfrac{x-a}{x+a}|+C\)</span>；<span class="arithmatex">\(\int\dfrac 1 {a^2-x^2}\text dx=\dfrac 1 {2a}\ln|\dfrac{x+a}{x-a}|+C\)</span></p>
+</li>
+<li>
+<p>⑨ <span class="arithmatex">\(\int\sqrt{a^2-x^2}\text dx=\dfrac{a^2}2\arcsin\dfrac x a+\dfrac x 2\sqrt{a^2-x^2}+C\,(a&gt;|x|\geq 0)\)</span></p>
+</li>
+<li>
+<p>⑩ <span class="arithmatex">\(\int \sin^2 x\text dx=\dfrac x 2-\dfrac{\sin 2x}4+C\)</span>（<span class="arithmatex">\(\sin^2 x=\dfrac{1-\cos 2x}2\)</span>）</p>
+<p><span class="arithmatex">\(\int\cos^2 x\text dx=\dfrac x 2+\dfrac{\sin 2x}4+C\)</span>（<span class="arithmatex">\(\cos^2 x=\dfrac{1+\cos 2x}2\)</span>）</p>
+<p><span class="arithmatex">\(\int\tan^2 \text dx=\tan x-x+C\)</span>（<span class="arithmatex">\(\tan^2 x=\sec^2 x-1\)</span>）</p>
+<p><span class="arithmatex">\(\int\cot^2\text dx=-\cot x-x+C\)</span>（<span class="arithmatex">\(\cot^2 x=\csc^2 x-1\)</span>）</p>
+</li>
+</ul>
 <details class="example">
 <summary>例题-直接积分法</summary>
 <p>计算：（1）<span class="arithmatex">\(\int \dfrac{x^3+3x^2+x-3}{x^2+1}\text dx\)</span>；（2）<span class="arithmatex">\(\int (e^{2x}\pi^x)\text dx\)</span>；（3）<span class="arithmatex">\(\int \sqrt{x\sqrt[3]{x^2}}\text dx\)</span>。</p>
@@ -2020,7 +2083,7 @@
 </details>
 </li>
 </ul>
-<h3 id="_3">不定积分的几种基本方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_4">不定积分的几种基本方法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>凑微分法（第一换元法）</p>
@@ -2030,13 +2093,13 @@
 <p>由于 <span class="arithmatex">\([F(\varphi(x))]'=F'(\varphi(x))\varphi'(x)=f(\varphi(x))\varphi'(x)\)</span>，所以 <span class="arithmatex">\(\int f(\varphi(x))\varphi'(x)\text dx=F(\varphi(x))+C\)</span>。</p>
 </details>
 <p>常见的凑微分公式</p>
-<p><span class="arithmatex">\(\text dx=\frac 1 a \text d(ax+b)\,(a\neq 0)\)</span>，<span class="arithmatex">\(e^x\text dx=\text d(e^x)\)</span>，<span class="arithmatex">\(\frac {\text dx} x=\text d(|\ln x|)\)</span></p>
-<p><span class="arithmatex">\(x\text dx=\frac 1 2 \text d(x^2)=\frac 1 2 \text d(x^2\pm a^2)=-\frac 1 2 \text d(a^2-x^2)\)</span></p>
+<p><span class="arithmatex">\(\text dx=\dfrac 1 a \text d(ax+b)\,(a\neq 0)\)</span>，<span class="arithmatex">\(e^x\text dx=\text d(e^x)\)</span>，<span class="arithmatex">\(\dfrac {\text dx} x=\text d(|\ln x|)\)</span></p>
+<p><span class="arithmatex">\(x\text dx=\dfrac 1 2 \text d(x^2)=\dfrac 1 2 \text d(x^2\pm a^2)=-\dfrac 1 2 \text d(a^2-x^2)\)</span></p>
 <p><span class="arithmatex">\(\sin x\text dx=-\text d(\cos x)\)</span>，<span class="arithmatex">\(\cos x\text dx=\text d(\sin x)\)</span>，<span class="arithmatex">\(\sec^2 x\text dx=\text d(\tan x)\)</span>，<span class="arithmatex">\(\sec x\tan x\text dx=\text d(\sec x)\)</span></p>
-<p><span class="arithmatex">\(\frac{\text dx}{1+x^2}=\text d(\arctan x)\)</span>，<span class="arithmatex">\(\frac{\text dx}{\sqrt{1-x^2}}=\text d(\arcsin x)\)</span></p>
-<p><span class="arithmatex">\(\frac{\text dx}{2\sqrt x}=\text d(\sqrt x)\)</span>，<span class="arithmatex">\(\frac{x}{\sqrt{a^2\pm x^2}}\text dx=\frac{\text d(x^2)}{2\sqrt{a^2\pm x^2}}=\pm \text d(\sqrt{a^2\pm x^2})\)</span></p>
-<p><span class="arithmatex">\(\int \frac{\text dx}{ax+b}=\frac 1 a \ln|ax+b|+C\,(a\neq 0)\)</span></p>
-<p><span class="arithmatex">\(\int \frac{\text dx}{x^2-a^2}=\frac 1 {2a}\ln|\frac{x-a}{x+a}|+C\)</span>，<span class="arithmatex">\(\int \frac{\text dx}{x^2+a^2}=\frac 1 a\arctan \frac x a+C\)</span>，<span class="arithmatex">\(\int \frac{\text dx}{\sqrt{a^2-x^2}}=\arcsin \frac x a+C\,(a&gt;0)\)</span></p>
+<p><span class="arithmatex">\(\dfrac{\text dx}{1+x^2}=\text d(\arctan x)\)</span>，<span class="arithmatex">\(\dfrac{\text dx}{\sqrt{1-x^2}}=\text d(\arcsin x)\)</span></p>
+<p><span class="arithmatex">\(\dfrac{\text dx}{2\sqrt x}=\text d(\sqrt x)\)</span>，<span class="arithmatex">\(\dfrac{x}{\sqrt{a^2\pm x^2}}\text dx=\dfrac{\text d(x^2)}{2\sqrt{a^2\pm x^2}}=\pm \text d(\sqrt{a^2\pm x^2})\)</span></p>
+<p><span class="arithmatex">\(\int \dfrac{\text dx}{ax+b}=\dfrac 1 a \ln|ax+b|+C\,(a\neq 0)\)</span></p>
+<p><span class="arithmatex">\(\int \dfrac{\text dx}{x^2-a^2}=\dfrac 1 {2a}\ln|\dfrac{x-a}{x+a}|+C\)</span>，<span class="arithmatex">\(\int \dfrac{\text dx}{x^2+a^2}=\dfrac 1 a\arctan \dfrac x a+C\)</span>，<span class="arithmatex">\(\int \dfrac{\text dx}{\sqrt{a^2-x^2}}=\arcsin \dfrac x a+C\,(a&gt;0)\)</span></p>
 <details class="note">
 <summary>证明</summary>
 <p><span class="arithmatex">\(\int \dfrac{\text dx}{x^2-a^2}=\dfrac 1 {2a}\int (\dfrac 1 {x-a}-\dfrac 1{x+a})\text dx=\dfrac 1 {2a}\ln|\dfrac{x-a}{x+a}|+C\)</span></p>
@@ -2069,7 +2132,7 @@
 </li>
 </ul>
 </details>
-<p><span class="arithmatex">\(\int\frac{\text dx}{\sqrt{x^2+a^2}}=\ln(x+\sqrt{x^2+a^2})+C\,(a&gt;0)\)</span>，<span class="arithmatex">\(\int \frac{\text dx}{\sqrt{x^2-a^2}}=\ln|x+\sqrt{x^2-a^2}|+C\,(a&gt;0)\)</span></p>
+<p><span class="arithmatex">\(\int\dfrac{\text dx}{\sqrt{x^2+a^2}}=\ln(x+\sqrt{x^2+a^2})+C\,(a&gt;0)\)</span>，<span class="arithmatex">\(\int \dfrac{\text dx}{\sqrt{x^2-a^2}}=\ln|x+\sqrt{x^2-a^2}|+C\,(a&gt;0)\)</span></p>
 <details class="note">
 <summary>证明</summary>
 <ul>
@@ -2083,14 +2146,14 @@
 </li>
 </ul>
 </details>
-<p><span class="arithmatex">\(\int \sqrt{a^2-x^2}\text dx=\frac x 2\sqrt{a^2-x^2}+\frac{a^2}2\arcsin\frac x a+C\,(a&gt;0)\)</span></p>
+<p><span class="arithmatex">\(\int \sqrt{a^2-x^2}\text dx=\dfrac x 2\sqrt{a^2-x^2}+\dfrac{a^2}2\arcsin\dfrac x a+C\,(a&gt;0)\)</span></p>
 <details class="note">
 <summary>证明</summary>
 <p>设 <span class="arithmatex">\(x=a\sin t\)</span>，则 <span class="arithmatex">\(\text dx=a\cos t\text dt\)</span>。</p>
 <p><span class="arithmatex">\(\int \sqrt{a^2-x^2}\text dt=\int a\cos t\text a\cos t\text dt=a^2\int \cos^2 t\text dt=\dfrac{a^2}2\int (1+\cos 2t)\text dt=\dfrac{a^2}2(t+\dfrac 1 2 \sin 2t)+C=\dfrac{a^2}2t+\dfrac{a^2}2\sin t\cos t+C=\dfrac{a^2}2\arcsin \dfrac x a+\dfrac x 2 \sqrt{a^2-x^2}+C\)</span></p>
 </details>
-<p><span class="arithmatex">\(\int \sqrt{x^2\pm a^2}\text dx=\frac x 2\sqrt{x^2\pm a^2}+\frac{a^2}2\ln(x+\sqrt{x^2\pm a^2})+C\,(a&gt;0)\)</span></p>
-<p><span class="arithmatex">\(\int \sec^3 x\text dx=\frac 1 2\sec x\tan x+\frac 1 2\ln|\sec x+\tan x|+C\)</span></p>
+<p><span class="arithmatex">\(\int \sqrt{x^2\pm a^2}\text dx=\dfrac x 2\sqrt{x^2\pm a^2}+\dfrac{a^2}2\ln(x+\sqrt{x^2\pm a^2})+C\,(a&gt;0)\)</span></p>
+<p><span class="arithmatex">\(\int \sec^3 x\text dx=\dfrac 1 2\sec x\tan x+\dfrac 1 2\ln|\sec x+\tan x|+C\)</span></p>
 <details class="example">
 <summary>例题</summary>
 <p>计算：（1）<span class="arithmatex">\(\int \sin^2 x\cos x\text dx\)</span>；（2）<span class="arithmatex">\(\int \dfrac{e^x}{1+e^{2x}}\text dx\)</span>；（3）<span class="arithmatex">\(\int \dfrac{x}{1+x^2}\text dx\)</span>；（4）<span class="arithmatex">\(\int (2x-1)^{2024}\text dx\)</span>；（5）<span class="arithmatex">\(\int \dfrac{x+\arcsin x}{\sqrt{1-x^2}}\text dx\)</span>。</p>
@@ -2176,7 +2239,7 @@
 <p>分部积分法</p>
 </li>
 </ul>
-<h3 id="_4">某些特殊类型函数的不定积分<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_5">某些特殊类型函数的不定积分<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
 <li>有理函数的不定积分</li>
 <li>三角函数有理式的不定积分</li>
