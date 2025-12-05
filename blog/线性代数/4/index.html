@@ -2108,7 +2108,7 @@
 
   <h1>第四章 $n$ 元向量空间</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T04:35:02.858624+00:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-05T04:35:02.858624+00:00'>2025-12-05</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T15:30:46.412897+00:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-05T15:30:46.412897+00:00'>2025-12-05</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">向量组<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2203,6 +2203,10 @@
 <p>即 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 与 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_s\)</span> 等价</p>
 <p><span class="arithmatex">\(\Leftrightarrow r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}=r\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\!\!&amp;\!\!\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_s\end{pmatrix}\)</span></p>
 </details>
+<details class="tip" open="open">
+<summary>已知向量组等价，求参数；判断向量组是否等价</summary>
+<p>① 写出矩阵 <span class="arithmatex">\((\boldsymbol A,\boldsymbol B)\)</span>，验证 <span class="arithmatex">\(r(\boldsymbol A)=r(\boldsymbol A,\boldsymbol B)\)</span>；② 单独验证 <span class="arithmatex">\(r(\boldsymbol B)\)</span>，确保三秩相等。</p>
+</details>
 </li>
 </ul>
 </li>
@@ -2296,7 +2300,7 @@
 <li>
 <p>向量组的秩</p>
 <p>向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 的极大线性无关组 <span class="arithmatex">\(\boldsymbol{\alpha}_{i_1},\boldsymbol{\alpha}_{i_2},\cdots,\boldsymbol{\alpha}_{i_r}\)</span> 中所含向量个数 <span class="arithmatex">\(r\)</span>，称为向量组的秩，记作 <span class="arithmatex">\(r(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)\)</span>。</p>
-<p>零向量组成的向量组没有极大线性无关组，规定秩额为 <span class="arithmatex">\(0\)</span>。</p>
+<p>零向量组成的向量组没有极大线性无关组，规定其秩为 <span class="arithmatex">\(0\)</span>。</p>
 </li>
 <li>
 <p>重要命题和结论</p>
@@ -2307,19 +2311,23 @@
 <p>推论 2：等价向量组的极大无关组等价。</p>
 </li>
 <li>
-<p>向量组任意两个极大无关组所含的向量格式相等。</p>
+<p>向量组任意两个极大无关组所含的向量个数相等。</p>
 <p>推论：若 <span class="arithmatex">\(r(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)=r\)</span>，则从 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 中任取 <span class="arithmatex">\(r\)</span> 个无关向量，即为其极大无关组。</p>
 </li>
 </ul>
+<details class="tip" open="open">
+<summary>通过初等行变换求向量组的极大无关组和秩</summary>
+<p>① 以向量组为列排成矩阵；② 初等行变换化为行阶梯形（若要求表示法，最好化行最简，否则需要观察）；③ 每一阶梯选一列即为极大无关组。</p>
+<p>原理：行变换不改变列向量间的线性关系。</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>“每一阶梯选一列即为极大无关组”是一种确保线性无关的手段，但并不是必要的，可能也存在每一阶梯选多列但也是极大无关组的情况。</p>
+</details>
+</details>
 </li>
 <li>
 <p>向量组的秩与矩阵的秩</p>
 <p>矩阵 <span class="arithmatex">\(A\)</span> 的秩 = <span class="arithmatex">\(A\)</span> 行向量组的秩（行秩） = <span class="arithmatex">\(A\)</span> 列向量组的秩（列秩）</p>
-</li>
-<li>
-<p>通过初等行变换求向量组的极大无关组和秩</p>
-<p>① 以向量组为列排成矩阵；② 初等行变换化为行阶梯形（若要求表示法，最好化行最简，否则需要观察）；③ 每一阶梯选一列即为极大无关组（注意这是充分不必要的，可能也存在每一阶梯选多列但也是极大无关组的情况）。</p>
-<p>原理：行变换不改变列向量间的线性关系。</p>
 </li>
 </ul>
 </li>
@@ -2350,7 +2358,11 @@
 </details>
 </li>
 <li>
-<p>坐标：设 <span class="arithmatex">\(\boldsymbol{\alpha}=x_1\boldsymbol{\alpha}_1+x_2\boldsymbol{\alpha}_2+\cdots+x_r\boldsymbol{\alpha}_r\)</span> 称 <span class="arithmatex">\(\begin{pmatrix}x_1\\x_2\\\vdots\\x_r\end{pmatrix}\)</span> 为 <span class="arithmatex">\(\boldsymbol{\alpha}\)</span> 在这组基下的坐标；</p>
+<p>坐标：设 <span class="arithmatex">\(\boldsymbol{\alpha}=x_1\boldsymbol{\alpha}_1+x_2\boldsymbol{\alpha}_2+\cdots+x_r\boldsymbol{\alpha}_r\)</span> 称 <span class="arithmatex">\(\begin{pmatrix}x_1\\x_2\\\vdots\\x_r\end{pmatrix}\)</span> 为 <span class="arithmatex">\(\boldsymbol{\alpha}\)</span> 在这组基下的坐标。</p>
+<details class="tip" open="open">
+<summary>求坐标</summary>
+<p>即求 <span class="arithmatex">\((\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r)\begin{pmatrix}x_1\\x_2\\\vdots\\x_r\end{pmatrix}=\boldsymbol \alpha\)</span> 的解，且 <span class="arithmatex">\((\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r)\)</span> 可逆。<span class="arithmatex">\(((\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r),\boldsymbol \alpha)\xrightarrow{r}(\boldsymbol E,\boldsymbol x)\)</span> 可得 <span class="arithmatex">\(\boldsymbol x\)</span>。</p>
+</details>
 </li>
 <li>
 <p>过渡矩阵：设 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 和 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_n\)</span> 为 <span class="arithmatex">\(n\)</span> 维空间向量 <span class="arithmatex">\(V\)</span> 中的两组基，若 <span class="arithmatex">\(\begin{cases} \boldsymbol{\beta}_1 = m_{11}\boldsymbol{\alpha}_1 + m_{21}\boldsymbol{\alpha}_2 + \cdots + m_{n1}\boldsymbol{\alpha}_n \\ \boldsymbol{\beta}_2 = m_{12}\boldsymbol{\alpha}_1 + m_{22}\boldsymbol{\alpha}_2 + \cdots + m_{n2}\boldsymbol{\alpha}_n \\ \cdots \\ \boldsymbol{\beta}_n = m_{1n}\boldsymbol{\alpha}_1 + m_{2n}\boldsymbol{\alpha}_2 + \cdots + m_{nn}\boldsymbol{\alpha}_n \end{cases}\)</span>，则矩阵 <span class="arithmatex">\(\boldsymbol M=(m_{ij})_n\)</span> 称为从基 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 到基 <span class="arithmatex">\(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_n\)</span> 的过渡矩阵。将上述基变换表达式简记为 <span class="arithmatex">\(\begin{pmatrix}\boldsymbol{\beta}_1\!\!&amp;\!\!\boldsymbol{\beta}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\beta}_n\end{pmatrix}=\begin{pmatrix}\boldsymbol{\alpha}_1\!\!&amp;\!\!\boldsymbol{\alpha}_2\!\!&amp;\!\!\cdots\!\!&amp;\!\!\boldsymbol{\alpha}_n\end{pmatrix}\boldsymbol M\)</span>，称之为基变换公式。</p>
@@ -2430,18 +2442,8 @@
 <p>齐次线性方程组的通解</p>
 <p>设 <span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_{n-r}\)</span> 是 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的基础解系，则 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的通解可表示为 <span class="arithmatex">\(\boldsymbol x=k_1\boldsymbol{\xi}_1+k_2\boldsymbol{\xi}_2+\cdots+k_{n-r}\boldsymbol{\xi}_{n-r}\)</span>，其中 <span class="arithmatex">\(k_1,k_2,\cdots,k_{n-r}\)</span> 为任意数。</p>
 <p>注：齐次线性方程组所有解的几何构成一个向量空间，称为该齐次线性方程组的解空间。</p>
-</li>
-<li>
-<p>非齐次线性方程组的通解</p>
-<p>当非齐次线性方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 有无穷多解时，它的通解课表示为 <span class="arithmatex">\(\boldsymbol x=\boldsymbol \eta^*+k_1\boldsymbol{\xi}_1+k_2\boldsymbol{\xi}_2+\cdots+k_{n-r}\boldsymbol{\xi}_{n-r}\)</span>，其中 <span class="arithmatex">\(\boldsymbol\eta^*\)</span> 是方程 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 的一个特解，<span class="arithmatex">\(r=r(\boldsymbol A)\)</span>，<span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_{n-r}\)</span> 为导出组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的基础解系。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="_5">题目<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>求齐次线性方程组的通解</p>
+<details class="tip" open="open">
+<summary>求齐次线性方程组的通解</summary>
 <ul>
 <li>法 1：高斯消元</li>
 <li>
@@ -2459,9 +2461,13 @@
 </ol>
 </li>
 </ul>
+</details>
 </li>
 <li>
-<p>求非齐次线性方程组的通解</p>
+<p>非齐次线性方程组的通解</p>
+<p>当非齐次线性方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 有无穷多解时，它的通解课表示为 <span class="arithmatex">\(\boldsymbol x=\boldsymbol \eta^*+k_1\boldsymbol{\xi}_1+k_2\boldsymbol{\xi}_2+\cdots+k_{n-r}\boldsymbol{\xi}_{n-r}\)</span>，其中 <span class="arithmatex">\(\boldsymbol\eta^*\)</span> 是方程 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 的一个特解，<span class="arithmatex">\(r=r(\boldsymbol A)\)</span>，<span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_{n-r}\)</span> 为导出组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的基础解系。</p>
+<details class="tip" open="open">
+<summary>求非齐次线性方程组的通解</summary>
 <ul>
 <li>法 1：高斯消元</li>
 <li>
@@ -2470,7 +2476,13 @@
 <p>② “非齐特”：自由未知量全部赋 <span class="arithmatex">\(0\)</span>，得出一个特解。这个解很容易写出，直接把常数项顺抄即可。</p>
 </li>
 </ul>
+</details>
 </li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">题目<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
 <li>
 <details class="example">
 <summary>例题</summary>

@@ -97,6 +97,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -862,6 +867,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章 线性空间
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -878,6 +901,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        知识点
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1921,6 +1972,25 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        知识点
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1938,7 +2008,36 @@
 
   <h1>第七章 线性空间</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T04:35:02.858624+00:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-05T04:35:02.858624+00:00'>2025-12-05</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T15:30:46.412897+00:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-05T15:30:46.412897+00:00'>2025-12-05</time></span></div></div>
+<h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>线性空间的定义</p>
+<p>设 <span class="arithmatex">\(\mathbb P\)</span> 是一个数域，<span class="arithmatex">\(V\)</span> 是一个非空集合，又定义了加法运算 <span class="arithmatex">\(V\times V\to V\)</span> 和数乘运算 <span class="arithmatex">\(\mathbb P\times V\to V\)</span>，如果所定义的运算满足：</p>
+<ul>
+<li>加法交换律：<span class="arithmatex">\(\boldsymbol\alpha+\boldsymbol\beta=\boldsymbol\beta+\boldsymbol\alpha\)</span>，<span class="arithmatex">\(\forall \boldsymbol\alpha,\boldsymbol\beta\in V\)</span></li>
+<li>加法结合律：<span class="arithmatex">\((\boldsymbol\alpha+\boldsymbol\beta)+\boldsymbol\gamma=\boldsymbol\alpha+(\boldsymbol\beta+\boldsymbol\gamma)\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha,\boldsymbol\beta,\boldsymbol\gamma\in V\)</span></li>
+<li>加法单位元：<span class="arithmatex">\(\exist\boldsymbol\theta\in V\)</span> 使得 <span class="arithmatex">\(\boldsymbol\alpha+\boldsymbol\theta=\boldsymbol\alpha\)</span>，<span class="arithmatex">\(\forall \boldsymbol\alpha\in V\)</span>（称 <span class="arithmatex">\(\boldsymbol\theta\)</span> 为 <span class="arithmatex">\(V\)</span> 的零元素）</li>
+<li>负元素：<span class="arithmatex">\(\forall\boldsymbol\in V\)</span>，均 <span class="arithmatex">\(\exists\boldsymbol\beta\in V\)</span> 使得 <span class="arithmatex">\(\boldsymbol\alpha+\boldsymbol\beta=\boldsymbol\theta\)</span>（称 <span class="arithmatex">\(\boldsymbol\beta\)</span> 为 <span class="arithmatex">\(\boldsymbol\alpha\)</span> 为负元素，并记作 <span class="arithmatex">\(-\boldsymbol\alpha\)</span>）</li>
+<li>乘法单位元：<span class="arithmatex">\(1\cdot \boldsymbol\alpha=\boldsymbol\alpha\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span></li>
+<li>乘法结合律：<span class="arithmatex">\((kl)\boldsymbol\alpha=k(l\boldsymbol\alpha)\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span>，<span class="arithmatex">\(\forall k,l\in\mathbb P\)</span></li>
+<li>乘法分配律：<span class="arithmatex">\(k(\boldsymbol\alpha+\boldsymbol\beta)=k\boldsymbol\alpha+k\boldsymbol\beta\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span>，<span class="arithmatex">\(\forall k\in\mathbb P\)</span></li>
+<li>乘法分配律：<span class="arithmatex">\((k+l)\boldsymbol\alpha=k\boldsymbol\alpha+l\boldsymbol\alpha\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span>，<span class="arithmatex">\(\forall k,l\in\mathbb P\)</span></li>
+</ul>
+<p>则称 <span class="arithmatex">\(V\)</span> 关于所定义的加法与数乘运算构成数域 <span class="arithmatex">\(\mathbb P\)</span> 上的一个线性空间。</p>
+<p>例：</p>
+<ul>
+<li>记 <span class="arithmatex">\(\mathbb P[x]_n\)</span> 为定义在数域 <span class="arithmatex">\(\mathbb P\)</span> 上的最高次幂小于 <span class="arithmatex">\(n\)</span> 的多项式，则 <span class="arithmatex">\(\mathbb P[x]_n\)</span> 的多项式加法和数乘运算可以构成数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间。</li>
+<li>复数域 <span class="arithmatex">\(\mathbb C\)</span> 关于数的加法和乘法，可以构成实数域 <span class="arithmatex">\(\mathbb R\)</span> 上的线性空间。</li>
+<li>实数域 <span class="arithmatex">\(\mathbb R\)</span> 关于数的加法和乘法，可以构成有理数域 <span class="arithmatex">\(\mathbb Q\)</span> 上的线性空间。</li>
+</ul>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>判断是否是线性空间要注意指定数域 <span class="arithmatex">\(\mathbb P\)</span>。</p>
+</details>
+<p>也称数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间 <span class="arithmatex">\(V\)</span> 为数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间，而称 <span class="arithmatex">\(V\)</span> 中的元素为向量。</p>
+</li>
+</ul>
 
 
 
