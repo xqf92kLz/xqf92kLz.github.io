@@ -841,7 +841,7 @@
     buf db 17 dup(0) ; buf用来存放输入的二进制字符串
     abc dw 0         ; abc用来存放由buf中的二进制字符串转化得来的整数值
     data ends
-
+    
     code segment use16
     assume cs:code, ds:data
     main:
@@ -1370,6 +1370,223 @@
         do_end:
             mov t[si],0;<--第1空, 请把解答写在分号左边, 可填多条指令
         ;#1_end==========================
+        exit:
+           mov ah, 4Ch
+           int 21h
+        code ends
+        end main
+        ```
+
+??? note "第五次作业 12.6"
+    ??? note "1 写显卡内存输出ASCII字符及其16进制ASCII码"
+        ```asm
+        .386
+        data segment use16
+        buf db 0, 0
+        c   db 0
+        hex db 0, 0
+        data ends
+
+        code segment use16
+        assume cs:code, ds:data
+        main:
+           mov ax, data
+           mov ds, ax
+           mov ax, 0B800h
+           mov es, ax
+           mov di, 0
+           ;
+           mov ah, 1
+           int 21h
+           mov buf[0], al
+           mov ah, 1
+           int 21h
+           mov buf[1], al
+           push ax
+           mov ax, 3
+           int 10h  ; 清屏
+           pop ax   
+        ;#1_begin---------------------
+            mov al,buf[0]
+            call trans1
+            mov buf[0],al
+    
+            mov al,buf[1]
+            call trans1
+            mov buf[1],al
+    
+            mov al,buf[0]
+            shl al,4
+            or al,buf[1]
+            mov c,al
+    
+            mov bx,0
+        do:
+            cmp bx,16
+            jge done
+    
+            mov al,c
+            mov es:[di],al
+            mov byte ptr es:[di+1],7Ch
+    
+            mov hex[0],al
+            shr hex[0],4
+    
+            mov hex[1],al
+            and hex[1],0Fh
+    
+            mov al,hex[0]
+            call trans2
+            mov hex[0],al
+            mov es:[di+2],al
+    
+            mov al,hex[1]
+            call trans2
+            mov hex[1],al
+            mov es:[di+4],al
+
+
+            mov byte ptr es:[di+3],1Ah
+            mov byte ptr es:[di+5],1Ah
+    
+            add di,160
+            add bx,1
+            add c,1
+            jmp do
+    
+        trans1:
+            cmp al,'0'
+            jge geq_0
+                sub al,'A'
+                add al,10
+                jmp done1
+            geq_0:
+                cmp al,'9'
+                jle leq_9
+                    sub al,'A'
+                    add al,10
+                    jmp done2
+                leq_9:
+                    sub al,'0'
+                done2:
+            done1:
+            ret
+    
+        trans2:
+            cmp al,0
+            jge geq_0_
+                add al,'A'
+                sub al,10
+                jmp done3
+            geq_0_:
+                cmp al,9
+                jle leq_9_
+                    add al,'A'
+                    sub al,10
+                    jmp done4
+                leq_9_:
+                    add al,'0'
+                done4:
+            done3:
+            ret                        ; <--第1空, 请把解答写在分号左边, 可填多条指令
+        ;#1_end=======================
+        done:
+           mov ah, 4Ch
+           int 21h
+        code ends
+        end main
+        ```
+    
+    ??? note "2 输入一个十进制数及一个十六进制数并求和"
+    
+        ```asm
+        .386
+        data segment use16
+        sth db 10h dup(0)
+        d   db 20h dup('D')
+        h   db 20h dup('H')
+        result dd 0
+        data ends
+
+        code segment use16
+        assume cs:code, ds:data
+        main:
+           mov ax, data
+           mov ds, ax
+           mov eax, -1
+           mov ebx, eax
+           mov ecx, eax
+           mov edx, eax
+           mov esi, eax
+           mov edi, eax
+           mov ebp, eax
+        ;#1_begin--------------------
+            mov si,offset d
+        read_d:
+            mov ah,1
+            int 21h
+            cmp al,0Dh
+            je read_d_done
+            mov ds:[si],al
+            add si,1
+            jmp read_d
+        read_d_done:
+            mov byte ptr ds:[si],0
+            mov si,offset h
+        read_h:
+            mov ah,1
+            int 21h
+            cmp al,0Dh
+            je read_h_done
+            mov ds:[si],al
+            add si,1
+            jmp read_h
+        read_h_done:
+            mov byte ptr ds:[si],0
+            mov eax,0
+            mov ecx,0
+            mov si,offset d
+        calc_d:
+            mov cl,ds:[si]
+            cmp cl,0
+            je calc_d_done
+            sub cl,'0'
+            imul eax,10
+            add eax,ecx
+            add si,1
+            jmp calc_d
+        calc_d_done:
+            mov ebx,0
+            mov si,offset h
+        calc_h:
+            mov cl,ds:[si]
+            cmp cl,0
+            je calc_h_done
+            cmp cl,'9'
+            jle is_digit
+            is_ch:
+                cmp cl,'F'
+                jle is_upper
+                is_lower:
+                    sub cl,'a'
+                    add cl,10
+                    jmp done_ch
+                is_upper:
+                    sub cl,'A'
+                    add cl,10
+                done_ch:
+                jmp done
+            is_digit:
+                sub cl,'0'
+            done:
+            shl ebx,4
+            add ebx,ecx
+            add si,1
+            jmp calc_h
+        calc_h_done:
+            add eax,ebx
+            mov result,eax                            ; <--第1空, 请把解答写在分号左边, 可填多条指令           
+        ;#1_end======================
         exit:
            mov ah, 4Ch
            int 21h
