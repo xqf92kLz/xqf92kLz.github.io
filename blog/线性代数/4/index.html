@@ -2108,7 +2108,7 @@
 
   <h1>第四章 $n$ 元向量空间</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T15:30:46.412897+00:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-05T15:30:46.412897+00:00'>2025-12-05</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-07T09:48:43.149384+00:00'>2025-12-07</time></span><span data-tippy-content data-tippy-raw='2025-12-07'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-07T09:48:43.149384+00:00'>2025-12-07</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">向量组<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2344,10 +2344,11 @@
 </li>
 <li>
 <p>基：向量空间 <span class="arithmatex">\(W\)</span> 的一个向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r\)</span> 线性无关，且 <span class="arithmatex">\(W\)</span> 中每个向量都能由它线性表示，则称它为向量空间的一个基。</p>
-<p>维数：向量空间的基所含向量个数 <span class="arithmatex">\(r\)</span> 为该空间的维数。<span class="arithmatex">\(W\)</span> 的维数通常记作 <span class="arithmatex">\(\text{dim }W\)</span>。</p>
+<p>常用基：称 <span class="arithmatex">\(\boldsymbol{e}_1=\begin{pmatrix}1\\0\\0\\\vdots\\0\end{pmatrix},\boldsymbol{e}_2=\begin{pmatrix}0\\1\\0\\\vdots\\0\end{pmatrix},\cdots,\boldsymbol{e}_n=\begin{pmatrix}0\\0\\0\\\vdots\\1\end{pmatrix}\)</span> 为 <span class="arithmatex">\(\mathbb P^n\)</span> 的常用基。</p>
+<p>维数：向量空间的基所含向量个数 <span class="arithmatex">\(r\)</span> 为该空间的维数。<span class="arithmatex">\(W\)</span> 的维数通常记作 <span class="arithmatex">\(\dim W\)</span>。</p>
 </li>
 <li>
-<p>设 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 是 <span class="arithmatex">\(\mathbb P^n\)</span> 中的一组向量，则 <span class="arithmatex">\(L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)=\{k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s\mid k_i\in\mathbb P,i=,2,\cdots,s\}\)</span> 是 <span class="arithmatex">\(\mathbb P^n\)</span> 的一个子空间，称之为由 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 所扩张而成的子空间，也常把它记为 <span class="arithmatex">\(\text{span}(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)\)</span>。</p>
+<p>设 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 是 <span class="arithmatex">\(\mathbb P^n\)</span> 中的一组向量，则 <span class="arithmatex">\(L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)=\{k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s\mid k_i\in\mathbb P,i=1,2,\cdots,s\}\)</span> 是 <span class="arithmatex">\(\mathbb P^n\)</span> 的一个子空间，称之为由 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 所扩张而成的子空间，也常把它记为 <span class="arithmatex">\(\text{span}(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)\)</span>。</p>
 </li>
 <li>
 <p><span class="arithmatex">\(L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)\)</span> 是包含 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 的最小子空间。</p>
@@ -2356,6 +2357,10 @@
 <p>设 <span class="arithmatex">\(W\)</span> 是 <span class="arithmatex">\(\mathbb P^n\)</span> 的一个包含 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 的子空间。</p>
 <p>由于 <span class="arithmatex">\(W\)</span> 对加法和数乘运算封闭，则 <span class="arithmatex">\(\forall \boldsymbol\alpha\in L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)\)</span>，<span class="arithmatex">\(\boldsymbol\alpha=k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s\in W\)</span>，故 <span class="arithmatex">\(L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)\subseteq W\)</span>。</p>
 </details>
+</li>
+<li>
+<p>行空间和列空间：一个 <span class="arithmatex">\(m\times n\)</span> 矩阵的行向量组及列向量组可分别扩张成 <span class="arithmatex">\(\mathbb P\)</span> 上的 <span class="arithmatex">\(n\)</span> 元行向量空间及 <span class="arithmatex">\(m\)</span> 元列向量空间中的子空间，分别称它们为该矩阵的航空件和列空间。显然，它们的维数都等于矩阵的秩。</p>
+<p>我们常把矩阵 <span class="arithmatex">\(\boldsymbol A\in\mathbb P^{m\times n}\)</span> 的行空间和列空间分别记作 <span class="arithmatex">\(L(\boldsymbol A^T)\)</span> 和 <span class="arithmatex">\(L(\boldsymbol A)\)</span>。</p>
 </li>
 <li>
 <p>坐标：设 <span class="arithmatex">\(\boldsymbol{\alpha}=x_1\boldsymbol{\alpha}_1+x_2\boldsymbol{\alpha}_2+\cdots+x_r\boldsymbol{\alpha}_r\)</span> 称 <span class="arithmatex">\(\begin{pmatrix}x_1\\x_2\\\vdots\\x_r\end{pmatrix}\)</span> 为 <span class="arithmatex">\(\boldsymbol{\alpha}\)</span> 在这组基下的坐标。</p>
@@ -2391,12 +2396,13 @@
 <li>
 <p>齐次线性方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的性质</p>
 <p>设 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 都是 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的解，则解的线性组合 <span class="arithmatex">\(k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s\)</span>（<span class="arithmatex">\(k_1,k_2,\cdots,k_s\)</span> 是任意常数）也是 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的解。</p>
+<p>令 <span class="arithmatex">\(W_0=\{\boldsymbol x\mid \boldsymbol A\boldsymbol x=\boldsymbol 0,\boldsymbol x\in\mathbb P^n\}\)</span>，则 <span class="arithmatex">\(W_0\)</span> 中的向量关于 <span class="arithmatex">\(\mathbb P^n\)</span> 的向量加法、向量与数的数乘运算是封闭的，故 <span class="arithmatex">\(W_0\)</span> 是 <span class="arithmatex">\(\mathbb P^n\)</span> 的一个子空间，称 <span class="arithmatex">\(W_0\)</span> 为齐次线性方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的解空间。</p>
 </li>
 <li>
 <p>非齐次线性方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 解的性质</p>
 <ul>
 <li>
-<p>设 <span class="arithmatex">\(\boldsymbol \eta_1,\boldsymbol \eta_2\)</span> 都是 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 的解，则 <span class="arithmatex">\(\boldsymbol \eta_1-\boldsymbol \eta_2\)</span> 是它的导出组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的解。</p>
+<p>称 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 为 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 的导出组。设 <span class="arithmatex">\(\boldsymbol \eta_1,\boldsymbol \eta_2\)</span> 都是 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 的解，则 <span class="arithmatex">\(\boldsymbol \eta_1-\boldsymbol \eta_2\)</span> 是它的导出组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的解。</p>
 </li>
 <li>
 <p>设 <span class="arithmatex">\(\boldsymbol{\eta}_1,\boldsymbol{\eta}_2,\cdots,\boldsymbol{\eta}_s\)</span> 都是 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 的解，则：</p>
@@ -2413,6 +2419,7 @@
 <p>设 <span class="arithmatex">\(\boldsymbol \eta\)</span> 是 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 的一个解，<span class="arithmatex">\(\boldsymbol\xi\)</span> 是它的导出组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的解，则 <span class="arithmatex">\(\boldsymbol\eta+\boldsymbol\xi\)</span> 是 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 的解。</p>
 </li>
 </ul>
+<p>数域 <span class="arithmatex">\(\mathbb P\)</span> 上 <span class="arithmatex">\(n\)</span> 个未知量的非齐次线性方程组的解的几何必定不是 <span class="arithmatex">\(\mathbb P^n\)</span> 的子空间。</p>
 </li>
 </ul>
 </li>
@@ -2428,7 +2435,7 @@
 <p>② <span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_s\)</span> 线性无关；</p>
 <p>③ <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的任何一个解 <span class="arithmatex">\(\boldsymbol \xi\)</span> 都可由 <span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_s\)</span> 线性表示；</p>
 <p>则称 <span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_s\)</span> 为该齐次方程组的基础解系。</p>
-<p>（<span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 解向量全体的极大无关组）</p>
+<p>（即：齐次线性方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的解空间 <span class="arithmatex">\(W_0\)</span> 的任意一个极大线性无关组。<span class="arithmatex">\(\dim W_0=n-r(\boldsymbol A)\)</span> 就是这个齐次线性方程组的任意一个基础解系所含的向量个数，<span class="arithmatex">\(W_0\)</span> 中的任意一个解向量均可写成任意一个基础解系的线性组合）</p>
 </li>
 <li>
 <p>重要结论：设矩阵 <span class="arithmatex">\(\boldsymbol A_{m\times n}\)</span>，</p>
@@ -2456,7 +2463,7 @@
 <li>
 <p>快速解法：</p>
 <p>① 对系数矩阵 <span class="arithmatex">\(A\)</span> 做初等行变换变成“行最简”（每个台阶上有一个主元列就行了）；</p>
-<p>② 依次给每一个自由未知量赋 <span class="arithmatex">\(1\)</span>，其余自由未知量全赋 <span class="arithmatex">\(0\)</span>，得 <span class="arithmatex">\(n-r(A)\)</span> 个无关解（即基础解系）。这个解很容易写出，因为主元的值就是主元对应行、该 <span class="arithmatex">\(1\)</span> 自由未知量对应列的系数取反，直接把该 <span class="arithmatex">\(1\)</span> 自由未知量对应列反号顺抄即可。</p>
+<p>② 依次给每一个自由未知量赋 <span class="arithmatex">\(1\)</span>，其余自由未知量全赋 <span class="arithmatex">\(0\)</span>，得 <span class="arithmatex">\(n-r(A)\)</span> 个无关解（即基础解系）。这个解很容易写出，因为主元的值就是主元对应行、该 <span class="arithmatex">\(1\)</span> 自由未知量对应列的系数取反，类似于把该 <span class="arithmatex">\(1\)</span> 自由未知量对应列反号抄相应位置上。</p>
 </li>
 </ol>
 </li>

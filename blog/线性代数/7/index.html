@@ -924,6 +924,89 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性空间
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        向量组的线性关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        向量组的线性表示及等价
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极大线性无关组与向量组的秩
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        维数 基 坐标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基之间的过渡矩阵 坐标变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        子空间
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1987,6 +2070,89 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性空间
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        向量组的线性关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        向量组的线性表示及等价
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极大线性无关组与向量组的秩
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        维数 基 坐标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基之间的过渡矩阵 坐标变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        子空间
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2008,34 +2174,380 @@
 
   <h1>第七章 线性空间</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T15:30:46.412897+00:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-05T15:30:46.412897+00:00'>2025-12-05</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-07T09:48:43.149384+00:00'>2025-12-07</time></span><span data-tippy-content data-tippy-raw='2025-12-07'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-07T09:48:43.149384+00:00'>2025-12-07</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>第四章学习的是线性空间 <span class="arithmatex">\(\mathbb P^n\)</span>，第七章将扩展到一般的线性空间 <span class="arithmatex">\(V\)</span>。</p>
+<h3 id="_2">线性空间<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>线性空间的定义</p>
-<p>设 <span class="arithmatex">\(\mathbb P\)</span> 是一个数域，<span class="arithmatex">\(V\)</span> 是一个非空集合，又定义了加法运算 <span class="arithmatex">\(V\times V\to V\)</span> 和数乘运算 <span class="arithmatex">\(\mathbb P\times V\to V\)</span>，如果所定义的运算满足：</p>
+<p>设 <span class="arithmatex">\(\mathbb P\)</span> 是一个数域（其中的元素用 <span class="arithmatex">\(a,b,c,\cdots\)</span> 等表示），<span class="arithmatex">\(V\)</span> 是一个非空集合（其中的元素用 <span class="arithmatex">\(\boldsymbol\alpha,\boldsymbol\beta,\boldsymbol\gamma,\cdots\)</span> 等表示），又定义了二元运算（并称其为加法。注意这是广义的加法） <span class="arithmatex">\(V\times V\to V\)</span>（加法封闭） 和数乘运算 <span class="arithmatex">\(\mathbb P\times V\to V\)</span>（数乘封闭），如果所定义的运算满足：</p>
 <ul>
 <li>加法交换律：<span class="arithmatex">\(\boldsymbol\alpha+\boldsymbol\beta=\boldsymbol\beta+\boldsymbol\alpha\)</span>，<span class="arithmatex">\(\forall \boldsymbol\alpha,\boldsymbol\beta\in V\)</span></li>
 <li>加法结合律：<span class="arithmatex">\((\boldsymbol\alpha+\boldsymbol\beta)+\boldsymbol\gamma=\boldsymbol\alpha+(\boldsymbol\beta+\boldsymbol\gamma)\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha,\boldsymbol\beta,\boldsymbol\gamma\in V\)</span></li>
-<li>加法单位元：<span class="arithmatex">\(\exist\boldsymbol\theta\in V\)</span> 使得 <span class="arithmatex">\(\boldsymbol\alpha+\boldsymbol\theta=\boldsymbol\alpha\)</span>，<span class="arithmatex">\(\forall \boldsymbol\alpha\in V\)</span>（称 <span class="arithmatex">\(\boldsymbol\theta\)</span> 为 <span class="arithmatex">\(V\)</span> 的零元素）</li>
-<li>负元素：<span class="arithmatex">\(\forall\boldsymbol\in V\)</span>，均 <span class="arithmatex">\(\exists\boldsymbol\beta\in V\)</span> 使得 <span class="arithmatex">\(\boldsymbol\alpha+\boldsymbol\beta=\boldsymbol\theta\)</span>（称 <span class="arithmatex">\(\boldsymbol\beta\)</span> 为 <span class="arithmatex">\(\boldsymbol\alpha\)</span> 为负元素，并记作 <span class="arithmatex">\(-\boldsymbol\alpha\)</span>）</li>
+<li>零向量：<span class="arithmatex">\(\exist\boldsymbol\theta\in V\)</span> 使得 <span class="arithmatex">\(\boldsymbol\alpha+\boldsymbol\theta=\boldsymbol\alpha\)</span>，<span class="arithmatex">\(\forall \boldsymbol\alpha\in V\)</span>（称 <span class="arithmatex">\(\boldsymbol\theta\)</span> 为 <span class="arithmatex">\(V\)</span> 的零向量。注意是广义的“零”）</li>
+<li>负向量：<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span>，均 <span class="arithmatex">\(\exists\boldsymbol\beta\in V\)</span> 使得 <span class="arithmatex">\(\boldsymbol\alpha+\boldsymbol\beta=\boldsymbol\theta\)</span>（称 <span class="arithmatex">\(\boldsymbol\beta\)</span> 为 <span class="arithmatex">\(\boldsymbol\alpha\)</span> 为负向量，并记作 <span class="arithmatex">\(-\boldsymbol\alpha\)</span>）</li>
 <li>乘法单位元：<span class="arithmatex">\(1\cdot \boldsymbol\alpha=\boldsymbol\alpha\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span></li>
-<li>乘法结合律：<span class="arithmatex">\((kl)\boldsymbol\alpha=k(l\boldsymbol\alpha)\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span>，<span class="arithmatex">\(\forall k,l\in\mathbb P\)</span></li>
-<li>乘法分配律：<span class="arithmatex">\(k(\boldsymbol\alpha+\boldsymbol\beta)=k\boldsymbol\alpha+k\boldsymbol\beta\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span>，<span class="arithmatex">\(\forall k\in\mathbb P\)</span></li>
-<li>乘法分配律：<span class="arithmatex">\((k+l)\boldsymbol\alpha=k\boldsymbol\alpha+l\boldsymbol\alpha\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span>，<span class="arithmatex">\(\forall k,l\in\mathbb P\)</span></li>
+<li>数乘结合律：<span class="arithmatex">\((kl)\boldsymbol\alpha=k(l\boldsymbol\alpha)\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span>，<span class="arithmatex">\(\forall k,l\in\mathbb P\)</span></li>
+<li>乘法分配律 1：<span class="arithmatex">\(k(\boldsymbol\alpha+\boldsymbol\beta)=k\boldsymbol\alpha+k\boldsymbol\beta\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span>，<span class="arithmatex">\(\forall k\in\mathbb P\)</span></li>
+<li>乘法分配律 2：<span class="arithmatex">\((k+l)\boldsymbol\alpha=k\boldsymbol\alpha+l\boldsymbol\alpha\)</span>，<span class="arithmatex">\(\forall\boldsymbol\alpha\in V\)</span>，<span class="arithmatex">\(\forall k,l\in\mathbb P\)</span></li>
 </ul>
 <p>则称 <span class="arithmatex">\(V\)</span> 关于所定义的加法与数乘运算构成数域 <span class="arithmatex">\(\mathbb P\)</span> 上的一个线性空间。</p>
-<p>例：</p>
+<p>也称数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间 <span class="arithmatex">\(V\)</span> 为数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间，而称 <span class="arithmatex">\(V\)</span> 中的元素为向量。</p>
+<details class="example" open="open">
+<summary>例子</summary>
 <ul>
-<li>记 <span class="arithmatex">\(\mathbb P[x]_n\)</span> 为定义在数域 <span class="arithmatex">\(\mathbb P\)</span> 上的最高次幂小于 <span class="arithmatex">\(n\)</span> 的多项式，则 <span class="arithmatex">\(\mathbb P[x]_n\)</span> 的多项式加法和数乘运算可以构成数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间。</li>
-<li>复数域 <span class="arithmatex">\(\mathbb C\)</span> 关于数的加法和乘法，可以构成实数域 <span class="arithmatex">\(\mathbb R\)</span> 上的线性空间。</li>
-<li>实数域 <span class="arithmatex">\(\mathbb R\)</span> 关于数的加法和乘法，可以构成有理数域 <span class="arithmatex">\(\mathbb Q\)</span> 上的线性空间。</li>
+<li>矩阵集合 <span class="arithmatex">\(\mathbb P^{m\times n}=\{\boldsymbol A\mid \boldsymbol A=(a_{ij})_{m\times n},a_{ij}\in\mathbb P\}\)</span> 关于矩阵的加法和数乘，可以构成数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间。</li>
+<li>记 <span class="arithmatex">\(\mathbb P^n=\mathbb P^{n\times 1}\)</span>，关于向量的加法和数乘，可以构成数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间。（即第四章的向量空间）</li>
+<li>记 <span class="arithmatex">\(\mathbb P[x]_n=\{a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\cdots+a_1x+a_0\mid a_i\in\mathbb P\}\)</span> 为定义在数域 <span class="arithmatex">\(\mathbb P\)</span> 上 <span class="arithmatex">\(x\)</span> 的最高次幂小于 <span class="arithmatex">\(n\)</span> 的全体多项式，则 <span class="arithmatex">\(\mathbb P[x]_n\)</span> 关于多项式的加法和数乘可以构成数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间。</li>
+<li>
+<p>复数域 <span class="arithmatex">\(\mathbb C\)</span> 关于数的加法和乘法，可以构成实数域 <span class="arithmatex">\(\mathbb R\)</span> 上的线性空间。</p>
+<p>但是实数域 <span class="arithmatex">\(\mathbb R\)</span> 关于数的加法和乘法，不可以构成复数域 <span class="arithmatex">\(\mathbb C\)</span> 上的线性空间。</p>
+<p>实数域 <span class="arithmatex">\(\mathbb R\)</span> 关于数的加法和乘法，可以构成有理数域 <span class="arithmatex">\(\mathbb Q\)</span> 上的线性空间。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(\mathbb P\)</span> 是一个数域，<span class="arithmatex">\(V=\{\boldsymbol\alpha\}\)</span> 为只有一个元素的集合，定义 <span class="arithmatex">\(\boldsymbol\alpha\oplus\boldsymbol\alpha=\boldsymbol\alpha\)</span>，<span class="arithmatex">\(k\boldsymbol\alpha=\boldsymbol\alpha\,(forall c\in\mathbb P)\)</span>，则 <span class="arithmatex">\(V\)</span> 关于这两种运算构成数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间。这个空间只含有唯一的元素——零元素。通常，称之为零空间。</p>
+</li>
 </ul>
 <details class="warning" open="open">
 <summary>注意</summary>
 <p>判断是否是线性空间要注意指定数域 <span class="arithmatex">\(\mathbb P\)</span>。</p>
 </details>
-<p>也称数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间 <span class="arithmatex">\(V\)</span> 为数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间，而称 <span class="arithmatex">\(V\)</span> 中的元素为向量。</p>
+</details>
+</li>
+<li>
+<p>线性空间的性质</p>
+<ul>
+<li>
+<p>设 <span class="arithmatex">\(V\)</span> 是数域 <span class="arithmatex">\(\mathbb P\)</span> 上的一个线性空间，则：</p>
+<p>① 零向量 <span class="arithmatex">\(\boldsymbol\theta\)</span> 唯一</p>
+<p>② 每个向量的负向量唯一</p>
+<p>③ <span class="arithmatex">\(0\boldsymbol\alpha=\boldsymbol\theta\)</span></p>
+<p>④ <span class="arithmatex">\(k\boldsymbol\theta=\boldsymbol\theta\)</span></p>
+<p>⑤ <span class="arithmatex">\((-k)\boldsymbol\alpha=k(-\boldsymbol\alpha)=-(k\boldsymbol\alpha)\)</span></p>
+<p>⑥ 若 <span class="arithmatex">\(k\boldsymbol\alpha=\boldsymbol\theta\)</span>，则 <span class="arithmatex">\(k=0\)</span> 或 <span class="arithmatex">\(\boldsymbol\alpha=\boldsymbol\theta\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>
+<p>① 设 <span class="arithmatex">\(\boldsymbol\theta_1,\boldsymbol\theta_2\)</span> 均为 <span class="arithmatex">\(V\)</span> 的零向量，在由零向量的定义及加法的交换律，可得 <span class="arithmatex">\(\boldsymbol\theta_1+\boldsymbol\theta_2=\boldsymbol\theta_1\)</span>【<span class="arithmatex">\(\boldsymbol\theta_2\)</span> 是零向量】<span class="arithmatex">\(=\boldsymbol\theta_2\)</span>【<span class="arithmatex">\(\boldsymbol\theta_1\)</span> 是零向量】，所以 <span class="arithmatex">\(\boldsymbol\theta_1=\boldsymbol\theta_2\)</span>。</p>
+</li>
+<li>
+<p>② 设 <span class="arithmatex">\(\boldsymbol\beta_1,\boldsymbol\beta_2\)</span> 均为 <span class="arithmatex">\(\boldsymbol\alpha\)</span> 的负向量，即 <span class="arithmatex">\(\boldsymbol\alpha+\boldsymbol\beta_1=\boldsymbol\alpha+\boldsymbol\beta_2=\boldsymbol\theta\)</span>，则由加法结合律、零向量的定义、加法交换律，有 <span class="arithmatex">\(\boldsymbol\beta_1=\boldsymbol\beta_1+\boldsymbol\theta=\boldsymbol\beta_1+(\boldsymbol\alpha+\boldsymbol\beta_2)=(\boldsymbol\beta_1+\boldsymbol\alpha)+\boldsymbol\beta_2=\boldsymbol\theta+\boldsymbol\beta_2=\boldsymbol\beta_2\)</span>。</p>
+</li>
+<li>
+<p>③ <span class="arithmatex">\(0\boldsymbol\alpha=0\boldsymbol\alpha+\boldsymbol\theta=0\boldsymbol\alpha+[0\boldsymbol\alpha+(-0\boldsymbol\alpha)]=(0\boldsymbol\alpha+0\boldsymbol\alpha)+(-0\boldsymbol\alpha)=(0+0)\boldsymbol\alpha+(-0\boldsymbol\alpha)=0\boldsymbol\alpha+(-0\boldsymbol\alpha)=\boldsymbol\theta\)</span></p>
+</li>
+<li>
+<p>④ <span class="arithmatex">\(\boldsymbol\theta=k\boldsymbol\theta+(-k\boldsymbol\theta)=k(\boldsymbol\theta+\boldsymbol\theta)+(-k\boldsymbol\theta)=k\boldsymbol\theta+k\boldsymbol\theta+(-k\boldsymbol\theta)=k\boldsymbol\theta+(k\boldsymbol\theta+(-k\boldsymbol\theta))=k\boldsymbol\theta\)</span></p>
+</li>
+<li>
+<p>⑤ <span class="arithmatex">\(k\boldsymbol\alpha+(-k)\boldsymbol\alpha=(k+(-k))\boldsymbol\alpha=0\boldsymbol\alpha=\boldsymbol\theta\)</span></p>
+<p><span class="arithmatex">\(k\boldsymbol\alpha+k(-\boldsymbol\alpha)=k(\boldsymbol\alpha+(-\boldsymbol\alpha))=k\boldsymbol\theta=\boldsymbol\theta\)</span></p>
+<p>故 <span class="arithmatex">\((-k)\boldsymbol\alpha,k(-\boldsymbol\alpha)\)</span> 均为 <span class="arithmatex">\(\boldsymbol\alpha\)</span> 的负向量，由 ② 知 <span class="arithmatex">\((-k)\boldsymbol\alpha=k(-\boldsymbol\alpha)=-(k\boldsymbol\alpha)\)</span>。</p>
+</li>
+<li>
+<p>⑥ 若 <span class="arithmatex">\(k\boldsymbol\alpha=\boldsymbol\theta\)</span>，而 <span class="arithmatex">\(k\neq 0\)</span>，则 <span class="arithmatex">\(\boldsymbol\alpha=(\dfrac 1 k k)\boldsymbol\alpha=\dfrac 1 k(k\boldsymbol\alpha)=\dfrac 1 k\boldsymbol\theta=\boldsymbol\theta\)</span>。故 <span class="arithmatex">\(k=0\)</span> 或 <span class="arithmatex">\(\boldsymbol\alpha=\boldsymbol\theta\)</span>。</p>
+</li>
+</ul>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">向量组的线性关系<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>设 <span class="arithmatex">\(V\)</span> 是数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间</p>
+<ul>
+<li>
+<p>设 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 是 <span class="arithmatex">\(V\)</span> 中的 <span class="arithmatex">\(s\)</span> 个向量，<span class="arithmatex">\(k_1,k_2,\cdots,k_s\)</span> 是数域<span class="arithmatex">\(\mathbb P\)</span> 中任意 <span class="arithmatex">\(s\)</span> 个数，则称 <span class="arithmatex">\(k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s\)</span> 为向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 的一个线性组合。（这里的加法和数乘都是我们定义的广义运算。由于加法和数乘封闭，线性组合也在 <span class="arithmatex">\(V\)</span> 中）</p>
+<p>若对 <span class="arithmatex">\(\boldsymbol\beta\in V\)</span>，存在数 <span class="arithmatex">\(k_1,k_2,\cdots,k_s\in\mathbb P\)</span> 使得 <span class="arithmatex">\(\boldsymbol\beta=k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s\)</span>，则称 <span class="arithmatex">\(\boldsymbol\beta\)</span> 可由向量组 <span class="arithmatex">\(k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s\)</span> 线性表示。</p>
+<p>显然，零向量 <span class="arithmatex">\(\boldsymbol\theta\)</span> 可由任意向量组线性表示。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\in V\)</span>，如果存在一组数域 <span class="arithmatex">\(\mathbb P\)</span> 中不全为 <span class="arithmatex">\(0\)</span> 的数 <span class="arithmatex">\(k_1,k_2,\cdots,k_s\)</span> 使得 <span class="arithmatex">\(k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s=\boldsymbol\theta\)</span>，则称向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性相关。</p>
+<p>否则 <span class="arithmatex">\(k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s=\boldsymbol\theta\)</span> 成立 <span class="arithmatex">\(\Leftrightarrow k_1=k_2=\cdots=k_2=0\)</span>，则称向量组线性无关。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>在线性空间 <span class="arithmatex">\(\mathbb P[x]_4\)</span> 中，判断 <span class="arithmatex">\(f_1(x)=1+x\)</span>，<span class="arithmatex">\(f_2(x)=x+x^2\)</span>，<span class="arithmatex">\(f_3(x)=x^2+2x^3\)</span>，<span class="arithmatex">\(f_4(x)=x-x^3\)</span> 的线性相关性。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(k_1f_1(x)+k_2f_2(x)+k_3f_3(x)+k_4f_4(x)=0\,(k_i\in\mathbb P)\)</span>，这里 <span class="arithmatex">\(0\)</span> 表示零多项式，则 <span class="arithmatex">\(k_1+(k_1+k_2+k_3)x+(k_2+2k_3)x^2+(2k_3-k_4)x^3=0\)</span>。</p>
+<p><span class="arithmatex">\(\begin{cases}c_1 + c_2 + c_3 + 0c_4 = 0 \\0c_1 + c_2 + 2c_3 + 0c_4 = 0 \\0c_1 + 0c_2 + 2c_3 - c_4 = 0\end{cases}\)</span></p>
+<p><span class="arithmatex">\(\begin{vmatrix}1 &amp; 0 &amp; 0 &amp; 0 \\1 &amp; 1 &amp; 1 &amp; 0 \\0 &amp; 1 &amp; 2 &amp; 0 \\0 &amp; 0 &amp; 2 &amp; -1\end{vmatrix} = -1 \neq 0\)</span></p>
+<p>所以这个线性方程组只有零解，则 <span class="arithmatex">\(f_1(x),f_2(x),f_3(x),f_4(x)\)</span> 线性无关。</p>
+</details>
+</details>
+</li>
+<li>
+<p>线性表示与线性相关性的性质</p>
+<p>-一个向量组中有部分向量线性相关 <span class="arithmatex">\(\Rightarrow\)</span> 该向量组必线性相关</p>
+<ul>
+<li>
+<p>一个向量组线性无关 <span class="arithmatex">\(\Rightarrow\)</span> 它的任意一个部分组必线性相关</p>
+</li>
+<li>
+<p>含有零向量的向量组必线性相关</p>
+</li>
+<li>
+<p>单个向量 <span class="arithmatex">\(\boldsymbol\alpha\)</span>，<span class="arithmatex">\(\boldsymbol\alpha\)</span> 线性相关 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol\alpha=\boldsymbol\theta\)</span>，<span class="arithmatex">\(\boldsymbol\alpha\)</span> 线性无关 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol\alpha\neq\boldsymbol\theta\)</span></p>
+</li>
+<li>
+<p>向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\,(s\geq 2)\)</span> 线性相关 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 中至少有一个向量可由其余的向量线性表示</p>
+<p>向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\,(s\geq 2)\)</span> 线性无关 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 中任意一个向量都不能由其余的向量线性表示</p>
+</li>
+<li>
+<p>若向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性无关，而向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s,\boldsymbol\beta\)</span> 线性相关，则 <span class="arithmatex">\(\boldsymbol\beta\)</span> 可由 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性表示，且表示方式唯一。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">向量组的线性表示及等价<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>向量组的线性表示</p>
+<p>设数域 <span class="arithmatex">\(P\)</span> 上线性空间 <span class="arithmatex">\(V\)</span> 中有两个向量组 <span class="arithmatex">\((\text I)\,\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span>，<span class="arithmatex">\((\text{II})\,\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t\)</span>，如果向量组 <span class="arithmatex">\((\text I)\)</span> 中的每个向量都可由向量组 <span class="arithmatex">\((\text{II})\)</span> 线性表示，则称向量组 <span class="arithmatex">\((\text I)\)</span> 可由向量组 <span class="arithmatex">\((\text{II})\)</span> 线性表示。</p>
+<p>称 <span class="arithmatex">\((\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t)\)</span> 为形式矩阵，<span class="arithmatex">\(\boldsymbol\alpha_j=(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t)\begin{pmatrix}m_{1j}\\m_{2j}\\\vdots\\m_{tj}\end{pmatrix}\)</span> 和 <span class="arithmatex">\((\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)=(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t)\begin{pmatrix}m_{11}&amp;m_{12}&amp;\cdots&amp;m_{1s}\\m_{21}&amp;m_{22}&amp;\cdots&amp;m_{2s}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\m_{t1}&amp;m_{t2}&amp;\cdots&amp;m_{ts}\end{pmatrix}\)</span>（其中 <span class="arithmatex">\(m_{ij}\in\mathbb P\)</span>） 为形式矩阵的乘法运算。</p>
+<p>形式矩阵的乘法运算具有如下性质：</p>
+<ul>
+<li>结合律：<span class="arithmatex">\((\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t)(\boldsymbol{AB})=((\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t)\boldsymbol A)\boldsymbol B\)</span></li>
+<li>传递性：若 <span class="arithmatex">\((\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)=(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t)\boldsymbol C\)</span>，<span class="arithmatex">\((\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t)=(\boldsymbol{\gamma}_1,\boldsymbol{\gamma}_2,\cdots,\boldsymbol{\gamma}_r)\boldsymbol D\)</span>，则 <span class="arithmatex">\((\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)=(\boldsymbol{\gamma}_1,\boldsymbol{\gamma}_2,\cdots,\boldsymbol{\gamma}_r)(\boldsymbol {DC})\)</span></li>
+</ul>
+</li>
+<li>
+<p>性质</p>
+<ul>
+<li>
+<p>设数域 <span class="arithmatex">\(\mathbb P\)</span> 上线性空间 <span class="arithmatex">\(V\)</span> 中有两个向量组 <span class="arithmatex">\((\text I)\,\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span>，<span class="arithmatex">\((\text{II})\,\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t\)</span>，若向量组 <span class="arithmatex">\((\text I)\)</span> 可由向量组 <span class="arithmatex">\((\text{II})\)</span> 线性表示，且 <span class="arithmatex">\(s&gt;t\)</span>，则向量组 <span class="arithmatex">\((\text I)\)</span> 必线性相关。</p>
+<details class="note">
+<summary>证明</summary>
+<p>考虑 <span class="arithmatex">\((\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)\begin{pmatrix}k_1\\k_2\\\vdots\\k_s\end{pmatrix}=\boldsymbol\theta\)</span></p>
+<p>即 <span class="arithmatex">\((\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t)\boldsymbol M_{t\times s}\boldsymbol K=\boldsymbol\theta\)</span>，其中 <span class="arithmatex">\(\boldsymbol K=\begin{pmatrix}k_1\\k_2\\\vdots\\k_s\end{pmatrix}\)</span></p>
+<p>由于 <span class="arithmatex">\(r(\boldsymbol M_{t\times s})\leq t&lt;s\)</span>，故 <span class="arithmatex">\(\boldsymbol M_{t\times s}\boldsymbol K=\boldsymbol\theta\)</span> 有非零解 <span class="arithmatex">\(\boldsymbol K\)</span></p>
+<p>所以 <span class="arithmatex">\((\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t)\boldsymbol M_{t\times s}\boldsymbol K=\boldsymbol\theta\)</span> 有非零解 <span class="arithmatex">\(\boldsymbol K\)</span>，则向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性相关。</p>
+</details>
+</li>
+<li>
+<p>设数域 <span class="arithmatex">\(\mathbb P\)</span> 上线性空间 <span class="arithmatex">\(V\)</span> 中有两个向量组 <span class="arithmatex">\((\text I)\,\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span>，<span class="arithmatex">\((\text{II})\,\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t\)</span>，若向量组 <span class="arithmatex">\((\text I)\)</span> 可由向量组 <span class="arithmatex">\((\text{II})\)</span> 线性表示，且向量组 <span class="arithmatex">\((\text I)\)</span> 线性无关，则 <span class="arithmatex">\(s\leq t\)</span>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>向量组的等价</p>
+<p>数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间 <span class="arithmatex">\(V\)</span> 中，如果两个向量组能互相线性表示，则称这两个向量组等价。</p>
+<p>性质：向量组的等价具有自反性、对称性、传递性。</p>
+<p>两个等价的、线性无关的且含有有限向量个数的向量组，所含向量个数相等。</p>
+</li>
+</ul>
+<h3 id="_5">极大线性无关组与向量组的秩<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>定义</p>
+<p>设有向量组 <span class="arithmatex">\((\text I)\,\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span>，它的一个部分组为 <span class="arithmatex">\((\text {II})\,\boldsymbol{\alpha}_{i_1},\boldsymbol{\alpha}_{i_2},\cdots,\boldsymbol{\alpha}_{i_r}\,(r\leq s)\)</span>，若向量组 <span class="arithmatex">\((\text{II})\)</span> 满足 ① 线性无关；② 原向量组 <span class="arithmatex">\((\text{I})\)</span> 的任意向量 <span class="arithmatex">\(\boldsymbol\alpha_k\)</span>，添加进向量组 <span class="arithmatex">\((\text{II})\)</span> 后，所得的 <span class="arithmatex">\(r+1\)</span> 个向量 <span class="arithmatex">\(\boldsymbol{\alpha}_{i_1},\boldsymbol{\alpha}_{i_2},\cdots,\boldsymbol{\alpha}_{i_r},\boldsymbol\alpha_k\)</span> 必线性相关（即，<span class="arithmatex">\(\forall\boldsymbol\alpha_k\in(\text I)\)</span>，一定可以由向量组 <span class="arithmatex">\((\text{II})\)</span> 线性表示），则称向量组 <span class="arithmatex">\((\text{II})\)</span> 是原向量组 <span class="arithmatex">\((\text I)\)</span> 的一个极大线性无关组。</p>
+<p>一个向量组的极大线性无关组所含向量的个数称为向量组的秩。</p>
+</li>
+<li>
+<p>性质</p>
+<ul>
+<li>任意一个由有限个向量组成的向量组，必存在极大线性无关组，且向量组与它的极大线性无关组等价。</li>
+<li>一个向量组的任意两个极大线性无关组必电脑管家，且所含向量的个数相等。</li>
+<li>秩为 <span class="arithmatex">\(r\)</span> 的向量中，① 任意 <span class="arithmatex">\(r+1\)</span> 个向量必线性相关；② 任意 <span class="arithmatex">\(r\)</span> 个线性无关的向量都可作为该向量的一个极大线性无关组。</li>
+<li>
+<p>设 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\,(s&lt;+\infty)\)</span> 为数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间 <span class="arithmatex">\(V\)</span> 中的 <span class="arithmatex">\(s\)</span> 个向量，则</p>
+<p><span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性无关</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 本身就是 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 的一个极大线性无关组</p>
+<p><span class="arithmatex">\(\Leftrightarrow r(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)=s\)</span></p>
+</li>
+<li>
+<p>数域 <span class="arithmatex">\(\mathbb P\)</span> 上线性空间 <span class="arithmatex">\(V\)</span> 中的任意一个有限秩的任意一个线性无关的部分组，一定可以扩充为该向量组的一个极大线性无关组。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">维数 基 坐标<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>维数、基</p>
+<p>设 <span class="arithmatex">\(V\)</span> 是数域 <span class="arithmatex">\(\mathbb P\)</span> 上的（非零）线性空间，当我们把 <span class="arithmatex">\(V\)</span> 中的全体向量看成一个向量组时，如果该向量组存在一个由有限个向量所构成的极大线性无关组，则称 <span class="arithmatex">\(V\)</span> 是有限维的，否则称 <span class="arithmatex">\(V\)</span> 是无限维的。</p>
+<p>当 <span class="arithmatex">\(V\)</span> 是有限维时，称其任意一个极大线性无关组所含的向量的个数为线性空间的维数，记为 <span class="arithmatex">\(\dim V\)</span>。当 <span class="arithmatex">\(V=\{\boldsymbol\theta\}\)</span> 时，记 <span class="arithmatex">\(\dim V=0\)</span>；当 <span class="arithmatex">\(V\)</span> 为无限维时，记 <span class="arithmatex">\(\dim V=+\infty\)</span>。</p>
+<p>若 <span class="arithmatex">\(\dim V=n\,(1\leq n&lt;+\infty)\)</span>，<span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n\)</span> 为 <span class="arithmatex">\(V\)</span> 的一个极大线性无关组，则称 <span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n\)</span> 的任意一种排列为 <span class="arithmatex">\(V\)</span> 的一个（或一组）基。</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>极大线性无关组是无序的，基是有序的。</p>
+</details>
+<details class="example" open="open">
+<summary>例子</summary>
+<ul>
+<li><span class="arithmatex">\(\mathbb P^n\)</span> 的常用基：<span class="arithmatex">\(\boldsymbol e_1=(1,0,\cdots,0)^T\)</span>，<span class="arithmatex">\(\boldsymbol e_2=(0,1,\cdots,0)^T\)</span>，<span class="arithmatex">\(\cdots\)</span>，<span class="arithmatex">\(\boldsymbol e_n=(0,0,\cdots,1)^T\)</span>。</li>
+<li><span class="arithmatex">\(\mathbb P^{m\times n}\)</span> 的常用基：<span class="arithmatex">\(\boldsymbol e_{ij}\,(i=1,2,\cdots,m,j=1,2,\cdots,n)\)</span>。其中 <span class="arithmatex">\(\boldsymbol e_{ij}\)</span> 为第 <span class="arithmatex">\(i\)</span> 行第 <span class="arithmatex">\(j\)</span> 列交叉位置的元素为 <span class="arithmatex">\(1\)</span>、其余元素为 <span class="arithmatex">\(0\)</span> 的矩阵，称为矩阵单位。</li>
+<li><span class="arithmatex">\(\mathbb P[x]_n\)</span> 的常用基：<span class="arithmatex">\(1,x,x^2,\cdots,x^{n-1}\)</span>。</li>
+</ul>
+</details>
+</li>
+<li>
+<p>坐标及作用</p>
+<ul>
+<li>
+<p>定义：</p>
+<p>设 <span class="arithmatex">\(V\)</span> 是数域 <span class="arithmatex">\(\mathbb P\)</span> 上的 <span class="arithmatex">\(n\)</span> 维线性空间，记 <span class="arithmatex">\(\dim V=n\)</span>，又设 <span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n\)</span> 为 <span class="arithmatex">\(V\)</span> 的一组基，则 <span class="arithmatex">\(\forall \boldsymbol\alpha\in V\)</span>，<span class="arithmatex">\(\boldsymbol\alpha\)</span> 可由基 <span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n\)</span> 唯一线性表示。</p>
+<p>设 <span class="arithmatex">\(\boldsymbol\alpha=x_1\boldsymbol\xi_1+x_2\boldsymbol\xi_2+\cdots+x_n\boldsymbol\xi_n=(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n)(x_1,x_2,\cdots,x_n)^T=(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n)\boldsymbol X\)</span>，其中 <span class="arithmatex">\(\boldsymbol X=(x_1,x_2,\cdots,x_n)^T\in\mathbb P^n\)</span>，称为 <span class="arithmatex">\(\boldsymbol\alpha\)</span> 在基 <span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n\)</span> 下的坐标。</p>
+</li>
+<li>
+<p>作用：</p>
+<p>设 <span class="arithmatex">\(V\)</span> 是数域 <span class="arithmatex">\(\mathbb P\)</span> 上的 <span class="arithmatex">\(n\)</span> 维空间，<span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n\)</span> 为 <span class="arithmatex">\(V\)</span> 的一组基，则对于 <span class="arithmatex">\(V\)</span> 中任意一个向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span>，设 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 在基下的坐标分别为 <span class="arithmatex">\(\boldsymbol X_1,\boldsymbol X_2,\cdots,\boldsymbol X_s\)</span>，则 <span class="arithmatex">\((\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)=(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n)(\boldsymbol X_1,\boldsymbol X_2,\cdots,\boldsymbol X_s)=(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n)\boldsymbol A_{n\times s}\)</span>。</p>
+<p>则</p>
+<p><span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性相关 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol X_1,\boldsymbol X_2,\cdots,\boldsymbol X_s\)</span> 线性相关 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(r(\boldsymbol A_{n\times s})&lt;s\)</span></p>
+<p>推论：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(n\)</span> 维线性空间 <span class="arithmatex">\(V\)</span> 中，任意 <span class="arithmatex">\(n+1\)</span> 个向量必线性相关。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(\dim V=n\)</span>，<span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n\)</span> 为 <span class="arithmatex">\(V\)</span> 的一组基，设 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 为 <span class="arithmatex">\(V\)</span> 中 <span class="arithmatex">\(n\)</span> 个向量，设 <span class="arithmatex">\(\boldsymbol{\alpha}_i=(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n)\boldsymbol X_i\,(i=1,2,\cdots,n)\)</span>，记 <span class="arithmatex">\(\boldsymbol A_{n\times n}=(\boldsymbol X_1,\boldsymbol X_2,\cdots,\boldsymbol X_n)\)</span>，则</p>
+<p><span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性相关 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(|\boldsymbol A_{n\times n}|=0\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_n\)</span> 线性无关 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(|\boldsymbol A_{n\times n}|\neq 0\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性无关 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol X_1,\boldsymbol X_2,\cdots,\boldsymbol X_s\)</span> 线性无关 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(r(\boldsymbol A_{n\times s})=s\)</span></p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(\dim V=n\)</span>，则 <span class="arithmatex">\(V\)</span> 中任意 <span class="arithmatex">\(n\)</span> 个线性无关的向量，都是 <span class="arithmatex">\(V\)</span> 的一组基。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(\dim V=n\)</span>，<span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n\)</span> 为 <span class="arithmatex">\(V\)</span> 的一组基，向量 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\in V\)</span>，在所给基下坐标分别为 <span class="arithmatex">\(\boldsymbol X_1,\boldsymbol X_2,\cdots,\boldsymbol X_s\)</span>，向量 <span class="arithmatex">\(\boldsymbol\beta\in V\)</span> 在所给基下的坐标为 <span class="arithmatex">\(\boldsymbol Y\)</span>，则</p>
+<p>① <span class="arithmatex">\(\boldsymbol\beta=(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)\boldsymbol X_0\Leftrightarrow (\boldsymbol X_1,\boldsymbol X_2,\cdots,\boldsymbol X_s)\boldsymbol X_0=\boldsymbol Y\)</span></p>
+<p>② <span class="arithmatex">\(\boldsymbol\beta\)</span> 可由 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性表示 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\((\boldsymbol X_1,\boldsymbol X_2,\cdots,\boldsymbol X_s)\boldsymbol X=\boldsymbol Y\)</span> 有解 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol Y\)</span> 可由 <span class="arithmatex">\(\boldsymbol X_1,\boldsymbol X_2,\cdots,\boldsymbol X_s\)</span> 线性表示</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>求 <span class="arithmatex">\(a=?\)</span>，使得 <span class="arithmatex">\(\mathbb P^{2×2}\)</span> 中的向量组线性无关：<span class="arithmatex">\(A_1=\begin{pmatrix} 1 &amp; 3 \\ -1 &amp; 0 \end{pmatrix}\)</span>，<span class="arithmatex">\(A_2=\begin{pmatrix} 0 &amp; 1 \\ -1 &amp; a \end{pmatrix}\)</span>，<span class="arithmatex">\(A_3=\begin{pmatrix} -1 &amp; -1 \\ 0 &amp; 2 \end{pmatrix}\)</span>，<span class="arithmatex">\(A_4=\begin{pmatrix} 2 &amp; 3 \\ -1 &amp; 2-a \end{pmatrix}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>取 <span class="arithmatex">\(\mathbb P^{2×2}\)</span> 中常用基：<span class="arithmatex">\(\boldsymbol e_{11},\boldsymbol e_{12},\boldsymbol e_{21},\boldsymbol e_{22}\)</span></p>
+<p><span class="arithmatex">\((A_1,A_2,A_3,A_4) = (\boldsymbol e_{11},\boldsymbol e_{12},\boldsymbol e_{21},\boldsymbol e_{22}) \begin{pmatrix} 1 &amp; 0 &amp; -1 &amp; 2 \\ 3 &amp; 1 &amp; -1 &amp; 3 \\ -1 &amp; -1 &amp; 0 &amp; -1 \\ 0 &amp; a &amp; 2 &amp; 2-a \end{pmatrix} = (\boldsymbol e_{11},\boldsymbol e_{12},\boldsymbol e_{21},\boldsymbol e_{22})\boldsymbol A\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol A \xrightarrow{r} \begin{pmatrix} 1 &amp; 0 &amp; -1 &amp; 2 \\ &amp; 1 &amp; 2 &amp; -3 \\ &amp; &amp; 1 &amp; -2 \\ &amp; &amp; &amp; 6-2a \end{pmatrix}\)</span></p>
+<p>所以，当 <span class="arithmatex">\(a\neq 3\)</span> 时，$r(\boldsymbol A)=4 $，此时 <span class="arithmatex">\(A_1,A_2,A_3,A_4\)</span> 线性无关。</p>
+</details>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_7">基之间的过渡矩阵 坐标变换<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>过渡矩阵</p>
+<p>设 <span class="arithmatex">\(\dim V=n\)</span>，<span class="arithmatex">\(V\)</span> 的两组基 <span class="arithmatex">\((\text I)\,\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n\)</span>，<span class="arithmatex">\((\text{II})\,\boldsymbol{\eta}_1,\boldsymbol{\eta}_2,\cdots,\boldsymbol{\eta}_n\)</span>，是 <span class="arithmatex">\(\boldsymbol{\eta}_i=m_{1i}\boldsymbol{\xi}_1+m_{2i}\boldsymbol{\xi}_2+\cdots+m_{ni}\boldsymbol{\xi}_n=(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n)\begin{pmatrix}m_{1i}\\m_{2i}\\\vdots\\m_{ni}\end{pmatrix}\,(i=1,2,\cdots,n)\)</span>，则 <span class="arithmatex">\((\boldsymbol{\eta}_1,\boldsymbol{\eta}_2,\cdots,\boldsymbol{\eta}_n)=(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n)\begin{pmatrix}m_{11}&amp;m_{12}&amp;\cdots&amp;m_{1n}\\m_{21}&amp;m_{22}&amp;\cdots&amp;m_{2n}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\m_{n1}&amp;m_{n2}&amp;\cdots&amp;m_{nn}\end{pmatrix}=(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n)\boldsymbol M\)</span>，则称矩阵 <span class="arithmatex">\(\boldsymbol M\)</span> 为从基 <span class="arithmatex">\((\text I)\)</span> 到基 <span class="arithmatex">\((\text{II})\)</span> 的过渡矩阵。</p>
+<p>（实际上就是基 <span class="arithmatex">\((\text{II})\)</span> 每个向量在基 <span class="arithmatex">\((\text I)\)</span> 下的坐标拼起来）</p>
+</li>
+<li>
+<p>坐标变换公式</p>
+<p>设 <span class="arithmatex">\(\boldsymbol\alpha\in V\)</span>，<span class="arithmatex">\(\boldsymbol\alpha\)</span> 在基 <span class="arithmatex">\((\text I)\)</span> 下的坐标为 <span class="arithmatex">\(\boldsymbol X\)</span>，<span class="arithmatex">\(\boldsymbol\alpha\)</span> 在基 <span class="arithmatex">\((\text{II})\)</span> 下的坐标为 <span class="arithmatex">\(\boldsymbol Y\)</span>，记 <span class="arithmatex">\(\boldsymbol\alpha=(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n)\boldsymbol X=(\boldsymbol{\eta}_1,\boldsymbol{\eta}_2,\cdots,\boldsymbol{\eta}_n)\boldsymbol Y\)</span>，则如果 <span class="arithmatex">\((\boldsymbol{\eta}_1,\boldsymbol{\eta}_2,\cdots,\boldsymbol{\eta}_n)=(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n)\boldsymbol M\)</span>，则 <span class="arithmatex">\(\boldsymbol X=\boldsymbol M\boldsymbol Y\)</span> 或 <span class="arithmatex">\(\boldsymbol Y=\boldsymbol M^{-1}\boldsymbol X\)</span>。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>在 <span class="arithmatex">\(P^3\)</span> 中有两组基：<span class="arithmatex">\((\text I)\,\boldsymbol\xi_1 =(1,2,1)^T, \boldsymbol\xi_2 = (2,3,3)^T, \boldsymbol\xi_3 =(3,7,1)^T\)</span>，<span class="arithmatex">\((\text{II})\,\boldsymbol\xi_1^* = (9,24,-1)^T, \boldsymbol\xi_2^* = (8,22,-2)^T, \boldsymbol\xi_3^* = (12,28,4)^T\)</span>。</p>
+<p>求：（1）从基 <span class="arithmatex">\((\text I)\)</span> 到基 <span class="arithmatex">\((\text{II})\)</span> 的过渡矩阵；（2）若 <span class="arithmatex">\(\boldsymbol\alpha\)</span> 在基 <span class="arithmatex">\((\text I)\)</span> 下的坐标为 <span class="arithmatex">\(\boldsymbol X =(0,1,-1)^T\)</span>，求 <span class="arithmatex">\(\boldsymbol\alpha\)</span> 在基 <span class="arithmatex">\((\text{II})\)</span> 下的坐标 <span class="arithmatex">\(\boldsymbol Y\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol M\)</span> 是从基 <span class="arithmatex">\((\text I)\)</span> 到基 <span class="arithmatex">\((\text{II})\)</span> 的过渡矩阵，记 <span class="arithmatex">\(\boldsymbol A = (\boldsymbol\xi_1, \boldsymbol\xi_2, \boldsymbol\xi_3), B = (\boldsymbol\xi_1^*, \boldsymbol\xi_2^*, \boldsymbol\xi_3^*)\)</span>，则有 <span class="arithmatex">\(\boldsymbol B = \boldsymbol A\boldsymbol M\)</span>。</p>
+<ul>
+<li>
+<p>（1）</p>
+<p>由 <span class="arithmatex">\(\boldsymbol B = \boldsymbol A\boldsymbol M\)</span>，得 <span class="arithmatex">\(\boldsymbol M = \boldsymbol A^{-1}\boldsymbol B\)</span>。</p>
+<p><span class="arithmatex">\(\left(\begin{array}{c:c}\boldsymbol A &amp; \boldsymbol B \\\end{array}\right)= \begin{pmatrix}1 &amp; 2 &amp; 3 &amp; \vdots &amp; 9 &amp; 8 &amp; 12 \\2 &amp; 3 &amp; 7 &amp; \vdots &amp; 24 &amp; 22 &amp; 28 \\1 &amp; 3 &amp; 1 &amp; \vdots &amp; -1 &amp; -2 &amp; 4\end{pmatrix}\xrightarrow{r}\begin{pmatrix}1 &amp;  &amp;  &amp; \vdots &amp; 1 &amp; 0 &amp; 0 \\&amp; 1 &amp; &amp; \vdots &amp; -2 &amp; -2 &amp; 0 \\&amp; &amp; 1 &amp; \vdots &amp; 4 &amp; 4 &amp; 4\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow\boldsymbol M = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ -2 &amp; -2 &amp; 0 \\ 4 &amp; 4 &amp; 4 \end{pmatrix}\)</span></p>
+</li>
+<li>
+<p>（2）</p>
+<p>由 <span class="arithmatex">\(\boldsymbol\alpha = \boldsymbol B\boldsymbol Y =\boldsymbol A\boldsymbol X\)</span>，得 <span class="arithmatex">\(\boldsymbol Y = \boldsymbol M^{-1}\boldsymbol X\)</span>。</p>
+<p><span class="arithmatex">\(\left(\begin{array}{c:c}\boldsymbol M &amp; \boldsymbol X \\\end{array}\right)= \begin{pmatrix}1 &amp; 0 &amp; 0 &amp; \vdots &amp; 0 \\-2 &amp; -2 &amp; 0 &amp; \vdots &amp; 1 \\4 &amp; 4 &amp; 4 &amp; \vdots &amp; -1\end{pmatrix}\xrightarrow{r}\begin{pmatrix}1 &amp; &amp; &amp; \vdots &amp; 0 \\&amp; 1 &amp; &amp; \vdots &amp; -\frac{1}{2} \\&amp; &amp; 1 &amp; \vdots &amp; \frac{1}{4}\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow \boldsymbol Y =(0, -\dfrac{1}{2},\dfrac{1}{4})^T\)</span></p>
+</li>
+</ul>
+</details>
+<p>在 <span class="arithmatex">\(\mathbb P^{2\times 2}\)</span> 中有两组基 <span class="arithmatex">\((\text I)\,\boldsymbol E_{11}=\begin{pmatrix}1&amp;0\\0&amp;0\end{pmatrix},\boldsymbol E_{12}=\begin{pmatrix}0&amp;1\\0&amp;0\end{pmatrix},\boldsymbol E_{21}=\begin{pmatrix}0&amp;0\\1&amp;0\end{pmatrix},\boldsymbol E_{22}=\begin{pmatrix}0&amp;0\\0&amp;1\end{pmatrix}\)</span>，<span class="arithmatex">\((\text{II})\,\boldsymbol E_{11}^*=\begin{pmatrix}1&amp;1\\1&amp;1\end{pmatrix},\boldsymbol E_{12}^*=\begin{pmatrix}1&amp;1\\1&amp;0\end{pmatrix},\boldsymbol E_{21}^*=\begin{pmatrix}1&amp;1\\0&amp;0\end{pmatrix},\boldsymbol E_{22}^*=\begin{pmatrix}1&amp;0\\0&amp;0\end{pmatrix}\)</span></p>
+<p>求：（1）从基 <span class="arithmatex">\((\text I)\)</span> 到基 <span class="arithmatex">\((\text{II})\)</span> 的过渡矩阵；（2）设 <span class="arithmatex">\(\boldsymbol A=\begin{pmatrix}1&amp;2\\3&amp;4\end{pmatrix}\)</span>，求 <span class="arithmatex">\(\boldsymbol A\)</span> 在两组基下的坐标。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p>（1）</p>
+<p>设 <span class="arithmatex">\((\boldsymbol E_{11}^*,\boldsymbol E_{21}^*,\boldsymbol E_{21}^*,\boldsymbol E_{22}^*)=(\boldsymbol E_{11},\boldsymbol E_{12},\boldsymbol E_{21},\boldsymbol E_{22})\boldsymbol M\)</span>。</p>
+<p>因为</p>
+<p><span class="arithmatex">\(E_{11}^*=(\boldsymbol E_{11},\boldsymbol E_{12},\boldsymbol E_{21},\boldsymbol E_{22})(1,1,1,1)^T\)</span></p>
+<p><span class="arithmatex">\(E_{12}^*=(\boldsymbol E_{11},\boldsymbol E_{12},\boldsymbol E_{21},\boldsymbol E_{22})(1,1,1,0)^T\)</span></p>
+<p><span class="arithmatex">\(E_{21}^*=(\boldsymbol E_{11},\boldsymbol E_{12},\boldsymbol E_{21},\boldsymbol E_{22})(1,1,0,0)^T\)</span></p>
+<p><span class="arithmatex">\(E_{22}^*=(\boldsymbol E_{11},\boldsymbol E_{12},\boldsymbol E_{21},\boldsymbol E_{22})(1,0,0,0)^T\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol M=\begin{pmatrix}1&amp;1&amp;1&amp;1\\1&amp;1&amp;1&amp;0\\1&amp;1&amp;0&amp;0\\1&amp;0&amp;0&amp;0\end{pmatrix}\)</span></p>
+</li>
+<li>
+<p>（2）</p>
+<p>设 <span class="arithmatex">\(\boldsymbol A=(\boldsymbol E_{11},\boldsymbol E_{12},\boldsymbol E_{21},\boldsymbol E_{22})\boldsymbol X=(\boldsymbol E_{11}^*,\boldsymbol E_{21}^*,\boldsymbol E_{21}^*,\boldsymbol E_{22}^*)\boldsymbol Y\)</span>，则 <span class="arithmatex">\(\boldsymbol X=(1,2,3,4)^T\)</span>，<span class="arithmatex">\(\boldsymbol Y=\boldsymbol M^{-1}\boldsymbol X\)</span></p>
+<p><span class="arithmatex">\(\left(\begin{array}{c:c}\boldsymbol M &amp; \boldsymbol X \\\end{array}\right)\xrightarrow{r}\left(\begin{array}{c:c}\boldsymbol E &amp; \boldsymbol Y \\\end{array}\right)\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow \boldsymbol Y=(4,-1,-1,-1)^T\)</span></p>
+</li>
+</ul>
+</details>
+</details>
+</li>
+</ul>
+<h3 id="_8">子空间<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>定义：设 <span class="arithmatex">\(V\)</span> 是数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间，<span class="arithmatex">\(W\)</span> 是 <span class="arithmatex">\(V\)</span> 的一个非空子集，若 <span class="arithmatex">\(W\)</span> 关于 <span class="arithmatex">\(V\)</span> 的加法和数乘运算也构成数域 <span class="arithmatex">\(\mathbb P\)</span> 上的一个线性空间，则称 <span class="arithmatex">\(W\)</span> 是 <span class="arithmatex">\(V\)</span> 的一个子空间。</p>
+<p>显然，<span class="arithmatex">\(\{\boldsymbol\theta\}\)</span> 及 <span class="arithmatex">\(V\)</span> 是 <span class="arithmatex">\(V\)</span> 的两个子空间，称为 <span class="arithmatex">\(V\)</span> 的平凡子空间。</p>
+</li>
+<li>
+<p>显然，<span class="arithmatex">\(W\)</span> 要成为 <span class="arithmatex">\(V\)</span> 的一个子空间必须满足：① <span class="arithmatex">\(W\)</span> 是 <span class="arithmatex">\(V\)</span> 的非空子集；② 加法封闭，<span class="arithmatex">\(\forall\boldsymbol\alpha,\boldsymbol\beta\in W\)</span>，<span class="arithmatex">\(\boldsymbol\alpha+\boldsymbol\beta\in W\)</span>；③ 数乘封闭，<span class="arithmatex">\(\forall \boldsymbol\alpha\in W,\forall k\in\mathbb P\)</span>，<span class="arithmatex">\(k\boldsymbol\alpha\in W\)</span>；④ 满足 8 条运算规律。发现满足 ①②③ 就天然满足 ④ 了（由数乘封闭，<span class="arithmatex">\(0\boldsymbol\alpha\)</span> 和 <span class="arithmatex">\((-1)\boldsymbol\alpha\)</span> 都在 <span class="arithmatex">\(W\)</span> 中，所以有零向量和负向量。其余运算规律显然），所以有：</p>
+<p>设 <span class="arithmatex">\(V\)</span> 是数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间，<span class="arithmatex">\(W\)</span> 为 <span class="arithmatex">\(V\)</span> 的非空子集，则 <span class="arithmatex">\(W\)</span> 是 <span class="arithmatex">\(V\)</span> 的子空间 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(W\)</span> 关于 <span class="arithmatex">\(V\)</span> 的加法与数乘运算封闭）。</p>
+<details class="example" open="open">
+<summary>例子</summary>
+<ul>
+<li>
+<p><span class="arithmatex">\(W_1=\{\boldsymbol A\in\mathbb P^{n\times n}\mid \boldsymbol A=\boldsymbol A^T\}\)</span>（对称矩阵的集合）是 <span class="arithmatex">\(\mathbb P^{\times n}\)</span> 的子空间。</p>
+<p><span class="arithmatex">\(W_2=\{\boldsymbol A\in\mathbb P^{n\times n}\mid \boldsymbol A=\boldsymbol -A^T\}\)</span>（反对称矩阵的集合）是 <span class="arithmatex">\(\mathbb P^{\times n}\)</span> 的子空间。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(\boldsymbol A\in\mathbb P^{m\times n}\)</span>，<span class="arithmatex">\(\boldsymbol\beta\in\mathbb P^n\)</span>，<span class="arithmatex">\(r(\boldsymbol A)=r(\boldsymbol{\overline A})=r&lt;n\)</span>，则：</p>
+<p><span class="arithmatex">\(W_1=\{\boldsymbol X\in\mathbb P^n\mid \boldsymbol A\boldsymbol X=\boldsymbol 0\}\)</span> 是 <span class="arithmatex">\(\mathbb P^n\)</span> 的子空间（称为 <span class="arithmatex">\(\boldsymbol A\boldsymbol X=\boldsymbol 0\)</span> 的解空间）。</p>
+<p>但 <span class="arithmatex">\(W_1=\{\boldsymbol X\in\mathbb P^n\mid \boldsymbol A\boldsymbol X=\boldsymbol \beta\}\)</span> 不是 <span class="arithmatex">\(\mathbb P^n\)</span> 的子空间。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(V\)</span> 是数域 <span class="arithmatex">\(\mathbb P\)</span> 上的线性空间，<span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\in V\)</span>，则 <span class="arithmatex">\(L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)=\{k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s\mid k_i\in\mathbb P\}\)</span> 是 <span class="arithmatex">\(V\)</span> 的子空间。</p>
+<p>称 <span class="arithmatex">\(L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)\)</span> 为由向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 生成的子空间。</p>
+<p>特别地，设 <span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n\)</span> 是 <span class="arithmatex">\(V\)</span> 的一组基，则 <span class="arithmatex">\(V=L(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_n)\)</span>，即线性空间 <span class="arithmatex">\(V\)</span> 可看成由一组基所生成的。</p>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p>设线性空间 <span class="arithmatex">\(V\)</span> 中两个向量组 <span class="arithmatex">\((\text I)\,\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span>，<span class="arithmatex">\((\text{II})\,\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t\)</span>，则有：</p>
+<p>①  <span class="arithmatex">\(L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)=L(\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t)\Leftrightarrow (\text I)\)</span> 与 <span class="arithmatex">\((\text{II})\)</span> 等价</p>
+<p>② <span class="arithmatex">\(\dim L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)=r(\text I)\)</span>，且 <span class="arithmatex">\((\text I)\)</span> 的任意一个极大线性无关组都是子空间 <span class="arithmatex">\(L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s)\)</span> 的一组基</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(W=\{\boldsymbol A\in\mathbb P^{3\times 3}\mid \boldsymbol A=-\boldsymbol A^T\}\)</span>，求 <span class="arithmatex">\(W\)</span> 的一组基和维数。</p>
+<details class="note">
+<summary>解答</summary>
+<p>取 <span class="arithmatex">\(\mathbb P^{3\times 3}\)</span> 的常用基 <span class="arithmatex">\(\boldsymbol e_{11},\boldsymbol e_{12},\boldsymbol e_{13},\boldsymbol e_{21},\boldsymbol e_{23},\boldsymbol e_{31},\boldsymbol e_{32},\boldsymbol e_{33}\)</span>。</p>
+<details class="failure" open="open">
+<summary>错解</summary>
+<p>令 <span class="arithmatex">\(\boldsymbol\eta_1=\boldsymbol e_{12}\)</span>，<span class="arithmatex">\(\boldsymbol\eta_2=\boldsymbol e_{13}\)</span>，<span class="arithmatex">\(\boldsymbol\eta_3=\boldsymbol e_{21}\)</span>，<span class="arithmatex">\(\boldsymbol\eta_4=\boldsymbol e_{23}\)</span>，<span class="arithmatex">\(\boldsymbol\eta_5=\boldsymbol e_{31}\)</span>，<span class="arithmatex">\(\boldsymbol\eta_6=\boldsymbol e_{32}\)</span>，则 ① <span class="arithmatex">\(\boldsymbol\eta_1,\boldsymbol\eta_2,\boldsymbol\eta_3,\boldsymbol\eta_4,\boldsymbol\eta_5,\boldsymbol\eta_6\)</span> 线性无关；② <span class="arithmatex">\(\forall\boldsymbol A\in W\)</span>，<span class="arithmatex">\(\boldsymbol A\)</span> 可由 <span class="arithmatex">\(\boldsymbol\eta_1,\boldsymbol\eta_2,\boldsymbol\eta_3,\boldsymbol\eta_4,\boldsymbol\eta_5,\boldsymbol\eta_6\)</span> 线性表示。</p>
+<p>故 <span class="arithmatex">\(\boldsymbol\eta_1,\boldsymbol\eta_2,\boldsymbol\eta_3,\boldsymbol\eta_4,\boldsymbol\eta_5,\boldsymbol\eta_6\)</span> 为 <span class="arithmatex">\(W\)</span> 的一组基，则 <span class="arithmatex">\(\dim W=6\)</span>。</p>
+<details class="warning" open="open">
+<summary>错因</summary>
+<p><span class="arithmatex">\(\boldsymbol\eta_i\notin W\)</span></p>
+</details>
+</details>
+<details class="success" open="open">
+<summary>正解</summary>
+<p>令 <span class="arithmatex">\(\boldsymbol \xi_1=\boldsymbol e_{12}-\boldsymbol e_{21}=\begin{pmatrix}0&amp;1&amp;0\\-1&amp;0&amp;0\\0&amp;0&amp;0\end{pmatrix}\)</span>，<span class="arithmatex">\(\boldsymbol \xi_2=\boldsymbol e_{13}-\boldsymbol e_{31}=\begin{pmatrix}0&amp;0&amp;1\\0&amp;0&amp;0\\-1&amp;0&amp;0\end{pmatrix}\)</span>，<span class="arithmatex">\(\boldsymbol \xi_3=\boldsymbol e_{23}-\boldsymbol e_{32}=\begin{pmatrix}0&amp;0&amp;0\\0&amp;0&amp;1\\0&amp;-1&amp;0\end{pmatrix}\)</span>，则 ① <span class="arithmatex">\(\boldsymbol\xi_1,\boldsymbol\xi_2,\boldsymbol\xi_3\in W\)</span> 且线性无关；② <span class="arithmatex">\(\forall\boldsymbol A\in W\)</span>，<span class="arithmatex">\(\boldsymbol A\)</span> 可由 <span class="arithmatex">\(\boldsymbol\xi_1,\boldsymbol\xi_2,\boldsymbol\xi_3\)</span>。</p>
+<p>故 <span class="arithmatex">\(\boldsymbol\xi_1,\boldsymbol\xi_2,\boldsymbol\xi_3\)</span> 为 <span class="arithmatex">\(W\)</span> 的一组基，则 <span class="arithmatex">\(\dim W=3\)</span>。</p>
+</details>
+</details>
+</details>
 </li>
 </ul>
 
