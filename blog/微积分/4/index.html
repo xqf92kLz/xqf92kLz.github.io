@@ -2086,7 +2086,7 @@
 
   <h1>第四章 不定积分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-07T09:48:43.146384+00:00'>2025-12-07</time></span><span data-tippy-content data-tippy-raw='2025-12-07'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-07T09:48:43.146384+00:00'>2025-12-07</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-07T15:45:05.566237+00:00'>2025-12-07</time></span><span data-tippy-content data-tippy-raw='2025-12-07'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-07T15:45:05.566237+00:00'>2025-12-07</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">不定积分的概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2124,7 +2124,7 @@
 <p>基本积分公式</p>
 <ul>
 <li>
-<p>① <span class="arithmatex">\(\int x^{\alpha}\text dx=\dfrac{x^{\alpha +1}}{\alpha+1}+C\,(\alpha\neq -1)\)</span>，特别地，<span class="arithmatex">\(\int \dfrac 1 {x^2}\text dx=-\dfrac 1 x +C\)</span>，<span class="arithmatex">\(\int \dfrac{1}{\sqrt x}\text dx=2\sqrt x+C\)</span>，<span class="arithmatex">\(\int \sqrt x\text dx=\dfrac 2 3 x^{\frac 3 2}+C\)</span>，<span class="arithmatex">\(\int\dfrac 1 {x^2}\text dx=-\dfrac 1 x +C\)</span></p>
+<p>① <span class="arithmatex">\(\int x^{\alpha}\text dx=\dfrac{x^{\alpha +1}}{\alpha+1}+C\,(\alpha\neq -1)\)</span>，特别地，<span class="arithmatex">\(\int \dfrac 1 {x^2}\text dx=-\dfrac 1 x +C\)</span>，<span class="arithmatex">\(\int \dfrac{1}{\sqrt x}\text dx=2\sqrt x+C\)</span>，<span class="arithmatex">\(\int \sqrt x\text dx=\dfrac 2 3 x^{\frac 3 2}+C\)</span></p>
 </li>
 <li>
 <p>② <span class="arithmatex">\(\int \dfrac 1 x \text dx=\ln |x|+C\)</span></p>
@@ -2236,8 +2236,8 @@
 </details>
 <details class="warning" open="open">
 <summary>注意</summary>
-<p>分段函数的积分，要确保原函数在分界点处的连续性。</p>
 </details>
+<p>分段函数的积分，要确保原函数在分界点处的连续性。</p>
 </details>
 </li>
 <li>
@@ -2323,7 +2323,7 @@
 <p>③ 根式代换：<span class="arithmatex">\(\sqrt[n]{ax+b},\sqrt{\dfrac{ax+b}{cx+d}},\sqrt{ae^{bx}+c}\)</span> 等一般令根式 <span class="arithmatex">\(\sqrt{*}=t\)</span>。既有 <span class="arithmatex">\(\sqrt[n]{ax+b}\)</span> 又有 <span class="arithmatex">\(\sqrt[m]{ax+b}\)</span> 一般令 <span class="arithmatex">\(\sqrt[\text{lcm}(n,m)]{ax+b}=t\)</span>。</p>
 </li>
 <li>
-<p>④ 倒代换：当被积函数分母的幂次比分子高 <span class="arithmatex">\(\geq 2\)</span> 次时，作倒代换，令 <span class="arithmatex">\(x=\dfrac 1 5\)</span>。</p>
+<p>④ 倒代换：当被积函数分母的幂次比分子高 <span class="arithmatex">\(\geq 2\)</span> 次时，作倒代换，令 <span class="arithmatex">\(x=\dfrac 1 t\)</span>。</p>
 </li>
 <li>⑤ 复杂函数的直接代换：当被积函数中含有 <span class="arithmatex">\(a^x,e^x,\ln x,\arcsin x,\arctan x\)</span> 等时，可考虑直接令复杂函数等于 <span class="arithmatex">\(t\)</span>。值得指出的是，当 <span class="arithmatex">\(\ln x,\arcsin x,\arctan x\)</span> 与 <span class="arithmatex">\(P_n(x)\)</span> 或 <span class="arithmatex">\(e^{ax}\)</span> 作乘法时（其中 <span class="arithmatex">\(P_n(x)\)</span> 为 <span class="arithmatex">\(x\)</span> 的 <span class="arithmatex">\(n\)</span> 次多项式），优先考虑分部积分法。</li>
 </ul>
@@ -2354,8 +2354,8 @@
 <details class="note">
 <summary>解答</summary>
 <p>设 <span class="arithmatex">\(\sqrt{1+e^x}=t\)</span>，则 <span class="arithmatex">\(x=\ln(t^2-1)\)</span>，<span class="arithmatex">\(\text dx=\dfrac{2t}{t^2-1}\text dt\)</span>。</p>
-<p>（1）<span class="arithmatex">\(=\int \dfrac 1 t\cdot \dfrac{2t}{t^2-1}\text du=\int (\dfrac 1 {t-1}-\dfrac 1 {t+1})\text du=\ln|\dfrac{t-1}{t+1}|+C=\ln\dfrac{\sqrt{1+e^x}-1}{\sqrt{1+e^x}+1}+C\)</span></p>
-<p>（2）<span class="arithmatex">\(=\int u\cdot \dfrac{2u}{u^2-1}\text du=2\int(1+\dfrac{1}{u^2-1})\text du=2\int (1+\dfrac 1 2 (\dfrac 1 {u-1}-\dfrac 1 {u+1}))\text du=2u+\ln|\dfrac{u-1}{u+1}|+C=2\sqrt{1+e^x}+\ln\dfrac{\sqrt{1+e^x}-1}{\sqrt{1+e^x}+1}+C\)</span></p>
+<p>（1）<span class="arithmatex">\(=\int \dfrac 1 t\cdot \dfrac{2t}{t^2-1}\text dt=\int (\dfrac 1 {t-1}-\dfrac 1 {t+1})\text dt=\ln|\dfrac{t-1}{t+1}|+C=\ln\dfrac{\sqrt{1+e^x}-1}{\sqrt{1+e^x}+1}+C\)</span></p>
+<p>（2）<span class="arithmatex">\(=\int t\cdot \dfrac{2t}{t^2-1}\text dt=2\int(1+\dfrac{1}{t^2-1})\text dt=2\int (1+\dfrac 1 2 (\dfrac 1 {t-1}-\dfrac 1 {t+1}))\text dt=2t+\ln|\dfrac{t-1}{t+1}|+C=2\sqrt{1+e^x}+\ln\dfrac{\sqrt{1+e^x}-1}{\sqrt{1+e^x}+1}+C\)</span></p>
 </details>
 <p>计算：<span class="arithmatex">\(\int \dfrac{\text dx}{x^2\sqrt{x^2-1}}\)</span>。</p>
 <details class="note">
