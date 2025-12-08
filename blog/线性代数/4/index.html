@@ -2108,7 +2108,7 @@
 
   <h1>第四章 $n$ 元向量空间</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-08T02:19:53.693310+00:00'>2025-12-08</time></span><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-08T02:19:53.693310+00:00'>2025-12-08</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-08T03:40:53.462499+00:00'>2025-12-08</time></span><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-08T03:40:53.462499+00:00'>2025-12-08</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">向量组<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2472,7 +2472,7 @@
 </li>
 <li>
 <p>非齐次线性方程组的通解</p>
-<p>当非齐次线性方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 有无穷多解时，它的通解课表示为 <span class="arithmatex">\(\boldsymbol x=\boldsymbol \eta^*+k_1\boldsymbol{\xi}_1+k_2\boldsymbol{\xi}_2+\cdots+k_{n-r}\boldsymbol{\xi}_{n-r}\)</span>，其中 <span class="arithmatex">\(\boldsymbol\eta^*\)</span> 是方程 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 的一个特解，<span class="arithmatex">\(r=r(\boldsymbol A)\)</span>，<span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_{n-r}\)</span> 为导出组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的基础解系。</p>
+<p>当非齐次线性方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 有无穷多解时，它的通解可表示为 <span class="arithmatex">\(\boldsymbol x=\boldsymbol \eta^*+k_1\boldsymbol{\xi}_1+k_2\boldsymbol{\xi}_2+\cdots+k_{n-r}\boldsymbol{\xi}_{n-r}\)</span>，其中 <span class="arithmatex">\(\boldsymbol\eta^*\)</span> 是方程 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 的一个特解，<span class="arithmatex">\(r=r(\boldsymbol A)\)</span>，<span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_{n-r}\)</span> 为导出组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的基础解系。</p>
 <details class="tip" open="open">
 <summary>求非齐次线性方程组的通解</summary>
 <ul>
@@ -2484,6 +2484,40 @@
 </li>
 </ul>
 </details>
+<details class="example" open="open">
+<summary>例题</summary>
+<p><span class="arithmatex">\(\boldsymbol A_{m\times n}\boldsymbol X=\boldsymbol b\)</span>，设 <span class="arithmatex">\(r(\boldsymbol A)=r(\boldsymbol{\overline A})=r&lt;n\)</span>。记 <span class="arithmatex">\(W=\{\boldsymbol X\mid \boldsymbol A\boldsymbol X=\boldsymbol b,\boldsymbol X\in\mathbb P^n\}\)</span>，问 <span class="arithmatex">\(\boldsymbol W\)</span> 中是否存在极大线性无关组？</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol\eta^*\)</span> 是方程 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol b\)</span> 的一个解，<span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_{n-r}\)</span> 为 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的基础解系。</p>
+<p>取向量组 <span class="arithmatex">\(\boldsymbol\eta_0,\boldsymbol\eta_0+\boldsymbol{\xi}_1,\cdots,\boldsymbol\eta_0+\boldsymbol{\xi}_{n-r}\)</span>（<span class="arithmatex">\(n-r+1\)</span> 个向量），可以证明：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\boldsymbol\eta_0,\boldsymbol\eta_0+\boldsymbol{\xi}_1,\cdots,\boldsymbol\eta_0+\boldsymbol{\xi}_{n-r}\in W\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\boldsymbol\eta_0,\boldsymbol\eta_0+\boldsymbol{\xi}_1,\cdots,\boldsymbol\eta_0+\boldsymbol{\xi}_{n-r}\)</span> 线性无关：</p>
+<ul>
+<li>
+<p>法 1：</p>
+<p>假设 <span class="arithmatex">\(k_0\boldsymbol\eta_0+k_1(\boldsymbol\eta_0+\boldsymbol{\xi}_1)+\cdots+k_{n-r}(\boldsymbol\eta_0+\boldsymbol{\xi}_{n-r})=\boldsymbol 0\)</span></p>
+<p>则 <span class="arithmatex">\((k_0+k_1+\cdots+k_{n-r})\boldsymbol\eta_0+k_1\boldsymbol{\xi}_1+\cdots+k_{n-r}\boldsymbol{\xi}_{n-r}=\boldsymbol 0\)</span></p>
+<p>若 <span class="arithmatex">\(k_0+k_1+\cdots+k_{n-r}\neq 0\)</span>，则 <span class="arithmatex">\(\boldsymbol\eta_0\)</span>（非齐次解）可由 <span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_{n-r}\)</span> 线性表示，矛盾。故 <span class="arithmatex">\(k_0+k_1+\cdots+k_{n-r}=0\)</span>，进而 <span class="arithmatex">\(k_1\boldsymbol{\xi}_1+\cdots+k_{n-r}\boldsymbol{\xi}_{n-r}=\boldsymbol 0\)</span>。</p>
+<p>由于 <span class="arithmatex">\(\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_{n-r}\)</span> 线性无关，故 <span class="arithmatex">\(k_1=\cdots=k_{n-r}=0\)</span>，从而 <span class="arithmatex">\(k_0=0\)</span>，因此该向量组线性无关。</p>
+</li>
+<li>
+<p>法 2：</p>
+<p><span class="arithmatex">\(r(\boldsymbol\eta_0,\boldsymbol\eta_0+\boldsymbol{\xi}_1,\cdots,\boldsymbol\eta_0+\boldsymbol{\xi}_{n-r})=r(\boldsymbol\eta_0,\boldsymbol{\xi}_1,\cdots,\boldsymbol{\xi}_{n-r})=n-r+1\)</span>，故该向量组线性无关。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall \boldsymbol X\in W\)</span>，<span class="arithmatex">\(\boldsymbol X\)</span> 可由 <span class="arithmatex">\(\boldsymbol\eta_0,\boldsymbol\eta_0+\boldsymbol{\xi}_1,\cdots,\boldsymbol\eta_0+\boldsymbol{\xi}_{n-r}\)</span> 线性表示：</p>
+<p>对 <span class="arithmatex">\(\forall\boldsymbol X\in W\)</span>，存在 <span class="arithmatex">\(\boldsymbol X=\boldsymbol \eta_0+t_1\boldsymbol \xi_1+\cdots+\boldsymbol \xi_{n-r}\)</span>（非齐次解的结构），则 <span class="arithmatex">\(\boldsymbol X=(1-t_1-\cdots-t_{n-r})\boldsymbol \eta_0+t_1(\boldsymbol \eta_0+\boldsymbol \xi_1)+\cdots+t_{n-r}(\boldsymbol \eta_0+\boldsymbol \xi_{n-r})\)</span>，即 <span class="arithmatex">\(\boldsymbol X\)</span> 可由该向量组线性表示。</p>
+</li>
+</ul>
+</details>
+</details>
 </li>
 </ul>
 </li>
@@ -2491,7 +2525,7 @@
 <h2 id="_5">题目<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<details class="example">
+<details class="example" open="open">
 <summary>例题</summary>
 <p>设向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3\)</span> 线性相关，向量组 <span class="arithmatex">\(\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4\)</span> 线性无关，问：</p>
 <p>（1）<span class="arithmatex">\(\boldsymbol{\alpha}_1\)</span> 能否由 <span class="arithmatex">\(\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3\)</span> 线性表示？</p>
@@ -2510,6 +2544,36 @@
 <li>
 <p>反证法。假设 <span class="arithmatex">\(\boldsymbol{\alpha}_4=k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+k_3\boldsymbol{\alpha}_3k_1(l_1\boldsymbol{\alpha}_2+l_3\boldsymbol{\alpha}_3)+k_2\boldsymbol{\alpha}_2+k_3\boldsymbol{\alpha}_3=(k_1l_2+k_2)\boldsymbol{\alpha}_2+(k_1l_3+k_3)\boldsymbol{\alpha}_3\)</span>，则 <span class="arithmatex">\(\boldsymbol{\alpha}_4\)</span> 可由 <span class="arithmatex">\(\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3\)</span> 线性表示，这与 <span class="arithmatex">\(\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4\)</span> 线性无关矛盾。</p>
 <p>故 <span class="arithmatex">\(\boldsymbol{\alpha}_4\)</span> 不能由 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3\)</span> 线性表示。</p>
+</li>
+</ul>
+</details>
+<p>设 <span class="arithmatex">\(\boldsymbol A_{m\times n},\boldsymbol B_{n\times t}=\boldsymbol O\)</span>，求证：</p>
+<p>（1）<span class="arithmatex">\(\boldsymbol B\)</span> 的列向量是齐次线性方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol X=\boldsymbol O\)</span> 的解向量</p>
+<p>（2）<span class="arithmatex">\(r(\boldsymbol A_{m\times n})+r(\boldsymbol B_{n\times t})\leq n\)</span></p>
+<p>（3）若 <span class="arithmatex">\(r(\boldsymbol A_{m\times n})=n\)</span>，则 <span class="arithmatex">\(\boldsymbol B=\boldsymbol O\)</span></p>
+<p>（4）若 <span class="arithmatex">\(\boldsymbol B\neq \boldsymbol O\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的列向量组线性相关</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p>（1）</p>
+<p>令 <span class="arithmatex">\(\boldsymbol B=(\boldsymbol \beta_1,\cdots,\boldsymbol \beta_t)\)</span>，则 <span class="arithmatex">\(\boldsymbol A\boldsymbol B=\boldsymbol A(\boldsymbol \beta_1,\cdots,\boldsymbol \beta_t)=(\boldsymbol A\boldsymbol \beta_1,\cdots,\boldsymbol A\boldsymbol \beta_t)=\boldsymbol O\)</span>，所以 <span class="arithmatex">\(\boldsymbol A\boldsymbol \beta_i=\boldsymbol O\,(i=1,\cdots,t)\)</span>，即 <span class="arithmatex">\(\boldsymbol \beta_i\)</span> 是 <span class="arithmatex">\(\boldsymbol A\boldsymbol X=\boldsymbol O\)</span> 的解向量。</p>
+</li>
+<li>
+<p>（2）</p>
+<p>记 <span class="arithmatex">\(W=\{\boldsymbol X\mid \boldsymbol A\boldsymbol X=\boldsymbol O,\boldsymbol X\in\mathbb P^n\}\)</span>，则 <span class="arithmatex">\(\dim W=n-r(\boldsymbol A)\)</span>。</p>
+<p>因为 <span class="arithmatex">\(\boldsymbol \beta_1,\boldsymbol \beta_2,\cdots,\boldsymbol \beta_t\in W\)</span>，所以 <span class="arithmatex">\(r(\boldsymbol \beta_1,\boldsymbol \beta_2,\cdots,\boldsymbol \beta_t)\leq n-r(\boldsymbol A)\)</span>。</p>
+<p>故 <span class="arithmatex">\(r(\boldsymbol B_{n\times t})\leq n-r(\boldsymbol A)\)</span>，即 <span class="arithmatex">\(r(\boldsymbol A)+r(\boldsymbol B)\leq n\)</span>。</p>
+</li>
+<li>
+<p>（3）</p>
+<p>法 1：由（2）可得。</p>
+<p>法 2：因为 <span class="arithmatex">\(r(\boldsymbol A_{m\times n})=n\)</span>，所以 <span class="arithmatex">\(\boldsymbol A\boldsymbol X=\boldsymbol O\)</span> 只有零解。因为 <span class="arithmatex">\(\boldsymbol A\boldsymbol \beta_i=\boldsymbol O\)</span>，所以 <span class="arithmatex">\(\boldsymbol \beta_i=\boldsymbol 0\)</span>。故 <span class="arithmatex">\(\boldsymbol B=\boldsymbol O\)</span>。</p>
+</li>
+<li>
+<p>（4）</p>
+<p>因为 <span class="arithmatex">\(\boldsymbol B\neq \boldsymbol O\)</span>，所以 <span class="arithmatex">\(\boldsymbol B\)</span> 有某一个列向量 <span class="arithmatex">\(\boldsymbol \beta_j\neq \boldsymbol 0\)</span> 使得 <span class="arithmatex">\(\boldsymbol A\boldsymbol \beta_j=\boldsymbol O\)</span>。</p>
+<p>所以 <span class="arithmatex">\(\boldsymbol A_{m\times n}\boldsymbol X=\boldsymbol O\)</span> 有非零解，故 <span class="arithmatex">\(r(\boldsymbol A_{m\times n})&lt;n\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的列向量组线性相关。</p>
 </li>
 </ul>
 </details>
