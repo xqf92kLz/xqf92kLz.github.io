@@ -2174,7 +2174,7 @@
 
   <h1>第八章 欧式空间</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-08T03:55:53.973495+00:00'>2025-12-08</time></span><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-08T03:55:53.973495+00:00'>2025-12-08</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-08T06:53:14.634221+00:00'>2025-12-08</time></span><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-08T06:53:14.634221+00:00'>2025-12-08</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">内积、欧式空间的定义<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2207,6 +2207,14 @@
 </li>
 <li>
 <p>任意一个实数域上的有限维线性空间都可以定义适当的内积成为欧式空间。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(\dim V=n\)</span>，<span class="arithmatex">\(\boldsymbol\xi_1,\boldsymbol\xi_2,\cdots,\boldsymbol\xi_n\)</span> 为 <span class="arithmatex">\(V\)</span> 的一组基。</p>
+<p><span class="arithmatex">\(\forall\boldsymbol\alpha,\boldsymbol\beta\in V\)</span>，</p>
+<p><span class="arithmatex">\(\boldsymbol\alpha=x_1\boldsymbol\xi_1+x_2\boldsymbol\xi_2+\cdots+x_n\boldsymbol\xi_n=(\boldsymbol\xi_1,\boldsymbol\xi_2,\cdots,\boldsymbol\xi_n)\boldsymbol X\)</span>，<span class="arithmatex">\(\boldsymbol X\in\mathbb R^n\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol\beta=y_1\boldsymbol\xi_1+y_2\boldsymbol\xi_2+\cdots+y_n\boldsymbol\xi_n=(\boldsymbol\xi_1,\boldsymbol\xi_2,\cdots,\boldsymbol\xi_n)\boldsymbol Y\)</span>，<span class="arithmatex">\(\boldsymbol Y\in\mathbb R^n\)</span></p>
+<p>定义 <span class="arithmatex">\((\boldsymbol\alpha,\boldsymbol\beta)=(\boldsymbol X,\boldsymbol Y)=x_1y_1+x_2y_2+\cdots+x_ny_n=\boldsymbol  X^T\boldsymbol Y\)</span>，可以证明 <span class="arithmatex">\((\boldsymbol\alpha,\boldsymbol\beta)\)</span> 符合内积定义，故 <span class="arithmatex">\(V\)</span> 可以构成欧式空间。</p>
+</details>
 </li>
 </ul>
 <h3 id="_3">度量矩阵<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -2215,6 +2223,9 @@
 <p>度量矩阵的定义：</p>
 <p>设 <span class="arithmatex">\(\boldsymbol\varepsilon_1,\boldsymbol\varepsilon_2,\cdots,\boldsymbol\varepsilon_n\)</span> 是具有内积 <span class="arithmatex">\((\cdot,\cdot)\)</span> 的 <span class="arithmatex">\(n\)</span> 维欧式空间 <span class="arithmatex">\(V\)</span> 的一个基。称 <span class="arithmatex">\(\boldsymbol A=[(\boldsymbol\varepsilon_i,\boldsymbol\varepsilon_j)]_{n\times n}\)</span> 为内积在基 <span class="arithmatex">\(\boldsymbol\varepsilon_1,\boldsymbol\varepsilon_2,\cdots,\boldsymbol\varepsilon_n\)</span> 下的度量矩阵。</p>
 <p><span class="arithmatex">\(\forall \boldsymbol\alpha,\boldsymbol\beta\in V\)</span>，若它们在基 <span class="arithmatex">\(\boldsymbol\varepsilon_1,\boldsymbol\varepsilon_2,\cdots,\boldsymbol\varepsilon_n\)</span> 下的坐标分别为 <span class="arithmatex">\(\boldsymbol X=\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix},\boldsymbol Y=\begin{pmatrix}y_1\\y_2\\\vdots\\y_n\end{pmatrix}\)</span>，则 <span class="arithmatex">\((\boldsymbol\alpha,\boldsymbol\beta)=(\sum_{i=1}^n x_i\boldsymbol\varepsilon_i,\sum_{j=1}^n y_j\boldsymbol\varepsilon_j)=\sum_{i=1}^n\sum_{j=1}^n x_iy_j(\boldsymbol\varepsilon_i,\boldsymbol\varepsilon_j)=\boldsymbol X^T\boldsymbol A\boldsymbol Y\)</span>，于是，任意两个向量的内积可以经某个基以及向量在基下的坐标来刻画。</p>
+</li>
+<li>
+<p>性质：对度量矩阵 <span class="arithmatex">\(\boldsymbol A\)</span>，<span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\)</span>，<span class="arithmatex">\(a_{ii}=(\boldsymbol\varepsilon_i,\boldsymbol \varepsilon_i)=\|\boldsymbol \varepsilon_i\|^2&gt;0\)</span></p>
 </li>
 <li>
 <p>同一个内积下，不同基的度量矩阵的联系：</p>
