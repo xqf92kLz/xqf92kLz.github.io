@@ -2136,7 +2136,7 @@
 
   <h1>第二章 导数与微分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-09T06:35:59.528476+00:00'>2025-12-09</time></span><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-09T06:35:59.528476+00:00'>2025-12-09</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-09T07:53:04.488157+00:00'>2025-12-09</time></span><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-09T07:53:04.488157+00:00'>2025-12-09</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">导数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3065,14 +3065,19 @@
 </li>
 </ul>
 <h2 id="_5">易错点<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<details class="warning" open="open">
+<summary>注意</summary>
 <ul>
 <li>
 <p>注意对谁求导。如 <span class="arithmatex">\((x^y)_x'=yx^{y-1}\)</span>，<span class="arithmatex">\((x^y)_y'=x^y\ln x\)</span></p>
 </li>
 <li>
-<p>注意 <span class="arithmatex">\(f'(x_0)&gt;0\)</span> 不能说明 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 单调递增，只能说明 <span class="arithmatex">\(\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}&gt;0\)</span>。</p>
+<p>注意 <span class="arithmatex">\(f'(x_0)&gt;0\)</span> 不能说明 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 单调递增，只能说明 <span class="arithmatex">\(\lim_{x\to x_0}\dfrac{f(x)-f(x_0)}{x-x_0}&gt;0\)</span>。</p>
+<p>例如 <span class="arithmatex">\(f(x)=\begin{cases}\frac x 2+x^2\sin\frac 1 x&amp;(x\neq 0)\\0&amp;(x=0)\end{cases}\)</span>，<span class="arithmatex">\(f'(x)=\begin{cases}\frac 1 2+2x\sin\frac 1 x-\cos\frac 1 x&amp;(x\neq 0)\\\frac 1 2&amp;(x=0)\end{cases}\)</span>。对 <span class="arithmatex">\(x=0\)</span> 的任何一个邻域 <span class="arithmatex">\(U(0,\delta)\)</span>，<span class="arithmatex">\(\exists n\in\mathbb N\)</span> 使得 <span class="arithmatex">\(\dfrac 1 n&lt;\delta\)</span>，取 <span class="arithmatex">\(x_n=\pm\dfrac 1 {2n\pi}\)</span>，<span class="arithmatex">\(y_n=\pm\dfrac 1 {2n\pi+pi}\)</span>，有 <span class="arithmatex">\(f'(x_n)=-\dfrac 1 2\)</span>，<span class="arithmatex">\(f'(y_n)=\dfrac 3 2\)</span>。因此不存在 <span class="arithmatex">\(\delta&gt;0\)</span>，使得 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(U(0,\delta)\)</span> 内单调。</p>
+<p>尽管 <span class="arithmatex">\(f'(x_0)&gt;0\)</span>，但并不存在 <span class="arithmatex">\(\delta&gt;0\)</span> 使得 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((x_0-\delta,x_0+\delta)\)</span> 内单调递增。</p>
 </li>
 </ul>
+</details>
 
 
 

@@ -683,7 +683,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        函数图形的凹凸性与拐点
+        函数的单调区间与极值
       
     </span>
   </a>
@@ -694,7 +694,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        函数图形的描绘
+        函数图形的凹凸性与拐点
       
     </span>
   </a>
@@ -703,6 +703,17 @@
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        函数图形的描绘
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         曲率
@@ -718,7 +729,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
         题目
@@ -2138,7 +2149,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        函数图形的凹凸性与拐点
+        函数的单调区间与极值
       
     </span>
   </a>
@@ -2149,7 +2160,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        函数图形的描绘
+        函数图形的凹凸性与拐点
       
     </span>
   </a>
@@ -2158,6 +2169,17 @@
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        函数图形的描绘
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         曲率
@@ -2173,7 +2195,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
         题目
@@ -2202,7 +2224,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-09T06:35:59.529476+00:00'>2025-12-09</time></span><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-09T06:35:59.529476+00:00'>2025-12-09</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-09T07:53:04.488157+00:00'>2025-12-09</time></span><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-09T07:53:04.488157+00:00'>2025-12-09</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2358,7 +2380,7 @@
 </details>
 </li>
 <li>
-<p>柯西（Cauchy）中值定理：设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(g'(x)\neq 0\)</span>，则 <span class="arithmatex">\(\exist \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}\)</span>。</p>
+<p>柯西（Cauchy）中值定理：设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(g'(x)\neq 0\)</span>，则 <span class="arithmatex">\(\exist \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f'(\xi)}{g'(\xi)}\)</span>。</p>
 <details class="note">
 <summary>证明</summary>
 <details class="failure" open="open">
@@ -2393,58 +2415,12 @@
 </details>
 </details>
 </li>
-<li>
-<p>函数的单调区间与极值</p>
-<ul>
-<li>
-<p>函数的极值：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 内有定义，若 <span class="arithmatex">\(\exists \delta&gt;0\)</span>，对 <span class="arithmatex">\(\forall x\in U(x_0,\delta)\)</span> 均有 <span class="arithmatex">\(f(x)\geq f(x_0)\)</span>（或 <span class="arithmatex">\(f(x)\leq f(x_0)\)</span>），则称 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极大值（或极小值）。</p>
-</li>
-<li>
-<p>极值存在的必要条件（费马定理）：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极值，且 <span class="arithmatex">\(f'(x_0)\)</span> 存在，则 <span class="arithmatex">\(f'(x_0)=0\)</span>。</p>
-</li>
-<li>
-<p>极值存在的充分条件：</p>
-<ul>
-<li>
-<p>第一充分条件：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续，且 <span class="arithmatex">\(\exists \delta&gt;0\)</span>，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0,\delta)\)</span> 可导，</p>
-<ol>
-<li>当 <span class="arithmatex">\(x\in \mathring U_-(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&gt;0\)</span>；当 <span class="arithmatex">\(x\in \mathring U_+(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&lt;0\)</span>；则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极大值。</li>
-<li>当 <span class="arithmatex">\(x\in\mathring U_+(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&lt;0\)</span>；当 <span class="arithmatex">\(x\in\mathring U_+(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&gt;0\)</span>；则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极小值。</li>
-<li>若 <span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0,\delta)\)</span> 内不变号，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处没有极值。</li>
-</ol>
-<details class="warning" open="open">
-<summary>注意</summary>
-<p>① 这仅仅是充分条件，不是充要条件。也就是说，若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处取极大值，不一定 <span class="arithmatex">\(\exists\delta&gt;0\)</span>，使得 <span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(\mathring U_-(x_0,\delta)\)</span> 内 <span class="arithmatex">\(&gt;0\)</span>，在 <span class="arithmatex">\(\mathring U_+(x_0,\delta)\)</span> 内 <span class="arithmatex">\(&lt;0\)</span>。</p>
-<p>例如 <span class="arithmatex">\(f(x)=\begin{cases}x^2(1+\sin\frac 1 x)&amp;(x\neq 0)\\0&amp;(x=0)\end{cases}\)</span>：<span class="arithmatex">\(f(x)\geq 0\)</span>，故 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处取极小值。当 <span class="arithmatex">\(x\neq 0\)</span> 时，<span class="arithmatex">\(f'(x)=2x(1+\sin\dfrac 1 x)-\cos\dfrac 1 x\)</span>，<span class="arithmatex">\(f'(\dfrac 1 {2n\pi})=\dfrac 1 {n\pi}-1&lt;0\)</span>，<span class="arithmatex">\(f'(\dfrac{1}{2n\pi+\pi})=\dfrac{2}{2n\pi+\pi}+1&gt;0\)</span>。</p>
-<p>② <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续的前提条件不能漏。</p>
-<p>③ <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处不一定可导，只要 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0,\delta)\)</span> 内可导就行。</p>
-</details>
-</li>
-<li>
-<p>第二充分条件：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处二阶可导，且 <span class="arithmatex">\(f'(x_0)=0\)</span>，</p>
-<ol>
-<li>若 <span class="arithmatex">\(f''(x_0)&gt;0\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极小值。</li>
-<li>若 <span class="arithmatex">\(f''(x_0)&lt;0\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极大值。</li>
-<li>若 <span class="arithmatex">\(f''(x_0)=0\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可能有极值，也可能没有极值。</li>
-</ol>
-</li>
-<li>
-<p>第三充分条件：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内存在 <span class="arithmatex">\((n-1)\)</span> 阶导数，在 <span class="arithmatex">\(x_0\)</span> 处 <span class="arithmatex">\(n\)</span> 阶可导，且 <span class="arithmatex">\(f^{(k)}(x_0)=0\,(k=1,2,\cdots,n-1)\)</span>，<span class="arithmatex">\(f^{(n)}(x_0)\neq 0\)</span>，则</p>
-<ol>
-<li>当 <span class="arithmatex">\(n\)</span> 为偶数时，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处取极值；且当 <span class="arithmatex">\(f^{(n)}(x_0)&gt;0\)</span> 时，有极小值；当 <span class="arithmatex">\(f^{(n)}(x_0)&lt;0\)</span> 时，有极大值。</li>
-<li>当 <span class="arithmatex">\(n\)</span> 为奇数时，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处没有极值。</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 <h3 id="_3">洛必达法则<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p><span class="arithmatex">\(\frac 0 0\)</span> 型</p>
-<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内满足：① <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=\lim\limits_{x\to x_0}g(x)=0\)</span>；② <span class="arithmatex">\(f(x),g(x)\)</span> 可导且 <span class="arithmatex">\(g'(x)\neq 0\)</span>；③ <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f'(x)}{g'(x)}=A\)</span>（常数或 <span class="arithmatex">\(\infty\)</span>），则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\frac{f'(x)}{g'(x)}=A\)</span>。</p>
+<p><span class="arithmatex">\(\dfrac 0 0\)</span> 型</p>
+<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内满足：① <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=\lim\limits_{x\to x_0}g(x)=0\)</span>；② <span class="arithmatex">\(f(x),g(x)\)</span> 可导且 <span class="arithmatex">\(g'(x)\neq 0\)</span>；③ <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f'(x)}{g'(x)}=A\)</span>（常数或 <span class="arithmatex">\(\infty\)</span>），则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\dfrac{f'(x)}{g'(x)}=A\)</span>。</p>
 <details class="note">
 <summary>证明</summary>
 <p>重新定义 <span class="arithmatex">\(f(x_0)=g(x_0)=0\)</span>，则 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 内连续。</p>
@@ -2452,18 +2428,23 @@
 <p>两边取极限，<span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\dfrac{f'(\xi)}{g'(\xi)}=\lim\limits_{\xi\to x_0}\dfrac{f'(\xi)}{g'(\xi)}=A\)</span>。</p>
 <p><span class="arithmatex">\(A\)</span> 无穷大怎么办？</p>
 </details>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>“设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内满足：① <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)=\lim\limits_{x\to x_0}g(x)=0\)</span>；② <span class="arithmatex">\(f(x),g(x)\)</span> 可导且 <span class="arithmatex">\(g'(x)\neq 0\)</span>；③ <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)}{g(x)}=A\in\mathbb R\)</span>，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f'(x)}{g'(x)}=A\)</span>”是错误的。例如 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{x+\cos x}{x-\cos x}=\lim\limits_{x\to +\infty}\dfrac{1+\frac{\cos x}x}{1-\frac{\cos x}x}=1\)</span>，但 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{(x+\cos x)'}{(x-\cos x)'}=\lim\limits_{x\to +\infty}\dfrac{1-\sin x}{1+\sin x}\)</span> 不存在。</p>
+</details>
 </li>
 <li>
-<p><span class="arithmatex">\(\frac{*}{\infty}\)</span> 型</p>
-<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内满足：① <span class="arithmatex">\(\lim\limits_{x\to x_0}g(x)=\infty\)</span>；② <span class="arithmatex">\(f(x),g(x)\)</span> 可导且 <span class="arithmatex">\(g'(x)\neq 0\)</span>；③ <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f'(x)}{g'(x)}=A\)</span>（常数或 <span class="arithmatex">\(\infty\)</span>），则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\frac{f'(x)}{g'(x)}=A\)</span>。</p>
-<details class="warning">
+<p><span class="arithmatex">\(\dfrac{*}{\infty}\)</span> 型</p>
+<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内满足：① <span class="arithmatex">\(\lim\limits_{x\to x_0}g(x)=\infty\)</span>；② <span class="arithmatex">\(f(x),g(x)\)</span> 可导且 <span class="arithmatex">\(g'(x)\neq 0\)</span>；③ <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f'(x)}{g'(x)}=A\)</span>（常数或 <span class="arithmatex">\(\infty\)</span>），则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\dfrac{f'(x)}{g'(x)}=A\)</span>。</p>
+<details class="warning" open="open">
 <summary>注意</summary>
-<p>使用洛必达法则时，应注意：所求极限为 <span class="arithmatex">\(\dfrac 0 0\)</span> 或 <span class="arithmatex">\(\dfrac * {\infty}\)</span> 型；分子分母的导数存在；导数比 <span class="arithmatex">\(\frac{f'(x)}{g'(x)}\)</span> 的极限存在（如 <span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{x+\sin x}{x-\sin x}\)</span> 为 <span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span> 型极限，但 <span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{1+\cos x}{1-\cos x}\)</span> 不存在，故不能用洛必达法则；<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{x^2\sin\frac 1 x}{e^x-1}\)</span> 为 <span class="arithmatex">\(\dfrac 0 0\)</span> 型极限，但 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{2x\sin \frac 1 x-\cos\frac 1 x}{e^x}\)</span> 不存在，故不能用洛必达法则）。</p>
+<p>① 所求极限为 <span class="arithmatex">\(\dfrac 0 0\)</span> 或 <span class="arithmatex">\(\dfrac * {\infty}\)</span> 型；② 分子分母的导数存在；③ 导数比 <span class="arithmatex">\(\dfrac{f'(x)}{g'(x)}\)</span> 的极限存在，才能用洛必达！</p>
+<p>例如 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{2x}{x+1}\)</span> 不是 <span class="arithmatex">\(\dfrac 0 0\)</span> 或 <span class="arithmatex">\(\dfrac * {\infty}\)</span> 型，不能用洛必达；<span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{x+\sin x}{x-\sin x}\)</span> 为 <span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span> 型极限，但 <span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{1+\cos x}{1-\cos x}\)</span> 不存在，不能用洛必达；<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{x^2\sin\frac 1 x}{e^x-1}\)</span> 为 <span class="arithmatex">\(\dfrac 0 0\)</span> 型极限，但 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{2x\sin \frac 1 x-\cos\frac 1 x}{e^x}\)</span> 不存在，不能用洛必达。</p>
 </details>
 </li>
 <li>
 <p>其他类型未定式的极限</p>
-<p><span class="arithmatex">\(0\cdot \infty=0\cdot \frac 1 {0}\)</span> 或 <span class="arithmatex">\(=\frac{1}{\infty}\cdot \infty\)</span></p>
+<p><span class="arithmatex">\(0\cdot \infty=0\cdot \dfrac 1 {0}\)</span> 或 <span class="arithmatex">\(=\dfrac{1}{\infty}\cdot \infty\)</span></p>
 <p><span class="arithmatex">\(1^{\infty}=e^{\infty\cdot 0}\)</span></p>
 <p><span class="arithmatex">\(0^0=e^{0\cdot \infty}\)</span></p>
 <p><span class="arithmatex">\(\infty^0=e^{0\cdot \infty}\)</span></p>
@@ -2588,7 +2569,7 @@
 <ul>
 <li>
 <p>泰勒（Taylor）多项式：</p>
-<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处 <span class="arithmatex">\(n\)</span> 阶可导，泰勒多项式 <span class="arithmatex">\(P_n(x)=\sum_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k\)</span>。</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处 <span class="arithmatex">\(n\)</span> 阶可导，泰勒多项式 <span class="arithmatex">\(P_n(x)=\sum_{k=0}^n\dfrac{f^{(k)}(x_0)}{k!}(x-x_0)^k\)</span>。</p>
 <p>多项式 <span class="arithmatex">\(P_n(x)\)</span> 与函数 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处有 <span class="arithmatex">\(n\)</span> 次接近：<span class="arithmatex">\(f(x)\)</span> 与 <span class="arithmatex">\(P_n(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处的 <span class="arithmatex">\(k\)</span> 阶导数均相等（<span class="arithmatex">\(k=0,1,\cdots,n\)</span>）。</p>
 <p>误差函数 <span class="arithmatex">\(R_n(x)=f(x)-P_n(x)\)</span> 称为泰勒余项。</p>
 </li>
@@ -2597,7 +2578,7 @@
 <ul>
 <li>
 <p>带佩亚诺（Peano）余项的泰勒公式：</p>
-<p>设 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处 <span class="arithmatex">\(n\)</span> 阶可导，则 <span class="arithmatex">\(R_n(x)=o((x-x_0)^n)\,(x\to x_0)\)</span>（佩亚诺余项）。即 <span class="arithmatex">\(f(x)=\sum_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k+o((x-x_0)^n)\,(x\to x_0)\)</span>。</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x_0\)</span> 处 <span class="arithmatex">\(n\)</span> 阶可导，则 <span class="arithmatex">\(R_n(x)=o((x-x_0)^n)\,(x\to x_0)\)</span>（佩亚诺余项）。即 <span class="arithmatex">\(f(x)=\sum_{k=0}^n\dfrac{f^{(k)}(x_0)}{k!}(x-x_0)^k+o((x-x_0)^n)\,(x\to x_0)\)</span>。</p>
 <details class="note">
 <summary>证明</summary>
 <p><span class="arithmatex">\(\begin{aligned}\lim\limits_{x\to x_0}\dfrac{R_n(x)}{(x-x_0)^n}&amp;=\lim\limits_{x\to x_0}\dfrac{f(x)-P_n(x)}{(x-x_0)^n}\\&amp;\xlongequal{(n-1)\,次洛必达法则}\lim\limits_{x\to x_0}\dfrac{f^{(n-1)}(x)-P_n^{(n-1)}(x)}{n!(x-x_0)}\\&amp;=\dfrac{1}{n!}\lim\limits_{x\to x_0}\dfrac{f^{(n-1)}(x)-[f^{(n-1)}(x_0)+f^{(n)}(x_0)(x-x_0)]}{x-x_0}\\&amp;=\dfrac{1}{n!}\lim\limits_{x\to x_0}(\dfrac{f^{(n-1)}(x)-f^{(n-1)}(x_0)}{x-x_0}-\dfrac{f^{(n)}(x_0)(x-x_0)}{x-x_0})\\&amp;=\dfrac{1}{n!}(f^{(n)}(x_0)-f^{(n)}(x_0))\\&amp;=0\end{aligned}\)</span></p>
@@ -2644,8 +2625,8 @@
 </li>
 <li>
 <p>带拉格朗日余项的泰勒公式：</p>
-<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有 <span class="arithmatex">\(n\)</span> 阶连续导数，在 <span class="arithmatex">\((a,b)\)</span> 内 <span class="arithmatex">\((n+1)\)</span> 阶可导，则对 <span class="arithmatex">\(\forall x,x_0\in[a,b]\,(x\neq x_0)\)</span>，<span class="arithmatex">\(\exists \xi=x_0+\theta(x-x_0)\in(a,b)\)</span>（其中 <span class="arithmatex">\(\theta\in(0,1)\)</span>），使得 <span class="arithmatex">\(R_n=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span>（拉格朗日余项）。</p>
-<p>即 <span class="arithmatex">\(f(x)=\sum_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span>。</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有 <span class="arithmatex">\(n\)</span> 阶连续导数，在 <span class="arithmatex">\((a,b)\)</span> 内 <span class="arithmatex">\((n+1)\)</span> 阶可导，则对 <span class="arithmatex">\(\forall x,x_0\in[a,b]\,(x\neq x_0)\)</span>，<span class="arithmatex">\(\exists \xi=x_0+\theta(x-x_0)\in(a,b)\)</span>（其中 <span class="arithmatex">\(\theta\in(0,1)\)</span>），使得 <span class="arithmatex">\(R_n=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span>（拉格朗日余项）。</p>
+<p>即 <span class="arithmatex">\(f(x)=\sum_{k=0}^n\dfrac{f^{(k)}(x_0)}{k!}(x-x_0)^k+\dfrac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\)</span>。</p>
 <details class="note">
 <summary>证明</summary>
 <details class="note">
@@ -2675,8 +2656,8 @@
 </li>
 <li>
 <p>麦克劳林（Maclaurin）公式：<span class="arithmatex">\(x_0=0\)</span> 时的泰勒公式。</p>
-<p><span class="arithmatex">\(f(x)=\sum_{k=0}^n\frac{f^{(k)}(0)}{k!}x^k+\frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}\)</span>，<span class="arithmatex">\(\xi\)</span> 介于 <span class="arithmatex">\(0\)</span> 和 <span class="arithmatex">\(x\)</span> 之间</p>
-<p><span class="arithmatex">\(f(x)=\sum_{k=0}^n\frac{f^{(k)}(0)}{k!}x^k+o(x^n)\)</span></p>
+<p><span class="arithmatex">\(f(x)=\sum_{k=0}^n\dfrac{f^{(k)}(0)}{k!}x^k+\dfrac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}\)</span>，<span class="arithmatex">\(\xi\)</span> 介于 <span class="arithmatex">\(0\)</span> 和 <span class="arithmatex">\(x\)</span> 之间</p>
+<p><span class="arithmatex">\(f(x)=\sum_{k=0}^n\dfrac{f^{(k)}(0)}{k!}x^k+o(x^n)\)</span></p>
 </li>
 <li>
 <p>复合函数的泰勒展开</p>
@@ -2807,7 +2788,55 @@
 </details>
 </li>
 </ul>
-<h3 id="_5">函数图形的凹凸性与拐点<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_5">函数的单调区间与极值<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>函数的极值：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(U(x_0)\)</span> 内有定义，若 <span class="arithmatex">\(\exists \delta&gt;0\)</span>，对 <span class="arithmatex">\(\forall x\in U(x_0,\delta)\)</span> 均有 <span class="arithmatex">\(f(x)\geq f(x_0)\)</span>（或 <span class="arithmatex">\(f(x)\leq f(x_0)\)</span>），则称 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极大值（或极小值）。</p>
+</li>
+<li>
+<p>极值存在的必要条件（费马定理）：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极值，且 <span class="arithmatex">\(f'(x_0)\)</span> 存在，则 <span class="arithmatex">\(f'(x_0)=0\)</span>。</p>
+</li>
+<li>
+<p>极值存在的充分条件：</p>
+<ul>
+<li>
+<p>第一充分条件：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续，且 <span class="arithmatex">\(\exists \delta&gt;0\)</span>，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0,\delta)\)</span> 可导，</p>
+<ol>
+<li>当 <span class="arithmatex">\(x\in \mathring U_-(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&gt;0\)</span>；当 <span class="arithmatex">\(x\in \mathring U_+(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&lt;0\)</span>；则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极大值。</li>
+<li>当 <span class="arithmatex">\(x\in\mathring U_+(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&lt;0\)</span>；当 <span class="arithmatex">\(x\in\mathring U_+(x_0,\delta)\)</span> 时，<span class="arithmatex">\(f'(x)&gt;0\)</span>；则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极小值。</li>
+<li>若 <span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0,\delta)\)</span> 内不变号，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处没有极值。</li>
+</ol>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>① 这仅仅是充分条件，不是充要条件。也就是说，若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处取极大值，不一定 <span class="arithmatex">\(\exists\delta&gt;0\)</span>，使得 <span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(\mathring U_-(x_0,\delta)\)</span> 内 <span class="arithmatex">\(&gt;0\)</span>，在 <span class="arithmatex">\(\mathring U_+(x_0,\delta)\)</span> 内 <span class="arithmatex">\(&lt;0\)</span>。</p>
+<p>例如 <span class="arithmatex">\(f(x)=\begin{cases}x^2(1+\sin\frac 1 x)&amp;(x\neq 0)\\0&amp;(x=0)\end{cases}\)</span>：<span class="arithmatex">\(f(x)\geq 0\)</span>，故 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处取极小值。当 <span class="arithmatex">\(x\neq 0\)</span> 时，<span class="arithmatex">\(f'(x)=2x(1+\sin\dfrac 1 x)-\cos\dfrac 1 x\)</span>，<span class="arithmatex">\(f'(\dfrac 1 {2n\pi})=\dfrac 1 {n\pi}-1&lt;0\)</span>，<span class="arithmatex">\(f'(\dfrac{1}{2n\pi+\pi})=\dfrac{2}{2n\pi+\pi}+1&gt;0\)</span>。</p>
+<p>② <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续的前提条件不能漏。</p>
+<p>③ <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处不一定可导，只要 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0,\delta)\)</span> 内可导就行。</p>
+</details>
+</li>
+<li>
+<p>第二充分条件：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处二阶可导，且 <span class="arithmatex">\(f'(x_0)=0\)</span>，</p>
+<ol>
+<li>若 <span class="arithmatex">\(f''(x_0)&gt;0\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极小值。</li>
+<li>若 <span class="arithmatex">\(f''(x_0)&lt;0\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处有极大值。</li>
+<li>若 <span class="arithmatex">\(f''(x_0)=0\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处可能有极值，也可能没有极值。</li>
+</ol>
+</li>
+<li>
+<p>第三充分条件：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内存在 <span class="arithmatex">\((n-1)\)</span> 阶导数，在 <span class="arithmatex">\(x_0\)</span> 处 <span class="arithmatex">\(n\)</span> 阶可导，且 <span class="arithmatex">\(f^{(k)}(x_0)=0\,(k=1,2,\cdots,n-1)\)</span>，<span class="arithmatex">\(f^{(n)}(x_0)\neq 0\)</span>，则</p>
+<ol>
+<li>当 <span class="arithmatex">\(n\)</span> 为偶数时，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处取极值；且当 <span class="arithmatex">\(f^{(n)}(x_0)&gt;0\)</span> 时，有极小值；当 <span class="arithmatex">\(f^{(n)}(x_0)&lt;0\)</span> 时，有极大值。</li>
+<li>当 <span class="arithmatex">\(n\)</span> 为奇数时，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处没有极值。</li>
+</ol>
+<details class="note" open="open">
+<summary>证明</summary>
+<p>根据泰勒展开，有 <span class="arithmatex">\(f(x)-f(x_0)=\sum_{k=1}^{n-1}\dfrac{f^{(k)}(x_0)}{k!}(x-x_0)^k+\dfrac{f^{(n)}(x_0)}{n!}(x-x_0)^n+o((x-x_0)^n)=[\dfrac{f^{(n)}(x_0)}{n!}+o(1)](x-x_0)^n\)</span>。</p>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">函数图形的凹凸性与拐点<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>函数的凹凸性</p>
@@ -2816,7 +2845,7 @@
 <p>定义：</p>
 <ol>
 <li>
-<p>设 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 上连续，若对 <span class="arithmatex">\(\forall x_1,x_2\in D\)</span> 均有 <span class="arithmatex">\(f(\frac{x_1+x_2}2)\geq \frac{f(x_1)+f(x_2)}2\)</span>，则称 <span class="arithmatex">\(y=f(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 上是凸的。同样可定义凹的。</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 上连续，若对 <span class="arithmatex">\(\forall x_1,x_2\in D\)</span> 均有 <span class="arithmatex">\(f(\dfrac{x_1+x_2}2)\geq \dfrac{f(x_1)+f(x_2)}2\)</span>，则称 <span class="arithmatex">\(y=f(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 上是凸的。同样可定义凹的。</p>
 </li>
 <li>
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 上连续，若对 <span class="arithmatex">\(\forall x_1,x_2\in D\)</span> 及 <span class="arithmatex">\(\forall \alpha\in(0,1)\)</span> 均有 <span class="arithmatex">\(f(\alpha x_1+(1-\alpha)x_2)\geq \alpha f(x_1)+(1-\alpha)f(x_2)\)</span>，则称 <span class="arithmatex">\(y=f(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 上是凸的。</p>
@@ -2829,7 +2858,7 @@
 <li>
 <p>定理：</p>
 <ul>
-<li>充要条件：<span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 上是凸的 <span class="arithmatex">\(\Leftrightarrow\)</span> 对于 <span class="arithmatex">\(D\)</span> 上任意三点 <span class="arithmatex">\(x_1,x_2,x_3\)</span>，总有 <span class="arithmatex">\(\frac{f(x_2)-f(x_1)}{x_2-x_1}\leq \frac{f(x_3)-f(x_2)}{x_3-x_2}\)</span>。</li>
+<li>充要条件：<span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 上是凸的 <span class="arithmatex">\(\Leftrightarrow\)</span> 对于 <span class="arithmatex">\(D\)</span> 上任意三点 <span class="arithmatex">\(x_1,x_2,x_3\)</span>，总有 <span class="arithmatex">\(\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\leq \dfrac{f(x_3)-f(x_2)}{x_3-x_2}\)</span>。</li>
 <li>
 <p>充分条件：设 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\((a,b)\)</span> 内具有二阶导数，那么</p>
 <p>（1）若对 <span class="arithmatex">\(\forall x\in(a,b)\)</span>，均有 <span class="arithmatex">\(f''(x)&gt;0\)</span>，则 <span class="arithmatex">\(y=f(x)\)</span> 在 <span class="arithmatex">\((a,b)\)</span> 内是凹的。</p>
@@ -2947,7 +2976,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="_6">函数图形的描绘<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_7">函数图形的描绘<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>曲线的渐近线</p>
@@ -3021,7 +3050,7 @@
 <p>（4）将特殊点（截距点，极值点，拐点灯）用光滑连续曲线链接</p>
 </li>
 </ul>
-<h3 id="_7">曲率<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_8">曲率<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>曲率</p>
@@ -3062,7 +3091,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="_8">题目<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_9">题目<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>构造辅助函数</p>
