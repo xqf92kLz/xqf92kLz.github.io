@@ -1452,6 +1452,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U7 Nature's gifts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2086,7 +2114,7 @@
 
   <h1>第四章 不定积分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-08T10:03:03.121989+00:00'>2025-12-08</time></span><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-08T10:03:03.121989+00:00'>2025-12-08</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-09T06:03:44.961995+00:00'>2025-12-09</time></span><span data-tippy-content data-tippy-raw='2025-12-09'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-09T06:03:44.961995+00:00'>2025-12-09</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">不定积分的概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2183,6 +2211,7 @@
 </li>
 <li>
 <p>法 3：<span class="arithmatex">\(\int \sec x\text dx=\int \dfrac{1}{\sin(x+\frac{\pi}2)}\text dx=\int \dfrac{1}{2\sin(\frac x 2+\frac{\pi}4)\cos(\frac x 2+\frac{\pi}4)}\text dx=\int \dfrac{\sec^2(\frac{x}2+\frac{\pi}4)}{\tan(\frac x 2+\frac{\pi}4)}\text d(\dfrac x 2+\dfrac{\pi}4)=\ln|\tan(\dfrac x 2+\dfrac{\pi}4)|+C\)</span></p>
+<p>注：<span class="arithmatex">\(\ln|\tan(\dfrac x 2+\dfrac{\pi}4)|=\ln|\dfrac{1+\tan\frac x 2}{1-tan\frac x 2}|=\ln|\dfrac{\cos\frac x 2+\sin\frac x 2}{\cos\frac x 2+\sin\frac x 2}|=\dfrac 1 2 \ln|\dfrac{1+\sin x}{1-\sin x}|\)</span></p>
 </li>
 </ul>
 <p><span class="arithmatex">\(\int\csc x\text dx\)</span></p>
@@ -2293,11 +2322,16 @@
 <p>计算：<span class="arithmatex">\(\int \dfrac{\text dx}{a^2\sin^2 x+b^2\cos^2 x}\,(ab\neq 0)\)</span></p>
 <details class="note">
 <summary>解答</summary>
-<p><span class="arithmatex">\(=\int \dfrac{1}{\cos^2 x}\cdot \dfrac{\text dx}{a^2\tan^2 x+b^2}=\int \dfrac{\text d(\tan x)}{a^2\tan^2 x+b^2}=\dfrac 1 {b^2}\cdot \dfrac b a\cdot \int \dfrac{\text d(\frac a b \tan x)}{(\frac a b\tan x)^2 x+1}=\dfrac 1 {ab}(\arctan \dfrac a b \tan x)+C\)</span></p>
+<p><span class="arithmatex">\(=\int \dfrac{1}{\cos^2 x}\cdot \dfrac{\text dx}{a^2\tan^2 x+b^2}=\int \dfrac{\text d(\tan x)}{a^2\tan^2 x+b^2}=\dfrac 1 {b^2}\cdot \dfrac b a\cdot \int \dfrac{\text d(\frac a b \tan x)}{(\frac a b\tan x)^2+1}=\dfrac 1 {ab}(\arctan (\dfrac a b \tan x))+C\)</span></p>
 </details>
 <p>计算：<span class="arithmatex">\(\int \dfrac{\sin x}{a\cos x+b\sin x}\text dx\,(a^2+b^2\neq 0)\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>记 <span class="arithmatex">\(\alpha(x)=a\cos x+b\sin x\)</span>，则 <span class="arithmatex">\(\alpha'(x)=-a\sin x+b\cos x\)</span>。</p>
+<p><span class="arithmatex">\(\alpha(x),\alpha'(x)\)</span> 线性无关。设 <span class="arithmatex">\(\cos x=k_1\alpha(x)+k_2\alpha'(x)\)</span>，则 <span class="arithmatex">\(\int\dfrac{\cos x}{a\cos x+b\sin x}\text dx=\int\dfrac{k_1\alpha(x)+k_2\alpha'(x)}{\alpha(x)}\text dx=\int k_1\text dx+\int \dfrac{k_2}{\alpha(x)}\text d(\alpha(x))\)</span>。</p>
+</details>
 <p>记 <span class="arithmatex">\(I=\int \dfrac{\sin x}{a\cos x+b\sin x}\text dx\)</span>，<span class="arithmatex">\(J=\int \dfrac{\cos x}{a\cos x+b\sin x}\text dx\)</span>，则：</p>
 <p><span class="arithmatex">\(\begin{cases}bI+aJ=\int \dfrac{b\sin x+a\cos x}{a\cos x+b\sin x}\text dx=x+C\\-aI+bJ=\int \dfrac{-a\sin x+b\cos x}{a\cos x+b\sin x}\text dx=\int \dfrac{\text d(a\cos x+b\sin x)}{a\cos x+b\sin x}=\ln|a\cos x+b\sin x|+C\end{cases}\)</span></p>
 <p><span class="arithmatex">\(\Rightarrow \begin{cases}I=\dfrac{1}{a^2+b^2}(bx-a\ln|a\cos x+b\sin x|)+C\\J=\dfrac{1}{a^2+b^2}(ax+b\ln |a\cos x+b\sin x|)+C\end{cases}\)</span></p>
@@ -2373,6 +2407,7 @@
 </li>
 </ul>
 </details>
+<p>计算：<span class="arithmatex">\(\int\dfrac{\text dx}{\sqrt{x(1-x)}}\)</span>。</p>
 </details>
 </li>
 <li>
