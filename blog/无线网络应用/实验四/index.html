@@ -23,7 +23,7 @@
     
     
       
-        <title>实验四 - uwouni</title>
+        <title>实验四：防火墙等无线网络安全实验 - uwouni</title>
       
     
     
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              实验四
+              实验四：防火墙等无线网络安全实验
             
           </span>
         </div>
@@ -636,6 +636,34 @@
     
   
     第四章 不定积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%BE%AE%E7%A7%AF%E5%88%86/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 定积分及其应用
   
 
     
@@ -2052,7 +2080,7 @@
   <span class="md-ellipsis">
     
   
-    实验四
+    实验四：防火墙等无线网络安全实验
   
 
     
@@ -2070,7 +2098,7 @@
   <span class="md-ellipsis">
     
   
-    实验四
+    实验四：防火墙等无线网络安全实验
   
 
     
@@ -2238,9 +2266,9 @@
 
 
 
-  <h1>实验四</h1>
+  <h1>实验四：防火墙等无线网络安全实验</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-10T09:50:55.580468+00:00'>2025-12-10</time></span><span data-tippy-content data-tippy-raw='2025-12-10'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-10T09:50:55.580468+00:00'>2025-12-10</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-11T07:06:56.603783+00:00'>2025-12-11</time></span><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-11T07:06:56.603783+00:00'>2025-12-11</time></span></div></div>
 <h3 id="_1">一、实验整体背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>无线网络因传输介质为开放大气，相比有线网络更易遭黑客攻击。本实验通过无线路由器的安全配置，实现两个核心目标：</p>
 <ol>
@@ -2325,7 +2353,7 @@
 <p>（1）路由器初始化与基础配置</p>
 <ol>
 <li>复位路由器：先将路由器恢复出厂设置，再用一台电脑（内网 PC3）有线连接路由器任意网口（暂作 LAN 口），进入路由器 Web 配置页面。</li>
-<li>无线参数配置：进入 “路由设置→无线设置”，设置 SSID（需含 5G 字样，如 left456-5G），认证类型选 WPA-PSK/WPA2-PSK，信道设为 40，无线模式为 11a/n/ac/ax mixed，频段带宽按需选择，保存配置。</li>
+<li>无线参数配置：进入 “路由设置→无线设置”，设置 SSID（需含 5G 字样，如 left456-5G），认证类型选 WPA-PSK/WPA2-PSK，信道设为分配的通道号，无线模式为 11a/n/ac/ax mixed，频段带宽按需选择，保存配置。</li>
 <li>LAN 口配置：进入 “路由设置→LAN 口设置”，将 LAN 口 IP 设为 192.168.2.1，子网掩码 255.255.255.0，保存后重启路由器；重启后需将电脑网卡 IP 改为 192.168.2.* 网段才能再次进入配置页面。</li>
 <li>WAN 口配置：进入 “路由设置→上网设置→基本设置”，将 WAN 口设为固定 IP（192.168.12.1），子网掩码 255.255.255.0，网关 192.168.12.1，DNS 服务器设为 10.10.0.21（首选）和 10.10.2.21（备用）；再进入 “WAN 口设置”，将 WAN 口固定为靠近电源的最左侧网口，此时需将电脑网线改插右侧 3 个 LAN 口之一。</li>
 <li>DHCP 服务器：保持默认开启状态，无需修改。</li>
@@ -2352,8 +2380,8 @@
 <li>
 <p>实验结果验证</p>
 <ol>
-<li>Web 服务验证：在外网 PC3 的浏览器地址栏输入<code>http://192.168.12.1</code>，若能访问到 PC1（192.168.2.6）的 Web 站点（需在站点首页标注 “PC1~192.168.2.6” 标识），则 Web 服务转发成功；若未配置 80 端口虚拟服务器则无法访问。</li>
-<li>FTP 服务验证：在外网 PC3 的 “此电脑” 地址栏输入<code>ftp://192.168.12.1</code>，若能访问到 PC2（192.168.2.3）的 FTP 站点（需标注 “PC2~192.168.2.3” 标识），则 FTP 服务转发成功；注意不可用 Web 浏览器访问 FTP，未配置 21 端口虚拟服务器则无法访问。</li>
+<li>Web 服务验证：在外网 PC3 的浏览器地址栏输入 <code>http://192.168.12.1</code>，若能访问到 PC1（192.168.2.6）的 Web 站点（需在站点首页标注 “PC1~192.168.2.6” 标识），则 Web 服务转发成功；若未配置 80 端口虚拟服务器则无法访问。</li>
+<li>FTP 服务验证：在外网 PC3 的 “此电脑” 地址栏输入 <code>ftp://192.168.12.1</code>，若能访问到 PC2（192.168.2.3）的 FTP 站点（需标注 “PC2~192.168.2.3” 标识），则 FTP 服务转发成功；注意不可用 Web 浏览器访问 FTP，未配置 21 端口虚拟服务器则无法访问。</li>
 </ol>
 </li>
 </ol>
@@ -2448,7 +2476,7 @@
 <p>（1）路由器基础配置（基于第一部分，仅修改部分参数）</p>
 <ol>
 <li>配置主体切换：由内网 PC1 完成路由器配置，PC1 有线 / 无线连接路由器 LAN 口（已固定 WAN 口为最左侧网口，PC1 需连右侧 LAN 口），进入 192.168.2.1 配置页面。</li>
-<li>无线安全配置：进入 “路由设置→无线设置”，保持 5GHz 频段、SSID（left456-5G）、信道等参数，开启 WPA-PSK/WPA2-PSK 或 WPA2-PSK/WPA3-SAE 认证，设置 8-63 位的无线密码（建议数字 + 字母 + 符号组合，如 12345678），保存后 PC1、PC2 需重新输入密码连接无线网络。</li>
+<li>无线安全配置：进入 “路由设置→无线设置”，保持 5GHz 频段、SSID（right123-5G）、信道等参数，开启 WPA-PSK/WPA2-PSK 或 WPA2-PSK/WPA3-SAE 认证，设置 8-63 位的无线密码（建议数字 + 字母 + 符号组合，如 12345678），保存后 PC1、PC2 需重新输入密码连接无线网络。</li>
 <li>WAN 口重新配置：进入 “路由设置→上网设置→基本设置”，将 WAN 口固定 IP 改为 192.168.1.10，子网掩码 255.255.255.0，网关 192.168.1.10，DNS 不变；WAN 口仍为固定最左侧网口。</li>
 <li>清理旧配置：删除第一部分实验中设置的虚拟服务器，避免影响 DMZ 功能验证。</li>
 </ol>
@@ -2465,13 +2493,13 @@
 <ol>
 <li>进入路由器 “设备管理” 页面，查看已连设备列表；</li>
 <li>根据计算机名称或 MAC/IP 地址定位 PC2，点击 “禁用” 并确认，禁用后 PC2 无法访问网络和路由器（本机配置设备无法禁用）；</li>
-<li>
-<p>可在 “已禁设备” 列表中对 PC2 进行解禁操作。
-        - 方法 2：无线设备接入控制</p>
+<li>可在 “已禁设备” 列表中对 PC2 进行解禁操作。</li>
+</ol>
 </li>
 <li>
-<p>进入 “应用管理→已安装应用→无线设备接入控制”，开启接入控制功能，选择 “只允许列表内的设备连接”；</p>
-</li>
+<p>方法 2：无线设备接入控制</p>
+<ol>
+<li>进入 “应用管理→已安装应用→无线设备接入控制”，开启接入控制功能，选择 “只允许列表内的设备连接”；</li>
 <li>可通过 “选择设备添加”（直接选 PC1）或 “输入 MAC 地址添加”（先查 PC1 无线网卡 MAC）将 PC1 加入允许列表，以此过滤 PC2。</li>
 </ol>
 </li>

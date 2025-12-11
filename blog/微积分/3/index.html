@@ -804,6 +804,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 定积分及其应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2195,7 +2223,7 @@
   <span class="md-ellipsis">
     
   
-    实验四
+    实验四：防火墙等无线网络安全实验
   
 
     
@@ -2364,7 +2392,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-10T09:50:55.578468+00:00'>2025-12-10</time></span><span data-tippy-content data-tippy-raw='2025-12-10'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-10T09:50:55.578468+00:00'>2025-12-10</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-11T07:06:56.601783+00:00'>2025-12-11</time></span><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-11T07:06:56.601783+00:00'>2025-12-11</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2454,7 +2482,7 @@
 </ul>
 </li>
 <li>
-<p>拉格朗日（Lagrange）中值定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，则 <span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f(b)-f(a)=f'(\xi)(b-a)\)</span>（或 <span class="arithmatex">\(f'(\xi)=\frac{f(b)-f(a)}{b-a}\)</span>）。</p>
+<p>拉格朗日（Lagrange）中值定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，则 <span class="arithmatex">\(\exists \xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f(b)-f(a)=f'(\xi)(b-a)\)</span>（或 <span class="arithmatex">\(f'(\xi)=\dfrac{f(b)-f(a)}{b-a}\)</span>）。</p>
 <p>注：<span class="arithmatex">\(\xi\)</span> 常记作 <span class="arithmatex">\(\xi=a+\theta(b-a)\)</span>，其中 <span class="arithmatex">\(\theta\in(0,1)\)</span>。</p>
 <details class="note">
 <summary>证明</summary>
@@ -2575,13 +2603,14 @@
 </li>
 <li>
 <p><span class="arithmatex">\(\dfrac{*}{\infty}\)</span> 型</p>
-<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内满足：① <span class="arithmatex">\(\lim\limits_{x\to x_0}g(x)=\infty\)</span>；② <span class="arithmatex">\(f(x),g(x)\)</span> 可导且 <span class="arithmatex">\(g'(x)\neq 0\)</span>；③ <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f'(x)}{g'(x)}=A\)</span>（常数或 <span class="arithmatex">\(\infty\)</span>），则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\dfrac{f'(x)}{g'(x)}=A\)</span>。</p>
-<details class="warning" open="open">
-<summary>注意</summary>
-<p>① 所求极限为 <span class="arithmatex">\(\dfrac 0 0\)</span> 或 <span class="arithmatex">\(\dfrac * {\infty}\)</span> 型；② 分子分母的导数存在；③ 导数比 <span class="arithmatex">\(\dfrac{f'(x)}{g'(x)}\)</span> 的极限存在，才能用洛必达！</p>
-<p>例如 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{2x}{x+1}\)</span> 不是 <span class="arithmatex">\(\dfrac 0 0\)</span> 或 <span class="arithmatex">\(\dfrac * {\infty}\)</span> 型，不能用洛必达；<span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{x+\sin x}{x-\sin x}\)</span> 为 <span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span> 型极限，但 <span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{1+\cos x}{1-\cos x}\)</span> 不存在，不能用洛必达；<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{x^2\sin\frac 1 x}{e^x-1}\)</span> 为 <span class="arithmatex">\(\dfrac 0 0\)</span> 型极限，但 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{2x\sin \frac 1 x-\cos\frac 1 x}{e^x}\)</span> 不存在，不能用洛必达。</p>
-</details>
 </li>
+</ul>
+<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内满足：① <span class="arithmatex">\(\lim\limits_{x\to x_0}g(x)=\infty\)</span>；② <span class="arithmatex">\(f(x),g(x)\)</span> 可导且 <span class="arithmatex">\(g'(x)\neq 0\)</span>；③ <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f'(x)}{g'(x)}=A\)</span>（常数或 <span class="arithmatex">\(\infty\)</span>），则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\dfrac{f'(x)}{g'(x)}=A\)</span>。</p>
+<p>???+ warning "注意"
+        ① 所求极限为 <span class="arithmatex">\(\dfrac 0 0\)</span> 或 <span class="arithmatex">\(\dfrac * {\infty}\)</span> 型；② 分子分母的导数存在；③ 导数比 <span class="arithmatex">\(\dfrac{f'(x)}{g'(x)}\)</span> 的极限存在，才能用洛必达！</p>
+<div class="highlight"><pre><span></span><code>    例如 $\lim\limits_{x\to +\infty}\dfrac{2x}{x+1}$ 不是 $\dfrac 0 0$ 或 $\dfrac * {\infty}$ 型，不能用洛必达；$\lim\limits_{x\to \infty}\dfrac{x+\sin x}{x-\sin x}$ 为 $\dfrac{\infty}{\infty}$ 型极限，但 $\lim\limits_{x\to \infty}\dfrac{1+\cos x}{1-\cos x}$ 不存在，不能用洛必达；$\lim\limits_{x\to 0}\dfrac{x^2\sin\frac 1 x}{e^x-1}$ 为 $\dfrac 0 0$ 型极限，但 $\lim\limits_{x\to 0}\dfrac{2x\sin \frac 1 x-\cos\frac 1 x}{e^x}$ 不存在，不能用洛必达。
+</code></pre></div>
+<ul>
 <li>
 <p>其他类型未定式的极限</p>
 <p><span class="arithmatex">\(0\cdot \infty=0\cdot \dfrac 1 {0}\)</span> 或 <span class="arithmatex">\(=\dfrac{1}{\infty}\cdot \infty\)</span></p>
@@ -2998,7 +3027,7 @@
 <li>
 <p>定理：</p>
 <ul>
-<li>充要条件：<span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 上是凸的 <span class="arithmatex">\(\Leftrightarrow\)</span> 对于 <span class="arithmatex">\(D\)</span> 上任意三点 <span class="arithmatex">\(x_1,x_2,x_3\)</span>，总有 <span class="arithmatex">\(\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\leq \dfrac{f(x_3)-f(x_2)}{x_3-x_2}\)</span>。</li>
+<li>充要条件：<span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\(D\)</span> 上是凸的 <span class="arithmatex">\(\Leftrightarrow\)</span> 对于 <span class="arithmatex">\(D\)</span> 上任意三点 <span class="arithmatex">\(x_1&lt;x_2&lt;x_3\)</span>，总有 <span class="arithmatex">\(\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\leq \dfrac{f(x_3)-f(x_2)}{x_3-x_2}\)</span>。</li>
 <li>
 <p>充分条件：设 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\((a,b)\)</span> 内具有二阶导数，那么</p>
 <p>（1）若对 <span class="arithmatex">\(\forall x\in(a,b)\)</span>，均有 <span class="arithmatex">\(f''(x)&gt;0\)</span>，则 <span class="arithmatex">\(y=f(x)\)</span> 在 <span class="arithmatex">\((a,b)\)</span> 内是凹的。</p>
