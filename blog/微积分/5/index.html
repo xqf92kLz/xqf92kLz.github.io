@@ -727,6 +727,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定积分概念
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定积分的性质和基本定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2183,6 +2211,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定积分概念
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定积分的性质和基本定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2204,9 +2260,76 @@
 
   <h1>第五章 定积分及其应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-11T07:06:56.601783+00:00'>2025-12-11</time></span><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-11T07:06:56.601783+00:00'>2025-12-11</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-13T09:43:59.750505+00:00'>2025-12-13</time></span><span data-tippy-content data-tippy-raw='2025-12-13'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-13T09:43:59.750505+00:00'>2025-12-13</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>不定积分可积和定积分可积不一样</p>
+<h3 id="_2">定积分概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>定积分的定义</p>
+<details class="info">
+<summary>定义</summary>
+<ul>
+<li>
+<p>定义 1：</p>
+<p>若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有定义，取 <span class="arithmatex">\(a=x_0&lt;x_1&lt;\cdots&lt;x_{n-1}&lt;x_n=b\)</span>，<span class="arithmatex">\(\xi_i\in[x_{i-1},x_i]\)</span>。记 <span class="arithmatex">\(\Delta x_i=x_i-x_{i-1}\,(i=1,2,\cdots,n)\)</span>，<span class="arithmatex">\(\lambda=\max\limits_{1\leq i\leq n}\Delta x_i\)</span>，若 <span class="arithmatex">\(\lim\limits_{\lambda\to 0}\sum_{i=1}^n f(\xi_i)\Delta x_i\)</span> 存在且与 <span class="arithmatex">\(x_i,\xi_i\)</span> 的取法都无关，则称 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积，<span class="arithmatex">\(\int_a^b f(x)\text dx=\lim\limits_{\lambda\to 0}\sum_{i=1}^nf(\xi_i)\Delta x_i\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上的定积分。</p>
+<p><span class="arithmatex">\(\sum_{i=1}^n f(\xi_i)\Delta x\)</span> 称为积分和式，<span class="arithmatex">\(a,b\)</span> 分别成为定积分的下限与上限，<span class="arithmatex">\([a,b]\)</span> 称为积分区间，<span class="arithmatex">\(x\)</span> 称为积分变量，<span class="arithmatex">\(f(x)\)</span> 称为被积函数，<span class="arithmatex">\(f(x)\text dx\)</span> 称为被积表达式。</p>
+</li>
+<li>
+<p>定义 2（用 <span class="arithmatex">\(\varepsilon-\delta\)</span> 语言叙述）：</p>
+<p>若存在一常数 <span class="arithmatex">\(I\)</span>，对 <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists\delta&gt;0\)</span>，使得对任意的分割 <span class="arithmatex">\(T:a=x_0&lt;x_1&lt;\cdots&lt;x_{n-1}&lt;x_n=b\)</span>，只要 <span class="arithmatex">\(\max\limits_{1\leq i\leq n}\Delta x_i=\lambda(T)&lt;\delta\)</span>，任给 <span class="arithmatex">\(\xi_i\in[x_{i-1},x_i]\)</span>，都有 <span class="arithmatex">\(|\sum_{i=1}^n f(\xi_i)\Delta x_i-I|&lt;\varepsilon\)</span> 成立，则称 <span class="arithmatex">\(I\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上的定积分。</p>
+<p>定积分 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 也称为黎曼积分。</p>
+</li>
+<li>
+<p>凑定积分的定义</p>
+<p><span class="arithmatex">\(\int_a^b f(x)\text dx=\lim\limits_{n\to \infty}\sum_{i=1}^n f(a+\frac{b-a}ni)\frac{b-a}n\)</span>。特别地，<span class="arithmatex">\(\int_0^1 f(x)\text dx=\lim\limits_{n\to \infty}\sum_{i=1}^n f(\frac i n)\frac 1 n\)</span>。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p><span class="arithmatex">\(\lim\limits_{n\to\infty}\sum_{i=1}^n\dfrac 1 {n+i}\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=\lim\limits_{n\to \infty}\sum_{i=1}^n\dfrac 1 {1+\frac i n}\cdot \dfrac 1 n=\int_0^1 \dfrac 1{1+x}\text dx\)</span></p>
+</details>
+</details>
+</li>
+</ul>
+</details>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>不定积分是原函数全体，定积分是一个具体的数值。</p>
+<p>不定积分可积 ≠ 定积分可积。</p>
+</details>
+</li>
+<li>
+<p>定积分的几何意义</p>
+</li>
+<li>
+<p>可积函数类</p>
+<ul>
+<li>
+<p>可积的必要条件：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上必有界。</p>
+<p>（闭区间上的有界函数不一定可积，如 <span class="arithmatex">\(f(x)=\begin{cases}1&amp;(x\in\mathbb Q)\\0&amp;(x\in\mathbb Q)\end{cases}\)</span>）</p>
+</li>
+<li>
+<p>可积的充分条件：</p>
+<ul>
+<li>若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积。</li>
+<li>若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有界，且只有有限个间断点，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积。</li>
+<li>若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上单调，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">定积分的性质和基本定理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>定积分的基本性质</p>
+<ul>
+<li><span class="arithmatex">\(\int_a^b \text dx=b-a\)</span></li>
+<li><span class="arithmatex">\(\int_a^b[\alpha f(x)+\beta g(x)]\text dx\)</span></li>
+</ul>
+</li>
+</ul>
 
 
 

@@ -1026,7 +1026,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        相似对角化
+        特征值和特征向量的基本性质
       
     </span>
   </a>
@@ -1037,7 +1037,18 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        实对称矩阵
+        矩阵的相似及其性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵的相似对角化
       
     </span>
   </a>
@@ -2240,7 +2251,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        相似对角化
+        特征值和特征向量的基本性质
       
     </span>
   </a>
@@ -2251,7 +2262,18 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        实对称矩阵
+        矩阵的相似及其性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵的相似对角化
       
     </span>
   </a>
@@ -2282,175 +2304,234 @@
 
   <h1>第五章 矩阵的特征值理论与相似对角化</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-11T07:06:56.604783+00:00'>2025-12-11</time></span><span data-tippy-content data-tippy-raw='2025-12-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-11T07:06:56.604783+00:00'>2025-12-11</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-13T09:43:59.753505+00:00'>2025-12-13</time></span><span data-tippy-content data-tippy-raw='2025-12-13'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-13T09:43:59.753505+00:00'>2025-12-13</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">特征值和特征向量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
+<li>定义 1：设 <span class="arithmatex">\(\boldsymbol A\in\mathbb P^{n\times n}\)</span>，若存在数 <span class="arithmatex">\(\lambda_0\in\mathbb P\)</span> 和 <span class="arithmatex">\(n\)</span> 维 <strong>非零</strong> 列向量 <span class="arithmatex">\(\boldsymbol \xi\in\mathbb P^n\)</span> 使得 <span class="arithmatex">\(\boldsymbol A\boldsymbol \xi=\lambda_0 \boldsymbol \xi\)</span>，则称 <span class="arithmatex">\(\lambda_0\)</span> 为 <span class="arithmatex">\(\boldsymbol A\)</span> 的一个特征值，非零列向量 <span class="arithmatex">\(\boldsymbol \xi\)</span> 称为 <span class="arithmatex">\(\boldsymbol A\)</span> 的属于 <span class="arithmatex">\(\lambda\)</span> 的一个特征向量。</li>
 <li>
-<p>矩阵的特征值和特征向量</p>
+<p>性质 1：</p>
 <ul>
 <li>
-<p>特征值和特征向量的定义</p>
-<p>设 <span class="arithmatex">\(\boldsymbol A\)</span> 是 <span class="arithmatex">\(n\)</span> 阶矩阵，若存在数 <span class="arithmatex">\(\lambda\)</span> 和 <span class="arithmatex">\(n\)</span> 维 <strong>非零</strong> 列向量 <span class="arithmatex">\(\boldsymbol x\)</span> 使 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\lambda \boldsymbol x\)</span> 成立，即 <span class="arithmatex">\((\lambda \boldsymbol E-\boldsymbol A)\boldsymbol x=\boldsymbol 0\)</span> 有非零解，则称 <span class="arithmatex">\(\lambda\)</span> 为 <span class="arithmatex">\(\boldsymbol A\)</span> 的一个特征值，此时，非零解 <span class="arithmatex">\(\boldsymbol x\)</span> 称为 <span class="arithmatex">\(\boldsymbol A\)</span> 的对应于特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量。</p>
-<p>【① 不方的矩阵没有特征值；② <span class="arithmatex">\(\lambda\)</span> 可以是复数】</p>
-<p>注：由定义，<span class="arithmatex">\(\lambda\)</span> 是 <span class="arithmatex">\(n\)</span> 阶方阵 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(|\lambda\boldsymbol E-\boldsymbol A|=0\)</span>，这时，齐次方程组 <span class="arithmatex">\((\lambda \boldsymbol E-\boldsymbol A)\boldsymbol x=\boldsymbol 0\)</span> 的非零解都是矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 属于特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量。</p>
-<p><span class="arithmatex">\(\boldsymbol A\)</span> 的 <span class="arithmatex">\(0\)</span> 特征值的特征向量 = 齐次方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的非零解。</p>
+<p>若 <span class="arithmatex">\(\boldsymbol\xi\)</span> 是 <span class="arithmatex">\(\boldsymbol A\)</span> 的一个特征向量，则 <span class="arithmatex">\(\boldsymbol\xi\)</span> 只能属于 <span class="arithmatex">\(\boldsymbol A\)</span> 的唯一一个特征值。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol A\boldsymbol\xi=\lambda_1\boldsymbol\xi\)</span> 且 <span class="arithmatex">\(\boldsymbol A\boldsymbol\xi=\lambda_2\boldsymbol\xi\)</span>，则 <span class="arithmatex">\(\boldsymbol \theta=(\lambda_1-\lambda_2)\boldsymbol\xi\)</span>。因为 <span class="arithmatex">\(\boldsymbol\xi\neq\boldsymbol \theta\)</span>，故 <span class="arithmatex">\(\lambda_1=\lambda_2\)</span>。</p>
+</details>
 </li>
 <li>
-<p>特征多项式和特征方程</p>
-<p>关于 <span class="arithmatex">\(\lambda\)</span> 的 <span class="arithmatex">\(n\)</span> 次多项式 <span class="arithmatex">\(f(\lambda)=|\lambda \boldsymbol E-\boldsymbol A|=\begin{vmatrix}\lambda-a_{11}&amp;-a_{12}&amp;\cdots&amp;-a_{1n}\\-a_{21}&amp;\lambda-a_{22}&amp;\cdots&amp;-a_{2n}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\-a_{n1}&amp;-a_{n2}&amp;\cdots&amp;\lambda-a_{nn}\end{vmatrix}\)</span> 称为 <span class="arithmatex">\(A\)</span> 的 <strong>特征多项式</strong>，<span class="arithmatex">\(|\lambda \boldsymbol E-\boldsymbol A|=0\)</span> 称为 <span class="arithmatex">\(\boldsymbol A\)</span> 的 <strong>特征方程</strong>，它的根称为 <span class="arithmatex">\(\boldsymbol A\)</span> 的 <strong>特征根</strong>（<strong>特征值</strong>）。</p>
-<p>（<span class="arithmatex">\(f(\lambda)\)</span> 是关于 <span class="arithmatex">\(\lambda\)</span> 的 <span class="arithmatex">\(n\)</span> 次多项式，<span class="arithmatex">\(f(\lambda)=0\)</span> 在复数范围内有 <span class="arithmatex">\(n\)</span> 个根，即 <span class="arithmatex">\(\boldsymbol A\)</span> 在复数域有 <span class="arithmatex">\(n\)</span> 个特征值）</p>
-</li>
-<li>
-<p>求具体矩阵的特征值和特征向量</p>
-<p>① 解特征方程 <span class="arithmatex">\(|\lambda \boldsymbol E-\boldsymbol A|=0\)</span>，求 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值。（技巧：1. 上（下）三角的特征值为主对角线元素；2. 求行列式时，可以试试两行（列）消出 <span class="arithmatex">\(0\)</span>，提公因子）</p>
-<p>② 对于每个特征值，解 <span class="arithmatex">\((\lambda \boldsymbol E-\boldsymbol A)\boldsymbol x=\boldsymbol 0\)</span> 的非零解得对应特征向量（通解去掉零解）。</p>
+<p>属于 <span class="arithmatex">\(\boldsymbol A\)</span> 的任意一个特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量有无穷多个。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol A\boldsymbol\xi=\lambda\boldsymbol\xi\)</span>，则 <span class="arithmatex">\(\forall k\neq 0\)</span> 有 <span class="arithmatex">\(\boldsymbol A(k\boldsymbol\xi)=\lambda(k\boldsymbol\xi)\)</span>。</p>
+</details>
 </li>
 </ul>
 </li>
 <li>
-<p>特征值和特征向量的性质</p>
+<p>设有 <span class="arithmatex">\(\boldsymbol\xi\neq\boldsymbol \theta\)</span>，满足 <span class="arithmatex">\(\boldsymbol A_{n\times n}\boldsymbol\xi=\lambda\boldsymbol\xi\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow (\lambda\boldsymbol E-\boldsymbol A)\boldsymbol\xi=\boldsymbol O\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow (\lambda\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O\)</span> 有非零解 <span class="arithmatex">\(\boldsymbol\xi\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow r(\lambda\boldsymbol E-\boldsymbol A)&lt;n\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow |\lambda\boldsymbol E-\boldsymbol A|=0\)</span></p>
+</li>
+<li>
+<p>定义 2：设 <span class="arithmatex">\(f_{\boldsymbol A}(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|\)</span>，称为 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征多项式。</p>
+<p><span class="arithmatex">\(\begin{aligned}f(\lambda)&amp;=|\lambda \boldsymbol E-\boldsymbol A|=\begin{vmatrix}\lambda-a_{11}&amp;-a_{12}&amp;\cdots&amp;-a_{1n}\\-a_{21}&amp;\lambda-a_{22}&amp;\cdots&amp;-a_{2n}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\-a_{n1}&amp;-a_{n2}&amp;\cdots&amp;\lambda-a_{nn}\end{vmatrix}\\&amp;=\lambda^n-(a_{11}+a_{22}+\cdots+a_{nn})\lambda^{n-1}+\cdots+(-1)^n|A|\\&amp;=\lambda^n-\text{tr}(\boldsymbol A)\lambda^{n-1}+\cdots+(-1)^n|A|\end{aligned}\)</span></p>
+</li>
+<li>
+<p>性质 2：</p>
 <ul>
 <li>
-<p>特征值和特征向量的有关性质</p>
+<p><span class="arithmatex">\(\lambda\)</span> 是 <span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 的一个特征值 <span class="arithmatex">\(\Leftrightarrow f(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|=0\Leftrightarrow r(\lambda \boldsymbol E-\boldsymbol A)&lt;n\)</span></p>
+<p><span class="arithmatex">\(f(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|=\lambda^n-\text{tr}(\boldsymbol A)\lambda^{n-1}+\cdots+(-1)^n|\boldsymbol A|=(\lambda-\lambda_1)^{n_1}\cdots(\lambda-\lambda_s)^{n_s}=0\)</span>，<span class="arithmatex">\(n_i\)</span> 为每个特征值的重数，则 <span class="arithmatex">\(n_1+n_2+\cdots+n_s=n\)</span>。<span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 在复数域 <span class="arithmatex">\(\mathbb C\)</span> 上一定有 <span class="arithmatex">\(n\)</span> 个特征值，但是在一般数域 <span class="arithmatex">\(\mathbb P\)</span> 上不一定有 <span class="arithmatex">\(n\)</span> 个特征值。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(\lambda\)</span> 为 <span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 的一个特征值，则 <span class="arithmatex">\((\lambda \boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 的全体非零解即为 <span class="arithmatex">\(\boldsymbol A\)</span> 的属于特征值 <span class="arithmatex">\(\lambda\)</span> 的全体特征向量。</p>
+<p>称 <span class="arithmatex">\((\lambda \boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 为特征值 <span class="arithmatex">\(\lambda\)</span> 的特征线性方程组。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\lambda\)</span> 不是 <span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 的一个特征值 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(f(\lambda)=|\lambda \boldsymbol E-\boldsymbol A|\neq 0\Leftrightarrow r(\lambda \boldsymbol E-\boldsymbol A)=n\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>特征值与特征向量的求法：</p>
+<p>① 令 <span class="arithmatex">\(|\lambda\boldsymbol E-\boldsymbol A|=0\)</span>，求出 <span class="arithmatex">\(\boldsymbol A\)</span> 的所有不同特征值 <span class="arithmatex">\(\lambda_1,\lambda_2,\cdots,\lambda_s\)</span></p>
+<p>② 对每个 <span class="arithmatex">\(\lambda_i\)</span>，求 <span class="arithmatex">\((\lambda_i \boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O\)</span> 的一个基础解系 <span class="arithmatex">\(\xi_{i1},\cdots,\xi_{ir_i}\)</span>，则 <span class="arithmatex">\(\lambda_i\)</span> 对应的全体特征向量为 <span class="arithmatex">\(k_{i1}\xi_{i1}+k_{i2}\xi_{i2}+\cdots+k_{ir_i}\xi_{ir_i}\)</span>（<span class="arithmatex">\(k_{ij}\)</span> 不同时为 <span class="arithmatex">\(0\)</span>）。</p>
+<p>记 <span class="arithmatex">\(V_{\lambda_i}=\{\boldsymbol A\)</span> 的属于 <span class="arithmatex">\(\lambda_i\)</span> 的全体特征向量 <span class="arithmatex">\(\}\cup\{\boldsymbol \theta\}=\{\boldsymbol X\mid(\lambda_i\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O,\boldsymbol X\in\mathbb P^n\}=L(\xi_{i1},\xi_{i2},\cdots,\xi_{ir_i})\)</span>，称为特征值 <span class="arithmatex">\(\lambda_i\)</span> 的特征子空间。</p>
+</li>
+</ul>
+<h3 id="_3">特征值和特征向量的基本性质<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>设 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 都是矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 属于特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量，则非零向量 <span class="arithmatex">\(k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s\)</span> 也是矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 属于特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量。</p>
+<p>性质 1：设 <span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 的全体特征值为 <span class="arithmatex">\(\lambda_1,\cdots,\lambda_n\)</span></p>
+<p><span class="arithmatex">\(\begin{aligned}f(\lambda)&amp;=|\lambda\boldsymbol E-\boldsymbol A_{n\times n}|\\&amp;=\lambda^n-(a_{11}+a_{22}+\cdots+a_{nn})\lambda^{n-1}+\cdots+(-1)^n|A|\\&amp;=(\lambda-\lambda_1)(\lambda-\lambda_2)\cdots(\lambda-\lambda_n)\\&amp;=\lambda^n-(\lambda_1+\lambda_2+\cdots+\lambda_n)\lambda^{n-1}+\cdots+(-1)^n\lambda_1\lambda_2\cdots\lambda_n\end{aligned}\)</span></p>
+<p>则 <span class="arithmatex">\(\sum_{i=1}^n\lambda_i=\sum_{i=1}^n a_{ii}=\text{tr}(A)\)</span>，<span class="arithmatex">\(\prod_{i=1}^n\lambda_i=|A|\)</span>。</p>
+<p>推论：<span class="arithmatex">\(\boldsymbol A\)</span> 可逆 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值都不为 <span class="arithmatex">\(0\)</span>。</p>
 </li>
 <li>
-<p>矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 属于不同特征值的特征向量线性无关。</p>
-<p>推论 1：<span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 是 <span class="arithmatex">\(\boldsymbol A\)</span> 的属于 <span class="arithmatex">\(s\)</span> 个不同特征值的特征向量，则 <span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span> 线性无关。</p>
-<p>推论 2：<span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2\)</span> 分别是 <span class="arithmatex">\(\boldsymbol A\)</span> 的属于不同特征值 <span class="arithmatex">\(\lambda_1,\lambda_2\)</span> 的特征向量，则 <span class="arithmatex">\(k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2\)</span> 不是 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征向量。</p>
+<p>性质 2：<span class="arithmatex">\(\boldsymbol\xi_1,\boldsymbol\xi_2,\cdots,\boldsymbol\xi_s\)</span> 是 <span class="arithmatex">\(\boldsymbol A\)</span> 的属于 <span class="arithmatex">\(s\)</span> 个不同特征值 <span class="arithmatex">\(\lambda_1,\lambda_2,\cdots,\lambda_s\)</span> 的特征向量，则 <span class="arithmatex">\(\boldsymbol\xi_1,\boldsymbol\xi_2,\cdots,\boldsymbol\xi_s\)</span> 线性无关。</p>
+<details class="note">
+<summary>证明</summary>
+<p>归纳法：</p>
+<ul>
+<li><span class="arithmatex">\(s=1\)</span> 时：<span class="arithmatex">\(\boldsymbol\xi_1\neq \boldsymbol 0\)</span>，故 <span class="arithmatex">\(\boldsymbol\xi_1\)</span> 线性无关。</li>
+<li>
+<p>设 <span class="arithmatex">\(s-1\)</span> 时成立，即 <span class="arithmatex">\(\boldsymbol\xi_1,\cdots,\boldsymbol\xi_{s-1}\)</span> 线性无关。下证 <span class="arithmatex">\(s\)</span> 时也成立。</p>
+<p>设 <span class="arithmatex">\(k_1\boldsymbol\xi_1+\cdots+k_{s-1}\boldsymbol\xi_{s-1}+k_s\boldsymbol\xi_s=\boldsymbol 0\quad(1)\)</span>。</p>
+<p>两边左乘 <span class="arithmatex">\(\boldsymbol A\)</span> 得到：<span class="arithmatex">\(k_1\lambda_1\boldsymbol\xi_1+\cdots+k_{s-1}\lambda_{s-1}\boldsymbol\xi_{s-1}+k_s\lambda_s\boldsymbol\xi_s=\boldsymbol 0\quad(2)\)</span>。</p>
+<p><span class="arithmatex">\((1)\lambda_s-(2)\)</span> 得到：<span class="arithmatex">\(k_1(\lambda_s-\lambda_1)\boldsymbol\xi_1+\cdots+k_{s-1}(\lambda_s-\lambda_{s-1})\boldsymbol\xi_{s-1}=\boldsymbol 0\)</span>。</p>
+<p>因为 <span class="arithmatex">\(\boldsymbol\xi_1,\cdots,\boldsymbol\xi_{s-1}\)</span> 线性无关，故 <span class="arithmatex">\(k_1(\lambda_s-\lambda_1)=\cdots=k_{s-1}(\lambda_s-\lambda_{s-1})=0\)</span>，又 <span class="arithmatex">\(\lambda_s\neq \lambda_i\,(i=1,2,\cdots,s-1)\)</span>，所以 <span class="arithmatex">\(k_1=k_2=\cdots=k_{s-1}=0\)</span>。代入 <span class="arithmatex">\((1)\)</span> 得 <span class="arithmatex">\(k_s\boldsymbol\xi_s=0\)</span>，所以 <span class="arithmatex">\(k_s=0\)</span>。</p>
+<p>故 <span class="arithmatex">\(\boldsymbol\xi_1,\cdots,\boldsymbol\xi_s\)</span> 也线性无关。</p>
+</li>
+</ul>
+</details>
 </li>
 <li>
-<p><span class="arithmatex">\(k\)</span> 重特征值至多有 <span class="arithmatex">\(k\)</span> 个（至少有 <span class="arithmatex">\(1\)</span> 个）线性无关的特征向量。</p>
+<p>性质 3：设 <span class="arithmatex">\(f(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|=(\lambda-\lambda_1)^{n_1}\cdots(\lambda-\lambda_s)^{n_s}\)</span>，求出 <span class="arithmatex">\((\lambda_i\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 的基础解系为 <span class="arithmatex">\(\boldsymbol\xi_{i1},\boldsymbol\xi_{i2},\cdots,\boldsymbol\xi_{ir_i}\)</span>，则向量组 <span class="arithmatex">\(\boldsymbol\xi_{11},\boldsymbol\xi_{12},\cdots,\boldsymbol\xi_{1r_1},\boldsymbol\xi_{21},\boldsymbol\xi_{22},\cdots,\boldsymbol\xi_{2r_2},\cdots,\boldsymbol\xi_{s1},\boldsymbol\xi_{s2},\cdots,\boldsymbol\xi_{sr_s}\)</span> 线性无关。</p>
+<p><span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 共有 <span class="arithmatex">\(r_1+r_2+\cdots+r_s\)</span> 个线性无关的特征向量。</p>
+<p>即：记 <span class="arithmatex">\(V_{\lambda_i}=L(\boldsymbol\xi_{i1},\boldsymbol\xi_{i2},\cdots,\boldsymbol\xi_{ir_i})\)</span>，显然 <span class="arithmatex">\(\dim V_{\lambda_i}=r_i\,(i=1,2,\cdots,s)\)</span>，则 <span class="arithmatex">\(\dim V_{\lambda_1}+\cdots+\dim V_{r_s}=r_1+r_2+\cdots+r_s\)</span> 且 <span class="arithmatex">\(V_{\lambda_i}\cap V_{\lambda_j}=\varnothing\,(i\neq j)\)</span>。</p>
 </li>
 <li>
-<p>设 <span class="arithmatex">\(n\)</span> 阶方阵 <span class="arithmatex">\(\boldsymbol A\)</span> 的 <span class="arithmatex">\(n\)</span> 个特征值为 <span class="arithmatex">\(\lambda_1,\lambda_2,\cdots,\lambda_n\)</span>，则有 <span class="arithmatex">\(\text{tr}(\boldsymbol A)=\sum_{i=1}^n \lambda_i\)</span>，<span class="arithmatex">\(|A|=\prod_{i=1}^n \lambda_i\)</span>。</p>
-<p>推论：<span class="arithmatex">\(\boldsymbol A\)</span> 可逆当且仅当 <span class="arithmatex">\(\lambda_i\neq 0\,(i=1,2,\cdots,n)\)</span>。</p>
+<p>性质 4：<span class="arithmatex">\(\dim V_{\lambda_0}\leq \lambda_0\)</span> 的重数，这里 <span class="arithmatex">\(\lambda_0\)</span> 的重数是指 <span class="arithmatex">\(\lambda_0\)</span> 作为特征多项式零点的重数。</p>
+<p><span class="arithmatex">\(\dim V_{\lambda_0}=n-r(\lambda_0\boldsymbol E-\boldsymbol A)\)</span>，即 <span class="arithmatex">\((\lambda_0\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O\)</span> 基础解析中向量的个数。</p>
+<p>称 <span class="arithmatex">\(\dim V_{\lambda_0}\)</span> 为特征值 <span class="arithmatex">\(\lambda_0\)</span> 的几何重数，<span class="arithmatex">\(\lambda_0\)</span> 的重数为特征值 <span class="arithmatex">\(\lambda_0\)</span> 的代数重数。</p>
+<p>推论：<span class="arithmatex">\(r(\boldsymbol A)\geq \boldsymbol A\)</span> 的非零特征值的个数。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\dim V_0=n-r(\boldsymbol A)\leq\)</span> 特征值 <span class="arithmatex">\(0\)</span> 的代数重数，则 <span class="arithmatex">\(r(\boldsymbol A)\geq n-(\)</span> 特征值 <span class="arithmatex">\(0\)</span> 的代数重数 <span class="arithmatex">\()=\)</span> 非零特征值的个数。</p>
+</details>
 </li>
 <li>
-<p>设 <span class="arithmatex">\(\lambda\)</span> 为 <span class="arithmatex">\(\boldsymbol A\)</span> 的任一特征值，<span class="arithmatex">\(\boldsymbol \alpha\)</span> 是对应特征向量。</p>
-<p>① <span class="arithmatex">\(f(\boldsymbol A)=a_m\boldsymbol A^m+a_{m-1}\boldsymbol A^{m-1}+\cdots+a_0\boldsymbol E\)</span>，<span class="arithmatex">\(f(\lambda)=a_m\lambda^m+a_{m-1}\lambda^{m-1}+\cdots+a_0\)</span>，则 <span class="arithmatex">\(f(\lambda)\)</span> 为 <span class="arithmatex">\(f(\boldsymbol A)\)</span> 的特征值，对应特征向量 <span class="arithmatex">\(\boldsymbol \alpha\)</span>。</p>
+<p>定理 1（Hamilton-Cayley（哈密顿-凯莱）定理）：设 <span class="arithmatex">\(\boldsymbol A\in\mathbb P^{n\times n}\)</span>，<span class="arithmatex">\(f(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|=\lambda^n-\text{tr}(\boldsymbol A)\lambda^{n-1}+\cdots+(-1)^n|\boldsymbol A|\)</span>，则 <span class="arithmatex">\(f(\boldsymbol A)=\boldsymbol A^n-\text{tr}(\boldsymbol A)\boldsymbol A^{n-1}+\cdots+(-1)^n|\boldsymbol A|\boldsymbol E=\boldsymbol O_{n\times n}\)</span></p>
+</li>
+<li>
+<p>定理 2：设 <span class="arithmatex">\(\boldsymbol A\xi_0=\lambda_0\xi_0\)</span>，则</p>
+<p>① <span class="arithmatex">\((kA)\boldsymbol\xi_0=(k\lambda_0)\boldsymbol\xi_0\)</span>；</p>
+<p>② <span class="arithmatex">\(\boldsymbol A^m\xi_0=\lambda_0^m\xi_0\)</span>；</p>
+<p>③ <span class="arithmatex">\(g(\boldsymbol A)\boldsymbol\xi_0=g(\lambda_0)\boldsymbol\xi_0\)</span>；</p>
+<p>④ 当 <span class="arithmatex">\(\boldsymbol A\)</span> 可逆时，<span class="arithmatex">\(\lambda_0\neq 0\)</span>，<span class="arithmatex">\(\boldsymbol A^{-1}\boldsymbol\xi_0=\lambda_0^{-1}\boldsymbol\xi_0\)</span>。</p>
+<p>也就是说，当 <span class="arithmatex">\(\boldsymbol A\)</span> 变成 <span class="arithmatex">\(kA,\boldsymbol A^m,g(\boldsymbol A),\boldsymbol A^{-1}\)</span> 时，特征值 <span class="arithmatex">\(\lambda_0\)</span> 相应变化成 <span class="arithmatex">\(k\lambda_0,\lambda_0^m,g(\lambda_0),\lambda_0^{-1}\)</span>，但是 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征向量 <span class="arithmatex">\(\boldsymbol\xi_0\)</span> 同时也是 <span class="arithmatex">\(kA,\boldsymbol A^m,g(\boldsymbol A),\boldsymbol A^{-1}\)</span> 的特征向量。</p>
+<details class="note">
+<summary>证明</summary>
 <ul>
 <li>
-<p>a) 由此可知，若 <span class="arithmatex">\(f(\boldsymbol A)=\boldsymbol O\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的任一特征值 <span class="arithmatex">\(\lambda\)</span> 都满足 <span class="arithmatex">\(f(\lambda)=0\)</span>（即特征值只能取 <span class="arithmatex">\(f(\lambda)=0\)</span> 的解），但 <span class="arithmatex">\(f(\lambda)=0\)</span> 的解不一定都是 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值。</p>
-<p>b) 有以下常用结论成立（设 <span class="arithmatex">\(\boldsymbol A\)</span> 的全部特征值为 <span class="arithmatex">\(\lambda_1,\lambda_2,\cdots,\lambda_n\)</span>）：<span class="arithmatex">\(a\boldsymbol E+b\boldsymbol A\)</span> 的全部特征值为 <span class="arithmatex">\(a+b\lambda_1,a+b\lambda_2,\cdots,a+b\lambda_n\)</span>；<span class="arithmatex">\(\boldsymbol A^m\)</span> 的全部特征值为 <span class="arithmatex">\(\lambda_1^m,\lambda_2^m,\cdots,\lambda_n^m\)</span>。</p>
-</li>
-</ul>
-<p>② 若 <span class="arithmatex">\(\boldsymbol A\)</span> 可逆，则 <span class="arithmatex">\(\lambda\neq 0\)</span>，且 <span class="arithmatex">\(\dfrac 1 {\lambda}\)</span> 是矩阵 <span class="arithmatex">\(\boldsymbol A^{-1}\)</span> 的特征值，对应特征向量 <span class="arithmatex">\(\boldsymbol \alpha\)</span>。</p>
-<p>③ 若 <span class="arithmatex">\(\lambda\neq 0\)</span>，<span class="arithmatex">\(\boldsymbol A\)</span> 可逆，则 <span class="arithmatex">\(\dfrac{|\boldsymbol A|}{\lambda}\)</span> 是矩阵 <span class="arithmatex">\(\boldsymbol A^*\)</span> 的特征值，对应特征向量 <span class="arithmatex">\(\boldsymbol \alpha\)</span>。</p>
-<p>补充：设 <span class="arithmatex">\(\lambda\)</span> 是可逆 <span class="arithmatex">\(\boldsymbol A\)</span> 的一个特征值，对应特征向量为 <span class="arithmatex">\(\boldsymbol \alpha\)</span>（<span class="arithmatex">\(\lambda\neq 0\)</span>），则 <span class="arithmatex">\(f(\lambda)+k\cdot \dfrac{|\boldsymbol A|}{\lambda}+l\cdot \dfrac 1 {\lambda}\)</span> 是 <span class="arithmatex">\(f(\boldsymbol A)+k\boldsymbol A^*+l\boldsymbol A^{-1}\)</span>（不能混入 <span class="arithmatex">\(\boldsymbol B,\boldsymbol A^T\)</span>）的特征值，对应特征向量 <span class="arithmatex">\(\boldsymbol \alpha\)</span>。</p>
-<p>④ 若 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，则 <span class="arithmatex">\(\lambda\)</span> 为 <span class="arithmatex">\(\boldsymbol B\)</span> 的特征值，对应特征向量 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol \alpha\)</span>。</p>
+<p>① 显然</p>
 </li>
 <li>
-<p><span class="arithmatex">\(n\)</span> 阶矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 和 <span class="arithmatex">\(\boldsymbol A^T\)</span> 有相同的特征值，但对应的特征向量不一定相同。</p>
+<p>② <span class="arithmatex">\(\boldsymbol A\xi_0=\lambda_0\xi_0\)</span>。假设 <span class="arithmatex">\(\boldsymbol A^k\xi_0=\lambda_0^k\xi_0\)</span>，则 <span class="arithmatex">\(\boldsymbol A^{k+1}\boldsymbol\xi_0=A\lambda_0^k\xi_0\)</span>，又 <span class="arithmatex">\(\boldsymbol A\lambda_0^k\xi_0=\lambda_0^k(\boldsymbol A\xi_0)=\lambda_0^k(\lambda_0\xi_0)\)</span>，则 <span class="arithmatex">\(\boldsymbol A^{k+1}\boldsymbol\xi_0=\lambda_0^{k+1}\boldsymbol\xi_0\)</span>。</p>
+</li>
+<li>
+<p>③ 设 <span class="arithmatex">\(g(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0\)</span>，则由 ② 知，</p>
+<p><span class="arithmatex">\(\begin{aligned}g(\boldsymbol A)\boldsymbol\xi_0&amp;=(a_nA^n+a_{n-1}\boldsymbol A^{n-1}+\cdots+a_1A+a_0E)\boldsymbol\xi_0\\&amp;=(a_n\lambda_0^n+a_{n-1}\lambda_0^{n-1}+\cdots+a_1\lambda_0+a_0E)\boldsymbol\xi_0\\&amp;=g(\lambda_0\xi_0)\end{aligned}\)</span></p>
+</li>
+<li>
+<p>④ <span class="arithmatex">\(\boldsymbol A\xi_0=\lambda_0\xi_0\)</span>，等式两边同时左乘 <span class="arithmatex">\(\boldsymbol A^{-1}\)</span>，<span class="arithmatex">\(\boldsymbol A^{-1}(\boldsymbol A\xi_0)=A^{-1}(\lambda_0\xi_0)\)</span>，即 <span class="arithmatex">\(\boldsymbol\xi_0=\lambda_0(\boldsymbol A^{-1}\boldsymbol\xi_0)\)</span>，即 <span class="arithmatex">\(\lambda_0^{-1}\boldsymbol\xi_0=A^{-1}\boldsymbol\xi_0\)</span>。</p>
 </li>
 </ul>
+</details>
 </li>
 </ul>
-</li>
-</ul>
-<h3 id="_3">相似对角化<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_4">矩阵的相似及其性质<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>相似矩阵及其性质</p>
+<p>定义 1：设 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\in\mathbb P^{n\times n}\)</span>，若存在可逆矩阵 <span class="arithmatex">\(\boldsymbol P\in\mathbb P^{n\times n}\)</span>，使得 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，则称 <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 相似，记作 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim\boldsymbol B\)</span>。</p>
+<details class="warning" open="open">
+<summary>区分</summary>
+<p>相抵（等价）：设 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\in\mathbb P^{m\times n}\)</span>，如果 <span class="arithmatex">\(\boldsymbol A\)</span> 经过一系列初等变换到 <span class="arithmatex">\(\boldsymbol B\)</span>，称 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 相抵（等价）。</p>
+<p>性质：相抵（等价）具有自反性，对称性，传递性。</p>
+<p>若 <span class="arithmatex">\(r(\boldsymbol A)=r\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的相抵（等价）标准形为 <span class="arithmatex">\(\begin{pmatrix}\boldsymbol E_r&amp;\boldsymbol O\\\boldsymbol O&amp;\boldsymbol O\end{pmatrix}\)</span>。</p>
+</details>
+<p><span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 等价（相抵）<span class="arithmatex">\(\Leftrightarrow\)</span> 存在可逆矩阵 <span class="arithmatex">\(\boldsymbol P,\boldsymbol Q\)</span> 使得 <span class="arithmatex">\(\boldsymbol P\boldsymbol A\boldsymbol Q=\boldsymbol B\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(r(\boldsymbol A)=r(\boldsymbol B)\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> 相同标准形</p>
+</li>
+<li>
+<p>性质 1：相似具有自反性，对称性，传递性。</p>
+<p>所以矩阵的相似也确定了一个等价关系，称为相似等价关系。可以将 <span class="arithmatex">\(\mathbb P^{n\times n}\)</span> 按照相似关系分划为不同的类——相似（等价）类，使得 <span class="arithmatex">\(\mathbb P^{n\times n}\)</span> 中的每一个方阵属于且只属于其中的一个相似（等价）类。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\boldsymbol E^{-1}\boldsymbol A\boldsymbol E=\boldsymbol A\)</span>。即 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim A\)</span>。</p>
+<p>设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，则 <span class="arithmatex">\(\boldsymbol  A=\boldsymbol p\boldsymbol B\boldsymbol P^{-1}\)</span>。即若 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim B\)</span>，则 <span class="arithmatex">\(\boldsymbol B\stackrel S\sim A\)</span>。</p>
+<p>设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B,\boldsymbol Q^{-1}\boldsymbol B\boldsymbol Q=\boldsymbol C\)</span>，则 <span class="arithmatex">\(\boldsymbol Q^{-1}(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P)\boldsymbol Q=(\boldsymbol P\boldsymbol Q)^{-1}\boldsymbol A(\boldsymbol P\boldsymbol Q)=\boldsymbol C\)</span>。即若 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim \boldsymbol B,\boldsymbol B\stackrel S\sim \boldsymbol C\)</span>，则 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim \boldsymbol C\)</span>。</p>
+</details>
+</li>
+<li>
+<p>性质 2：设 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 相似，则</p>
+<p>① <span class="arithmatex">\(|\boldsymbol A|=|\boldsymbol B|\)</span>；</p>
+<p>② <span class="arithmatex">\(r(\boldsymbol A)=r(\boldsymbol B)\)</span>；</p>
+<p>③ <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 相抵（等价）；</p>
+<p>④ <span class="arithmatex">\(\text{tr}(\boldsymbol A)=\text{tr}(\boldsymbol B)\)</span>；</p>
+<p>⑤ <span class="arithmatex">\(|\lambda\boldsymbol E-\boldsymbol A|=|\lambda\boldsymbol E-\boldsymbol B|\)</span>。</p>
+<p>即有相似的五个必要条件：行列式相等，秩相等，相抵（等价），迹相等，特征值相等。这五个必要条件只要有一个不成立，两个矩阵就一定不相似；但即使五个必要条件都成立，也不能保证两个矩阵相似，例如 <span class="arithmatex">\(\begin{pmatrix}1&amp;0\\0&amp;1\end{pmatrix}\)</span> 和 <span class="arithmatex">\(\begin{pmatrix}1&amp;1\\0&amp;1\end{pmatrix}\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>①②③ 显然。</p>
+<p>④ <span class="arithmatex">\(\text{tr}(\boldsymbol B)=\text{tr}(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P)=\text{tr}(\boldsymbol A\boldsymbol P\boldsymbol P^{-1})=\text{tr}(\boldsymbol A)\)</span>。</p>
+<p>⑤ <span class="arithmatex">\(|\lambda\boldsymbol E-\boldsymbol B|=|\lambda\boldsymbol E-\boldsymbol P^{-1}\boldsymbol A\boldsymbol P|=|\boldsymbol P^{-1}(\lambda\boldsymbol E-\boldsymbol A)\boldsymbol P|=|\lambda\boldsymbol E-\boldsymbol A|\)</span>。</p>
+<p>④ 也可以用 ⑤ 证，因为矩阵的迹等于特征值之和。</p>
+</details>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>已知 <span class="arithmatex">\(\boldsymbol A=\begin{pmatrix}2&amp;0&amp;0\\0&amp;a&amp;2\\0&amp;2&amp;3\end{pmatrix}\)</span> 与 <span class="arithmatex">\(\boldsymbol B=\begin{pmatrix}1&amp;&amp;\\&amp;2&amp;\\&amp;&amp;b\end{pmatrix}\)</span> 相似，求 <span class="arithmatex">\(a,b\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 相似，则：</p>
+<p><span class="arithmatex">\(\begin{cases}\text{tr}(\boldsymbol A)=\text{tr}(\boldsymbol B)\\|\boldsymbol A|=|\boldsymbol B|\end{cases}\Rightarrow \begin{cases}5+a=3+b\\6a-8=2b\end{cases}\Rightarrow \begin{cases}a=3\\b=5\end{cases}\)</span></p>
+</details>
+</details>
+<p>推论：设 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 都能对角化，则 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 相似 <span class="arithmatex">\(\Leftrightarrow |\lambda \boldsymbol E-\boldsymbol A|=|\lambda\boldsymbol E-\boldsymbol B|\)</span>。</p>
+</li>
+<li>
+<p>性质 3：设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，<span class="arithmatex">\(V_{\lambda}^{\boldsymbol A}=\{\boldsymbol X\mid (\lambda\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O,\boldsymbol X\in\mathbb P^n\}\)</span>，<span class="arithmatex">\(V_{\lambda}=\{\boldsymbol X\mid (\lambda\boldsymbol E-\boldsymbol B)\boldsymbol X=\boldsymbol O,\boldsymbol X\in\mathbb P^n\}\)</span>（即 <span class="arithmatex">\(\boldsymbol A\)</span> 和 <span class="arithmatex">\(\boldsymbol B\)</span> 的属于 <span class="arithmatex">\(\lambda\)</span> 的特征子空间），则 <span class="arithmatex">\(V_{\lambda}^{\boldsymbol A}=\boldsymbol PV_{\lambda}^{\boldsymbol B}\)</span>（这里 <span class="arithmatex">\(\boldsymbol PV_{\lambda}^{\boldsymbol B}=\{\boldsymbol P\zeta\mid \zeta\in V_{\lambda}^{\boldsymbol B}\}\)</span>）。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol B\boldsymbol X=\lambda\boldsymbol X\)</span>，则 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P\boldsymbol X=\lambda \boldsymbol X\)</span>，<span class="arithmatex">\(\boldsymbol A(\boldsymbol P\boldsymbol X)=\lambda(\boldsymbol P\boldsymbol X)\)</span>。即，若 <span class="arithmatex">\(\boldsymbol X\)</span> 是 <span class="arithmatex">\(\boldsymbol B\)</span> 属于特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量，则 <span class="arithmatex">\(\boldsymbol P\boldsymbol X\)</span> 一定是 <span class="arithmatex">\(\boldsymbol A\)</span> 属于特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量。</p>
+</details>
+</li>
+</ul>
+<h3 id="_5">矩阵的相似对角化<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>相似矩阵的定义</p>
-<p>设 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 是两个 <span class="arithmatex">\(n\)</span> 阶矩阵，若存在可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span>，满足 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，则矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 与矩阵 <span class="arithmatex">\(\boldsymbol B\)</span> 相似，记作 <span class="arithmatex">\(\boldsymbol A\sim \boldsymbol B\)</span>。</p>
+<p>设 <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol \Lambda=\text{diag}(\lambda_1,\cdots,\lambda_n)\)</span> 相似</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 存在可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span>，使得 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol \Lambda\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow \boldsymbol A\boldsymbol P=\boldsymbol P\boldsymbol \Lambda\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 记 <span class="arithmatex">\(\boldsymbol P=(\boldsymbol \alpha_1,\cdots,\boldsymbol \alpha_n)\)</span>，<span class="arithmatex">\(\boldsymbol A(\boldsymbol \alpha_1,\cdots,\boldsymbol \alpha_n)=(\boldsymbol \alpha_1,\cdots,\boldsymbol \alpha_n)\begin{pmatrix}\lambda_1&amp;&amp;\\&amp;\ddots&amp;\\&amp;&amp;\lambda_n\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow (\boldsymbol A\boldsymbol \alpha_1,\boldsymbol A\boldsymbol \alpha_2,\cdots,\boldsymbol A\boldsymbol \alpha_n)=(\lambda_1\boldsymbol \alpha_1,\lambda_2\boldsymbol \alpha_2,\cdots,\lambda_n\boldsymbol \alpha_n)\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow \boldsymbol A\boldsymbol \alpha_i=\lambda_i\boldsymbol \alpha_i\,(i=1,2,\cdots,n)\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow \boldsymbol A\)</span> 有线性无关的特征向量（即 <span class="arithmatex">\(r_1+r_2+\cdots+r_s=n=n_1+n_2+\cdots+n_s\)</span>）</p>
+<p><span class="arithmatex">\(\Leftrightarrow \mathbb P^n\)</span> 中存在一组由 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征向量所形成的基</p>
+<p>可得：若 <span class="arithmatex">\(\boldsymbol A\)</span> 能对角化，则</p>
+<p>① 对角阵 <span class="arithmatex">\(\boldsymbol \Lambda\)</span> 的对角线上的元素正好为 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值；</p>
+<p>② 可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span> 中的每个列向量 <span class="arithmatex">\(\boldsymbol \alpha_i\)</span>，正是 <span class="arithmatex">\(\boldsymbol A\)</span> 对应 <span class="arithmatex">\(\lambda_i\)</span> 的特征向量。</p>
 </li>
 <li>
-<p>矩阵相似的性质</p>
-<p>若 <span class="arithmatex">\(\boldsymbol A\sim \boldsymbol B\)</span>，则</p>
-<p>① <span class="arithmatex">\(f(\boldsymbol A)\sim f(\boldsymbol B)\)</span>（<span class="arithmatex">\(f(x)\)</span> 为多项式），<span class="arithmatex">\(\boldsymbol A^{-1}\sim \boldsymbol B^{-1}\)</span>（若可逆），<span class="arithmatex">\(\boldsymbol A^T\sim \boldsymbol B^T\)</span>，<span class="arithmatex">\(\boldsymbol A^*\sim \boldsymbol B^*\)</span>；若 <span class="arithmatex">\(\boldsymbol A\)</span> 可逆，则 <span class="arithmatex">\(\boldsymbol {AB}=\sim \boldsymbol {BA}\)</span>。</p>
-<p>补充：<span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\Rightarrow \boldsymbol P^{-1}(f(\boldsymbol A)+k\boldsymbol A^*+l\boldsymbol A^{-1})\boldsymbol P=f(\boldsymbol B)+k\boldsymbol B^*+l\boldsymbol B^{-1}\)</span>（不能混入 <span class="arithmatex">\(\boldsymbol C,\boldsymbol A^T\)</span>）。</p>
-<p>② <span class="arithmatex">\(|\boldsymbol A|=|\boldsymbol B|\)</span>，<span class="arithmatex">\(|\lambda \boldsymbol E-\boldsymbol A|=|\lambda \boldsymbol E-\boldsymbol B|\)</span>（<span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 特征值相同），<span class="arithmatex">\(r(\boldsymbol A)=r(\boldsymbol B)\)</span>，<span class="arithmatex">\(\text{tr}(\boldsymbol A)=\text{tr}(\boldsymbol B)\)</span></p>
-<p>若 <span class="arithmatex">\(\boldsymbol A\sim \boldsymbol B\)</span>，<span class="arithmatex">\(\boldsymbol C\sim \boldsymbol D\)</span>，则 <span class="arithmatex">\(\begin{bmatrix}\boldsymbol A&amp;\boldsymbol O\\\boldsymbol O&amp;\boldsymbol C\end{bmatrix}\sim \begin{bmatrix}\boldsymbol B&amp;\boldsymbol O\\\boldsymbol O&amp;\boldsymbol D\end{bmatrix}\)</span>。</p>
-</li>
-</ul>
-</li>
-<li>
-<p>矩阵的相似对角化</p>
+<p>定理 4：设 <span class="arithmatex">\(\boldsymbol A\)</span> 是数域 <span class="arithmatex">\(\mathbb P\)</span> 上的一个 <span class="arithmatex">\(n\)</span> 阶方阵，则下列命题等价：</p>
+<p>① <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\mathbb P\)</span> 上的某个对角矩阵相似</p>
+<p>② <span class="arithmatex">\(\boldsymbol A\)</span> 在 <span class="arithmatex">\(\mathbb P^n\)</span> 中有 <span class="arithmatex">\(n\)</span> 个线性无关的特征向量</p>
+<p>（此时，<span class="arithmatex">\(r_1+r_2+\cdots+r_s=n=n_1+n_2+\cdots+n_s\)</span>）</p>
+<p>③ <span class="arithmatex">\(\mathbb P^n\)</span> 中存在一个由 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征向量所形成的基</p>
+<p>④ <span class="arithmatex">\(\boldsymbol A\)</span> 在 <span class="arithmatex">\(\mathbb P^n\)</span> 中的所有两两互异的特征子空间的维数之和等于 <span class="arithmatex">\(n\)</span></p>
+<p>⑤ <span class="arithmatex">\(\boldsymbol A\)</span> 在 <span class="arithmatex">\(\mathbb P\)</span> 上有 <span class="arithmatex">\(n\)</span> 个特征值（遇特征多项式有重零点时，按重数计），且对于每个特征值 <span class="arithmatex">\(\lambda\)</span>，<span class="arithmatex">\(\dim V_{\lambda}=\lambda\)</span> 的重数。</p>
+<p>（<span class="arithmatex">\(\dim V_{\lambda_0}\leq \lambda_0\)</span> 的重数。此时 <span class="arithmatex">\(\dim V_{\lambda_0}=\lambda_0\)</span> 的重数）</p>
 <ul>
 <li>
-<p>相似对角化的定义</p>
-<p>若矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 与对角矩阵 <span class="arithmatex">\(\boldsymbol \Lambda\)</span> 相似，即存在可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span>，使 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol \Lambda\)</span>，则称 <span class="arithmatex">\(\boldsymbol A\)</span> 可以相似对角化，记为 <span class="arithmatex">\(\boldsymbol A\sim \boldsymbol \Lambda\)</span>，称 <span class="arithmatex">\(\boldsymbol \Lambda\)</span> 是 <span class="arithmatex">\(\boldsymbol A\)</span> 的相似标准形。</p>
-<p>注：① <span class="arithmatex">\(\boldsymbol A\sim\boldsymbol \Lambda\)</span> 时，<span class="arithmatex">\(\boldsymbol \Lambda\)</span> 主对角线上的元素即为 <span class="arithmatex">\(\boldsymbol A\)</span> 的全部特征值；② <span class="arithmatex">\(\boldsymbol P\)</span> 的各列向量为 <span class="arithmatex">\(\boldsymbol A\)</span> 的 <span class="arithmatex">\(n\)</span> 个线性无关的特征向量，且顺序与 <span class="arithmatex">\(\lambda_i\)</span> 对应。</p>
-<p>结论：若 <span class="arithmatex">\(\boldsymbol A\)</span> 可对角化，则 <span class="arithmatex">\(r(\boldsymbol A)=\boldsymbol A\)</span> 非零特征值个数。</p>
-</li>
-<li>
-<p>矩阵可相似对角化的充要条件</p>
-<p><span class="arithmatex">\(\boldsymbol A\sim \boldsymbol \Lambda\)</span></p>
-<p><span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\)</span> 恰有 <span class="arithmatex">\(n\)</span> 个线性无关的特征向量</p>
-<p><span class="arithmatex">\(\Leftrightarrow\)</span> 对于 <span class="arithmatex">\(\boldsymbol A\)</span> 的每个 <span class="arithmatex">\(k_i\)</span> 重特征值 <span class="arithmatex">\(\lambda_i\)</span>，都有 <span class="arithmatex">\(k_i\)</span> 个无关特征向量</p>
-<p><span class="arithmatex">\(\Leftrightarrow\)</span> 对于 <span class="arithmatex">\(\boldsymbol A\)</span> 的每个 <span class="arithmatex">\(k_i\)</span> 重特征值 <span class="arithmatex">\(\lambda_i\)</span>，<span class="arithmatex">\(n-r(\lambda_i\boldsymbol E-\boldsymbol A)=k_i\)</span></p>
-</li>
-<li>
-<p>矩阵可相似对角化的充分条件</p>
-<p>① <span class="arithmatex">\(n\)</span> 阶矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 有 <span class="arithmatex">\(n\)</span> 个不同的特征值 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\sim \boldsymbol \Lambda\)</span></p>
-<p>② <span class="arithmatex">\(n\)</span> 阶矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 是实对称矩阵 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\sim \boldsymbol \Lambda\)</span></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="_4">实对称矩阵<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>实对称矩阵及其性质</p>
-<ul>
-<li>
-<p>实对称矩阵的定义</p>
-<p>对于实矩阵 <span class="arithmatex">\(\boldsymbol A\)</span>，若 <span class="arithmatex">\(\boldsymbol A^T=\boldsymbol A\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 为实对称矩阵。</p>
-</li>
-<li>
-<p>正交矩阵</p>
-<ul>
-<li>定义：若 <span class="arithmatex">\(n\)</span> 阶方阵 <span class="arithmatex">\(\boldsymbol A\)</span> 满足 <span class="arithmatex">\(\boldsymbol A\boldsymbol A^T=\boldsymbol A^T\boldsymbol A=\boldsymbol E\)</span>，称 <span class="arithmatex">\(\boldsymbol A\)</span> 是正交矩阵。</li>
-<li>
-<p>性质：</p>
-<p>① <span class="arithmatex">\(\boldsymbol A\)</span> 为正交矩阵，则 <span class="arithmatex">\(\boldsymbol A^{-1}=\boldsymbol A^T\)</span>；</p>
-<p>② 正交矩阵的行列式等于 <span class="arithmatex">\(1\)</span> 或 <span class="arithmatex">\(-1\)</span>；</p>
-<p>③ 正交矩阵的行（列）向量长度均为 <span class="arithmatex">\(1\)</span>，且行（列）向量两两正交。</p>
+<p>推论：</p>
+<p>① 若 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值全为单根，则 <span class="arithmatex">\(\boldsymbol A\)</span> 必能对角化（<span class="arithmatex">\(\boldsymbol A\)</span> 能对角化的充分条件）</p>
+<p>② <span class="arithmatex">\(\boldsymbol A\)</span> 能对角化 <span class="arithmatex">\(\Leftrightarrow r_1+r_2+\cdots+r_s=n\)</span> <span class="arithmatex">\(\Leftrightarrow n_i=r_i\,(i=1,2,\cdots,s)\)</span></p>
 </li>
 </ul>
 </li>
 <li>
-<p>实对称矩阵的特性</p>
-<ul>
-<li>特征值全是实数，特征向量均为实向量。</li>
-<li>
-<p>必能相似对角化，且存在正交矩阵 <span class="arithmatex">\(\boldsymbol Q\)</span>，使 <span class="arithmatex">\(\boldsymbol Q^T\boldsymbol A\boldsymbol Q=\boldsymbol Q^{-1}\boldsymbol A\boldsymbol Q=\boldsymbol \Lambda\)</span>。</p>
-<p>注：能通过正交矩阵 <span class="arithmatex">\(\boldsymbol Q\)</span> 相似对角化的矩阵一定是对称矩阵，非对称矩阵一定不能通过正交矩阵 <span class="arithmatex">\(\boldsymbol Q\)</span> 相似对角化。</p>
-<p>（由 <span class="arithmatex">\(\boldsymbol Q^T\boldsymbol A\boldsymbol Q=\boldsymbol Q^{-1}\boldsymbol A\boldsymbol Q=\Lambda\Leftrightarrow \boldsymbol A^T=(\boldsymbol Q\boldsymbol \Lambda\boldsymbol Q^T)^T=\boldsymbol Q\boldsymbol \Lambda\boldsymbol Q^T=\boldsymbol A\)</span>）</p>
+<p>设 <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 相似，即 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，则</p>
+<p>① <span class="arithmatex">\(\boldsymbol A^k\)</span> 与 <span class="arithmatex">\(\boldsymbol B^k\)</span> 相似且 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A^k\boldsymbol P=\boldsymbol B^k\)</span></p>
+<p>② <span class="arithmatex">\(f(\boldsymbol A)\)</span> 与 <span class="arithmatex">\(f(\boldsymbol B)\)</span> 相似且 <span class="arithmatex">\(\boldsymbol P^{-1}f(\boldsymbol A)\boldsymbol P=f(\boldsymbol B)\)</span>。</p>
 </li>
 <li>
-<p>不同特征值的特征向量必定正交。</p>
-</li>
-<li><span class="arithmatex">\(k\)</span> 重特征值必定有 <span class="arithmatex">\(k\)</span> 个线性无关的特征向量。</li>
-<li>非零特征值的个数（重根按重数计）等于矩阵的秩。</li>
-</ul>
+<p>设 <span class="arithmatex">\(\boldsymbol A\)</span> 能对角化，即 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(\lambda_1,\cdots,\lambda_n)\)</span>，则</p>
+<p>① <span class="arithmatex">\(\boldsymbol A^k\)</span> 能对角化且 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A^k\boldsymbol P=\text{diag}(\lambda_1^k,\cdots,\lambda_n^k)\)</span> 或 <span class="arithmatex">\(\boldsymbol A^k=\boldsymbol P\text{diag}(\lambda_1^k,\cdots,\lambda_n^k)\boldsymbol P^{-1}\)</span></p>
+<p>② <span class="arithmatex">\(f(\boldsymbol A)\)</span> 能对角化且 <span class="arithmatex">\(\boldsymbol P^{-1}f(\boldsymbol A)\boldsymbol P=\text{diag}(f(\lambda_1),\cdots,f(\lambda_n))\)</span> 或 <span class="arithmatex">\(f(\boldsymbol A)=\boldsymbol P\text{diag}(f(\lambda_1),\cdots,f(\lambda_n))\boldsymbol P^{-1}\)</span></p>
 </li>
 </ul>
-</li>
-<li>
-<p>实对称矩阵的正交相似对角化</p>
-<p>求正交阵 <span class="arithmatex">\(\boldsymbol Q\)</span> 和对角阵 <span class="arithmatex">\(\boldsymbol \Lambda\)</span>，使 <span class="arithmatex">\(\boldsymbol Q^T\boldsymbol A\boldsymbol Q=\boldsymbol Q^{-1}\boldsymbol A\boldsymbol Q=\boldsymbol \Lambda\)</span></p>
-<p>① 求 <span class="arithmatex">\(\boldsymbol A\)</span> 所有的特征值和对应特征向量；</p>
-<p>② 将属于同一特征值的特征向量正交化，再将所有特征向量单位化；</p>
-<p>③ 写成 <span class="arithmatex">\(\boldsymbol Q\)</span> 和 <span class="arithmatex">\(\boldsymbol \Lambda\)</span>。</p>
-<ul>
-<li>
-<p>施密特（Schmidt）正交化方法</p>
-<p>若向量组 <span class="arithmatex">\(\boldsymbol \alpha_1,\boldsymbol \alpha_2,\boldsymbol \alpha_3\)</span> 无关，令 <span class="arithmatex">\(\boldsymbol \beta_1=\boldsymbol \alpha_1\)</span>，<span class="arithmatex">\(\boldsymbol \beta_2=\boldsymbol \alpha_2-\dfrac{(\boldsymbol \alpha_2,\boldsymbol \beta_1)}{(\boldsymbol \beta_1,\boldsymbol \beta_1)}\boldsymbol \beta_1\)</span>，<span class="arithmatex">\(\boldsymbol \beta_3=\boldsymbol \alpha_3-\dfrac{(\boldsymbol \alpha_3,\boldsymbol \beta_1)}{(\boldsymbol \beta_1,\boldsymbol \beta_1)}\boldsymbol \beta_1-\dfrac{(\boldsymbol \alpha_3,\boldsymbol \beta_2)}{(\boldsymbol \beta_2,\boldsymbol \beta_2)}\boldsymbol \beta_2\)</span>，则向量组 <span class="arithmatex">\(\boldsymbol \beta_1,\boldsymbol \beta_2,\boldsymbol \beta_3\)</span> 两两正交，且与向量组 <span class="arithmatex">\(\boldsymbol \alpha_1,\boldsymbol \alpha_2,\boldsymbol \alpha_3\)</span> 等价，这一过程称为 Schmidt 正交化。</p>
-<p>注：线性无关向量组正交规范化后得到的结果不唯一。</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>\boldsymbol </p>
-<p><span class="arithmatex">\(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_s\)</span></p>
-<p><span class="arithmatex">\(k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_s\boldsymbol{\alpha}_s\)</span></p>
 
 
 
