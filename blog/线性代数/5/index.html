@@ -2304,7 +2304,7 @@
 
   <h1>第五章 矩阵的特征值理论与相似对角化</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-13T09:43:59.753505+00:00'>2025-12-13</time></span><span data-tippy-content data-tippy-raw='2025-12-13'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-13T09:43:59.753505+00:00'>2025-12-13</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-14'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-14T15:43:13.217614+00:00'>2025-12-14</time></span><span data-tippy-content data-tippy-raw='2025-12-14'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-14T15:43:13.217614+00:00'>2025-12-14</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">特征值和特征向量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2358,8 +2358,8 @@
 <li>
 <p>特征值与特征向量的求法：</p>
 <p>① 令 <span class="arithmatex">\(|\lambda\boldsymbol E-\boldsymbol A|=0\)</span>，求出 <span class="arithmatex">\(\boldsymbol A\)</span> 的所有不同特征值 <span class="arithmatex">\(\lambda_1,\lambda_2,\cdots,\lambda_s\)</span></p>
-<p>② 对每个 <span class="arithmatex">\(\lambda_i\)</span>，求 <span class="arithmatex">\((\lambda_i \boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O\)</span> 的一个基础解系 <span class="arithmatex">\(\xi_{i1},\cdots,\xi_{ir_i}\)</span>，则 <span class="arithmatex">\(\lambda_i\)</span> 对应的全体特征向量为 <span class="arithmatex">\(k_{i1}\xi_{i1}+k_{i2}\xi_{i2}+\cdots+k_{ir_i}\xi_{ir_i}\)</span>（<span class="arithmatex">\(k_{ij}\)</span> 不同时为 <span class="arithmatex">\(0\)</span>）。</p>
-<p>记 <span class="arithmatex">\(V_{\lambda_i}=\{\boldsymbol A\)</span> 的属于 <span class="arithmatex">\(\lambda_i\)</span> 的全体特征向量 <span class="arithmatex">\(\}\cup\{\boldsymbol \theta\}=\{\boldsymbol X\mid(\lambda_i\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O,\boldsymbol X\in\mathbb P^n\}=L(\xi_{i1},\xi_{i2},\cdots,\xi_{ir_i})\)</span>，称为特征值 <span class="arithmatex">\(\lambda_i\)</span> 的特征子空间。</p>
+<p>② 对每个 <span class="arithmatex">\(\lambda_i\)</span>，求 <span class="arithmatex">\((\lambda_i \boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O\)</span> 的一个基础解系 <span class="arithmatex">\(\boldsymbol\xi_{i1},\cdots,\boldsymbol\xi_{ir_i}\)</span>，则 <span class="arithmatex">\(\lambda_i\)</span> 对应的全体特征向量为 <span class="arithmatex">\(k_{i1}\boldsymbol\xi_{i1}+k_{i2}\boldsymbol\xi_{i2}+\cdots+k_{ir_i}\boldsymbol\xi_{ir_i}\)</span>（<span class="arithmatex">\(k_{ij}\)</span> 不同时为 <span class="arithmatex">\(0\)</span>）。</p>
+<p>记 <span class="arithmatex">\(V_{\lambda_i}=\{\boldsymbol A\)</span> 的属于 <span class="arithmatex">\(\lambda_i\)</span> 的全体特征向量 <span class="arithmatex">\(\}\cup\{\boldsymbol \theta\}=\{\boldsymbol X\mid(\lambda_i\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O,\boldsymbol X\in\mathbb P^n\}=L(\boldsymbol\xi_{i1},\boldsymbol\xi_{i2},\cdots,\boldsymbol\xi_{ir_i})\)</span>，称为特征值 <span class="arithmatex">\(\lambda_i\)</span> 的特征子空间。</p>
 </li>
 </ul>
 <h3 id="_3">特征值和特征向量的基本性质<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -2391,10 +2391,10 @@
 <li>
 <p>性质 3：设 <span class="arithmatex">\(f(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|=(\lambda-\lambda_1)^{n_1}\cdots(\lambda-\lambda_s)^{n_s}\)</span>，求出 <span class="arithmatex">\((\lambda_i\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 的基础解系为 <span class="arithmatex">\(\boldsymbol\xi_{i1},\boldsymbol\xi_{i2},\cdots,\boldsymbol\xi_{ir_i}\)</span>，则向量组 <span class="arithmatex">\(\boldsymbol\xi_{11},\boldsymbol\xi_{12},\cdots,\boldsymbol\xi_{1r_1},\boldsymbol\xi_{21},\boldsymbol\xi_{22},\cdots,\boldsymbol\xi_{2r_2},\cdots,\boldsymbol\xi_{s1},\boldsymbol\xi_{s2},\cdots,\boldsymbol\xi_{sr_s}\)</span> 线性无关。</p>
 <p><span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 共有 <span class="arithmatex">\(r_1+r_2+\cdots+r_s\)</span> 个线性无关的特征向量。</p>
-<p>即：记 <span class="arithmatex">\(V_{\lambda_i}=L(\boldsymbol\xi_{i1},\boldsymbol\xi_{i2},\cdots,\boldsymbol\xi_{ir_i})\)</span>，显然 <span class="arithmatex">\(\dim V_{\lambda_i}=r_i\,(i=1,2,\cdots,s)\)</span>，则 <span class="arithmatex">\(\dim V_{\lambda_1}+\cdots+\dim V_{r_s}=r_1+r_2+\cdots+r_s\)</span> 且 <span class="arithmatex">\(V_{\lambda_i}\cap V_{\lambda_j}=\varnothing\,(i\neq j)\)</span>。</p>
+<p>即：记 <span class="arithmatex">\(V_{\lambda_i}=L(\boldsymbol\xi_{i1},\boldsymbol\xi_{i2},\cdots,\boldsymbol\xi_{ir_i})\)</span>，显然 <span class="arithmatex">\(\dim V_{\lambda_i}=r_i\,(i=1,2,\cdots,s)\)</span>，则 <span class="arithmatex">\(\dim V_{\lambda_1}+\cdots+\dim V_{\lambda_s}=r_1+r_2+\cdots+r_s\)</span> 且 <span class="arithmatex">\(V_{\lambda_i}\cap V_{\lambda_j}=\{\boldsymbol\theta\}\,(i\neq j)\)</span>。</p>
 </li>
 <li>
-<p>性质 4：<span class="arithmatex">\(\dim V_{\lambda_0}\leq \lambda_0\)</span> 的重数，这里 <span class="arithmatex">\(\lambda_0\)</span> 的重数是指 <span class="arithmatex">\(\lambda_0\)</span> 作为特征多项式零点的重数。</p>
+<p>性质 4：<span class="arithmatex">\(\dim V_{\lambda_0}\leq \lambda_0\)</span> 的重数，这里 <span class="arithmatex">\(\lambda_0\)</span> 的重数是指 <span class="arithmatex">\(\lambda_0\)</span> 作为特征多项式零点的重数。（即 <span class="arithmatex">\(r_i\leq n_i\)</span>）</p>
 <p><span class="arithmatex">\(\dim V_{\lambda_0}=n-r(\lambda_0\boldsymbol E-\boldsymbol A)\)</span>，即 <span class="arithmatex">\((\lambda_0\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O\)</span> 基础解析中向量的个数。</p>
 <p>称 <span class="arithmatex">\(\dim V_{\lambda_0}\)</span> 为特征值 <span class="arithmatex">\(\lambda_0\)</span> 的几何重数，<span class="arithmatex">\(\lambda_0\)</span> 的重数为特征值 <span class="arithmatex">\(\lambda_0\)</span> 的代数重数。</p>
 <p>推论：<span class="arithmatex">\(r(\boldsymbol A)\geq \boldsymbol A\)</span> 的非零特征值的个数。</p>
@@ -2451,7 +2451,7 @@
 <details class="note">
 <summary>证明</summary>
 <p><span class="arithmatex">\(\boldsymbol E^{-1}\boldsymbol A\boldsymbol E=\boldsymbol A\)</span>。即 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim A\)</span>。</p>
-<p>设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，则 <span class="arithmatex">\(\boldsymbol  A=\boldsymbol p\boldsymbol B\boldsymbol P^{-1}\)</span>。即若 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim B\)</span>，则 <span class="arithmatex">\(\boldsymbol B\stackrel S\sim A\)</span>。</p>
+<p>设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，则 <span class="arithmatex">\(\boldsymbol  A=\boldsymbol P\boldsymbol B\boldsymbol P^{-1}\)</span>。即若 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim B\)</span>，则 <span class="arithmatex">\(\boldsymbol B\stackrel S\sim A\)</span>。</p>
 <p>设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B,\boldsymbol Q^{-1}\boldsymbol B\boldsymbol Q=\boldsymbol C\)</span>，则 <span class="arithmatex">\(\boldsymbol Q^{-1}(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P)\boldsymbol Q=(\boldsymbol P\boldsymbol Q)^{-1}\boldsymbol A(\boldsymbol P\boldsymbol Q)=\boldsymbol C\)</span>。即若 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim \boldsymbol B,\boldsymbol B\stackrel S\sim \boldsymbol C\)</span>，则 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim \boldsymbol C\)</span>。</p>
 </details>
 </li>
@@ -2482,7 +2482,7 @@
 <p>推论：设 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 都能对角化，则 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 相似 <span class="arithmatex">\(\Leftrightarrow |\lambda \boldsymbol E-\boldsymbol A|=|\lambda\boldsymbol E-\boldsymbol B|\)</span>。</p>
 </li>
 <li>
-<p>性质 3：设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，<span class="arithmatex">\(V_{\lambda}^{\boldsymbol A}=\{\boldsymbol X\mid (\lambda\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O,\boldsymbol X\in\mathbb P^n\}\)</span>，<span class="arithmatex">\(V_{\lambda}=\{\boldsymbol X\mid (\lambda\boldsymbol E-\boldsymbol B)\boldsymbol X=\boldsymbol O,\boldsymbol X\in\mathbb P^n\}\)</span>（即 <span class="arithmatex">\(\boldsymbol A\)</span> 和 <span class="arithmatex">\(\boldsymbol B\)</span> 的属于 <span class="arithmatex">\(\lambda\)</span> 的特征子空间），则 <span class="arithmatex">\(V_{\lambda}^{\boldsymbol A}=\boldsymbol PV_{\lambda}^{\boldsymbol B}\)</span>（这里 <span class="arithmatex">\(\boldsymbol PV_{\lambda}^{\boldsymbol B}=\{\boldsymbol P\zeta\mid \zeta\in V_{\lambda}^{\boldsymbol B}\}\)</span>）。</p>
+<p>性质 3：设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，<span class="arithmatex">\(V_{\lambda}^{\boldsymbol A}=\{\boldsymbol X\mid (\lambda\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol O,\boldsymbol X\in\mathbb P^n\}\)</span>，<span class="arithmatex">\(V_{\lambda}=\{\boldsymbol X\mid (\lambda\boldsymbol E-\boldsymbol B)\boldsymbol X=\boldsymbol O,\boldsymbol X\in\mathbb P^n\}\)</span>（即 <span class="arithmatex">\(\boldsymbol A\)</span> 和 <span class="arithmatex">\(\boldsymbol B\)</span> 的属于 <span class="arithmatex">\(\lambda\)</span> 的特征子空间），则 <span class="arithmatex">\(V_{\lambda}^{\boldsymbol A}=\boldsymbol PV_{\lambda}^{\boldsymbol B}\)</span>（这里 <span class="arithmatex">\(\boldsymbol PV_{\lambda}^{\boldsymbol B}=\{\boldsymbol P\boldsymbol\zeta\mid \boldsymbol\zeta\in V_{\lambda}^{\boldsymbol B}\}\)</span>）。</p>
 <details class="note">
 <summary>证明</summary>
 <p>设 <span class="arithmatex">\(\boldsymbol B\boldsymbol X=\lambda\boldsymbol X\)</span>，则 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P\boldsymbol X=\lambda \boldsymbol X\)</span>，<span class="arithmatex">\(\boldsymbol A(\boldsymbol P\boldsymbol X)=\lambda(\boldsymbol P\boldsymbol X)\)</span>。即，若 <span class="arithmatex">\(\boldsymbol X\)</span> 是 <span class="arithmatex">\(\boldsymbol B\)</span> 属于特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量，则 <span class="arithmatex">\(\boldsymbol P\boldsymbol X\)</span> 一定是 <span class="arithmatex">\(\boldsymbol A\)</span> 属于特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量。</p>
@@ -2524,12 +2524,28 @@
 <li>
 <p>设 <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 相似，即 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，则</p>
 <p>① <span class="arithmatex">\(\boldsymbol A^k\)</span> 与 <span class="arithmatex">\(\boldsymbol B^k\)</span> 相似且 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A^k\boldsymbol P=\boldsymbol B^k\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span> 成立。假设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A^k\boldsymbol P=\boldsymbol B^k\)</span>，则 <span class="arithmatex">\(\boldsymbol B^{k+1}=\boldsymbol B^k\boldsymbol B=(\boldsymbol P^{-1}\boldsymbol A^k\boldsymbol P)(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P)=\boldsymbol P^{-1}\boldsymbol A^{k+1}\boldsymbol P\)</span></p>
+</details>
 <p>② <span class="arithmatex">\(f(\boldsymbol A)\)</span> 与 <span class="arithmatex">\(f(\boldsymbol B)\)</span> 相似且 <span class="arithmatex">\(\boldsymbol P^{-1}f(\boldsymbol A)\boldsymbol P=f(\boldsymbol B)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\begin{aligned}\boldsymbol P^{-1}f(\boldsymbol A)\boldsymbol P&amp;=\boldsymbol P^{-1}(a_n\boldsymbol A^n+a_{n-1}\boldsymbol A^{n-1}+\cdots+a_0\boldsymbol E)\boldsymbol P\\&amp;=a_n\boldsymbol P^{-1}\boldsymbol A^n\boldsymbol P+a_{n-1}\boldsymbol P^{-1}\boldsymbol A^{n-1}\boldsymbol P+\cdots+a_0\boldsymbol P^{-1}\boldsymbol E\boldsymbol P\\&amp;=a_n\boldsymbol B^n+a_{n-1}\boldsymbol A^{n-1}+\cdots+a_0\boldsymbol E\\&amp;=f(\boldsymbol B)\end{aligned}\)</span></p>
+</details>
 </li>
 <li>
 <p>设 <span class="arithmatex">\(\boldsymbol A\)</span> 能对角化，即 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(\lambda_1,\cdots,\lambda_n)\)</span>，则</p>
 <p>① <span class="arithmatex">\(\boldsymbol A^k\)</span> 能对角化且 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A^k\boldsymbol P=\text{diag}(\lambda_1^k,\cdots,\lambda_n^k)\)</span> 或 <span class="arithmatex">\(\boldsymbol A^k=\boldsymbol P\text{diag}(\lambda_1^k,\cdots,\lambda_n^k)\boldsymbol P^{-1}\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p>法 1：<span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(\lambda_1,\cdots,\lambda_n)\)</span>。假设 <span class="arithmatex">\(\boldsymbol A^k=\boldsymbol P\text{diag}(\lambda_1^k,\cdots,\lambda_n^k)\boldsymbol P^{-1}\)</span>，则 <span class="arithmatex">\(\boldsymbol A^{k+1}=\boldsymbol A^k\boldsymbol A=\boldsymbol P\text{diag}(\lambda_1^k,\cdots,\lambda_n^k)\boldsymbol P^{-1}\cdot \boldsymbol P\text{diag}(\lambda_1,\cdots,\lambda_n)\boldsymbol P^{-1}=\boldsymbol P\text{diag}(\lambda_1^{k+1},\cdots,\lambda_n^{k+1})\boldsymbol P^{-1}\)</span></p>
+<p>法 2：<span class="arithmatex">\(\lambda_i\)</span> 是 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值，则 <span class="arithmatex">\(\lambda_i^k\)</span> 是 <span class="arithmatex">\(\boldsymbol A^k\)</span> 的特征值。</p>
+</details>
 <p>② <span class="arithmatex">\(f(\boldsymbol A)\)</span> 能对角化且 <span class="arithmatex">\(\boldsymbol P^{-1}f(\boldsymbol A)\boldsymbol P=\text{diag}(f(\lambda_1),\cdots,f(\lambda_n))\)</span> 或 <span class="arithmatex">\(f(\boldsymbol A)=\boldsymbol P\text{diag}(f(\lambda_1),\cdots,f(\lambda_n))\boldsymbol P^{-1}\)</span></p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(\boldsymbol A\)</span> 能对角化时，求可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span> 和对角矩阵 <span class="arithmatex">\(\boldsymbol \Lambda\)</span>：求 <span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 的特征值和对应的特征向量。</p>
 </li>
 </ul>
 
