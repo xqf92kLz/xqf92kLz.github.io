@@ -2243,6 +2243,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反常积分的敛散性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        积分的比较审敛法
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2267,7 +2289,7 @@
 
   <h1>5'</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-14'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-14T15:43:13.214614+00:00'>2025-12-14</time></span><span data-tippy-content data-tippy-raw='2025-12-14'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-14T15:43:13.214614+00:00'>2025-12-14</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-15T04:08:26.776712+00:00'>2025-12-15</time></span><span data-tippy-content data-tippy-raw='2025-12-15'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-15T04:08:26.776712+00:00'>2025-12-15</time></span></div></div>
 <h2 id="_1">定积分的概念和性质<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">定积分的概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2776,7 +2798,7 @@
 <ul>
 <li>
 <p>定积分 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 的积分区间 <span class="arithmatex">\([a,b]\)</span> 是有限区间，又 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上是有界的，如果积分区间推广到无穷区间或 <span class="arithmatex">\(f(x)\)</span> 推广到无界函数，就是两种不同类型的反常积分。</p>
-<ul>
+</li>
 <li>
 <p>无穷区间上的反常积分</p>
 <ul>
@@ -2806,6 +2828,107 @@
 </ul>
 </li>
 </ul>
+<p>注：</p>
+<p>① <span class="arithmatex">\(\int_a^{+\infty}f(t)\text dt\)</span> 的几何意义：曲线 <span class="arithmatex">\(y=f(x)\)</span> 与直线<span class="arithmatex">\(x=a\)</span>、<span class="arithmatex">\(x\)</span> 轴所围向 <span class="arithmatex">\(+\infty\)</span> 伸展图形面积的代数和。</p>
+<p>② 收敛反常积分性质和计算法与定积分相同，分部积分法与换元积分法对反常积分也成立；</p>
+<p>③ 反常积分也适用牛顿莱布尼茨公式，但无穷远点或无界点处原函数应取极限；</p>
+<p>④ 若 <span class="arithmatex">\(\lim\limits_{x\to +\infty}f(x)\)</span> 存在且 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 收敛，则 <span class="arithmatex">\(\lim\limits_{x\to +\infty}f(x)=0\)</span>。若 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 收敛，则未必有 <span class="arithmatex">\(\lim\limits_{x\to +\infty}f(x)=0\)</span>；</p>
+<p>⑤ <span class="arithmatex">\((-\infty,+\infty)\)</span> 并非指对称区间，故 <span class="arithmatex">\(\int_{-\infty}^{+\infty}f(x)\text dx\)</span> 不适用“偶倍奇零”，需要验证 <span class="arithmatex">\(\int_{-\infty}^a f(x)\text dx\)</span> 和 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 收敛，才可利用奇偶性化简。例如 <span class="arithmatex">\(\int_{-\infty}^{+\infty}x\text dx=\int_{-\infty}^0x\text dx+\int_0^{+\infty}x\text dx\)</span> 发散（而非为 <span class="arithmatex">\(0\)</span>），<span class="arithmatex">\(\int_{-\infty}^{+\infty}xe^{-x^2}\text dx=\int_{-\infty}^0 xe^{-x^2}\text dx+\int_0^{\infty}xe^{-x^2}\text dx=0\)</span>；</p>
+<p>⑥ <span class="arithmatex">\(\int_0^{+\infty}e^{-x^2}\text dx=\dfrac{\sqrt{\pi}}2\)</span>，<span class="arithmatex">\(\int_{-\infty}^{+\infty}e^{-x^2}\text dx=\sqrt{\pi}\)</span>。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算反常积分：</p>
+<p><span class="arithmatex">\(\int_e^{+\infty}\dfrac{\text dx}{x\ln^2 x}\)</span></p>
+<p><span class="arithmatex">\(\int_1^{+\infty}\dfrac{\arctan x}{x^2}\text dx\)</span></p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li><span class="arithmatex">\(I=\int_e^{+\infty}\dfrac{d(\ln x)}{\ln^2 x}=-\dfrac 1 {\ln x}\big\vert_e^{+\infty}=0-(-1)=1\)</span></li>
+<li>
+<p><span class="arithmatex">\(I=-\int_1^{+\infty}\arctan x \text d(\dfrac 1 x)\)</span></p>
+<p>【分部积分。注意要极限存在才能拆】</p>
+<p><span class="arithmatex">\(=-\dfrac{\arctan x}x\big\vert_1^{+\infty}+\int_1^{+\infty}\dfrac 1 x\cdot \dfrac 1 {1+x^2}\text dx\)</span></p>
+<p><span class="arithmatex">\(=-(\lim\limits_{x\to +\infty}\dfrac{\arctan x}x-\dfrac\pi 4)+\dfrac 1 2\int_1^{+\infty}\dfrac 1 {x^2}\cdot \dfrac 1 {1+x^2}\text d(x^2)\)</span></p>
+<p><span class="arithmatex">\(\xlongequal{u=x^2}\dfrac\pi 4+\dfrac 1 2\int_1^{+\infty}(\dfrac 1 u-\dfrac 1 {1+u})\text du\)</span></p>
+<p><span class="arithmatex">\(=\dfrac\pi 4+\dfrac 1 2 \ln\dfrac u {1+u}\big\vert_1^{+\infty}\)</span></p>
+<p>【注意这里不能拆成 <span class="arithmatex">\(\ln u\vert_1^{+\infty}-\ln(1+)\vert_1^{+\infty}\)</span>，因为这是 <span class="arithmatex">\(\infty-\infty\)</span>，两个极限都不存在】</p>
+<p><span class="arithmatex">\(=\dfrac\pi 4+\dfrac 1 2(\ln 1-\ln \dfrac 1 2)=\dfrac\pi 4+\dfrac 1 2 \ln 2\)</span></p>
+</li>
+</ul>
+</details>
+</details>
+<ul>
+<li>
+<p>无界函数的反常积分（瑕积分）</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(a\)</span> 的任何一个邻域内都无界，则称 <span class="arithmatex">\(a\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的瑕点（即无界间断点），包含了瑕点的定积分就是瑕积分（即无界函数的反常积分）</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>求 <span class="arithmatex">\(\int_0^1\dfrac{\ln x}{x-1}\text dx\)</span> 的瑕点。</p>
+<details class="note">
+<summary>解答</summary>
+<p>无定义点 <span class="arithmatex">\(x=1,x=0\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 1^-}\dfrac{\ln x}{x-1}=1\)</span> 有界，<span class="arithmatex">\(x=1\)</span> 不是瑕点【所以 <span class="arithmatex">\(\int_{\frac 1 2}^1 \dfrac{\ln x}{x-1}\text dx\)</span> 是定积分，而非瑕积分】</p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\ln x}{x-1}=+\infty\)</span> 无界，<span class="arithmatex">\(x=0\)</span> 是瑕点</p>
+</details>
+</details>
+<ul>
+<li>
+<p>瑕点为下限：设函数 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\((a,b]\)</span> 上连续，点 <span class="arithmatex">\(a\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的瑕点，若 <span class="arithmatex">\(\lim\limits_{t\to a^+}\int_t^b f(x)\text dx\)</span> 存在，则称此极限为 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((a,b]\)</span> 上的反常积分，仍然记作 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span>，即</p>
+<p><span class="arithmatex">\(\int_a^b f(x)\text dx=\lim\limits_{x\to a^+}\int_x^b f(t)\text dt=F(x)\vert_{a^+}^b=F(b)-F(a^+)\)</span></p>
+<p>此时也称反常积分 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 收敛。若上述极限不存在，则称反常积分 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 发散。</p>
+</li>
+<li>
+<p>瑕点为上限：设函数 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([a,b)\)</span> 上连续，点 <span class="arithmatex">\(b\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的瑕点，若 <span class="arithmatex">\(\lim\limits_{t\to b^-}\int_a^t f(x)\text dx\)</span> 存在，则称此极限为 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b)\)</span> 上的反常积分，仍然记作 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span>，即</p>
+<p><span class="arithmatex">\(\int_a^b f(x)\text dx=\lim\limits_{t\to b^-}\int_a^t f(x)\text dx=F(x)\vert_a^{b^-}=F(b^-)-F(a)\)</span></p>
+<p>此时也称反常积分 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 收敛。若上述极限不存在，则称反常积分 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 发散。</p>
+</li>
+<li>
+<p>瑕点在区间内：设函数 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([a,b]\)</span> 上除点 <span class="arithmatex">\(c\,(a&lt;c&lt;b)\)</span> 外连续，点 <span class="arithmatex">\(c\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的瑕点。若反常积分 <span class="arithmatex">\(\int_a^cf(x)\text dx\)</span> 和 <span class="arithmatex">\(\int_c^b f(x)\text dx\)</span> 都收敛，则称上述两反常积分之和为 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([a,b]\)</span> 上的反常积分，仍记作 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span>，即</p>
+<p><span class="arithmatex">\(\int_a^b f(x)\text dx=\int_a^c f(x)\text dx+\int_c^b f(x)\text dx\)</span>（要求两个积分都收敛）<span class="arithmatex">\(=\lim\limits_{t\to c^-}\int_a^t f(x)\text dx+\lim\limits_{t\to c^+}\int_t^b f(x)\text dx\)</span></p>
+<p>这时也称反常积分 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 收敛。否则，称反常积分 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 发散。</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p><span class="arithmatex">\(\int_{-1}^1\dfrac 1 x\text dx=\int_{-1}^0\dfrac 1 x\text dx+\int_0^1 \dfrac 1 x \text dx\)</span>，拆出来的两个都发散，所以 <span class="arithmatex">\(\int_{-1}^1\dfrac 1 x\text dx\)</span> 发散（而非 <span class="arithmatex">\(0\)</span>）。</p>
+</details>
+</li>
+</ul>
+<p>注：形如 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 不一定是定积分，还可能是瑕积分，计算前要先分清再计算。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算反常积分：<span class="arithmatex">\(\int_0^1\dfrac{x^2\arcsin x}{\sqrt{1-x^2}}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(x=1\)</span> 为瑕点</p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;=\int_0^1 x^2\arcsin x\text d(\arcsin x)\\&amp;\xlongequal{t=\arcsin t}\int_0^{\frac\pi 2}\sin^2 t\cdot t\text dt\\&amp;=\int_0^{\frac\pi 2}(\dfrac{1-\cos 2t}2\cdot t)\text dt\\&amp;=\dfrac{\pi^2}{16}+\dfrac 1 4\end{aligned}\)</span></p>
+</details>
+</details>
+</li>
+</ul>
+<h3 id="_12">反常积分的敛散性<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span class="arithmatex">\(\int_a^{+\infty}\dfrac 1 {x^p}\text dx\begin{cases}p&gt;1,&amp;收敛\\p\leq 1,&amp;发散\end{cases}\,(a&gt;0)\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p>① <span class="arithmatex">\(p=1\)</span> 时，<span class="arithmatex">\(\int_a^{+\infty}\dfrac 1 x\text dx=\ln x\vert_a^{+\infty}=+\infty\)</span> 发散。</p>
+<p>② <span class="arithmatex">\(p\neq 1\)</span> 时，<span class="arithmatex">\(\int_a^{+\infty}x^{-p}\text dx=\dfrac 1 {-p+1}x^{-p+1}\vert_a^{+\infty}=\lim\limits_{x\to +\infty}(\dfrac 1 {-p+1}x^{-p+1})-F(a)=\begin{cases}\infty,&amp;-p+1&gt;0\\0,&amp;-p+1&lt;0\end{cases}\)</span></p>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(\int_a^b \dfrac{\text dx}{(x-a)^q}=\begin{cases}q&lt;1,&amp;收敛\\q\geq 1,&amp;发散\end{cases}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\int_a^{+\infty}\dfrac{\text dx}{x^{\alpha}\ln^{\beta}x}=\begin{cases}\alpha&gt;1,&amp;收敛\\\alpha&lt;1,&amp;发散\\\alpha=1,&amp;\begin{cases}\beta&gt;1,&amp;收敛\\\beta\leq 1,&amp;发散\end{cases}\end{cases}\,(a&gt;1)\)</span></p>
+</li>
+</ul>
+<h3 id="_13">积分的比较审敛法<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>比较审敛原理</p>
+<p>设函数 <span class="arithmatex">\(f(x),g(x)\)</span> 在区间 <span class="arithmatex">\([a,+\infty)\)</span> 上连续，若始终有 <span class="arithmatex">\(0\leq f(x)\leq g(x)\)</span> 且 <span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 收敛，则 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 也收敛；若 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 发散，则 <span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 也发散。</p>
+</li>
+<li>
+<p>极限审敛法</p>
 </li>
 </ul>
 
