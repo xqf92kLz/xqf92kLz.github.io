@@ -14,7 +14,7 @@
         <link rel="prev" href="../8/">
       
       
-        <link rel="next" href="../../C%20%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%A2%8E%E5%B1%91/">
+        <link rel="next" href="../6/">
       
       
         
@@ -1055,6 +1055,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实对称矩阵的对角化
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1064,6 +1075,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章 二次型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2280,6 +2319,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实对称矩阵的对角化
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2304,7 +2354,7 @@
 
   <h1>第五章 矩阵的特征值理论与相似对角化</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-15T04:08:26.780712+00:00'>2025-12-15</time></span><span data-tippy-content data-tippy-raw='2025-12-15'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-15T04:08:26.780712+00:00'>2025-12-15</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-15T15:05:03.247423+00:00'>2025-12-15</time></span><span data-tippy-content data-tippy-raw='2025-12-15'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-15T15:05:03.247423+00:00'>2025-12-15</time></span></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">特征值和特征向量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2550,6 +2600,96 @@
 <li>
 <p>例题</p>
 <p>若 <span class="arithmatex">\(\boldsymbol A=\boldsymbol \alpha\boldsymbol \beta^T\)</span>，则 <span class="arithmatex">\(\boldsymbol A\boldsymbol \alpha=(\boldsymbol \alpha\boldsymbol \beta^T)\boldsymbol \alpha=\boldsymbol \alpha(\boldsymbol \beta^T\boldsymbol \alpha)=(\boldsymbol \beta^T\boldsymbol \alpha)\boldsymbol \alpha\)</span>，<span class="arithmatex">\(\boldsymbol \beta^T\boldsymbol \alpha\)</span> 是 <span class="arithmatex">\(\boldsymbol A\)</span> 的一个特征值。</p>
+</li>
+</ul>
+<h3 id="_6">实对称矩阵的对角化<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>实对称矩阵：<span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\in\mathbb R^{n\times n}\)</span></p>
+<p>前面普通矩阵关于特征值、特征向量的性质、相似对角化理论都适用于实对称矩阵。这里，我们主要分析实对称矩阵和普通矩阵的主要区别。</p>
+</li>
+<li>
+<p>性质 1：设 <span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\in\mathbb R^{n\times n}\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值、特征向量都是实的。即，<span class="arithmatex">\(n\)</span> 阶实对称矩阵一定有 <span class="arithmatex">\(n\)</span> 个实特征值。</p>
+<p>（如果 <span class="arithmatex">\(\boldsymbol A=-\boldsymbol A^T\in\mathbb R^{n\times n}\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值必为零或纯虚数）</p>
+</li>
+<li>
+<p>性质 2：设 <span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\in\mathbb R^{n\times n}\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的不同特征值所对的特征向量必正交。（普通矩阵不同特征值所对的特征向量仅仅线性无关）</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\in\mathbb R^{n\times n}\)</span>，<span class="arithmatex">\(\boldsymbol A\boldsymbol \xi_1=\lambda_1\boldsymbol \xi_1\)</span>，<span class="arithmatex">\(\boldsymbol A\boldsymbol \xi_2=\lambda_2\boldsymbol \xi_2\)</span>，且 <span class="arithmatex">\(\lambda_1\neq \lambda_2\)</span>。</p>
+<p>下证 <span class="arithmatex">\(\boldsymbol \xi_1,\boldsymbol \xi_2\)</span> 正交，即证明 <span class="arithmatex">\((\boldsymbol \xi_1,\boldsymbol \xi_2)=\boldsymbol \xi_1^T\boldsymbol \xi_2=0\)</span>。</p>
+<p>考察内积 <span class="arithmatex">\((\boldsymbol A\boldsymbol \xi_1,\boldsymbol \xi_2)\)</span></p>
+<p>一方面，<span class="arithmatex">\((\boldsymbol A\boldsymbol \xi_1,\boldsymbol \xi_2)=(\lambda_1\boldsymbol \xi_1,\boldsymbol \xi_2)=\lambda_1(\boldsymbol \xi_1,\boldsymbol \xi_2)\)</span></p>
+<p>另一方面 <span class="arithmatex">\((\boldsymbol A\boldsymbol \xi_1,\boldsymbol \xi_2)=(\boldsymbol A\boldsymbol \xi_1)^T\boldsymbol \xi_2=\boldsymbol \xi_1^T(\boldsymbol A^T\boldsymbol \xi_2)=\boldsymbol \xi_1^T(\boldsymbol A\boldsymbol \xi_2)=\lambda_2\boldsymbol \xi_1^T\boldsymbol \xi_2=\lambda_2(\boldsymbol \xi_1,\boldsymbol \xi_2)\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow(\lambda_1-\lambda_2)\cdot(\boldsymbol \xi_1,\boldsymbol \xi_2)=0\)</span></p>
+<p>因为 <span class="arithmatex">\(\lambda_1\neq \lambda_2\)</span>，故 <span class="arithmatex">\((\boldsymbol \xi_1,\boldsymbol \xi_2)=\boldsymbol \xi_1^T\boldsymbol \xi_2=\boldsymbol \xi_2^T\boldsymbol \xi_1=0\)</span>。</p>
+</details>
+</li>
+<li>
+<p>定理 1：设 <span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\in\mathbb R^{n\times n}\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 一定可以对角化，且存在正交矩阵 <span class="arithmatex">\(\boldsymbol U\)</span>（<span class="arithmatex">\(\boldsymbol U\boldsymbol U^T=\boldsymbol U^T\boldsymbol U=\boldsymbol E\)</span>，<span class="arithmatex">\(\boldsymbol U^T=\boldsymbol U^{-1}\)</span>），使得 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol A\boldsymbol U=\boldsymbol U^{-1}\boldsymbol A\boldsymbol U=\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span>，其中 <span class="arithmatex">\(\lambda_1,\lambda_2,\cdots,\lambda_n\)</span> 为 <span class="arithmatex">\(\boldsymbol A\)</span> 的全体特征值。</p>
+</li>
+<li>
+<p>如何求正交矩阵 <span class="arithmatex">\(\boldsymbol U\)</span>？</p>
+<p>① 先求 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值：令 <span class="arithmatex">\(f(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|=0\)</span></p>
+<ol>
+<li>（情形 1）特征值全是单根（此时 <span class="arithmatex">\(\boldsymbol A\)</span> 有 <span class="arithmatex">\(n\)</span> 个两两正交的特征向量）</li>
+<li>（情形 2）特征值有重根，<span class="arithmatex">\(f(\lambda)=(\lambda-\lambda_1)^{n_1}\cdots(\lambda-\lambda_s)^{n_s}\,(s&lt;n)\)</span></li>
+</ol>
+<p>② 对每个 <span class="arithmatex">\(\lambda_i\)</span>，求全体特征向量：即求 <span class="arithmatex">\((\lambda_i\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 的基础解系。</p>
+<ol>
+<li>
+<p>（情形 1）每个单根 <span class="arithmatex">\(\lambda_i\)</span> 只对应一个特征向量 <span class="arithmatex">\(\boldsymbol \xi_i\)</span>，则 <span class="arithmatex">\(\boldsymbol \xi_1,\cdots,\boldsymbol \xi_n\)</span> 为 <span class="arithmatex">\(\boldsymbol A\)</span> 的 <span class="arithmatex">\(n\)</span> 个线性无关且两两正交的特征向量。</p>
+<p>如令 <span class="arithmatex">\(\boldsymbol P=(\boldsymbol \xi_1,\cdots,\boldsymbol \xi_n)\)</span>，则 <span class="arithmatex">\(\boldsymbol P\)</span> 可逆，且 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(\lambda_1,\cdots,\lambda_n)\)</span>。</p>
+</li>
+<li>
+<p>（情形 2）对 <span class="arithmatex">\(n_i\)</span> 重特征值 <span class="arithmatex">\(\lambda_i\)</span>，求出基础解系 <span class="arithmatex">\(\boldsymbol \xi_{i1},\cdots,\boldsymbol \xi_{in_i}\,(i=1,\cdots,s)\)</span>。</p>
+<p>如令 <span class="arithmatex">\(\boldsymbol P=(\boldsymbol \xi_{11},\cdots,\boldsymbol \xi_{1n_1},\cdots,\boldsymbol \xi_{s1},\cdots,\boldsymbol \xi_{sn_s})\)</span>，则 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(\underbrace{\lambda_1,\cdots,\lambda_1}_{n_1},\cdots,\underbrace{\lambda_s,\cdots,\lambda_s}_{n_s})=\text{diag}(\lambda_1\boldsymbol E_{r_1},\cdots,\lambda_s\boldsymbol E_{r_s})\)</span>。</p>
+</li>
+</ol>
+<p>③ 正交单位化</p>
+<ol>
+<li>
+<p>（情形 1）令 <span class="arithmatex">\(\boldsymbol \eta_i=\dfrac{\boldsymbol \xi_i}{\|\boldsymbol \xi_i\|}\,(i=1,\cdots,n)\)</span>，则 <span class="arithmatex">\(\boldsymbol \eta_1,\boldsymbol \eta_2,\cdots,\boldsymbol \eta_n\)</span> 为 <span class="arithmatex">\(\mathbb R^n\)</span> 的标准正交基。</p>
+<p>再令 <span class="arithmatex">\(\boldsymbol U=(\boldsymbol \eta_1,\boldsymbol \eta_2,\cdots,\boldsymbol \eta_n)\)</span>，则 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol U=\boldsymbol E\)</span>，且 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol A\boldsymbol U=\boldsymbol U^{-1}\boldsymbol A\boldsymbol U=\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span>。</p>
+</li>
+<li>
+<p>（情形 2）分别对每组特征向量进行 Schmidt 正交单位化。</p>
+<p><span class="arithmatex">\(\boldsymbol \xi_{11},\cdots,\boldsymbol \xi_{1r_1}\xrightarrow{\text{Schmidt}} \boldsymbol \eta_{11},\cdots,\boldsymbol \eta_{1r_1}\)</span></p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol \xi_{s1},\cdots,\boldsymbol \xi_{sr_s}\xrightarrow{\text{Schmidt}} \boldsymbol \eta_{s_1},\cdots,\boldsymbol \eta_{sr_s}\)</span></p>
+<p>令 <span class="arithmatex">\(\boldsymbol U=(\boldsymbol \eta_{11},\cdots,\boldsymbol \eta_{1r_1},\cdots,\boldsymbol \eta_{s_1},\cdots,\boldsymbol \eta_{sr_s})\)</span>，则 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol U=\boldsymbol E\)</span>，且 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol A\boldsymbol U=\boldsymbol U^{-1}\boldsymbol A\boldsymbol U=\text{diag}(\underbrace{\lambda_1,\cdots,\lambda_1}_{r_1},\cdots,\underbrace{\lambda_s,\cdots,\lambda_s}_{r_s})=\text{diag}(\lambda_1\boldsymbol E_{r_1},\cdots,\lambda_s\boldsymbol E_{r_s})\)</span>。</p>
+</li>
+</ol>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>求正交矩阵 <span class="arithmatex">\(\boldsymbol U\)</span>，将实对称矩阵 <span class="arithmatex">\(\boldsymbol A=\begin{pmatrix}1&amp;2&amp;2\\2&amp;1&amp;2\\2&amp;2&amp;1\end{pmatrix}\)</span> 化为对角形。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p>① 先求特征值：令 <span class="arithmatex">\(|\lambda\boldsymbol E-\boldsymbol A|=(\lambda-5)(\lambda+1)^2=0\)</span>，得 <span class="arithmatex">\(\lambda_1=5\)</span>，<span class="arithmatex">\(\lambda_2=-1\)</span>（二重根）</p>
+</li>
+<li>
+<p>② 再求特征向量：<span class="arithmatex">\((5\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 基础解系 <span class="arithmatex">\(\boldsymbol \xi_{11}=(1,1,1)^T\)</span>，<span class="arithmatex">\((-\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 基础解系 <span class="arithmatex">\(\boldsymbol \xi_{21}=(1,0,-1)^T,\boldsymbol \xi_{22}=(0,1,-1)^T\)</span></p>
+<p>（检验计算是否正确：检查是否 <span class="arithmatex">\((\boldsymbol \xi_{11},\boldsymbol \xi_{21})=(\boldsymbol \xi_{11},\boldsymbol \xi_{22})=0\)</span>）</p>
+<p>（如令 <span class="arithmatex">\(\boldsymbol P=(\boldsymbol \xi_{11},\boldsymbol \xi_{21},\boldsymbol \xi_{22}\)</span>，则 <span class="arithmatex">\(\boldsymbol P\)</span> 可逆，且 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(5,-1,-1)\)</span>）</p>
+</li>
+<li>
+<p>③ 将 <span class="arithmatex">\(\boldsymbol \xi_{21},\boldsymbol \xi_{22}\)</span> 利用 Schmidt 正交化，化成标准正交向量组</p>
+<p>先正交化：令 <span class="arithmatex">\(\boldsymbol \beta_{21}=\boldsymbol \xi_{21}=(1,0,-1)^T\)</span>，<span class="arithmatex">\(\boldsymbol \beta_{22}=\boldsymbol \xi_{22}-\dfrac{(\boldsymbol \beta_{21},\boldsymbol \xi_{22})}{(\boldsymbol \beta_{21},\boldsymbol \beta_{21})}\boldsymbol \beta_{21}=\dfrac 1 2 (-1,2,-1)^T\)</span></p>
+<p>再单位化：令 <span class="arithmatex">\(\boldsymbol \eta_{21}=\dfrac{\boldsymbol \beta_{21}}{\|\boldsymbol \beta_{21}\|}=\dfrac 1 {\sqrt 2}(1,0,-1)^T\)</span>，<span class="arithmatex">\(\boldsymbol \eta_{22}=\dfrac{\boldsymbol \beta_{22}}{\|\boldsymbol \beta_{22}\|}=\dfrac 1 {\sqrt 6}(-1,2,-1)^T\)</span></p>
+<p>对 <span class="arithmatex">\(\boldsymbol \xi_{11}\)</span> 单位化即令 <span class="arithmatex">\(\boldsymbol \eta_{11}=\dfrac{\boldsymbol \xi_{11}}{\|\boldsymbol \xi_{11}\|}=\dfrac 1 {\sqrt 3}(1,1,1)^T\)</span></p>
+<p>令 <span class="arithmatex">\(\boldsymbol U=(\boldsymbol \eta_{11},\boldsymbol \eta_{21},\boldsymbol \eta_{22})\)</span> 则 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol U=\boldsymbol E\)</span> 且 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol A\boldsymbol U=\text{diag}(5,-1,-1)\)</span>。</p>
+</li>
+</ul>
+</details>
+</details>
+</li>
+<li>
+<p>实对称矩阵与一般矩阵的重要区别</p>
+<p>① 特征值、特征向量的取值范围不同：普通实矩阵的特征值（向量）有可能为复数（复向量）；实对称矩阵的特征值（向量）必为实数（实向量）。</p>
+<p>② 特征向量之间的关系不同：普通矩阵不同特征值对应的特征向量仅仅线性无关；实对称矩阵不同特征值对应的特征向量不仅线性无关而且两两正交。</p>
+<p>③ 对角化的条件、方式不同：普通矩阵不一定能对角化，且当对角化时只能找到可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span> 使得 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span>；实对称矩阵一定能对角化，不仅能找到可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span>，还可以找到正交矩阵 <span class="arithmatex">\(\boldsymbol U\)</span> 使得 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol U^T\boldsymbol A\boldsymbol U=\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span>。</p>
 </li>
 </ul>
 
