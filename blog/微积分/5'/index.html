@@ -1432,6 +1432,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/Quiz2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quiz2 复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2317,7 +2345,7 @@
 
   <h1>5'</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-15'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-15T15:05:03.243423+00:00'>2025-12-15</time></span><span data-tippy-content data-tippy-raw='2025-12-15'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-15T15:05:03.243423+00:00'>2025-12-15</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-16T07:57:16.919097+00:00'>2025-12-16</time></span><span data-tippy-content data-tippy-raw='2025-12-16'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-16T07:57:16.919097+00:00'>2025-12-16</time></span></div></div>
 <h2 id="_1">定积分的概念和性质<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">定积分的概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2465,7 +2493,7 @@
 </details>
 </li>
 <li>
-<p>定积分中值定理（积分中值公式）：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，则至少存在一点 <span class="arithmatex">\(\xi\in[a,b]\)</span>，使得 <span class="arithmatex">\(\int_a^b f(x)\text dx=f(\xi)(b-a)\)</span>。其中，<span class="arithmatex">\(f(\xi)=\dfrac 1 {b-a}\int_a^b f(x)\text dx\)</span> 称为函数 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([a,b]\)</span> 上的平均值。。</p>
+<p>定积分中值定理（积分中值公式）：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，则至少存在一点 <span class="arithmatex">\(\xi\in[a,b]\)</span>，使得 <span class="arithmatex">\(\int_a^b f(x)\text dx=f(\xi)(b-a)\)</span>。其中，<span class="arithmatex">\(f(\xi)=\dfrac 1 {b-a}\int_a^b f(x)\text dx\)</span> 称为函数 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([a,b]\)</span> 上的平均值。</p>
 <p>作用：“不算，而去积分”</p>
 <details class="note">
 <summary>证明</summary>
@@ -2499,8 +2527,8 @@
 <p>证 <span class="arithmatex">\(f(\xi)=\dfrac{\int_a^b f(x)g(x)\text dx}{\int_a^b g(x)\text dx}\)</span>：考虑 <span class="arithmatex">\(\dfrac{\int_a^b f(x)g(x)\text dx}{\int_a^b g(x)\text dx}\)</span> 放到 <span class="arithmatex">\(f(x)\)</span> 的最小值和最大值之间凑成介值定理。</p>
 </details>
 <p>由 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，故 <span class="arithmatex">\(f(x)\)</span> 有最大值 <span class="arithmatex">\(M\)</span>、最小值 <span class="arithmatex">\(m\)</span>。</p>
-<p>由定积分的不等式性质，<span class="arithmatex">\(m\int_a^b g(x)\text dx\leq \int_a^b f(x)g(x)\text dx\leq M\int_a^b g(x)\text dx\)</span>。</p>
-<p>若 <span class="arithmatex">\(\int_a^b g(x)\text dx=0\)</span>，则由上式知 <span class="arithmatex">\(\int_a^b f(x)g(x)\text dx=0\)</span>，从而对 <span class="arithmatex">\(\forall \xi\in[a,b]\)</span>，原式都成立。</p>
+<p>不妨设 <span class="arithmatex">\(g(x)\geq 0\)</span>。由定积分的不等式性质，<span class="arithmatex">\(m\int_a^b g(x)\text dx\leq \int_a^b f(x)g(x)\text dx\leq M\int_a^b g(x)\text dx\)</span>。</p>
+<p>若 <span class="arithmatex">\(\int_a^b g(x)\text dx=0\)</span>，则 <span class="arithmatex">\(g(x)\equiv 0\)</span>，从而对 <span class="arithmatex">\(\forall \xi\in[a,b]\)</span>，原式都成立。</p>
 <p>若 <span class="arithmatex">\(\int_a^b g(x)\text dx&gt;0\)</span>，即有 <span class="arithmatex">\(m\leq\dfrac{\int_a^b f(x)g(x)\text dx}{\int_a^b g(x)\text dx}\leq M\)</span>。由介值定理，<span class="arithmatex">\(\exist \xi\in[a,b]\)</span> 使 <span class="arithmatex">\(f(\xi)=\dfrac{\int_a^b f(x)g(x)\text dx}{\int_a^b g(x)\text dx}\)</span>，得证。</p>
 </details>
 </li>
