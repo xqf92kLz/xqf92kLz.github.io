@@ -76,55 +76,55 @@
     
     ??? info "Reading2: The evolution of language: How netspeak changes the way we speak"
     
-        1 Every year, hundreds of new words and phrases that come from Internet **slang** are added to the dictionary. Some of them are **abbreviations**, like "UR" for "you are" or "your" and "U" for "you." Others are words that have been **stretched** into parts of speech different to those originally intended — for instance, when "trend" became a verb ( "It's trending worldwide" ). Others still have emerged as we adapt our language to new technologies, for example, "**crowdfunding**," "**selfie**," and "**cyberbullying**." 
+        1 Every year, hundreds of new words and phrases that come from ==Internet **slang**== are added to the dictionary. Some of them are ==**abbreviations**==, like "UR" for "you are" or "your" and "U" for "you." Others are words that ==have been **stretched** into parts of speech different to those originally intended== — for instance, when "trend" became a verb ( "It's trending worldwide" ). Others still have emerged as we ==adapt our language to new technologies==, for example, "**crowdfunding**," "**selfie**," and "**cyberbullying**." 
     
         1 每年都会有数百个来自网络俚语的新词和短语被添加到词典中。其中，有的是缩略词，如“UR”表示“you are（你是）”或者“your（你的）”，“U”表示“you （你）”；有的则是词性被延伸，与原来的不同了，例如，“trend（趋势）”现在可用作动词（“It's trending worldwide”，它正风靡全球）；还有一些词的出现是为了让我们的语言适应新科技，例如“众筹”、“自拍”、“网络霸凌”。
     
-        2 You might notice how many of these "new" words are actually just appropriated, meaning they are **pre-existing** words that are combined or given entirely new meanings. For example, "social network" became a word in the *Oxford English Dictionary* back in 1973, referring to the physical activity of networking in a social atmosphere. In the 1990s, people began using the term to refer to virtual **engagement**, and that became an official definition in 1998. 
+        2 You might notice ==how many of these "new" words are actually just appropriated==, meaning they are ==**pre-existing** words that are combined or given entirely new meanings==. For example, "social network" became a word in the *Oxford English Dictionary* ==back in== 1973, ==referring to== the physical activity of ==networking in a social atmosphere==. In the 1990s, people began using ==the term== to refer to ==virtual **engagement**==, and that became ==an official definition== in 1998. 
     
         2 你可能会注意到，实际上很多“新”词只是旧词新用。换言之，它们是早就存在的词，只是被合并或赋予了全新的含义。例如，早在1973年，《牛津英语词典》中就收录了“social network”一词，意思是“在社交氛围中建立关系网的实际活动”。到了二十世纪九十年代，人们开始用这个词来表示“虚拟社交”。在1998年，该意义成了正式定义。
     
-        3 Why are so many new words and phrases emerging from the Internet, and why is it happening at such an **accelerated** pace? Actually the Internet isn't the only technological phenomenon that's changed the way we talk. Radio, television, and telephone have contributed their fair share of new words and phrases to our **lexicon** over the last century. 
+        3 Why are so many new words and phrases emerging from the Internet, and why is it happening ==at such an **accelerated** pace==? Actually the Internet isn't ==the only technological phenomenon== that's changed the way we talk. ==Radio, television, and telephone== have contributed their ==fair share of== new words and phrases to our ==**lexicon**== over the last century. 
     
         3 为什么会有这么多的新词和短语在互联网出现，而且速度如此之快？事实上，互联网并不是唯一改变我们说话方式的技术。在过去的一个世纪里，广播、电视和电话也为我们的词库贡献了相当多的新词和短语。
     
-        4 For example, the origin of **TTFN** (ta-ta for now) can be **traced** back to a 1940s radio series. Similarly, the word "**doh**" that was made famous by a TV cartoon series became an official word in the *Oxford English Dictionary*, "used to comment on a foolish or stupid action, especially one's own." And don't forget "Give me the 411," the American slang phrase for "Give me all the details," which refers to the telephone number for local **directory** **assistance**. 
+        4 For example, the origin of **TTFN** (ta-ta for now) can ==be **traced** back to== a 1940s ==radio series==. Similarly, the word "**doh**" that ==was made famous by a TV cartoon series== became an official word in the *Oxford English Dictionary*, "==used to comment on== a foolish or stupid action, especially one's own." And don't forget "Give me the 411," the American slang phrase for "Give me all the details," which refers to the telephone number for local ==**directory** **assistance**==. 
     
         4 例如，TTFN（ta-ta for now，回头见）这个表达的起源可以追溯到二十世纪四十年代的一部广播剧。同样，因一部电视动画片而出名的“doh（呀）”一词被《牛津英语词典》收录，“用于感叹愚蠢的行为，尤其是自己的行为”。还有，别忘了“Give me the 411”这个美式俚语，它的意思是“告诉我所有的细节”。“411”是当地的查号服务电话。
     
-        5 But the more time we spend online, the less time we spend listening to the radio or watching TV — and smartphones have **blurred** the **distinction** between phones and the Internet. At this point, the Internet could be seen as probably the most **prevalent** influence on our day-to-day dialog. 
+        5 But the more time we spend online, the less time we spend listening to the radio or watching TV — and smartphones ==have **blurred** the **distinction** between phones and the Internet==. At this point, the Internet ==could be seen as probably the most **prevalent** influence== on our ==day-to-day dialog==. 
     
         5 但是，我们花在互联网上的时间越多，听广播或看电视的时间就会越少——而且智能手机已经模糊了电话和互联网之间的界限。这么看来，互联网对我们日常对话的影响很可能是最主要的。
     
-        6 Think about how quickly Internet trends come and go. The fast pace of change on the Internet means we are adopting more words, and doing it faster than ever before. "Language itself changes slowly, but the Internet has sped up the process of those changes so you notice them more quickly," says a professor of **linguistics** at **Bangor University**. You can imagine how much longer it took new words to spread through word of mouth than it does today with the Internet. 
+        6 Think about ==how quickly Internet trends come and go==. The fast pace of change on the Internet means we are ==adopting more words, and doing it faster than ever before==. "Language itself changes slowly, but the Internet ==has sped up the process of those changes== so you notice them more quickly," says ==a professor of **linguistics**== at **Bangor University**. You can imagine how much longer it took new words to spread ==through word of mouth== than it does today with the Internet. 
     
         6 想一想互联网上的潮流是如何的来去匆匆。互联网上的快速变化意味着我们正以前所未有的速度接纳更多的新词。班戈大学的一位语言学教授说：“语言本身变化缓慢，但互联网加快了这些变化的过程，所以你更快地注意到了它们。”可以想象，与如今迅速的互联网传播相比，过去的口口相传模式需要多花多少时间。
     
-        7 So, how do new words, like the **acronym** "**LOL**," make it all the way to the dictionary? 
+        7 So, how do new words, like the ==**acronym**== "**LOL**," ==make it all the way to== the dictionary? 
     
         7 那么，像首字母缩略语“LOL”这类的新词是如何一路走到词典里的呢？
     
-        8 The secret of a new word's success is its **longevity**, says a senior editor in the New Words Group at the *Oxford English Dictionary*. In order for a new word to make it into the dictionary, the general population must use it and keep using it. A word must be in use for at least five years to be considered. So, love it or hate it, when words like "LOL" become common, widespread, well understood, and stick around for more than five years, they're **eligible** for a spot in the big book. 
+        8 The secret of a new word's success is its ==**longevity**==, says ==a senior editor== in the New Words Group at the *Oxford English Dictionary*. ==In order for a new word to make it into the dictionary==, ==the general population must use it and keep using it==. A word must be ==in use== for at least five years to be considered. So, love it or hate it, when words like "LOL" become ==common, widespread, well understood==, and ==stick around== for more than five years, they're ==**eligible** for a spot in the big book==. 
     
         8 《牛津英语词典》新词团队的一位高级编辑说，一个新词成功的秘诀在于它的经久不衰。要让一个新词进入词典，人们必须使用它，并且一直使用它。一个词至少要被使用五年才可能被考虑纳入词典。因此，不管你喜不喜欢，当像“LOL”这样的词变得常见、应用广泛、易懂，并被持续使用五年以上时，它们就有资格在词典中占有一席之地。
     
-        9 There are plenty of Internet slang words that don't make it in, like "wurfing" (the act of surfing the Internet while at work). But to say that word was rejected would be wrong — that word, among many others, will be **revisited** if its **usage** grows. The dictionary is a living, breathing document, and there's always a chance a previously down-voted word will make it into the **mainstream** vocabulary in the future. 
+        9 There are plenty of Internet slang words that ==don't make it in==, like "wurfing" (the act of surfing the Internet while at work). But to say that word was rejected would be wrong — that word, among many others, ==will be **revisited** if its **usage** grows==. The dictionary is ==a living, breathing document==, and there's always a chance ==a previously down-voted word== will ==make it into the **mainstream** vocabulary== in the future. 
     
         9 也有很多网络俚语没能入选，比如“wurfing”（在工作时上网的行为）。但如果就此说这个词被拒了，那就错了——这个词和其他很多词一样，如果使用量增加，就将会被重新考虑纳入词典。词典是活的、会呼吸的文件。曾被否决的词在未来进入主流词汇的机会始终存在。
     
-        10 That's where even the word "slang" gets a little **fuzzy**. Is a word considered "slang" until it graduates into an official word in the dictionary? When exactly does a word become "real"? The fact is, only when a word becomes "real" — that is, widely used and understood — is it considered for a place in the dictionary. "When we see the word in the dictionary, it has already been used for a long time. We see it in the constant **appearance** of slang and **jargon**. Language is not so much a creator and shaper of human nature as a window into human nature." 
+        10 That's where even the word "slang" ==gets a little **fuzzy**==. Is a word considered "slang" until it ==graduates into an official word== in the dictionary? When exactly does a word become "real"? The fact is, only when a word becomes "real" — that is, ==widely used and understood== — is it ==considered for a place in the dictionary==. "When we see the word in the dictionary, it has already been used for a long time. We see it ==in the constant **appearance** of slang and **jargon**==. Language is ==not so much== a creator and shaper of human nature ==as== a window into human nature." 
     
         10 因此“俚语”的界定也变得有些模糊。一个词在成为词典里的正式词之前是否一直属于“俚语”？一个词到底什么时候才能成为“真正的”词？事实是，只有当一个词成为“真正的”词，即被广泛地使用和理解，才可能被考虑纳入词典。“当我们在词典中看到这个词时，它其实已经被使用了很长时间。我们从词典中不断出现的俚语和行话中能看到这一点。与其说语言是人性的创造者和塑造者，不如说它是了解人性的一个窗口。”
     
-        11 As it turns out, dictionary editors look to us when they vote on whether a word should have a place in their dictionary. Dictionaries are fantastic resources, but they are a reflection of humanity and they are not **timeless**. If you ask dictionary editors, what they'll tell you is that they're just trying to keep up with us as we change the language. They're watching what we say and what we write and trying to figure out what's going to stick and what isn't. 
+        11 ==As it turns out==, dictionary editors ==look to us== when they ==vote on whether a word should have a place in their dictionary==. Dictionaries are ==fantastic resources==, but they are ==a reflection of humanity== and they are ==not **timeless**==. If you ask dictionary editors, what they'll tell you is that they're just trying to ==keep up with== us as we change the language. They're watching what we say and what we write and trying to ==figure out== what's ==going to stick and what isn't==. 
     
         11 事实证明，词典编辑们在决定一个词是否该在他们的词典中占有一席之地时，依据的是我们的使用情况。词典是极好的资源，但它们只是人性的映射，不是永恒的。如果你问词典编辑，他们会告诉你：他们只是试图在我们改变语言时跟上我们的步伐。他们在观察我们说什么，写什么，并试图弄清楚什么会留存，什么不会。
     
-        12 There will certainly be changes in language that we don't like simply because many of us don't like change, but we should be less quick to **impose** our likes and **dislikes** about words on other people. Language change isn't **worrisome**. On the contrary, it's fun and **fascinating**. 
+        12 There will certainly be changes in language that we don't like simply because many of us don't like change, but we should be ==less quick to **impose** our likes and **dislikes** about words on other people==. ==Language change== isn't ==**worrisome**==. On the contrary, it's fun and **fascinating**. 
     
         12 当然，这其中肯定会有一些我们不喜欢的语言变化，只因我们中的许多人不喜欢变化。但我们不应该急于把自己对词语的好恶强加给别人。语言演变并不令人担忧；相反，它很有趣、很迷人。
-    
-        13 So, no matter whether you think netspeak vitalizes or destroys language, there's no denying how revealing it is of the culture that invents and uses it — and the ease with which we adapt our language to new technologies and concepts. Just try to enjoy being part of the creativity that is continually **remaking** our language and keeping it robust. 
+
+        13 So, no matter whether you think netspeak ==vitalizes or destroys language==, there's no denying how ==revealing it is of the culture that invents and uses it== — and ==the ease with which we adapt our language to new technologies and concepts==. Just try to enjoy ==being part of the creativity== that is ==continually **remaking** our language and keeping it robust==. 
     
         13 因此，无论你认为网络语言是赋予语言以活力，还是毁灭了语言，都不能否认它彰显了孕育并使用它的文化，也反映了我们如何轻而易举地改变语言，使之适应新技术和新概念。试着享受参与创造的乐趣吧，这种创造力不断重塑着我们的语言，并使其充满活力。
 
@@ -562,46 +562,46 @@
 
 
 	??? info "Further Listening"
-    	??? info "News report"
-    		Among the ==virtues（virtue，n. 优点）== of bees, what you may not be aware of is their ability to ==detect bombs==.
-    
-            As bees can pick up the smell of bombs with their ==antennae（antenna，n. 触角）==, researchers have spent years ==perfecting== how to use bees to find the exact location of ==landmines（landmine，n. 地雷）==.
-    
-            Landmines buried during wars that happened decades ago continue to present a huge threat in many parts of the world.
-    
-            Recently, a team of researchers have tried training bees to find landmines. They achieved this by getting the bees to associate the smell of bombs with food. In a landmine field, the trained bees tend to get close to places where landmines are buried, in the hope of finding food.
-    
-            In recent years, researchers have developed systems able to follow insects in the wild. Such machines could one day monitor ==pollinators（pollinator，n. 传粉昆虫）==. These insects, including bees, are essential to the health of ==crops== and ecosystems, but their numbers have been declining lately, largely due to pollution.
-    
-            Imagine insects and machines working together — a fun idea, and potentially good for the planet.  
-    
-            Questions:
-    
-            1. Which part of a bee's body can pick up the smell of bombs and landmines?
-    
-            2. Why do the bees tend to get close to landmines in the research?
-    
-            3. What can the recently developed insect-tracking systems do? 
-    
-    	??? info "Passage 1"
-    	
-    		Copying nature is an old idea. ==Inventors== have ==modeled machines== after animals throughout the centuries. Although the easiest way may be the direct ==imitation（n. 模仿）== of nature, this is often difficult if not impossible. ==Bionics== researchers have found that it is more helpful to understand the principles of how things work in nature.  
-    
-            One question of interest to bionics is how a living system makes use of information. Humans can recognize how a new situation is somehow similar to a situation experienced before. An important element in human action is the ability to recognize patterns, which is significant for bionics. One way to design a machine capable of recognizing patterns is to use learning processes. Such machines have been developed. They learn by establishing connections among a large number of ==alternative routes==.
-    
-            Another main field of bionics research is energy transformation. In the living world, energy is stored in the form of ==chemical compounds（compound，n. 化合物）==; its use is always accompanied by chemical reactions. For example, solar energy is stored by ==plants== by means of complex chemical processes. The light produced by certain mushrooms and fish is of chemical origin. In every case, the energy transformation is much more efficient compared with ==thermal（a. 热的；热量的）== engines.
-    
-            Understanding the principles of these transformations makes it possible for bionics researchers to design artificial-energy machines.
-    
-            Questions:
-    
-            1. Which of the following is true of the relationship between nature and bionics?
-    
-            2. How do machines recognize patterns?
-    
-            3. What does the example of mushrooms and fish illustrate?
-    
-            4. Which of the following may not be a field of bionics research?
+		??? info "News report"
+			Among the ==virtues（virtue，n. 优点）== of bees, what you may not be aware of is their ability to ==detect bombs==.
+	
+	        As bees can pick up the smell of bombs with their ==antennae（antenna，n. 触角）==, researchers have spent years ==perfecting== how to use bees to find the exact location of ==landmines（landmine，n. 地雷）==.
+	
+	        Landmines buried during wars that happened decades ago continue to present a huge threat in many parts of the world.
+	
+	        Recently, a team of researchers have tried training bees to find landmines. They achieved this by getting the bees to associate the smell of bombs with food. In a landmine field, the trained bees tend to get close to places where landmines are buried, in the hope of finding food.
+	
+	        In recent years, researchers have developed systems able to follow insects in the wild. Such machines could one day monitor ==pollinators（pollinator，n. 传粉昆虫）==. These insects, including bees, are essential to the health of ==crops== and ecosystems, but their numbers have been declining lately, largely due to pollution.
+	
+	        Imagine insects and machines working together — a fun idea, and potentially good for the planet.  
+	
+	        Questions:
+	
+	        1. Which part of a bee's body can pick up the smell of bombs and landmines?
+	
+	        2. Why do the bees tend to get close to landmines in the research?
+	
+	        3. What can the recently developed insect-tracking systems do? 
+	
+		??? info "Passage 1"
+		
+			Copying nature is an old idea. ==Inventors== have ==modeled machines== after animals throughout the centuries. Although the easiest way may be the direct ==imitation（n. 模仿）== of nature, this is often difficult if not impossible. ==Bionics== researchers have found that it is more helpful to understand the principles of how things work in nature.  
+	
+	        One question of interest to bionics is how a living system makes use of information. Humans can recognize how a new situation is somehow similar to a situation experienced before. An important element in human action is the ability to recognize patterns, which is significant for bionics. One way to design a machine capable of recognizing patterns is to use learning processes. Such machines have been developed. They learn by establishing connections among a large number of ==alternative routes==.
+	
+	        Another main field of bionics research is energy transformation. In the living world, energy is stored in the form of ==chemical compounds（compound，n. 化合物）==; its use is always accompanied by chemical reactions. For example, solar energy is stored by ==plants== by means of complex chemical processes. The light produced by certain mushrooms and fish is of chemical origin. In every case, the energy transformation is much more efficient compared with ==thermal（a. 热的；热量的）== engines.
+	
+	        Understanding the principles of these transformations makes it possible for bionics researchers to design artificial-energy machines.
+	
+	        Questions:
+	
+	        1. Which of the following is true of the relationship between nature and bionics?
+	
+	        2. How do machines recognize patterns?
+	
+	        3. What does the example of mushrooms and fish illustrate?
+	
+	        4. Which of the following may not be a field of bionics research?
 
 
 		??? info "Passage 2"
@@ -629,1405 +629,1405 @@
 ??? info "Book I Unit 5-7"
 
     ??? info "B1U5-1"
-
+    
         - 布局；布置；设计；安排 l
-
+    
             ??? note "英文"
                 layout
-
+    
         - 街区；城区 n
-
+    
             ??? note "英文"
                 neighborhood
-
+    
         - ==（铺屋顶的）瓦，瓦片 t==
-
+    
             ??? note "英文"
                 tile
-
+    
         - 精神饱满的；生气勃勃的；有决心的 s
-
+    
             ??? note "英文"
                 spirited
-
+    
         - （为同一群体所）共有的，共用的，共享的 c
-
+    
             ??? note "英文"
                 communal
-
+    
         - （在）户外的；用于户外的 o
-
+    
             ??? note "英文"
                 outdoor
-
+    
         - 高兴的；兴高采烈的 c
-
+    
             ??? note "英文"
                 cheerful
-
+    
         - ==媒人 m==
-
+    
             ??? note "英文"
                 matchmaker
-
+    
         - （尤指街上的）小贩 v
-
+    
             ??? note "英文"
                 vender
-
+    
         - ==骑（自行车） p==
-
+    
             ??? note "英文"
                 pedal，e.g. Andrew pedaled up the road toward the town center.
-
+    
         - ==特有的；标志性的 t==
-
+    
             ??? note "英文"
                 trademark
-
+    
         - （公司某一产品的）商标 t
-
+    
             ??? note "英文"
                 trademark
-
+    
         - 分散注意力的；使人分心的 d
-
+    
             ??? note "英文"
                 distracting
-
+    
         - （声音）很高的；尖厉的 h
-
+    
             ??? note "英文"
                 high-pitched
-
+    
         - ==交易商；贸易商 d==
-
+    
             ??? note "英文"
                 dealer
-
+    
         - ==（嗓音或乐器的）音域，声区，音区 r==
-
+    
             ??? note "英文"
                 register，e.g. Singers have to learn how to sing in the upper register.
                 
         - 记录；登记 r
         
             ??? note "英文"
-				register
-				
+    			register
+    			
         - （使）变锋利（尖锐） s
-
+    
             ??? note "英文"
                 sharpen
-
+    
         - ==削磨的人；磨具；削具 s==
-
+    
             ??? note "英文"
                 sharpener
-
+    
         - ==硬物撞击声；咔哒声；啪嗒声 c==
-
+    
             ??? note "英文"
                 clack
-
+    
         - 抚慰；安慰；使平静 s
-
+    
             ??? note "英文"
                 soothe
-
+    
         - 抚慰的；安慰的 s
-
+    
             ??? note "英文"
                 soothing
-
+    
         - 繁忙的；熙熙攘攘的 b
-
+    
             ??? note "英文"
                 bustling
-
+    
         - 心灵；灵魂；精神 p
-
+    
             ??? note "英文"
                 psyche
-
+    
         - （液体中的）气泡，泡沫 b
-
+    
             ??? note "英文"
                 bubble
-
+    
         - ==精力；活力；劲头 d==
-
+    
             ??? note "英文"
                 dynamism
-
+    
     ??? info "B1U5-2"
-
+    
         - 再三地；重复地 r
-
+    
             ??? note "英文"
                 repeatedly
-
+    
         - 同事；同僚（尤为专业人士所用）
-
+    
             ??? note "英文"
                 colleague
-
+    
         - ==谢绝；婉言拒绝 d==
-
+    
             ??? note "英文"
                 decline，e.g. The Prime Minister was asked for his opinion but he declined to comment.
-
+    
         - 减少；降低 d
-
+    
             ??? note "英文"
                 decline
-
+    
         - ==（喝茶、咖啡等用的有柄的）大杯，马克杯 m==
-
+    
             ??? note "英文"
                 mug，e.g. Jake had a quick breakfast and a mug of coffee in the morning.
-
+    
         - （表明态度的）表示，姿态 g
-
+    
             ??? note "英文"
                 gesture
-
+    
         - 饮料 b
-
+    
             ??? note "英文"
                 beverage
-
+    
         - 终身的；毕生的 l
-
+    
             ??? note "英文"
                 lifelong
-
+    
         - ==（争论、分歧等）激烈而不愉快的，充满愤怒与仇恨的 b==
-
+    
             ??? note "英文"
                 bitter，e.g. The couple had a bitter quarrel over the division of labor.
-
+    
         - ==愤愤不平的；充满怨恨的 b==
-
+    
             ??? note "英文"
                 bitter，e.g. I feel bitter about his behavior.
-
+    
         - ==姻亲（尤指公婆或岳父母） i==
-
+    
             ??? note "英文"
                 in-laws
-
+    
         - 好客的；殷勤的；热情友好的 h
-
+    
             ??? note "英文"
                 hospitable
-
+    
         - ==尽责的；忠诚的；顺从的；恭敬的 d==
-
+    
             ??? note "英文"
                 dutiful
-
+    
         - ==（因胜利或成功而）洋洋得意地 t==
-
+    
             ??? note "英文"
                 triumphantly
-
+    
         - 掺奶的；多乳的 m
-
+    
             ??? note "英文"
                 milky
-
+    
         - 匕首；短剑 d
-
+    
             ??? note "英文"
                 dagger
-
+    
         - 外人；局外人 o
-
+    
             ??? note "英文"
                 outsider
-
+    
         - ==很重要的；神圣的；深受尊重的 s==
-
+    
             ??? note "英文"
                 sacred
-
+    
         - 神的；宗教（性）的 s
-
+    
             ??? note "英文"
                 sacred
-
+    
         - 工作场所 w
-
+    
             ??? note "英文"
                 workplace
-
+    
         - ==迅速地放置 p==
-
+    
             ??? note "英文"
                 pop，e.g. She took out a piece of chewing gum (口香糖) and popped it in her mouth.
-
+    
         - （突然或出人意料地）蹦出，离开，脱落 p
-
+    
             ??? note "英文"
                 pop，e.g. The top button popped off my shirt.
-
+    
         - 使人不愉快的；不合意的；讨厌的 u
-
+    
             ??? note "英文"
                 unpleasant
-
+    
         - ==（茶）一次的冲泡量 b==
-
+    
             ??? note "英文"
                 brew
-
+    
         - ==冗长的；啰唆的；单调乏味的；令人厌烦的 t==
-
+    
             ??? note "英文"
                 tedious
-
+    
         - ==登记；输入；录入 e==
-
+    
             ??? note "英文"
                 entry
-
+    
         - 进入 e
-
+    
             ??? note "英文"
                 entry
-
+    
         - ==（习惯、态度等）根深蒂固的，日久难改的 i==
-
+    
             ??? note "英文"
                 ingrained，e.g. The idea of doing our duty is deeply ingrained in most people.
-
+    
         - ==（运或送食物、饮料的）手推车，台车 t==
-
+    
             ??? note "英文"
                 trolley
-
+    
         - 吃；喝 c
-
+    
             ??? note "英文"
                 consume
-
+    
         - ==对···进行民意测验（调查） p==
-
+    
             ??? note "英文"
                 poll，e.g. Over 50% of those polled were against the proposed military action.
-
+    
     ??? info "B1U6-1"
         - 愚蠢的；笨的 f
-
+    
             ??? note "英文"
                 foolish
-
+    
         - ==（尤指两条道路的）交叉点，十字路口；（线的）交叉点 i==
-
+    
             ??? note "英文"
                 intersection
-
+    
         - ==（尤指因看起来费劲而）凝视，盯着看 p==
-
+    
             ??? note "英文"
                 peer
-
+    
         - 同龄人；身份（或地位）相同的人 p
-
+    
             ??? note "英文"
                 peer
-
+    
         - ==衣帽间；衣帽寄存处 c==
-
+    
             ??? note "英文"
                 cloakroom
-
+    
         - ==兽群；牧群 h==
-
+    
             ??? note "英文"
                 herd
-
+    
         - ==支配；影响；决定 d==
-
+    
             ??? note "英文"
                 dictate，e.g. Circumstances dictated that they played a defensive rather than attacking game.
-
+    
         - 口授；让（某人）听写 d
-
+    
             ??? note "英文"
                 dictate
-
+    
         - n. 罪恶；邪恶 e
-
+    
             ??? note "英文"
                 evil
-
+    
         - ==股份；股票 s==
-
+    
             ??? note "英文"
                 stock
-
+    
         - 存货；现货 s
-
+    
             ??? note "英文"
                 stock
-
+    
         - ==人心惶惶的局面；惶恐不安 p==
-
+    
             ??? note "英文"
                 panic
-
+    
         - 宗教；宗教信仰 r
-
+    
             ??? note "英文"
                 religion
-
+    
         - ==使无法正常运转 p==
-
+    
             ??? note "英文"
                 paralyze，e.g. The regional capital was paralyzed by a general strike.
-
+    
         - 使瘫痪；使麻痹 p
-
+    
             ??? note "英文"
                 paralyze
-
+    
         - ==非常有名的；大名鼎鼎的；传奇式的 l==
-
+    
             ??? note "英文"
                 legendary
-
+    
         - ==心理学家 p==
-
+    
             ??? note "英文"
                 psychologist
-
+    
         - ==使（行为等）不合情理 w==
-
+    
             ??? note "英文"
                 warp，e.g. You should not allow your dislike of her to warp your judgment.
-
+    
         - ==（使）扭曲，弯曲，变形 w==
-
+    
             ??? note "英文"
                 warp，e.g. The window frame must have been warped; it won't close properly.
-
+    
         - ==相一致；符合 c==
-
+    
             ??? note "英文"
                 correspond
-
+    
         - ==逃跑；跑开 b==
-
+    
             ??? note "英文"
                 bolt，e.g. The thief bolted when he saw the policeman.
-
+    
         - 抓；搔 s
-
+    
             ??? note "英文"
                 scratch
-
+    
         - （短距离）快速奔跑，冲刺 s
-
+    
             ??? note "英文"
                 sprint
-
+    
         - 基因 g
-
+    
             ??? note "英文"
                 gene
-
+    
         - ==后代；后裔 d==
-
+    
             ??? note "英文"
                 descendant
-
+    
         - ==（观念、原则等）根深蒂固的 r==
-
+    
             ??? note "英文"
                 rooted
-
+    
         - ==臭名昭著的；声名狼藉的 n==
-
+    
             ??? note "英文"
                 notorious
-
+    
         - ==纳粹党的 n==
-
+    
             ??? note "英文"
                 Nazi
-
+    
         - ==（政府或政党为了影响民意而进行的）宣传 p==
-
+    
             ??? note "英文"
                 propaganda
-
+    
         - ==彻底的；完全的 r==
-
+    
             ??? note "英文"
                 radical
-
+    
         - ==咆哮；大声喊叫 r==
-
+    
             ??? note "英文"
                 roar
-
+    
         - ==以匿名的方式；不透露姓名地 a==
-
+    
             ??? note "英文"
                 anonymously
-
+    
         - ==同意；允许 c==
-
+    
             ??? note "英文"
                 consent
-
+    
         - ==广告活动；广告业 a==
-
+    
             ??? note "英文"
                 advertising
-
+    
         - 不利因素；缺点 d
-
+    
             ??? note "英文"
                 disadvantage
-
+    
         - 怀疑的；心存疑惑的 s
-
+    
             ??? note "英文"
                 skeptical
-
+    
         - 小说家 n
-
+    
             ??? note "英文"
                 novelist
-
-	??? info "B1U6-2"
-		- 交通运输系统 t
-	
-			??? note "英文"
-				transit
-	
-		- （货物或人的）运输 t
-	
-			??? note "英文"
-				transit
-	
-		- ==使转变；使转化；使改造 c==
-	
-			??? note "英文"
-				convert
-	
-		- ==原型；雏形；最初形态 p==
-	
-			??? note "英文"
-				prototype
-	
-		- ==目前的；现存的 e==
-	
-			??? note "英文"
-				existing
-	
-		- ==基于网络的 w==
-	
-			??? note "英文"
-				web-based
-	
-		- ==大城市的；大都会的 m==
-	
-			??? note "英文"
-				metropolitan
-	
-		- ==街；大街 a==
-	
-			??? note "英文"
-				avenue
-	
-		- 有效的；产生预期效果的 e
-	
-			??? note "英文"
-				effective
-	
-		- 低估；（对···）估计不足；看轻 u
-	
-			??? note "英文"
-				underestimate
-	
-		- ==顿悟的时刻 e==
-	
-			??? note "英文"
-				epiphany
-	
-		- ==变老的；陈旧的 a==
-	
-			??? note "英文"
-				aging
-	
-		- 躲避风雨的地方；避难处 s
-	
-			??? note "英文"
-				shelter
-	
-		- ==栖身之地；住处 s==
-	
-			??? note "英文"
-				shelter
-	
-		- 太阳能驱动的 s
-	
-			??? note "英文"
-				solar-powered
-	
-		- ==城镇的；城市的 c==
-	
-			??? note "英文"
-				civic
-	
-		- ==使缓和；使温和；冲淡 t==
-	
-			??? note "英文"
-				temper，e.g. The heat in this coastal town is tempered by the cool sea breeze (微风).
-	
-		- 安装，设置（设备） i
-	
-			??? note "英文"
-				install
-	
-		- ==上下班路程 c==
-	
-			??? note "英文"
-				commute
-	
-		- ==（民选的）市长，镇长 m==
-	
-			??? note "英文"
-				mayor
-	
-		- 不确定的；没把握的；拿不准的 u
-	
-			??? note "英文"
-				uncertain
-	
-		- ==乐观的；积极向上的 u==
-	
-			??? note "英文"
-				upbeat
-	
-		- ==吊车；起重机 c==
-	
-			??? note "英文"
-				crane
-	
-		- ==（尤指很好或很坏的）行为，行动 d==
-	
-			??? note "英文"
-				deed
-	
-		- ==引发；触发 s==
-	
-			??? note "英文"
-				spark
-
-	??? info "B1U7-1"
-		- 羡慕；忌妒 e
-	
-			??? note "英文"
-				envy
-	
-		- 使愉快；使高兴 d
-	
-			??? note "英文"
-				delight，e.g. Her recipe will delight anyone who loves chocolate.
-	
-		- ==把（某人）列入入围（决选）名单 s==
-	
-			??? note "英文"
-				shortlist
-	
-		- ==（因震惊、惊恐等而）感到心猛地一跳，胃里猛地翻腾了一下 l==
-	
-			??? note "英文"
-				lurch
-	
-		- ==突然不稳地行走（移动）；蹒跚而行 l==
-	
-			??? note "英文"
-				lurch
-	
-		- ==（因震惊、兴奋或醉酒）头晕，感到天旋地转 s==
-	
-			??? note "英文"
-				spin
-	
-		- （使）快速旋转 s
-	
-			??? note "英文"
-				spin
-	
-		- （尤指因生气或不安）握紧，绷紧，咬紧 c
-	
-			??? note "英文"
-				clench
-	
-		- ==（使）（身体的某一部分）变得僵硬，变得僵直 t==
-	
-			??? note "英文"
-				tighten
-	
-		- （将计算机屏幕上的信息）上下滚动，滚屏（以便阅读） s
-	
-			??? note "英文"
-				scroll
-	
-		- ==略微；稍微 v==
-	
-			??? note "英文"
-				vaguely
-	
-		- ==大笔的钱；巨款 f==
-	
-			??? note "英文"
-				fortune，e.g. He made his fortune in car sales.
-	
-		- ==激发，激起（强烈的感情）；引起（强烈的反应） s==
-	
-			??? note "英文"
-				stir，e.g. Looking at the photographs stirred childhood memories of the long hot summers.
-	
-		- 搅；搅拌；搅动 s
-	
-			??? note "英文"
-				stir
-	
-		- ==豁免的；可免于···的 i==
-	
-			??? note "英文"
-				immune，e.g. The criminal was told that he would be immune from prosecution (起诉) if he helped the police.
-	
-		- ==（对···）免疫的，有免疫力的 i==
-	
-			??? note "英文"
-				immune，e.g. This blood test will show whether or not you're immune to the disease.
-	
-		- ==令人不安的；使人烦恼的 d==
-	
-			??? note "英文"
-				disturbing
-	
-		- ==心理的；精神的 p==
-	
-			??? note "英文"
-				psychological
-	
-		- 临床的 c
-	
-			??? note "英文"
-				clinical
-	
-		- ==（因顾虑自己的外表或他人的看法）忸怩的，害羞的，不自然的 s==
-	
-			??? note "英文"
-				self-conscious
-	
-		- ==毁灭性的；造成破坏的 d==
-	
-			??? note "英文"
-				destructive
-	
-		- 羡慕的；忌妒的 e
-	
-			??? note "英文"
-				envious
-	
-		- ==精神治疗医师 p==
-	
-			??? note "英文"
-				psychotherapist
-	
-		- ==（因受委屈而）对···感到愤恨 r==
-	
-			??? note "英文"
-				resent，e.g. I resented having to work such long hours.
-	
-		- ==（对不公平的事）愤恨的，不满的，憎恶的 r==
-	
-			??? note "英文"
-				resentful，e.g. They were bitterly resentful of the fact that they had to work such long hours.
-	
-		- ==舒适；健康；幸福 w==
-	
-			??? note "英文"
-				well-being
-	
-		- 竭力主张；强烈要求；敦促 u
-	
-			??? note "英文"
-				urge
-	
-		- ==易受伤的；易受影响（或攻击）的；脆弱的 v==
-	
-			??? note "英文"
-				vulnerable
-	
-		- ==自尊（心） s==
-	
-			??? note "英文"
-				self-esteem，e.g. Educated people are found to have higher self-esteem.
-	
-		- ==缺少；匮乏 d==
-	
-			??? note "英文"
-				deprivation，e.g. Sleep deprivation can result in mental disorders.
-	
-		- 忍受；容忍；宽容 t
-	
-			??? note "英文"
-				tolerance
-	
-		- ==偏狭；偏执；不容异己 i==
-	
-			??? note "英文"
-				intolerance
-	
-		- ==值得尊敬的；值得注意的；值得敬仰的 w==
-	
-			??? note "英文"
-				worthy，e.g. The money we raise will be going to a very worthy cause.
-	
-		- ==辨别；区别 d==
-	
-			??? note "英文"
-				differentiate
-	
-		- ==反常的；病态的 u==
-	
-			??? note "英文"
-				unhealthy
-	
-		- 饥饿感 h
-	
-			??? note "英文"
-				hunger
-	
-		- ==同时发生（尤指巧合） c==
-	
-			??? note "英文"
-				coincide
-	
-		- ==不安全；没有自信；没有把握 i==
-	
-			??? note "英文"
-				insecurity
-	
-		- ==从事自由职业的 f==
-	
-			??? note "英文"
-				freelance
-
-	??? info "B1U7-2"
-		- ==神经外科（学） n==
-	
-			??? note "英文"
-				neurosurgery
-	
-		- 惊人的；骇人的；令人难以置信的 s
-	
-			??? note "英文"
-				shocking
-	
-		- 激励；促使；促进 s
-	
-			??? note "英文"
-				stimulate
-	
-		- 无关的；不相关的 u
-	
-			??? note "英文"
-				unrelated
-	
-		- ==强健的；健壮的 r==
-	
-			??? note "英文"
-				robust，e.g. He looks robust and healthy.
-	
-		- ==（感觉、态度、行动）富于感染力的，会蔓延的 c==
-	
-			??? note "英文"
-				contagious，e.g. Daffy has a contagious enthusiasm for life and poetry.
-	
-		- ==（疾病）接触传染的 c==
-	
-			??? note "英文"
-				contagious，e.g. Mumps (腮腺炎) is a contagious disease.
-	
-		- 笑；笑声 l
-	
-			??? note "英文"
-				laughter
-	
-		- ==引起，促使，导致（尤指精神或身体的变化） i==
-	
-			??? note "英文"
-				induce，e.g. Taking a brisk walk can often induce a feeling of well-being.
-	
-		- ==劝诱，诱导（尤指做似乎不明智的事） i==
-	
-			??? note "英文"
-				induce，e.g. Nothing would induce me to take that job.
-	
-		- 持续时间 d
-	
-			??? note "英文"
-				duration
-	
-		- n. 强烈；剧烈 i
-	
-			??? note "英文"
-				intensity，e.g. The storm started again with even greater intensity.
-	
-		- 感觉；感受 s
-	
-			??? note "英文"
-				sensation
-	
-		- （感官的）感觉；（尤指）触觉 s
-	
-			??? note "英文"
-				sensation
-	
-		- 用电的；电动的；带电的 e
-	
-			??? note "英文"
-				electric
-	
-		- 电的；用电的；发电的 e
-	
-			??? note "英文"
-				electrical，e.g. Since the Great Depression, every new electrical appliance has come with a promise that it would transform the home.
-	
-		- 联想；联系 a
-	
-			??? note "英文"
-				associate，e.g. Most people associate this brand with good quality.
-	
-		- ==同事；（生意）伙伴 a==
-	
-			??? note "英文"
-				associate，e.g. They have been business associates for decades. 
-	
-		- 含意；暗指；暗示 i
-	
-			??? note "英文"
-				implication
-	
-		- （行动、事件、决定等的）可能的影响（后果） i
-	
-			??? note "英文"
-				implication
-	
-		- 使大为吃惊；使惊愕 a
-	
-			??? note "英文"
-				astonish
-	
-		- 令人惊讶的 a
-	
-			??? note "英文"
-				astonishing
-	
-		- ==神经元；神经细胞 n==
-	
-			??? note "英文"
-				neuron
-	
-		- ==神经传递素 n==
-	
-			??? note "英文"
-				neurotransmitter
-	
-		- ==神经生理学 n==
-	
-			??? note "英文"
-				neurophysiology
-	
-		- 音乐的；配乐的 m
-	
-			??? note "英文"
-				musical
-	
-		- 有利的 f
-	
-			??? note "英文"
-				favorable
-	
-		- 赞许的；称赞的；肯定的 f
-	
-			??? note "英文"
-				favorable
-	
-		- ==加强，强化（观点、思想、感觉等） r==
-	
-			??? note "英文"
-				reinforce
-	
-		- ==n. 盛怒；狂怒 r==
-	
-			??? note "英文"
-				rage
-	
-		- 妖怪；怪兽；怪物 m
-	
-			??? note "英文"
-				monster
-	
-		- ==电缆 c==
-	
-			??? note "英文"
-				cable
-	
-		- 手边的；附近的 h
-	
-			??? note "英文"
-				handy，e.g. Keep your pills handy just in case you feel seasick.
-	
-		- ==有用的 h==
-	
-			??? note "英文"
-				handy，e.g. It's very handy having a light above your desk.
-	
-		- ==（使）相互关联 c==
-	
-			??? note "英文"
-				correlate
-	
-		- ==（人或动物的）寿命，预期生命期限 l==
-	
-			??? note "英文"
-				lifespan，e.g. Worms have a lifespan of a few months.
-	
-		- ==无表情的；木然的 b==
-	
-			??? note "英文"
-				blank
-	
-		- 无字迹的；空白的 b
-	
-			??? note "英文"
-				blank
-	
-		- 往室内；在室内 i
-	
-			??? note "英文"
-				indoors，e.g. Mother was advised to stay indoors for a week after her cough seemed better.
-	
-		- ==被关押的；遭监禁的 c==
-	
-			??? note "英文"
-				captive，e.g. Richard was finally released in February, one year after he'd been taken captive.
-	
-		- ==俘虏 c==
-	
-			??? note "英文"
-				captive，e.g. They freed their captives before surrendering.
-	
-		- 可能发生的事；可能出现的情况 s
-	
-			??? note "英文"
-				scenario
-	
-		- ==n. 拘禁；囚禁；关押 c==
-	
-			??? note "英文"
-				captivity，e.g. Animals bred in captivity would probably not survive if they were released into the wild.
-	
-		- ==（飞机上的）自动驾驶仪 a==
-	
-			??? note "英文"
-				autopilot
-
-	??? info "B1U8-1"
-		- ==不可否认的；无可争辩的 u==
-	
-			??? note "英文"
-				undeniable
-	
-		- ==平凡的；平淡的；乏味的 m==
-	
-			??? note "英文"
-				mundane
-	
-		- 咸猪肉；熏猪肉 b
-	
-			??? note "英文"
-				bacon
-	
-		- ==全神贯注的；专心致志的 r==
-	
-			??? note "英文"
-				rapt
-	
-		- （尤指对他人的行为）感到惊讶；钦佩；赞美 m
-	
-			??? note "英文"
-				marvel
-	
-		- 使暴露（于险境）；使置身（于危险）当中 e
-	
-			??? note "英文"
-				expose
-	
-		- 无保护的；易受攻击的 e
-	
-			??? note "英文"
-				exposed
-	
-		- 无遮蔽的；不挡风雨的 e
-	
-			??? note "英文"
-				exposed
-	
-		- n. 神经紧张；焦虑不安 n
-	
-			??? note "英文"
-				nerve
-	
-		- 人性 h
-	
-			??? note "英文"
-				humanity
-	
-		- 人；人类（总称） h
-	
-			??? note "英文"
-				humanity
-	
-		- 交流 i
-	
-			??? note "英文"
-				interaction
-	
-		- ==相互影响；相互作用 i==
-	
-			??? note "英文"
-				interaction
-	
-		- （怪异、恐怖而）异于人类的 i
-	
-			??? note "英文"
-				inhuman，e.g. I quit this inhuman job. I don't want to work for a machine.
-	
-		- ==残暴的；无同情心的 i==
-	
-			??? note "英文"
-				inhuman，e.g. The slaughter of whales is unnecessary and inhuman.
-	
-		- 使困惑；把（某人）弄糊涂 c
-	
-			??? note "英文"
-				confuse
-	
-		- 令人困惑的；模糊不清的；难懂的 c
-	
-			??? note "英文"
-				confusing
-	
-		- 看上去；表面上；外观上 s
-	
-			??? note "英文"
-				seemingly
-	
-		- （想法、信仰、观点等）冲突的，矛盾的 c
-	
-			??? note "英文"
-				conflicting
-	
-		- ==抱怨 l==
-	
-			??? note "英文"
-				lament，e.g. He lamented that people had expected too much of him.
-	
-		- ==（为···）悲痛，痛惜 l==
-	
-			??? note "英文"
-				lament，e.g. The nation lamented the death of its great leader.
-	
-		- ==似乎无处不在的（有时为幽默手法） u==
-	
-			??? note "英文"
-				ubiquitous
-	
-		- 引起某人想象；吸引某人注意等 c
-	
-			??? note "英文"
-				capture，e.g. His stories of foreign adventure captured my imagination.
-	
-		- ==俘虏；逮捕 c==
-	
-			??? note "英文"
-				capture，e.g. The criminal was captured when trying to escape from prison.
-	
-		- 类别；种类；范畴 c
-	
-			??? note "英文"
-				category
-	
-		- 对···进行分类；把···归类 c
-	
-			??? note "英文"
-				categorize
-	
-		- 观点；看法；见解 v
-	
-			??? note "英文"
-				viewpoint
-	
-		- 使有能力；使能够胜任 e
-	
-			??? note "英文"
-				equip
-	
-		- 装备；配备 e
-	
-			??? note "英文"
-				equip
-	
-		- ==精力充沛的；有创新思想的；志在成功的 d==
-	
-			??? note "英文"
-				dynamic
-	
-		- 揭露真相的；揭示内情的 r
-	
-			??? note "英文"
-				revealing
-	
-		- 偶尔的；不经常的 o
-	
-			??? note "英文"
-				occasional
-	
-		- （使）缠绕；（使）交织在一起 i
-	
-			??? note "英文"
-				intertwine
-	
-		- （使）（局势、观点等）紧密相关 i
-	
-			??? note "英文"
-				intertwine，e.g. Her fate intertwined with his.
-	
-		- 持续地；不间断地 c
-	
-			??? note "英文"
-				continuously
-	
-		- ==（照相机的）镜头 l==
-	
-			??? note "英文"
-				lens
-	
-		- ==全新地拟定（或表达）（话语、概念或计划） r==
-	
-			??? note "英文"
-				re-frame
-
-	??? info "B1U8-2"
-
-		- 移动电话；手机 c
-	
-			??? note "英文"
-				cellphone
-	
-		- ==叛逆的；反叛的；反抗的 r==
-	
-			??? note "英文"
-				rebellious，e.g. Her teachers consider her a rebellious, trouble-making girl.
-	
-		- 旧式的；老式的；过时的 o
-	
-			??? note "英文"
-				old-fashioned
-	
-		- 愚蠢的；疯狂的 i
-	
-			??? note "英文"
-				insane，e.g. For some insane reason he decided to do the whole journey in one day.
-	
-		- 按月结算的；每月的 m
-	
-			??? note "英文"
-				monthly
-	
-		- （计算机、机器、软件的）升级 u
-	
-			??? note "英文"
-				upgrade
-	
-		- （手机）漫游 r
-	
-			??? note "英文"
-				roaming
-	
-		- 传输，发送，传送（电子信号、信息等） t
-	
-			??? note "英文"
-				transmit
-	
-		- 排放物；散发物 e
-	
-			??? note "英文"
-				emission
-	
-		- ==废弃物填埋场 l==
-	
-			??? note "英文"
-				landfill
-	
-		- ==废弃物的填埋；填埋的废弃物 l==
-	
-			??? note "英文"
-				landfill
-	
-		- 有毒的；由有毒物质引起的 t
-	
-			??? note "英文"
-				toxic
-	
-		- 决定性的；关键性的 d
-	
-			??? note "英文"
-				decisive
-	
-		- ==使自由；使摆脱束缚 l==
-	
-			??? note "英文"
-				liberate
-	
-		- ==难以抗拒的；令人不知所措的 o==
-	
-			??? note "英文"
-				overwhelming
-	
-		- 重担；负担 b
-	
-			??? note "英文"
-				burden
-	
-		- ==引诱；诱惑 t==
-	
-			??? note "英文"
-				temptation
-	
-		- 出席；到场；存在 p
-	
-			??? note "英文"
-				presence
-	
-		- （罪案、事故、事件的）目击者 w
-	
-			??? note "英文"
-				witness
-	
-		- ==打扰；干涉 i==
-	
-			??? note "英文"
-				intrude，e.g. Would I be intruding if I came with you?
-	
-		- ==干涉的；打扰的 i==
-	
-			??? note "英文"
-				intrusive，e.g. Some residents of the island found the presence of the film crew too intrusive.
-	
-		- （持续等待或长时间做某事的）耐心 p
-	
-			??? note "英文"
-				patience
-	
-		- 同情；同感；共鸣 e
-	
-			??? note "英文"
-				empathy
-	
-		- 喜爱；钟爱；慈爱 a
-	
-			??? note "英文"
-				affection
-	
-		- ==沉思；冥想；默想 c==
-	
-			??? note "英文"
-				contemplation，e.g. The monks spend an hour on contemplation each morning.
-	
-		- 极其重要的；必不可少的 e
-	
-			??? note "英文"
-				essential
-	
-		- 实现（希望、愿望、目标等） f
-	
-			??? note "英文"
-				fulfil，e.g. He fulfills his ambition by bringing out the best in each of his students.
-	
-		- ==令人满意的 f==
-	
-			??? note "英文"
-				fulfilling
-	
-		- ==可共存的；可兼用的 c==
-	
-			??? note "英文"
-				compatible，e.g. Are measures to protect the environment compatible with economic growth?
-	
-		- 严肃的；重要的；有用的 m
-	
-			??? note "英文"
-				meaningful
-	
-		- 极感兴趣的；全神贯注的；专注的 a
-	
-			??? note "英文"
-				absorbed
-	
-		- 毅力；意志力 w
-	
-			??? note "英文"
-				willpower
-	
-		- 使必然发生；确保 g
-	
-			??? note "英文"
-				guarantee
-	
-		- ==捆绑；系 b==
-	
-			??? note "英文"
-				bind (bound, bound)，e.g. They bound the package with brightly colored ribbons.
-	
-		- （使两部分）系牢，扎牢，结牢，扣紧 f
-	
-			??? note "英文"
-				fasten
-	
-		- 脱离现实的；不切实际的 u
-	
-			??? note "英文"
-				unreal
-	
-		- （使）脱离（关系）；（使）不联系 d
-	
-			??? note "英文"
-				disconnect
-	
-		- ==切断（机器或设备）的电力（煤气、水）等供应 d==
-	
-			??? note "英文"
-				disconnect，e.g. You should pay attention to disconnecting the machine from the mains first.
-	
-		- 使确信；使信服 c
-	
-			??? note "英文"
-				convince
+    
+    ??? info "B1U6-2"
+    	- 交通运输系统 t
+    
+    		??? note "英文"
+    			transit
+    
+    	- （货物或人的）运输 t
+    
+    		??? note "英文"
+    			transit
+    
+    	- ==使转变；使转化；使改造 c==
+    
+    		??? note "英文"
+    			convert
+    
+    	- ==原型；雏形；最初形态 p==
+    
+    		??? note "英文"
+    			prototype
+    
+    	- ==目前的；现存的 e==
+    
+    		??? note "英文"
+    			existing
+    
+    	- ==基于网络的 w==
+    
+    		??? note "英文"
+    			web-based
+    
+    	- ==大城市的；大都会的 m==
+    
+    		??? note "英文"
+    			metropolitan
+    
+    	- ==街；大街 a==
+    
+    		??? note "英文"
+    			avenue
+    
+    	- 有效的；产生预期效果的 e
+    
+    		??? note "英文"
+    			effective
+    
+    	- 低估；（对···）估计不足；看轻 u
+    
+    		??? note "英文"
+    			underestimate
+    
+    	- ==顿悟的时刻 e==
+    
+    		??? note "英文"
+    			epiphany
+    
+    	- ==变老的；陈旧的 a==
+    
+    		??? note "英文"
+    			aging
+    
+    	- 躲避风雨的地方；避难处 s
+    
+    		??? note "英文"
+    			shelter
+    
+    	- ==栖身之地；住处 s==
+    
+    		??? note "英文"
+    			shelter
+    
+    	- 太阳能驱动的 s
+    
+    		??? note "英文"
+    			solar-powered
+    
+    	- ==城镇的；城市的 c==
+    
+    		??? note "英文"
+    			civic
+    
+    	- ==使缓和；使温和；冲淡 t==
+    
+    		??? note "英文"
+    			temper，e.g. The heat in this coastal town is tempered by the cool sea breeze (微风).
+    
+    	- 安装，设置（设备） i
+    
+    		??? note "英文"
+    			install
+    
+    	- ==上下班路程 c==
+    
+    		??? note "英文"
+    			commute
+    
+    	- ==（民选的）市长，镇长 m==
+    
+    		??? note "英文"
+    			mayor
+    
+    	- 不确定的；没把握的；拿不准的 u
+    
+    		??? note "英文"
+    			uncertain
+    
+    	- ==乐观的；积极向上的 u==
+    
+    		??? note "英文"
+    			upbeat
+    
+    	- ==吊车；起重机 c==
+    
+    		??? note "英文"
+    			crane
+    
+    	- ==（尤指很好或很坏的）行为，行动 d==
+    
+    		??? note "英文"
+    			deed
+    
+    	- ==引发；触发 s==
+    
+    		??? note "英文"
+    			spark
+    
+    ??? info "B1U7-1"
+    	- 羡慕；忌妒 e
+    
+    		??? note "英文"
+    			envy
+    
+    	- 使愉快；使高兴 d
+    
+    		??? note "英文"
+    			delight，e.g. Her recipe will delight anyone who loves chocolate.
+    
+    	- ==把（某人）列入入围（决选）名单 s==
+    
+    		??? note "英文"
+    			shortlist
+    
+    	- ==（因震惊、惊恐等而）感到心猛地一跳，胃里猛地翻腾了一下 l==
+    
+    		??? note "英文"
+    			lurch
+    
+    	- ==突然不稳地行走（移动）；蹒跚而行 l==
+    
+    		??? note "英文"
+    			lurch
+    
+    	- ==（因震惊、兴奋或醉酒）头晕，感到天旋地转 s==
+    
+    		??? note "英文"
+    			spin
+    
+    	- （使）快速旋转 s
+    
+    		??? note "英文"
+    			spin
+    
+    	- （尤指因生气或不安）握紧，绷紧，咬紧 c
+    
+    		??? note "英文"
+    			clench
+    
+    	- ==（使）（身体的某一部分）变得僵硬，变得僵直 t==
+    
+    		??? note "英文"
+    			tighten
+    
+    	- （将计算机屏幕上的信息）上下滚动，滚屏（以便阅读） s
+    
+    		??? note "英文"
+    			scroll
+    
+    	- ==略微；稍微 v==
+    
+    		??? note "英文"
+    			vaguely
+    
+    	- ==大笔的钱；巨款 f==
+    
+    		??? note "英文"
+    			fortune，e.g. He made his fortune in car sales.
+    
+    	- ==激发，激起（强烈的感情）；引起（强烈的反应） s==
+    
+    		??? note "英文"
+    			stir，e.g. Looking at the photographs stirred childhood memories of the long hot summers.
+    
+    	- 搅；搅拌；搅动 s
+    
+    		??? note "英文"
+    			stir
+    
+    	- ==豁免的；可免于···的 i==
+    
+    		??? note "英文"
+    			immune，e.g. The criminal was told that he would be immune from prosecution (起诉) if he helped the police.
+    
+    	- ==（对···）免疫的，有免疫力的 i==
+    
+    		??? note "英文"
+    			immune，e.g. This blood test will show whether or not you're immune to the disease.
+    
+    	- ==令人不安的；使人烦恼的 d==
+    
+    		??? note "英文"
+    			disturbing
+    
+    	- ==心理的；精神的 p==
+    
+    		??? note "英文"
+    			psychological
+    
+    	- 临床的 c
+    
+    		??? note "英文"
+    			clinical
+    
+    	- ==（因顾虑自己的外表或他人的看法）忸怩的，害羞的，不自然的 s==
+    
+    		??? note "英文"
+    			self-conscious
+    
+    	- ==毁灭性的；造成破坏的 d==
+    
+    		??? note "英文"
+    			destructive
+    
+    	- 羡慕的；忌妒的 e
+    
+    		??? note "英文"
+    			envious
+    
+    	- ==精神治疗医师 p==
+    
+    		??? note "英文"
+    			psychotherapist
+    
+    	- ==（因受委屈而）对···感到愤恨 r==
+    
+    		??? note "英文"
+    			resent，e.g. I resented having to work such long hours.
+    
+    	- ==（对不公平的事）愤恨的，不满的，憎恶的 r==
+    
+    		??? note "英文"
+    			resentful，e.g. They were bitterly resentful of the fact that they had to work such long hours.
+    
+    	- ==舒适；健康；幸福 w==
+    
+    		??? note "英文"
+    			well-being
+    
+    	- 竭力主张；强烈要求；敦促 u
+    
+    		??? note "英文"
+    			urge
+    
+    	- ==易受伤的；易受影响（或攻击）的；脆弱的 v==
+    
+    		??? note "英文"
+    			vulnerable
+    
+    	- ==自尊（心） s==
+    
+    		??? note "英文"
+    			self-esteem，e.g. Educated people are found to have higher self-esteem.
+    
+    	- ==缺少；匮乏 d==
+    
+    		??? note "英文"
+    			deprivation，e.g. Sleep deprivation can result in mental disorders.
+    
+    	- 忍受；容忍；宽容 t
+    
+    		??? note "英文"
+    			tolerance
+    
+    	- ==偏狭；偏执；不容异己 i==
+    
+    		??? note "英文"
+    			intolerance
+    
+    	- ==值得尊敬的；值得注意的；值得敬仰的 w==
+    
+    		??? note "英文"
+    			worthy，e.g. The money we raise will be going to a very worthy cause.
+    
+    	- ==辨别；区别 d==
+    
+    		??? note "英文"
+    			differentiate
+    
+    	- ==反常的；病态的 u==
+    
+    		??? note "英文"
+    			unhealthy
+    
+    	- 饥饿感 h
+    
+    		??? note "英文"
+    			hunger
+    
+    	- ==同时发生（尤指巧合） c==
+    
+    		??? note "英文"
+    			coincide
+    
+    	- ==不安全；没有自信；没有把握 i==
+    
+    		??? note "英文"
+    			insecurity
+    
+    	- ==从事自由职业的 f==
+    
+    		??? note "英文"
+    			freelance
+    
+    ??? info "B1U7-2"
+    	- ==神经外科（学） n==
+    
+    		??? note "英文"
+    			neurosurgery
+    
+    	- 惊人的；骇人的；令人难以置信的 s
+    
+    		??? note "英文"
+    			shocking
+    
+    	- 激励；促使；促进 s
+    
+    		??? note "英文"
+    			stimulate
+    
+    	- 无关的；不相关的 u
+    
+    		??? note "英文"
+    			unrelated
+    
+    	- ==强健的；健壮的 r==
+    
+    		??? note "英文"
+    			robust，e.g. He looks robust and healthy.
+    
+    	- ==（感觉、态度、行动）富于感染力的，会蔓延的 c==
+    
+    		??? note "英文"
+    			contagious，e.g. Daffy has a contagious enthusiasm for life and poetry.
+    
+    	- ==（疾病）接触传染的 c==
+    
+    		??? note "英文"
+    			contagious，e.g. Mumps (腮腺炎) is a contagious disease.
+    
+    	- 笑；笑声 l
+    
+    		??? note "英文"
+    			laughter
+    
+    	- ==引起，促使，导致（尤指精神或身体的变化） i==
+    
+    		??? note "英文"
+    			induce，e.g. Taking a brisk walk can often induce a feeling of well-being.
+    
+    	- ==劝诱，诱导（尤指做似乎不明智的事） i==
+    
+    		??? note "英文"
+    			induce，e.g. Nothing would induce me to take that job.
+    
+    	- 持续时间 d
+    
+    		??? note "英文"
+    			duration
+    
+    	- n. 强烈；剧烈 i
+    
+    		??? note "英文"
+    			intensity，e.g. The storm started again with even greater intensity.
+    
+    	- 感觉；感受 s
+    
+    		??? note "英文"
+    			sensation
+    
+    	- （感官的）感觉；（尤指）触觉 s
+    
+    		??? note "英文"
+    			sensation
+    
+    	- 用电的；电动的；带电的 e
+    
+    		??? note "英文"
+    			electric
+    
+    	- 电的；用电的；发电的 e
+    
+    		??? note "英文"
+    			electrical，e.g. Since the Great Depression, every new electrical appliance has come with a promise that it would transform the home.
+    
+    	- 联想；联系 a
+    
+    		??? note "英文"
+    			associate，e.g. Most people associate this brand with good quality.
+    
+    	- ==同事；（生意）伙伴 a==
+    
+    		??? note "英文"
+    			associate，e.g. They have been business associates for decades. 
+    
+    	- 含意；暗指；暗示 i
+    
+    		??? note "英文"
+    			implication
+    
+    	- （行动、事件、决定等的）可能的影响（后果） i
+    
+    		??? note "英文"
+    			implication
+    
+    	- 使大为吃惊；使惊愕 a
+    
+    		??? note "英文"
+    			astonish
+    
+    	- 令人惊讶的 a
+    
+    		??? note "英文"
+    			astonishing
+    
+    	- ==神经元；神经细胞 n==
+    
+    		??? note "英文"
+    			neuron
+    
+    	- ==神经传递素 n==
+    
+    		??? note "英文"
+    			neurotransmitter
+    
+    	- ==神经生理学 n==
+    
+    		??? note "英文"
+    			neurophysiology
+    
+    	- 音乐的；配乐的 m
+    
+    		??? note "英文"
+    			musical
+    
+    	- 有利的 f
+    
+    		??? note "英文"
+    			favorable
+    
+    	- 赞许的；称赞的；肯定的 f
+    
+    		??? note "英文"
+    			favorable
+    
+    	- ==加强，强化（观点、思想、感觉等） r==
+    
+    		??? note "英文"
+    			reinforce
+    
+    	- ==n. 盛怒；狂怒 r==
+    
+    		??? note "英文"
+    			rage
+    
+    	- 妖怪；怪兽；怪物 m
+    
+    		??? note "英文"
+    			monster
+    
+    	- ==电缆 c==
+    
+    		??? note "英文"
+    			cable
+    
+    	- 手边的；附近的 h
+    
+    		??? note "英文"
+    			handy，e.g. Keep your pills handy just in case you feel seasick.
+    
+    	- ==有用的 h==
+    
+    		??? note "英文"
+    			handy，e.g. It's very handy having a light above your desk.
+    
+    	- ==（使）相互关联 c==
+    
+    		??? note "英文"
+    			correlate
+    
+    	- ==（人或动物的）寿命，预期生命期限 l==
+    
+    		??? note "英文"
+    			lifespan，e.g. Worms have a lifespan of a few months.
+    
+    	- ==无表情的；木然的 b==
+    
+    		??? note "英文"
+    			blank
+    
+    	- 无字迹的；空白的 b
+    
+    		??? note "英文"
+    			blank
+    
+    	- 往室内；在室内 i
+    
+    		??? note "英文"
+    			indoors，e.g. Mother was advised to stay indoors for a week after her cough seemed better.
+    
+    	- ==被关押的；遭监禁的 c==
+    
+    		??? note "英文"
+    			captive，e.g. Richard was finally released in February, one year after he'd been taken captive.
+    
+    	- ==俘虏 c==
+    
+    		??? note "英文"
+    			captive，e.g. They freed their captives before surrendering.
+    
+    	- 可能发生的事；可能出现的情况 s
+    
+    		??? note "英文"
+    			scenario
+    
+    	- ==n. 拘禁；囚禁；关押 c==
+    
+    		??? note "英文"
+    			captivity，e.g. Animals bred in captivity would probably not survive if they were released into the wild.
+    
+    	- ==（飞机上的）自动驾驶仪 a==
+    
+    		??? note "英文"
+    			autopilot
+    
+    ??? info "B1U8-1"
+    	- ==不可否认的；无可争辩的 u==
+    
+    		??? note "英文"
+    			undeniable
+    
+    	- ==平凡的；平淡的；乏味的 m==
+    
+    		??? note "英文"
+    			mundane
+    
+    	- 咸猪肉；熏猪肉 b
+    
+    		??? note "英文"
+    			bacon
+    
+    	- ==全神贯注的；专心致志的 r==
+    
+    		??? note "英文"
+    			rapt
+    
+    	- （尤指对他人的行为）感到惊讶；钦佩；赞美 m
+    
+    		??? note "英文"
+    			marvel
+    
+    	- 使暴露（于险境）；使置身（于危险）当中 e
+    
+    		??? note "英文"
+    			expose
+    
+    	- 无保护的；易受攻击的 e
+    
+    		??? note "英文"
+    			exposed
+    
+    	- 无遮蔽的；不挡风雨的 e
+    
+    		??? note "英文"
+    			exposed
+    
+    	- n. 神经紧张；焦虑不安 n
+    
+    		??? note "英文"
+    			nerve
+    
+    	- 人性 h
+    
+    		??? note "英文"
+    			humanity
+    
+    	- 人；人类（总称） h
+    
+    		??? note "英文"
+    			humanity
+    
+    	- 交流 i
+    
+    		??? note "英文"
+    			interaction
+    
+    	- ==相互影响；相互作用 i==
+    
+    		??? note "英文"
+    			interaction
+    
+    	- （怪异、恐怖而）异于人类的 i
+    
+    		??? note "英文"
+    			inhuman，e.g. I quit this inhuman job. I don't want to work for a machine.
+    
+    	- ==残暴的；无同情心的 i==
+    
+    		??? note "英文"
+    			inhuman，e.g. The slaughter of whales is unnecessary and inhuman.
+    
+    	- 使困惑；把（某人）弄糊涂 c
+    
+    		??? note "英文"
+    			confuse
+    
+    	- 令人困惑的；模糊不清的；难懂的 c
+    
+    		??? note "英文"
+    			confusing
+    
+    	- 看上去；表面上；外观上 s
+    
+    		??? note "英文"
+    			seemingly
+    
+    	- （想法、信仰、观点等）冲突的，矛盾的 c
+    
+    		??? note "英文"
+    			conflicting
+    
+    	- ==抱怨 l==
+    
+    		??? note "英文"
+    			lament，e.g. He lamented that people had expected too much of him.
+    
+    	- ==（为···）悲痛，痛惜 l==
+    
+    		??? note "英文"
+    			lament，e.g. The nation lamented the death of its great leader.
+    
+    	- ==似乎无处不在的（有时为幽默手法） u==
+    
+    		??? note "英文"
+    			ubiquitous
+    
+    	- 引起某人想象；吸引某人注意等 c
+    
+    		??? note "英文"
+    			capture，e.g. His stories of foreign adventure captured my imagination.
+    
+    	- ==俘虏；逮捕 c==
+    
+    		??? note "英文"
+    			capture，e.g. The criminal was captured when trying to escape from prison.
+    
+    	- 类别；种类；范畴 c
+    
+    		??? note "英文"
+    			category
+    
+    	- 对···进行分类；把···归类 c
+    
+    		??? note "英文"
+    			categorize
+    
+    	- 观点；看法；见解 v
+    
+    		??? note "英文"
+    			viewpoint
+    
+    	- 使有能力；使能够胜任 e
+    
+    		??? note "英文"
+    			equip
+    
+    	- 装备；配备 e
+    
+    		??? note "英文"
+    			equip
+    
+    	- ==精力充沛的；有创新思想的；志在成功的 d==
+    
+    		??? note "英文"
+    			dynamic
+    
+    	- 揭露真相的；揭示内情的 r
+    
+    		??? note "英文"
+    			revealing
+    
+    	- 偶尔的；不经常的 o
+    
+    		??? note "英文"
+    			occasional
+    
+    	- （使）缠绕；（使）交织在一起 i
+    
+    		??? note "英文"
+    			intertwine
+    
+    	- （使）（局势、观点等）紧密相关 i
+    
+    		??? note "英文"
+    			intertwine，e.g. Her fate intertwined with his.
+    
+    	- 持续地；不间断地 c
+    
+    		??? note "英文"
+    			continuously
+    
+    	- ==（照相机的）镜头 l==
+    
+    		??? note "英文"
+    			lens
+    
+    	- ==全新地拟定（或表达）（话语、概念或计划） r==
+    
+    		??? note "英文"
+    			re-frame
+    
+    ??? info "B1U8-2"
+    
+    	- 移动电话；手机 c
+    
+    		??? note "英文"
+    			cellphone
+    
+    	- ==叛逆的；反叛的；反抗的 r==
+    
+    		??? note "英文"
+    			rebellious，e.g. Her teachers consider her a rebellious, trouble-making girl.
+    
+    	- 旧式的；老式的；过时的 o
+    
+    		??? note "英文"
+    			old-fashioned
+    
+    	- 愚蠢的；疯狂的 i
+    
+    		??? note "英文"
+    			insane，e.g. For some insane reason he decided to do the whole journey in one day.
+    
+    	- 按月结算的；每月的 m
+    
+    		??? note "英文"
+    			monthly
+    
+    	- （计算机、机器、软件的）升级 u
+    
+    		??? note "英文"
+    			upgrade
+    
+    	- （手机）漫游 r
+    
+    		??? note "英文"
+    			roaming
+    
+    	- 传输，发送，传送（电子信号、信息等） t
+    
+    		??? note "英文"
+    			transmit
+    
+    	- 排放物；散发物 e
+    
+    		??? note "英文"
+    			emission
+    
+    	- ==废弃物填埋场 l==
+    
+    		??? note "英文"
+    			landfill
+    
+    	- ==废弃物的填埋；填埋的废弃物 l==
+    
+    		??? note "英文"
+    			landfill
+    
+    	- 有毒的；由有毒物质引起的 t
+    
+    		??? note "英文"
+    			toxic
+    
+    	- 决定性的；关键性的 d
+    
+    		??? note "英文"
+    			decisive
+    
+    	- ==使自由；使摆脱束缚 l==
+    
+    		??? note "英文"
+    			liberate
+    
+    	- ==难以抗拒的；令人不知所措的 o==
+    
+    		??? note "英文"
+    			overwhelming
+    
+    	- 重担；负担 b
+    
+    		??? note "英文"
+    			burden
+    
+    	- ==引诱；诱惑 t==
+    
+    		??? note "英文"
+    			temptation
+    
+    	- 出席；到场；存在 p
+    
+    		??? note "英文"
+    			presence
+    
+    	- （罪案、事故、事件的）目击者 w
+    
+    		??? note "英文"
+    			witness
+    
+    	- ==打扰；干涉 i==
+    
+    		??? note "英文"
+    			intrude，e.g. Would I be intruding if I came with you?
+    
+    	- ==干涉的；打扰的 i==
+    
+    		??? note "英文"
+    			intrusive，e.g. Some residents of the island found the presence of the film crew too intrusive.
+    
+    	- （持续等待或长时间做某事的）耐心 p
+    
+    		??? note "英文"
+    			patience
+    
+    	- 同情；同感；共鸣 e
+    
+    		??? note "英文"
+    			empathy
+    
+    	- 喜爱；钟爱；慈爱 a
+    
+    		??? note "英文"
+    			affection
+    
+    	- ==沉思；冥想；默想 c==
+    
+    		??? note "英文"
+    			contemplation，e.g. The monks spend an hour on contemplation each morning.
+    
+    	- 极其重要的；必不可少的 e
+    
+    		??? note "英文"
+    			essential
+    
+    	- 实现（希望、愿望、目标等） f
+    
+    		??? note "英文"
+    			fulfil，e.g. He fulfills his ambition by bringing out the best in each of his students.
+    
+    	- ==令人满意的 f==
+    
+    		??? note "英文"
+    			fulfilling
+    
+    	- ==可共存的；可兼用的 c==
+    
+    		??? note "英文"
+    			compatible，e.g. Are measures to protect the environment compatible with economic growth?
+    
+    	- 严肃的；重要的；有用的 m
+    
+    		??? note "英文"
+    			meaningful
+    
+    	- 极感兴趣的；全神贯注的；专注的 a
+    
+    		??? note "英文"
+    			absorbed
+    
+    	- 毅力；意志力 w
+    
+    		??? note "英文"
+    			willpower
+    
+    	- 使必然发生；确保 g
+    
+    		??? note "英文"
+    			guarantee
+    
+    	- ==捆绑；系 b==
+    
+    		??? note "英文"
+    			bind (bound, bound)，e.g. They bound the package with brightly colored ribbons.
+    
+    	- （使两部分）系牢，扎牢，结牢，扣紧 f
+    
+    		??? note "英文"
+    			fasten
+    
+    	- 脱离现实的；不切实际的 u
+    
+    		??? note "英文"
+    			unreal
+    
+    	- （使）脱离（关系）；（使）不联系 d
+    
+    		??? note "英文"
+    			disconnect
+    
+    	- ==切断（机器或设备）的电力（煤气、水）等供应 d==
+    
+    		??? note "英文"
+    			disconnect，e.g. You should pay attention to disconnecting the machine from the mains first.
+    
+    	- 使确信；使信服 c
+    
+    		??? note "英文"
+    			convince
 
 
 
@@ -2695,54 +2695,54 @@
 
 		??? note "英文"
 			~~distracted~~！！distracting
-
+	
 	- 繁忙的；熙熙攘攘的 b
-
+	
 		??? note "英文"
 			~~bustle~~！！bustling
-
+	
 	- n. 拒绝；回绝 r
-
+	
 		??? note "英文"
 			~~refuse~~！！refusal
-
+	
 	- （因胜利或成功而）洋洋得意地 t
-
+	
 		??? note "英文"
 			triumphantly
-
+	
 	- n. 罪恶；邪恶 e
-
+	
 		??? note "英文"
 			~~envy~~！！evil
-
+	
 	- 咆哮；大声喊叫 r
-
+	
 		??? note "英文"
 			~~roam~~！！roar
-
+	
 	- 以匿名的方式；不透露姓名地 a
-
+	
 		??? note "英文"
 			anonymously
-
+	
 	- 广告活动；广告业 a
-
+	
 		??? note "英文"
 			~~advertisement~~！！advertising
-
+	
 	- （尤指因生气或不安）握紧，绷紧，咬紧 c
-
+	
 		??? note "英文"
 			clench
-
+	
 	- 持续地；不间断地 c
-
+	
 		??? note "英文"
 			continuously
-
+	
 	- 旧式的；老式的；过时的 o
-
+	
 		??? note "英文"
 			old-fashioned
 
