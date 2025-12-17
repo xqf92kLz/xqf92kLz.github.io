@@ -262,15 +262,15 @@
     
         1 当我还是个孩子的时候，我见过真正的一片漆黑。
     
-        2 At my family's **cabin** on a **Minnesota** lake, I knew woods so dark that my hands disappeared before my eyes. I knew night skies in which **meteors** left **smoky** **trails** across **sugary** spreads of stars. But now, when eight of ten children born in the United States will never know a sky dark enough for **the Milky Way**, I worry we are rapidly losing night's natural darkness before realizing its worth. This **winter solstice**, as we cheer the days' gradual movement back toward light, let us also remember the **irreplaceable** value of darkness. 
+        2 At my family's ==**cabin**== on a **Minnesota** lake, I knew ==woods so dark that my hands disappeared before my eyes==. I knew night skies in which ==**meteors** left **smoky** **trails**== across ==**sugary** spreads of stars==. But now, when ==eight of ten== children born in the United States will never know ==a sky dark enough for **the Milky Way**==, I worry we are rapidly losing night's natural darkness before realizing its worth. This ==**winter solstice**==, as we cheer the days' gradual movement back toward light, let us also remember the ==**irreplaceable** value of darkness==. 
     
         2 我家的小屋坐落在明尼苏达州的一个湖畔，在那儿，我见过漆黑一片、伸手不见五指的树林；也见过被细砂糖般的繁星点缀的夜空。彗星扫过，在那里留下烟雾般的痕迹。可如今，在美国，每十个孩子中就有八个将永远也不会知道那种黑到足以看到银河的夜空是什么样子的，因此，我担心，在我们还未意识到夜晚的自然黑暗的价值之前，就已经在快速地失去它了。今年冬至，当我们为黑夜逐渐缩短、白天逐渐变长而欢呼时，让我们也记住黑夜不可替代的价值。
     
-        3 All life evolved to the steady **rhythm** of bright days and dark nights. Today, though, when we feel the closeness of **nightfall**, we reach quickly for a light switch. And too little darkness, meaning too much artificial light at night, spells trouble for all. 
+        3 All life evolved to ==the steady **rhythm**== of bright days and dark nights. Today, though, when we feel ==the closeness of **nightfall**==, we ==reach quickly for a light switch==. And too little darkness, meaning too much artificial light at night, ==spells trouble for all==. 
     
         3 所有生物进化以适应昼夜节律。而今，当我们感觉到夜幕降临时，便急忙去打开灯。夜晚的黑暗过少意味着人工光亮过多，这会对所有生物产生不利影响。
     
-        4 Already **the World Health Organization** identified working the **night shift** as a **probable** cause of cancer and **the American Medical Association** has voiced its support for "light pollution **reduction** efforts at both the national and state levels." Our bodies need darkness to produce the **hormone** **melatonin**, which keeps certain cancers from developing, and our bodies need darkness for sleep. Sleep **disorders** have been linked to **diabetes**, **obesity**, heart disease and depression, and recent research suggests one main cause of "short sleep" is "long light." Whether we work at night or simply take our smartphones to bed, there isn't a place for this much artificial light in our lives. 
+        4 Already **the World Health Organization** identified ==working the **night shift**== as a **probable** cause of cancer and **the American Medical Association** ==has voiced its support== for =="light pollution **reduction** efforts at both the national and state levels==." Our bodies need darkness to produce the ==**hormone** **melatonin**==, which ==keeps certain cancers from developing==, and our bodies need darkness for sleep. ==Sleep **disorders**== have been linked to ==**diabetes**, **obesity**==, heart disease and depression, and recent research suggests one main cause of "short sleep" is "long light." Whether we work at night or simply take our smartphones to bed, ==there isn't a place for this much artificial light in our lives==. 
     
         4 世界卫生组织已将上夜班认定为可能导致癌症的一个因素，美国医学会发声支持“在国家和州范围内努力减少光污染”。我们的身体需要黑暗来制造遏制某些癌症发展的褪黑素这种激素，我们的身体也需要黑暗来保证睡眠。睡眠紊乱会导致糖尿病、肥胖、心脏病和抑郁症。最近的研究也显示，引起“短睡眠”的主要原因之一是“长照明”。无论我们在夜晚工作，抑或只是在床上看智能手机，我们的生活中不应该有如此多的人工光亮。
     
@@ -282,15 +282,15 @@
     
         6 黑暗也以它温和的方式改变着我们的生活。想一想黑暗如何让我们与我们爱的人团聚，火光或月光如何照亮了我们最温馨的体验。如果没有黑暗，在冬夜的公园漫步，享用烛光晚餐，那还会是同样的体验吗？唯有夜的自然黑暗才让我们珍惜城市的灯光和季节的明媚。在正午，没有人会对这些光亮有深刻体会。
     
-        7 In today's crowded, louder, more ==fast-paced== world, night's darkness can provide ==**solitude** and quietness, qualities increasingly in short supply==. Darkness has always been considered ==**invaluable** for a **soulful** life==, and the chance to witness the universe in the dark has inspired artists and philosophers since time began. In a world flooded with artificial light, how would **Vincent van Gogh** have given the world his *Starry Night*? Who knows what this vision of the night sky might inspire in each of us, in our children or grandchildren? 
+        7 In today's crowded, louder, more ==fast-paced== world, night's darkness can provide ==**solitude** and quietness, qualities increasingly in short supply==. Darkness has always been considered ==**invaluable** for a **soulful** life==, and the chance to witness the universe in the dark has inspired artists and philosophers since time began. In a world ==flooded with== artificial light, how would **Vincent van Gogh** have given the world his *Starry Night*? Who knows what ==this vision== of the night sky might inspire in each of us, in our children or grandchildren? 
     
         7 如今的社会越来越拥挤，越来越嘈杂，越来越快节奏，夜的黑暗能带给我们日益匮乏的独处和宁静。对于情感丰富的人而言，黑暗极为宝贵，而在时间的长廊中，黑暗中的宇宙给艺术家和哲学家们带来了无尽的灵感。假如文森特・凡・高生活在这样一个处处都是人造光的世界，他怎能留给我们《星空》这幅画作？而又有谁知道，画作中对夜空的遐想会在我们、我们下一代以及下下一代身上激发怎样的想象呢？
     
-        8 Yet all over the world, our nights are getting brighter. In the United States and Western Europe, the amount of light in the sky increases an average of about six percent every year. Computer images of the United States at night, based on **NASA** photographs, show that what was a very dark country in the 1950s is now nearly covered with a **blanket** of light. Much of this light is wasted energy, which means wasted dollars. Those of us over 35 are perhaps among the last generation to have known truly dark nights. Even the lake where I was lucky to spend my summers during my childhood has seen its darkness **diminish**. 
+        8 Yet all over the world, our nights are getting brighter. In the United States and Western Europe, ==the amount of light== in the sky increases an average of about six percent every year. Computer images of the United States at night, based on **NASA** photographs, show that what was a very dark country in the 1950s is now ==nearly covered with a **blanket** of light==. Much of this light is wasted energy, which means wasted dollars. Those of us over 35 are perhaps among the last generation to have known truly dark nights. Even the lake where I was lucky to spend my summers during my childhood ==has seen its darkness **diminish**==. 
     
         8 然而，全世界的夜空越来越明亮。在美国和西欧，夜空的亮度每年平均增加约6%。根据美国国家航空航天局的照片生成的计算机图像显示，二十世纪五十年代，美国夜空非常黑暗，如今却几乎笼罩在一片明亮的灯光下。这些灯光很大一部分是能源浪费，也意味着金钱浪费。超过35岁的人恐怕是见过真正黑夜的最后一代人。小时候，我有幸在漆黑一片的湖边度过夏天，但连笼罩那片湖的黑暗也在慢慢消失。
     
-        9 It doesn't have to be this way. Light pollution is readily within our ability to solve, by using new lighting technologies and turning off some existing lights. Already, many cities and towns across North America and Europe are changing to LED streetlights, which offer dramatic possibilities for controlling wasted light. Other communities are finding success by simply turning off some of their public lighting after midnight. Even Paris, the "city of light," which already turns off its **monument** lighting after 1 a.m., will this summer start to require its shops, offices, and public buildings to turn off lights after 2 a.m. Though primarily designed to save energy, such reductions in the amount of light will also go far in addressing light pollution. But we will never truly address the problem of light pollution until we become aware of the irreplaceable value and beauty of the darkness we are losing. 
+        9 It doesn't have to be this way. Light pollution is ==readily within our ability to solve==, by using ==new lighting technologies== and turning off some existing lights. Already, many ==cities and towns== across North America and Europe are changing to LED streetlights, which ==offer dramatic possibilities for controlling wasted light==. ==Other communities== are finding success by simply turning off some of their public lighting after midnight. Even Paris, the "city of light," which already turns off its ==**monument** lighting== after 1 a.m., will this summer start to require its shops, offices, and public buildings to turn off lights after 2 a.m. Though primarily designed to save energy, such ==reductions in the amount of light will also go far in addressing light pollution==. But we will never truly address the problem of light pollution until we ==become aware of the irreplaceable value and beauty== of the darkness we are losing. 
     
         9 情况并非不可改变。通过应用新的照明技术，关掉一部分现有的灯光，我们完全可以解决光污染这个问题。北美和欧洲许多城镇已经开始改用LED街灯，为控制灯光浪费提供了巨大的可能性。其他社区仅仅通过在午夜后关掉部分公共照明，就成功减少了浪费。甚至有“灯光之城”美誉的巴黎也已经于凌晨一点关掉历史建筑的照明，并从今年夏天开始，要求商店、办公室、公共建筑在凌晨两点以后关灯。虽然减少这类照明的主要目的是节约能源，但是这在解决光污染方面也将大有可为。然而，除非我们意识到我们正在失去的黑夜具有无可替代的价值和魅力，否则，我们永远无法真正解决光污染问题。
     
@@ -312,7 +312,7 @@
     
         3 如果本地的鱼贩子或者餐厅服务员说我是“野生的”，你就应该知道所谓的“野生”是一个不太严格的分类。我有八个种类，其中七个生活在太平洋。太平洋三文鱼与西海岸的虹鳟的关系比与大西洋三文鱼的关系更密切，而大西洋三文鱼实际上与美国东北部的鳟鱼的关系比与太平洋三文鱼的关系更密切。
     
-        4 More to the point, I am so ==**exquisitely** adjusted to the very river== I was born in that my size, my shape, and maybe even how I taste ==are specific to== — and determined by — that place. If I'm born ==far up the **Yukon River**,== for example, I will grow much larger and fatter than a salmon born in a small stream a mile away. After all, I will need enough strength and fat to swim home against the Yukon's strong ==current== and lay my eggs in its ==**rocky** bottom==. And fishermen know this, preferring to catch me precisely at the Yukon's ==mouth==, when ==my fat stores — the silky, rich **Omega-3**== that makes me delicious for eating and good for the heart — are in the best condition for a long swim up the river. 
+        4 ==More to the point==, I am so ==**exquisitely** adjusted to the very river== I was born in that my size, my shape, and maybe even how I taste ==are specific to== — and determined by — that place. If I'm born ==far up the **Yukon River**,== for example, I will grow much larger and fatter than a salmon born in a small stream a mile away. After all, I will need enough strength and fat to swim home against the Yukon's strong ==current== and lay my eggs in its ==**rocky** bottom==. And fishermen know this, preferring to catch me precisely at the Yukon's ==mouth==, when ==my fat stores — the silky, rich **Omega-3**== that makes me delicious for eating and good for the heart — are in the best condition for a long swim up the river. 
     
         4 更重要的一点是，我已完全适应我出生的那条河流，以至于我的大小、体型，也许甚至连我的口感都是我出生的那条河特有的，也是由那条河决定的。比如，如果我的出生地在育空河上游，我就会长得比一英里以外的小溪里的三文鱼更大更肥，毕竟我需要足够的力气和脂肪迎着育空河的激流逆流而上，才能游回家，在布满岩石的河床产卵。渔夫们了解这一点，喜欢精准地守在育空河口捕获我，因为这个时候，我储存的脂肪——那丝滑、丰富的奥米伽3，使我不仅吃起来美味可口，而且还能强健心脏——正处于逆流而上的漫漫长路前的最佳状态。
     
@@ -344,7 +344,7 @@
     
         11 这一风险使华盛顿下定决心，在2022年之前，逐步取缔大西洋三文鱼的养殖。在我看来，这可是一个重要的措施。我想继续做一条野生三文鱼，在开阔的水域自由地游来游去。
 
-### Part I
+## Part I
 
 （来自 Book II 视听说 Unit 5-7）
 
@@ -357,65 +357,21 @@
     
             A few studies prove that theory, including a recent study published in an academic journal, where humor therapy was performed on 40 patients suffering kidney failure. The study, on patients who watched 30 minutes of comic shows twice a week over an eight-week period, showed that humor therapy can in fact reduce blood pressure. Dr. Gabriel, an associate professor of psychology at SUNY, University at Buffalo, concludes: "If we can feel more relaxed and less stressed, our bodies will be better at fighting diseases."
     
-        ??? info "Conversation"
-    
-            **M:** What are you searching for?
-    
-            **W:** I'm trying to find the English translation of a Chinese song I've just listened to.
-    
-            **M:** Hmm, that's interesting. I've noticed that you always have great interest in lyrics when listening to a new song, instead of just the melody itself.
-    
-            **W:** Yes, I believe lyrics are the soul of a song.
-    
-            **M:** Are they? When I judge a song, my primary concern is always the melody — whether the music is pleasing to the ear. Lyrics just play a secondary role.
-    
-            **W:** Well, just think about those famous folk songs. The music itself is usually quite simple — sometimes just a single melody that is repeated over and over, without even a single key change. But the lyrics can be so touching that they almost make us cry.
-    
-            **M:** Just as a famous writer once said, if you want to move people, you need to tell them touching stories about individuals.
-    
-            **W:** Exactly! That is the power of lyrics. First of all, songwriters use lyrics to express themselves or to tell a story. For example, in a musical, the lyrics play a very important role in advancing a scene or the overall play. More importantly, lyrics can influence you, making you think about life or even bringing a change to your life.
-    
-            **M:** But there're also a lot of music forms like jazz, electronic, or classical music that don't need words to express their message.
-    
-            **W:** I agree that a song may be on your playlist if its melody sounds good. However, it's the lyrics that will make you want to listen to it again and again. Through the lyrics, you feel better connected to the song.
-    
-            **M:** Yes, there is something in what you say.
-    
         ??? info "Passage 1"
     
-            There are many positive aspects of having a global language. Mutual understanding, great career opportunities, and reduced administrative costs are some of the advantages a global language would give to us. However, there are negative aspects as well.
+            There are many positive aspects of having a global language. Mutual（a. 相互的） understanding, great career opportunities, and reduced administrative（a. 行政的） costs are some of the advantages a global language would give to us. However, there are negative aspects as well.
     
-            A global language might be more favorable to native speakers who take advantage of the possibility of thinking and working quickly in their mother tongue. Perhaps a global language will make people unwilling or unable to learn other languages and make other languages unnecessary. One of the risks of having one dominant language is that the chosen language may become very technical and "inadequate" for non-native speakers, e.g. the Inuit, who have many words for snow because they need it. They would probably be unable to express themselves properly if they had only one word for snow. Also, the introduction of a global language might lead to discrimination against minor languages and cultures. Losing one's language equals to losing one's identity. English is referred to as a "killer language," which means that it is learned at the cost of other languages, rather than additively.
+            A global language might be more favorable to native speakers who take advantage of the possibility of thinking and working quickly in their mother tongue. Perhaps a global language will make people unwilling or unable to learn other languages and make other languages unnecessary. One of the risks of having one dominant language is that the chosen language may become very technical and "inadequate" for non-native speakers, e.g. the Inuit, who have many words for snow because they need it. They would probably be unable to express themselves properly if they had only one word for snow. Also, the introduction of a global language might lead to discrimination against minor languages and cultures. Losing one's language equals to losing one's identity. English is referred to as a "killer language," which means that it is learned at the cost of other languages, rather than additively（ad. 附加地）.
     
             We need a global language for communication, politics, trade, and security, but at the same time we are worried about language death, the advantages native speakers will have, and all the disadvantages non-native speakers will face. Even if a global language might be important, different languages are of importance for their culture and for the development of their native speakers. Languages make the world more interesting and more alive.
     
-            Questions:
-    
-            1. What might the Inuit think of English when it comes to describing snow?
-    
-            2. What does losing one's language mean?
-    
-            3. What's the speaker's attitude toward English as a global language?
-    
-            4. Which of the following statements would the speaker agree with?
-    
         ??? info "Passage 2"
     
-            There is a famous quote by Ludwig Wittgenstein: "The limits of my language mean the limits of my world." This perfectly summarizes the idea that the language you speak can change your worldview. This concept, the fundamental idea behind the Sapir-Whorf hypothesis, has been around for a very long time. It's so tempting to think that our language can change the way we see the world. It could also be used to explain why people who speak other languages may seem different from us.
+            There is a famous quote by Ludwig Wittgenstein: "The limits of my language mean the limits of my world." This perfectly summarizes the idea that the language you speak can change your worldview（n. 世界观）. This concept, the fundamental idea behind the Sapir-Whorf hypothesis, has been around for a very long time. It's so tempting（a. 诱人的；吸引人的） to think that our language can change the way we see the world. It could also be used to explain why people who speak other languages may seem different from us.
     
             In 1931, Sapir studied the language of a group of people living in Canada's Pacific Northwest Coast. He observed that instead of describing a falling stone as "the stone falls," the language uses a special verb to say "it stones down." Sapir claimed that this meant they had a different perception of the action and the object. Benjamin Lee Whorf, one of Sapir's students, expanded on this idea. He did a study of the Hopi people, a Native American tribe living in northeastern Arizona. Whorf determined that the Hopi language had no grammar to deal with time, and so the Hopi people had no concept of time. From this, the Sapir-Whorf hypothesis was born.
     
-            However, not everyone was buying this. The linguist Ekkehart Malotki disagreed with Whorf completely in his book Hopi Time, in which he goes into great detail about Hopi words and expressions for time. Thus far, we haven't found a solid answer to the Sapir-Whorf debate ― whether language affects worldview or not.
-    
-            Questions:
-    
-            1. Which of the following is the basis of the Sapir-Whorf hypothesis?
-    
-            2. What can we conclude about the people who say "it stones down", according to Sapir?
-    
-            3. What did Whorf claim about the Hopi people?
-    
-            4. What can be concluded from the passage? 
+            However, not everyone was buying this. The linguist（n. 语言学家） Ekkehart Malotki disagreed with Whorf completely in his book Hopi Time, in which he goes into great detail about Hopi words and expressions for time. Thus far, we haven't found a solid answer to the Sapir-Whorf debate ― whether language affects worldview or not.
     
     ??? info "Further listening"
     
@@ -424,91 +380,93 @@
 
             Recent research has investigated the connections between the Chinese language's increasing global popularity and China's growing cultural power.
     
-            One fifth of the people on this planet speak Chinese. The Chinese language has the largest number of first-language speakers in the world, and more than 80 percent of China's population speaks Mandarin Chinese. The study of the Chinese language opens the way to important fields such as China's politics, economy, and history. The global demand for Chinese language education has kept pace with the country's economic development. According to a recent survey, 38 percent of human resources and financial directors in Europe — as well as Australia and New Zealand — expect Chinese to become the most valuable business language — other than English — in the near future.
+            One fifth of the people on this planet speak Chinese. The Chinese language has the largest number of first-language speakers in the world, and more than 80 percent of China's population speaks Mandarin（n. 普通话） Chinese. The study of the Chinese language opens the way to important fields such as China's politics, economy, and history. The global demand for Chinese language education has kept pace with the country's economic development. According to a recent survey, 38 percent of human resources and financial directors in Europe — as well as Australia and New Zealand — expect Chinese to become the most valuable business language — other than English — in the near future.
     
             However, learning Chinese means learning about a culture and a people. To learn about the Chinese civilization well, it is essential to know its rich heritage of novels, short stories, poetry, drama, and, more recently, films. They reflect the values, the struggles, the joys, and the sadness of this great people. These works help you understand what is behind the language, what makes it powerful, and how it actually functions in society.
     
-            Questions:
-    
-            1. What is the news report mainly about?
-    
-            2. Which of the following statements about Mandarin Chinese is true?
-    
-            3. What is an essential part of learning about the Chinese civilization?
-    
-        ??? info "Conversation"
-    
-            **M:** Today we'll talk about persuasion. Hello, Susan! Thank you very much for being here with us today.
-    
-            **W:** I'm very pleased to be with you.
-    
-            **M:** My first question is: What is persuasion?
-    
-            **W:** To put it simply, persuasion is the ability to get what you want by using words.
-    
-            **M:** So how can we make ourselves more persuasive?
-    
-            **W:** By using some skills. Successful people all share a common ability to use language in ways that evoke vivid thoughts, feelings, and actions in their audience.
-    
-            **M:** Can you share with us some of the skills?
-    
-            **W:** OK. First of all, you should establish your credibility, showing confidence and authority through body language, intonation, etc.
-    
-            **M:** I see. If people trust you, they will accept what you say more readily.
-    
-            **W:** Yeah. The second skill is to use logic and reason to convince your audience.
-    
-            **M:** You mean facts like examples, data, and the findings of research?
-    
-            **W:** Exactly. And finally, the skill to appeal to the emotions of your audience.
-    
-            **M:** Should we use the skills together or focus on one of them?
-    
-            **W:** Deciding which of them to use is a matter of knowing your audience and purpose, as well as the right place and time.
-    
-            **M:** OK! And are the skills of persuasion something that we are born with or that we can learn through training?
-    
-            **W:** Some people are born with the talent of knowing what to say at precisely the right time, but the rest of us have to learn those skills to get what we want. And fortunately, they are learnable and teachable.
-    
-            **Questions:**
-    
-            1. What is the topic of the conversation?
-    
-            2. What is the common ability of successful people, according to the woman?
-    
-            3. What is important in deciding which persuasion skill to use?
-    
         ??? info "Passage 1"
     
-            Albert Einstein said, "If you want your children to be intelligent, read them fairy tales. If you want them to be more intelligent, read them more fairy tales." Fairy tales are imaginative stories with rich visual and contextual elements that evoke emotions in children.
+            Albert Einstein said, "If you want your children to be intelligent, read them fairy tales（fairy tale，n. 童话）. If you want them to be more intelligent, read them more fairy tales." Fairy tales are imaginative stories with rich visual and contextual（a. 与上下文有关的） elements that evoke emotions in children.
     
-            In fairy tales, it's always clear that this isn't the real world. The characters might be unfamiliar to the children but the problems and the feelings that are dealt with are themselves often very true to life. Fairy tales give children a way to understand some of the really confusing and difficult feelings that they can't yet express for themselves. Besides, the simple, good-versus-bad storyline of fairy tales and the characters within them help children deal with uncertainty. They allow kids to explore the idea that life isn't always easy and that things can go wrong. Listening to fairy tales also taps into the ability to use our imagination. Fairy tales inspire and build on children's imagination, taking them to new heights.
+            In fairy tales, it's always clear that this isn't the real world. The characters might be unfamiliar to the children but the problems and the feelings that are dealt with are themselves often very true to life. Fairy tales give children a way to understand some of the really confusing and difficult feelings that they can't yet express for themselves. Besides, the simple, good-versus-bad storyline of fairy tales and the characters within them help children deal with uncertainty. They allow kids to explore the idea that life isn't always easy and that things can go wrong. Listening to fairy tales also taps into（tap into，利用；开发） the ability to use our imagination. Fairy tales inspire and build on children's imagination, taking them to new heights.
     
             At the same time, as the "good" characters are usually rewarded at the end, it's a way of reinforcing positively the importance of being kind, thoughtful, and true. This desire to learn and experience more leads children to pick up books and gain more narrative experiences to inspire their journeys in life.
     
-            Questions:
-    
-            1. What does the quote from Albert Einstein imply?
-    
-            2. How can children benefit from reading fairy tales?
-    
-            3. Why is it important that "good" characters are usually rewarded at the end?
-    
         ??? info "Passage 2"
     
-            My friend used to commute to work daily on a train. After getting off the train, he always walked a short distance to his office building. Every morning, he passed an old man who was always at the same spot with a cup in hand, hoping to get a bit of change from passersby. For most people, this person was someone to be ignored as if he didn't exist. But my friend would always say good morning to him and bid him a good day. The old man would smile back, say good morning, and remain there until all the commuters had gone on their way.
+            My friend used to commute to work daily on a train. After getting off the train, he always walked a short distance to his office building. Every morning, he passed an old man who was always at the same spot with a cup in hand, hoping to get a bit of change from passersby. For most people, this person was someone to be ignored as if he didn't exist. But my friend would always say good morning to him and bid（v. 祝愿） him a good day. The old man would smile back, say good morning, and remain there until all the commuters had gone on their way.
     
-            Occasionally, my friend would drop a dollar or two in the old man's cup on his way to work as the old man said hello. This went on for several years until one day, on his last day at work before retirement, my friend stopped for a few minutes to talk with the old man. He told the man that he would no longer be passing by because this was his last day at work. The old man took his hand and shook it warmly, saying that he had always looked forward to seeing my friend pass by, but not because he dropped a few dollars in his cup. He said he would miss my friend because he was one of the few people out of thousands who ever said hello when passing by. And my friend was the only one who ever bid him a good day. The old man also said that my friend's warm words always brightened his day and helped him to continue on, despite being ignored by thousands of others who saw him daily.
+            Occasionally, my friend would drop a dollar or two in the old man's cup on his way to work as the old man said hello. This went on for several years until one day, on his last day at work before retirement, my friend stopped for a few minutes to talk with the old man. He told the man that he would no longer be passing by because this was his last day at work. The old man took his hand and shook it warmly, saying that he had always looked forward to seeing my friend pass by, but not because he dropped a few dollars in his cup. He said he would miss my friend because he was one of the few people out of thousands who ever said hello when passing by. And my friend was the only one who ever bid him a good day. The old man also said that my friend's warm words always brightened（brighten，vt. 使更开心） his day and helped him to continue on, despite being ignored by thousands of others who saw him daily.
+
+??? info "B2U6"
+	??? info "Listening & speaking"
+		??? info "News report"
+            Plant-based meat has been gaining popularity in China, as evidenced by the increasing number of options available on the market. Artificial meat is made from ==extracted proteins== from different plants, and has been associated with healthy eating and sustainability as these products require fewer resources to produce, compared to raising ==livestock（n. 牲畜；家畜）==.
+
+            Earlier in April 2020, major food-and-beverage chains partnered with US plant-based meat company Beyond Meat to offer time-limited plant-based food in China.
     
-            Questions:
+            In July, Beyond Meat worked with a grocery ==retail chain== to sell its plant-based meat hamburgers in 50 of the latter's stores in Shanghai.
     
-            1. Which of the following statements is true about the speaker's friend?
+            More vegetarian dishes with plant-based meat in Shanghai restaurants have been sold in recent years. Zhang Lin, Executive Director of a sustainability advisory firm, says that from this we can see China is a market with huge potential for plant-based meat companies.
     
-            2. What would the speaker's friend always do when he passed by the old man?
+            "The recent surge in plant-based meat is a good sign for the environment, but I don't think companies should make 'environmentally friendly' as the only selling point for their products," she says. "==Texture（n. 口感）==, taste and safety are the basic requirements for all foods, and plant-based meat is no exception."
     
-            3. What did the speaker's friend do on his last day of work?
+        ??? info "Passage 1"
+            Up to half of the food the world produces is never eaten. It is thrown away. Experts say food is wasted in both developed and less-developed countries, but for different reasons.
     
-            4. What did the old man thank the speaker's friend for?
+            Elliot Woolley teaches sustainable manufacturing at Loughborough University in Britain. He spoke at the Global Conference on Sustainable Manufacturing, held in Vietnam.
+    
+            According to Woolley, in less-developed countries, food is usually lost while it is still in the field or during storage and transportation. This is because food producers there are inefficient, and the businesses are unable to operate effectively without wasting materials, time or energy. But he added that once food is sold in less-developed countries, people usually eat everything they buy. However, people in some developed countries throw away as much as half of the food they purchase. The British researcher called this custom "a disgrace（n. 耻辱）."
+    
+            Woolley has created a smartphone app called the "Pantry（n. 食品贮藏室（柜）） App", which shows users what food they have bought and when the food is about to become unsafe to eat. It also gives information on how people can combine the foods they have to make a meal.
+    
+            Woolley said that people who used the app reduced the amount of food they wasted by a third, and it could help those who already want to change the way they use the food they buy.
+    
+    	??? info "Passage 2"
+    		Everything we eat is a reflection of who we are. There has been quite a bit of research on finding a link between one's personality type and their food choice. It seems that certain traits in our personality make us more likely to develop a specific eating habit.
+    
+            Back in the 1970s, a researcher at the University of Pennsylvania did a study in a village in Mexico. He argued that people enjoy the burning sensation of spicy food for the same reason as some people enjoy potentially dangerous activities.
+    
+            In 2005, a study was conducted to determine the personality type of the participants and examine their behaviors including eating habits. The study showed that conscientious（a. 勤勉认真的） people tended to eat more fruit and vegetables, and choose overall healthier meals. Extroverts were shown to be more prone（a. 有···倾向的） to risky behavior and unhealthier food. Another interesting study published in the Appetite journal recently found that extroverts（extrovert，n. 性格外向者） have a preference for fatty, savory（a. 好吃的） and sweet foods, as well as sugary soft drinks.
+    
+            These are just a few interesting studies that have shown some links between a person's personality type and their food choices. It is a topic that definitely requires further detailed research. But even with the information we have available right now, it is possible to come to a few conclusions, based on which we might be able to start developing better eating habits.
+    
+    ??? info "Further listening"
+    	??? info "News report"
+    		British cook and food-writer Fuchsia Dunlop recently released her new book Food of Sichuan, sharing her story about exploring the secrets behind Sichuan food in the southwestern Chinese province, Chinanews.com reported.
+    
+            The James Beard Award winner, who has been studying Chinese cuisine for over two decades, hopes that the book will give readers of the English-speaking world a better understanding of China's cooking culture.
+    
+            The book covers a wide range of topics, including local cooking tools, seasonings（seasoning，n. 调味品） and recipes（recipe，n. 食谱） of 200 popular Sichuan dishes from street snacks to banquet（n. 盛宴） dishes, country-style dishes and home-made food.
+    
+            Dunlop had her first encounter with Sichuan cuisine during a trip to China in the 1990s. In 1994, she got a scholarship and became a student at Sichuan University in Chengdu, capital of Sichuan. Falling in love with Sichuan food, she spent three months studying it at a local cooking school, while visiting local restaurants, street stalls（stall，n. 货摊；售货亭） and greasy spoons（greasy spoon，n. （主要供应油炸食品的）廉价小餐馆）.
+    
+            Dunlop said that Sichuan food meant a whole lot to her. Through studying and cooking, she accumulated much experience, met new friends and had a better understanding of China's culture and history. Most importantly, she tasted a host of ==delicacies（delicacy，n. 佳肴）==.
+    
+    	??? info "Passage 1"
+    		When it comes to food, color is money, because "better stem and fruit color gives better prices." Color is judged by a lot of different standards all along the food chain. The hue of orange juice, for example, is carefully calibrated by the United States Department of Agriculture's Orange Juice Color Standards.
+    
+            Oranges and berries（berry，n. 浆果；莓） are just the beginning. The color-matching company Munsell sells color standards for food like French fries, tomatoes, pumpkins, honey, and cherries. The manager of the company says that a product like the maraschino cherry（n. 酒浸樱桃；马拉斯金樱桃） actually has two color standards: one for the cherry after it is bleached（bleach，vt. 使（颜色）变淡；漂白） to a pale yellow, and another for the red.
+    
+            The attention to color is not just for show. Our eyes are arguably the most important gustatory（a. 味觉的） organ. As an Oxford University professor points out, more than half of the cortex（n. （脑等器官的）皮层） in the brain is dedicated to processing vision. Research shows that color does not just flavor our expectations; it actually changes the taste of food.
+    
+            In a 1980 study, subjects were blindfolded and asked to tell whether the beverage they were drinking was orange. Only one in five could. But when they were allowed to see what they were drinking, each of them identified the orange flavor.
+    
+            More than that, the path from color to taste can go in both directions. An article in the Journal of Dairy Science notes that consumers want cheese that tastes good, but when likable flavor attributes are missing, say, in low-fat cheese, the attention of consumers can be drawn to the color of the cheese. If the color is not right, the sales will decrease.
+    
+    	??? info "Passage 2"
+    		There is an old saying: "You are what you eat."
+    
+            When we eat the right foods, we feel better physically. But what we eat can also make us feel better emotionally and mentally.
+    
+            To keep an emotional and mental balance, one of the important foods is fat. The brain is made up of chemicals that talk to each other and that are lubricated（lubricate，vt. 使润滑） by the fat in order to communicate across the synapses（synapse，n. （神经元的）突触）. Healthy fat contributes to our ability to focus, to pay attention, and to lift our mood. For example, Omega 3 fatty acids（fatty acid，n. 脂肪酸） are helpful in treating depression and anxiety.
+    
+            But eating healthy fat is not enough. We also need to eat foods that break down the fat, like dark green vegetables. These vegetables can help our liver break down the fat, which is then absorbed into the bloodstream and support brain function.
+    
+            That's why many health experts say we need to eat a rainbow of foods — in other words, vegetables of all colors. Orange and yellow foods provide lots of vitamin A and lots of vital nutrients（nutrient，n. 养分；营养物）. A variety of greens are very good for our digestion（n. 消化）. Purple foods and red foods are anti-inflammatory（a. 消炎的；抗炎的）. Those are eggplants（eggplant，n. 茄子） and berries.
+    
+            Also it is not just about the food. Once we have made food designed to improve our emotional and mental health, it is important to slow down and enjoy the meal.
+
 
 
 ??? info "B2U7"
@@ -523,28 +481,12 @@
             The winners will receive an award from CGTN and a certificate in the coming weeks.
     
             The contest is intended to raise awareness of the need to care about and protect Mother Nature.
-    
-            Questions:
-    
-            1. How many works were finally selected as prize-winning photos of the contest?
-    
-            2. What will the winners receive from CGTN?
-    
-            3. What is the purpose of the contest?
 
 
 		??? info "Passage 1"
 			For human beings, nature has always been a source of inspiration, and a place to reflect and heal. Many studies have highlighted the countless ways that simply being in nature will benefit us mentally and physically. In a classic study performed in a Pennsylvania hospital, patients who had a window view of trees recovered from surgery much faster than those who had only a brick wall to look at. The patients who could see nature from their window also received fewer negative evaluations（n. 评价） from nurses and took fewer ==painkillers==. A recent study also shows that adults can reduce their blood pressure by simply spending 30 minutes or more a week walking in a park.
 	
 	        I remember one of the most difficult times in my life when I would go daily into the forest near our home and take the family dog for a long walk. The exercise, combined with the beautiful scenery, was my daily source of comfort. The ancient redwoods（n. 红杉） reminded me of the many winter storms they've ==weathered== during their lifetime. Seeing an eagle flying above helped me to think of the need for a broader view of my own circumstances. Looking at the grass, ants, and ==butterflies== reminded me that life is constantly ==evolving== and adapting over time. Nature ==rejuvenated（rejuvenate，vt. 使···恢复活力）== me and gave me a place to reflect, and to recover from the stress of the personal changes I was going through.
-	
-	        Questions:
-	
-	        1. Which of the following is true of the patients with a window view of trees?
-	
-	        2. What did the speaker learn from the eagle?
-	
-	        3. What did the speaker think about life when seeing the grass, ants, and butterflies?
 
 
 		??? info "Passage 2"
@@ -575,14 +517,6 @@
 	
 	        Imagine insects and machines working together — a fun idea, and potentially good for the planet.  
 	
-	        Questions:
-	
-	        1. Which part of a bee's body can pick up the smell of bombs and landmines?
-	
-	        2. Why do the bees tend to get close to landmines in the research?
-	
-	        3. What can the recently developed insect-tracking systems do? 
-	
 		??? info "Passage 1"
 		
 			Copying nature is an old idea. ==Inventors== have ==modeled machines== after animals throughout the centuries. Although the easiest way may be the direct ==imitation（n. 模仿）== of nature, this is often difficult if not impossible. ==Bionics== researchers have found that it is more helpful to understand the principles of how things work in nature.  
@@ -592,16 +526,6 @@
 	        Another main field of bionics research is energy transformation. In the living world, energy is stored in the form of ==chemical compounds（compound，n. 化合物）==; its use is always accompanied by chemical reactions. For example, solar energy is stored by ==plants== by means of complex chemical processes. The light produced by certain mushrooms and fish is of chemical origin. In every case, the energy transformation is much more efficient compared with ==thermal（a. 热的；热量的）== engines.
 	
 	        Understanding the principles of these transformations makes it possible for bionics researchers to design artificial-energy machines.
-	
-	        Questions:
-	
-	        1. Which of the following is true of the relationship between nature and bionics?
-	
-	        2. How do machines recognize patterns?
-	
-	        3. What does the example of mushrooms and fish illustrate?
-	
-	        4. Which of the following may not be a field of bionics research?
 
 
 		??? info "Passage 2"
@@ -612,15 +536,6 @@
 	        In another experiment, the participants filled out a survey about their emotions while sitting at a table where more or less beautiful plants were placed. Afterward, the participants were told that the experiment was over and they could leave, but if they wanted to, they could volunteer to make paper ==cranes（crane，n. 鹤）== for a relief effort program. The number of cranes they made was used as a measure of their willingness to help.
 	
 	        Results showed that the ==presence== of more beautiful plants significantly increased the number of cranes made by participants, and that this increase, again, resulted from positive emotions. The researchers concluded that experiencing the beauty of nature increases positive emotions. This is probably because nature inspires in them ==awe==, a feeling similar to wonder, with the sense of being part of something bigger than oneself, which then leads to kind behaviors.
-	
-	        Questions:
-	
-	        1. Why were the participants in the first experiment asked to play games?
-	
-	        2. Which of the following affected the mood of the participants in the second experiment?
-	
-	        3  What does the activity of making paper cranes show?
-
 
 ## Part IV
 
@@ -2029,11 +1944,774 @@
     		??? note "英文"
     			convince
 
+??? info "Book II Unit 5-7"
+	??? info "B2U5-1"
+
+		- （在精神或感情上）（使）复原；（使）坚强起来 h
+	
+			??? note "英文"
+				heal
+	
+		- （使）康复，复原 h
+	
+			??? note "英文"
+				heal
+	
+		- 短暂的；飞逝的 f
+	
+			??? note "英文"
+				fleeting
+	
+		- （尤指对复杂情况、看法的）顿悟，猛醒 i
+	
+			??? note "英文"
+				insight
+	
+		- 长篇独白 m
+	
+			??? note "英文"
+				monologue
+	
+		- 内心的；精神的 i
+	
+			??? note "英文"
+				interior
+	
+		- 内部；里面 i
+	
+			??? note "英文"
+				interior
+	
+		- 同情的；共鸣的 e
+	
+			??? note "英文"
+				empathetic
+	
+		- 阅读治疗专家 b
+	
+			??? note "英文"
+				bibliotherapist
+	
+		- 多次重复地；频繁地 c
+	
+			??? note "英文"
+				continually
+	
+		- 短暂的；转瞬即逝的；一时的 t
+	
+			??? note "英文"
+				transient
+	
+		- （状况）棘手的 m
+	
+			??? note "英文"
+				messy
+	
+		- 脏的；乱的 m
+	
+			??? note "英文"
+				messy
+	
+		- 绝望 d
+	
+			??? note "英文"
+				despair
+	
+		- 传略；实录 m
+	
+			??? note "英文"
+				memoir
+	
+		- 叙述；叙述技巧 n
+	
+			??? note "英文"
+				narrative
+	
+		- 乐观的；乐观主义的 o
+	
+			??? note "英文"
+				optimistic
+	
+	??? info "B2U5-2"
+	
+		- 自拍照片 s
+	
+			??? note "英文"
+				selfie
+	
+		- 网络霸凌（欺凌） c
+	
+			??? note "英文"
+				cyberbullying
+	
+		- 仔细找寻 t
+	
+			??? note "英文"
+				trace
+	
+		- ==首字母缩略词 a==
+	
+			??? note "英文"
+				acronym
+	
+		- 持续时间 l
+	
+			??? note "英文"
+				longevity，e.g. By offering services to help expand the longevity of their products, they are promising quality and durability to consumers.
+	
+		- 寿命 l
+	
+			??? note "英文"
+				longevity
+	
+		- （词语的）用法 u
+	
+			??? note "英文"
+				usage，e.g. The dictionary focuses on the more usual words of the language and avoids rare usages of these words.
+	
+		- 首次出现（使用）；问世 a
+	
+			??? note "英文"
+				appearance，e.g. The industry has changed greatly with the appearance of new technologies.
+	
+		- （难懂的）行话，术语（常含贬义） j
+	
+			??? note "英文"
+				jargon
+	
+		- 不受时间影响的；永不过时的 t
+	
+			??? note "英文"
+				timeless
+	
+		- （想法、信仰等）强加（于某人） i
+	
+			??? note "英文"
+				impose
+	
+		- ==令人焦虑的 w==
+	
+			??? note "英文"
+				worrisome
+	
+		- （尤指以不同的方式）重新制作 r
+	
+			??? note "英文"
+				remake (remade, remade)
+	
+	??? info "B2U6-1"
+	
+		- 机智；有办法 r
+	
+			??? note "英文"
+				resourcefulness
+	
+		- 削减；节省 c
+	
+			??? note "英文"
+				conserve
+	
+		- 保护；保存 c
+	
+			??? note "英文"
+				conserve
+	
+		- 过分；过量 e
+	
+			??? note "英文"
+				excess
+	
+		- 剩饭菜 l
+	
+			??? note "英文"
+				leftover(s)
+	
+		- 未用完的；剩余的；未吃完的 l
+	
+			??? note "英文"
+				leftover
+	
+		- ==大会；会议；集会 c==
+	
+			??? note "英文"
+				convention，e.g. They have chosen him to represent their city at the convention.
+	
+		- （货物、人员等的）流动，流通；吞吐 t
+	
+			??? note "英文"
+				turnover，e.g. The restaurant did a lively business and had a rapid turnover.
+	
+		- 营业额 t
+	
+			??? note "英文"
+				turnover，e.g. I believe they've doubled their turnover since those advertisements appeared in the press.
+	
+		- ==残羹剩饭 s==
+	
+			??? note "英文"
+				scrap，e.g. The rats run around, searching for scraps in the rubbish.
+	
+		- ==小片；小块；碎屑 s==
+	
+			??? note "英文"
+				scrap，e.g. He wrote his address on a scrap of paper.
+	
+		- 良心；良知 l
+	
+			??? note "英文"
+				conscience
+	
+		- 环境保护主义 e
+	
+			??? note "英文"
+				environmentalism
+	
+		- ==（社会）精英；上层人士 e==
+	
+			??? note "英文"
+				elite，e.g. In this country, only the elite can afford an education for their children.
+	
+		- （有加热装置的）火锅，暖锅 c
+	
+			??? note "英文"
+				chafing dish
+	
+		- 牙签 t
+	
+			??? note "英文"
+				toothpick
+	
+		- 联合；组合 c
+	
+			??? note "英文"
+				combination
+	
+		- 长久的；永久的 p
+	
+			??? note "英文"
+				permanent
+	
+		- 烹饪（法） c
+	
+			??? note "英文"
+				cuisine
+	
+		- 保守的；守旧的 c
+	
+			??? note "英文"
+				conservative
+	
+		- ==保守；守旧主义 c==
+	
+			??? note "英文"
+				conservatism
+	
+		- ==小巧的；精致的 d==
+	
+			??? note "英文"
+				dainty
+	
+		- ==（食物）耐饥的，果腹的 f==
+	
+			??? note "英文"
+				filling
+	
+	??? info "B2U6-2"
+	
+		- 承认；坦白 c
+	
+			??? note "英文"
+				confession
+	
+		- 致力；献身；倾注 d
+	
+			??? note "英文"
+				devote
+	
+		- 忠实的；热爱···的 d
+	
+			??? note "英文"
+				devoted
+	
+		- 无法满足的 i
+	
+			??? note "英文"
+				insatiable
+	
+		- （使）适应；（使）习惯 a
+	
+			??? note "英文"
+				adjust
+	
+		- （绿皮）密生西葫芦 z
+	
+			??? note "英文"
+				zucchini
+	
+		- 处置权 d
+	
+			??? note "英文"
+				disposal
+	
+		- ==清理；处理 d==
+	
+			??? note "英文"
+				disposal，e.g. We should not give up this option for the disposal of nuclear waste.
+	
+		- 仔细研究；仔细考虑 p
+	
+			??? note "英文"
+				peruse
+	
+		- 读；（尤指）细读，精读 
+	
+			??? note "英文"
+				peruse
+	
+		- ==担忧地；不快地 g==
+	
+			??? note "英文"
+				grimly
+	
+		- 严肃地 g
+	
+			??? note "英文"
+				grimly
+	
+		- ==（水果或蔬菜）干巴难吃的 m==
+	
+			??? note "英文"
+				mealy，e.g. The apples we bought yesterday are kind of mealy.
+	
+		- （用纸或布）包，裹（某物） w
+	
+			??? note "英文"
+				wrap
+	
+		- ==（商品的）包装纸（塑料） w==
+	
+			??? note "英文"
+				wrapper
+	
+		- ==（水果和蔬菜的）外皮（尤指橙子等不能食用的厚皮） p==
+	
+			??? note "英文"
+				peel
+	
+		- ==剥去（削去）（水果或蔬菜）的皮 p==
+	
+			??? note "英文"
+				peel
+	
+		- 对钱财不感兴趣；脱俗的 u
+	
+			??? note "英文"
+				unworldly
+	
+		- 认识；意识；领悟 r
+	
+			??? note "英文"
+				realization
+	
+		- （因习以为常）视···为理所当然（而对其不重视） g
+	
+			??? note "英文"
+				grant
+	
+		- 给予；准予 g
+	
+			??? note "英文"
+				grant
+	
+		- 动力；积极性 m
+	
+			??? note "英文"
+				motivation
+	
+		- 优先处理的事；当务之急 p
+	
+			??? note "英文"
+				priority
+	
+		- ==嘎吱的响声 c==
+	
+			??? note "英文"
+				crunch
+	
+		- 不使用化肥的；有机的；绿色的 o
+	
+			??? note "英文"
+				organic
+	
+		- ==放养的；散养的 f==
+	
+			??? note "英文"
+				free-range
+	
+		- ==营养；食物 s==
+	
+			??? note "英文"
+				sustenance
+	
+		- 巨大的；重大的 p
+	
+			??? note "英文"
+				profound
+	
+		- ==严重的；重大的；严峻的 g==
+	
+			??? note "英文"
+				grave
+	
+		- ==墓穴；坟墓 g==
+	
+			??? note "英文"
+				grave
+	
+	??? info "B2U7-1"
+		- （尤指建于林中或山上的）小木屋 c
+	
+			??? note "英文"
+				cabin
+	
+		- ==流星 m==
+	
+			??? note "英文"
+				meteor
+	
+		- 痕迹 t
+	
+			??? note "英文"
+				trail
+	
+		- ==拖；拉；拖在后面 t==
+	
+			??? note "英文"
+				trail，e.g. A plane trailing a banner was circling overhead.
+	
+		- ==糖状的；粒状表面的 s==
+	
+			??? note "英文"
+				sugary
+	
+		- ==规则变化；节律模式；节奏 r==
+	
+			??? note "英文"
+				rhythm，e.g. Long journeys can disrupt your body's natural rhythm.
+	
+		- ==黄昏；傍晚 n==
+	
+			??? note "英文"
+				nightfall
+	
+		- 可能存在的；可能发生的；很可能的 p
+	
+			??? note "英文"
+				probable
+	
+		- （数量、尺寸或价格的）减少，缩小，下降 r
+	
+			??? note "英文"
+				reduction
+	
+		- 激素；荷尔蒙 h
+	
+			??? note "英文"
+				hormone
+	
+		- ==褪黑激素（有时用作安眠药） m==
+	
+			??? note "英文"
+				melatonin
+	
+		- ==糖尿病 d==
+	
+			??? note "英文"
+				diabetes
+	
+		- ==过度肥胖 o==
+	
+			??? note "英文"
+				obesity
+	
+		- 破坏；损坏；毁坏 w
+	
+			??? note "英文"
+				wreck
+	
+		- 突然失败；垮掉；崩溃 c
+	
+			??? note "英文"
+				collapse
+	
+		- 照射；照亮 i
+	
+			??? note "英文"
+				illuminate
+	
+		- ==幽静舒适的；温馨的 i==
+	
+			??? note "英文"
+				intimate，e.g. The guests at the country club always enjoy its intimate atmosphere.
+	
+		- ==亲密的；密切的 i==
+	
+			??? note "英文"
+				intimate，e.g. We're not on intimate terms with our neighbors.
+	
+		- 火焰 f
+	
+			??? note "英文"
+				flame
+	
+		- 独处 s
+	
+			??? note "英文"
+				solitude
+	
+		- ==极有价值的 i==
+	
+			??? note "英文"
+				invaluable
+	
+		- 深情的；伤感的 s
+	
+			??? note "英文"
+				soulful
+	
+		- ==布满星星的 s==
+	
+			??? note "英文"
+				starry
+	
+		- ==厚（的覆盖）层 b==
+	
+			??? note "英文"
+				blanket
+	
+		- 毯子；毛毯 b
+	
+			??? note "英文"
+				blanket
+	
+		- ==（使）减小；（使）减少 d==
+	
+			??? note "英文"
+				diminish，e.g. Her enthusiasm for knitting is by now diminishing fast.
+	
+		- ==纪念碑；纪念塔；纪念馆 m==
+	
+			??? note "英文"
+				monument
+	
+	??? info "B2U7-2"
+	
+		- ==密友；好友 p==
+	
+			??? note "英文"
+				pal，e.g. Margherita and I have been pals since we were at primary school.
+	
+		- ==（像小动物那样）轻快地跑 s==
+	
+			??? note "英文"
+				skitter，e.g. Shaking the snow off their hair and coats, the girls skittered up the stairs into the house.
+	
+		- 公路 h
+	
+			??? note "英文"
+				highway
+	
+		- ==（机器或玩具）装有发条的，用手柄操作的 w==
+	
+			??? note "英文"
+				windup，e.g. Directly in front of him were two windup monkeys, one with a guitar and the other with a drum.
+	
+		- ==（液体或碎屑）飞溅，飞散 s==
+	
+			??? note "英文"
+				spray，e.g. The water sprayed from the hose (水龙带) and onto the grassland.
+	
+		- 喷；喷洒 s
+	
+			??? note "英文"
+				spray，e.g. Someone had sprayed blue paint all over his car.
+	
+		- ==沉重地落下 f==
+	
+			??? note "英文"
+				flop，e.g. I finally got home and flopped down on the bed.
+	
+		- ==磁的；磁性的 m==
+	
+			??? note "英文"
+				magnetic，e.g. Pigeons navigate less accurately when the Earth's magnetic field is disturbed.
+	
+		- 不幸地（表示但愿并非如此） a
+	
+			??? note "英文"
+				alas
+	
+		- 精美地；精致地 e
+	
+			??? note "英文"
+				exquisitely
+	
+		- 岩石覆盖的；由岩石形成的 r
+	
+			??? note "英文"
+				rocky
+	
+		- ==基本食物；主食 s==
+	
+			??? note "英文"
+				staple，e.g. The aid workers are distributing corn, milk, vegetables, and other staples.
+	
+		- （鱼或蛙）大量产卵 s
+	
+			??? note "英文"
+				spawn，e.g. The salmon swim upstream to spawn in late summer or fall.
+	
+		- ==使大量出现；使大量生产；酿成 s==
+	
+			??? note "英文"
+				spawn，e.g. New technology has spawned new business opportunities.
+	
+		- 鳕鱼（肉）c
+	
+			??? note "英文"
+				cod
+	
+		- （计划或行动）发生意外，产生事与愿违的结果 b
+	
+			??? note "英文"
+				backfire
+	
+		- 近海的；沿海的；海岸的 c
+	
+			??? note "英文"
+				coastal
+	
+		- ==茁壮成长；兴旺；欣欣向荣 t==
+	
+			??? note "英文"
+				thrive，e.g. It is still unclear whether these companies will continue to thrive in the future.
+	
+		- n. 充裕；丰富 a
+	
+			??? note "英文"
+				abundance
+	
+		- ==幸事；幸运；福气 b==
+	
+			??? note "英文"
+				blessing
+	
+		- （餐厅的）用餐者 d
+	
+			??? note "英文"
+				diner
+	
+		- ==富含脂肪 f==
+	
+			??? note "英文"
+				fattiness，e.g. With much protein but little fattiness, beef is the healthy food sought by many people.
+	
+		- 潮湿的；湿润的 m
+	
+			??? note "英文"
+				moist
+	
+		- 将（食物）煮得过熟 o
+	
+			??? note "英文"
+				overcook
+	
+		- 炙，烤（肉等） r
+	
+			??? note "英文"
+				roast
+	
+		- 挪威人 n
+	
+			??? note "英文"
+				Norwegian
+	
+		- 剩余；过剩；剩余额；多余的量 s
+	
+			??? note "英文"
+				surplus
+	
+		- ==把 （某事物）并入，包含 i==
+	
+			??? note "英文"
+				incorporate，e.g. We've incorporated many environmentally friendly features into the design of the building.
+	
+		- ==（人或动物的）肉 f==
+	
+			??? note "英文"
+				flesh
+	
+		- 鳄梨；牛油果 a
+	
+			??? note "英文"
+				avocado
+	
+		- ==促销；营销；销售 m==
+	
+			??? note "英文"
+				marketing
+	
+		- ==抗生素 a==
+	
+			??? note "英文"
+				antibiotic
+	
+		- 毒素（尤指细菌产生的致病物质） t
+	
+			??? note "英文"
+				toxin
+	
+		- ==（发展或增长）超越，超过 o==
+	
+			??? note "英文"
+				overtake
+	
+		- 脆弱的 f
+	
+			??? note "英文"
+				fragile
+	
+		- ==腹部；肚子 b==
+	
+			??? note "英文"
+				belly
+	
+		- == （动物或植物）驯化的 d==
+	
+			??? note "英文"
+				domesticated
+	
+		- ==（动物的）品种 b==
+	
+			??? note "英文"
+				breed，e.g. What breed of dog is that? I've never seen one like it before.
+	
+		- （动物）繁殖 b
+	
+			??? note "英文"
+				breed
+	
+		- ==驾车兜风（尤指偷来别人汽车进行危险驾驶） j==
+	
+			??? note "英文"
+				joyride
+
+
 
 
 ??? info "会忘的词"
 
-	??? info "B1"
+	??? info "B1（一轮）"
 		- （铺屋顶的）瓦，瓦片 t
 	
 			??? note "英文"
@@ -2688,6 +3366,489 @@
 	
 			??? note "英文"
 				disconnect，e.g. You should pay attention to disconnecting the machine from the mains first.
+	
+	??? info "B1（二轮）"
+		- 心理的；精神的 p
+	
+			??? note "英文"
+				psychological
+	
+		- 精力；活力；劲头 d
+	
+			??? note "英文"
+				dynamism
+	
+		- 谢绝；婉言拒绝 d
+	
+			??? note "英文"
+				decline，e.g. The Prime Minister was asked for his opinion but he declined to comment.
+	
+		- （争论、分歧等）激烈而不愉快的，充满愤怒与仇恨的 b
+	
+			??? note "英文"
+				bitter，e.g. The couple had a bitter quarrel over the division of labor.
+	
+		- 愤愤不平的；充满怨恨的 b
+	
+			??? note "英文"
+				bitter，e.g. I feel bitter about his behavior.
+	
+		- （运或送食物、饮料的）手推车，台车 t
+	
+			??? note "英文"
+				trolley
+	
+		- 对···进行民意测验（调查） p
+	
+			??? note "英文"
+				poll，e.g. Over 50% of those polled were against the proposed military action.
+	
+		- 支配；影响；决定 d
+	
+			??? note "英文"
+				dictate，e.g. Circumstances dictated that they played a defensive rather than attacking game.
+	
+		- 口授；让（某人）听写 d
+	
+			??? note "英文"
+				dictate
+	
+		- 股份；股票 s
+	
+			??? note "英文"
+				stock
+	
+		- 存货；现货 s
+	
+			??? note "英文"
+				stock
+	
+		- 使无法正常运转 p
+	
+			??? note "英文"
+				paralyze，e.g. The regional capital was paralyzed by a general strike.
+	
+		- 使（行为等）不合情理 w
+	
+			??? note "英文"
+				warp，e.g. You should not allow your dislike of her to warp your judgment.
+	
+		- （使）扭曲，弯曲，变形 w
+	
+			??? note "英文"
+				warp，e.g. The window frame must have been warped; it won't close properly.
+	
+		- 逃跑；跑开 b
+	
+			??? note "英文"
+				bolt，e.g. The thief bolted when he saw the policeman.
+	
+		- （观念、原则等）根深蒂固的 r
+	
+			??? note "英文"
+				rooted
+	
+		- 原型；雏形；最初形态 p
+	
+			??? note "英文"
+				prototype
+	
+		- 顿悟的时刻 e
+	
+			??? note "英文"
+				epiphany
+	
+		- 使缓和；使温和；冲淡 t
+	
+			??? note "英文"
+				temper，e.g. The heat in this coastal town is tempered by the cool sea breeze (微风).
+	
+		- 上下班路程 c
+	
+			??? note "英文"
+				commute
+	
+		- （民选的）市长，镇长 m
+	
+			??? note "英文"
+				mayor
+	
+		- （因震惊、惊恐等而）感到心猛地一跳，胃里猛地翻腾了一下 l
+	
+			??? note "英文"
+				lurch
+	
+		- 突然不稳地行走（移动）；蹒跚而行 l
+	
+			??? note "英文"
+				lurch
+	
+		- 大笔的钱；巨款 f
+	
+			??? note "英文"
+				fortune，e.g. He made his fortune in car sales.
+	
+		- 豁免的；可免于···的 i
+	
+			??? note "英文"
+				immune，e.g. The criminal was told that he would be immune from prosecution (起诉) if he helped the police.
+	
+		- 毁灭性的；造成破坏的 d
+	
+			??? note "英文"
+				destructive
+	
+		- （因受委屈而）对···感到愤恨 r
+	
+			??? note "英文"
+				resent，e.g. I resented having to work such long hours.
+	
+		- 缺少；匮乏 d
+	
+			??? note "英文"
+				deprivation，e.g. Sleep deprivation can result in mental disorders.
+	
+		- 偏狭；偏执；不容异己 i
+	
+			??? note "英文"
+				intolerance
+	
+		- 反常的；病态的 u
+	
+			??? note "英文"
+				unhealthy
+	
+		- 从事自由职业的 f
+	
+			??? note "英文"
+				freelance
+	
+		- 神经元；神经细胞 n
+	
+			??? note "英文"
+				neuron
+	
+		- 神经外科（学） n
+	
+			??? note "英文"
+				neurosurgery
+	
+		- 神经传递素 n
+	
+			??? note "英文"
+				neurotransmitter
+	
+		- 神经生理学 n
+	
+			??? note "英文"
+				neurophysiology
+	
+		- （感觉、态度、行动）富于感染力的，会蔓延的 c
+	
+			??? note "英文"
+				contagious，e.g. Daffy has a contagious enthusiasm for life and poetry.
+	
+		- （疾病）接触传染的 c
+	
+			??? note "英文"
+				contagious，e.g. Mumps (腮腺炎) is a contagious disease.
+	
+		- 引起，促使，导致（尤指精神或身体的变化） i
+	
+			??? note "英文"
+				induce，e.g. Taking a brisk walk can often induce a feeling of well-being.
+	
+		- 劝诱，诱导（尤指做似乎不明智的事） i
+	
+			??? note "英文"
+				induce，e.g. Nothing would induce me to take that job.
+	
+		- n. 强烈；剧烈 i
+	
+			??? note "英文"
+				intensity，e.g. The storm started again with even greater intensity.
+	
+		- 同事；（生意）伙伴 a
+	
+			??? note "英文"
+				associate，e.g. They have been business associates for decades. 
+	
+		- 电缆 c
+	
+			??? note "英文"
+				cable
+	
+		- 有用的 h
+	
+			??? note "英文"
+				handy，e.g. It's very handy having a light above your desk.
+	
+		- （使）相互关联 c
+	
+			??? note "英文"
+				correlate
+	
+		- （人或动物的）寿命，预期生命期限 l
+	
+			??? note "英文"
+				lifespan，e.g. Worms have a lifespan of a few months.
+	
+		- 被关押的；遭监禁的 c
+	
+			??? note "英文"
+				captive，e.g. Richard was finally released in February, one year after he'd been taken captive.
+	
+		- 俘虏 c
+	
+			??? note "英文"
+				captive，e.g. They freed their captives before surrendering.
+	
+		- n. 拘禁；囚禁；关押 c
+	
+			??? note "英文"
+				captivity，e.g. Animals bred in captivity would probably not survive if they were released into the wild.
+	
+		- 全神贯注的；专心致志的 r
+	
+			??? note "英文"
+				rapt
+	
+		- 相互影响；相互作用 i
+	
+			??? note "英文"
+				interaction
+	
+		- 残暴的；无同情心的 i
+	
+			??? note "英文"
+				inhuman，e.g. The slaughter of whales is unnecessary and inhuman.
+	
+		- 抱怨 l
+	
+			??? note "英文"
+				lament，e.g. He lamented that people had expected too much of him.
+	
+		- （为···）悲痛，痛惜 l
+	
+			??? note "英文"
+				lament，e.g. The nation lamented the death of its great leader.
+	
+		- 似乎无处不在的（有时为幽默手法） u
+	
+			??? note "英文"
+				ubiquitous
+	
+		- 俘虏；逮捕 c
+	
+			??? note "英文"
+				capture，e.g. The criminal was captured when trying to escape from prison.
+	
+		- 全新地拟定（或表达）（话语、概念或计划） r
+	
+			??? note "英文"
+				re-frame
+	
+		- 叛逆的；反叛的；反抗的 r
+	
+			??? note "英文"
+				rebellious，e.g. Her teachers consider her a rebellious, trouble-making girl.
+	
+		- 引诱；诱惑 t
+	
+			??? note "英文"
+				temptation
+	
+		- 打扰；干涉 i
+	
+			??? note "英文"
+				intrude，e.g. Would I be intruding if I came with you?
+	
+		- 干涉的；打扰的 i
+	
+			??? note "英文"
+				intrusive，e.g. Some residents of the island found the presence of the film crew too intrusive.
+	
+		- 沉思；冥想；默想 c
+	
+			??? note "英文"
+				contemplation，e.g. The monks spend an hour on contemplation each morning.
+	
+		- 令人满意的 f
+	
+			??? note "英文"
+				fulfilling
+	
+		- 可共存的；可兼用的 c
+	
+			??? note "英文"
+				compatible，e.g. Are measures to protect the environment compatible with economic growth?
+	
+		- 捆绑；系 b
+	
+			??? note "英文"
+				bind (bound, bound)，e.g. They bound the package with brightly colored ribbons.
+	
+		- 切断（机器或设备）的电力（煤气、水）等供应 d
+	
+			??? note "英文"
+				disconnect，e.g. You should pay attention to disconnecting the machine from the mains first.
+	
+	??? info "B1（三轮）"
+	
+		- 谢绝；婉言拒绝 d
+	
+			??? note "英文"
+				decline，e.g. The Prime Minister was asked for his opinion but he declined to comment.
+	
+		- 愤愤不平的；充满怨恨的 b
+	
+			??? note "英文"
+				bitter，e.g. I feel bitter about his behavior.
+				
+		- 支配；影响；决定 d
+	
+			??? note "英文"
+				dictate，e.g. Circumstances dictated that they played a defensive rather than attacking game.
+	
+		- 股份；股票 s
+	
+			??? note "英文"
+				stock
+	
+		- 使无法正常运转 p
+	
+			??? note "英文"
+				paralyze，e.g. The regional capital was paralyzed by a general strike.
+	
+		- 使（行为等）不合情理 w
+	
+			??? note "英文"
+				warp，e.g. You should not allow your dislike of her to warp your judgment.
+	
+		- 逃跑；跑开 b
+	
+			??? note "英文"
+				bolt，e.g. The thief bolted when he saw the policeman.
+	
+		- 使缓和；使温和；冲淡 t
+	
+			??? note "英文"
+				temper，e.g. The heat in this coastal town is tempered by the cool sea breeze (微风).
+	
+		- （因震惊、惊恐等而）感到心猛地一跳，胃里猛地翻腾了一下 l
+	
+			??? note "英文"
+				lurch
+	
+		- 豁免的；可免于···的 i
+	
+			??? note "英文"
+				immune，e.g. The criminal was told that he would be immune from prosecution (起诉) if he helped the police.
+	
+		- 缺少；匮乏 d
+	
+			??? note "英文"
+				deprivation，e.g. Sleep deprivation can result in mental disorders.
+	
+		- 神经生理学 n
+	
+			??? note "英文"
+				neurophysiology
+	
+		- （感觉、态度、行动）富于感染力的，会蔓延的 c
+	
+			??? note "英文"
+				contagious，e.g. Daffy has a contagious enthusiasm for life and poetry.
+	
+		- （疾病）接触传染的 c
+	
+			??? note "英文"
+				contagious，e.g. Mumps (腮腺炎) is a contagious disease.
+	
+		- 引起，促使，导致（尤指精神或身体的变化） i
+	
+			??? note "英文"
+				induce，e.g. Taking a brisk walk can often induce a feeling of well-being.
+	
+		- 劝诱，诱导（尤指做似乎不明智的事） i
+	
+			??? note "英文"
+				induce，e.g. Nothing would induce me to take that job.
+	
+		- 俘虏 c
+	
+			??? note "英文"
+				captive，e.g. They freed their captives before surrendering.
+	
+		- n. 拘禁；囚禁；关押 c
+	
+			??? note "英文"
+				captivity，e.g. Animals bred in captivity would probably not survive if they were released into the wild.
+	
+		- 全神贯注的；专心致志的 r
+	
+			??? note "英文"
+				rapt
+	
+		- 抱怨 l
+	
+			??? note "英文"
+				lament，e.g. He lamented that people had expected too much of him.
+	
+		- （为···）悲痛，痛惜 l
+	
+			??? note "英文"
+				lament，e.g. The nation lamented the death of its great leader.
+	
+		- 似乎无处不在的（有时为幽默手法） u
+	
+			??? note "英文"
+				ubiquitous
+	
+		- 俘虏；逮捕 c
+	
+			??? note "英文"
+				capture，e.g. The criminal was captured when trying to escape from prison.
+	
+		- 全新地拟定（或表达）（话语、概念或计划） r
+	
+			??? note "英文"
+				re-frame
+	
+		- 叛逆的；反叛的；反抗的 r
+	
+			??? note "英文"
+				rebellious，e.g. Her teachers consider her a rebellious, trouble-making girl.
+	
+		- 引诱；诱惑 t
+	
+			??? note "英文"
+				temptation
+	
+		- 打扰；干涉 i
+	
+			??? note "英文"
+				intrude，e.g. Would I be intruding if I came with you?
+	
+		- 干涉的；打扰的 i
+	
+			??? note "英文"
+				intrusive，e.g. Some residents of the island found the presence of the film crew too intrusive.
+	
+		- 沉思；冥想；默想 c
+	
+			??? note "英文"
+				contemplation，e.g. The monks spend an hour on contemplation each morning.
+	
+		- 可共存的；可兼用的 c
+	
+			??? note "英文"
+				compatible，e.g. Are measures to protect the environment compatible with economic growth?
+	
+		- 捆绑；系 b
+	
+			??? note "英文"
+				bind (bound, bound)，e.g. They bound the package with brightly colored ribbons.
 
 
 ??? info "拼错过的词"
@@ -2745,4 +3906,41 @@
 	
 		??? note "英文"
 			old-fashioned
+	
+	- 后代；后裔 d
+	
+	    ??? note "英文"
+	    	~~descendent~~！！descendant
+	    	
+	- 症状 s
+		
+		??? note "英文"
+			symptom
+	
+	- 叙述；叙述技巧 n
+	
+		??? note "英文"
+			~~narration~~！！~~narative~~！！narrative
+	
+	- 网络霸凌（欺凌） c
+		
+		??? note "英文"
+			cyberbullying
+	
+	- 语言学 l
+	
+		??? note "英文"
+			~linguistic~！！linguistics
+	
+	- 迷人的；非常有趣的 f
+	
+		??? note "英文"
+			~~fanscinating~~！！fascinating
+	
+	- 激素；荷尔蒙 h
+	
+		??? note "英文"
+			hormone
+
+## Part VII
 
