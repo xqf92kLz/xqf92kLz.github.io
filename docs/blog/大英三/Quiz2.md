@@ -2686,7 +2686,7 @@
 			??? note "英文"
 				belly
 	
-		- == （动物或植物）驯化的 d==
+		- ==（动物或植物）驯化的 d==
 	
 			??? note "英文"
 				domesticated
@@ -3941,6 +3941,56 @@
 	
 		??? note "英文"
 			hormone
+	
+	- （动物或植物）驯化的 d
+	
+    ??? note "英文"
+    	~~damesticated~~！！domesticated
 
 ## Part VII
 
+??? info "B2U5"
+
+    - Reading is an indispensable habit for college students, bringing far-reaching benefits to both academic growth and personal development. Academically, it serves as ==a powerful tool to expand vocabulary, refine writing skills, and enhance critical thinking==. By engaging with diverse materials—from academic papers to classic literature—we ==absorb knowledge beyond textbooks, which not only helps in exams but also lays a solid foundation for professional learning==.
+
+        Personally, reading broadens our horizons and enriches our inner world. It allows us to ==experience different cultures, historical periods, and life stories without leaving our seats==, ==fostering empathy and a global perspective==. Moreover, in the fast-paced college life, reading acts as ==a calming retreat==, alleviating stress and helping us ==gain clarity amid busyness==.
+
+        In short, reading is ==a lifelong investment==. For college students, maintaining a reading habit not only== boosts academic performance but also shapes a more profound and fulfilling life.
+
+    - Learning English is an invaluable skill for college students, offering rich rewards in academic progress, personal growth and cross-cultural communication.
+
+        Firstly, it boosts academic performance. A large number of excellent textbooks, research papers and online courses are in English. Mastering English lets students ==access this wealth of knowledge directly==, helping them deepen understanding of their majors and achieve better grades. It also makes ==international academic exchanges easier==, allowing them to discuss ideas with foreign scholars and peers.
+
+        Besides, it broadens cultural horizons. English is a global language, opening doors to different cultures. Through English movies, original novels and online conversations, students can learn about foreign customs, values and lifestyles, ==fostering an open and inclusive mindset==.
+
+        Moreover, it enriches daily life. With English, students can travel abroad more smoothly, communicate with locals and experience different cultures firsthand. It also helps them ==make foreign friends, expanding their social circles and sharing life experiences across borders==.
+
+        In short, learning English brings far more than language skills. It enhances academic development, promotes cultural understanding and makes life more colorful, which is essential for college students’ growth.
+
+??? info "B2U6"
+
+	- Jinhua Crisp Cake, a famous snack from Zhejiang, has a legendary origin linked to Tang general Cheng Yaojin. He once sold sesame cakes in Jinhua and left unsold ones by the stove overnight. The next morning, he was surprised to find them golden, crispy and aromatic, transformed by the residual heat. Inspired by this unexpected discovery, he improved the recipe, and today this delicious cake remains a beloved treat, showing how creativity can turn a simple mistake into a treasure.
+
+    - Food is far more than ==a basic necessity== for survival—it deeply shapes every aspect of people's lives, from ==physical health to emotional bonds and cultural identity==.
+
+        Firstly, food is ==the foundation of physical well-being==. A diet rich in vegetables, fruits, whole grains and protein provides the energy and nutrients our bodies need to function well, ==keeping us active and reducing the risk of illnesses==. On the contrary, frequent consumption of junk food high in sugar and fat can lead to tiredness, weight gain and health problems, affecting our ability to study or work effectively.
+
+        Moreover, food plays a vital role in connecting people. Family dinners after a busy day, festival meals with relatives, or casual gatherings with friends—all revolve around food. Sharing a meal helps us ==communicate, express care and strengthen relationships==. For example, traditional foods like ==dumplings in Chinese Spring Festival== or turkey in Western Christmas ==carry warm memories and bring people closer==.
+
+        Additionally, food ==reflects cultural heritage==. Every region has its unique dishes, which ==tell stories of local history and customs==. Trying foods from different cultures allows us to learn about ==diverse lifestyles== and broaden our horizons.
+
+        In short, food influences our health, relationships and cultural understanding. We should choose healthy foods wisely, cherish the joy of sharing meals, and appreciate the rich cultural meanings behind every dish.
+
+??? info "B2U7"
+
+    the cornerstone of human survival
+
+    melting polar ice, urban smog, plastic-polluted oceans, and shrinking rainforests
+
+    stem from industrial emissions, reckless urbanization, inadequate regulation, and weak environmental awareness
+
+    The environment, the basis of our lives, is in great trouble—polar ice is melting, cities are covered in smog, oceans are full of plastic, and rainforests are vanishing. These problems come from factory pollution, messy city building, weak rules, and not caring enough about nature. Plastic waste even hurts sea creatures and makes us sick.
+
+    Bad environment brings terrible results: more floods and droughts destroy homes and cost money; pollution makes people ill; losing plants and animals weakens the earth. To fix this, governments need strict rules, companies must produce green goods, and college students can do our part: ==save water and electricity== in dorms, ==use reusable cups instead of disposable ones==, join ==tree-planting or campus cleaning==, and tell classmates about protecting nature.
+
+    In short, protecting the environment is everyone’s job. As young people, our small actions can add up. Let’s act now to keep the world healthy for the future.
