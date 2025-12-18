@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="https://cdn.luogu.com.cn/upload/image_hosting/uo5wu9mh.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -752,8 +752,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定积分的计算方法
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2320,8 +2342,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定积分的计算方法
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2344,43 +2388,45 @@
 
   <h1>第五章 定积分及其应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-18T01:36:47.776222+00:00'>2025-12-18</time></span><span data-tippy-content data-tippy-raw='2025-12-18'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-18T01:36:47.776222+00:00'>2025-12-18</time></span></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-18'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-18T15:45:38.569662+00:00'>2025-12-18</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-18'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-18T15:45:38.569662+00:00'>2025-12-18</time></span></div></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">定积分概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>定积分的定义</p>
-<details class="info">
-<summary>定义</summary>
-<ul>
-<li>
-<p>定义 1：</p>
-<p>若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有定义，取 <span class="arithmatex">\(a=x_0&lt;x_1&lt;\cdots&lt;x_{n-1}&lt;x_n=b\)</span>，<span class="arithmatex">\(\xi_i\in[x_{i-1},x_i]\)</span>。记 <span class="arithmatex">\(\Delta x_i=x_i-x_{i-1}\,(i=1,2,\cdots,n)\)</span>，<span class="arithmatex">\(\lambda=\max\limits_{1\leq i\leq n}\Delta x_i\)</span>，若 <span class="arithmatex">\(\lim\limits_{\lambda\to 0}\sum_{i=1}^n f(\xi_i)\Delta x_i\)</span> 存在且与 <span class="arithmatex">\(x_i,\xi_i\)</span> 的取法都无关，则称 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积，<span class="arithmatex">\(\int_a^b f(x)\text dx=\lim\limits_{\lambda\to 0}\sum_{i=1}^nf(\xi_i)\Delta x_i\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上的定积分。</p>
-<p><span class="arithmatex">\(\sum_{i=1}^n f(\xi_i)\Delta x\)</span> 称为积分和式，<span class="arithmatex">\(a,b\)</span> 分别成为定积分的下限与上限，<span class="arithmatex">\([a,b]\)</span> 称为积分区间，<span class="arithmatex">\(x\)</span> 称为积分变量，<span class="arithmatex">\(f(x)\)</span> 称为被积函数，<span class="arithmatex">\(f(x)\text dx\)</span> 称为被积表达式。</p>
-</li>
-<li>
-<p>定义 2（用 <span class="arithmatex">\(\varepsilon-\delta\)</span> 语言叙述）：</p>
-<p>若存在一常数 <span class="arithmatex">\(I\)</span>，对 <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists\delta&gt;0\)</span>，使得对任意的分割 <span class="arithmatex">\(T:a=x_0&lt;x_1&lt;\cdots&lt;x_{n-1}&lt;x_n=b\)</span>，只要 <span class="arithmatex">\(\max\limits_{1\leq i\leq n}\Delta x_i=\lambda(T)&lt;\delta\)</span>，任给 <span class="arithmatex">\(\xi_i\in[x_{i-1},x_i]\)</span>，都有 <span class="arithmatex">\(|\sum_{i=1}^n f(\xi_i)\Delta x_i-I|&lt;\varepsilon\)</span> 成立，则称 <span class="arithmatex">\(I\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上的定积分。</p>
-<p>定积分 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 也称为黎曼积分。</p>
-</li>
-<li>
-<p>凑定积分的定义</p>
-<p><span class="arithmatex">\(\int_a^b f(x)\text dx=\lim\limits_{n\to \infty}\sum_{i=1}^n f(a+\frac{b-a}ni)\frac{b-a}n\)</span>。特别地，<span class="arithmatex">\(\int_0^1 f(x)\text dx=\lim\limits_{n\to \infty}\sum_{i=1}^n f(\frac i n)\frac 1 n\)</span>。</p>
-<details class="example" open="open">
-<summary>例题</summary>
-<p><span class="arithmatex">\(\lim\limits_{n\to\infty}\sum_{i=1}^n\dfrac 1 {n+i}\)</span></p>
-<details class="note">
-<summary>解答</summary>
-<p><span class="arithmatex">\(=\lim\limits_{n\to \infty}\sum_{i=1}^n\dfrac 1 {1+\frac i n}\cdot \dfrac 1 n=\int_0^1 \dfrac 1{1+x}\text dx\)</span></p>
-</details>
-</details>
-</li>
-</ul>
-</details>
 <details class="warning" open="open">
 <summary>注意</summary>
 <p>不定积分是原函数全体，定积分是一个具体的数值。</p>
-<p>不定积分可积 ≠ 定积分可积。</p>
+</details>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\lim\limits_{n\to \infty}\sum_{k=1}^n \dfrac{k}{n^2+k^2+k}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>分母的 <span class="arithmatex">\(+k\)</span> 几乎不起作用。</p>
+<p><span class="arithmatex">\(\dfrac{k}{n^2+k^2}=\dfrac{\frac k n}{1+(\frac k n)^2}\cdot \dfrac 1 n\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}\sum_{k=1}^n \dfrac{k}{n^2+k^2}\)</span> 可以定积分计算</p>
+<p><span class="arithmatex">\(\dfrac{k}{n^2+k^2}-\dfrac{k}{n^2+k^2+k}=\dfrac{k^2}{(n^2+k^2+k)(n^2+k^2)}\leq \dfrac{k^2}{n^4}=o(\dfrac 1 {n^2})\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to \infty}\sum_{k=1}^n (\dfrac{k}{n^2+k^2}-\dfrac{k}{n^2+k^2+k})=0\)</span></p>
+</details>
+<p><span class="arithmatex">\(T_n=\sum_{k=1}^n \dfrac{k}{n^2+k^2+k}=\sum_{k=1}^n \dfrac k {n^2+k^2}-\sum_{k=1}^n \dfrac{k^2}{(n^2+k^2)(n^2+k^2+k)}\)</span></p>
+<p>而 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\sum_{k=1}^n \dfrac k {n^2+k^2}=\int_0^1\dfrac x {1+x^2}\text dx=\dfrac 1 2 \ln 2\)</span>，<span class="arithmatex">\(\lim\limits_{n\to +\infty}\sum_{k=1}^n \dfrac{k^2}{(n^2+k^2)(n^2+k^2+k)}=0\)</span></p>
+<p>故 <span class="arithmatex">\(T_n=\dfrac 1 2 \ln 2\)</span>。</p>
+</details>
+<p>计算 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\sum_{k=1}^n \dfrac{\sin\frac{k}{n}\pi}{n+\frac 1 k}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(\lim\limits_{n\to +\infty}\sum_{k=1}^n \sin\dfrac k n \pi\cdot \dfrac 1 n\)</span> 可以定积分算</p>
+<p><span class="arithmatex">\(\lim\limits_{n\to +\infty}\sum_{k=1}^n \sin\dfrac k n \pi\cdot \dfrac 1 {n+1}\)</span> 也可以定积分算</p>
+<p>夹逼一下</p>
+</details>
+<p><span class="arithmatex">\(\sum_{k=1}^n \sin\dfrac k n \pi\cdot \dfrac 1 {n+1}\leq \sum_{k=1}^n \sin\dfrac{k}{n}\pi\cdot\dfrac 1{n+\frac 1 k}\leq \sum_{k=1}^n \sin\dfrac k n \pi\cdot \dfrac 1 {n}\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{n\to +\infty}\sum_{k=1}^n \sin\dfrac k n \pi\cdot \dfrac 1 {n+1}=\lim\limits_{n\to +\infty}\dfrac n {n+1}\cdot (\sum_{k=1}^n \sin\dfrac k n \pi\cdot \dfrac 1 {n})=\int_0^1 \sin\pi x\text dx=-(\dfrac 1 \pi\cos\pi x)\big\vert_0^1=\dfrac 2 \pi\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{n\to +\infty}\sum_{k=1}^n \sin\dfrac k n \pi\cdot \dfrac 1 {n}=\int_0^1\sin\pi x\text dx=-(\dfrac 1 \pi\cos\pi x)\big\vert_0^1=\dfrac 2 \pi\)</span></p>
+<p>则 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\sum_{k=1}^n \dfrac{\sin\frac{k}{n}\pi}{n+\frac 1 k}=\dfrac 2 \pi\)</span>。</p>
+</details>
 </details>
 </li>
 <li>
@@ -2391,7 +2437,7 @@
 <ul>
 <li>
 <p>可积的必要条件：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上必有界。</p>
-<p>（闭区间上的有界函数不一定可积，如 <span class="arithmatex">\(f(x)=\begin{cases}1&amp;(x\in\mathbb Q)\\0&amp;(x\in\mathbb Q)\end{cases}\)</span>）</p>
+<p>（闭区间上的有界函数不一定可积，如 <span class="arithmatex">\(D(x)\)</span>）</p>
 </li>
 <li>
 <p>可积的充分条件：</p>
@@ -2402,6 +2448,10 @@
 </ul>
 </li>
 </ul>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>不定积分可积 ≠ 定积分可积。</p>
+</details>
 </li>
 </ul>
 <h3 id="_3">定积分的性质和基本定理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -2409,9 +2459,490 @@
 <li>
 <p>定积分的基本性质</p>
 <ul>
-<li><span class="arithmatex">\(\int_a^b \text dx=b-a\)</span></li>
-<li><span class="arithmatex">\(\int_a^b[\alpha f(x)+\beta g(x)]\text dx\)</span></li>
+<li>线性性：设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积，则 <span class="arithmatex">\(\int_a^b kf(x)\text dx=k\int_a^b f(x)\text dx\)</span>，<span class="arithmatex">\(\int_a^b [f(x)+g(x)]\text dx=\int_a^b f(x)+\int_a^b g(x)\text dx\)</span>。</li>
+<li>
+<p>有限可加性：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积，则对 <span class="arithmatex">\(\forall c\in[a,b]\)</span>，有 <span class="arithmatex">\(\int_a^b f(x)\text dx=\int_a^c f(x)\text dx+\int_c^b f(x)\text dx\)</span>。</p>
+<p>常用于分段函数的定积分计算。</p>
+</li>
+<li>
+<p>非负性：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积，且 <span class="arithmatex">\(f(x)\geq 0\)</span>，则 <span class="arithmatex">\(\int_a^b f(x)\text dx\geq 0\)</span>。</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>这里要 <span class="arithmatex">\(a\leq b\)</span>，否则 <span class="arithmatex">\(\int_a^b f(x)\leq 0\)</span>。</p>
+</details>
+<p>推论 1：若 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积，且对 <span class="arithmatex">\(\forall x\in[a,b]\)</span> 有 <span class="arithmatex">\(f(x)\geq g(x)\)</span>，则 <span class="arithmatex">\(\int_a^b f(x)\text dx\geq \int_a^b g(x)\text dx\)</span>。</p>
+<p>推论 2：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积，则 <span class="arithmatex">\(|\int_a^ bf(x)\text dx|\leq \int_a^b |f(x)|\text dx\)</span>。</p>
+</li>
+<li>
+<p>估值不等式：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积，且对 <span class="arithmatex">\(\forall x\in[a,b]\)</span> 有 <span class="arithmatex">\(m\leq f(x)\leq M\)</span>，则 <span class="arithmatex">\(m(b-a)\leq \int_a^b f(x)\text dx\leq M(b-a)\)</span>。</p>
+</li>
 </ul>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>证明：<span class="arithmatex">\(1\leq \int_0^{\frac\pi 2}\dfrac{\sin x}x\text dx\leq \dfrac\pi 2\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>当 <span class="arithmatex">\(x\in(0,\dfrac\pi 2]\)</span> 时，<span class="arithmatex">\(\dfrac 2\pi x\leq \sin x\leq 1\)</span>，则 <span class="arithmatex">\(\dfrac 2 \pi\leq \dfrac{\sin x}x\leq 1\)</span>。</p>
+<p>由估值不等式，<span class="arithmatex">\(1=\dfrac 2 \pi\cdot\dfrac\pi 2\leq \int_0^{\frac\pi 2}\dfrac{\sin x}x\text dx\leq 1\cdot\dfrac\pi 2= \dfrac \pi 2\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 为区间 <span class="arithmatex">\([a,b]\)</span> 上非负的 <strong>连续</strong> 函数，如果 <span class="arithmatex">\(\int_a^b f(x)\text dx=0\)</span>，证明：对 <span class="arithmatex">\(\forall x\in[a,b]\)</span> 均有 <span class="arithmatex">\(f(x)=0\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>假设 <span class="arithmatex">\(\exists x_0\in(a,b)\)</span> 使得 <span class="arithmatex">\(f(x_0)&gt;0\)</span>。</p>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处连续，则 <span class="arithmatex">\(\lim\limits_{x\to x_0}f(x)&gt;0\)</span>，由函数极限的保号性，<span class="arithmatex">\(\exists\delta_0&gt;0\)</span>，当 <span class="arithmatex">\(x\in U(x_0,\delta_0)\)</span> 时，有 <span class="arithmatex">\(f(x)&gt;\dfrac 1 2 f(x_0)\)</span>，且 <span class="arithmatex">\(\delta_0\)</span> 满足 <span class="arithmatex">\((x_0-\delta_0,x_0+\delta_0)\subseteq[a,b]\)</span>。</p>
+<p>则 <span class="arithmatex">\(\int_a^b f(x)\text dx=\int_a^{x_0-\delta_0}f(x)\text dx+\int_{x_0-\delta_0}^{x_0+\delta_0}f(x)\text dx+\int_{x_0+\delta_0}^b f(x)\text dx\geq \int_{x_0-\delta_0}^{x_0+\delta_0}f(x)\text dx&gt;\int_{x_0-\delta_0}^{x_0+\delta_0}\dfrac{f(x_0}2\text dx=f(x_0)\delta_0&gt;0\)</span>。</p>
+<p>这与 <span class="arithmatex">\(\int_a^b f(x)\text dx=0\)</span> 矛盾，所以 <span class="arithmatex">\(\forall x\in[a,b]\)</span> 均有 <span class="arithmatex">\(f(x)=0\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>定积分中值定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)\text dx=f(\xi)(b-a)\)</span>。</p>
+<p>称 <span class="arithmatex">\(\overline f=\dfrac{\int_a^b f(x)\text dx}{b-a}\)</span> 为函数 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上的平均值。</p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>设 <span class="arithmatex">\(\dfrac 1 {b-a}\int_a^b f(x)\text dx=\mu\)</span>。</p>
+<p>假设对 <span class="arithmatex">\(\forall x\in(a,b)\)</span> 均有 <span class="arithmatex">\(f(x)\neq \mu\)</span>，由于 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([a,b]\)</span> 上连续，则函数 <span class="arithmatex">\(f(x)-\mu\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上保号。</p>
+<p>不妨设 <span class="arithmatex">\(f(x)&gt;\mu\)</span>，则 <span class="arithmatex">\(\int_a^b f(x)\text dx&gt;(b-a)\mu\)</span>，这与 <span class="arithmatex">\(\dfrac 1 {b-a}\int_a^b f(x)\text dx=\mu\)</span> 矛盾。</p>
+<p>故 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)\text dx=f(\xi)(b-a)\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([a,b]\)</span> 上了连续，从而 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上存在最大值 <span class="arithmatex">\(M\)</span> 和最小值 <span class="arithmatex">\(m\)</span>。即 <span class="arithmatex">\(\exists x_1,x_2\in[a,b]\)</span> 使得 <span class="arithmatex">\(M=f(x_1),m=f(x_2)\)</span>。</p>
+<p>不妨设 <span class="arithmatex">\(x_1\leq x_2\)</span>。</p>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(f(x)\)</span> 为常数，结论显然成立。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(f(x)\)</span> 不是常数，则 <span class="arithmatex">\(m&lt;M\)</span>，<span class="arithmatex">\(x_1&lt;x_2\)</span>。有 <span class="arithmatex">\(m(b-a)&lt;\int_a^b f(x)\text dx&lt;M(b-a)\)</span>，即 <span class="arithmatex">\(m&lt;\dfrac{\int_a^b f(x)\text dx}{b-a}&lt;M\)</span>。根据连续函数的介值定理，<span class="arithmatex">\(\exists\xi\in(x_1,x_2)\subseteq(a,b)\)</span> 使得 <span class="arithmatex">\(f(\xi)=\dfrac{\int_a^b f(x)\text dx}{b-a}\)</span>，即 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)\text dx=f(\xi)(b-a)\)</span>。</p>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,3]\)</span> 上连续，在 <span class="arithmatex">\((0,3)\)</span> 内可导，且 <span class="arithmatex">\(f(0)+f(2)=2\int_2^3 f(x)\text dx\)</span>。证明</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>证 <span class="arithmatex">\(\exists\xi,f'(\xi)=0\)</span> 想到罗尔。那么需要找两点的函数值相等。</p>
+<p>由介值定理，<span class="arithmatex">\(\dfrac{f(0)+f(2)}2\)</span> 被 <span class="arithmatex">\([0,2]\)</span> 种某点的函数值取到。由积分中值定理，也会被 <span class="arithmatex">\((2,3)\)</span> 内某点的函数中取到。</p>
+</details>
+<p>根据连续函数的介值定理，<span class="arithmatex">\(\exists x_1\in[0,2]\)</span> 使得 <span class="arithmatex">\(f(x_1)=\dfrac{f(0)+f(2)}{2}\)</span>。</p>
+<p>根据定积分中值定理，<span class="arithmatex">\(\exists x_2\in(2,3)\)</span> 使得 <span class="arithmatex">\(\int_2^3 f(x)\text dx=f(x_2)\)</span>。</p>
+<p>则 <span class="arithmatex">\(f(x_1)=f(x_2)\)</span>。又 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([x_1,x_2]\)</span> 上连续，在 <span class="arithmatex">\((x_1,x_2)\)</span> 内可导，根据罗尔定理，<span class="arithmatex">\(\exists\xi\in(x_1,x_2)\subset(0,3)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，则对 <span class="arithmatex">\(\forall \alpha_i&gt;0\)</span>，<span class="arithmatex">\(\sum_{i=1}^n \alpha_i=1\)</span>，及 <span class="arithmatex">\(\forall x_i\in[a,b]\)</span>，<span class="arithmatex">\(\exists\xi\in[a,b]\)</span> 使得 <span class="arithmatex">\(f(\xi)=\sum_{i=1}^n \alpha_if(x_i)\)</span>。</p>
+</details>
+</details>
+</details>
+</li>
+<li>
+<p>推广的定积分中值定理</p>
+<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上 <strong>不变号</strong>，则 <span class="arithmatex">\(\exists\xi\in[a,b]\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)g(x)\text dx=f(\xi)\int_a^b g(x)\text dx\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>不妨设 <span class="arithmatex">\(\forall x\in[a,b]\)</span>，<span class="arithmatex">\(g(x)\geq 0\)</span>。</p>
+<ul>
+<li>若 <span class="arithmatex">\(\int_a^b g(x)=0\)</span>，又 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续且非负，故 <span class="arithmatex">\(g(x)\equiv 0\)</span>。从而，结论对 <span class="arithmatex">\(\forall \xi\in[a,b]\)</span> 均成立。</li>
+<li>
+<p>若 <span class="arithmatex">\(\int_a^b g(x)&gt;0\)</span>：</p>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，故 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有最小值 <span class="arithmatex">\(m\)</span> 和最大值 <span class="arithmatex">\(M\)</span>。即 <span class="arithmatex">\(m\leq f(x)\leq M\)</span>，从而 <span class="arithmatex">\(mg(x)\leq f(x)g(x)\leq Mg(x)\)</span>。</p>
+</li>
+</ul>
+<p>根据定积分的性质，有 <span class="arithmatex">\(m\int_a^b g(x)\text dx\leq \int_a^b f(x)g(x)\text dx\leq M\int_a^b g(x)\text dx\)</span>。</p>
+<p>则 <span class="arithmatex">\(m\leq \dfrac{\int_a^b f(x)g(x)\text dx}{\int_a^b g(x)\text dx}\leq M\)</span>，根据连续函数的介值定理，<span class="arithmatex">\(\exists\xi\in[a,b]\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)g(x)\text dx=f(\xi)\int_a^b g(x)\text dx\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上 <strong>不变号</strong>，则 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)g(x)\text dx=f(\xi)\int_a^b g(x)\text dx\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>不妨设 <span class="arithmatex">\(\forall x\in[a,b]\)</span>，<span class="arithmatex">\(g(x)\geq 0\)</span>。</p>
+<ul>
+<li>若 <span class="arithmatex">\(\int_a^b g(x)=0\)</span>，又 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续且非负，故 <span class="arithmatex">\(g(x)\equiv 0\)</span>。从而，结论对 <span class="arithmatex">\(\forall \xi\in(a,b)\)</span> 均成立。</li>
+<li>
+<p>若 <span class="arithmatex">\(\int_a^b g(x)&gt;0\)</span>，记 <span class="arithmatex">\(\dfrac{\int_a^b f(x)g(x)\text dx}{\int_a^b g(x)\text dx}=\mu\)</span>。</p>
+<p>假设不存在 <span class="arithmatex">\(\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(f(\xi)=\mu\)</span>。不妨设 <span class="arithmatex">\(\forall x\in(a,b)\)</span>，<span class="arithmatex">\(f(x)&gt;\mu\)</span>，则 <span class="arithmatex">\(f(x)g(x)&gt;\mu g(x)\)</span>，故 <span class="arithmatex">\(\int_a^b f(x)g(x)\text dx&gt;\mu\int_a^b g(x)\text dx\)</span>，这与 <span class="arithmatex">\(\int_a^b f(x)g(x)\text dx=\mu\int_a^b g(x)\text dx\)</span> 矛盾。</p>
+<p>故 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)g(x)\text dx=f(\xi)\int_a^b g(x)\text dx\)</span>。</p>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p>变上限函数的导数</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(F(x)=\int_a^x f(t)\text dt\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可导，且 <span class="arithmatex">\(F'(x)=f(x)\)</span>。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>由上可知，<span class="arithmatex">\(F(x)\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的一个原函数，即连续函数一定有原函数。</p>
+<p>且若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可导，则 <span class="arithmatex">\(F(x)=\int_a^b f(t)\text dt\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续。</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>对 <span class="arithmatex">\(\forall x\in[a,b]\)</span>，取增量 <span class="arithmatex">\(\Delta x\)</span> 使得 <span class="arithmatex">\(x+\Delta x\in[a,b]\)</span>。则 </p>
+<p><span class="arithmatex">\(\begin{aligned}F'(x)&amp;=\lim\limits_{\Delta x\to 0}\dfrac{F(x+\Delta x)-F(x)}{\Delta x}\\&amp;=\lim\limits_{\Delta x\to 0}\dfrac{\int_a^{x+\Delta x}f(t)\text dt-\int_a^x f(t)\text dt}{\Delta x}\\&amp;=\lim\limits_{\Delta x\to 0}\dfrac{\int_x^{x+\Delta x}f(t)\text dt}{\Delta x}\\&amp;=\lim\limits_{\Delta x\to 0}\dfrac{f(x+\theta\Delta x)\cdot \Delta x}{\Delta x}\,(0&lt;\theta&lt;1)\\&amp;=f(x)\end{aligned}\)</span></p>
+<p>所以 <span class="arithmatex">\(F(x)=\int_a^x f(t)\text dt\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可导，且 <span class="arithmatex">\(F'(x)=f(x)\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p>对 <span class="arithmatex">\(\forall x\in[a,b]\)</span>，取增量 <span class="arithmatex">\(\Delta x\)</span> 使得 <span class="arithmatex">\(x+\Delta x\in[a,b]\)</span>。</p>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，则对 <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists\delta&gt;0\)</span>，当 <span class="arithmatex">\(|t-x|&lt;\delta\)</span> 时，有 <span class="arithmatex">\(|f(t)-f(x)|&lt;\varepsilon\)</span>。</p>
+<p><span class="arithmatex">\(\begin{aligned}|\dfrac{F(x+\Delta x)-F(x)}{\Delta x}-f(x)|&amp;=|\dfrac{\int_a^{x+\Delta x}f(t)\text dt-\int_a^x f(t)\text dt}{\Delta x}-f(x)|\\&amp;=\dfrac 1 {|\Delta x|}|\int_x^{x+\Delta x}f(t)\text dt-f(x)\Delta x|\\&amp;=\dfrac 1 {|\Delta x|}|\int_x^{x+\Delta x}f(t)\text dt-\int_x^{x+\Delta x}f(x)\text dt|\\&amp;=\dfrac 1 {|\Delta x|}|\int_x^{x+\Delta x}[f(t)-f(x)]\text dt|\\&amp;\leq\dfrac 1 {|\Delta x|}|\int_x^{x+\Delta x}|f(t)-f(x)|\text dt|\end{aligned}\)</span></p>
+<p>对 <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>，<span class="arithmatex">\(\exists\delta&gt;0\)</span>，当 <span class="arithmatex">\(|t-x|&lt;\delta\)</span> 时（<span class="arithmatex">\(|\Delta x|&lt;\delta\)</span>），有 <span class="arithmatex">\(|\dfrac{F(x+\Delta x)-F(x)}{\Delta x}-f(x)|\leq\dfrac 1 {|\Delta x|}|\int_x^{x+\Delta x}|f(t)-f(x)|\text dt|&lt;\dfrac 1 {|\Delta x|}|\int_x^{x+\Delta x}\varepsilon\text dt|=\varepsilon\)</span>。</p>
+<p>所以，<span class="arithmatex">\(F(x)=\int_a^x f(t)\text dt\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可导，且 <span class="arithmatex">\(F'(x)=f(x)\)</span>。</p>
+</li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算下列函数的导数：① <span class="arithmatex">\(f(x)=\int_0^x x\arctan\sqrt[3]t\text dt\)</span>；② <span class="arithmatex">\(g(x)=\int_0^{x^3}\arctan\sqrt[3]t\text dt\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>计算变上限函数的导数时，可以不计算其定积分值，直接求其倒数。</p>
+</details>
+<p>① <span class="arithmatex">\(f(x)=x\int_0^x \arctan\sqrt [3]t\text dt\)</span>，则 <span class="arithmatex">\(f'(x)=\int_0^x \arctan\sqrt[3]t\text dt+x\arctan\sqrt[3]x\)</span>。</p>
+<p>② 令 <span class="arithmatex">\(x^3=u\)</span>，<span class="arithmatex">\(g'(x)=\dfrac{\text dg}{\text dx}=\dfrac{\text dg}{\text du}\cdot\dfrac{\text du}{\text dx}=\dfrac{\text d}{\text du}(\int_0^u\arctan\sqrt[3]t\text dt)\dfrac{\text du}{\text dx}=\arctan\sqrt[3]u\cdot 3x^2=3x^2\arctan x\)</span>。</p>
+</details>
+<p>计算：<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\int_0^{2x}(e^{t^2}-1)\sin t\text dt}{\arctan^2 x\cdot\ln(1-2x^2)}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>该极限为 <span class="arithmatex">\(\dfrac 0 0\)</span> 型的不定式，可洛必达计算。</p>
+<p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{\int_0^{2x}(e^{t^2}-1)\sin t\text dt}{x^2\cdot(-2x^2)}=\lim\limits_{x\to 0}\dfrac{2(e^{4x^2}-1)\sin 2x}{-8x^3}=\lim\limits_{x\to 0}\dfrac{16x^3}{-8x^3}=-2\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>积分限为复合函数的求导</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 为 <span class="arithmatex">\(\mathbb R\)</span> 上的连续函数，<span class="arithmatex">\(\varphi_1(x),\varphi_2(x)\)</span> 均为可导函数，则 <span class="arithmatex">\(\dfrac{\text d}{\text dx}(\int_{\varphi_1(x)}^{\varphi_2(x)}f(t)\text dt)=\dfrac{\text d}{\text dx}(\int_0^{\varphi_2(x)}f(t)\text dt-\int_0^{\varphi_1(x)}f(t)\text dt)=f(\varphi_2(x))\varphi_2'(x)-f(\varphi_1(x))\varphi_1'(x)\)</span>。</p>
+</li>
+<li>
+<p>牛顿-莱布尼茨公式（微积分基本公式）</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，<span class="arithmatex">\(F(x)\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的一个原函数，则 <span class="arithmatex">\(\int_a^b f(x)\text dx=F(x)\vert_a^b=F(b)-F(a)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(G(x)=\int_a^x f(t)\text dt\)</span>，则 <span class="arithmatex">\(G'(x)=f(x)\)</span>。而 <span class="arithmatex">\(F(x)\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的一个原函数，故 <span class="arithmatex">\(F'(x)=f(x)\)</span>。</p>
+<p>因此，存在常数 <span class="arithmatex">\(C\)</span> 使得 <span class="arithmatex">\(G(x)=F(x)+C\)</span>。</p>
+<p>又 <span class="arithmatex">\(F(a)+C=G(a)=0\)</span>，则 <span class="arithmatex">\(C=-F(a)\)</span>。</p>
+<p>故 <span class="arithmatex">\(\int_a^b f(t)\text dt=G(b)=F(b)+C=F(b)-F(a)\)</span>。</p>
+</details>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算下列定积分：① <span class="arithmatex">\(\int_0^1 \dfrac{2x+3}{x^2-2x+3}\text dx\)</span>；② <span class="arithmatex">\(\int_0^1 \sqrt{\dfrac{1-x}{1+x}}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>① 找原函数</p>
+<p><span class="arithmatex">\(\begin{aligned}\int_0^1\dfrac{2x+3}{x^2-2x+2}\text dx&amp;=\int_0^1\dfrac{2x-2}{x^2-2x+3}\text dx+\int_0^1\dfrac{5}{x^2-2x+2}\text dx\\&amp;=\int_0^1\dfrac{\text d(x^2-2x+2)}{x^2-2x+2}+5\int_0^1\dfrac{1}{(x-1)^2+1}\text dx\\&amp;=\ln(x^2-2x+2)\vert_0^1+5\arctan(x-1)\vert_0^1\\&amp;=-\ln 2+\dfrac 5 4\pi\end{aligned}\)</span></p>
+<p>② <span class="arithmatex">\(\int_0^1\sqrt{\dfrac{1-x}{1+x}}\text dx=\int_0^1\dfrac{1-x}{\sqrt{1-x^2}}\text dx=(\arcsin x+\sqrt{1-x^2})\vert_0^1=\dfrac\pi 2-1\)</span></p>
+</details>
+<p>计算定积分：① <span class="arithmatex">\(\int_1^4 \max\{2x+3,x^2\}\text dx\)</span>；② <span class="arithmatex">\(\int_0^{\pi}\sqrt{1-\sin 2x}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>① <span class="arithmatex">\(I=\int_1^3 (2x+3)\text dx+\int_3^4 x^2\text dx=(x^2+3x)\vert_1^3+\dfrac{x^3}3\big\vert_3^4=14+\dfrac{37}3=\dfrac{79}3\)</span></p>
+<p>② <span class="arithmatex">\(I=\int_0^{\pi}\sqrt{(\cos x-\sin x)^2}\text dx=\int_0^{\pi}|\cos x-\sin x|\text dx=\int_0^{\frac\pi 4}(\cos x-\sin x)\text dx+\int_{\frac\pi 4}^{\pi}(\sin x-\cos x)\text dx=(\sin x+\cos x)\vert_0^{\frac\pi 4}+(-\cos x-\sin x)\vert_{\frac\pi 4}^{\pi}=(\sqrt 2-1)+(1+\sqrt 2)=2\sqrt 2\)</span></p>
+</details>
+</details>
+</li>
+</ul>
+<h3 id="_4">定积分的计算方法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>定积分的换元积分法</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，<span class="arithmatex">\(\varphi(t)\)</span> 在 <span class="arithmatex">\([\alpha,\beta]\)</span> 上有连续导数，且 <span class="arithmatex">\(\varphi'(t)\neq 0\)</span>（这说明 <span class="arithmatex">\(x=\varphi(t)\)</span> 在 <span class="arithmatex">\([\alpha,\beta]\)</span> 上严格单调），<span class="arithmatex">\(\varphi(\alpha)=a\)</span>，<span class="arithmatex">\(\varphi(\beta)=b\)</span>，函数 <span class="arithmatex">\(\varphi\)</span> 的值域 <span class="arithmatex">\(\varphi([\alpha,\beta])\subseteq[a,b]\)</span>，则 <span class="arithmatex">\(\int_a^b f(x)\text dx=\int_{\alpha}^{\beta}f(\varphi(t))\cdot\varphi'(t)\text dt\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 存在原函数，设其原函数为 <span class="arithmatex">\(F(x)\)</span>。根据牛顿-莱布尼茨公式，有 <span class="arithmatex">\(\int_a^b f(x)\text dx=F(b)-F(a)\)</span>。</p>
+<p>又 <span class="arithmatex">\(\dfrac{\text d}{\text dt}(F(\varphi(t))=F'(\varphi(t))\cdot \varphi'(t)=f(\varphi(t))\cdot \varphi'(t)\)</span>，故 <span class="arithmatex">\(F(\varphi(t))\)</span> 为函数 <span class="arithmatex">\(f(\varphi(t))\cdot\varphi'(t)\)</span> 的原函数。</p>
+<p>由牛顿-莱布尼茨公式，<span class="arithmatex">\(\int_{\alpha}^{\beta}f(\varphi(t))\cdot\varphi'(t)\text dt=F(\varphi(t))\vert_{\alpha}^{\beta}=F(\varphi(\beta))-F(\varphi(\alpha))=F(b)-F(a)\)</span>。</p>
+<p>所以 <span class="arithmatex">\(\int_a^b f(x)\text dx=\int_{\alpha}^{\beta}f(\varphi(t))\cdot\varphi'(t)\text dt\)</span>。</p>
+</details>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\int_0^3\dfrac{\text dx}{1+\sqrt{1+x}}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>令 <span class="arithmatex">\(\sqrt{1+x}=t\)</span>，则 <span class="arithmatex">\(x=t^2-1\)</span>，<span class="arithmatex">\(\text dx=2t\text dt\)</span>。注意还原后积分限为 <span class="arithmatex">\(t:1\to 2\)</span>。</p>
+<p><span class="arithmatex">\(I=\int_1^2\dfrac{2t}{t+1}\text dt=2\int_1^2 (1-\dfrac 1 {t+1})\text dt=2[t-\ln(1+t)]\vert_1^2=2-2\ln\dfrac 3 2\)</span>。</p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^a \sqrt{a^2-x^2}\text dx\,(a&gt;0)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>根据定积分的几何意义，<span class="arithmatex">\(\int_0^a \sqrt{a^2-x^2}\text dx\)</span> 表示半径为 <span class="arithmatex">\(a\)</span> 的四分之一圆面积。<span class="arithmatex">\(I=\dfrac 1 4 \pi a^2\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{x=a\sin t}\int_0^{\frac\pi 2}a\cos t\cdot a\cdot t\text dt=\dfrac{a^2}2\int_0^{\frac\pi 2}(1+\cos 2t)\text dt=\dfrac{a^2}2(t+\dfrac 1 2\sin 2t)\vert_0^{\frac\pi 2}=\dfrac 1 4 \pi a^2\)</span></p>
+</li>
+<li>
+<p><strong>法 3：</strong></p>
+<p><span class="arithmatex">\(I=[\dfrac x 2\sqrt{a^2-x^2}+\dfrac{a^2}2\arcsin\dfrac x a]\vert_0^a=\dfrac 1 4 \pi a^2\)</span></p>
+</li>
+</ul>
+</details>
+<p>设 <span class="arithmatex">\(f(x)=\begin{cases}e^{-x}&amp;(x\leq 0)\\3x^2+1&amp;(x&gt;0)\end{cases}\)</span>，计算：<span class="arithmatex">\(\int_0^2 f(x-1)\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I\xlongequal{x-1=t}\int_{-1}^1 f(t)\text dt=\int_{-1}^0 e^{-t}\text dt+\int_0^1 (3t^2+1)\text dt=-e^{-t}\vert_{-1}^0+(t^3+t)\vert_0^1=e+1\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_{\frac 1 2}^{\frac 1 {\sqrt 2}}\dfrac{\text dx}{x^2\sqrt{1-x^2}}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong>（三角变换）</p>
+<p><span class="arithmatex">\(I\xlongequal{x=\sin t}\int_{\frac \pi 6}^{\frac\pi 4}\dfrac{\cos t\text dt}{\sin^2 t\cdot \cos t}=\int_{\frac\pi 6}^{\frac\pi 4}\text{\text dt}{\sin^2 t}=-\cot t\vert_{\frac\pi 6}^{\frac\pi 4}=-(1-\sqrt 3)=\sqrt 3-1\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong>（倒变换）</p>
+<p><span class="arithmatex">\(I\xlongequal{x=\frac 1 t}\int_2^{\sqrt 2}\dfrac{1}{\frac 1 {t^2}\sqrt{1-\frac 1 {t^2}}}\cdot(-\dfrac 1 {t^2})\text dt=\int_{\sqrt 2}^2\dfrac{t}{\sqrt{t^2-1}}\text dt=\sqrt{t^2-1}\vert_{\sqrt 2}^2=\sqrt 3-1\)</span></p>
+</li>
+</ul>
+</details>
+</details>
+</li>
+<li>
+<p>对称区间上的定积分</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\int_{-\pi}^{\pi}\dfrac{(x+1)^2}{x^2+1}|\sin x|\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\int_{-\pi}^{\pi}\dfrac{(x^2+1)+2x}{x^2+1}|\sin x|\text dx=\int_{-\pi}^{\pi}(1+\dfrac{2x}{x^2+1})|\sin x|\text dx\)</span></p>
+<p>注意到 <span class="arithmatex">\(\dfrac{2x}{x^2+1}\)</span> 是奇函数</p>
+<p><span class="arithmatex">\(I=2\int_0^{\pi}\sin x\text dx=-2\cos x\vert_0^{\pi}=4\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_{-1}^1(\ln\dfrac{2-x}{2+x}+1)x^{2024}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>注意到 <span class="arithmatex">\(\ln\dfrac{2-x}{2+x}\)</span> 是奇函数</p>
+<p><span class="arithmatex">\(I=\int_{-1}^1 x^{2024}\text dx=2\int_0^1 x^{2024}\text dx=\dfrac{2}{2025}\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_{-2}^2 x^3\ln(1+e^x)\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(\int_{-a}^a f(x)\text dx=\int_0^a [f(x)+f(-x)]\text dx\)</span></p>
+<p><span class="arithmatex">\(\ln(1+e^x)-\ln(1+e^{-x})=\ln\dfrac{1+e^x}{1+e^{-x}}\\ln e^x=x\)</span></p>
+</details>
+<p><span class="arithmatex">\(I=\int_0^2[x^3\ln(1+e^x)+(-x)^3\ln(1+e^{-x})]\text dx=\int_0^2 x^3 \ln\dfrac{1+e^x}{1+e^{-x}}\text dx=\int_0^2 x^4\text dx=\dfrac{32}5\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_{-1}^1\dfrac{|x|^{2023}+1}{2023^x+1}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(\int_{-a}^a f(x)\text dx=\int_0^a [f(x)+f(-x)]\text dx\)</span></p>
+<p><span class="arithmatex">\(\dfrac{1}{a+1}+\dfrac 1 {a^{-1}+1}=\dfrac 1 {a+1}+\dfrac{a}{1+a}=1\)</span></p>
+</details>
+<p><span class="arithmatex">\(I=\int_0^1(\dfrac{|x|^{2023}+1}{2023^x+1}+\dfrac{|-x|^{2023}+1}{2023^{-x}+1})\text dx=\int_0^1 (|x|^{2023}+1)\text dx=\dfrac{2025}{2024}\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_{-1}^1 x^2\arctan (e^x)\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstarct" open="open">
+<summary>Abstarct</summary>
+<p><span class="arithmatex">\(\int_{-a}^a f(x)\text dx=\int_0^a [f(x)+f(-x)]\text dx\)</span></p>
+<p><span class="arithmatex">\(\arctan(e^x)+\arctan(e^{-x})=\dfrac\pi 2\)</span></p>
+</details>
+<p><span class="arithmatex">\(I=\int_0^1[x^2\arctan(e^x)+(-x)^2\arctan(e^{-x})]\text dx=\dfrac\pi 2\int_0^1 x^2\text dx=\dfrac\pi 6\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>周期函数的积分</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 是周期为 <span class="arithmatex">\(T&gt;0\)</span> 的连续函数，则 <span class="arithmatex">\(\int_a^{a+T}f(x)\text dx\)</span> 与 <span class="arithmatex">\(a\)</span> 无关。</p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(\int_a^{a+T}f(x)\text dx=\int_a^0 f(x)\text dx+\int_0^T f(x)\text dx+\int_T^{a+T}f(x)\text dx\)</span></p>
+<p>又 <span class="arithmatex">\(\int_T^{a+T}f(x)\text dx\xlongequal{x=u+T}\int_0^a f(u+T)\text du=\int_0^a f(u)\text du\)</span></p>
+<p>则 <span class="arithmatex">\(\int_a^{a+T}f(x)\text dx=\int_a^0 f(x)\text dx+\int_0^T f(x)\text dx+\int_0^a f(u)\text du=\int_0^T f(x)\text dx\)</span>.</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p>记 <span class="arithmatex">\(g(a)=\int_a^{a+T}f(x)\text dx\)</span>，则 <span class="arithmatex">\(g'(a)=f(a+T)-f(a)=0\)</span>。因此 <span class="arithmatex">\(g(a)\)</span> 为定值，从而 <span class="arithmatex">\(\int_a^{a+T}f(x)\text dx\)</span> 为定值。</p>
+</li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\int_0^{2024\pi}|\sin x|\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(|\sin x|\)</span> 是周期为 <span class="arithmatex">\(\pi\)</span> 的函数</p>
+<p><span class="arithmatex">\(I=2024\int_0^{\pi}|\sin x|\text dx=2024\int_0^\pi \sin x\text dx=2024(-\cos x)\vert_0^{\pi}=4048\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^{n\pi}x|\sin x|\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(\int_0^a f(x)\text dx\xlongequal{x+u=a}\int_0^a f(a-u)\text du\)</span></p>
+</details>
+<p><span class="arithmatex">\(I=\int_0^{n\pi}(n\pi-u)|\sin(n\pi-u)|\text du=\int_0^{n\pi}(n\pi-u)|\sin u|\text du=n\pi\int_0^{n\pi}|\sin u|\text du-\int_0^{n\pi}u|\sin u|\text du=n\pi\cdot 2n-I\)</span></p>
+<p>则 <span class="arithmatex">\(I=n^2\pi\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>基于积分限的几种变换</p>
+<p><span class="arithmatex">\(\int_{-a}^a f(x)\text dx\xlongequal{x=-u}\int_{-a}^a f(-u)\text du\)</span></p>
+<p><span class="arithmatex">\(\int_{\frac 1 a}^a f(x)\text dx\xlongequal{x=\frac 1 u}\int_{\frac 1 a}^a \dfrac 1 {u^2}f(\dfrac 1 u)\text du\)</span></p>
+<p><span class="arithmatex">\(\int_a^b f(x)\text dx\xlongequal{x=(a+b)-u}\int_a^b f((a+b)-u)\text du\)</span></p>
+<p><span class="arithmatex">\(\int_0^a f(x)\text dx\xlongequal{x=a-u}\int_0^a f(a-u)\text du\)</span></p>
+<p><span class="arithmatex">\(\int_a^b f(x)\text dx\xlongequal{x=\frac{a+b}2-u}\int_{-\frac{b-a}2}^{\frac{b-a}2}f(\dfrac{a+b}2-u)\text du\)</span></p>
+</li>
+<li>
+<p>基于被积函数的换元</p>
+<p><span class="arithmatex">\(\sqrt{ax+b}=u\)</span>，<span class="arithmatex">\(x=\dfrac{u^2-b}a\)</span>，<span class="arithmatex">\(\text dx=\dfrac{2u}a\text du\)</span></p>
+<p><span class="arithmatex">\(\sqrt{a^2-x^2}\)</span>，令 <span class="arithmatex">\(x=a\sin u\)</span>，<span class="arithmatex">\(\text dx=a\cos u\text du\)</span></p>
+<p><span class="arithmatex">\(\sqrt{x^2+a^2}\)</span>，令 <span class="arithmatex">\(x=a\tan u\)</span>，<span class="arithmatex">\(\text dx=\sec^2 u\text du\)</span></p>
+<p><span class="arithmatex">\(\sqrt{x^2-a^2}\)</span>，令 <span class="arithmatex">\(x=a\sec u\)</span>，<span class="arithmatex">\(\text dx=a\sec u\tan u\text du\)</span></p>
+<p><span class="arithmatex">\(\sqrt{e^x+1}=u\)</span>，<span class="arithmatex">\(x=\ln(u^2-1)\)</span>，<span class="arithmatex">\(\text dx=\dfrac{2u\text du}{u^2-1}\)</span></p>
+<p><span class="arithmatex">\(\sqrt{\dfrac{ax+b}{cx+d}}=u\)</span>，<span class="arithmatex">\(x=\dfrac{du^2-b}{a-cu^2}\)</span>，<span class="arithmatex">\(\text dx=\dfrac{2(ad-bc)u}{(a-cu^2)^2}\text du\)</span></p>
+<p><span class="arithmatex">\(x=\dfrac 1 u\)</span>，<span class="arithmatex">\(\text dx=-\dfrac 1 {u^2}\text du\)</span></p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\int_0^1\dfrac{\ln(1+x)}{1+x^2}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I\xlongequal{x=\tan u}\int_0^{\frac\pi 4}\dfrac{\ln(1+\tan u)}{1+\tan^2 u}\sec^2 \text du=\int_0^{\frac\pi 4}\ln(1+\tan u)\text du\)</span></p>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(\ln(1+\tan u)=\ln(\sin u+\cos u)-\ln \cos u=\ln[\sqrt 2\sin(u+\dfrac\pi 4)]-\ln \cos u\)</span></p>
+<p>而 <span class="arithmatex">\(\sin(u+\dfrac \pi 4)\)</span> 可以换元成 <span class="arithmatex">\(\cos t\)</span>。两个 <span class="arithmatex">\(\cos\)</span> 的积分项可以抵消。</p>
+</details>
+<p><span class="arithmatex">\(\int_0^{\frac\pi 4}\ln(1+\tan u)\text du=\int_0^{\frac\pi 4}\ln(\sin u+\cos u)\text du-\int_0^{\frac\pi 4}\ln\cos u\text du\)</span></p>
+<p>而 <span class="arithmatex">\(\int_0^{\frac \pi 4}\ln(\sin u+\cos u)\text du=\int_0^{\frac\pi 4}\ln[\sqrt 2\sin (u+\dfrac\pi 4)\text du]=\dfrac\pi 8\ln 2+\int_{\frac\pi 4}^{\frac\pi 2}\ln\sin t\text dt\xlongequal{t=\frac\pi 2-u}\dfrac\pi 8\ln 2-\int_{\frac\pi 4}^0\ln\cos u\text du=\dfrac\pi 8\ln 2+\int_0^{\frac\pi 4}\ln\cos u\text du\)</span></p>
+<p>因此 <span class="arithmatex">\(\int_0^1 \dfrac{\ln(1+x)}{1+x^2}\text dx=\dfrac\pi 8\ln 2\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(1+\tan(\dfrac\pi 4-t)=1+\dfrac{1-\tan t}{1+\tan t}=\dfrac{2}{1+\tan t}\)</span></p>
+</details>
+<p><span class="arithmatex">\(\int_0^{\frac\pi 4}\ln(1+\tan u)\text du\xlongequal{u=\frac\pi 4-t}\int_0^{\frac\pi 4}\ln(1+\tan (\dfrac\pi 4-t))\text dt=\int_0^{\frac\pi 4}\ln(1+\dfrac{1-\tan t}{1+\tan t})\text dt=\dfrac\pi 4\ln 2-\int_0^{\frac\pi 4}\ln(1+\tan t)\text dt\)</span></p>
+<p>则 <span class="arithmatex">\(\int_0^{\frac\pi 4}\ln(1+\tan u)\text du=\dfrac\pi 8\ln 2\)</span>。</p>
+</li>
+<li>
+<p><strong>法 3：</strong></p>
+<p>设 <span class="arithmatex">\(x=\dfrac{1-u}{1+u}\)</span>，则 <span class="arithmatex">\(\text dx=-\dfrac{2\text du}{(1+u)^2}\)</span>。</p>
+<p><span class="arithmatex">\(\int_0^1\dfrac{\ln(1+x)}{1+x^2}\text dx=\int_1^0\dfrac{\ln(1+\frac{1-u}{1+u})}{1+\frac{(1-u)^2}{(1+u)^2}}\cdot(-\dfrac 2 {(1+u)^2})\text du=\int_0^1 \dfrac{\ln 2-\ln(1+u)}{1+u^2}\text du=\dfrac\pi 4\ln 2-\int_0^1\dfrac{\ln(1+u)}{1+u^2}\text du\)</span></p>
+<p>则 <span class="arithmatex">\(\int_0^1\dfrac{\ln(1+x)}{1+x^2}\text dx=\dfrac\pi 8\ln 2\)</span>。</p>
+</li>
+</ul>
+</details>
+</details>
+</li>
+<li>
+<p>定积分的分部积分法</p>
+<p>设 <span class="arithmatex">\(u=u(x),v=v(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上有连续导数，则 <span class="arithmatex">\(\text d(uv)=u\text dv+v\text du\)</span>。</p>
+<p><span class="arithmatex">\(\int_a^b u(x)v'(x)\text dx=\int_a^b [(u(x)v(x))'-u'(x)v(x)]\text dx=(u(x)v(x))\big\vert_a^b-\int_a^b u'(x)v(x)\text dx\)</span></p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\int_0^1 x\arctan x\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\dfrac 1 2\int_0^1 \arctan x\text d(x^2)=\dfrac 1 2(x^2\arctan x)\vert_0^1-\dfrac 1 2\int_0^1 \dfrac{x^2}{1+x^2}\text dx=\dfrac\pi 8-\dfrac 1 2(x-\arctan x)\vert_0^1=\dfrac{\pi-2}4\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_1^e \sin(\ln x)\text dx\)</span>。 </p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=(x\sin (\ln x))\vert_1^e-\int_1^e \cos(\ln x)\text dx=e\sin 1-(x\cos (\ln x))\vert_1^e-\int_1^e\sin(\ln x)\text dx=e\sin 1-e\cos 1+1-I\)</span></p>
+<p>则 <span class="arithmatex">\(I=\dfrac 1 2(e\sin 1-e\cos 1+1)\)</span>。</p>
+</details>
+</details>
+</li>
+</ul>
+<h2 id="_5">题目<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>积分与极限结合</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>证明：<span class="arithmatex">\(\lim\limits_{n\to +\infty}\int_0^1\dfrac{x^n}{x+1}\text dx=0\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="failure" open="open">
+<summary>错解</summary>
+<p>根据积分中值定理，<span class="arithmatex">\(\exists\xi\in(0,1)\)</span> 使得 <span class="arithmatex">\(\int_0^1\dfrac{x^n}{x+1}\text dx=\dfrac{\xi^n}{1+\xi}\leq \xi^n\)</span>。</p>
+<p>故 <span class="arithmatex">\(0\leq \lim\limits_{n\to +\infty}\int_0^1\dfrac{x^n}{x+1}\text dx\leq \lim\limits_{n\to +\infty}\xi^n=0\)</span>（<span class="arithmatex">\(|\xi|&lt;1\)</span>）。</p>
+<details class="warning" open="open">
+<summary>错因</summary>
+<p><span class="arithmatex">\(\xi\)</span>与 <span class="arithmatex">\(n\)</span> 有关，不是常数。<span class="arithmatex">\(|\xi|&lt;1\)</span> 不能推出 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\xi^n=0\)</span>。</p>
+<p>若 <span class="arithmatex">\(\xi_n=\dfrac n{n+1}\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\xi_n^n=\lim\limits_{n\to +\infty}(\dfrac n{n+1})^n=\dfrac 1 3\neq 0\)</span>。</p>
+</details>
+</details>
+<p>由于 <span class="arithmatex">\(0\leq \dfrac{x^n}{x+1}\leq x^n\)</span>，故 <span class="arithmatex">\(0\leq \int_0^1\dfrac{x^n}{x+1}\text dx\leq \int_0^1x^n\text dx=\dfrac 1 {n+1}\)</span>。</p>
+<p>而 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\dfrac 1 {n+1}=0\)</span>，故 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\int_0^1\dfrac{x^n}{x+1}\text dx=0\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上连续，证明：<span class="arithmatex">\(\lim\limits_{n\to +\infty}\int_0^1 x^n f(x)\text dx=0\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上连续，则 <span class="arithmatex">\(|f(x)|\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上连续。设 <span class="arithmatex">\(|f(x)|\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上的最大值为 <span class="arithmatex">\(M\)</span>，则 <span class="arithmatex">\(0\leq x^n|f(x)|\leq Mx^n\)</span>。</p>
+<p><span class="arithmatex">\(0\leq |\int_0^1 x^nf(x)\text dx|\leq \int_0^1|x^nf(x)|\text dx\leq M\int_0^1 x^n\text dx=\dfrac{M}{n+1}\)</span></p>
+<p>而 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\dfrac M{n+1}=0\)</span>，故 <span class="arithmatex">\(\lim\limits_{n\to +\infty}x^nf(x)\text dx=0\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>证明题</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上连续，且对 <span class="arithmatex">\(\forall x\in[0,1]\)</span> 有 <span class="arithmatex">\(0&lt;m\leq f(x)\leq M\)</span>，证明：<span class="arithmatex">\(1\leq \int_0^1 f(x)\text dx\int_0^1 \dfrac{\text dx}{f(x)}\leq \dfrac{(M+m)^2}{4Mm}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>由于 <span class="arithmatex">\(\dfrac{(f-m)(M-f)}{f}\geq 0\)</span>，则 <span class="arithmatex">\(f+\dfrac{Mm}f\leq M+m\)</span>。</p>
+<p>则 <span class="arithmatex">\(M+m\geq \int_0^1 f(x)\text dx+Mm\int_0^1\dfrac{\text dx}{f(x)}\geq 2\sqrt{\int_0^1 f(x)\text dx\cdot Mm\int_0^1 \dfrac{\text dx}{f(x)}}\)</span>，故 <span class="arithmatex">\(\int_0^1 f(x)\text dx\int_0^1 \dfrac{\text dx}{f(x)}\leq \dfrac{(M+m)^2}{4Mm}\)</span>。</p>
+</details>
+</details>
+</li>
+<li>
+<p>换元</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上连续，记 <span class="arithmatex">\(F(x)=\int_0^x tf(x-t)\text dt\)</span>。求 <span class="arithmatex">\(F'(x),F''(x)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(F(x)\xlongequal{x-t=u}\int_0^x (x-u)f(u)\text du=x\int_0^x f(u)\text du-\int_0^x uf(u)\text du\)</span></p>
+<p><span class="arithmatex">\(F'(x)=\int_0^x f(u)\text du+xf(x)-xf(x)=\int_0^x f(u)\text du\)</span></p>
+<p><span class="arithmatex">\(F''(x)=f(x)\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>含积分的函数方程</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上连续，且 <span class="arithmatex">\(f(x)=\int_0^x e^{x-t}f(t)\text dt+e^x\)</span>，求 <span class="arithmatex">\(f(x)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(e^{-x}f(x)=\int_0^x e^{-t}f(t)\text dt+1\)</span></p>
+<p>记 <span class="arithmatex">\(g(x)=e^{-x}f(x)\)</span>，则 <span class="arithmatex">\(g(x)=\int_0^x g(t)\text dt+1\)</span>。</p>
+<p>两边求导，得 <span class="arithmatex">\(g'(x)=g(x)\)</span>。</p>
+<p><span class="arithmatex">\(g(x)-g'(x)=0\)</span>，<span class="arithmatex">\((e^{-x}g(x))'=0\)</span>，<span class="arithmatex">\(e^{-x}g(x)=C\)</span>（<span class="arithmatex">\(C\)</span> 为常数），则 <span class="arithmatex">\(g(x)=C\cdot e^x\)</span>。</p>
+<p>将 <span class="arithmatex">\(x=0\)</span> 代入 <span class="arithmatex">\(g(x)=\int_0^x g(t)\text dt+1\)</span>，得 <span class="arithmatex">\(g(0)=\int_0^0 g(t)\text dt+1=0+1=1\)</span>。故 <span class="arithmatex">\(C=1\)</span>。</p>
+<p>则 <span class="arithmatex">\(g(x)=e^x\)</span>，<span class="arithmatex">\(f(x)=e^xg(x)=e^{2x}\)</span>。</p>
+</details>
+</details>
 </li>
 </ul>
 
@@ -2472,10 +3003,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search", "content.action.edit", "navigation.tabs", "navigation.instant", "navigation.top", "content.code.copy", "search.suggest", "search.highlight", "search.share", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search", "content.action.edit", "navigation.tabs", "navigation.instant", "navigation.top", "content.code.copy", "search.suggest", "search.highlight", "search.share", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
       
