@@ -3944,8 +3944,8 @@
 	
 	- （动物或植物）驯化的 d
 	
-    ??? note "英文"
-    	~~damesticated~~！！domesticated
+        ??? note "英文"
+            ~~damesticated~~！！domesticated
 
 ## Part VII
 
