@@ -890,6 +890,245 @@
     ;==========请把以上代码保存到src\main.asm==============================
     ```
 
+??? note "21 扫雷"
+	```asm
+	.386
+    data segment use16
+    W            equ 8
+    WALL         equ 0B2h
+    MINE         equ 0Fh
+    SPACE        equ 20h
+    BLUE         equ 09h
+    GREEN        equ 0Ah
+    RED          equ 0Ch
+    PURPLE       equ 05h
+    PINK         equ 0Dh
+    BROWN        equ 06h
+    YELLOW       equ 0Eh
+    CYAN         equ 03h
+    WHITE        equ 07h
+    ;
+    ;-------以下定义在judge时会改变---------
+    b label byte
+    db  0,  0,  0,  0,  0,  0,  1,  1
+    db  2,  2,  1,  0,  0,  0,  1, -1
+    db -1, -1,  2,  1,  1,  0,  1,  1
+    db -1,  4,  3, -1,  1,  0,  0,  0
+    db  2, -1,  2,  2,  2,  1,  0,  0
+    db  1,  1,  1,  2, -1,  2,  1,  1
+    db  0,  1,  1,  3, -1,  2,  1, -1
+    db  0,  1, -1,  2,  1,  1,  1,  1
+    row dw 3
+    col dw 5
+    ;=======以上定义在judge时会改变=========
+    ;
+    mark   db 8*8 dup(0)
+    dcolor db WHITE, BLUE, GREEN, RED, PURPLE, PINK, BROWN, YELLOW, CYAN
+    ;
+    data ends
+
+    code segment use16
+    assume cs:code, ds:data
+    ;把二维数组下标转化为一维数组下标
+    ;int __stdcall index(int y, int x)
+    ;input:
+    ;   y = word ptr [bp+4]
+    ;   x = word ptr [bp+6]
+    ;output:
+    ;   di = y*W+x
+    index proc
+       push bp
+       mov bp, sp
+       mov ax, [bp+4]
+       mov cx, W
+       mul cx
+       add ax, [bp+6]
+       mov di, ax
+       pop bp
+       ret 4
+    index endp
+
+
+    ;在坐标(x,y)处画一个颜色为color的字符shape
+    ;void __cdecl draw_char(int x, int y, unsigned char shape, unsigned char color)
+    ;input:
+    ;   x = [bp+4]
+    ;   y = [bp+6]
+    ;   shape = [bp+8]
+    ;   color = [bp+0Ah]
+    ;output:
+    ;   draw shape with color at (x,y)
+    draw_char:
+       push bp
+       mov bp, sp
+       push di
+       mov ax, [bp+6]
+       mov cx, 80
+       mul cx
+       add ax, [bp+4]
+       shl ax, 1
+       mov di, ax
+       mov al, [bp+8]
+       mov ah, [bp+0Ah]
+       mov es:[di], ax
+       pop di
+       pop bp
+       ret
+
+    ;画扫雷结果
+    ;void show_block(void)
+    show_block:
+    ;#1_begin------------------------------
+
+        push ax
+        push bx
+        mov ax,0
+        for_r:
+            mov bx,0
+            for_c:
+                push ax
+                push bx
+                push bx
+                push ax
+                call index
+                pop bx
+                pop ax
+                cmp mark[di],0
+                je mrc_eq_0
+                    cmp b[di],-1
+                    je brc_eq_n1
+                        mov ch,0
+                        mov cl,b[di]
+                        mov si,cx
+                        mov ch,0
+                        mov cl,dcolor[si]
+                        push cx
+                        mov ch,0
+                        mov cl,b[di]
+                        add cx,'0'
+                        push cx
+                        jmp done
+                    brc_eq_n1:
+                        mov cx,RED
+                        shl cx,4
+                        or cx,WHITE
+                        push cx
+                        push MINE
+                    jmp done
+                mrc_eq_0:
+                    push WHITE
+                    push WALL
+                done:
+                push ax
+                push bx
+                call draw_char
+                pop bx
+                pop ax
+                add sp,4
+                add bx,1
+                cmp bx,8
+                jl for_c
+            add ax,1
+            cmp ax,8
+            jl for_r
+        pop bx
+        pop ax
+        ret	; <--第1空, 请把解答写在分号左边, 可填多条指令
+    ;#1_end================================
+
+
+
+    ;从第r行第c列起，用深度优先算法递归扫雷
+    ;void dig(int r, int c)
+    ;input:
+    ;  r = [bp+4]
+    ;  c = [bp+6]
+    ;output:
+    ;  ①以r行c列为中心点
+    ;  ②若该中心点的值>0则揭开这一格并返回
+    ;  ③若该中心点的值=0，则先揭开该中心点，再对围绕该点的8个格进行遍历
+    ;  ④设P是8格中的任意一格，把P设为中心点，转②
+    ;locals:
+    ;  i = [bp-4]
+    ;  j = [bp-2]
+    i  equ word ptr [bp-4]
+    j  equ word ptr [bp-2]
+    dig:
+    ;#2_begin------------------------------
+        push bp
+        mov bp,sp
+        sub sp,4
+        cmp word ptr [bp+4],0
+        jl done_
+        cmp word ptr [bp+4],7
+        jg done_
+        cmp word ptr [bp+6],0
+        jl done_
+        cmp word ptr [bp+6],7
+        jg done_
+
+        push [bp+6]
+        push [bp+4]
+        call index
+
+        cmp mark[di],1
+        je done_
+
+        mov mark[di],1
+        cmp b[di],-1
+        je done_
+        cmp b[di],0
+        jg done_
+
+        mov i,-1
+        for_i:
+            mov j,-1
+            for_j:
+                mov ax,[bp+6]
+                add ax,j
+                push ax
+                mov ax,[bp+4]
+                add ax,i
+                push ax
+                call dig
+                add sp,4
+
+                add j,1
+                cmp j,1
+                jle for_j
+            add i,1
+            cmp i,1
+            jle for_i
+    done_:
+        mov sp,bp
+        pop bp
+        ret        ; <--第2空, 请把解答写在分号左边, 可填多条指令
+
+    ;#2_end================================
+
+    main:
+       mov ax, data
+       mov ds, ax
+       mov ax, 0B800h
+       mov es, ax
+       cld
+       ;
+       mov ax, 0003h
+       int 10h
+       ;
+       push [col]
+       push [row]
+       call dig
+       add sp, 4
+       ;
+       call show_block
+       ;
+       mov ah, 4Ch
+       int 21h
+    code ends
+    end main
+	```
+	
 ## 作业
 
 ??? note "第一次作业 10.1"
@@ -1507,7 +1746,7 @@
         h   db 20h dup('H')
         result dd 0
         data ends
-
+    
         code segment use16
         assume cs:code, ds:data
         main:
@@ -1588,6 +1827,246 @@
             mov result,eax                            ; <--第1空, 请把解答写在分号左边, 可填多条指令           
         ;#1_end======================
         exit:
+           mov ah, 4Ch
+           int 21h
+        code ends
+        end main
+        ```
+
+??? note "第六次作业 11.18"
+	??? note "1 扫雷"
+		```asm
+		.386
+        data segment use16
+        W            equ 8
+        WALL         equ 0B2h
+        MINE         equ 0Fh
+        SPACE        equ 20h
+        BLUE         equ 09h
+        GREEN        equ 0Ah
+        RED          equ 0Ch
+        PURPLE       equ 05h
+        PINK         equ 0Dh
+        BROWN        equ 06h
+        YELLOW       equ 0Eh
+        CYAN         equ 03h
+        WHITE        equ 07h
+        ;
+        ;-------以下定义在judge时会改变---------
+        b label byte
+        db  0,  0,  0,  0,  0,  0,  1,  1
+        db  2,  2,  1,  0,  0,  0,  1, -1
+        db -1, -1,  2,  1,  1,  0,  1,  1
+        db -1,  4,  3, -1,  1,  0,  0,  0
+        db  2, -1,  2,  2,  2,  1,  0,  0
+        db  1,  1,  1,  2, -1,  2,  1,  1
+        db  0,  1,  1,  3, -1,  2,  1, -1
+        db  0,  1, -1,  2,  1,  1,  1,  1
+        row dw 3
+        col dw 5
+        ;=======以上定义在judge时会改变=========
+        ;
+        mark   db 8*8 dup(0)
+        dcolor db WHITE, BLUE, GREEN, RED, PURPLE, PINK, BROWN, YELLOW, CYAN
+        ;
+        data ends
+
+        code segment use16
+        assume cs:code, ds:data
+        ;把二维数组下标转化为一维数组下标
+        ;int __stdcall index(int y, int x)
+        ;input:
+        ;   y = word ptr [bp+4]
+        ;   x = word ptr [bp+6]
+        ;output:
+        ;   di = y*W+x
+        index proc
+           push bp
+           mov bp, sp
+           mov ax, [bp+4]
+           mov cx, W
+           mul cx
+           add ax, [bp+6]
+           mov di, ax
+           pop bp
+           ret 4
+        index endp
+
+
+        ;在坐标(x,y)处画一个颜色为color的字符shape
+        ;void __cdecl draw_char(int x, int y, unsigned char shape, unsigned char color)
+        ;input:
+        ;   x = [bp+4]
+        ;   y = [bp+6]
+        ;   shape = [bp+8]
+        ;   color = [bp+0Ah]
+        ;output:
+        ;   draw shape with color at (x,y)
+        draw_char:
+           push bp
+           mov bp, sp
+           push di
+           mov ax, [bp+6]
+           mov cx, 80
+           mul cx
+           add ax, [bp+4]
+           shl ax, 1
+           mov di, ax
+           mov al, [bp+8]
+           mov ah, [bp+0Ah]
+           mov es:[di], ax
+           pop di
+           pop bp
+           ret
+
+        ;画扫雷结果
+        ;void show_block(void)
+        show_block:
+        ;#1_begin------------------------------
+
+            push ax
+            push bx
+            mov ax,0
+            for_r:
+                mov bx,0
+                for_c:
+                    push ax
+                    push bx
+                    push bx
+                    push ax	; 这里 push 顺序反了调了好久。index(y,x) 实际上是 index(ax,bx)……没认真看 index 内部的一集
+                    call index
+                    pop bx
+                    pop ax
+                    cmp mark[di],0
+                    je mrc_eq_0
+                        cmp b[di],-1
+                        je brc_eq_n1
+                            mov ch,0
+                            mov cl,b[di]
+                            mov si,cx
+                            mov ch,0
+                            mov cl,dcolor[si]
+                            push cx
+                            mov ch,0
+                            mov cl,b[di]
+                            add cx,'0'
+                            push cx
+                            jmp done
+                        brc_eq_n1:
+                            mov cx,RED
+                            shl cx,4
+                            or cx,WHITE
+                            push cx
+                            push MINE
+                        jmp done
+                    mrc_eq_0:
+                        push WHITE
+                        push WALL
+                    done:
+                    push ax
+                    push bx
+                    call draw_char
+                    pop bx
+                    pop ax
+                    add sp,4
+                    add bx,1
+                    cmp bx,8
+                    jl for_c
+                add ax,1
+                cmp ax,8
+                jl for_r
+            pop bx
+            pop ax
+            ret	; <--第1空, 请把解答写在分号左边, 可填多条指令
+        ;#1_end================================
+
+
+
+        ;从第r行第c列起，用深度优先算法递归扫雷
+        ;void dig(int r, int c)
+        ;input:
+        ;  r = [bp+4]
+        ;  c = [bp+6]
+        ;output:
+        ;  ①以r行c列为中心点
+        ;  ②若该中心点的值>0则揭开这一格并返回
+        ;  ③若该中心点的值=0，则先揭开该中心点，再对围绕该点的8个格进行遍历
+        ;  ④设P是8格中的任意一格，把P设为中心点，转②
+        ;locals:
+        ;  i = [bp-4]
+        ;  j = [bp-2]
+        i  equ word ptr [bp-4]
+        j  equ word ptr [bp-2]
+        dig:
+        ;#2_begin------------------------------
+            push bp
+            mov bp,sp
+            sub sp,4
+            cmp word ptr [bp+4],0
+            jl done_
+            cmp word ptr [bp+4],7
+            jg done_
+            cmp word ptr [bp+6],0
+            jl done_
+            cmp word ptr [bp+6],7
+            jg done_
+
+            push [bp+6]
+            push [bp+4]
+            call index	; 这里 push 顺序反了调了好久。index(y,x) 实际上是 index(r,c)……
+
+            cmp mark[di],1
+            je done_
+
+            mov mark[di],1
+            cmp b[di],-1
+            je done_
+            cmp b[di],0
+            jg done_
+
+            mov i,-1
+            for_i:
+                mov j,-1
+                for_j:
+                    mov ax,[bp+6]
+                    add ax,j
+                    push ax
+                    mov ax,[bp+4]
+                    add ax,i
+                    push ax
+                    call dig
+                    add sp,4
+
+                    add j,1
+                    cmp j,1
+                    jle for_j
+                add i,1
+                cmp i,1
+                jle for_i
+        done_:
+            mov sp,bp
+            pop bp
+            ret        ; <--第2空, 请把解答写在分号左边, 可填多条指令
+
+        ;#2_end================================
+
+        main:
+           mov ax, data
+           mov ds, ax
+           mov ax, 0B800h
+           mov es, ax
+           cld
+           ;
+           mov ax, 0003h
+           int 10h
+           ;
+           push [col]
+           push [row]
+           call dig
+           add sp, 4
+           ;
+           call show_block
+           ;
            mov ah, 4Ch
            int 21h
         code ends
