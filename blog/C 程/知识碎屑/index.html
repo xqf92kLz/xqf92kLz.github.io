@@ -2570,7 +2570,7 @@
 
   <h1>知识碎屑</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-23'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-23T07:54:31.244211+00:00'>2025-12-23</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-23'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-23T07:54:31.244211+00:00'>2025-12-23</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-23'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-23T07:59:37.458018+00:00'>2025-12-23</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-23'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-23T07:59:37.458018+00:00'>2025-12-23</time></span></div></div></div>
 <h3 id="_1">整数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -2585,6 +2585,10 @@
 <p>8 位符号数的二进制范围是 [1000 0000, 0111 1111]，十六进制范围是 [0x80, 0x7F]，十进制范围是 [-128, +127]。其中正数范围是 [0000 0000, 0111 1111] 即 [0,+127]，负数范围为 [1000 0000, 1111 1111] 即 [-128,-1]。</p>
 <p>其中明显的特征是，正数的二进制最高位 = 0，负数的二进制的最高位 = 1。</p>
 <p>8 位整数的二进制补码的最高位恒为 0，其余 7 位表示概述的值。</p>
+<p>8 位 -1 的二进制补码怎么求？先求出 8 位 +1 的二进制补码 = 0000 0001，再求 +1 的相反数 = 1111 1111。8 位 + 8 位 = 8 位，高于 8 位的丢弃，那么 0000 0001 + 1111 1111 = (1) 0000 0000 = 0。</p>
+<p>+2 = 0000 0010，则 -2 = 1111 1110</p>
+<p>+127 = 0111 1111，则 -127 = 1000 0001</p>
+<p>-128 = 1000 0000。+127 = 01111 1111，+1 = 0000 0001，1000 0000 + 01111 1111 + 0000 0001 = 0</p>
 </li>
 </ul>
 <h3 id="_2">实数数据的存储<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
