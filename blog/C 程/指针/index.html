@@ -2548,7 +2548,7 @@
 
   <h1>指针</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-23'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-23T15:54:51.244509+00:00'>2025-12-23</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-23'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-23T15:54:51.244509+00:00'>2025-12-23</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-24'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-24T04:24:00.816460+00:00'>2025-12-24</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-24'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-24T04:24:00.816460+00:00'>2025-12-24</time></span></div></div></div>
 <h3 id="_1">定义<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -2660,7 +2660,7 @@
 <h3 id="_5">指针的指针<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p><code>int **t</code>，t 是指针的指针。</p>
+<p><code>int **t</code>，t 是指针的指针（二级指针）。</p>
 <p><code>int **t,*s; s=&amp;a[0],t=&amp;s;</code> t 指向指针 s（t 的值为指针 s 的地址），s 指向 a[0]（s 的值为 a[0] 的地址，同时 s 自己有个地址）。*t=s，**t=*s=a[0]</p>
 </li>
 </ul>
@@ -2680,8 +2680,8 @@
 <h3 id="_7">结构指针<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>标签名于关键词 struct 构成了结构类型名。</p>
-<p><code>struct st a,b</code>，a、b 是结构类型的变量。注意这里与 C++ 有区别！定义结构变量时要写 struct。</p>
+<p>关键词 struct 与标签名构成了结构类型名。标签名可以省略。</p>
+<p><code>struct st a,b</code>，a、b 是结构类型的变量。注意这里与 C++ 有区别！C 语言中定义结构变量时必须要写 struct。</p>
 </li>
 <li>
 <p><code>struct st *p</code>，p 是结构指针变量。</p>

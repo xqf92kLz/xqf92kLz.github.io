@@ -2472,7 +2472,7 @@
 
   <h1>第五章 定积分及其应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-23'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-23T15:54:51.251509+00:00'>2025-12-23</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-23'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-23T15:54:51.251509+00:00'>2025-12-23</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-24'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-24T04:24:00.823460+00:00'>2025-12-24</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-24'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-24T04:24:00.823460+00:00'>2025-12-24</time></span></div></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">定积分概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3344,7 +3344,7 @@
 <li>
 <p>假设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,\pi)\)</span> 内只有一个零点 <span class="arithmatex">\(\eta_1\)</span>，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,\eta_1),(\eta_1,\pi)\)</span> 内保号。</p>
 <p>由于 <span class="arithmatex">\(\int_0^\pi f(x)\cos\eta\text dx=\int_0^\pi f(x)\cos x\text dx=0\)</span>，则 <span class="arithmatex">\(\int_0^\pi f(x)(\cos x-\cos \eta)=0\)</span>。</p>
-<p><span class="arithmatex">\(\int_0^\pi f(t)\text dt=0\)</span>，故 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,\eta_1),(\eta_1,\pi)\)</span> 内异号。同时 <span class="arithmatex">\(\cos x-\cos eta\)</span> 在 <span class="arithmatex">\((0,\eta_1),(\eta_1,\pi)\)</span> 内异号。故 <span class="arithmatex">\(\int_0^\pi f(x)(\cos x-\cos \eta)&gt;0\)</span>，矛盾。</p>
+<p><span class="arithmatex">\(\int_0^\pi f(t)\text dt=0\)</span>，故 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,\eta_1),(\eta_1,\pi)\)</span> 内异号。同时 <span class="arithmatex">\(\cos x-\cos\eta\)</span> 在 <span class="arithmatex">\((0,\eta_1),(\eta_1,\pi)\)</span> 内异号。故 <span class="arithmatex">\(\int_0^\pi f(x)(\cos x-\cos \eta)&gt;0\)</span>，矛盾。</p>
 </li>
 </ul>
 </li>
@@ -3356,8 +3356,107 @@
 </li>
 </ul>
 </details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(\int_a^b f(x)\text dx=0\)</span>，则 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^{\xi}f(x)\text dx+f(\xi)=0\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(\int_a^{\xi}f(x)\text dx+f(\xi)=0\Leftrightarrow\)</span> 方程 <span class="arithmatex">\(\int_a^x f(t)\text dt+f(x)=0\)</span> 有解 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(g(x)+g'(x)=0\)</span> 有解，其中 <span class="arithmatex">\(g(x)=\int_a^x f(t)\text dt\)</span>。</p>
+<p>令 <span class="arithmatex">\(F(x)=e^xg(x)=e^x\int_a^x f(t)\text dt\)</span>，然后罗尔定理。</p>
 </details>
-<p>​           </p>
+<p>令 <span class="arithmatex">\(F(x)=e^x\int_a^x f(t)\text dt\)</span>，则 <span class="arithmatex">\(F'(x)=e^x\int_a^x f(t)\text dt+e^xf(x)\)</span>。</p>
+<p><span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，且 <span class="arithmatex">\(F(a)=F(b)=0\)</span>。根据罗尔定理，<span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(F'(\xi)=0\)</span>，即 <span class="arithmatex">\(\int_a^\xi f(x)\text dx+f(\xi)=0\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,2]\)</span> 上连续，在 <span class="arithmatex">\((0,2)\)</span> 内可导，且 <span class="arithmatex">\(\int_0^2 e^{4-x^2}f(x)\text dx=2f(2)\)</span>。证明：<span class="arithmatex">\(\exists\xi\in(0,2)\)</span>，使得 <span class="arithmatex">\(f'(\xi)=2\xi f(\xi)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(f'(\xi)=2\xi f(\xi)\Leftrightarrow\)</span> 方程 <span class="arithmatex">\(f'(x)-2xf(x)=0\)</span> 有解 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\((e^{-x^2}f(x))'=0\)</span> 有解</p>
+</details>
+<p>令 <span class="arithmatex">\(F(x)=e^{-x^2}f(x)\)</span>，则 <span class="arithmatex">\(F'(x)=e^{-x^2}(f'(x)-2xf(x))\)</span>。</p>
+<p>根据积分中值定理，<span class="arithmatex">\(\exists\eta\in(0,2)\)</span> 使得 <span class="arithmatex">\(2e^{4-\eta^2}f(\eta)=2f(2)\)</span>，则 <span class="arithmatex">\(e^{-\eta^2}f(\eta)=e^{-2^2}f(2)\)</span>，即 <span class="arithmatex">\(F(\eta)=F(2)\)</span>。</p>
+<p>又 <span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([\eta,2]\)</span> 上连续，在 <span class="arithmatex">\((\eta,2)\)</span> 内可导，根据罗尔定理，<span class="arithmatex">\(\exists\xi\in(\eta,2)\subset (0,2)\)</span> 使得 <span class="arithmatex">\(F'(\xi)=0\)</span>，即 <span class="arithmatex">\(f'(\xi)=2\xi f(\xi)\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 为连续函数，且 <span class="arithmatex">\(f(x+2)-f(x)=x\)</span>，<span class="arithmatex">\(\int_0^2 f(x)\text dx=1\)</span>，求 <span class="arithmatex">\(\int_1^3 f(x)\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>由于 <span class="arithmatex">\(f\)</span> 连续，则 <span class="arithmatex">\(\dfrac{\text d}{\text dx}(\int_x^{x+2}f(t)\text dt)=f(x+2)-f(x)\)</span>，故 <span class="arithmatex">\(F(x)=\int_x^{x+2}f(t)\text dt=\dfrac 1 2 x^2+C\)</span>。</p>
+<p>而 <span class="arithmatex">\(\int_0^2 f(x)\text dx=1\)</span>，故 <span class="arithmatex">\(C=1\)</span>，即 <span class="arithmatex">\(F(x)=\dfrac 1 2 x^2+1\)</span>，则 <span class="arithmatex">\(\int_1^3 f(x)\text dx=F(1)=\dfrac 3 2\)</span>。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(\int_1^3 f(x)\text dx\xlongequal{x=u+2}\int_{-1}^1 f(u+2)\text du=\int_{-1}^1 (f(u)+u)\text du=\int_{-1}^1 f(u)\text du\)</span></p>
+<p>又 <span class="arithmatex">\(\int_{-1}^0 f(x)\text dx=\int_{-1}^0 (f(x+2)-x)\text dx\xlongequal{x+2=u}\int_1^2 f(u)\text du+\dfrac 1 2\)</span></p>
+<p>因此 <span class="arithmatex">\(\int_1^3 f(x)\text dx=\int_{-1}^1 f(u)\text du=\int_{-1}^0 f(u)\text du+\int_0^1 f(u)\text du=\int_0^1 f(u)\text du+\int_1^2 f(u)\text du+\dfrac 1 2=\int_0^2 f(u)\text du+\dfrac 1 2=\dfrac 3 2\)</span></p>
+</li>
+</ul>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^{\frac\pi 2}\dfrac{\sqrt{\sin x}}{\sqrt{\sin x}+\sqrt{\cos x}}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>记 <span class="arithmatex">\(I=\int_0^{\frac\pi 2}\dfrac{\sqrt{\sin x}}{\sqrt{\sin x}+\sqrt{\cos x}}\text dx\)</span>，<span class="arithmatex">\(J=\int_0^{\frac\pi 2}\dfrac{\sqrt{\cos x}}{\sqrt{\sin x}+\sqrt{\cos x}}\)</span>，则</p>
+<p><span class="arithmatex">\(I\xlongequal{x=\frac \pi 2-u}\int_0^{\frac\pi 2}\dfrac{\sqrt{\cos u}}{\sqrt{\cos u}+\sqrt{\sin u}}\text du=J\)</span></p>
+<p><span class="arithmatex">\(I+J=\int_0^{\frac\pi 2}\text dx=\dfrac\pi 2\)</span></p>
+<p>故 <span class="arithmatex">\(I=\dfrac\pi 4\)</span></p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>更一般地，有 <span class="arithmatex">\(\int_0^{\frac\pi 2}\dfrac{\sin^{\alpha}}{\sin^{\alpha}x+\cos^{\alpha}x}\text dx=\dfrac\pi 4\,(\alpha&gt;0)\)</span>。</p>
+<p>同样可以计算 <span class="arithmatex">\(\int_0^{\frac\pi 2}\dfrac{\text dx}{1+\tan^{\alpha}x}=\int_0^{\frac\pi 2}\dfrac{\text dx}{1+\cot^{\alpha}x}=\dfrac\pi 4\)</span>。</p>
+</details>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(a)=0\)</span>，证明：<span class="arithmatex">\(\int_a^b[f(x)]^2\text dx\leq\dfrac{(b-a)^2}2\int_a^b [f'(x)]^2\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>建立 <span class="arithmatex">\(f\)</span> 与 <span class="arithmatex">\(f'\)</span> 的联系：<span class="arithmatex">\(f(x)=\int_c^x f'(t)\text dt+f(c)\)</span>。</p>
+</details>
+<p><span class="arithmatex">\(f(x)=\int_a^x f'(t)\text dt+f(a)=\int_a^x f'(t)\text dt\)</span></p>
+<p>由柯西不等式，<span class="arithmatex">\([f(x)]^2=[\int_a^x f'(t)\text dt]^2\leq \int_a^x 1^2\text dt\int_a^x [f'(t)]^2\text dt\leq (x-a)\int_a^b [f'(t)]^2\text dt\)</span>，其中 <span class="arithmatex">\(\int_a^b [f'(t)]^2\text dt\)</span> 是常数</p>
+<p>故 <span class="arithmatex">\(\int_a^b [f(x)]^2\text dx\leq \int_a^b[(x-a)\int_a^b [f'(t)]^2t]\text dx=\int_a^b [f'(t)]^2 t\cdot \dfrac 1 2 (x-a)^2\vert_a^b=\dfrac{(b-a)^2}2\int_a^b[f'(x)]^2\text dx\)</span></p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(a)=f(b)=0\)</span>，证明：<span class="arithmatex">\(\int_a^b [f(x)]^2\text dx\leq \dfrac{(b-a)^2}8\int_a^b [f'(x)]^2\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>根据上题，有</p>
+<p><span class="arithmatex">\(\int_a^{\frac{a+b}2}[f(x)]^2\text dx\leq \dfrac{(\frac{a+b}2-a)^2}2\int_a^{\frac{a+b}2}[f'(x)]^2\text dx=\dfrac{(b-a)^2}8\int_a^{\frac{a+b}2}[f'(x)]^2\text dx\)</span></p>
+<p><span class="arithmatex">\(\int_{\frac{a+b}2}^b[f(x)]^2\text dx\leq \dfrac{(b-\frac{a+b}2)^2}2\int_{\frac{a+b}2}^b[f'(x)]^2\text dx=\dfrac{(b-a)^2}8\int_{\frac{a+b}2}^b[f'(x)]^2\text dx\)</span></p>
+<p>故 <span class="arithmatex">\(\int_a^b [f(x)]^2\text dx\leq \dfrac{(b-a)^2}8\int_a^b [f'(x)]^2\text dx\)</span></p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(\dfrac{a+b}2)=0\)</span>，证明：<span class="arithmatex">\(\int_a^b [f(x)]^2\text dx\leq \dfrac{(b-a)^2}8\int_a^b [f'(x)]^2\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>记 <span class="arithmatex">\(x_0=\dfrac{a+b}2\)</span>，则 <span class="arithmatex">\(f(x)=\int_{x_0}^x f'(t)\text dt\)</span>。</p>
+<p><span class="arithmatex">\([f(x)]^2=[\int_{x_0}^x f'(t)\text dt]^2\leq |\int_{x_0}^x 1\text dt\cdot\int_{x_0}^x[f'(t)]^2\text dt|=|x-x_0|\cdot|\int_{x_0}^x[f'(t)]^2\text dt|\)</span></p>
+<p>则</p>
+<p><span class="arithmatex">\(\int_a^{\frac{a+b}2}[f(x)]^2\text dx\leq\int_a^{\frac{a+b}2}(x_0-a)\text dx\cdot\int_a^{\frac{a+b}2}[f'(t)]^2\text dt=\dfrac{(b-a)^2}8\int_a^{\frac{a+b}2}[f'(t)]^2\text dt\)</span></p>
+<p><span class="arithmatex">\(\int_{\frac{a+b}2}^b [f(x)]^2\text dx\leq \int_{\frac{a+b}2}^b(x-x_0)\text dx\cdot\int_{\frac{a+b}2}^b[f'(t)]^2\text dt=\dfrac{(b-a)^2}8\int_{\frac{a+b}2}^b[f'(t)]^2\text dt\)</span></p>
+<p>故 <span class="arithmatex">\(\int_a^b [f(x)]^2\text dx=\int_a^{\frac{a+b}2}[f(x)]^2\text dx+\int_{\frac{a+b}2}^b[f(x)]^2\text dx\leq\dfrac{(b-a)^2}8\int_a^b[f'(x)]^2\text dx\)</span></p>
+</details>
+<p>证明：<span class="arithmatex">\(\int_0^1\dfrac{\cos x}{\sqrt{1-x^2}}\text dx&gt;\int_0^1\dfrac{\sin x}{\sqrt{1-x^2}}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(\int_0^1\dfrac{\cos x}{\sqrt{1-x^2}}\text dx\xlongequal{x=\sin u}=\int_0^{\frac\pi 2}\dfrac{\cos(\sin u)}{\cos u}\cdot \cos u\text du=\int_0^{\frac\pi 2}\cos(\sin u)\text du\)</span></p>
+<p><span class="arithmatex">\(\int_0^1\dfrac{\sin x}{\sqrt{1-x^2}}\text dx\xlongequal{x=\cos u}=\int_{\frac\pi 2}^0\dfrac{\sin(\cos u)}{\sin u}\cdot(-\sin u)\text du=\int_0^{\frac\pi 2}\sin(\cos u)\text du\)</span></p>
+<p>当 <span class="arithmatex">\(0\leq x\leq\dfrac\pi 2\)</span> 时，<span class="arithmatex">\(\cos(\sin u)-\sin(\cos u)=\sin(\dfrac\pi 2-\sin u)-\sin(\cos u)&gt;0\)</span>【<span class="arithmatex">\(\sin x+\cos x\leq \sqrt 2&lt;\dfrac\pi 2\)</span>，则 <span class="arithmatex">\(\dfrac\pi 2-\sin u&gt;\cos u\)</span>】</p>
+<p>故 <span class="arithmatex">\(\int_0^1\dfrac{\cos x}{\sqrt{1-x^2}}\text dx&gt;\int_0^1\dfrac{\sin x}{\sqrt{1-x^2}}\text dx\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p>当 <span class="arithmatex">\(0\leq x\leq\dfrac\pi 2\)</span> 时，<span class="arithmatex">\(\sin x\leq x\leq \tan x\)</span></p>
+<p><span class="arithmatex">\(\int_0^1\dfrac{\cos x}{\sqrt{1-x^2}}\text dx&gt;\int_0^1\dfrac{\cos x}{\sqrt{1-\sin^2 x}}\text dx=\int_0^1\dfrac{1}{\sqrt{1-\sin^2 x}}\text(\sin x)=\arcsin x\big\vert_0^{\sin 1}=1\)</span></p>
+<p><span class="arithmatex">\(\int_0^1\dfrac{\sin x}{\sqrt{1-x^2}}\text dx&lt;\int_0^1\dfrac{x}{\sqrt{1-x^2}}\text dx=-\dfrac 1 2\int_0^1\dfrac{1}{\sqrt{1-x^2}}\text d(1-x^2)=-\dfrac 1 2\cdot 2\sqrt x\big\vert_1^0=1\)</span></p>
+</li>
+</ul>
+</details>
+</details>
 </li>
 </ul>
 

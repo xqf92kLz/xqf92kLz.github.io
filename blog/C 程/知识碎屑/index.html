@@ -2592,7 +2592,7 @@
 
   <h1>知识碎屑</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-23'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-23T15:54:51.244509+00:00'>2025-12-23</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-23'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-23T15:54:51.244509+00:00'>2025-12-23</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-24'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-24T04:24:00.816460+00:00'>2025-12-24</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-24'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-24T04:24:00.816460+00:00'>2025-12-24</time></span></div></div></div>
 <h3 id="_1">整数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -2774,18 +2774,20 @@
 <li>
 <p>字符</p>
 <ul>
-<li>在 C 语言中，字符与它的 ASCII 码是等价的。字符本质上是一个 8 位数。</li>
-</ul>
+<li>
+<p>在 C 语言中，字符与它的 ASCII 码是等价的。字符本质上是一个 8 位数。</p>
 <p><code>'A'</code> = 0x41 = 65</p>
 <p><code>'a'</code> = 0x61 = 97</p>
 <p><code>' '</code> = 0x20 = 32</p>
 <p><code>'0'</code> = 0x30 = 48</p>
-<ul>
-<li>大小写字母的相互转化</li>
-</ul>
+</li>
+<li>
+<p>大小写字母的相互转化</p>
 <p>大写字母 + 32 = 小写字母</p>
 <p>大写字母 + 0x20 = 小写字母</p>
 <p>大写字母 + <code>' '</code> = 小写字母</p>
+</li>
+</ul>
 </li>
 <li>
 <p>字符与字符串区别</p>
@@ -2793,6 +2795,11 @@
 <p><code>""</code> 称为空串（null string），它里面有一个元素，即 <code>'\0'</code></p>
 <p><code>''</code> 语法错误</p>
 <p>凡是用双引号引起来的字符串，其最后一个隐藏的元素一定是 <code>'\0'</code>，它起到终结该字符串的作用</p>
+</li>
+<li>
+<p>字符串</p>
+<p><code>strlen(s)</code>：返回 <code>'\0'</code> 左边的元素个数，在头文件 string.h 中</p>
+<p><code>gets(a)</code>：输入一个字符串，以回车结束。gets 也会像 scanf() 的 %s 格式那样自动在字符串末尾填入 <code>'\0'</code></p>
 </li>
 </ul>
 <h3 id="_5">各种类型的混合计算<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
@@ -2902,11 +2909,20 @@
 <h3 id="_7">数组<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p><code>int a[n];</code> 在 C89 中是语法错误，因为元素个数必须为常数。在 C99 及 C++ 中允许这样写。</p>
+<p><code>int a[n];</code> 在 C89 中是语法错误，因为定义数组时，元素个数必须为常数，不能是变量。在 C99 及 C++ 中允许这样写。</p>
 <p><code>int a[];</code> 语法错误，因为必须列出各个元素的值。</p>
 </li>
 <li>
 <p>数组元素个数 <code>n=sizeof(a)/sizeof(a[0])</code>，其中 <code>sizeof(a)</code> 表示 a 数组中全体元素的总宽度</p>
+</li>
+<li>
+<p>在内存中，数组的各个元素是连续存放的。</p>
+<p>注意下标可以故意越界。对于 <code>short int a[3][4];</code>，<code>a[0][4]</code> = <code>a[1][0]</code>，<code>a[1][-1]</code> = <code>a[0][3]</code></p>
+</li>
+<li>
+<p><code>int a[][]={{1,2,3},{4,5,6}};</code> 编译错误，<code>int a[][3]={{1,2,3},{4,5,6}};</code> 或 <code>int a[2][3]={{1,2,3},{4,5,6}};</code> 编译正确。</p>
+<p><code>int f(int a[][])</code> 编译错误，<code>int f(int a[][3])</code> 或 <code>int f(int a[2][3])</code> 编译正确。</p>
+<p>多维数组只有第一个维度的大小可以省略。</p>
 </li>
 </ul>
 <h3 id="_8">实数数据的存储<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
@@ -2951,13 +2967,6 @@
 </code></pre></div>
 <h3 id="_9">神秘知识点<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
-<li>
-<p><code>(l&lt;x&lt;r)</code> 可以过编译，等价于 <code>((l&lt;x)&lt;r)</code>。如 <code>(2&lt;x&lt;5)</code> 的值一定是 True，<code>(-4&lt;x&lt;-2)</code> 的值一定是 False。</p>
-</li>
-<li>
-<p>自增自减的对象只能是变量，不能是常量或表达式。</p>
-</li>
-<li><code>a[i]</code> 本质是 <code>*(a+i)</code>，所以 <code>char *p=&amp;a[-1]</code> 可以过编译，<code>p</code> 指向 <code>a[0]</code> 前一个内存单位。</li>
 <li>C 语言 <code>math.h</code> 只有 <code>int abs(int x);</code> 没有 <code>double abs(double x);</code>，所以 <code>abs(-3.14)</code> 的结果是 3 而非 3.14。</li>
 </ul>
 
