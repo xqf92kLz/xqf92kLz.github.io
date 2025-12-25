@@ -145,6 +145,8 @@
     Awareness reduces bias.
 
     More girls enter STEM.
+    
+- I think gender equality has improved a lot in education and legal rights. For example, women now have equal access to universities and professional training. However, there are still areas that need improvement, especially in the workplace. A clear example is the gender pay gap, where women often earn less than men for similar work. In addition, women are still expected to take more responsibility for housework. So although progress has been made, true equality has not been fully achieved yet.
 
 ### 5. Power of words (reading, new forms of communication, language learning)
 
@@ -282,7 +284,14 @@
 
 I agree with what you said, especially about …
 
-I think both of you made really good points, especially about .... I’d like to add that…
+I agree with all of you that .... I’d like to add that… However, I personally think...
+
+This is just my personal view, and maybe you could explain it further or look at it from a different angle.
+
+I think ... For example, ... .However, ... .A clear example is ... In addition, ... .So although ..., ... .
 
 So overall, I think the issue is not about whether it is good or bad, but how we manage it in a balanced and responsible way.
 
+So overall, I think it's not an either-or situation between A and B. Rather than seeing A and B as opposites, we can view them as complementary parts of a balanced approach.
+
+So overall, gender equality has improved in many areas, but there is still work to do, especially in pay, leadership, and household roles. True equality requires ongoing effort from everyone.
