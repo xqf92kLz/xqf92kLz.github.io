@@ -2578,7 +2578,7 @@
 
   <h1>第五章 定积分及其应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-25'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-25T01:37:03.166192+00:00'>2025-12-25</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-25'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-25T01:37:03.166192+00:00'>2025-12-25</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-27'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-27T12:51:37.565838+00:00'>2025-12-27</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-27'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-27T12:51:37.565838+00:00'>2025-12-27</time></span></div></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">定积分概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3235,6 +3235,10 @@
 <p>若 <span class="arithmatex">\(\xi_n=\dfrac n{n+1}\)</span>，则 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\xi_n^n=\lim\limits_{n\to +\infty}(\dfrac n{n+1})^n=\dfrac 1 3\neq 0\)</span>。</p>
 </details>
 </details>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>有界函数 <span class="arithmatex">\(\times\)</span> 趋于零的函数，积分趋于零。用夹逼定理证明。</p>
+</details>
 <p>由于 <span class="arithmatex">\(0\leq \dfrac{x^n}{x+1}\leq x^n\)</span>，故 <span class="arithmatex">\(0\leq \int_0^1\dfrac{x^n}{x+1}\text dx\leq \int_0^1x^n\text dx=\dfrac 1 {n+1}\)</span>。</p>
 <p>而 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\dfrac 1 {n+1}=0\)</span>，故 <span class="arithmatex">\(\lim\limits_{n\to +\infty}\int_0^1\dfrac{x^n}{x+1}\text dx=0\)</span>。</p>
 </details>
@@ -3296,12 +3300,19 @@
 </li>
 <li>
 <p>含积分的函数方程</p>
+<p>技巧：</p>
+<ul>
+<li>方程中含 <span class="arithmatex">\(\int_0^x f(t)dt\)</span> 或类似变限积分 → 求导</li>
+<li>方程中含 <span class="arithmatex">\(\int_0^1 f(x)dx\)</span> 等常数积分 → 设该常数为 <span class="arithmatex">\(k\)</span></li>
+<li>被积函数含 <span class="arithmatex">\(f(x-t)\)</span> 等形式 → 令 <span class="arithmatex">\(u=x-t\)</span> 换元</li>
+</ul>
 <details class="example">
 <summary>例题</summary>
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathbb R\)</span> 上连续，且 <span class="arithmatex">\(f(x)=\int_0^x e^{x-t}f(t)\text dt+e^x\)</span>，求 <span class="arithmatex">\(f(x)\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
-<p><span class="arithmatex">\(e^{-x}f(x)=\int_0^x e^{-t}f(t)\text dt+1\)</span></p>
+<p>观察到 <span class="arithmatex">\(e^{x-t} = e^x·e^{-t}\)</span>，可分离出 <span class="arithmatex">\(e^x\)</span></p>
+<p><span class="arithmatex">\(f(x)=e^x\int_0^x e^{-t}f(t)dt + e^x\)</span></p>
 <p>记 <span class="arithmatex">\(g(x)=e^{-x}f(x)\)</span>，则 <span class="arithmatex">\(g(x)=\int_0^x g(t)\text dt+1\)</span>。</p>
 <p>两边求导，得 <span class="arithmatex">\(g'(x)=g(x)\)</span>。</p>
 <p><span class="arithmatex">\(g(x)-g'(x)=0\)</span>，<span class="arithmatex">\((e^{-x}g(x))'=0\)</span>，<span class="arithmatex">\(e^{-x}g(x)=C\)</span>（<span class="arithmatex">\(C\)</span> 为常数），则 <span class="arithmatex">\(g(x)=C\cdot e^x\)</span>。</p>
@@ -3349,6 +3360,13 @@
 </li>
 <li>
 <p>定积分不等式</p>
+<p>技巧：</p>
+<ul>
+<li>构造辅助函数：将上限 <span class="arithmatex">\(b\)</span> 改为 <span class="arithmatex">\(x\)</span>，构造 <span class="arithmatex">\(F(x)\)</span>，看单调性</li>
+<li>常数化为积分：<span class="arithmatex">\(C = \dfrac{1}{b-a}\int_a^b C dx\)</span></li>
+<li>联系 <span class="arithmatex">\(f\)</span> 与 <span class="arithmatex">\(f'\)</span>：<span class="arithmatex">\(f(x) = f(a) + \int_a^x f'(t)dt\)</span></li>
+<li>高阶导数：泰勒展开。在区间中点展开，利用 <span class="arithmatex">\(f(\frac{a+b}{2})=0\)</span> 等条件</li>
+</ul>
 <details class="example">
 <summary>例题</summary>
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且单调递增，证明：<span class="arithmatex">\(\int_a^b xf(x)\text dx\geq \dfrac{a+b}2\int_a^b f(x)\text dx\)</span>。</p>
@@ -3370,15 +3388,15 @@
 <details class="abstract" open="open">
 <summary>Abstract</summary>
 <p>即证 <span class="arithmatex">\(\int_a^b (x-\dfrac{a+b}2)f(x)\text dx\geq 0\)</span></p>
-<p>注意到 <span class="arithmatex">\(\int_a^b (x-\dfrac{a+b}2)f(x)=0\)</span>，故即证 <span class="arithmatex">\(\int_a^b (x-\dfrac{a+b}2)[f(x)-f(\dfrac{a+b}2)]\text dx\geq 0\)</span></p>
+<p>注意到 <span class="arithmatex">\(\int_a^b (x-\dfrac{a+b}2)\cdot k\text dx=0\)</span>，故即证 <span class="arithmatex">\(\int_a^b (x-\dfrac{a+b}2)[f(x)-f(\dfrac{a+b}2)]\text dx\geq 0\)</span></p>
 </details>
 <p>由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上单调递增，故 <span class="arithmatex">\((x-\dfrac{a+b}2)[f(x)-f(\dfrac{a+b}2)]\geq 0\)</span></p>
-<p>两边求定积分，<span class="arithmatex">\(\int_a^b (x-\dfrac{a+b}2)[f(x)-f(\dfrac{a+b}2)\text dx=\int_a^b (x-\dfrac{a+b}2)f(x)\text dx\geq 0\)</span></p>
+<p>两边求定积分，<span class="arithmatex">\(\int_a^b (x-\dfrac{a+b}2)[f(x)-f(\dfrac{a+b}2)]\text dx=\int_a^b (x-\dfrac{a+b}2)f(x)\text dx\geq 0\)</span></p>
 <p>故 <span class="arithmatex">\(\int_a^bxf(x)\text dx\geq \dfrac{a+b}2\int_a^b f(x)\text dx\)</span></p>
 </li>
 </ul>
 </details>
-<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,]\)</span> 上有连续导数，证明：对 <span class="arithmatex">\(\forall x\in[0,1]\)</span>，有 <span class="arithmatex">\(|f(x)|\leq\int_0^1 [|f(x)|+|f'(x)|]\text dx\)</span>。</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上有连续导数，证明：对 <span class="arithmatex">\(\forall x\in[0,1]\)</span>，有 <span class="arithmatex">\(|f(x)|\leq\int_0^1 [|f(x)|+|f'(x)|]\text dx\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
 <details class="abstract" open="open">
@@ -3540,11 +3558,12 @@
 <p><span class="arithmatex">\(I\xlongequal{x=\frac \pi 2-u}\int_0^{\frac\pi 2}\dfrac{\sqrt{\cos u}}{\sqrt{\cos u}+\sqrt{\sin u}}\text du=J\)</span></p>
 <p><span class="arithmatex">\(I+J=\int_0^{\frac\pi 2}\text dx=\dfrac\pi 2\)</span></p>
 <p>故 <span class="arithmatex">\(I=\dfrac\pi 4\)</span></p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>更一般地，有 <span class="arithmatex">\(\int_0^{\frac\pi 2}\dfrac{\sin^{\alpha}}{\sin^{\alpha}x+\cos^{\alpha}x}\text dx=\dfrac\pi 4\,(\alpha&gt;0)\)</span>。</p>
+<p>同样可以计算 <span class="arithmatex">\(\int_0^{\frac\pi 2}\dfrac{\text dx}{1+\tan^{\alpha}x}=\int_0^{\frac\pi 2}\dfrac{\text dx}{1+\cot^{\alpha}x}=\dfrac\pi 4\)</span>。</p>
 </details>
-<p>???+ tip
-      更一般地，有 <span class="arithmatex">\(\int_0^{\frac\pi 2}\dfrac{\sin^{\alpha}}{\sin^{\alpha}x+\cos^{\alpha}x}\text dx=\dfrac\pi 4\,(\alpha&gt;0)\)</span>。</p>
-<div class="highlight"><pre><span></span><code>  同样可以计算 $\int_0^{\frac\pi 2}\dfrac{\text dx}{1+\tan^{\alpha}x}=\int_0^{\frac\pi 2}\dfrac{\text dx}{1+\cot^{\alpha}x}=\dfrac\pi 4$。
-</code></pre></div>
+</details>
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(a)=0\)</span>，证明：<span class="arithmatex">\(\int_a^b[f(x)]^2\text dx\leq\dfrac{(b-a)^2}2\int_a^b [f'(x)]^2\text dx\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
@@ -3553,9 +3572,9 @@
 <p>建立 <span class="arithmatex">\(f\)</span> 与 <span class="arithmatex">\(f'\)</span> 的联系：<span class="arithmatex">\(f(x)=\int_c^x f'(t)\text dt+f(c)\)</span>。</p>
 </details>
 <p><span class="arithmatex">\(f(x)=\int_a^x f'(t)\text dt+f(a)=\int_a^x f'(t)\text dt\)</span></p>
-</details>
 <p>由柯西不等式，<span class="arithmatex">\([f(x)]^2=[\int_a^x f'(t)\text dt]^2\leq \int_a^x 1^2\text dt\int_a^x [f'(t)]^2\text dt\leq (x-a)\int_a^b [f'(t)]^2\text dt\)</span>，其中 <span class="arithmatex">\(\int_a^b [f'(t)]^2\text dt\)</span> 是常数</p>
 <p>故 <span class="arithmatex">\(\int_a^b [f(x)]^2\text dx\leq \int_a^b[(x-a)\int_a^b [f'(t)]^2t]\text dx=\int_a^b [f'(t)]^2 t\cdot \dfrac 1 2 (x-a)^2\vert_a^b=\dfrac{(b-a)^2}2\int_a^b[f'(x)]^2\text dx\)</span></p>
+</details>
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(f(a)=f(b)=0\)</span>，证明：<span class="arithmatex">\(\int_a^b [f(x)]^2\text dx\leq \dfrac{(b-a)^2}8\int_a^b [f'(x)]^2\text dx\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
@@ -3668,6 +3687,8 @@
         <script src="../../../assets/document_dates/tippy/popper.min.js"></script>
       
         <script src="../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../../assets/document_dates/core/md5.min.js"></script>
       
         <script src="../../../assets/document_dates/core/default.config.js"></script>
       

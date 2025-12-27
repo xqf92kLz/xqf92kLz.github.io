@@ -2517,6 +2517,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定积分的应用
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2541,7 +2552,7 @@
 
   <h1>5'</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-25'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-25T01:37:03.166192+00:00'>2025-12-25</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-25'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-25T01:37:03.166192+00:00'>2025-12-25</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-27'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-27T12:51:37.564838+00:00'>2025-12-27</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-27'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-27T12:51:37.564838+00:00'>2025-12-27</time></span></div></div></div>
 <h2 id="_1">定积分的概念和性质<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">定积分的概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2746,11 +2757,48 @@
 <p><strong>法 2：</strong></p>
 <p><span class="arithmatex">\(\forall k\in \mathbb R\)</span>，<span class="arithmatex">\([f(x)-kg(x)]^2\geq 0\)</span>。</p>
 <p><span class="arithmatex">\(\int_a^b [f(x)-kg(x)]^2\text dx\geq 0\)</span></p>
-<p>即 <span class="arithmatex">\(\int_a^b f^2(x)\text dx-2k\int_a^b f(x)g(x)\text dx+k^2\int_a^b g^2(x)\text dx\geq 0\)</span>，看成关于 <span class="arithmatex">\(k\)</span> 的一元二次多项式，则有：</p>
-<p><span class="arithmatex">\(\Delta =4(\int_a^b f(x)g(x)\text dx)^2-4\int_a^b g^2(x)\text dx\cdot\int_a^b f^2(x)\text dx\leq 0\)</span></p>
+<p><span class="arithmatex">\(\int_a^b f^2(x)\text dx-2k\int_a^b f(x)g(x)\text dx+k^2\int_a^b g^2(x)\text dx\geq 0\)</span></p>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(\int_a^b g^2(x)\text dx=0\)</span>，则 <span class="arithmatex">\(\forall x\in[a,b],g(x)=0\)</span>，结论显然成立。</p>
+</li>
+<li>
+<p>否则，<span class="arithmatex">\(\Delta =4(\int_a^b f(x)g(x)\text dx)^2-4\int_a^b g^2(x)\text dx\cdot\int_a^b f^2(x)\text dx\leq 0\)</span></p>
 <p>即 <span class="arithmatex">\([\int_a^bf(x)g(x)\text dx]^2\leq\int_a^b f^2(x)\text dx\cdot\int_a^b g^2(x)\text dx\)</span>。</p>
 </li>
 </ul>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(f(x)\)</span> 连续且为奇函数，则 <span class="arithmatex">\(\int_0^x f(t)\text dt,\int_a^x f(t)\text dt\)</span> 为偶函数。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(F(x)=\int_0^x f(t)\text dt\)</span></p>
+<p><span class="arithmatex">\(F(-x)=\int_0^{-x}f(t)\text dt\xlongequal{t=-u}\int_0^x f(-u)\text d(-u)=\int_0^x f(u)\text du=F(x)\)</span></p>
+<p>且 <span class="arithmatex">\(\int_a^x f(t)\text dt=\int_a^0 f(t)\text dt+\int_0^x f(t)\text dt\)</span>，偶 = 偶 + 偶</p>
+</details>
+<p>若 <span class="arithmatex">\(f(x)\)</span> 连续且为偶函数，则 <span class="arithmatex">\(\int_0^x f(t)\text dt\)</span> 为奇函数。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(F(x)=\int_0^x f(t)\text dt\)</span></p>
+<p><span class="arithmatex">\(F(-x)=\int_0^{-x}f(t)\text dt\xlongequal{t=-u}\int_0^x f(-u)\text d(-u)=-\int_0^x f(u)\text du=-F(x)\)</span></p>
+<p>但 <span class="arithmatex">\(\int_a^x f(t)\text dt=\int_a^0 f(t)\text dt+\int_0^x f(t)\text dt\)</span>，不一定 = 偶 + 奇</p>
+</details>
+<p>若 <span class="arithmatex">\(f(x)\)</span> 连续且有周期 <span class="arithmatex">\(T\)</span>，则 <span class="arithmatex">\(\forall a\)</span>，有 <span class="arithmatex">\(\int_a^{a+T}f(x)\text dx=\int_0^T f(x)\text dx\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\int_a^{a+T}=\int_a^0 f(x)\text dx+\int_0^T f(x)\text dx+\int_T^{a+T}f(x)\text dx\)</span></p>
+<p>其中 <span class="arithmatex">\(\int_T^{a+T}f(x)\text dx\xlongequal{x-T=u}\int_0^a f(u+T)\text du=\int_0^a f(u)\text du\)</span></p>
+<p>则 <span class="arithmatex">\(\forall a\)</span>，<span class="arithmatex">\(\int_a^{a+T}f(x)\text dx=\int_0^T f(x)\text dx\)</span></p>
+</details>
+<p>若 <span class="arithmatex">\(f(x)\)</span> 连续且有周期 <span class="arithmatex">\(T\)</span>，则 <span class="arithmatex">\(\int_a^x f(t)\text dt\)</span> 有周期 <span class="arithmatex">\(T\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\int_0^T f(x)\text dx=0\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(F(x)=\int_a^x f(t)\text dt\)</span></p>
+<p><span class="arithmatex">\(F(x+T)=\int_a^{x+T}f(t)\text dt=\int_a^x f(t)\text dt+\int_x^{x+T}f(t)\text dt=F(x)+\int_0^T f(t)\text dt\)</span></p>
+<p>故 <span class="arithmatex">\(F(x+T)=F(x)\Leftrightarrow \int_0^T f(t)\text dt=0\)</span></p>
 </details>
 </li>
 </ul>
@@ -2977,7 +3025,7 @@
 </details>
 </li>
 <li>
-<p>华理士公式：<span class="arithmatex">\(\int_0^{\frac\pi 2}\sin^n x\text dx=\int_0^{\frac \pi 2}\cos^n x\text dx=\begin{cases}\dfrac{(n-1)!!}{n!!}\cdot\dfrac\pi 2,&amp;n\geq 2\land 2\mid n\\\dfrac{(n-1)!!}{n!!},&amp;n\geq 3\land 2\nmid n\end{cases}\)</span></p>
+<p>华里士公式：<span class="arithmatex">\(\int_0^{\frac\pi 2}\sin^n x\text dx=\int_0^{\frac \pi 2}\cos^n x\text dx=\begin{cases}\dfrac{(n-1)!!}{n!!}\cdot\dfrac\pi 2,&amp;n\geq 2\land 2\mid n\\\dfrac{(n-1)!!}{n!!},&amp;n\geq 3\land 2\nmid n\end{cases}\)</span></p>
 </li>
 <li><span class="arithmatex">\(\int_0^{2\pi}\sin^n x\text dx=\int_0^{2\pi}\cos^n x\text dx=\begin{cases}4\int_0^{\frac\pi 2}\sin^n x\text dx,&amp;2\mid n\\0,&amp;2\nmid n\end{cases}\)</span></li>
 </ul>
@@ -3053,7 +3101,7 @@
 </li>
 <li>
 <p>无穷区间上的反常积分</p>
-<ul>
+<ol>
 <li>
 <p>积分区间 <span class="arithmatex">\([a,+\infty)\)</span>：设函数 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([a,+\infty)\)</span> 上连续，若 <span class="arithmatex">\(\lim\limits_{t\to +\infty}\int_a^t f(x)\text dx\)</span> 存在，则称此极限为 <span class="arithmatex">\(f(x)\)</span> 在无穷区间 <span class="arithmatex">\([a,+\infty)\)</span> 上的反常积分，记作 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span>，即</p>
 <p><span class="arithmatex">\(\int_a^{+\infty}f(t)\text dt=\lim\limits_{t\to +\infty}\int_a^t f(x)\text dx\)</span>（<span class="arithmatex">\(=\lim\limits_{t\to +\infty}[F(t)-F(a)]=F(+\infty)-F(a)\)</span>）</p>
@@ -3077,9 +3125,7 @@
 <p><span class="arithmatex">\(\int_{-\infty}^{+\infty}f(x)\text dx=\int_{-\infty}^a f(x)\text dx+\int_a^{+\infty}f(x)\text dx=\lim\limits_{t\to -\infty}\int_t^a f(x)\text dx+\lim\limits_{t\to +\infty}\int_a^t f(x)\text dx\)</span></p>
 <p>这是也称反常积分 <span class="arithmatex">\(\int_{-\infty}^{+\infty}f(x)\text dx\)</span> 收敛。否则，称反常积分 <span class="arithmatex">\(\int_{-\infty}^{+\infty}f(x)\text dx\)</span> 发散。</p>
 </li>
-</ul>
-</li>
-</ul>
+</ol>
 <p>注：</p>
 <p>① <span class="arithmatex">\(\int_a^{+\infty}f(t)\text dt\)</span> 的几何意义：曲线 <span class="arithmatex">\(y=f(x)\)</span> 与直线<span class="arithmatex">\(x=a\)</span>、<span class="arithmatex">\(x\)</span> 轴所围向 <span class="arithmatex">\(+\infty\)</span> 伸展图形面积的代数和。</p>
 <p>② 收敛反常积分性质和计算法与定积分相同，分部积分法与换元积分法对反常积分也成立；</p>
@@ -3109,7 +3155,7 @@
 </ul>
 </details>
 </details>
-<ul>
+</li>
 <li>
 <p>无界函数的反常积分（瑕积分）</p>
 <p>设 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(a\)</span> 的任何一个邻域内都无界，则称 <span class="arithmatex">\(a\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的瑕点（即无界间断点），包含了瑕点的定积分就是瑕积分（即无界函数的反常积分）</p>
@@ -3123,7 +3169,7 @@
 <p><span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{\ln x}{x-1}=+\infty\)</span> 无界，<span class="arithmatex">\(x=0\)</span> 是瑕点</p>
 </details>
 </details>
-<ul>
+<ol>
 <li>
 <p>瑕点为下限：设函数 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\((a,b]\)</span> 上连续，点 <span class="arithmatex">\(a\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的瑕点，若 <span class="arithmatex">\(\lim\limits_{t\to a^+}\int_t^b f(x)\text dx\)</span> 存在，则称此极限为 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((a,b]\)</span> 上的反常积分，仍然记作 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span>，即</p>
 <p><span class="arithmatex">\(\int_a^b f(x)\text dx=\lim\limits_{x\to a^+}\int_x^b f(t)\text dt=F(x)\vert_{a^+}^b=F(b)-F(a^+)\)</span></p>
@@ -3143,7 +3189,7 @@
 <p><span class="arithmatex">\(\int_{-1}^1\dfrac 1 x\text dx=\int_{-1}^0\dfrac 1 x\text dx+\int_0^1 \dfrac 1 x \text dx\)</span>，拆出来的两个都发散，所以 <span class="arithmatex">\(\int_{-1}^1\dfrac 1 x\text dx\)</span> 发散（而非 <span class="arithmatex">\(0\)</span>）。</p>
 </details>
 </li>
-</ul>
+</ol>
 <p>注：形如 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 不一定是定积分，还可能是瑕积分，计算前要先分清再计算。</p>
 <details class="example" open="open">
 <summary>例题</summary>
@@ -3178,9 +3224,165 @@
 <li>
 <p>比较审敛原理</p>
 <p>设函数 <span class="arithmatex">\(f(x),g(x)\)</span> 在区间 <span class="arithmatex">\([a,+\infty)\)</span> 上连续，若始终有 <span class="arithmatex">\(0\leq f(x)\leq g(x)\)</span> 且 <span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 收敛，则 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 也收敛；若 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 发散，则 <span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 也发散。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>判断反常积分的敛散性：<span class="arithmatex">\(\int_1^{+\infty}\dfrac{|\sin x|}{\sqrt{1+x^3}}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(0\leq \dfrac{|\sin x|}{\sqrt{1+x^3}}\leq \dfrac 1 {x^{\frac 3 2}}\)</span></p>
+<p>由 <span class="arithmatex">\(\int_1^{+\infty}\dfrac 1 {x^{\frac 3 2}}\text dx\)</span> 收敛，得原积分收敛。</p>
+</details>
+</details>
 </li>
 <li>
-<p>极限审敛法</p>
+<p>极限审敛法（比较审敛法极限形式）</p>
+<ol>
+<li>
+<p>无穷限反常积分：<span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span>，<span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,+\infty)\)</span> 上连续，<span class="arithmatex">\(f(x),g(x)\geq 0\)</span>。</p>
+<p>① 若 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{f(x)}{g(x)}=+\infty\)</span>，且 <span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 发散，则 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 发散；</p>
+<p>② 若 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{f(x)}{g(x)}=0\)</span>，且 <span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 收敛，则 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 收敛；</p>
+<p>③ 若 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{f(x)}{g(x)}=l\,(l\neq 0)\)</span>，则 <span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 与 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 敛散性相同。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>判断反常积分的敛散性：<span class="arithmatex">\(\int_2^{+\infty}\dfrac{\text dx}{2x+\sqrt[3]{x^2+1}+5}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\dfrac{1}{2x+\sqrt[3]{x^2+1}+5}\sim \dfrac{1}{2x}\)</span>，<span class="arithmatex">\(x\to +\infty\)</span></p>
+<p>由 <span class="arithmatex">\(\int_2^{+\infty}\dfrac 1 {2x}\text dx\)</span> 发散，则原积分发散。</p>
+</details>
+</details>
+</li>
+<li>
+<p>无界函数反常积分（瑕积分）：</p>
+<p><span class="arithmatex">\(\int_a^b f(x)\text dx\)</span>，<span class="arithmatex">\(x=a\)</span> 为瑕点，<span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\((a,b]\)</span> 上连续，<span class="arithmatex">\(f(x),g(x)\geq 0\)</span>。</p>
+<p>① 若 <span class="arithmatex">\(\lim\limits_{x\to a^+}\dfrac{f(x)}{g(x)}=+\infty\)</span>，且 <span class="arithmatex">\(\int_a^b g(x)\text dx\)</span> 发散，则 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 发散；</p>
+<p>② 若 <span class="arithmatex">\(\lim\limits_{x\to a^+}\dfrac{f(x)}{g(x)}=0\)</span>，且 <span class="arithmatex">\(\int_a^b g(x)\text dx\)</span> 收敛，则 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 收敛；</p>
+<p>③ 若 <span class="arithmatex">\(\lim\limits_{x\to a^+}\dfrac{f(x)}{g(x)}=l\,(l\neq 0)\)</span>，在 <span class="arithmatex">\(\int_a^b g(x)\text dx\)</span> 与 <span class="arithmatex">\(\int_a^b f(x)\text dx\)</span> 敛散性相同。</p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算反常积分 <span class="arithmatex">\(\int_0^2 \dfrac{\text dx}{\sqrt{2x-x^2}}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>瑕点 <span class="arithmatex">\(x=0\)</span>，<span class="arithmatex">\(x=2\)</span></p>
+<p><span class="arithmatex">\(I=\int_0^1\dfrac{1}{\sqrt{x(2-x)}}\text dx+\int_1^2 \dfrac 1 {\sqrt{x(2-x)}}\text dx\)</span></p>
+<p>若拆开后，两个瑕积分都收敛，计算可以不拆</p>
+<p>step1：判敛</p>
+<p><span class="arithmatex">\(x\to 0^+\)</span>，<span class="arithmatex">\(\dfrac{1}{\sqrt{x(2-x)}}\sim \dfrac 1 {\sqrt {2x}}\)</span></p>
+<p>由 <span class="arithmatex">\(\int_0^ \dfrac{1}{\sqrt{2x}}\text dx\)</span> 收敛，得 <span class="arithmatex">\(\int_0^1\dfrac{1}{\sqrt{x(2-x)}}\text dx\)</span> 收敛。</p>
+<p><span class="arithmatex">\(x\to 2^-\)</span>，<span class="arithmatex">\(\dfrac{1}{\sqrt{x(2-x)}}\sim \dfrac{1}{\sqrt{2(2-x)}}\)</span></p>
+<p>由 <span class="arithmatex">\(\int_1^2 \dfrac 1 {\sqrt{2(2-x)}}\text dx\)</span> 收敛，得 <span class="arithmatex">\(\int_1^2\dfrac 1 {\sqrt{x(2-x)}}\text dx\)</span> 收敛。</p>
+<p>step2：计算</p>
+<p><span class="arithmatex">\(I=\int_0^2 \dfrac{\text d(x-1)}{\sqrt{1-(x-1)^2}}=\arcsin(x-1)\vert_0^2=\dfrac\pi 2-(-\dfrac\pi 2)=\pi\)</span></p>
+<p>若不判敛，拆两个积分分别算（极限存在即收敛）</p>
+</details>
+<p>判断反常积分的敛散性：<span class="arithmatex">\(\int_0^1 \dfrac{1}{\sqrt[3]{x(e^x-e^{-x})}}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\dfrac{1}{\sqrt[3]{x(e^x-e^{-x})}}\sim \dfrac{1}{\sqrt[3]{x\cdot e^{-x}(e^{2x}-1)}}\sim \dfrac 1 {\sqrt[3]{x(e^{2x}-1)}}\sim \dfrac 1 {\sqrt[3]{2x^2}}\)</span>，<span class="arithmatex">\(x\to 0^+\)</span></p>
+<p><span class="arithmatex">\(\lim\limits_{x\to 0^+}\dfrac{\dfrac{1}{\sqrt[3]{x(e^x-e^{-x})}}}{\sqrt[3]{2x^2}}=1\neq 0\)</span></p>
+<p>由 <span class="arithmatex">\(\int_0^1\dfrac{1}{\sqrt[3]{2x^2}}\text dx\)</span> 收敛，得原积分收敛。</p>
+</details>
+</details>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="_14">定积分的应用<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>平面图形的面积</p>
+<ol>
+<li>
+<p>直角坐标</p>
+<ul>
+<li>
+<p>X 型：曲线 <span class="arithmatex">\(y=f(x)\)</span> 及直线 <span class="arithmatex">\(x=a,x=b\,(a&lt;b)\)</span> 与 <span class="arithmatex">\(x\)</span> 轴所围成的曲边梯形面积 <span class="arithmatex">\(S=\int_a^b |f(x)|\text dx\)</span></p>
+<p>Y 型：曲线 <span class="arithmatex">\(x=\varphi(y)\)</span> 及直线 <span class="arithmatex">\(y=c,y=d\,(c&lt;d)\)</span> 与 <span class="arithmatex">\(y\)</span> 轴所围成的曲边梯形的面积 <span class="arithmatex">\(S=\int_c^d|\varphi(y)|\text dy\)</span></p>
+</li>
+<li>
+<p>X 型：曲线 <span class="arithmatex">\(y=f(x),y=g(x)\)</span> 及直线 <span class="arithmatex">\(x=a,x=b\,(a&lt;b)\)</span> 所围成的曲边梯形面积 <span class="arithmatex">\(S=\int_a^b |f(x)-g(x)|\text dx\)</span></p>
+<p>Y 型：曲线 <span class="arithmatex">\(x=\varphi(y),x=\psi(y)\)</span> 及直线 <span class="arithmatex">\(y=c,y=d\,(c&lt;d)\)</span> 所围成的曲边梯形面积 <span class="arithmatex">\(S=\int_c^d|\varphi(y)-\psi(y)|\text dy\)</span></p>
+</li>
+</ul>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>求由曲线 <span class="arithmatex">\(y=\dfrac 4 x\)</span>，直线 <span class="arithmatex">\(y=x\)</span> 及 <span class="arithmatex">\(y=4x\)</span> 在第一象限围成的平面图形面积。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\dfrac 4 x=4x\Rightarrow x=1\)</span></p>
+<p><span class="arithmatex">\(\dfrac 4 x=x\Rightarrow x=2\)</span></p>
+<p><span class="arithmatex">\(A=\int_0^1(4x-x)\text dx+\int_1^2(\dfrac 4 x-x)=\dfrac 3 2 x^2\vert_0^1+(4\ln x-\dfrac 1 2 x^2)\vert_1^2=4\ln 2\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>极坐标</p>
+<ul>
+<li>
+<p>曲线 <span class="arithmatex">\(\rho=\rho(\theta)\)</span> 及射线 <span class="arithmatex">\(\theta=\alpha,\theta=\beta\,(\alpha&lt;\beta)\)</span> 所围成的曲边扇形面积 <span class="arithmatex">\(S=\dfrac 1 2 \int_{\alpha}^{\beta}\rho^2(\theta)\text d\theta\)</span></p>
+</li>
+<li>
+<p>曲线 <span class="arithmatex">\(\rho_1=\rho_1(\theta),\rho_2=\rho_2(\theta)\)</span> 及射线 <span class="arithmatex">\(\theta=\alpha,\theta=\beta\,(\alpha&lt;\beta)\)</span> 所围成的平面图形面积 <span class="arithmatex">\(S=\dfrac 1 2 \int_{\alpha}^{\beta}[\rho_2^2(\theta)-\rho_1^2(\theta)]\text d\theta\)</span></p>
+</li>
+</ul>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>求心形线 <span class="arithmatex">\(\rho=a(1+\cos\theta)\,(a&gt;0)\)</span> 所围平面图形的面积。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\begin{aligned}A&amp;=\dfrac 1 2\int_0^{2\pi}\rho^2(\theta)\text d\theta\\&amp;=\dfrac 1 2 \int_0^{2\pi}a^2(1+\cos\theta)^2\text d\theta\\&amp;=2\cdot\dfrac 1 2 \cdot a^2\int_0^\pi (1+\cos\theta)^2\text d\theta\\&amp;=a^2\int_0^\pi(1+2\cos \theta+\cos^2\theta)\text d\theta\\&amp;=a^2(\pi+2\int_0^{\pi}\cos^2\theta\text d\theta)\\&amp;=a^2(\pi+2\cdot\dfrac 1 2\cdot\dfrac\pi 2)\\&amp;=\dfrac 3 2\pi a^2\end{aligned}\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>参数方程</p>
+<p>设曲线 <span class="arithmatex">\(C\)</span> 的参数方程 <span class="arithmatex">\(\begin{cases}x=x(t)\\y=y(t)\end{cases}\,(\alpha\leq t\leq \beta)\)</span>，则由该曲线，<span class="arithmatex">\(x=a,x=b\)</span> 以及 <span class="arithmatex">\(x\)</span> 轴所围成的平面图形面积 <span class="arithmatex">\(S=\int_{\alpha}^{\beta}y(t)\text d(x(t))=\int_{\alpha}^{\beta}y(t)x'(t)\text dt\)</span></p>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>求摆线 <span class="arithmatex">\(\begin{cases}x=a(t-\sin t)\\y=a(1-\cos t)\end{cases}\,(a&gt;0)\)</span> 的一供与 <span class="arithmatex">\(x\)</span> 轴所围平面图形的面积。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\begin{aligned}A&amp;=\int_0^{2\pi} y(t)x'(t)\text dt\\&amp;=\int_0^{2\pi}a(1-\cos t)\cdot a(1-\cos t)\text dt\\&amp;=a^2\int_0^{2\pi}(1-2\cos t+\cos^2 t)\text dt\\&amp;=2\pi a^2+4a^2\int_0^{\frac\pi 2}\cos^t\text dt\\&amp;=3\pi a^2\end{aligned}\)</span></p>
+</details>
+</details>
+</li>
+</ol>
+</li>
+<li>
+<p>旋转体的体积</p>
+<ul>
+<li>
+<p>X 型：<span class="arithmatex">\(y=f(x)\)</span> 为 <span class="arithmatex">\([a,b]\)</span> 上的单值连续函数，<span class="arithmatex">\(f(x)\geq 0\)</span>，则由曲线 <span class="arithmatex">\(y=f(x)\)</span> 与直线 <span class="arithmatex">\(x=a,x=b\)</span> 和 <span class="arithmatex">\(x\)</span> 轴围成的平面图形绕 <span class="arithmatex">\(x\)</span> 轴旋转一周所成旋转体体积 <span class="arithmatex">\(V_x=\pi\int_a^b f^2(x)\text dx\)</span>，绕 <span class="arithmatex">\(y\)</span> 轴旋转一周的体积 <span class="arithmatex">\(V_y=2\pi \int_a^b x|f(x)|\text dx\)</span></p>
+</li>
+<li>
+<p>Y 型：<span class="arithmatex">\(x=\varphi(y)\)</span> 为 <span class="arithmatex">\([a,b]\)</span> 上的单值连续函数，<span class="arithmatex">\(\varphi(y)\geq 0\)</span>，则由曲线 <span class="arithmatex">\(y=f(x)\)</span> 与直线 <span class="arithmatex">\(y=a,y=b\)</span> 和 <span class="arithmatex">\(y\)</span> 轴围成的平面图形绕 <span class="arithmatex">\(y\)</span> 轴旋转一周所成旋转体体积 <span class="arithmatex">\(V_y=\pi\int_a^b g^2(y)\text dy\)</span>，绕 <span class="arithmatex">\(x\)</span> 轴旋转一周的体积 <span class="arithmatex">\(V_x=2\pi \int_a^b y|g(y)|\text dy\)</span></p>
+</li>
+</ul>
+<details class="example" open="open">
+<summary>例题</summary>
+<p><span class="arithmatex">\(y=f(x)\)</span> 与 <span class="arithmatex">\(x=a,x=b\)</span> 和 <span class="arithmatex">\(x\)</span> 轴围成的图形，绕 <span class="arithmatex">\(y=-\)</span> 旋转一周，求旋转体的体积。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(V=V_大-V_小=\int_a^b \pi (f(x)+)^2\text dx-\pi\cdot 1\cdot (b-a)\)</span></p>
+</details>
+<p>设两曲线 <span class="arithmatex">\(y=a\sqrt x\,(a&gt;0)\)</span> 与 <span class="arithmatex">\(y=\ln\sqrt x\)</span> 在 <span class="arithmatex">\((x_0,y_0)\)</span> 处有共切线，求这两曲线与 <span class="arithmatex">\(x\)</span> 轴围成的平面图形绕 <span class="arithmatex">\(x\)</span> 轴旋转而成的旋转体的体积 <span class="arithmatex">\(V\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>在 <span class="arithmatex">\((x_0,y_0)\)</span> 处有共切线，则 <span class="arithmatex">\(\begin{cases}y_1(x_0)=y_2(x_0)\Rightarrow a\sqrt{x_0}=\ln \sqrt{x_0}\\y_1'(x_0)=y_2'(x_0)\Rightarrow \dfrac a {2\sqrt{x_0}}=\dfrac 1 {2x_0}\end{cases}\Rightarrow \begin{cases}x_0=e^2\\a=\dfrac 1 e\end{cases}\)</span></p>
+<ul>
+<li>
+<p><strong>法 1：</strong>（圆盘法）</p>
+<p><span class="arithmatex">\(V=\int_0^{e^2}\pi\cdot(\dfrac{\sqrt x}{e})^2\text dx-\int_1^{e^2}\pi(\ln\sqrt x)^2\text dx=\dfrac \pi 2e^2-\dfrac\pi 2(e^2-1)=\dfrac\pi 2\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong>（柱壳法）</p>
+<p><span class="arithmatex">\(y=\dfrac{\sqrt x}{e}\Rightarrow x=e^2y^2\)</span></p>
+<p><span class="arithmatex">\(y=\ln \sqrt x\Rightarrow x=e^{2y}\)</span></p>
+<p><span class="arithmatex">\(V=\int_0^1 2\pi y(e^{2y}-e^2y^2)\text dy=\dfrac\pi 2\)</span></p>
+</li>
+</ul>
+</details>
+</details>
 </li>
 </ul>
 
@@ -3255,6 +3457,8 @@
         <script src="../../../assets/document_dates/tippy/popper.min.js"></script>
       
         <script src="../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../../assets/document_dates/core/md5.min.js"></script>
       
         <script src="../../../assets/document_dates/core/default.config.js"></script>
       
