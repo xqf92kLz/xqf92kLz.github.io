@@ -1,0 +1,2908 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.uwouni.com/blog/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/5_tsy/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://cdn.luogu.com.cn/upload/image_hosting/uo5wu9mh.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>5 tsy - uwouni</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/light.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/scale.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/backdrop.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/core/core.css">
+    
+      <link rel="stylesheet" href="../../../assets/document_dates/user.config.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="uwouni" class="md-header__button md-logo" aria-label="uwouni" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            uwouni
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5 tsy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E5%BE%AE%E7%A7%AF%E5%88%86/0/" class="md-tabs__link">
+          
+  
+  
+  微积分
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../1/" class="md-tabs__link">
+          
+  
+  
+  线性代数
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../C%20%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%A2%8E%E5%B1%91/" class="md-tabs__link">
+          
+  
+  
+  C 程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/to%20do/" class="md-tabs__link">
+          
+  
+  
+  大英三
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/0/" class="md-tabs__link">
+          
+  
+  
+  汇编基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/0/" class="md-tabs__link">
+          
+  
+  
+  无线网络应用
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="uwouni" class="md-nav__button md-logo" aria-label="uwouni" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    uwouni
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%BE%AE%E7%A7%AF%E5%88%86/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 0 章 预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%BE%AE%E7%A7%AF%E5%88%86/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章 函数与极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%BE%AE%E7%A7%AF%E5%88%86/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 导数与微分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%BE%AE%E7%A7%AF%E5%88%86/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 微分中值定理及导数的应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%BE%AE%E7%A7%AF%E5%88%86/%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%BE%AE%E7%A7%AF%E5%88%86/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章 不定积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%BE%AE%E7%A7%AF%E5%88%86/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 定积分及其应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章 线性方程组的求解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 行列式与矩阵的秩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 矩阵的运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章 $n$ 元向量空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章 线性空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章 欧式空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 矩阵的特征值理论与相似对角化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章 二次型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C 程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C 程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%20%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%A2%8E%E5%B1%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    知识碎屑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%20%E7%A8%8B/%E6%8C%87%E9%92%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    指针
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%20%E7%A8%8B/%E6%96%87%E4%BB%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C%20%E7%A8%8B/%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    踩过的坑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大英三
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大英三
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/to%20do/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    to do
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B1U1-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B1U1-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U1 Mind the gap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U2 On the road
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U3 Just relax!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U4 Does gender matter?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/Quiz1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quiz1 复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U5 The power of words
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U6 You are what you eat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U7 Nature's gifts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U8 Technology:controllers or helpers?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/Quiz2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quiz2 复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%A4%A7%E8%8B%B1%E4%B8%89/Oral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oral exam 准备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../大英三/Read.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Read 准备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    汇编基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    汇编基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    汇编入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/solve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    做题记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    无线网络应用
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    无线网络应用
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E8%B5%84%E6%96%99%E6%90%9C%E9%9B%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    资料搜集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 1：当今网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 3：协议和模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/5-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 5-9：数值系统 数据链路 以太网交换 网络层 地址解析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 4：物理层
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/11-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 11-12：IPv4 和 IPv6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/00/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (为实验补充介绍) 无线技术
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%AE%9E%E9%AA%8C%E4%BA%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验二：无线路由器与 AP 配置应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/2%2C10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 2,10：交换机 路由器 终端设备 基本配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/14-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 14-15：传输层 应用层
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%AE%9E%E9%AA%8C%E4%B8%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验三：无线网络 DNS IIS 服务配置应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 16：网络安全基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (为实验补充介绍) 无线网络安全性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 17：构建小型网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 13：ICMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%AE%9E%E9%AA%8C%E5%9B%9B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验四：防火墙等无线网络安全实验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%AE%9E%E9%AA%8C%E4%BA%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验五：无线网络 DHCP 服务及 AP 组网
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%AE%9E%E9%AA%8C%E5%85%AD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验六：无线流媒体服务及虚拟 WiFi 组网
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    在线学习心得
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        知识点
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特征值和特征向量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特征值和特征向量的基本性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵的相似及其性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵的相似对角化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实对称矩阵的对角化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>5 tsy</h1>
+
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-28'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-28T08:28:19.789132+00:00'>2025-12-28</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-28'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-28T08:28:19.789132+00:00'>2025-12-28</time></span></div></div></div>
+<h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">特征值和特征向量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>定义 1：设 <span class="arithmatex">\(\boldsymbol A\in\mathbb P^{n\times n}\)</span>，若存在数 <span class="arithmatex">\(\lambda_0\in\mathbb P\)</span> 和 <span class="arithmatex">\(n\)</span> 维 <strong>非零</strong> 列向量 <span class="arithmatex">\(\boldsymbol \xi\in\mathbb P^n\)</span> 使得 <span class="arithmatex">\(\boldsymbol A\boldsymbol \xi=\lambda_0 \boldsymbol \xi\)</span>，则称 <span class="arithmatex">\(\lambda_0\)</span> 为 <span class="arithmatex">\(\boldsymbol A\)</span> 的一个特征值，非零列向量 <span class="arithmatex">\(\boldsymbol \xi\)</span> 称为 <span class="arithmatex">\(\boldsymbol A\)</span> 的属于 <span class="arithmatex">\(\lambda\)</span> 的一个特征向量。</li>
+<li>
+<p>性质 1：</p>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(\boldsymbol\xi\)</span> 是 <span class="arithmatex">\(\boldsymbol A\)</span> 的一个特征向量，则 <span class="arithmatex">\(\boldsymbol\xi\)</span> 只能属于 <span class="arithmatex">\(\boldsymbol A\)</span> 的唯一一个特征值。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol A\boldsymbol\xi=\lambda_1\boldsymbol\xi\)</span> 且 <span class="arithmatex">\(\boldsymbol A\boldsymbol\xi=\lambda_2\boldsymbol\xi\)</span>，则 <span class="arithmatex">\(\boldsymbol \theta=(\lambda_1-\lambda_2)\boldsymbol\xi\)</span>。因为 <span class="arithmatex">\(\boldsymbol\xi\neq\boldsymbol \theta\)</span>，故 <span class="arithmatex">\(\lambda_1=\lambda_2\)</span>。</p>
+</details>
+</li>
+<li>
+<p>属于 <span class="arithmatex">\(\boldsymbol A\)</span> 的任意一个特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量有无穷多个。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol A\boldsymbol\xi=\lambda\boldsymbol\xi\)</span>，则 <span class="arithmatex">\(\forall k\neq 0\)</span> 有 <span class="arithmatex">\(\boldsymbol A(k\boldsymbol\xi)=\lambda(k\boldsymbol\xi)\)</span>。</p>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>设有 <span class="arithmatex">\(\boldsymbol\xi\neq\boldsymbol \theta\)</span>，满足 <span class="arithmatex">\(\boldsymbol A_{n\times n}\boldsymbol\xi=\lambda\boldsymbol\xi\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow (\lambda\boldsymbol E-\boldsymbol A)\boldsymbol\xi=\boldsymbol 0\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow (\lambda\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 有非零解 <span class="arithmatex">\(\boldsymbol\xi\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow r(\lambda\boldsymbol E-\boldsymbol A)&lt;n\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow |\lambda\boldsymbol E-\boldsymbol A|=0\)</span></p>
+</li>
+<li>
+<p>定义 2：设 <span class="arithmatex">\(f_{\boldsymbol A}(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|\)</span>，称为 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征多项式。</p>
+<p><span class="arithmatex">\(\begin{aligned}f(\lambda)&amp;=|\lambda \boldsymbol E-\boldsymbol A|=\begin{vmatrix}\lambda-a_{11}&amp;-a_{12}&amp;\cdots&amp;-a_{1n}\\-a_{21}&amp;\lambda-a_{22}&amp;\cdots&amp;-a_{2n}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\-a_{n1}&amp;-a_{n2}&amp;\cdots&amp;\lambda-a_{nn}\end{vmatrix}\\&amp;=\lambda^n-(a_{11}+a_{22}+\cdots+a_{nn})\lambda^{n-1}+\cdots+(-1)^n|A|\\&amp;=\lambda^n-\text{tr}(\boldsymbol A)\lambda^{n-1}+\cdots+(-1)^n|A|\end{aligned}\)</span></p>
+</li>
+<li>
+<p>性质 2：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\lambda\)</span> 是 <span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 的一个特征值 <span class="arithmatex">\(\Leftrightarrow f(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|=0\Leftrightarrow r(\lambda \boldsymbol E-\boldsymbol A)&lt;n\)</span></p>
+<p><span class="arithmatex">\(f(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|=\lambda^n-\text{tr}(\boldsymbol A)\lambda^{n-1}+\cdots+(-1)^n|\boldsymbol A|=(\lambda-\lambda_1)^{n_1}\cdots(\lambda-\lambda_s)^{n_s}=0\)</span>，<span class="arithmatex">\(n_i\)</span> 为每个特征值的重数，则 <span class="arithmatex">\(n_1+n_2+\cdots+n_s=n\)</span>。<span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 在复数域 <span class="arithmatex">\(\mathbb C\)</span> 上一定有 <span class="arithmatex">\(n\)</span> 个特征值，但是在一般数域 <span class="arithmatex">\(\mathbb P\)</span> 上不一定有 <span class="arithmatex">\(n\)</span> 个特征值。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(\lambda\)</span> 为 <span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 的一个特征值，则 <span class="arithmatex">\((\lambda \boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 的全体非零解即为 <span class="arithmatex">\(\boldsymbol A\)</span> 的属于特征值 <span class="arithmatex">\(\lambda\)</span> 的全体特征向量。</p>
+<p>称 <span class="arithmatex">\((\lambda \boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 为特征值 <span class="arithmatex">\(\lambda\)</span> 的特征线性方程组。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\lambda\)</span> 不是 <span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 的一个特征值 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(f(\lambda)=|\lambda \boldsymbol E-\boldsymbol A|\neq 0\Leftrightarrow r(\lambda \boldsymbol E-\boldsymbol A)=n\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>特征值与特征向量的求法：</p>
+<p>① 令 <span class="arithmatex">\(|\lambda\boldsymbol E-\boldsymbol A|=0\)</span>，求出 <span class="arithmatex">\(\boldsymbol A\)</span> 的所有不同特征值 <span class="arithmatex">\(\lambda_1,\lambda_2,\cdots,\lambda_s\)</span></p>
+<p>② 对每个 <span class="arithmatex">\(\lambda_i\)</span>，求 <span class="arithmatex">\((\lambda_i \boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 的一个基础解系 <span class="arithmatex">\(\boldsymbol\xi_{i1},\cdots,\boldsymbol\xi_{ir_i}\)</span>，则 <span class="arithmatex">\(\lambda_i\)</span> 对应的全体特征向量为 <span class="arithmatex">\(k_{i1}\boldsymbol\xi_{i1}+k_{i2}\boldsymbol\xi_{i2}+\cdots+k_{ir_i}\boldsymbol\xi_{ir_i}\)</span>（<span class="arithmatex">\(k_{ij}\)</span> 不同时为 <span class="arithmatex">\(0\)</span>）。</p>
+<p>记 <span class="arithmatex">\(V_{\lambda_i}=\{\boldsymbol A\)</span> 的属于 <span class="arithmatex">\(\lambda_i\)</span> 的全体特征向量 <span class="arithmatex">\(\}\cup\{\boldsymbol \theta\}=\{\boldsymbol X\mid(\lambda_i\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0,\boldsymbol X\in\mathbb P^n\}=L(\boldsymbol\xi_{i1},\boldsymbol\xi_{i2},\cdots,\boldsymbol\xi_{ir_i})\)</span>，称为特征值 <span class="arithmatex">\(\lambda_i\)</span> 的特征子空间。</p>
+</li>
+</ul>
+<h3 id="_3">特征值和特征向量的基本性质<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>性质 1：设 <span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 的全体特征值为 <span class="arithmatex">\(\lambda_1,\cdots,\lambda_n\)</span></p>
+<p><span class="arithmatex">\(\begin{aligned}f(\lambda)&amp;=|\lambda\boldsymbol E-\boldsymbol A_{n\times n}|\\&amp;=\lambda^n-(a_{11}+a_{22}+\cdots+a_{nn})\lambda^{n-1}+\cdots+(-1)^n|A|\\&amp;=(\lambda-\lambda_1)(\lambda-\lambda_2)\cdots(\lambda-\lambda_n)\\&amp;=\lambda^n-(\lambda_1+\lambda_2+\cdots+\lambda_n)\lambda^{n-1}+\cdots+(-1)^n\lambda_1\lambda_2\cdots\lambda_n\end{aligned}\)</span></p>
+<p>则 <span class="arithmatex">\(\sum_{i=1}^n\lambda_i=\sum_{i=1}^n a_{ii}=\text{tr}(A)\)</span>，<span class="arithmatex">\(\prod_{i=1}^n\lambda_i=|A|\)</span>。</p>
+<p>推论：<span class="arithmatex">\(\boldsymbol A\)</span> 可逆 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值都不为 <span class="arithmatex">\(0\)</span>。</p>
+</li>
+<li>
+<p>性质 2：<span class="arithmatex">\(\boldsymbol\xi_1,\boldsymbol\xi_2,\cdots,\boldsymbol\xi_s\)</span> 是 <span class="arithmatex">\(\boldsymbol A\)</span> 的属于 <span class="arithmatex">\(s\)</span> 个不同特征值 <span class="arithmatex">\(\lambda_1,\lambda_2,\cdots,\lambda_s\)</span> 的特征向量，则 <span class="arithmatex">\(\boldsymbol\xi_1,\boldsymbol\xi_2,\cdots,\boldsymbol\xi_s\)</span> 线性无关。</p>
+<details class="note">
+<summary>证明</summary>
+<p>归纳法：</p>
+<ul>
+<li><span class="arithmatex">\(s=1\)</span> 时：<span class="arithmatex">\(\boldsymbol\xi_1\neq \boldsymbol 0\)</span>，故 <span class="arithmatex">\(\boldsymbol\xi_1\)</span> 线性无关。</li>
+<li>
+<p>设 <span class="arithmatex">\(s-1\)</span> 时成立，即 <span class="arithmatex">\(\boldsymbol\xi_1,\cdots,\boldsymbol\xi_{s-1}\)</span> 线性无关。下证 <span class="arithmatex">\(s\)</span> 时也成立。</p>
+<p>设 <span class="arithmatex">\(k_1\boldsymbol\xi_1+\cdots+k_{s-1}\boldsymbol\xi_{s-1}+k_s\boldsymbol\xi_s=\boldsymbol 0\quad(1)\)</span>。</p>
+<p>两边左乘 <span class="arithmatex">\(\boldsymbol A\)</span> 得到：<span class="arithmatex">\(k_1\lambda_1\boldsymbol\xi_1+\cdots+k_{s-1}\lambda_{s-1}\boldsymbol\xi_{s-1}+k_s\lambda_s\boldsymbol\xi_s=\boldsymbol 0\quad(2)\)</span>。</p>
+<p><span class="arithmatex">\((1)\lambda_s-(2)\)</span> 得到：<span class="arithmatex">\(k_1(\lambda_s-\lambda_1)\boldsymbol\xi_1+\cdots+k_{s-1}(\lambda_s-\lambda_{s-1})\boldsymbol\xi_{s-1}=\boldsymbol 0\)</span>。</p>
+<p>因为 <span class="arithmatex">\(\boldsymbol\xi_1,\cdots,\boldsymbol\xi_{s-1}\)</span> 线性无关，故 <span class="arithmatex">\(k_1(\lambda_s-\lambda_1)=\cdots=k_{s-1}(\lambda_s-\lambda_{s-1})=0\)</span>，又 <span class="arithmatex">\(\lambda_s\neq \lambda_i\,(i=1,2,\cdots,s-1)\)</span>，所以 <span class="arithmatex">\(k_1=k_2=\cdots=k_{s-1}=0\)</span>。代入 <span class="arithmatex">\((1)\)</span> 得 <span class="arithmatex">\(k_s\boldsymbol\xi_s=0\)</span>，所以 <span class="arithmatex">\(k_s=0\)</span>。</p>
+<p>故 <span class="arithmatex">\(\boldsymbol\xi_1,\cdots,\boldsymbol\xi_s\)</span> 也线性无关。</p>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p>性质 3：设 <span class="arithmatex">\(f(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|=(\lambda-\lambda_1)^{n_1}\cdots(\lambda-\lambda_s)^{n_s}\)</span>，求出 <span class="arithmatex">\((\lambda_i\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 的基础解系为 <span class="arithmatex">\(\boldsymbol\xi_{i1},\boldsymbol\xi_{i2},\cdots,\boldsymbol\xi_{ir_i}\)</span>，则向量组 <span class="arithmatex">\(\boldsymbol\xi_{11},\boldsymbol\xi_{12},\cdots,\boldsymbol\xi_{1r_1},\boldsymbol\xi_{21},\boldsymbol\xi_{22},\cdots,\boldsymbol\xi_{2r_2},\cdots,\boldsymbol\xi_{s1},\boldsymbol\xi_{s2},\cdots,\boldsymbol\xi_{sr_s}\)</span> 线性无关。</p>
+<p><span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 共有 <span class="arithmatex">\(r_1+r_2+\cdots+r_s\)</span> 个线性无关的特征向量。</p>
+<p>即：记 <span class="arithmatex">\(V_{\lambda_i}=L(\boldsymbol\xi_{i1},\boldsymbol\xi_{i2},\cdots,\boldsymbol\xi_{ir_i})\)</span>，显然 <span class="arithmatex">\(\dim V_{\lambda_i}=r_i\,(i=1,2,\cdots,s)\)</span>，则 <span class="arithmatex">\(\dim V_{\lambda_1}+\cdots+\dim V_{\lambda_s}=r_1+r_2+\cdots+r_s\)</span> 且 <span class="arithmatex">\(V_{\lambda_i}\cap V_{\lambda_j}=\{\boldsymbol\theta\}\,(i\neq j)\)</span>。</p>
+</li>
+<li>
+<p>性质 4：<span class="arithmatex">\(\dim V_{\lambda_0}\leq \lambda_0\)</span> 的重数，这里 <span class="arithmatex">\(\lambda_0\)</span> 的重数是指 <span class="arithmatex">\(\lambda_0\)</span> 作为特征多项式零点的重数。（即 <span class="arithmatex">\(r_i\leq n_i\)</span>）</p>
+<p><span class="arithmatex">\(\dim V_{\lambda_0}=n-r(\lambda_0\boldsymbol E-\boldsymbol A)\)</span>，即 <span class="arithmatex">\((\lambda_0\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 基础解析中向量的个数。</p>
+<p>称 <span class="arithmatex">\(\dim V_{\lambda_0}\)</span> 为特征值 <span class="arithmatex">\(\lambda_0\)</span> 的几何重数，<span class="arithmatex">\(\lambda_0\)</span> 的重数为特征值 <span class="arithmatex">\(\lambda_0\)</span> 的代数重数。</p>
+<p>推论：<span class="arithmatex">\(r(\boldsymbol A)\geq \boldsymbol A\)</span> 的非零特征值的个数。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\dim V_0=n-r(\boldsymbol A)\leq\)</span> 特征值 <span class="arithmatex">\(0\)</span> 的代数重数，则 <span class="arithmatex">\(r(\boldsymbol A)\geq n-(\)</span> 特征值 <span class="arithmatex">\(0\)</span> 的代数重数 <span class="arithmatex">\()=\)</span> 非零特征值的个数。</p>
+</details>
+</li>
+<li>
+<p>定理 1（Hamilton-Cayley（哈密顿-凯莱）定理）：设 <span class="arithmatex">\(\boldsymbol A\in\mathbb P^{n\times n}\)</span>，<span class="arithmatex">\(f(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|=\lambda^n-\text{tr}(\boldsymbol A)\lambda^{n-1}+\cdots+(-1)^n|\boldsymbol A|\)</span>，则 <span class="arithmatex">\(f(\boldsymbol A)=\boldsymbol A^n-\text{tr}(\boldsymbol A)\boldsymbol A^{n-1}+\cdots+(-1)^n|\boldsymbol A|\boldsymbol E=\boldsymbol O_{n\times n}\)</span></p>
+</li>
+<li>
+<p>定理 2：设 <span class="arithmatex">\(\boldsymbol A\xi_0=\lambda_0\xi_0\)</span>，则</p>
+<p>① <span class="arithmatex">\((kA)\boldsymbol\xi_0=(k\lambda_0)\boldsymbol\xi_0\)</span>；</p>
+<p>② <span class="arithmatex">\(\boldsymbol A^m\xi_0=\lambda_0^m\xi_0\)</span>；</p>
+<p>③ <span class="arithmatex">\(g(\boldsymbol A)\boldsymbol\xi_0=g(\lambda_0)\boldsymbol\xi_0\)</span>；</p>
+<p>④ 当 <span class="arithmatex">\(\boldsymbol A\)</span> 可逆时，<span class="arithmatex">\(\lambda_0\neq 0\)</span>，<span class="arithmatex">\(\boldsymbol A^{-1}\boldsymbol\xi_0=\lambda_0^{-1}\boldsymbol\xi_0\)</span>。</p>
+<p>也就是说，当 <span class="arithmatex">\(\boldsymbol A\)</span> 变成 <span class="arithmatex">\(kA,\boldsymbol A^m,g(\boldsymbol A),\boldsymbol A^{-1}\)</span> 时，特征值 <span class="arithmatex">\(\lambda_0\)</span> 相应变化成 <span class="arithmatex">\(k\lambda_0,\lambda_0^m,g(\lambda_0),\lambda_0^{-1}\)</span>，但是 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征向量 <span class="arithmatex">\(\boldsymbol\xi_0\)</span> 同时也是 <span class="arithmatex">\(kA,\boldsymbol A^m,g(\boldsymbol A),\boldsymbol A^{-1}\)</span> 的特征向量。</p>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li>
+<p>① 显然</p>
+</li>
+<li>
+<p>② <span class="arithmatex">\(\boldsymbol A\xi_0=\lambda_0\xi_0\)</span>。假设 <span class="arithmatex">\(\boldsymbol A^k\xi_0=\lambda_0^k\xi_0\)</span>，则 <span class="arithmatex">\(\boldsymbol A^{k+1}\boldsymbol\xi_0=A\lambda_0^k\xi_0\)</span>，又 <span class="arithmatex">\(\boldsymbol A\lambda_0^k\xi_0=\lambda_0^k(\boldsymbol A\xi_0)=\lambda_0^k(\lambda_0\xi_0)\)</span>，则 <span class="arithmatex">\(\boldsymbol A^{k+1}\boldsymbol\xi_0=\lambda_0^{k+1}\boldsymbol\xi_0\)</span>。</p>
+</li>
+<li>
+<p>③ 设 <span class="arithmatex">\(g(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0\)</span>，则由 ② 知，</p>
+<p><span class="arithmatex">\(\begin{aligned}g(\boldsymbol A)\boldsymbol\xi_0&amp;=(a_nA^n+a_{n-1}\boldsymbol A^{n-1}+\cdots+a_1A+a_0E)\boldsymbol\xi_0\\&amp;=(a_n\lambda_0^n+a_{n-1}\lambda_0^{n-1}+\cdots+a_1\lambda_0+a_0E)\boldsymbol\xi_0\\&amp;=g(\lambda_0\xi_0)\end{aligned}\)</span></p>
+</li>
+<li>
+<p>④ <span class="arithmatex">\(\boldsymbol A\xi_0=\lambda_0\xi_0\)</span>，等式两边同时左乘 <span class="arithmatex">\(\boldsymbol A^{-1}\)</span>，<span class="arithmatex">\(\boldsymbol A^{-1}(\boldsymbol A\xi_0)=A^{-1}(\lambda_0\xi_0)\)</span>，即 <span class="arithmatex">\(\boldsymbol\xi_0=\lambda_0(\boldsymbol A^{-1}\boldsymbol\xi_0)\)</span>，即 <span class="arithmatex">\(\lambda_0^{-1}\boldsymbol\xi_0=A^{-1}\boldsymbol\xi_0\)</span>。</p>
+</li>
+</ul>
+</details>
+</li>
+</ul>
+<h3 id="_4">矩阵的相似及其性质<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>定义 1：设 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\in\mathbb P^{n\times n}\)</span>，若存在可逆矩阵 <span class="arithmatex">\(\boldsymbol P\in\mathbb P^{n\times n}\)</span>，使得 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，则称 <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 相似，记作 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim\boldsymbol B\)</span>。</p>
+<details class="warning" open="open">
+<summary>区分</summary>
+<p>相抵（等价）：设 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\in\mathbb P^{m\times n}\)</span>，如果 <span class="arithmatex">\(\boldsymbol A\)</span> 经过一系列初等变换到 <span class="arithmatex">\(\boldsymbol B\)</span>，称 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 相抵（等价）。</p>
+<p>性质：相抵（等价）具有自反性，对称性，传递性。</p>
+<p>若 <span class="arithmatex">\(r(\boldsymbol A)=r\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的相抵（等价）标准形为 <span class="arithmatex">\(\begin{pmatrix}\boldsymbol E_r&amp;\boldsymbol O\\\boldsymbol O&amp;\boldsymbol O\end{pmatrix}\)</span>。</p>
+</details>
+<p><span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 等价（相抵）<span class="arithmatex">\(\Leftrightarrow\)</span> 存在可逆矩阵 <span class="arithmatex">\(\boldsymbol P,\boldsymbol Q\)</span> 使得 <span class="arithmatex">\(\boldsymbol P\boldsymbol A\boldsymbol Q=\boldsymbol B\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(r(\boldsymbol A)=r(\boldsymbol B)\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> 相同标准形</p>
+</li>
+<li>
+<p>性质 1：相似具有自反性，对称性，传递性。</p>
+<p>所以矩阵的相似也确定了一个等价关系，称为相似等价关系。可以将 <span class="arithmatex">\(\mathbb P^{n\times n}\)</span> 按照相似关系分划为不同的类——相似（等价）类，使得 <span class="arithmatex">\(\mathbb P^{n\times n}\)</span> 中的每一个方阵属于且只属于其中的一个相似（等价）类。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\boldsymbol E^{-1}\boldsymbol A\boldsymbol E=\boldsymbol A\)</span>。即 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim A\)</span>。</p>
+<p>设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，则 <span class="arithmatex">\(\boldsymbol  A=\boldsymbol P\boldsymbol B\boldsymbol P^{-1}\)</span>。即若 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim B\)</span>，则 <span class="arithmatex">\(\boldsymbol B\stackrel S\sim A\)</span>。</p>
+<p>设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B,\boldsymbol Q^{-1}\boldsymbol B\boldsymbol Q=\boldsymbol C\)</span>，则 <span class="arithmatex">\(\boldsymbol Q^{-1}(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P)\boldsymbol Q=(\boldsymbol P\boldsymbol Q)^{-1}\boldsymbol A(\boldsymbol P\boldsymbol Q)=\boldsymbol C\)</span>。即若 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim \boldsymbol B,\boldsymbol B\stackrel S\sim \boldsymbol C\)</span>，则 <span class="arithmatex">\(\boldsymbol A\stackrel S\sim \boldsymbol C\)</span>。</p>
+</details>
+</li>
+<li>
+<p>性质 2：设 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 相似，则</p>
+<p>① <span class="arithmatex">\(|\boldsymbol A|=|\boldsymbol B|\)</span>；</p>
+<p>② <span class="arithmatex">\(r(\boldsymbol A)=r(\boldsymbol B)\)</span>；</p>
+<p>③ <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 相抵（等价）；</p>
+<p>④ <span class="arithmatex">\(\text{tr}(\boldsymbol A)=\text{tr}(\boldsymbol B)\)</span>；</p>
+<p>⑤ <span class="arithmatex">\(|\lambda\boldsymbol E-\boldsymbol A|=|\lambda\boldsymbol E-\boldsymbol B|\)</span>。</p>
+<p>即有相似的五个必要条件：行列式相等，秩相等，相抵（等价），迹相等，特征值相等。这五个必要条件只要有一个不成立，两个矩阵就一定不相似；但即使五个必要条件都成立，也不能保证两个矩阵相似，例如 <span class="arithmatex">\(\begin{pmatrix}1&amp;0\\0&amp;1\end{pmatrix}\)</span> 和 <span class="arithmatex">\(\begin{pmatrix}1&amp;1\\0&amp;1\end{pmatrix}\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>①②③ 显然。</p>
+<p>④ <span class="arithmatex">\(\text{tr}(\boldsymbol B)=\text{tr}(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P)=\text{tr}(\boldsymbol A\boldsymbol P\boldsymbol P^{-1})=\text{tr}(\boldsymbol A)\)</span>。</p>
+<p>⑤ <span class="arithmatex">\(|\lambda\boldsymbol E-\boldsymbol B|=|\lambda\boldsymbol E-\boldsymbol P^{-1}\boldsymbol A\boldsymbol P|=|\boldsymbol P^{-1}(\lambda\boldsymbol E-\boldsymbol A)\boldsymbol P|=|\lambda\boldsymbol E-\boldsymbol A|\)</span>。</p>
+<p>④ 也可以用 ⑤ 证，因为矩阵的迹等于特征值之和。</p>
+</details>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>已知 <span class="arithmatex">\(\boldsymbol A=\begin{pmatrix}2&amp;0&amp;0\\0&amp;a&amp;2\\0&amp;2&amp;3\end{pmatrix}\)</span> 与 <span class="arithmatex">\(\boldsymbol B=\begin{pmatrix}1&amp;&amp;\\&amp;2&amp;\\&amp;&amp;b\end{pmatrix}\)</span> 相似，求 <span class="arithmatex">\(a,b\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 相似，则：</p>
+<p><span class="arithmatex">\(\begin{cases}\text{tr}(\boldsymbol A)=\text{tr}(\boldsymbol B)\\|\boldsymbol A|=|\boldsymbol B|\end{cases}\Rightarrow \begin{cases}5+a=3+b\\6a-8=2b\end{cases}\Rightarrow \begin{cases}a=3\\b=5\end{cases}\)</span></p>
+</details>
+</details>
+<p>推论：设 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 都能对角化，则 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 相似 <span class="arithmatex">\(\Leftrightarrow |\lambda \boldsymbol E-\boldsymbol A|=|\lambda\boldsymbol E-\boldsymbol B|\)</span>。</p>
+</li>
+<li>
+<p>性质 3：设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，<span class="arithmatex">\(V_{\lambda}^{\boldsymbol A}=\{\boldsymbol X\mid (\lambda\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0,\boldsymbol X\in\mathbb P^n\}\)</span>，<span class="arithmatex">\(V_{\lambda}=\{\boldsymbol X\mid (\lambda\boldsymbol E-\boldsymbol B)\boldsymbol X=\boldsymbol 0,\boldsymbol X\in\mathbb P^n\}\)</span>（即 <span class="arithmatex">\(\boldsymbol A\)</span> 和 <span class="arithmatex">\(\boldsymbol B\)</span> 的属于 <span class="arithmatex">\(\lambda\)</span> 的特征子空间），则 <span class="arithmatex">\(V_{\lambda}^{\boldsymbol A}=\boldsymbol PV_{\lambda}^{\boldsymbol B}\)</span>（这里 <span class="arithmatex">\(\boldsymbol PV_{\lambda}^{\boldsymbol B}=\{\boldsymbol P\boldsymbol\zeta\mid \boldsymbol\zeta\in V_{\lambda}^{\boldsymbol B}\}\)</span>）。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol B\boldsymbol X=\lambda\boldsymbol X\)</span>，则 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P\boldsymbol X=\lambda \boldsymbol X\)</span>，<span class="arithmatex">\(\boldsymbol A(\boldsymbol P\boldsymbol X)=\lambda(\boldsymbol P\boldsymbol X)\)</span>。即，若 <span class="arithmatex">\(\boldsymbol X\)</span> 是 <span class="arithmatex">\(\boldsymbol B\)</span> 属于特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量，则 <span class="arithmatex">\(\boldsymbol P\boldsymbol X\)</span> 一定是 <span class="arithmatex">\(\boldsymbol A\)</span> 属于特征值 <span class="arithmatex">\(\lambda\)</span> 的特征向量。</p>
+</details>
+</li>
+</ul>
+<h3 id="_5">矩阵的相似对角化<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>设 <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol \Lambda=\text{diag}(\lambda_1,\cdots,\lambda_n)\)</span> 相似</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 存在可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span>，使得 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol \Lambda\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow \boldsymbol A\boldsymbol P=\boldsymbol P\boldsymbol \Lambda\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 记 <span class="arithmatex">\(\boldsymbol P=(\boldsymbol \alpha_1,\cdots,\boldsymbol \alpha_n)\)</span>，<span class="arithmatex">\(\boldsymbol A(\boldsymbol \alpha_1,\cdots,\boldsymbol \alpha_n)=(\boldsymbol \alpha_1,\cdots,\boldsymbol \alpha_n)\begin{pmatrix}\lambda_1&amp;&amp;\\&amp;\ddots&amp;\\&amp;&amp;\lambda_n\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow (\boldsymbol A\boldsymbol \alpha_1,\boldsymbol A\boldsymbol \alpha_2,\cdots,\boldsymbol A\boldsymbol \alpha_n)=(\lambda_1\boldsymbol \alpha_1,\lambda_2\boldsymbol \alpha_2,\cdots,\lambda_n\boldsymbol \alpha_n)\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow \boldsymbol A\boldsymbol \alpha_i=\lambda_i\boldsymbol \alpha_i\,(i=1,2,\cdots,n)\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow \boldsymbol A\)</span> 有线性无关的特征向量（即 <span class="arithmatex">\(r_1+r_2+\cdots+r_s=n=n_1+n_2+\cdots+n_s\)</span>，其中 <span class="arithmatex">\(r_i=n-r(\lambda_i\boldsymbol E-\boldsymbol A)\)</span>）</p>
+<p><span class="arithmatex">\(\Leftrightarrow \mathbb P^n\)</span> 中存在一组由 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征向量所形成的基</p>
+<p>可得：若 <span class="arithmatex">\(\boldsymbol A\)</span> 能对角化，则</p>
+<p>① 对角阵 <span class="arithmatex">\(\boldsymbol \Lambda\)</span> 的对角线上的元素正好为 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值；</p>
+<p>② 可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span> 中的每个列向量 <span class="arithmatex">\(\boldsymbol \alpha_i\)</span>，正是 <span class="arithmatex">\(\boldsymbol A\)</span> 对应 <span class="arithmatex">\(\lambda_i\)</span> 的特征向量。</p>
+</li>
+<li>
+<p>定理 4：设 <span class="arithmatex">\(\boldsymbol A\)</span> 是数域 <span class="arithmatex">\(\mathbb P\)</span> 上的一个 <span class="arithmatex">\(n\)</span> 阶方阵，则下列命题等价：</p>
+<p>① <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\mathbb P\)</span> 上的某个对角矩阵相似</p>
+<p>② <span class="arithmatex">\(\boldsymbol A\)</span> 在 <span class="arithmatex">\(\mathbb P^n\)</span> 中有 <span class="arithmatex">\(n\)</span> 个线性无关的特征向量</p>
+<p>（此时，<span class="arithmatex">\(r_1+r_2+\cdots+r_s=n=n_1+n_2+\cdots+n_s\)</span>）</p>
+<p>③ <span class="arithmatex">\(\mathbb P^n\)</span> 中存在一个由 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征向量所形成的基</p>
+<p>④ <span class="arithmatex">\(\boldsymbol A\)</span> 在 <span class="arithmatex">\(\mathbb P^n\)</span> 中的所有两两互异的特征子空间的维数之和等于 <span class="arithmatex">\(n\)</span></p>
+<p>⑤ <span class="arithmatex">\(\boldsymbol A\)</span> 在 <span class="arithmatex">\(\mathbb P\)</span> 上有 <span class="arithmatex">\(n\)</span> 个特征值（遇特征多项式有重零点时，按重数计），且对于每个特征值 <span class="arithmatex">\(\lambda\)</span>，<span class="arithmatex">\(\dim V_{\lambda}=\lambda\)</span> 的重数。</p>
+<p>（<span class="arithmatex">\(\dim V_{\lambda_0}\leq \lambda_0\)</span> 的重数。此时 <span class="arithmatex">\(\dim V_{\lambda_0}=\lambda_0\)</span> 的重数）</p>
+<ul>
+<li>
+<p>推论：</p>
+<p>① 若 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值全为单根，则 <span class="arithmatex">\(\boldsymbol A\)</span> 必能对角化（<span class="arithmatex">\(\boldsymbol A\)</span> 能对角化的充分条件）</p>
+<p>② <span class="arithmatex">\(\boldsymbol A\)</span> 能对角化 <span class="arithmatex">\(\Leftrightarrow r_1+r_2+\cdots+r_s=n\)</span> <span class="arithmatex">\(\Leftrightarrow n_i=r_i\,(i=1,2,\cdots,s)\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 相似，即 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span>，则</p>
+<p>① <span class="arithmatex">\(\boldsymbol A^k\)</span> 与 <span class="arithmatex">\(\boldsymbol B^k\)</span> 相似且 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A^k\boldsymbol P=\boldsymbol B^k\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B\)</span> 成立。假设 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A^k\boldsymbol P=\boldsymbol B^k\)</span>，则 <span class="arithmatex">\(\boldsymbol B^{k+1}=\boldsymbol B^k\boldsymbol B=(\boldsymbol P^{-1}\boldsymbol A^k\boldsymbol P)(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P)=\boldsymbol P^{-1}\boldsymbol A^{k+1}\boldsymbol P\)</span></p>
+</details>
+<p>② <span class="arithmatex">\(f(\boldsymbol A)\)</span> 与 <span class="arithmatex">\(f(\boldsymbol B)\)</span> 相似且 <span class="arithmatex">\(\boldsymbol P^{-1}f(\boldsymbol A)\boldsymbol P=f(\boldsymbol B)\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(\begin{aligned}\boldsymbol P^{-1}f(\boldsymbol A)\boldsymbol P&amp;=\boldsymbol P^{-1}(a_n\boldsymbol A^n+a_{n-1}\boldsymbol A^{n-1}+\cdots+a_0\boldsymbol E)\boldsymbol P\\&amp;=a_n\boldsymbol P^{-1}\boldsymbol A^n\boldsymbol P+a_{n-1}\boldsymbol P^{-1}\boldsymbol A^{n-1}\boldsymbol P+\cdots+a_0\boldsymbol P^{-1}\boldsymbol E\boldsymbol P\\&amp;=a_n\boldsymbol B^n+a_{n-1}\boldsymbol A^{n-1}+\cdots+a_0\boldsymbol E\\&amp;=f(\boldsymbol B)\end{aligned}\)</span></p>
+</details>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(\boldsymbol A\)</span> 能对角化，即 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(\lambda_1,\cdots,\lambda_n)\)</span>，则</p>
+<p>① <span class="arithmatex">\(\boldsymbol A^k\)</span> 能对角化且 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A^k\boldsymbol P=\text{diag}(\lambda_1^k,\cdots,\lambda_n^k)\)</span> 或 <span class="arithmatex">\(\boldsymbol A^k=\boldsymbol P\text{diag}(\lambda_1^k,\cdots,\lambda_n^k)\boldsymbol P^{-1}\)</span></p>
+<details class="note">
+<summary>证明</summary>
+<p>法 1：<span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(\lambda_1,\cdots,\lambda_n)\)</span>。假设 <span class="arithmatex">\(\boldsymbol A^k=\boldsymbol P\text{diag}(\lambda_1^k,\cdots,\lambda_n^k)\boldsymbol P^{-1}\)</span>，则 <span class="arithmatex">\(\boldsymbol A^{k+1}=\boldsymbol A^k\boldsymbol A=\boldsymbol P\text{diag}(\lambda_1^k,\cdots,\lambda_n^k)\boldsymbol P^{-1}\cdot \boldsymbol P\text{diag}(\lambda_1,\cdots,\lambda_n)\boldsymbol P^{-1}=\boldsymbol P\text{diag}(\lambda_1^{k+1},\cdots,\lambda_n^{k+1})\boldsymbol P^{-1}\)</span></p>
+<p>法 2：<span class="arithmatex">\(\lambda_i\)</span> 是 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值，则 <span class="arithmatex">\(\lambda_i^k\)</span> 是 <span class="arithmatex">\(\boldsymbol A^k\)</span> 的特征值。</p>
+</details>
+<p>② <span class="arithmatex">\(f(\boldsymbol A)\)</span> 能对角化且 <span class="arithmatex">\(\boldsymbol P^{-1}f(\boldsymbol A)\boldsymbol P=\text{diag}(f(\lambda_1),\cdots,f(\lambda_n))\)</span> 或 <span class="arithmatex">\(f(\boldsymbol A)=\boldsymbol P\text{diag}(f(\lambda_1),\cdots,f(\lambda_n))\boldsymbol P^{-1}\)</span></p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(\boldsymbol A\)</span> 能对角化时，求可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span> 和对角矩阵 <span class="arithmatex">\(\boldsymbol \Lambda\)</span>：求 <span class="arithmatex">\(\boldsymbol A_{n\times n}\)</span> 的特征值和对应的特征向量。</p>
+</li>
+<li>
+<p>例题</p>
+<p>若 <span class="arithmatex">\(\boldsymbol A=\boldsymbol \alpha\boldsymbol \beta^T\)</span>，则 <span class="arithmatex">\(\boldsymbol A\boldsymbol \alpha=(\boldsymbol \alpha\boldsymbol \beta^T)\boldsymbol \alpha=\boldsymbol \alpha(\boldsymbol \beta^T\boldsymbol \alpha)=(\boldsymbol \beta^T\boldsymbol \alpha)\boldsymbol \alpha\)</span>，<span class="arithmatex">\(\boldsymbol \beta^T\boldsymbol \alpha\)</span> 是 <span class="arithmatex">\(\boldsymbol A\)</span> 的一个特征值。</p>
+</li>
+</ul>
+<h3 id="_6">实对称矩阵的对角化<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>实对称矩阵：<span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\in\mathbb R^{n\times n}\)</span></p>
+<p>前面普通矩阵关于特征值、特征向量的性质、相似对角化理论都适用于实对称矩阵。这里，我们主要分析实对称矩阵和普通矩阵的主要区别。</p>
+</li>
+<li>
+<p>性质 1：设 <span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\in\mathbb R^{n\times n}\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值、特征向量都是实的。即，<span class="arithmatex">\(n\)</span> 阶实对称矩阵一定有 <span class="arithmatex">\(n\)</span> 个实特征值。</p>
+<p>（如果 <span class="arithmatex">\(\boldsymbol A=-\boldsymbol A^T\in\mathbb R^{n\times n}\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值必为零或纯虚数）</p>
+</li>
+<li>
+<p>性质 2：设 <span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\in\mathbb R^{n\times n}\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的不同特征值所对的特征向量必正交。（普通矩阵不同特征值所对的特征向量仅仅线性无关）</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\in\mathbb R^{n\times n}\)</span>，<span class="arithmatex">\(\boldsymbol A\boldsymbol \xi_1=\lambda_1\boldsymbol \xi_1\)</span>，<span class="arithmatex">\(\boldsymbol A\boldsymbol \xi_2=\lambda_2\boldsymbol \xi_2\)</span>，且 <span class="arithmatex">\(\lambda_1\neq \lambda_2\)</span>。</p>
+<p>下证 <span class="arithmatex">\(\boldsymbol \xi_1,\boldsymbol \xi_2\)</span> 正交，即证明 <span class="arithmatex">\((\boldsymbol \xi_1,\boldsymbol \xi_2)=\boldsymbol \xi_1^T\boldsymbol \xi_2=0\)</span>。</p>
+<p>考察内积 <span class="arithmatex">\((\boldsymbol A\boldsymbol \xi_1,\boldsymbol \xi_2)\)</span></p>
+<p>一方面，<span class="arithmatex">\((\boldsymbol A\boldsymbol \xi_1,\boldsymbol \xi_2)=(\lambda_1\boldsymbol \xi_1,\boldsymbol \xi_2)=\lambda_1(\boldsymbol \xi_1,\boldsymbol \xi_2)\)</span></p>
+<p>另一方面 <span class="arithmatex">\((\boldsymbol A\boldsymbol \xi_1,\boldsymbol \xi_2)=(\boldsymbol A\boldsymbol \xi_1)^T\boldsymbol \xi_2=\boldsymbol \xi_1^T(\boldsymbol A^T\boldsymbol \xi_2)=\boldsymbol \xi_1^T(\boldsymbol A\boldsymbol \xi_2)=\lambda_2\boldsymbol \xi_1^T\boldsymbol \xi_2=\lambda_2(\boldsymbol \xi_1,\boldsymbol \xi_2)\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow(\lambda_1-\lambda_2)\cdot(\boldsymbol \xi_1,\boldsymbol \xi_2)=0\)</span></p>
+<p>因为 <span class="arithmatex">\(\lambda_1\neq \lambda_2\)</span>，故 <span class="arithmatex">\((\boldsymbol \xi_1,\boldsymbol \xi_2)=\boldsymbol \xi_1^T\boldsymbol \xi_2=\boldsymbol \xi_2^T\boldsymbol \xi_1=0\)</span>。</p>
+</details>
+</li>
+<li>
+<p>定理 1：设 <span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\in\mathbb R^{n\times n}\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 一定可以对角化，且存在正交矩阵 <span class="arithmatex">\(\boldsymbol U\)</span>（<span class="arithmatex">\(\boldsymbol U\boldsymbol U^T=\boldsymbol U^T\boldsymbol U=\boldsymbol E\)</span>，<span class="arithmatex">\(\boldsymbol U^T=\boldsymbol U^{-1}\)</span>），使得 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol A\boldsymbol U=\boldsymbol U^{-1}\boldsymbol A\boldsymbol U=\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span>，其中 <span class="arithmatex">\(\lambda_1,\lambda_2,\cdots,\lambda_n\)</span> 为 <span class="arithmatex">\(\boldsymbol A\)</span> 的全体特征值。</p>
+</li>
+<li>
+<p>如何求正交矩阵 <span class="arithmatex">\(\boldsymbol U\)</span>？</p>
+<p>① 先求 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值：令 <span class="arithmatex">\(f(\lambda)=|\lambda\boldsymbol E-\boldsymbol A|=0\)</span></p>
+<ol>
+<li>（情形 1）特征值全是单根（此时 <span class="arithmatex">\(\boldsymbol A\)</span> 有 <span class="arithmatex">\(n\)</span> 个两两正交的特征向量）</li>
+<li>（情形 2）特征值有重根，<span class="arithmatex">\(f(\lambda)=(\lambda-\lambda_1)^{n_1}\cdots(\lambda-\lambda_s)^{n_s}\,(s&lt;n)\)</span></li>
+</ol>
+<p>② 对每个 <span class="arithmatex">\(\lambda_i\)</span>，求全体特征向量：即求 <span class="arithmatex">\((\lambda_i\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 的基础解系。</p>
+<ol>
+<li>
+<p>（情形 1）每个单根 <span class="arithmatex">\(\lambda_i\)</span> 只对应一个特征向量 <span class="arithmatex">\(\boldsymbol \xi_i\)</span>，则 <span class="arithmatex">\(\boldsymbol \xi_1,\cdots,\boldsymbol \xi_n\)</span> 为 <span class="arithmatex">\(\boldsymbol A\)</span> 的 <span class="arithmatex">\(n\)</span> 个线性无关且两两正交的特征向量。</p>
+<p>如令 <span class="arithmatex">\(\boldsymbol P=(\boldsymbol \xi_1,\cdots,\boldsymbol \xi_n)\)</span>，则 <span class="arithmatex">\(\boldsymbol P\)</span> 可逆，且 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(\lambda_1,\cdots,\lambda_n)\)</span>。</p>
+</li>
+<li>
+<p>（情形 2）对 <span class="arithmatex">\(n_i\)</span> 重特征值 <span class="arithmatex">\(\lambda_i\)</span>，求出基础解系 <span class="arithmatex">\(\boldsymbol \xi_{i1},\cdots,\boldsymbol \xi_{in_i}\,(i=1,\cdots,s)\)</span>。</p>
+<p>如令 <span class="arithmatex">\(\boldsymbol P=(\boldsymbol \xi_{11},\cdots,\boldsymbol \xi_{1n_1},\cdots,\boldsymbol \xi_{s1},\cdots,\boldsymbol \xi_{sn_s})\)</span>，则 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(\underbrace{\lambda_1,\cdots,\lambda_1}_{n_1},\cdots,\underbrace{\lambda_s,\cdots,\lambda_s}_{n_s})=\text{diag}(\lambda_1\boldsymbol E_{r_1},\cdots,\lambda_s\boldsymbol E_{r_s})\)</span>。</p>
+</li>
+</ol>
+<p>③ 正交单位化</p>
+<ol>
+<li>
+<p>（情形 1）令 <span class="arithmatex">\(\boldsymbol \eta_i=\dfrac{\boldsymbol \xi_i}{\|\boldsymbol \xi_i\|}\,(i=1,\cdots,n)\)</span>，则 <span class="arithmatex">\(\boldsymbol \eta_1,\boldsymbol \eta_2,\cdots,\boldsymbol \eta_n\)</span> 为 <span class="arithmatex">\(\mathbb R^n\)</span> 的标准正交基。</p>
+<p>再令 <span class="arithmatex">\(\boldsymbol U=(\boldsymbol \eta_1,\boldsymbol \eta_2,\cdots,\boldsymbol \eta_n)\)</span>，则 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol U=\boldsymbol E\)</span>，且 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol A\boldsymbol U=\boldsymbol U^{-1}\boldsymbol A\boldsymbol U=\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span>。</p>
+</li>
+<li>
+<p>（情形 2）分别对每组特征向量进行 Schmidt 正交单位化。</p>
+<p><span class="arithmatex">\(\boldsymbol \xi_{11},\cdots,\boldsymbol \xi_{1r_1}\xrightarrow{\text{Schmidt}} \boldsymbol \eta_{11},\cdots,\boldsymbol \eta_{1r_1}\)</span></p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol \xi_{s1},\cdots,\boldsymbol \xi_{sr_s}\xrightarrow{\text{Schmidt}} \boldsymbol \eta_{s_1},\cdots,\boldsymbol \eta_{sr_s}\)</span></p>
+<p>令 <span class="arithmatex">\(\boldsymbol U=(\boldsymbol \eta_{11},\cdots,\boldsymbol \eta_{1r_1},\cdots,\boldsymbol \eta_{s_1},\cdots,\boldsymbol \eta_{sr_s})\)</span>，则 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol U=\boldsymbol E\)</span>，且 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol A\boldsymbol U=\boldsymbol U^{-1}\boldsymbol A\boldsymbol U=\text{diag}(\underbrace{\lambda_1,\cdots,\lambda_1}_{r_1},\cdots,\underbrace{\lambda_s,\cdots,\lambda_s}_{r_s})=\text{diag}(\lambda_1\boldsymbol E_{r_1},\cdots,\lambda_s\boldsymbol E_{r_s})\)</span>。</p>
+</li>
+</ol>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>求正交矩阵 <span class="arithmatex">\(\boldsymbol U\)</span>，将实对称矩阵 <span class="arithmatex">\(\boldsymbol A=\begin{pmatrix}1&amp;2&amp;2\\2&amp;1&amp;2\\2&amp;2&amp;1\end{pmatrix}\)</span> 化为对角形。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p>① 先求特征值：令 <span class="arithmatex">\(|\lambda\boldsymbol E-\boldsymbol A|=(\lambda-5)(\lambda+1)^2=0\)</span>，得 <span class="arithmatex">\(\lambda_1=5\)</span>，<span class="arithmatex">\(\lambda_2=-1\)</span>（二重根）</p>
+</li>
+<li>
+<p>② 再求特征向量：<span class="arithmatex">\((5\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 基础解系 <span class="arithmatex">\(\boldsymbol \xi_{11}=(1,1,1)^T\)</span>，<span class="arithmatex">\((-\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0\)</span> 基础解系 <span class="arithmatex">\(\boldsymbol \xi_{21}=(1,0,-1)^T,\boldsymbol \xi_{22}=(0,1,-1)^T\)</span></p>
+</li>
+</ul>
+<p>（检验计算是否正确：检查是否 <span class="arithmatex">\((\boldsymbol \xi_{11},\boldsymbol \xi_{21})=(\boldsymbol \xi_{11},\boldsymbol \xi_{22})=0\)</span>）</p>
+<p>（如令 <span class="arithmatex">\(\boldsymbol P=(\boldsymbol \xi_{11},\boldsymbol \xi_{21},\boldsymbol \xi_{22}\)</span>，则 <span class="arithmatex">\(\boldsymbol P\)</span> 可逆，且 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(5,-1,-1)\)</span>）</p>
+<ul>
+<li>
+<p>③ 将 <span class="arithmatex">\(\boldsymbol \xi_{21},\boldsymbol \xi_{22}\)</span> 利用 Schmidt 正交化，化成标准正交向量组</p>
+<p>先正交化：令 <span class="arithmatex">\(\boldsymbol \beta_{21}=\boldsymbol \xi_{21}=(1,0,-1)^T\)</span>，<span class="arithmatex">\(\boldsymbol \beta_{22}=\boldsymbol \xi_{22}-\dfrac{(\boldsymbol \beta_{21},\boldsymbol \xi_{22})}{(\boldsymbol \beta_{21},\boldsymbol \beta_{21})}\boldsymbol \beta_{21}=\dfrac 1 2 (-1,2,-1)^T\)</span></p>
+<p>再单位化：令 <span class="arithmatex">\(\boldsymbol \eta_{21}=\dfrac{\boldsymbol \beta_{21}}{\|\boldsymbol \beta_{21}\|}=\dfrac 1 {\sqrt 2}(1,0,-1)^T\)</span>，<span class="arithmatex">\(\boldsymbol \eta_{22}=\dfrac{\boldsymbol \beta_{22}}{\|\boldsymbol \beta_{22}\|}=\dfrac 1 {\sqrt 6}(-1,2,-1)^T\)</span></p>
+<p>对 <span class="arithmatex">\(\boldsymbol \xi_{11}\)</span> 单位化即令 <span class="arithmatex">\(\boldsymbol \eta_{11}=\dfrac{\boldsymbol \xi_{11}}{\|\boldsymbol \xi_{11}\|}=\dfrac 1 {\sqrt 3}(1,1,1)^T\)</span></p>
+<p>令 <span class="arithmatex">\(\boldsymbol U=(\boldsymbol \eta_{11},\boldsymbol \eta_{21},\boldsymbol \eta_{22})\)</span> 则 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol U=\boldsymbol E\)</span> 且 <span class="arithmatex">\(\boldsymbol U^T\boldsymbol A\boldsymbol U=\text{diag}(5,-1,-1)\)</span>。</p>
+</li>
+</ul>
+</details>
+</details>
+</li>
+<li>
+<p>实对称矩阵与一般矩阵的重要区别</p>
+<p>① 特征值、特征向量的取值范围不同：普通实矩阵的特征值（向量）有可能为复数（复向量）；实对称矩阵的特征值（向量）必为实数（实向量）。</p>
+<p>② 特征向量之间的关系不同：普通矩阵不同特征值对应的特征向量仅仅线性无关；实对称矩阵不同特征值对应的特征向量不仅线性无关而且两两正交。</p>
+<p>③ 对角化的条件、方式不同：普通矩阵不一定能对角化，且当对角化时只能找到可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span> 使得 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span>；实对称矩阵一定能对角化，不仅能找到可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span>，还可以找到正交矩阵 <span class="arithmatex">\(\boldsymbol U\)</span> 使得 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol U^T\boldsymbol A\boldsymbol U=\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span>。</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search", "content.action.edit", "navigation.tabs", "navigation.instant", "navigation.top", "content.code.copy", "search.suggest", "search.highlight", "search.share", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="../../../assets/document_dates/tippy/popper.min.js"></script>
+      
+        <script src="../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../../assets/document_dates/core/md5.min.js"></script>
+      
+        <script src="../../../assets/document_dates/core/default.config.js"></script>
+      
+        <script src="../../../assets/document_dates/user.config.js"></script>
+      
+        <script src="../../../assets/document_dates/core/utils.js"></script>
+      
+        <script src="../../../assets/document_dates/core/core.js"></script>
+      
+    
+  </body>
+</html>
