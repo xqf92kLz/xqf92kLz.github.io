@@ -4,53 +4,53 @@
 
     **Carry on the Legacy of the May 4th Movement, and Be Worthy of the New Era**
     
-    Under the leadership of the Party, we have opened up the path of Chinese socialism, formed its theoretical framework, established its system, developed its culture, and brought it into a new era. The Chinese people have unprecedented confidence in the path, theory, system and culture of Chinese socialism, and the prospects for national rejuvenation have never been brighter. 
+    Under the leadership of the Party, we have opened up the path of Chinese socialism, formed its ==theoretical== framework, established its system, developed its culture, and brought it into a new era. The Chinese people have unprecedented confidence in the path, ==theory==, system and culture of Chinese socialism, and the prospects for national ==rejuvenation== have never been brighter. 
     
-    In the new era, the theme and direction of the Chinese youth movement and the mission of Chinese youths are to uphold the leadership of the CPC, and work along with other people to realize the Two Centenary Goals and the Chinese Dream of national rejuvenation.
+    In the new era, the theme and direction of the Chinese youth movement and the mission of Chinese youths are to uphold the leadership of the CPC, and work along with other people to realize the Two ==Centenary== Goals and the Chinese Dream of national rejuvenation.
     
-    Youth is the most active and energetic element among all forces in society. You are the hope and future of our country. Today, in the most promising period of the Chinese nation, young Chinese are endowed with rare opportunities to achieve things, and the mission to shoulder great responsibilities. In this new era, you should continue to carry forward the spirit of the May 4th Movement and take on your mission to realize national rejuvenation. You should meet the expectations of our Party and our people, be worthy of the trust of the nation, and live up to the demands of this great era.
+    Youth is the most active and energetic element among all forces in society. You are the hope and future of our country. Today, in the most promising period of the Chinese nation, young Chinese are ==endowed== with rare opportunities to achieve things, and the mission to shoulder great responsibilities. In this new era, you should continue to carry forward the spirit of the May 4th Movement and take on your mission to realize national rejuvenation. You should meet the expectations of our Party and our people, be worthy of the trust of the nation, and live up to the demands of this great era.
     
-    First, Chinese youths in the new era should establish great ideals. 
+    First, Chinese youths in the new era should establish great ==ideals==. 
     
-    The ideals and beliefs of youths have a bearing on the future of a country. Young people with great ideals and firm beliefs are the driving force that builds an invincible nation. High ambitions can stimulate your potential to forge ahead, so that you will not drift aimlessly like a boat without a rudder. It is said that "a person who aspires to be a saint will become a saint; and a person who aspires to be a sage will become a sage." Young people have different life goals and career choices. But only when you integrate your goals with those of the nation and the people, advance with the times, and share the aspirations of the people will you live up to your values and realize the lofty goals of life. Disregarding the needs of the country and the interests of the people, those who are self-centered will find a narrower path ahead.
+    The ideals and beliefs of youths have a bearing on the future of a country. Young people with great ideals and firm beliefs are the driving force that builds an invincible nation. High ambitions can stimulate your potential to forge ahead, so that you will not drift aimlessly like a boat without a ==rudder==. It is said that "a person who aspires to be a saint will become a ==saint==; and a person who aspires to be a ==sage== will become a sage." Young people have different life goals and career choices. But only when you integrate your goals with those of the nation and the people, advance with the times, and share the aspirations of the people will you live up to your values and realize the ==lofty== goals of life. Disregarding the needs of the country and the interests of the people, those who are self-centered will find a ==narrower== path ahead.
     
-    Young Chinese in the new era must have belief in Marxism, faith in Chinese socialism, and confidence in realizing the Chinese Dream. You must go out to the people, embrace the new era and the new world, and realize your ideals and beliefs in building your careers, so that the years of your youth will sparkle with innovation and creation. 
+    Young Chinese in the new era must have belief in ==Marxism==, faith in Chinese socialism, and confidence in realizing the Chinese Dream. You must go out to the people, embrace the new era and the new world, and realize your ideals and beliefs in building your careers, so that the years of your youth will sparkle with innovation and creation. 
     
     Second, Chinese youths in the new era should love our country.
     
-    Dr. Sun Yat-sen said that the biggest thing for a citizen is "knowing how to love one's country". Whoever does not love their country – or even worse, deceives and betrays their motherland – is a disgrace and has no place anywhere in the world. Love of our country, the feeling of devotion and sense of attachment to our motherland is a duty and responsibility for every Chinese. It is the foundation on which young Chinese in the new era can become winners in life. In contemporary China, the essence of patriotism is loving our country, our Party and socialism all and at the same time.
+    Dr. Sun ==Yat-sen== said that the biggest thing for a citizen is "knowing how to love one's country". Whoever does not love their country – or even worse, ==deceives== and betrays their motherland – is a ==disgrace== and has no place anywhere in the world. Love of our country, the feeling of devotion and sense of attachment to our motherland is a duty and responsibility for every Chinese. It is the foundation on which young Chinese in the new era can become winners in life. In contemporary China, the ==essence== of ==patriotism== is loving our country, our Party and socialism all and at the same time.
     
     Young Chinese in the new era should follow the instructions and guidance of the Party, and show concern and affection for our country and our people. You should dedicate yourself to the country and the people, demonstrate patriotism with lifelong sincerity and drive, and let the great banner of patriotism fly high in your heart.
     
     Third, Chinese youths in the new era must shoulder your responsibilities. 
     
-    The times call for responsibility, and our young people must take up the responsibility for national rejuvenation. As Lu Xun the great writer said, young people "have strength to spare; they can turn a dense forest into flat land, plant trees in the wilderness, and dig wells in the desert". In the new journey towards national rejuvenation, we need to respond to major challenges, guard against serious risks, overcome real obstacles, and resolve difficult problems. All these urgently demand the will to step forward in the face of difficulties. As long as young people are brave enough to shoulder responsibilities and fight hardships and risks, Chinese socialism will be full of vitality, potential and hope.
+    The times call for responsibility, and our young people must take up the responsibility for national rejuvenation. As Lu Xun the great writer said, young people "have strength to spare; they can turn a ==dense== forest into flat land, plant trees in the ==wilderness==, and dig wells in the desert". In the new journey towards national rejuvenation, we need to respond to major challenges, guard against serious risks, overcome real obstacles, and resolve difficult problems. All these urgently demand the will to step forward in the face of difficulties. As long as young people are brave enough to shoulder responsibilities and fight hardships and risks, Chinese socialism will be full of ==vitality==, potential and hope.
     
-    Young people must maintain your courage, fearing nothing and forging ahead in spite of difficulties and dangers. You should stand in the forefront and be the pioneers of national rejuvenation. There are people who are afraid to experiment and try out new things, or treat responsibilities as burdens and losses, or shirk their responsibilities and attend only to their own business. All such thoughts and acts are undesirable and those who entertain them will accomplish nothing and never be able to truly enjoy life.
+    Young people must maintain your courage, fearing nothing and forging ahead in spite of difficulties and dangers. You should stand in the forefront and be the pioneers of national rejuvenation. There are people who are afraid to experiment and try out new things, or treat responsibilities as burdens and losses, or ==shirk== their responsibilities and attend only to their own business. All such thoughts and acts are undesirable and those who ==entertain== them will accomplish nothing and never be able to truly enjoy life.
     
-    Chinese youths must cherish this new era and grow with it. In the new era, you must work hard to perform on the vast stage of reform and opening up and on the journey to realizing the Chinese Dream. And you should endeavor to become morally, intellectually, physically, and aesthetically equipped to join and carry on the socialist cause.
+    Chinese youths must cherish this new era and grow with it. In the new era, you must work hard to perform on the vast stage of reform and opening up and on the journey to realizing the Chinese Dream. And you should ==endeavor== to become morally, intellectually, physically, and ==aesthetically== equipped to join and carry on the socialist cause.
     
     Fourth, Chinese youths in the new era must work hard. 
     
-    Hard work paints a bright backdrop for a young life. As Mao Zedong said, "Should I have 200 years to spare, I will surely swim for 3,000 li (1,500 km)." The mission of national rejuvenation must be achieved through hard work, as must the ideals of life. Without an arduous popular struggle, carried out especially by generations of young people, there would have been neither the present new era of Chinese socialism nor a future in which we will realize national rejuvenation. Over thousands of years, the Chinese nation has suffered numerous hardships, but none of them could defeat us; instead, they have lifted our national spirit, willpower and strength. Today, our living conditions have improved, but we, especially our young people, must retain the spirit and fine tradition of hard work. There will definitely be daunting challenges and even perilous storms in the new journey towards national rejuvenation. The spirit of arduous struggle is especially needed during the process. Hard work is not just a ringing slogan; it is about doing small things, completing every task, and fulfilling every duty. The road of hard work will not be smooth, instead it will be cobbled with hardships and full of ups and downs. The strong can always rise from setbacks; they are never discouraged.
+    Hard work paints a bright backdrop for a young life. As Mao Zedong said, "Should I have 200 years to spare, I will surely swim for 3,000 li (1,500 km)." The mission of national rejuvenation must be achieved through hard work, as must the ideals of life. Without an ==arduous== popular struggle, carried out especially by generations of young people, there would have been ==neither== the present new era of Chinese socialism nor a future in which we will realize national rejuvenation. Over thousands of years, the Chinese nation has suffered numerous hardships, but none of them could defeat us; instead, they have lifted our national spirit, willpower and strength. Today, our living conditions have improved, but we, especially our young people, must ==retain== the spirit and fine tradition of hard work. There will definitely be ==daunting== challenges and even ==perilous== storms in the new journey towards national rejuvenation. The spirit of arduous struggle is especially needed during the process. Hard work is not just a ringing ==slogan==; it is about doing small things, completing every task, and fulfilling every duty. The road of hard work will not be smooth, instead it will be cobbled with hardships and full of ups and downs. The strong can always rise from setbacks; they are never ==discouraged==.
     
-    In the new era young Chinese must forge ahead as brave and devoted pioneers in the forefront of the times against all difficulties and obstacles, and work hard to blaze new trails, achieve successes and create miracles that will astonish the world. 
+    In the new era young Chinese must forge ahead as brave and devoted pioneers in the forefront of the times against all difficulties and obstacles, and work hard to blaze new trails, achieve successes and create ==miracles== that will astonish the world. 
     
     Fifth, Chinese youths in the new era must have remarkable abilities. 
     
-    Youth is a golden age for developing skills through hard work. "If you idle away your youth and achieve nothing, it's no good lamenting in old age."
+    Youth is a golden age for developing skills through hard work. "If you ==idle== away your youth and achieve nothing, it's no good ==lamenting== in old age."
     
-    In this new era, knowledge updates quickly, the social division of labor is becoming more refined, and new technologies, models, and forms of business are emerging one after another. This not only provides a broad stage for young people to display your talents, but also raises new and higher requirements for your abilities. To achieve your ideals or to shoulder the mission of the times, young people must cherish and do justice to the prime of youth, study hard to acquire scientific knowledge, improve your capabilities, hone your skills, and keep up with new developments around the world in terms of thinking, vision, ideas, and level of understanding.
+    In this new era, knowledge updates quickly, the social division of labor is becoming more refined, and new technologies, models, and forms of business are emerging one after another. This not only provides a broad stage for young people to display your talents, but also raises new and higher requirements for your abilities. To achieve your ideals or to shoulder the mission of the times, young people must cherish and do justice to the prime of youth, study hard to acquire scientific knowledge, improve your ==capabilities==, ==hone== your skills, and keep up with new developments around the world in terms of thinking, vision, ideas, and level of understanding.
     
-    Chinese youths in the new era must have a stronger sense of urgency in learning, and work hard on studying the Marxist stance, viewpoint and methodology. You must master knowledge of science and culture and professional expertise. You must improve your attainment in humanities by educating yourselves and tempering your character through study. You must acquire more skills and become more professionally competent at work, so that you will be able to serve the people and make innovative and creative contributions to the country. 
+    Chinese youths in the new era must have a stronger sense of urgency in learning, and work hard on studying the Marxist stance, viewpoint and ==methodology==. You must master knowledge of science and culture and professional ==expertise==. You must improve your ==attainment== in humanities by educating yourselves and tempering your character through study. You must acquire more skills and become more professionally ==competent== at work, so that you will be able to serve the people and make innovative and creative contributions to the country. 
     
     Sixth, Chinese youths in the new era should temper your moral character.
     
-    A person cannot succeed without virtues. This makes morality essential. The Chinese nation has been trying to attain moral qualities that repose in the heights of excellence. To build China into a strong modern socialist country, we must enrich ourselves not only materially but culturally and ethically. Cultural and ethical progress is more lasting, more profound and more powerful. Young people must integrate sound moral appreciation and conscious moral development with active moral practice, to improve yourselves and maintain moral integrity. This way you will travel further in the correct direction on the path of life.
+    A person cannot succeed without ==virtues==. This makes morality essential. The Chinese nation has been trying to attain moral qualities that repose in the heights of excellence. To build China into a strong modern socialist country, we must enrich ourselves not only materially but culturally and ==ethically==. Cultural and ethical progress is more lasting, more profound and more powerful. Young people must integrate sound moral appreciation and conscious moral development with active moral practice, to improve yourselves and maintain moral integrity. This way you will travel further in the correct direction on the path of life.
     
-    Faced with a complex and changing international landscape, young people must differentiate between truth and falsehood and keep to the right path, and never blindly follow what others say or do. Facing temptation from the outside world, you must remain resolute, strictly abide by rules, create a better life with hard and honest work, and never be opportunistic or become conceited. While enjoying the good times, you should remember those who fought to make the present possible and work to repay them. You should be grateful to the Party, the country, the society and the people. You are expected to go through hardships, understand what life entails, get to know people's concerns and real problems, and identify the true meaning and value of life and work.
+    Faced with a complex and changing international landscape, young people must ==differentiate== between truth and falsehood and keep to the right path, and never blindly follow what others say or do. Facing temptation from the outsideworld, you must remain resolute, strictly abide by rules, create a better life with hard and honest work, and never be opportunistic or become ==conceited==. While enjoying the good times, you should remember those who fought to make the present possible and work to repay them. You should be grateful to the Party, the country, the society and the people. You are expected to go through hardships, understand what life ==entails==, get to know people's concerns and real problems, and identify the true meaning and value of life and work.
     
-    In the new era young people must nurture and practice the core socialist values, draw nourishment from traditional Chinese virtues, learn from heroes and role models of the times, and enhance your moral integrity through introspection. You should recognize illustrious virtue, follow social ethics, and restrict personal desires, while guarding against temptations such as worship of money, self-indulgence, overly self-centered pursuits, and historical nihilism. You should aim high and look far to pursue a more lofty and fulfilling life, so that integrity and vitality will prevail throughout our society.
+    In the new era young people must ==nurture== and practice the core socialist values, draw ==nourishment== from traditional Chinese ==virtues==, learn from heroes and role models of the times, and enhance your moral integrity through ==introspection==. You should recognize ==illustrious==  virtue, follow social ==ethics==, and restrict personal desires, while guarding against temptations such as worship of money, ==self-indulgence==, overly self-centered pursuits, and historical ==nihilism==. You should aim high and look far to pursue a more lofty and fulfilling life, so that integrity and ==vitality== will prevail throughout our society.
 
 ??? info "Passage 2"
 
@@ -103,197 +103,197 @@
 ??? info "Passage 3"
 
     **A Deeper Understanding of the New Development Concepts**
-
+    
     On the philosophy of innovative, coordinated, green, open, and inclusive development, I have talked much at the Fifth Plenary Session of the 18th CPC Central Committee in 2015 and on other occasions. Today, I will not try to elaborate on it from the practical perspective of our work, but proceed from history and reality, and offer some suggestions on how to tackle major issues.
-
+    
     Firstly, we should implement the strategy of innovation-driven development.
-
+    
     We should put innovation first because it is the primary driving force for development. The force of innovation determines the speed, effectiveness, and sustainability of development. In the case of such a large economy as China, without continued development impetus we will find it difficult to realize sound and sustained economic growth; we will struggle to double the 2010 GDP and per capita income for both urban and rural residents by 2020. Of course, coordinated, green, open, and inclusive development helps to strengthen the impetus of development, yet the core is innovation. Innovation is the key to driving overall social and economic development.
-
+    
     The need to pursue innovative development is a conclusion drawn from the world's development process in modern times and from China's practice in reform and opening up since 1978. Pursuing innovative development is fundamental to our strategy in adapting to the changing environment of development, enhancing the impetus of development, seizing the initiative in development, and leading the new normal.
-
+    
     Nowadays, social and economic development throughout the world relies more on theoretical, institutional, scientific, and cultural innovation, while new competitive edges are to be gained through the capacity for innovation. Those countries which advance in innovation will seize the initiative in leading global development. A new round of scientific and industrial revolution is on the way, whose main characteristics are as follows: Major revolutionary technologies are emerging; the transformation of scientific achievements is accelerating; the form of industrial organization and industrial chains is more monopolistic. Major world powers have adopted new strategies to promote innovation, increased investment in innovation, and made greater efforts to contend for strategic resources in innovation such as talent, intellectual property and standards.
-
+    
     Despite being the world's second largest, China's economy is obese and weak. Inadequate capacity for innovation is its Achilles' heel. Innovation-driven growth has become the pressing demand for China's development. Therefore, I stress repeatedly that innovation is development; innovation is the future.
-
+    
     Through years of efforts, China's overall scientific capacity has improved, transforming from quantitative increase to qualitative improvement. It has now reached advanced international level in some major areas. Nevertheless, China's key technologies remain restrained by other countries; China's scientific reserve is far from adequate to create new industries and lead future global development; China's industries remain at the middle and low end of global value chains; and China lags far behind developed countries in high technologies for military and security use. Therefore, we must seek development based on innovation, foster new development impetus through innovation, and promote leading edge development that gives greater incentives to first innovators.
-
+    
     Secondly, we should enhance overall and coordinated development.
-
+    
     "Everything has its counterpart."1 According to materialistic dialectics, things are universally related; they interact with and constrain each other, and so do their composing elements; the world is an interrelated whole and also an interactive system. Applying materialistic dialectics, we should grasp the inherent relationship between objective things to understand and handle problems. Authors of Marxist classics value materialistic dialectics, and are skilled in applying them to understand and explore the theory of movement of opposites in the development of human society. For example, Karl Marx proposed that social reproduction falls into two categories – means of production and means of subsistence, and they must maintain a certain ratio to realize social reproduction.
-
+    
     Presently, coordinated development has acquired new features. Coordinated development is the means and the objective of development, the standard and measurement for evaluating development. In the development of all things, we should address both major and minor problems, both major and minor aspects of a problem; at the same time, we should focus on major problems and major aspects of a problem. Coordinated development is the unity of the above two theories. A country, a region, or an industry has both strengths and constraints at any given development stage. Accordingly, we should make a targeted effort to resolve tough problems and improve weak points, and at the same time, consolidate and foster our existing strengths. By taking the two measures that complement each other we can achieve high-level development. Coordinated development is the unity of balanced development and imbalanced development. The process from balance to imbalance and then to rebalance is the basic law of development. Balance is relative while imbalance is absolute. Emphasizing coordinated development is not pursuing equalitarianism, but giving more importance to equal opportunities and balanced resource allocation. Coordinated development is the unity of weakness and potential in development. China is in a stage of transition from a middle-income country to a high-income country. According to international experience, this is a stage of concentrated conflicts of interest, in which imbalanced development and various weaknesses are inevitable. To pursue coordinated development, we should identify and improve our weaknesses, so as to tap development potential and sustain growth momentum.
-
+    
     In order to secure overall national development during the 13th Five-year Plan period (2016-2020), pursuing coordinated development is the key. We should learn to use the method of dialectics, be good at "playing the piano", and properly handle the relationships between the part and the whole, between the present and the future, between major and minor issues. We should weigh our strengths and weaknesses, draw on strengths and avoid weaknesses, and make strategic choices in the best of our interests. Proceeding from the prominent problems in our imbalanced, uncoordinated, and unsustainable development, we need to promote coordinated development between regions, between urban and rural areas, and between material and cultural progress, and promote integrated development of economic growth and national defense. This is the key feature of coordinated development affirmed at the Fifth Plenary Session of the 18th CPC Central Committee.
-
+    
     We should develop regional comparative edges, and improve the distribution of productive forces. We should make special efforts to implement three strategies – the Belt and Road Initiative, the Coordinated Development of Beijing, Tianjin and Hebei, and the Yangtze River Economic Belt. We should support accelerated development in old revolutionary bases, areas with concentrations of ethnic minorities, border areas, and poor areas. We should build a multi-centered, IT-supported, and open regional development framework which connects the eastern, central, and western regions and runs through the southern and northern regions, so as to narrow regional development gaps. We should continue to ensure that industry helps agriculture and that cities support the countryside; we should implement the policy of giving more, taking less, and loosening control to increase rural incomes; we should balance public resource allocation in urban and rural areas; we should build new forms of relationship between industry and agriculture and between urban and rural areas in which industry promotes agriculture, urban areas support rural development, industry and agriculture reinforce each other, and urban development and rural development are integrated, so as to continue to narrow the gap between urban and rural development. We must adhere to the goal of advancing socialist culture, using core socialist values to forge consensus and gather strength, using outstanding cultural products to inspire people and boost morale, and using the best of traditional Chinese culture to nourish morality, thereby raising cultural progress to a higher level. We must ensure both economic development and the development of defense capabilities; we should further the integration of military and civilian development and achieve a cost-effective civil-military integration that covers all elements and all fields; we should ensure that strengthening national defense and the armed forces is consistent with completing the First Centenary Goal, and ensure the coordinated, balanced, and inclusive development of the two processes.
-
+    
     Thirdly, we should promote the harmonious coexistence of humanity and nature.
-
+    
     The purpose of green development, fundamentally speaking, is to serve this end. Human development activities must respect, accommodate, and protect nature; otherwise nature will retaliate against us. This is a law no one can deny.
-
+    
     Fourthly, we should establish a new system of opening up.
-
+    
     China's development achievements over the past 30 years derive from opening up. The prosperity of a country and the rejuvenation of a nation mostly rely on following the trend of the times and propelling historical progress.
-
+    
     In promoting open development, the domestic and international situations we face now are quite different from the past. On the whole, we have more favorable factors; we also face significant risks and challenges that are by no means negligible. This can be seen from four perspectives.
-
+    
     First, power structures among various countries are changing positively in an unprecedented way. The rise of emerging market economies and developing countries is changing the global political and economic landscapes. There is an irresistible trend towards world polarization and democracy in international relations. The West-dominated global governance system is finally showing signs of change, but the competition to gain dominance in global governance and the formulation of international rules is fierce. Since Western developed countries retain advantages in economy, science and technology, politics, and military affairs, there is a long way to go to build a fairer and more equitable international political and economic order.
-
+    
     Second, the world economy is gradually emerging from the shadow of the global financial crisis. Western countries are maintaining the momentum of economic recovery through reindustrialization. The structure of the international industrial division of labor has changed, but protectionism remains severe worldwide. The formulation of international economic and trade rules tends to be politicized and fragmented. Emerging market economies and developing economies are still sluggish, and the global economy has not yet found new engines for full recovery.
-
+    
     Third, China's share of the world economy and global governance has increased rapidly. China is now the world's second largest economy, its largest exporter, its second largest importer, its second largest source of foreign direct investment, its largest holder of foreign exchange reserves, and its largest market for tourism. China has become a major factor in changing the world political and economic landscapes. Nevertheless, it remains the case that China's economy is big but not strong, and our per capita income and living standards are not in the same league as those of Western countries. We need to work harder to turn our economic strength into international institutional authority.
-
+    
     Fourth, China's opening up has reached a better balance between bringing in and going global. The opening-up pattern has changed from mainly bringing in to both bringing in and going global on a large scale, but the corresponding law, consultancy, finance, personnel, risk management, and safety controls cannot meet the practical needs, while our mechanisms remain weak in supporting high-level opening up and large-scale going global.
-
+    
     This means that the overall environment for open development is more favorable than ever before, but the conflicts, risks, and contests we are facing are also unprecedented, setting delicate traps for any potential negligence. On the subject of the next steps in open development, the Fifth Plenary Session of the 18th CPC Central Committee made pertinent provisions, and I also set out some requirements in the speech at the second full assembly. I hope we continue to explore and practice, enhance our conscientiousness and capabilities to address the overall situation both domestically and internationally, and improve the effectiveness and level of opening up.
-
+    
     Fifthly, we should practice the people-centered philosophy of development.
-
+    
     This was initiated at the Fifth Plenary Session of the 18th CPC Central Committee. It displays the CPC's fundamental purpose of serving the people wholeheartedly, and the materialistic historical view that the people are the primary force for propelling development.
-
+    
     As mentioned in ancient Chinese classics, "There are some fixed principles in governing a state, among which benefiting the people should be the root."10 The people-centered development philosophy is not an abstract, abstruse concept. We will not restrict ourselves to lip service or idle reflection, but put it into practice in all areas of social and economic development. We should maintain the people's principal position in the country, and fulfill the people's expectations for a better life. We should continue to realize, safeguard, and develop the fundamental interests of the overwhelming majority of the people. We should ensure that development is for the people, that it is reliant on the people, and that its fruits are shared by the people. We should, through furthering reform and innovation-driven development, enhance the quality and increase the benefits of development. We should produce more and better material and cultural products to meet the ever-growing material and cultural needs of the people. We should fully stimulate the people's initiative, enthusiasm, and creativity, and provide the platform and environment for all workers, entrepreneurs, idea generators, and officials at all levels to play their innovative role. We should adhere to the basic socialist economic system and the socialist income distribution system. We should adjust the pattern of national income distribution. We should improve the mechanism of secondary distribution regulating income distribution mainly through taxation, social security, and transfer payments. We must safeguard social fairness and justice, and narrow income gaps, so that all the people can have a greater share of the fruits of development in a fair way.
-
+    
     In nature, the philosophy of shared development represents the idea of people-centered development. It reflects the demand of achieving shared prosperity in stages. Shared prosperity is a primary goal of Marxism; it has also been a basic ideal of the Chinese people since ancient times. Confucius11 said, "He is not concerned lest his people should be poor, but only lest what they have should be ill-apportioned. He is not concerned lest they should be few, but only lest they should be divided against one another."12 Mencius13 said, "Do reverence to the elders in your own family and extend it to those in other families; show loving care to the young in your own family and extend it to those in other families."14 The Book of Rites15 gives a detailed and lively description of "moderate prosperity" and "great harmony".
-
+    
     According to Karl Marx and Frederick Engels, communism will eradicate the opposition and differentiation between classes, between urban and rural areas, between mental labor and physical labor; it will adopt the principle of distribution from each according to his ability and to each according to his needs, so as to achieve shared development of society and the free and well-rounded development of individuals in the real sense.
-
+    
     Of course, there will be a long trek through history to reach this goal. China is still in the primary stage of socialism and will long remain so. Therefore, we cannot do what is premature, but this does not mean we should do nothing in realizing shared prosperity step by step. Instead, we should start to do what is appropriate to the current conditions, accumulating small successes and moving towards prosperity for all.
-
+    
     The philosophy of shared development, put forward at the Fifth Plenary Session of the 18th CPC Central Committee, emphasizes four points.
-
+    
     First, the beneficiaries are all the people. This is about the coverage of shared development. Shared development means development fruits are shared by all the people, each enjoying his or her share. They are not to be shared by the few or by a special group.
-
+    
     Second, the development benefits to be shared cover all fields. This is about the content of shared development, including economic, political, cultural, social and ecological achievements. We should safeguard the people's rights and interests in all these respects.
-
+    
     Third, development achievements are shared through making concerted efforts for development. This is about the means of realizing shared development. It is through jointly contributing to development that people enjoy the benefits of inclusive development. The process of contributing together is also the process of sharing benefits. We should practice democracy, widely gather the wisdom of the people, and encourage their efforts, so that all the people participate in and dedicate themselves to shared development, and share a sense of accomplishment.
-
+    
     Fourth, shared development is realized step by step. This is about the process of achieving shared development. As a Chinese proverb goes, you will not make a strong man out of one meal. Shared development must extend from lower to higher levels and move from imbalance to balance. It must be differentiated even at an advanced level. Our policy design should be based on the national conditions and the future socio-economic development level. We should neither hesitate to move forward, nor be niggardly with necessary investments, nor aim too high, nor spend on deficit, nor issue empty promises without providing real gain.
-
+    
     These four points are interconnected, so we must understand and tackle them as a whole.
-
+    
     In terms of implementing the philosophy of shared development, the 13th Five-year Plan proposed many tasks and measures which can be distilled down to two points. First, we should give full rein to the people's enthusiasm, initiative, and creativity, gather their strength to advance Chinese socialism, and "make the cake bigger". Second, once the cake has indeed become bigger, we must cut it fairly, so as to demonstrate the full strength of socialism and make the people feel a greater sense of gain. We should expand the middle-income class, and gradually form an olive-shaped income distribution structure. In particular, we should make greater efforts to help people in difficulties and win the campaign against rural poverty. Implementing shared development is a big issue. From the top-level design to the "last kilometer" of policy implementation, we should make continuous efforts to mark new milestones in our progress.
 
 ??? info "Passage 4"
 
     **Confidence in the Political System of Chinese Socialism**
-
+    
     People's democracy is a banner that the CPC has always held high. On our way forward, we should keep to the socialist path of making democratic political progress with Chinese features.
-
+    
     The way we plan and accelerate China's socialist democracy plays a decisive, comprehensive, and far-reaching role in our national political life.
-
+    
     At all times and almost everywhere on the planet, evidence can be found showing that the wrong choice in the path for political development leads to social unrest, national disruption, and the fall of the government. China is a large developing country. Choosing the right path for its political progress is therefore a fundamental and vital issue.
-
+    
     Designing and developing the national political system, we must ensure the unity of history and reality, theory and practice, and form and content.
-
+    
     We must take into account the realities and the prevailing conditions in China, focusing on current issues to respond to actual demands rather than copying from other models.
-
+    
     We must keep to the long-established track of historical heritage, cherishing the path of past development, accumulated political experience, and established political principles rather than breaking with history.
-
+    
     A political system works to adjust political relations, establish political order, accelerate national development, and maintain national stability. This is why it cannot be judged without reference to its specific social and political conditions. It can never be all in the same key and follow the same pattern. In our political system, we should not simply imitate others when we see things that we do not have, and neither should we want to get rid of what we believe to be surplus because others do not have it. Neither of these views is correct because they are superficial and reductive.
-
+    
     As an old Chinese saying goes, "To the south of the Huaihe River grow oranges, while to the north grow bitter oranges." The purpose of the saying is to highlight the influence of environment. We should draw on the achievements of other political civilizations, but we should never let them outweigh the foundations of China's own political system.
-
+    
     China is a country with a land area of over 9.6 million square kilometers and a population of 56 ethnic groups. Whose model should we copy? And who is qualified to throw their weight around and tell us what to do?
-
+    
     Living in a colorful world, we should uphold the approach of inclusiveness, modestly learn from the best of other civilizations, and digest and absorb them on an independent basis, so as to turn them into part of the best of our own. Never follow others without trying to understand them properly. In attempting to walk like a swan, the crow loses its own gait.
-
+    
     Blindly copying the political systems of other countries will never work in China. They will never adapt to our country. Such a course of action will "turn the tiger you are trying to draw into a dog". It could even spell an end to the independent destiny of our country. Only a system deeply-rooted and fully nourished in our own soil is trustworthy and will serve our purposes.
-
+    
     No two political systems on earth are exactly alike, and no model can fit the political systems of all countries.
-
+    
     The Chinese people recognize that it is natural for things to be different. All countries differ in their realities. Each country is unique in its political system, which is determined by its people and has been developed and gradually refined over a long period of time on the basis of their historical heritage, cultural traditions, and social and economic development.
-
+    
     The strength of China's socialist political system, featuring Chinese characteristics – workable, full of vigor and vitality, and efficient – is that, past and present, it has grown on the Chinese soil. In the future, it will continue to thrive and to be deeply rooted in this soil.
-
+    
     The best way to evaluate whether a country's political system is democratic and efficient is to observe whether the succession of its leading body is orderly and in line with the law, whether all people can manage state affairs and social, economic and cultural affairs in conformity with legal provisions, whether the public can express their requirements without hindrance, whether all sectors can efficiently participate in the country's political affairs, whether national decisions can be made in a rational, democratic way, whether professionals in all fields can be part of the team of the national leadership and administrative systems through fair competition, whether the ruling party can serve as a leader in state affairs in accordance with the Constitution and laws, and whether the exercise of power can be kept under effective restraint and supervision.
-
+    
     Thanks to a long-term effort, we have made decisive progress in addressing such major issues.
-
+    
     We have replaced the life-long tenure of officials with limited terms. Today, all officials serving in government agencies are replaced in an orderly manner.
-
+    
     We have offered greater opportunities for the people to participate in political affairs, so that they are able to play their role as the masters of the country, on a wide range, at all levels.
-
+    
     We have promoted the broadest possible patriotic United Front and developed a unique socialist consultative democracy, which has brought together the wisdom and strength of all political parties, organizations, ethnic groups, social groups, and people from all walks of life.
-
+    
     We have striven to establish a decision-making system that tells us how people are faring, reflects public opinion, pools general wisdom, and values social strengths. We have also maximized the transparency of decision-making and provided further opportunities for the public to take part in the process, so as to ensure that all of our decisions serve the interests and aspirations of the people.
-
+    
     We have established and improved a system for the selection and appointment of exemplary talent, so that outstanding people from all sectors can be drawn to the causes of both the Party and the government.
-
+    
     We have promoted the rule of law, law-based governance and exercise of state power, and a law-based country, government and society, thus enhancing governance by law throughout the country.
-
+    
     We have established and refined a multilevel system for scrutiny and one for open administration system in various areas so as to guarantee that both Party and central government organs, as well as their staff, exercise their power in accordance with proper authorization and procedures.
-
+    
     China has implemented the state system which is a socialist state under the people's democratic dictatorship led by the working class and based on the alliance of workers and farmers, the system of people's congresses as the system of government, the system of multiparty cooperation and political consultation under the leadership of the CPC, the system of regional ethnic autonomy, and the system of community-level self-governance, featuring distinctive Chinese characteristics.
-
+    
     This institutional arrangement has demonstrated the following strengths:
-
+    
     – It performs well in allowing the people to enjoy more extensive and more substantial rights and freedoms, and share more opportunities to participate in national and social governance.
-
+    
     – It can effectively regulate the country's political relations, promote a vigorous and vital relationship among political parties, ethnic groups, religions, social groups, and compatriots at home and abroad, enhance national cohesion, and form political stability.
-
+    
     – It can pool our resources to accomplish sizable tasks, success- fully accelerate the liberation and development of social productivity, incentivize all sectors during socialist modernization, and upgrade quality of life and standards of living.
-
+    
     – It can effectively safeguard state independence, sovereignty, security, and the benefits of development, and maintain the well-being of both the nation and its people.
-
+    
     Over the three decades since the introduction of the reform and opening-up policy, China has overcome rarely-seen difficulties and removed barriers to progress. As a result it has reached new heights in economic strength and overall national strength, and in people's standard of living. All ethnic groups have worked together for common prosperity and development, leading to a long-term social harmony and stability in the country. Facts prove that China's socialist democracy is bestowed with enormous vitality and the country has made the right choice for its socialist path of making political progress with Chinese characteristics, which suits China's national conditions and reinforces the position of the people as the master of the country.
-
+    
     A country's political system defines and responds to its economic and social foundations. It can even play a decisive role. It is a key link between other systems. Therefore, we must increase self-confidence in our country's political system and strengthen our faith in and determination to follow our chosen political path of development.
-
+    
     Socialist democracy with Chinese characteristics is something new, and good. This does not necessarily mean that China's political system is flawless, beyond improvement and incapable of development.
-
+    
     Having confidence in our political system does not mean being smug or complacent, nor does it mean we know best and we can ignore the outside world. Instead, we should fuse growing confidence in the system with continuous reform and innovation, and be unstinting in our efforts to improve and develop the institutional system, while maintaining the fundamental political system.
-
+    
     As we have always believed, the progress of our democracy and legal system is not quick enough in responding to the requirements of expanding people's democracy and promoting social and economic development. When it comes to socialist democracy, there remain further improvements to be made in its system, mechanisms, procedures, regulations, and specific operations. We should therefore double our efforts to safeguard the people's right to democracy and give full play to their creativity.
-
+    
     While promoting reform in all respects, we should actively and steadily advance political reform, take the people's position as masters of the country as a fundamental principle, enhance the vitality of the Party and the country, and keep the people fully motivated.
-
+    
     Socialist political progress means modernizing the state governance system and capacity.
-
+    
     The general goal of continuing reform, set at the Third Plenary Session of the 18th CPC Central Committee, concluded with two phrases: "improving and developing the socialist system with Chinese characteristics", and "modernizing our national governance system and capacity". The former defines our fundamental orientation – Chinese socialism, rather than anything else. The latter points the distinctive direction to achieve development and progress under the fundamental orientation. Each of the two is essential, and they are interdependent.
-
+    
     The key to socialist democracy lies in maximizing and expanding our strengths and traits.
-
+    
     We should give better play to the Party's core function as a leader that commands the overall situation and coordinates with all other stakeholders. We should improve the CPC's capability for scientific, democratic and law-based governance, ensure that the Party leads the people to govern the country effectively, and guarantee that our country moves forward with the leadership and in a state of unity.
-
+    
     We must uphold the principle that all power of the state belongs to the people, which guarantees not only democratic elections in accordance with the law but also democratic decision-making, democratic management, and democratic supervision, and avoids any risk that pre-election promises will not be kept.
-
+    
     We must uphold and improve the system of CPC-led multiparty cooperation and political consultation, and intensify cooperation and coordination between all social forces, so as to avoid conflicts, disputes, and internal strife among the various parties involved.
-
+    
     We must uphold and improve the system of regional ethnic autonomy, consolidate ethnic relations of equality, unity, mutual assistance and harmony, and achieve harmonious development of all ethnic groups, so as to guard against ethnic conflicts and misunderstandings.
-
+    
     We must uphold and improve the system of community-level self-governance by improving local democracy, and see that the people directly exercise their democratic rights in line with the law, and that their rights are genuine.
-
+    
     We must uphold and improve the system and principle of democratic centralism by enhancing the capacity and efficiency of all government agencies, stepping up their coordination and collaboration, and forming a strong force for managing our state affairs, so as to avoid internal friction.
-
+    
     In short, we should double our efforts in institutionalizing and standardizing socialist democracy to give free rein to the strengths of the socialist political system with Chinese characteristics, so that our Party and nation can thrive and enjoy long-lasting stability.
 
 ??? info "Passage 5"
 
     **Advance the Rule of Law Under Chinese Socialism**
-
+    
     Since the 18th CPC National Congress in 2012, the Central Committee has made a series of major decisions and worked out a chain of major measures on law-based governance. To further the cause of our Party and state, we have strengthened legislation in key areas and improved our socialist legal system with distinctive Chinese features. Upholding Constitution-based governance, we have amended the Constitution as required by the times, designated the national Constitution Day, and established the institution of pledging allegiance to the Constitution. In addition, the oversight of the implementation of the Constitution has been strengthened. We have advanced law-based government, substantially reduced items for administrative approval, completely ruled out examination and approval for non-administrative licenses, and introduced a power list, a negative list and a responsibility list for governments at various levels, so as to regulate the exercise of executive power and see that law is enforced in a strict, procedure-based, impartial and non-abusive way. We are resolutely carrying forward reform in the domain of rule of law, promoting the adoption of judicial accountability, personnel quota systems and reform measures to establish a criminal litigation system centering on trials. We have abolished the system of reeducation through labor and rectified a batch of cases involving serious miscarriages of justice. Therefore our judicial performance, efficiency and credibility have improved remarkably. We regard our efforts to carry out basic legal education among the people and to encourage them to abide by the law as fundamental tasks of law-based governance. We have carried out a responsibility program in which state law enforcement departments are responsible for strengthening public legal awareness. We have incorporated education on the rule of law into the national education system. As a result, public awareness of the rule of law has been noticeably enhanced. We are raising the competence of those responsible for implementing the rule of law. We are developing a workforce of legal service professionals and strengthening legal education and the training of legal personnel. We have kept our commitment to law-based governance, developing and improving Party rules and regulations, pushing forward the reform of the national supervision system, punishing corruption and crimes in accordance with the law, and exercising full and strict governance over our Party. As a result, remarkable results have been achieved in all those areas.
-
+    
     Since the 18th CPC National Congress in 2012, we have put forward new concepts, new thinking and new strategies on law-based governance and defined the guiding philosophy, development path, work plan and key tasks of law-based governance, which can be summarized in the following ten principles:
-
+    
     First, strengthen the CPC's leadership role in law-based governance. Leadership by the CPC is the most fundamental guarantee for socialist rule of law. In absolutely no way does the rule of law amount to weakening the leadership of the CPC. Instead, it is meant to strengthen and improve its leadership, constantly enhance its capacity and performance in law-based governance, and bolster its position as the governing party. We must ensure the Party's leadership over legislation, its guarantee of law enforcement, its support for judicial justice, and its exemplary role in abiding by the law. We must improve the institutions and mechanisms by which our Party plays its leadership role in law-based governance. We must turn the views of our Party into the will and laws of the state through legal procedures, ensure effective implementation of our Party's policies through the law and ensure that we are on the right track in exercising law-based governance.
-
+    
     Second, uphold the principle that the people enjoy the principal status in our society. We must develop the rule of law for the people and rely on them, and it must benefit and protect them. We must uphold social equity and justice, which is the goal of the rule of law, and make sure that the people can see that equity and justice are served in every law, every law enforcement action, and every judicial case. In the whole process of our law-based governance we must represent the people's interests, reflect their wishes, protect their rights and interests, and improve their wellbeing. We must ensure that the people, under the leadership of the CPC, are able to administer state affairs and manage economic, cultural and social affairs through various channels and in various ways as provided by law.
-
+    
     Third, uphold socialist rule of law with Chinese characteristics. In advancing law-based governance, we must take the right path. We need to bear in mind our own national context and realities and take a path of rule of law best suited to our own specific conditions. Under no circumstance should we imitate the models and practices of other countries or adopt the Western models of "constitutionalism", "separation of powers", and "judicial independence".
-
+    
     Fourth, develop a system of socialist rule of law with Chinese characteristics. Such a system is a legal manifestation of the Chinese socialist system. We must focus on our goal of building socialist rule of law with Chinese characteristics and work hard to establish a complete system of laws, a highly effective enforcement system, a stringent scrutiny system, effective supporting measures, and a sound system of Party regulations, thereby constantly breaking new ground in law-based governance.
-
+    
     Fifth, push forward coordinated progress in law-based governance, exercise of state power, and government administration, and promote the integrated development of the rule of law for the country, the government, and society. Comprehensive law-based governance is a great systematic endeavor. Therefore, we must take many factors into consideration, identify priorities, and formulate integrated plans. We must pursue it in a more systematic, holistic and coordinated way. Law-based governance, exercise of state power and government administration form an indivisible whole, the key to which is that the CPC must keep its commitment to law-based governance and that governments at all levels must administer in accordance with the law. A law-based country, government, and society each have their own areas of focus, allowing them to exert a mutually reinforcing effect on one another. A law-based country is the goal of developing the rule of law; a law-based government is the main force in building a law-based country; a law-based society is the foundation for building a law-based country. We must be adept at using institutions and laws to govern our country and improve our capacity for well-conceived, democratic and law-based governance.
-
+    
     Sixth, govern the country and exercise state power within the framework of the Constitution. In pursuing law-based governance, we must first uphold Constitution-based governance; in pursuing law-based exercise of state power, we must first uphold Constitution-based exercise of state power. The CPC leads the people in enacting and enforcing the Constitution and the law, and it must confine its activities to the areas prescribed by the Constitution and the law. All individuals, organizations and state organs must regard the Constitution and the law as their code of conduct, and exercise powers, enjoy rights, perform duties, and fulfill obligations accordingly. They will not be permitted to enjoy any special privilege that places them above the Constitution and the law, and all acts in violation of the Constitution or the law must be punished.
-
+    
     Seventh, ensure sound lawmaking, strict law enforcement, impartial administration of justice, and the observance of law by all. To solve the prominent conflicts and problems in devising, enforcing, applying and observing the law, we must resolutely advance reform in the domain of law-based governance. We must focus on the key areas of law-based governance and improve the legislative system and the quality of our legislation. We must promote strict law enforcement, establish an efficient system, improve administrative procedures, and fully implement administrative accountability. We must support the lawful and independent functioning of judicial organs and make better institutional arrangements for the exercise of judicial power in which the division of powers is both complementary and mutually restrictive. We must make greater efforts to raise public legal awareness and create an environment for the rule of law in which all of our people work in accordance with the law, look to the law when running into problems, and rely on the law to resolve problems and conflicts.
-
+    
     Eighth, properly handle the dialectical relationships concerning law-based governance. In implementing law-based governance, we must correctly deal with the relationships between leadership by the Party and the rule of law, between reform and the rule of law, between the rule of law and the rule of virtue, and between law-based governance and rule-based Party discipline. Socialist rule of law must uphold CPC leadership, while CPC leadership must rely on socialist rule of law. Reform and the rule of law are like the two wings of a bird or the two wheels of a cart. We must promote reform under the rule of law and improve the rule of law in the process of reform. We must integrate the rule of law with the rule of virtue so that they complement and reinforce each other. We must bring into play the complementary roles of law-based governance and rule-based Party discipline, and ensure that the CPC governs the country in accordance with the Constitution and the law, and govern and discipline itself strictly with Party rules and regulations.
-
+    
     Ninth, develop a contingent of high-caliber legal personnel with moral integrity and professional competence. To advance law-based governance, we must train legal professionals devoted to socialist rule of law and loyal to the Party, the country, the people and the law. We must strengthen education in our ideals and convictions, carry out in-depth education on the core socialist values and the socialist concept of law-based governance, and enable judicial personnel to be more consistent, specialized and professional in their conduct. We must stick to our goal of legal education to foster virtuous specialists who are morally and professionally strong. We must be innovative in training legal talent and cultivate a large number of legal professionals of high caliber and their successors.
-
+    
     Tenth, make sure that leading officials, though small in number, play a key role in implementing the rule of law. It is leading officials who exercise the ruling power of the Party and the legislative, administrative, supervisory and judicial powers of the state. Therefore, they are key to law-based governance. They must set a good example in upholding the law and treating it with respect, in understanding and having a good mastery of the law, in observing the law and defending the rule of law, and in applying the law and working in accordance with the law. They must strive to become more adept at using law-based thinking and approaches to carry out reform, promote development, resolve problems, and maintain stability. They must provide the example whereby the whole of society upholds, studies, observes and applies the law.
-
+    
     These new concepts, thinking and strategies are the latest achievements in adapting Marxism to the Chinese context. They provide fundamental principles for us in implementing law-based governance. Thus we must uphold them on a long-term basis and constantly enrich and develop them.
