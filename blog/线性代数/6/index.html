@@ -1043,7 +1043,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        合同
+        二次型
       
     </span>
   </a>
@@ -1054,7 +1054,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        二次型
+        标准形与规范形
       
     </span>
   </a>
@@ -1065,7 +1065,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        标准形与规范形
+        合同
       
     </span>
   </a>
@@ -1076,7 +1076,18 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        正定二次型
+        几何应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实二次型的正定性
       
     </span>
   </a>
@@ -1085,6 +1096,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2520,7 +2542,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        合同
+        二次型
       
     </span>
   </a>
@@ -2531,7 +2553,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        二次型
+        标准形与规范形
       
     </span>
   </a>
@@ -2542,7 +2564,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        标准形与规范形
+        合同
       
     </span>
   </a>
@@ -2553,7 +2575,18 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        正定二次型
+        几何应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实二次型的正定性
       
     </span>
   </a>
@@ -2562,6 +2595,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2584,36 +2628,39 @@
 
   <h1>第六章 二次型</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-28'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-28T15:59:28.259997+00:00'>2025-12-28</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-28'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-28T15:59:28.259997+00:00'>2025-12-28</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-29'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-29T07:26:42.232814+00:00'>2025-12-29</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-29'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-29T07:26:42.232814+00:00'>2025-12-29</time></span></div></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">合同<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>自反性，对称性，传递性</li>
-<li>若 <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 合同，则 <span class="arithmatex">\(r(\boldsymbol A)=r(\boldsymbol B)\)</span>，<span class="arithmatex">\(\boldsymbol A^T=\boldsymbol A\Leftrightarrow \boldsymbol B^T=\boldsymbol B\)</span></li>
-</ul>
-<h3 id="_3">二次型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_2">二次型<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>定义及其矩阵表达式</p>
+<p><span class="arithmatex">\(f(\boldsymbol x)=\boldsymbol x^T\boldsymbol A\boldsymbol x\)</span>，其中 <span class="arithmatex">\(\boldsymbol A=\boldsymbol A^T\)</span>（若不是，需要 <span class="arithmatex">\(\boldsymbol A\gets\dfrac 1 2 (\boldsymbol A+\boldsymbol A^T)\)</span>），<span class="arithmatex">\(\boldsymbol A\)</span> 的秩称为二次型 <span class="arithmatex">\(f\)</span> 的秩</p>
 </li>
 <li>
-<p>线性变换的定义：<span class="arithmatex">\(f(\boldsymbol x)=\boldsymbol x^T\boldsymbol A\boldsymbol x\xlongequal{\boldsymbol x=\boldsymbol C\boldsymbol y}(\boldsymbol C\boldsymbol y)^T\boldsymbol A(\boldsymbol C\boldsymbol y)=\boldsymbol y^T(\boldsymbol C^T\boldsymbol A\boldsymbol C)\boldsymbol y\xlongequal{\boldsymbol C^T\boldsymbol A\boldsymbol C=\boldsymbol B}\boldsymbol y^T\boldsymbol B\boldsymbol y=g(\boldsymbol y)\)</span></p>
-<p>若 <span class="arithmatex">\(\boldsymbol C\)</span> 可逆，则 <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 合同，<span class="arithmatex">\(f(\boldsymbol x)\)</span> 与 <span class="arithmatex">\(g(\boldsymbol y)\)</span> 为合同二次型。</p>
+<p>线性替换：<span class="arithmatex">\(\boldsymbol x=\boldsymbol C\boldsymbol y\)</span></p>
+<p><span class="arithmatex">\(f(\boldsymbol x)=\boldsymbol x^T\boldsymbol A\boldsymbol x\xlongequal{\boldsymbol x=\boldsymbol C\boldsymbol y}(\boldsymbol C\boldsymbol y)^T\boldsymbol A(\boldsymbol C\boldsymbol y)=\boldsymbol y^T(\boldsymbol C^T\boldsymbol A\boldsymbol C)\boldsymbol y\xlongequal{\boldsymbol C^T\boldsymbol A\boldsymbol C=\boldsymbol B}\boldsymbol y^T\boldsymbol B\boldsymbol y=g(\boldsymbol y)\)</span></p>
+<p>若 <span class="arithmatex">\(\boldsymbol C\)</span> 可逆，则 <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 合同，<span class="arithmatex">\(f(\boldsymbol x)\)</span> 与 <span class="arithmatex">\(g(\boldsymbol y)\)</span> 为合同二次型，称为非退化线性替换。</p>
+<p>若 <span class="arithmatex">\(\boldsymbol C\)</span> 为正交矩阵，称为正交线性替换。</p>
 </li>
 </ul>
-<h3 id="_4">标准形与规范形<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_3">标准形与规范形<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>标准形：只有平方项、没有交叉项的二次型，<span class="arithmatex">\(g(\boldsymbol y)=\boldsymbol y^T\boldsymbol \Lambda\boldsymbol y\)</span>。</p>
 <p>合同标准形：与 <span class="arithmatex">\(f(\boldsymbol x)\)</span> 合同的标准形 <span class="arithmatex">\(g(\boldsymbol y)\)</span>。</p>
-<p>求法：任意 <span class="arithmatex">\(\mathbb P^{n\times n}\)</span> 中的对称矩阵必与某个 <span class="arithmatex">\(\mathbb P^{n\times n}\)</span> 中的对角矩阵合同。写出 <span class="arithmatex">\(\boldsymbol A\)</span>，求出 <span class="arithmatex">\(\boldsymbol Q^T\boldsymbol A\boldsymbol Q=\boldsymbol \Lambda\)</span>，令 <span class="arithmatex">\(\boldsymbol x=\boldsymbol C\boldsymbol y\)</span>。（可以用配方法。特别地，如果 <span class="arithmatex">\(\mathbb P=\mathbb R\)</span>，还可以用实对称矩阵的正交相似对角化，即正交变换法）</p>
-<p>对于实二次型：</p>
+<p>求法：任意 <span class="arithmatex">\(\mathbb P^{n\times n}\)</span> 中的对称矩阵必与某个 <span class="arithmatex">\(\mathbb P^{n\times n}\)</span> 中的对角矩阵合同。写出 <span class="arithmatex">\(\boldsymbol A\)</span>，求出 <span class="arithmatex">\(\boldsymbol Q^T\boldsymbol A\boldsymbol Q=\boldsymbol \Lambda\)</span>，令 <span class="arithmatex">\(\boldsymbol x=\boldsymbol Q\boldsymbol y\)</span>。（可以用配方法。特别地，如果 <span class="arithmatex">\(\mathbb P=\mathbb R\)</span>，还可以用实对称矩阵的正交相似对角化或成对初等变换法）</p>
 <ul>
 <li>
-<p>惯性定理：实二次型的所有合同标准形的正平方项个数 <span class="arithmatex">\(p\)</span>、负平方项的个数 <span class="arithmatex">\(q\)</span> 相同。</p>
-<p>若二次型的秩为 <span class="arithmatex">\(r\)</span>，则 <span class="arithmatex">\(q=r-p\)</span>。<span class="arithmatex">\(p\)</span>、<span class="arithmatex">\(q=r-p\)</span>、<span class="arithmatex">\(p-q=2p-r\)</span> 分别称为该二次型 <span class="arithmatex">\(f(\boldsymbol x)=\boldsymbol x^T\boldsymbol A\boldsymbol x\)</span>（或该实对称矩阵 <span class="arithmatex">\(\boldsymbol A\)</span>）的正惯性指数、负惯性指数、符号差。求法：求二次型的标准形（配方法或正交变换法）。</p>
-<p>非退化线性变换不改变正、负惯性指数。</p>
-<p>对于实对称矩阵 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span>，<span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 合同 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(f(\boldsymbol x)=\boldsymbol x^T\boldsymbol A\boldsymbol x\)</span> 与 <span class="arithmatex">\(g(\boldsymbol x)=\boldsymbol x^T\boldsymbol B\boldsymbol x\)</span> 的标准形的正、负惯性指数相同。特别地，由实对称矩阵的正交相似对角化，<span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span> 合同。</p>
+<p>配方法：</p>
+<ol>
+<li>若含有平方项，选一个含平方项的变量（如 <span class="arithmatex">\(x_1\)</span>），将所有含 <span class="arithmatex">\(x_1\)</span> 的项配方，消去所有含 <span class="arithmatex">\(x_1\)</span> 的交叉项，重复此操作；</li>
+<li>若不含平方项，选一个交叉项（如 <span class="arithmatex">\(x_1x_2\)</span>），作非退化线性替换 <span class="arithmatex">\(\begin{cases}x_1=y_1+y_2\\x_2=y_1-y_2\end{cases}\)</span> 转化为含平方项的形式。</li>
+</ol>
+<p>矩阵语言：对于对称矩阵 <span class="arithmatex">\(\boldsymbol A\in\mathbb P^{n\times n}\)</span>，必存在可逆矩阵 <span class="arithmatex">\(\boldsymbol C\in\mathbb P^{n\times n}\)</span>，使得 <span class="arithmatex">\(\boldsymbol C^T\boldsymbol A\boldsymbol C=\boldsymbol \Lambda\)</span>，其中 <span class="arithmatex">\(\boldsymbol \Lambda\)</span> 是对角矩阵。这里的 <span class="arithmatex">\(\boldsymbol C\)</span> 不一定是特征向量组成的，<span class="arithmatex">\(\boldsymbol \Lambda\)</span> 也不一定是特征值。</p>
+</li>
+<li>
+<p>成对初等变换法：考虑 <span class="arithmatex">\(\boldsymbol C^T\boldsymbol A\boldsymbol C=\boldsymbol E_k^T\cdots\boldsymbol E_2^T\boldsymbol E_1^T\boldsymbol A\boldsymbol E_1\boldsymbol E_2\cdots\boldsymbol E_k=\boldsymbol \Lambda\)</span> 时，<span class="arithmatex">\(\boldsymbol \Lambda\boldsymbol E_k^T\cdots\boldsymbol E_2^T\boldsymbol E_1^T\boldsymbol E=\boldsymbol C^T\)</span>。<span class="arithmatex">\(\boldsymbol A,\boldsymbol E\)</span> 一起做行变换，只对 <span class="arithmatex">\(\boldsymbol A\)</span> 做列变换，<span class="arithmatex">\((\boldsymbol A,\boldsymbol E)\to(\boldsymbol \Lambda,\boldsymbol C^T)\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol E_{ij}=\boldsymbol E_{ij}^T\)</span>（一起 <span class="arithmatex">\(R_{ij}\)</span>，单独 <span class="arithmatex">\(C_{ij}\)</span>），<span class="arithmatex">\(\boldsymbol E_i(k)=\boldsymbol E_i(k)^T\)</span>（一起 <span class="arithmatex">\(kR_i\)</span>，单独 <span class="arithmatex">\(kC_i\)</span>），<span class="arithmatex">\(\boldsymbol E_{ji}(k)=\boldsymbol E_{ij}(k)^T\)</span>（一起 <span class="arithmatex">\(R_j+kR_i\)</span>，单独 <span class="arithmatex">\(C_j+kC_i\)</span>）</p>
 </li>
 </ul>
 </li>
@@ -2623,14 +2670,61 @@
 <p>合同规范形：与 <span class="arithmatex">\(f(\boldsymbol x)\)</span> 合同的规范形。</p>
 </li>
 <li>
-<p>配方法：</p>
-<ol>
-<li>若含有平方项，选一个含平方项的变量（如 <span class="arithmatex">\(x_1\)</span>），将所有含 <span class="arithmatex">\(x_1\)</span> 的项配方，消去所有含 <span class="arithmatex">\(x_1\)</span> 的交叉项，重复此操作；</li>
-<li>若不含平方项，选一个交叉项（如 <span class="arithmatex">\(x_1x_2\)</span>），作非退化线性变换 <span class="arithmatex">\(\begin{cases}x_1=y_1+y_2\\x_2=y_1-y_2\end{cases}\)</span> 转化为含平方项的形式。</li>
-</ol>
+<p>实二次型的惯性定理：实二次型的所有合同标准形的正平方项个数 <span class="arithmatex">\(p\)</span>、负平方项的个数 <span class="arithmatex">\(q\)</span> 相同。</p>
+<p>若二次型的秩为 <span class="arithmatex">\(r\)</span>，则 <span class="arithmatex">\(q=r-p\)</span>。<span class="arithmatex">\(p\)</span>、<span class="arithmatex">\(q=r-p\)</span>、<span class="arithmatex">\(p-q=2p-r\)</span> 分别称为该二次型 <span class="arithmatex">\(f(\boldsymbol x)=\boldsymbol x^T\boldsymbol A\boldsymbol x\)</span>（或该实对称矩阵 <span class="arithmatex">\(\boldsymbol A\)</span>）的正惯性指数、负惯性指数、符号差。</p>
+<p>求法：由于 <span class="arithmatex">\(\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span> 是一个标准形，故 <span class="arithmatex">\(p=\sum_{i=1}^n[\lambda_i&gt;0]\)</span>，<span class="arithmatex">\(q=\sum_{i=1}^n[\lambda_i&lt;0]\)</span>。也可以配方法化标准形。</p>
+<p>（任意 <span class="arithmatex">\(\mathbb P^{n\times n}\)</span> 中的对称矩阵必与 <span class="arithmatex">\(\mathbb P^{n\times n}\)</span> 中的正负惯性指数与之相同的对角矩阵合同）</p>
+<p>非退化线性替换不改变正、负惯性指数。</p>
 </li>
 </ul>
-<h3 id="_5">正定二次型<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_4">合同<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>自反性，对称性，传递性</li>
+<li>
+<p>若 <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 合同，则 <span class="arithmatex">\(r(\boldsymbol A)=r(\boldsymbol B)\)</span>，<span class="arithmatex">\(\boldsymbol A^T=\boldsymbol A\Leftrightarrow \boldsymbol B^T=\boldsymbol B\)</span></p>
+</li>
+<li>
+<p>对于同阶实对称矩阵 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 合同</p>
+<p><span class="arithmatex">\(\Leftrightarrow\)</span> 存在可逆矩阵 <span class="arithmatex">\(\boldsymbol C\)</span>，使得 <span class="arithmatex">\(\boldsymbol C^T\boldsymbol A\boldsymbol C=\boldsymbol B\)</span>（定义）</p>
+<p><span class="arithmatex">\(\Leftrightarrow p_{\boldsymbol A}=p_{\boldsymbol B},q_{\boldsymbol A}=q_{\boldsymbol B}\)</span></p>
+<p><span class="arithmatex">\(\Leftrightarrow \boldsymbol A,\boldsymbol B\)</span> 的正、负特征值个数分别对应相同</p>
+<p><span class="arithmatex">\(\Leftrightarrow \exists \boldsymbol C\)</span>，<span class="arithmatex">\(\boldsymbol A\)</span> 合同于 <span class="arithmatex">\(\boldsymbol C\)</span>，<span class="arithmatex">\(\boldsymbol C\)</span> 合同于 <span class="arithmatex">\(\boldsymbol B\)</span></p>
+</li>
+<li>
+<p>实对称矩阵 <span class="arithmatex">\(\boldsymbol A\sim\boldsymbol B\Rightarrow \boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol B\)</span> 合同</p>
+</li>
+<li>
+<p>已知 <span class="arithmatex">\(\boldsymbol A,\boldsymbol \Lambda\)</span>（<span class="arithmatex">\(\boldsymbol \Lambda\)</span> 是对角矩阵），求可逆矩阵 <span class="arithmatex">\(\boldsymbol C\)</span>，使得 <span class="arithmatex">\(\boldsymbol C^T\boldsymbol A\boldsymbol C=\boldsymbol \Lambda\)</span>。</p>
+</li>
+<li>
+<p>已知 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span>（<span class="arithmatex">\(\boldsymbol B\)</span> 不是对角矩阵），求可逆矩阵 <span class="arithmatex">\(\boldsymbol C\)</span>，使得 <span class="arithmatex">\(\boldsymbol C^T\boldsymbol A\boldsymbol C=\boldsymbol B\)</span>。</p>
+</li>
+</ul>
+<h3 id="_5">几何应用<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(\lambda_1、\lambda_2、\lambda_3\)</span> 的符号</th>
+<th><span class="arithmatex">\(3\)</span> 正</th>
+<th><span class="arithmatex">\(2\)</span> 正 <span class="arithmatex">\(1\)</span> 负</th>
+<th><span class="arithmatex">\(1\)</span> 正 <span class="arithmatex">\(2\)</span> 负</th>
+<th><span class="arithmatex">\(2\)</span> 正 <span class="arithmatex">\(1\)</span> 零</th>
+<th><span class="arithmatex">\(1\)</span> 正 <span class="arithmatex">\(1\)</span> 负 <span class="arithmatex">\(1\)</span> 零</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(f(x_1,x_2,x_3)=1\)</span> 对应的曲面</td>
+<td>椭球面</td>
+<td>单叶双曲面</td>
+<td>双叶双曲面</td>
+<td>椭圆柱面</td>
+<td>双曲柱面</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">实二次型的正定性<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>实对称矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 正定</p>
@@ -2638,6 +2732,12 @@
 <p><span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\forall \boldsymbol x\neq \boldsymbol 0,\boldsymbol x\in\mathbb P^n\)</span>，有 <span class="arithmatex">\(\boldsymbol x^T\boldsymbol A\boldsymbol x&gt;0\)</span>（定义）</p>
 <p><span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(f\)</span> 的正惯性指数 <span class="arithmatex">\(p=n\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\)</span> 的所有特征值均 <span class="arithmatex">\(&gt;0\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\)</span> 与 <span class="arithmatex">\(\boldsymbol E\)</span> 合同 <span class="arithmatex">\(\Leftrightarrow\)</span> 存在可逆实矩阵 <span class="arithmatex">\(\boldsymbol B\)</span> 使得 <span class="arithmatex">\(\boldsymbol A=\boldsymbol B^T\boldsymbol B\)</span></p>
 <p><span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\)</span> 的所有顺序主子式均 <span class="arithmatex">\(&gt;0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\boldsymbol A\)</span> 正定 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(\boldsymbol A^{-1}\)</span>，<span class="arithmatex">\(\boldsymbol A^*\)</span>，<span class="arithmatex">\(\boldsymbol A^k\)</span>（<span class="arithmatex">\(k\)</span> 为正整数），<span class="arithmatex">\(k\boldsymbol A\)</span>（<span class="arithmatex">\(k&gt;0\)</span>），<span class="arithmatex">\(\boldsymbol C^T\boldsymbol A\boldsymbol C\)</span>（<span class="arithmatex">\(\boldsymbol C\)</span> 可逆）均正定</p>
+<p>若 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 正定，则 <span class="arithmatex">\(\boldsymbol A+\boldsymbol B\)</span> 正定，<span class="arithmatex">\(\begin{pmatrix}\boldsymbol A&amp;\boldsymbol O\\\boldsymbol O&amp;\boldsymbol B\end{pmatrix}\)</span> 正定</p>
+<p>若 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 正定，则 <span class="arithmatex">\(\boldsymbol A\boldsymbol B\)</span> 正定 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\boldsymbol B=\boldsymbol B\boldsymbol A\)</span></p>
+<p>若 <span class="arithmatex">\(\boldsymbol A\)</span> 正定且是正交矩阵，则 <span class="arithmatex">\(\boldsymbol A=\boldsymbol E\)</span></p>
 </li>
 <li>
 <p><span class="arithmatex">\(\boldsymbol A\)</span> 正定 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A^T\)</span> 正定，<span class="arithmatex">\(\boldsymbol A\)</span> 正定 <span class="arithmatex">\(\Leftrightarrow \boldsymbol A^{-1}\)</span> 正定，<span class="arithmatex">\(\boldsymbol A\)</span> 正定 <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(\boldsymbol A^*\)</span> 正定</p>
@@ -2655,6 +2755,15 @@
 </li>
 <li>
 <p>实对称矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 半负定 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\)</span> 的所有 <span class="arithmatex">\(k\)</span> 阶主子式的值为 <span class="arithmatex">\(0\)</span> 或其符号与 <span class="arithmatex">\((-1)^k\)</span> 的符号一致</p>
+</li>
+</ul>
+<h2 id="_7">题目<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>正交替换下 <span class="arithmatex">\(\|\boldsymbol x\|=\|\boldsymbol y\|\)</span></p>
+</li>
+<li>
+<p>最值问题：<span class="arithmatex">\(\lambda_{\min}\boldsymbol x^T\boldsymbol x\leq f(\boldsymbol x)=\boldsymbol x^T\boldsymbol A\boldsymbol x\leq \lambda_{\max}\boldsymbol x^T\boldsymbol x\)</span></p>
 </li>
 </ul>
 

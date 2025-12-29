@@ -2606,7 +2606,7 @@
 
   <h1>第五章 矩阵的特征值理论与相似对角化</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-28'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-28T15:59:28.259997+00:00'>2025-12-28</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-28'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-28T15:59:28.259997+00:00'>2025-12-28</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-29'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-29T07:26:42.232814+00:00'>2025-12-29</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-29'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-29T07:26:42.232814+00:00'>2025-12-29</time></span></div></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">特征值与特征向量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2752,6 +2752,42 @@
 <p>由 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol \Lambda\)</span>，得 <span class="arithmatex">\(\boldsymbol A=\boldsymbol P\boldsymbol \Lambda\boldsymbol P^{-1}\)</span>（给出特征值、特征向量，可求 <span class="arithmatex">\(\boldsymbol A\)</span>），<span class="arithmatex">\(\boldsymbol A^k=\boldsymbol P\boldsymbol \Lambda^k\boldsymbol P\)</span>，<span class="arithmatex">\(f(\boldsymbol A)=\boldsymbol Pf(\boldsymbol \Lambda)\boldsymbol P^{-1}\)</span></p>
 </li>
 <li>
+<p>性质：若 <span class="arithmatex">\(\boldsymbol A\sim \boldsymbol \Lambda\)</span>，则</p>
+<table>
+<thead>
+<tr>
+<th>矩阵</th>
+<th><span class="arithmatex">\(\boldsymbol A\sim \boldsymbol \Lambda\)</span></th>
+<th><span class="arithmatex">\(\boldsymbol A^k\sim \boldsymbol \Lambda^k\)</span></th>
+<th><span class="arithmatex">\(f(\boldsymbol A)\sim f(\boldsymbol \Lambda)\)</span></th>
+<th><span class="arithmatex">\(\boldsymbol A^{-1}\sim \boldsymbol \Lambda^{-1}\)</span></th>
+<th><span class="arithmatex">\(\boldsymbol A^*\sim \boldsymbol \Lambda^*\)</span></th>
+<th><span class="arithmatex">\(\boldsymbol A^T\sim \boldsymbol \Lambda^T\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>是否相似</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√（若 <span class="arithmatex">\(\boldsymbol A\)</span> 可逆）</td>
+<td>√（若 <span class="arithmatex">\(\boldsymbol A\)</span> 可逆）</td>
+<td>√</td>
+</tr>
+<tr>
+<td>对应 <span class="arithmatex">\(\boldsymbol  P\)</span></td>
+<td><span class="arithmatex">\(\boldsymbol  P\)</span></td>
+<td><span class="arithmatex">\(\boldsymbol  P\)</span></td>
+<td><span class="arithmatex">\(\boldsymbol P\)</span></td>
+<td><span class="arithmatex">\(\boldsymbol  P\)</span></td>
+<td><span class="arithmatex">\(\boldsymbol  P\)</span></td>
+<td>不再是 <span class="arithmatex">\(\boldsymbol P\)</span></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
 <p>充要条件：</p>
 <p><span class="arithmatex">\(\boldsymbol A\sim\boldsymbol \Lambda\)</span></p>
 <p><span class="arithmatex">\(\Leftrightarrow\boldsymbol A\)</span> 有 <span class="arithmatex">\(n\)</span> 个线性无关的特征向量</p>
@@ -2788,9 +2824,9 @@
 <p>② 不同特征值对应的特征向量正交</p>
 <details class="note">
 <summary>证明</summary>
-<p>设 <span class="arithmatex">\(\boldsymbol A\boldsymbol x_1=\lambda_1\boldsymbol x_1\)</span>，<span class="arithmatex">\(\boldsymbol A\boldsymbol x_2=\lambda_2\boldsymbol x_2\)</span>，<span class="arithmatex">\(\lambda_1\neq \lambda_2\)</span>，<span class="arithmatex">\(\boldsymbol A^T=\boldsymbol A\)</span></p>
-<p><span class="arithmatex">\(\lambda_1\boldsymbol x_2^T\boldsymbol x_1=\boldsymbol x_2^T\lambda_1\boldsymbol x_1=\boldsymbol x_2^T\boldsymbol A\boldsymbol x_1=\boldsymbol x_2^T\boldsymbol A^T\boldsymbol x_1=(\boldsymbol A\boldsymbol x_2)^T\boldsymbol x_1=(\lambda_2\boldsymbol x_2)^T\boldsymbol x_1=\lambda_2\boldsymbol x_2^T\boldsymbol x_1\)</span></p>
-<p>即 <span class="arithmatex">\((\lambda_1-\lambda_2)\boldsymbol x_2^T\boldsymbol x_1=0\)</span>，又 <span class="arithmatex">\(\lambda_1-\lambda_2\neq 0\)</span>，则 <span class="arithmatex">\(\boldsymbol x_2^T\boldsymbol x_1=0\)</span>，<span class="arithmatex">\((\boldsymbol x_2,\boldsymbol x_1)=0\)</span>，<span class="arithmatex">\(\boldsymbol x_2\perp \boldsymbol x_1\)</span>。</p>
+<p>设 <span class="arithmatex">\(\boldsymbol A\boldsymbol \xi_1=\lambda_1\boldsymbol \xi_1\)</span>，<span class="arithmatex">\(\boldsymbol A\boldsymbol \xi_2=\lambda_2\boldsymbol \xi_2\)</span>，<span class="arithmatex">\(\lambda_1\neq \lambda_2\)</span>，<span class="arithmatex">\(\boldsymbol A^T=\boldsymbol A\)</span></p>
+<p><span class="arithmatex">\(\lambda_1\boldsymbol \xi_2^T\boldsymbol \xi_1=\boldsymbol \xi_2^T\lambda_1\boldsymbol \xi_1=\boldsymbol \xi_2^T\boldsymbol A\boldsymbol \xi_1=\boldsymbol \xi_2^T\boldsymbol A^T\boldsymbol \xi_1=(\boldsymbol A\boldsymbol \xi_2)^T\boldsymbol \xi_1=(\lambda_2\boldsymbol \xi_2)^T\boldsymbol \xi_1=\lambda_2\boldsymbol \xi_2^T\boldsymbol \xi_1\)</span></p>
+<p>即 <span class="arithmatex">\((\lambda_1-\lambda_2)\boldsymbol \xi_2^T\boldsymbol \xi_1=0\)</span>，又 <span class="arithmatex">\(\lambda_1-\lambda_2\neq 0\)</span>，则 <span class="arithmatex">\(\boldsymbol \xi_2^T\boldsymbol \xi_1=0\)</span>，<span class="arithmatex">\((\boldsymbol \xi_2,\boldsymbol \xi_1)=0\)</span>，<span class="arithmatex">\(\boldsymbol \xi_2\perp \boldsymbol \xi_1\)</span>。</p>
 </details>
 </li>
 <li>
@@ -2801,14 +2837,17 @@
 <p>存在可逆矩阵 <span class="arithmatex">\(\boldsymbol P=(\boldsymbol \xi_1,\boldsymbol \xi_2,\cdots,\boldsymbol \xi_n)\)</span>，使得 <span class="arithmatex">\(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol \Lambda=\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span></p>
 </li>
 <li>
-<p>④ <span class="arithmatex">\(\boldsymbol A\)</span> 正交相似于 <span class="arithmatex">\(\boldsymbol \Lambda\)</span>：存在正交矩阵 <span class="arithmatex">\(\boldsymbol Q\)</span>，使得 <span class="arithmatex">\(\boldsymbol Q^{-1}\boldsymbol A\boldsymbol Q=\boldsymbol Q^T\boldsymbol A\boldsymbol Q=\boldsymbol \Lambda\)</span></p>
-<p>求法：对每个 <span class="arithmatex">\(\lambda_i\)</span> 对应的基础解系分别正交化、单位化。（首先，根据施密特正交化以及单位化的过程，正交化、单位化得到的特征向量不仅两两正交，而且仍然是 <span class="arithmatex">\(\lambda_i\)</span> 的特征向量；其次，实对称矩阵不同特征值的特征向量天然正交）</p>
-</li>
-</ul>
+<p>④ <span class="arithmatex">\(\boldsymbol A\)</span> 正交相似于 <span class="arithmatex">\(\boldsymbol \Lambda\)</span>：</p>
+<p><span class="arithmatex">\(\boldsymbol A\)</span> 有 <span class="arithmatex">\(n\)</span> 个正交的单位特征向量</p>
+<p><span class="arithmatex">\(\boldsymbol A\)</span> 对应于每个 <span class="arithmatex">\(n_i\)</span> 重特征值都有 <span class="arithmatex">\(n_i\)</span> 个正交的单位特征向量</p>
+<p>存在正交矩阵 <span class="arithmatex">\(\boldsymbol Q\)</span>，使得 <span class="arithmatex">\(\boldsymbol Q^{-1}\boldsymbol A\boldsymbol Q=\boldsymbol Q^T\boldsymbol A\boldsymbol Q=\boldsymbol \Lambda=\text{diag}(\lambda_1,\lambda_2,\cdots,\lambda_n)\)</span></p>
+<p>求法：对每个 <span class="arithmatex">\(\lambda_i\)</span> 对应的基础解系分别正交化、单位化。</p>
+<p>注：首先，根据施密特正交化以及单位化的过程，正交化、单位化得到的特征向量仍然是 <span class="arithmatex">\(\lambda_i\)</span> 的特征向量，且两两正交；其次，实对称矩阵不同特征值的特征向量天然正交。但是对普通矩阵不能这样操作。</p>
 </li>
 <li>
-<p>若 <span class="arithmatex">\(\boldsymbol A\)</span> 是普通矩阵，则 <span class="arithmatex">\(\lambda_1\neq\lambda_2\Rightarrow \boldsymbol \xi_1,\boldsymbol \xi_2\)</span> 线性无关，<span class="arithmatex">\(\lambda_1=\lambda_2\Rightarrow\)</span> <span class="arithmatex">\(\boldsymbol \xi_1,\boldsymbol \xi_2\)</span> 可能线性相关，也可能线性无关。</p>
-<p>若 <span class="arithmatex">\(\boldsymbol A\)</span> 实对称，则 <span class="arithmatex">\(\lambda_1\neq\lambda_2\Rightarrow\boldsymbol A\xi_1\perp\boldsymbol A\xi_2\)</span>，<span class="arithmatex">\(\lambda_1=\lambda_2\Rightarrow \boldsymbol A\xi_1,\boldsymbol A\xi_2\)</span> 线性无关。</p>
+<p>⑤ <span class="arithmatex">\(\boldsymbol A^*\)</span> 为实对称矩阵</p>
+</li>
+</ul>
 </li>
 <li>
 <p><span class="arithmatex">\(\boldsymbol A\)</span> 为 <span class="arithmatex">\(n\)</span> 阶实对称矩阵 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\)</span> 有 <span class="arithmatex">\(n\)</span> 个正交的特征向量</p>
@@ -2816,8 +2855,13 @@
 <li>
 <p>正交矩阵</p>
 <ul>
-<li>① <span class="arithmatex">\(\boldsymbol A^T\boldsymbol A=\boldsymbol E\Leftrightarrow \boldsymbol A^{-1}=\boldsymbol A^T\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\)</span> 由标准正交基组成 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A^T\)</span> 是正交矩阵 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A^{-1}\)</span> 是正交矩阵 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A^*\)</span> 是正交矩阵 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(-\boldsymbol A\)</span> 是正交矩阵</li>
-<li>② 若 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 为同阶正交矩阵，则 <span class="arithmatex">\(\boldsymbol A\boldsymbol B\)</span> 为正交矩阵，<span class="arithmatex">\(\boldsymbol A+\boldsymbol B\)</span> 不一定</li>
+<li>
+<p>① <span class="arithmatex">\(\boldsymbol A^T\boldsymbol A=\boldsymbol E\Leftrightarrow \boldsymbol A^{-1}=\boldsymbol A^T\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\)</span> 由标准正交基组成 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A^T\)</span> 是正交矩阵 <span class="arithmatex">\(\Leftrightarrow\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol A^{-1}\)</span> 是正交矩阵 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A^*\)</span> 是正交矩阵 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(-\boldsymbol A\)</span> 是正交矩阵</p>
+</li>
+<li>
+<p>② 若 <span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 为同阶正交矩阵，则 <span class="arithmatex">\(\boldsymbol A\boldsymbol B\)</span> 为正交矩阵，<span class="arithmatex">\(\boldsymbol A+\boldsymbol B\)</span> 不一定</p>
+</li>
 <li>③ 若 <span class="arithmatex">\(\boldsymbol A\)</span> 为正交矩阵，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的实特征值 <span class="arithmatex">\(\in\{1,-1\}\)</span></li>
 </ul>
 </li>
