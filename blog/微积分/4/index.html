@@ -1786,7 +1786,7 @@
   <span class="md-ellipsis">
     
   
-    环境配置
+    info
   
 
     
@@ -1808,6 +1808,34 @@
   
     <li class="md-nav__item">
       <a href="../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/2/" class="md-nav__link">
         
   
   
@@ -2584,7 +2612,7 @@
 
   <h1>第四章 不定积分</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-29'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-29T07:26:42.227814+00:00'>2025-12-29</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-29'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-29T07:26:42.227814+00:00'>2025-12-29</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-31'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-31T07:55:09.607968+00:00'>2025-12-31</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-31'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-31T07:55:09.607968+00:00'>2025-12-31</time></span></div></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">不定积分的概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2847,13 +2875,21 @@
 <p><strong>法 1：</strong></p>
 <p><span class="arithmatex">\(I=\int \dfrac{e^x\text dx}{e^x(e^x+1)}=\int (\dfrac 1 {e^x}-\dfrac 1 {e^x+1})\text d(e^x)=x-\ln(e^x+1)+C\)</span></p>
 </li>
+</ul>
+</details>
+<ul>
 <li>
 <p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I=\int \dfrac{(e^x+1)-e^x}{e^x+1}\text dx=x-\int \dfrac{\text d(e^x+1)}{e^x+1}=x-\ln(e^x+1)+C\)</span></p>
+<ul>
+<li>
+<p><strong>法 3：</strong></p>
 <p>设 <span class="arithmatex">\(e^x=t\)</span>，则 <span class="arithmatex">\(x=\ln t\)</span>，<span class="arithmatex">\(\text dx=\dfrac 1 t\text dt\)</span>。</p>
 <p><span class="arithmatex">\(I=\int \dfrac{\frac 1 t \text dt}{t+1}=\int (\dfrac 1 t-\dfrac 1 {t+1})\text dt=\ln t-\ln (t+1)+C=x-\ln(e^x+1)+C\)</span></p>
 </li>
 </ul>
-</details>
+</li>
+</ul>
 <p>计算：（1）<span class="arithmatex">\(\int \dfrac 1 {\sqrt{1+e^x}}\text dx\)</span>；（2）<span class="arithmatex">\(\int \sqrt{1+e^x}\text dx\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
@@ -2878,22 +2914,427 @@
 </ul>
 </details>
 <p>计算：<span class="arithmatex">\(\int\dfrac{\text dx}{\sqrt{x(1-x)}}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong>（配方）</p>
+<p><span class="arithmatex">\(I=\int\dfrac{\text dx}{\sqrt{\frac 1 4-(x-\frac 1 2)^2}}=\int\dfrac{\text d(2x-1)}{\sqrt{1-(2x-1)^2}}=\arcsin(2x-1)+C\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong>（凑微分）</p>
+<p><span class="arithmatex">\(I=2\int\dfrac{\text d\sqrt x}{\sqrt{1-x}}=2\arcsin\sqrt x+C\)</span></p>
+</li>
+<li>
+<p><strong>法 3：</strong>（换元）</p>
+<p>由于 <span class="arithmatex">\(0&lt;x&lt;1\)</span>，可设 <span class="arithmatex">\(x=\sin^2 u\)</span></p>
+<p><span class="arithmatex">\(I\xlongequal{x=\sin^2 u}\dfrac{2\sin u\cos u\text du}{\sin u\cos u}=2u+C=2\arcsin\sqrt x+C\)</span></p>
+</li>
+<li>
+<p><strong>法 4：</strong>（换元）</p>
+<p><span class="arithmatex">\(I=\int\dfrac 1 x\cdot\sqrt{\dfrac x {1-x}}\xlongequal[x=\frac{u^2}{u^2+1}]{u=\sqrt{\frac x {1-x}}}\int \dfrac{u^2+1}{u^2}\cdot u\cdot \dfrac{2u\text du}{(u^2+1)^2}=2\arctan u+C=2\arctan\sqrt{\dfrac x {1-x}}+C\)</span></p>
+</li>
+</ul>
+</details>
+<p>计算：<span class="arithmatex">\(\int\dfrac{\text dx}{\sqrt{(x-a)(b-x)}}\,(b&gt;a)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I=\int\dfrac{\text dx}{\sqrt{\frac{(a+b)^2}4-(x-\frac{a+b}2)^2}}=\arcsin\dfrac{x-\frac{a+b}2}{\frac{a+b}2}+C=\arcsin\dfrac{2x-(a+b)}{a+b}+C\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p>由于 <span class="arithmatex">\((x-a)+(b-x)=b-a\)</span>，<span class="arithmatex">\(a&lt;x&lt;b\)</span>，则可令 <span class="arithmatex">\(x-a=(b-a)\sin^2 t\)</span>，则 <span class="arithmatex">\(b-x=(b-a)\cos^2 t\)</span></p>
+<p><span class="arithmatex">\(I=\int\dfrac{2(b-a)\sin t\cos t\text dt}{(b-a)\sin t\cos t}=2t+C=2\arcsin\sqrt{\dfrac{x-a}{b-a}}+C\)</span></p>
+</li>
+<li>
+<p><strong>法 3：</strong></p>
+<p><span class="arithmatex">\(I=\int \dfrac 1 {x-a}\cdot\sqrt{\dfrac{x-a}{b-x}}\xlongequal{\sqrt{\frac{x-a}{b-x}}=u}\dfrac{u^2+1}{(b-a)u^2}\cdot u\cdot \dfrac{2(b-a)u}{(u^2+1)^2}\text du=\int \dfrac{\text du}{u^2+1}=\arctan u+C=\arctan \sqrt{\dfrac{x-a}{b-x}}+C\)</span></p>
+</li>
+</ul>
+</details>
+<p>计算：<span class="arithmatex">\(\int\sqrt{\dfrac{1-x}{1+x}}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I=\int\dfrac{1-x}{\sqrt{1-x^2}}\text dx=\int \dfrac{\text dx}{\sqrt{1-x^2}}-\int \dfrac{x}{\sqrt{1-x^2}}\text dx=\arcsin x+\int \dfrac{\text d(1-x^2)}{2\sqrt{1-x^2}}=\arcsin x+\sqrt{1-x^2}+C\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{u=\sqrt{\frac{1-x}{1+x}}}-\int\dfrac{4u^2}{(1+u^2)^2}\text du=-\int \dfrac{2u}{(1+u^2)^2}\text d(1+u^2)=\int 2u\text d(\dfrac 1 {1+u^2})=\dfrac{2u}{1+u^2}-2\arctan u+C=\sqrt{1-x^2}-2\arctan\sqrt{\dfrac{1-x}{1+x}}+C\)</span></p>
+</li>
+<li>
+<p><strong>法 3：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{x=\cos u}\int \dfrac{\sin\frac u 2}{\cos \frac u 2}(-\sin u)\text du=-2\int\dfrac{\sin\frac u 2}{\cos\frac u 2}\cdot\sin\dfrac u 2\cos\dfrac u 2\text du=-\int 2\sin^2\dfrac u 2\text du=\int(\cos u-1)\text du=\sin u-u+C=\sqrt{1-x^2}-\arccos x+C\)</span></p>
+</li>
+<li>
+<p><strong>法 4：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{x=\sin u}\int\dfrac{\sqrt{1-\sin^2 u}}{1+\sin u}\cdot\cos u\text du=\int\dfrac{\cos u}{1+\sin u}\cdot \cos u\text du=\int (1-\sin u)\text du=u+\cos u+C=\arcsin x+\sqrt{1-x^2}+C\)</span></p>
+</li>
+</ul>
+</details>
 </details>
 </li>
 <li>
 <p>分部积分法</p>
+<details class="example">
+<summary>例题</summary>
+<p>有关 <span class="arithmatex">\(\sin^2 x,\cos^2 x\)</span> 的积分，一般先用倍角公式先降幂。</p>
+<p>计算：<span class="arithmatex">\(\int x\sin^2 x\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;=\dfrac 1 2 \int x(1-\cos 2x)\text dx\\&amp;=\dfrac 1 4 x^2-\dfrac 1 2 \int x\cos 2x\text dx\\&amp;=\dfrac 1 4 x^2-\dfrac 1 4 \int x\text d(\sin 2x)\\&amp;=\dfrac 1 4 x^2-\dfrac 1 4 x\sin 2x+\dfrac 1 4 \int \sin 2x\text dx\\&amp;=\dfrac 1 4 x^2-\dfrac 1 4 x\sin 2x-\dfrac 1 8\cos 2x+C\end{aligned}\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int \sec^3 x\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;=\int \sec x\text d(\tan x)\\&amp;=\sec x\tan x-\int\tan x\cdot \sec x\tan x\text dx\\&amp;=\sec x\tan x-\int \sec x(\sec^2 x-1)\text dx\\&amp;=\sec x\tan x-I+\int \sec x\text dx\end{aligned}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I=\dfrac 1 2 \sec x\tan x+\dfrac 1 2\int \sec x\text dx=\dfrac 1 2 \sec x\tan x+\dfrac 1 2\ln|\sec x+\tan x|+C\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int \sec^n x\text dx\,(n\in\mathbb N^+)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I_0=x+C\)</span>，<span class="arithmatex">\(I_1=\ln|\sec x+\tan x|+C\)</span></p>
+<p><span class="arithmatex">\(n\geq 2\)</span> 时，</p>
+<p><span class="arithmatex">\(\begin{aligned}I_n&amp;=\int \sec^{n-2}x\text d(\tan x)\\&amp;=\sec^{n-2}x\tan x-(n-2)\int tan^2 x\sec^{n-2}x\text dx\\&amp;=\sec^{n-2}x\tan x-(n-2)\int(\sec^2 x-1)\sec^{n-2}x\text dx\\&amp;=\sec^{n-2}x\tan x-(n-2)I_n+(n-2)I_{n-2}\end{aligned}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I_n=\dfrac 1 {n-1}\sec^{n-2}x\tan x+\dfrac{n-2}{n-1}I_{n-2}\)</span></p>
+<p>如 <span class="arithmatex">\(I_3=\int \sec^3 x\text dx=\dfrac 1 2\sec x\tan x+\dfrac 1 2\ln|\sec x+\tan x|+C\)</span></p>
+<p><span class="arithmatex">\(I_4=\dfrac 1 3\sec^2 \tan x+\dfrac 2 3\tan x+C=\dfrac 1 3\tan^3 x+\tan x+C\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int \sqrt{x^2+a^2}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;\xlongequal{x=a\tan u}a^2\int \sec^3 u\text du\\&amp;=a^2(\dfrac 1 2\sec u\tan u+\dfrac 1 2\ln|\sec u+\tan u|)+C\\&amp;=\dfrac 1 2 x\sqrt{x^2+a^2}+\dfrac{a^2}2\ln(x+\sqrt{x^2+a^2})+C\end{aligned}\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;=x\sqrt{x^2+a^2}-\int\dfrac{x^2}{\sqrt{x^2+a^2}}\text dx\\&amp;=x\sqrt{x^2+a^2}-[\int\sqrt{x^2+a^2}\text dx-a^2\int\dfrac{\text dx}{\sqrt{x^2+a^2}}]\\&amp;=x\sqrt{x^2+a^2}-I+a^2\ln(x+\sqrt{x^2+a^2})\end{aligned}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I=\dfrac 1 2 x\sqrt{x^2+a^2}+\dfrac{a^2}2\ln(x+\sqrt{x^2+a^2})+C\)</span></p>
+</li>
+</ul>
+</details>
+<p>计算：<span class="arithmatex">\(\int\dfrac{\text dx}{(1+x^2)^2}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;\xlongequal{x=\tan u}\dfrac{\sec^2 u\text du}{(1+\tan^2 u)^2}\\&amp;=\int \cos^2 u\text du\\&amp;=\int \dfrac{1+\cos 2u}2\text du\\&amp;=\dfrac 1 2 u+\dfrac 1 4\sin 2u+C\\&amp;=\dfrac 1 2\arctan x+\dfrac{x}{2(1+x^2)}+C\end{aligned}\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;=\int\dfrac{(1+x^2)-x^2}{(1+x^2)^2}\text dx\\&amp;=\int \dfrac{\text dx}{1+x^2}-\dfrac 1 2\int\dfrac x{(1+x^2)^2}\text d(1+x^2)\\&amp;=\arctan x+\dfrac 1 2\int x\text d(\dfrac 1 {1+x^2})\\&amp;=\arctan x+\dfrac x {2(1+x^2)}-\dfrac 1 2 \int \dfrac{\text dx}{1+x^2}\\&amp;=\dfrac 1 2\arctan x+\dfrac x {2(1+x^2)}+C\end{aligned}\)</span></p>
+</li>
+</ul>
+</details>
+<p>计算：① <span class="arithmatex">\(\int\dfrac{1+\cos x}{x+\sin x}\text dx\)</span>；② <span class="arithmatex">\(\int \dfrac{x+\sin x}{1+\cos x}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>① <span class="arithmatex">\(I_1=\int \dfrac{\text d(x+\sin x)}{x+\sin x}=\ln|x+\sin x|+C\)</span></p>
+<p>②</p>
+<p><span class="arithmatex">\(\begin{aligned}I_2&amp;=\int\dfrac x {1+\cos x}\text dx+\int\dfrac{\sin x}{1+\cos x}\text dx\\&amp;=\int \dfrac x {2\cos^2\frac x 2}\text dx-\int \dfrac{\text d(1+\cos x)}{1+\cos x}\\&amp;=\int x\text d(\tan \dfrac x 2)-\ln(1+\cos x)\\&amp;=x\tan\dfrac x 2-\int \tan \dfrac x 2\text dx-\ln(1+\cos x)\\&amp;=x\tan\dfrac x 2+2\ln|\cos\dfrac x 2|-\ln(1+\cos x)+C\end{aligned}\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int\dfrac{1+x^2+x^4}{x^3(1+x^2)}\ln(1+x^2)\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;=\int \dfrac{(1+x^2)+x^4}{x^3(1+x^2)}\ln(1+x^2)\text dx\\&amp;=\int(\dfrac 1 {x^3}+\dfrac x {1+x^2})\ln(1+x^2)\text dx\\&amp;=\int \dfrac{\ln(1+x^2)}{x^3}\text dx+\int\dfrac{x\ln(1+x^2)}{1+x^2}\text dx\\&amp;=-\dfrac 1 2\int \ln(1+x^2)\text d(\dfrac 1 {x^2})+\dfrac 1 2\int\ln(1+x^2)\text d(\ln(1+x^2))\\&amp;=-\dfrac{\ln(1+x^2)}{2x^2}+\dfrac 1 2\int\dfrac{2x}{x^2(1+x^2)}\text dx+\dfrac 1 4\ln^2(1+x^2)\\&amp;=-\dfrac{\ln(1+x^2)}{2x^2}+\dfrac 1 2\ln\dfrac{x^2}{1+x^2}+\dfrac 1 4\ln^2(1+x^2)+C\end{aligned}\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int\dfrac{x^2-x+1}{x(x-1)^2}\ln x\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;=\int\dfrac{(x-1)^2+x}{x(x-1)^2}\ln x\text dx\\&amp;=\int (\dfrac 1 x+\dfrac 1 {(x-1)^2})\ln x\text dx\\&amp;=\int \ln x\text d(\ln x)-\int \ln x\text d(\dfrac 1 {x-1})\\&amp;=\dfrac 1 2\ln^2 x-\dfrac{\ln x}{x-1}+\int \dfrac 1 {x(x-1)}\text dx\\&amp;=\dfrac 1 2\ln^2 x-\dfrac{\ln x}{x-1}+\int(\dfrac 1 {x-1}-\dfrac 1 x)\text dx\\&amp;=\dfrac 1 2\ln^2 x-\dfrac{\ln x}{x-1}+\ln|x-1|-\ln x+C\end{aligned}\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int \dfrac{\arctan e^x}{e^x}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I=-\int \arctan e^x\text d(e^{-x})=-\dfrac{\arctan e^x}{e^x}+\int \dfrac{1}{1+e^{2x}}\text dx=-\dfrac{\arctan e^x}{e^x}+\int \dfrac{(e^{2x}+1)-e^{2x}}{e^{2x}+1}\text dx=-\dfrac{\arctan e^x}{e^x}+x-\dfrac 1 2\ln(1+e^{2x})+C\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{u=\arctan e^x}\dfrac u {\tan u}\cdot \dfrac{\sec^2 u}{\tan u}\text du=\int u\csc^2 u\text du=-\int u\text d(\cot u)=-u\cot u+\int \cot u\text du=-u\cot u+\ln|\sin u|+C=-\dfrac{\arctan e^x}{e^x}+\ln\dfrac{e^x}{\sqrt{1+e^{2x}}}+C\)</span></p>
+</li>
+</ul>
+</details>
+<p>设 <span class="arithmatex">\(\dfrac{e^{-2x}}x\)</span> 是 <span class="arithmatex">\(f(x)\)</span> 的一个原函数，求 <span class="arithmatex">\(\int x^3f'(x)\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\begin{aligned}\int x^3f'(x)\text dx&amp;=\int x^3\text d(f(x))\\&amp;=x^3f(x)-3\int x^2f(x)\text dx\\&amp;=x^3 f(x)-3\int x^2(\dfrac{e^{-2x}}x)'\text dx\\&amp;=x^3 f(x)-3\int x^2\text d(\dfrac{e^{-2x}}x)\\&amp;=x^3f(x)-3xe^{-2x}+6\int e^{-2x}\text dx\\&amp;=-(2x^2+4x+3)e^{-2x}+C\end{aligned}\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int \dfrac{x^2+1}{x\sqrt{x^4+1}}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\int \dfrac{x^2+1}{x^2\sqrt{x^2+\frac 1 {x^2}}}\text dx=\int \dfrac{1+\frac 1 {x^2}}{\sqrt{x^2+\frac 1 {x^2}}}=\int \dfrac{\text d(x-\frac 1 x)}{\sqrt{(x-\frac 1 x)^2+2}}=\ln(x-\dfrac 1 x+\sqrt{(x-\dfrac 1 x)^2+1})+C\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int \dfrac 1 {x\sqrt{x^4+1}}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{u=\frac 1 x}-\int \dfrac u {\sqrt{u^4+1}}\text du=-\dfrac 1 2\int \dfrac{\text d(u^2)}{\sqrt{1+u^4}}=-\dfrac 1 2\ln(u^2+\sqrt{1+u^4})+C=-\dfrac 1 2\ln\dfrac{1+\sqrt{1+x^4}}{x^2}+C=\dfrac 1 2\ln\dfrac{x^2}{1+\sqrt{1+x^4}}+C\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I=\int \dfrac{x^3}{x^4\sqrt{x^4+1}}\text dx\xlongequal{u=x^4}\dfrac 1 4\int \dfrac{\text du}{u\sqrt{1+u}}\xlongequal{t=\sqrt{1+u}}\dfrac 1 2\int \dfrac{t}{t^2-1}\text dt=\dfrac 1 4\ln |\dfrac{t-1}{t+1}|+C=\dfrac 1 4\ln \dfrac{\sqrt{1+x^4}-1}{\sqrt{1+x^4}+1}+C\)</span></p>
+</li>
+</ul>
+</details>
+<p>计算：<span class="arithmatex">\(\int\dfrac 1 x\sqrt{\dfrac{1-x}{1+x}}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{u=\sqrt{\frac{1-x}{1+x}}}\dfrac{1+u^2}{1-u^2}\cdot u\cdot \dfrac{-4u}{(1+u^2)^2}\text du=2\int [\dfrac{1}{1+u^2}-\dfrac 1 {1-u^2}]\text du=2\arctan u-\ln|\dfrac{1+u}{1-u}|+C=2\arctan\sqrt{\dfrac{1-x}{1+x}}-\ln\dfrac{\sqrt{1+x}+\sqrt{1-x}}{|\sqrt{1+x}-\sqrt{1-x}|}+C=2\arctan\sqrt{\dfrac{1-x}{1+x}}-\ln\dfrac{1+\sqrt{1-x^2}}{|x|}+C\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{x=\cos t}\int\dfrac 1 {\cos t}\cdot\sqrt{\dfrac{1-\cos t}{1+\cos t}}\cdot (-\sin t)\text dt=-\int \dfrac 1 {\cos t}\sqrt{\dfrac{1-\cos^2 t}{(1+\cos t)^2}}\text dt=-\int \dfrac{\sin t}{\cos t}\cdot\dfrac{\sin t}{1+\cos t}\text dt=-\int \dfrac{1-\cos t}{\cos t}\text dt=t-\ln|\sec t+\tan t|+C=\arccos x-\ln\dfrac{1+\sqrt{1-x^2}}{|x|}+C\)</span></p>
+</li>
+</ul>
+</details>
+<p>计算：<span class="arithmatex">\(\int \sqrt{1-x^2}\arcsin x\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I\xlongequal{x=\sin u}\int u\cos^2 u\text du=\dfrac  2\int u(1+\cos 2u)\text du=\dfrac 1 4 u^2+\dfrac 1 4 u\sin 2u+\dfrac 1 8 \cos 2u+C=\dfrac 1 4 \arcsin^2 x+\dfrac 1 2 x\sqrt{1-x^2}\arcsin x-\dfrac 1 4 x^2+C\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int \dfrac{xe^x}{(1+x)^2}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=-\int xe^x\text d(\dfrac 1 {1+x})=-\dfrac {xe^x}{1+x}+\int e^x\text dx=\dfrac{e^x}{1+x}+C\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int \dfrac{1+\sin x}{(1+\cos x)\sin x}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I=\int \dfrac{(\sin\frac x 2+\cos\frac x 2)^2}{2\cos^2\frac x 2\cdot 2\sin\frac x 2\cos\frac x 2}\text dx=\int \dfrac{(\tan\frac x 2+1)^2}{4\tan \frac x 2\cos^2\frac x 2}\text dx=\dfrac 1 2 \int\dfrac{(\tan\frac x 2+1)^2}{\tan\frac x 2}\text d(\tan\dfrac x 2)=\dfrac 1 4 \tan^2\dfrac x 2+\tan\dfrac x 2+\dfrac 1 2\ln|\tan\dfrac x 2|+C\)</span></p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p><span class="arithmatex">\(1+\sin x=(\sin\dfrac x 2+\cos\dfrac x 2)^2\)</span></p>
+<p><span class="arithmatex">\(1+\cos x=2\cos^2\dfrac x 2\)</span></p>
+</details>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{u=\tan\frac x 2}\int\dfrac{1+\frac{2u}{1+u^2}}{(1+\frac{1-u^2}{1+u^2})\cdot\frac{2u}{1+u^2}}\cdot\dfrac 2{1+u^2}\text du=\dfrac 1 2\int\dfrac{u^2+2u+1}u\text du=\dfrac 1 4 u^2+u+\dfrac 1 2\ln|u|+C=\dfrac 1 4\tan^2\dfrac x 2+\tan\dfrac x 2+\dfrac 1 2\ln|\tan\dfrac x 2|+C\)</span></p>
+</li>
+</ul>
+</details>
+</details>
 </li>
 </ul>
 <h3 id="_4">某些特殊类型函数的不定积分<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>有理函数的不定积分</li>
-<li>三角函数有理式的不定积分</li>
-<li>某些无理函数的不定积分</li>
+<li>
+<p>有理函数的不定积分</p>
+<p>有理假分式 = 一个多项式 + 一个有理真分式</p>
+<p>有理真分式：分母因式分解为形如 <span class="arithmatex">\((x-a)^k\)</span> 或 <span class="arithmatex">\((x+px+q)^k\)</span>（<span class="arithmatex">\(p^2-4q&lt;0\)</span>）的乘积。则有理真分式拆分后有 <span class="arithmatex">\(\dfrac{A_1}{x-a}+\dfrac{A_2}{(x-a)^2}+\cdots+\dfrac{A_k}{(x-a)^k}\)</span> 或 <span class="arithmatex">\(\dfrac{A_1x+B_1}{x^2+px+q}+\dfrac{A_2x+B_2}{(x^2+px+q)^2}+\cdots+\dfrac{A_kx+B_k}{(x^2+px+q)^k}\)</span>。</p>
+<ol>
+<li>
+<p>第一类最简分式：</p>
+<p><span class="arithmatex">\(n=1\)</span> 时 <span class="arithmatex">\(\int\dfrac 1 {x-a}=\ln|x-a|+C\)</span></p>
+<p><span class="arithmatex">\(n&gt;1\)</span> 时 <span class="arithmatex">\(\int\dfrac 1 {(x-a)^n}\text dx=\dfrac 1 {-n+1}(x-a)^{-n+1}+C\)</span></p>
+</li>
+<li>
+<p>第二类最简分式</p>
+<p><span class="arithmatex">\(\int\dfrac{x+A}{(x^2+px+q)^n}\text dx=\int\dfrac{\dfrac 1 2 (2x+p)+(A-\frac p 2)}{(x^2+px+q)^n}\text dx=\dfrac 1 2 \int\dfrac{\text d(x^2+px+q)}{(x^2+px+q)^n}+(A-\dfrac p 2)\int\dfrac{\text d(x+\frac p 2)}{[(x+\frac p 2)^2+(q-\frac{p^2}4)]^n}\)</span></p>
+<p><span class="arithmatex">\(n=1\)</span> 时 <span class="arithmatex">\(=\dfrac 1 2\ln(x^2+px+q)+\dfrac{A-\frac p 2}{\sqrt{q-\frac{p^2}4}}\arctan\dfrac{x+\frac p 2}{\sqrt{q-\frac{p^2}4}}+C\)</span></p>
+<p><span class="arithmatex">\(n&gt;1\)</span> 时 <span class="arithmatex">\(=\dfrac 1 {2(-n+1)}(x^2+px+q)^{-n+1}+(A-\dfrac p 2)\int\dfrac {\text du}{(u^2+a^2)^n}\)</span></p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>计算：<span class="arithmatex">\(I_n=\int\dfrac{\text dx}{(x^2+a^2)^n}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I_1=\dfrac 1 a \arctan\dfrac x a+C\)</span></p>
+<p><span class="arithmatex">\(n\geq 2\)</span> 时，</p>
+<p><span class="arithmatex">\(\begin{aligned}I_n&amp;=\dfrac 1 {a^2}\int\dfrac{(x^2+a^2)-x^2}{(x^2+a^2)^n}\text dx\\&amp;=\dfrac 1 {a^2}I_{n-1}-\dfrac 1 {2a^2}\int \dfrac{x}{(x^2+a^2)^n}\text d(x^2+a^2)\\&amp;=\dfrac 1 {a^2}I_{n-1}+\dfrac 1 {2(n-1)a^2}\int x\text d(\dfrac 1 {(x^2+a^2)^{n-1}})\\&amp;=\dfrac 1 {2(n-1)a^2}\cdot\dfrac x {(x^2+a^2)^{n-1}}+\dfrac{2n-3}{2(n-1)a^2}I_{n-1}\end{aligned}\)</span></p>
+</details>
+</details>
+</li>
+</ol>
+</li>
+<li>
+<p>三角函数有理式的不定积分</p>
+<ul>
+<li>
+<p>万能代换：<span class="arithmatex">\(\int R(\sin x,\cos x)\text dx\xlongequal{t=\tan\frac x 2}\int R(\dfrac{2t}{1+t^2},\dfrac{1-t^2}{1+t^2})\cdot\dfrac 2 {1+t^2}\text dt\)</span></p>
+<details class="example">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\int \dfrac{\text dx}{2+\cos x}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{t=\tan\frac x 2}\dfrac{1}{2+\frac{1-t^2}{1+t^2}}\cdot\dfrac 2 {1+t^2}\text dt=\int \dfrac{2\text dt}{t^2+3}=\dfrac 2{\sqrt 3}\arctan\dfrac t {\sqrt 3}+C=\dfrac 2 {\sqrt 3}\arctan(\dfrac 1 {\sqrt 3}\tan\dfrac x 2)+C\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;=\int\dfrac{(2-\cos x)\text dx}{4-\cos^2 x}\\&amp;=\int\dfrac 2 {4-\cos^2 x}\text dx-\int \dfrac{\cos x}{4-\cos^2 x}\text dx\\&amp;=\int\dfrac{2\sec^2 x}{4\sec^2 x-1}\text dx-\int\dfrac{\text d(\sin x)}{3+\sin^2 x}\\&amp;=\int \dfrac{\text d(2\tan x)}{3+4\tan^2 x}-\dfrac 1 {\sqrt 3}\arctan(\dfrac 1 {\sqrt 3}\sin x)\\&amp;=\dfrac 1 {\sqrt 3}\arctan(\dfrac 2 {\sqrt 3}\tan x)-\dfrac 1 {\sqrt 3}\arctan(\dfrac 1 {\sqrt 3}\sin x)+C\end{aligned}\)</span></p>
+</li>
+</ul>
+</details>
+</details>
+</li>
+<li>
+<p>某些特殊类型的三角函数的积分法</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\int \sin^m x\cos^n x\text dx\)</span>，<span class="arithmatex">\(m,n\)</span> 中至少有一个是奇数</p>
+<p>把是奇数的那个与 <span class="arithmatex">\(\text dx\)</span> 凑微分，剩下的偶次幂用 <span class="arithmatex">\(\sin^2 x+\cos^2 x=1\)</span> 统一</p>
+<p>如，若 <span class="arithmatex">\(m\)</span> 为奇数，<span class="arithmatex">\(=-\int \sin^{m-1}x\cos^n x\text d(\cos x)=-\int(1-\cos^2 x)^{\frac{m-1}2}\cos^n\text dx\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\int\sin^m x\cos^n x\text dx\)</span>，<span class="arithmatex">\(m,n\)</span> 均为偶数</p>
+<p>利用倍角公式降次</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\sin mx\cdot \cos nx\)</span>，<span class="arithmatex">\(\sin mx\sin nx\)</span>，<span class="arithmatex">\(\cos mx\cos nx\)</span></p>
+<p>积化和差</p>
+</li>
+<li>
+<p><span class="arithmatex">\(R(\sin x,cos x)=R(-\sin x,-\cos x)\)</span></p>
+<p>令 <span class="arithmatex">\(t=\tan x\)</span> 或同除以 <span class="arithmatex">\(\cos^n\)</span> 凑 <span class="arithmatex">\(\text d(\tan x)\)</span></p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>某些无理函数的不定积分</p>
+</li>
 </ul>
 <h2 id="_5">题目<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>技巧：</p>
 <ul>
-<li>拆项</li>
+<li>
+<p>拆项</p>
+<p><span class="arithmatex">\(\int\dfrac{x^3}{x^2+1}\text dx=\int \dfrac{(x^2+1)x-x}{x^2+1}\text dx=\int (x-\dfrac x {x^2+1})\text dx=\dfrac 1 2 x^2-\dfrac 1 2 \ln(1+x^2)+C\)</span></p>
+</li>
+<li>
+<p>凑微分</p>
+<p><span class="arithmatex">\(\int \dfrac{x^3}{1+x^2}\text dx=\dfrac 1 2\int\dfrac{x^2}{1+x^2}\text d(x^2)\xlongequal{u=x^2}\dfrac 1 2\int\dfrac u{1+u}\text du\)</span></p>
+</li>
+<li>
+<p>不定积分杂题</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\int \dfrac{1-\ln x}{(x-\ln x)^2}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\((\dfrac{\ln x}x)'=\dfrac{1-\ln x}{x^2}\)</span></p>
+</details>
+<p><span class="arithmatex">\(I=\int \dfrac{\frac{1-\ln x}{x^2}}{(1-\frac{\ln x}x)^2}\text dx=-\int \dfrac 1 {(1-\frac{\ln x}x)^2}\text d(1-\dfrac{\ln x}x)=\dfrac{x}{x-\ln x}+C\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(I_1=\int \dfrac{\text dx}{1+x^4}\)</span>，<span class="arithmatex">\(I_2=\int \dfrac{x^2}{1+x^4}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(\int \dfrac{\text dx}{1+x^4}\xlongequal{u=\frac 1 x}-\int \dfrac{u^2}{1+u^4}\text du\)</span></p>
+<p>“配套”的积分</p>
+</details>
+<p><span class="arithmatex">\(I_1+I_2=\int \dfrac{1+x^2}{1+x^4}\text dx=\int \dfrac{1+\frac 1 {x^2}}{x^2+\frac 1 {x^2}}\text dx=\int \dfrac{\text d(x-\frac 1 x)}{(x-\frac 1 x)^2+2}=\dfrac 1 {\sqrt 2}\arctan\dfrac{x^2-1}{\sqrt 2 x}+C\)</span></p>
+<p><span class="arithmatex">\(I_1-I_2=\int \dfrac{1-x^2}{1+x^4}\text dx=-\int \dfrac{1-\frac 1 {x^2}}{x^2+\frac 1 {x^2}}=-\int \dfrac{\text d(x+\frac 1 x)}{(x+\frac 1 x)^2-2}=\dfrac 1 {2\sqrt 2}\ln|\dfrac{x+\frac 1 x+\sqrt 2}{x+\frac 1 x-\sqrt 2}|+C=\dfrac 1 {\sqrt 2}\ln|\dfrac{x^2+\sqrt 2 x+1}{x^2-\sqrt 2 x+1}|+C\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I_1=\dfrac 1 {4\sqrt 2}(2\arctan \dfrac{x^2-1}{\sqrt 2 x}+\ln|\dfrac{x^2+\sqrt 2 x+1}{x^2-\sqrt 2 x+1}|)+C\)</span></p>
+<p><span class="arithmatex">\(I_2=\dfrac 1 {4\sqrt 2}(2\arctan\dfrac{x^2-1}{\sqrt 2 x}-\ln|\dfrac{x^2+\sqrt 2 x+1}{x^2-\sqrt 2 x+1}|)+C\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(I_1\int \dfrac{\text dx}{1+x^3}\)</span>，<span class="arithmatex">\(I_2=\int \dfrac x {1+x^3}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I_1+I_2=\int \dfrac{1+x}{1+x^3}\text dx=\int \dfrac{\text dx}{x^2-x+1}=2\int \dfrac{\text d(2x-1)}{(2x-1)^2+3}=\dfrac 2 {\sqrt 3}\arctan \dfrac{2x-1}{\sqrt 3}+C\)</span></p>
+<p><span class="arithmatex">\(I_1-I_2=\int \dfrac{1-x}{1+x^3}\text dx=\int \dfrac{1-x+x^2}{1+x^3}\text dx-\int \dfrac{x^2}{1+x^3}\text dx=\ln |x+1|-\dfrac 1 3 \ln |x^3+1|+C\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I_1=\dfrac 1 {\sqrt 3}\arctan \dfrac{2x-1}{\sqrt 3}+\dfrac 1 2\ln|x+1|-\dfrac 1 6\ln|x^3+1|+C\)</span></p>
+<p><span class="arithmatex">\(I_2=\dfrac 1 {\sqrt 3}\arctan\dfrac{2x-1}{\sqrt 3}-\dfrac 1 2\ln|x+1|+\dfrac 1 6\ln|x^3+1|+C\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I_1=\dfrac 1 3\int (\dfrac 1 {x+1}+\dfrac{-x+2}{x^2-x+1})\text dx=\dfrac 1 3\ln |x+1|-\dfrac 1 6\ln(x^2-x+1)+\dfrac 1 {\sqrt 3}\arctan\dfrac{2x-1}{\sqrt 3}+C=\dfrac 1 {\sqrt 3}\arctan\dfrac{2x-1}{\sqrt 3}+\dfrac 1 2\ln|x+1|-\dfrac 1 6\ln|x^3+1|+C\)</span></p>
+</li>
+</ul>
+</details>
+<p>计算：<span class="arithmatex">\(\int \dfrac{\text dx}{x^4\sqrt{1-x^2}}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{x=\sin u}\int \csc^4 u\text du=-\int (\cot^2 u+1)\text d(\cot u)=-\dfrac 1 3\cos^3 u-\cot u+C=-\dfrac 1 3\cdot\dfrac{(1-x^2)^{\frac 3 2}}{x^3}-\dfrac{\sqrt{1-x^2}}x+C\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{u=\frac 1 x}-\int\dfrac{u^3}{\sqrt{u^2-1}}\text du=-\dfrac 1 2(\sqrt{u^2-1}+\dfrac 1 {\sqrt{u^2-1}})\text d(u^2-1)=-\dfrac 1 3(u^2-1)^{\frac 3 2}-\sqrt{u^2-1}+C=-\dfrac 1 3\cdot\dfrac{(1-x^2)^{\frac 3 2}}{x^3}-\dfrac{\sqrt{1-x^2}}x+C\)</span></p>
+</li>
+</ul>
+</details>
+<p>计算：<span class="arithmatex">\(\int\dfrac{\text dx}{\sin(x+a)\cos(x+b)}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>当 <span class="arithmatex">\(a-b=k\pi+\dfrac pi 2\,(k\in\mathbb Z)\)</span> 时，<span class="arithmatex">\(I=\int \dfrac{\text dx}{(-1)^k\cos^2 (x+b)}=(-1)^k\tan (x+b)+C\)</span></p>
+<p>当 <span class="arithmatex">\(a-b\neq k\pi+\dfrac\pi 2\,(k\in\mathbb Z)\)</span> 时，<span class="arithmatex">\(I=\dfrac 1 {\cos(a-b)}\int \dfrac{\cos[(x+a)-(x+b)]}{\sin(x+a)\cos(x+b)}\text dx=\dfrac 1 {\cos(a-b)}\int [\dfrac{\cos(x+a)}{\sin(x+a)}+\dfrac{\sin(x+b)}{\cos(x+b)}]\text dx=\dfrac 1 {\cos(a-b)}\ln|\dfrac{\sin(x+a)}{\cos(x+b)}|+C\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int\dfrac{4e^x-3\cdot 2^x}{e^x+2^x}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><span class="arithmatex">\(\alpha(x)=e^x+2^x\)</span>，<span class="arithmatex">\(\beta(x)=\alpha'(x)=e^x+2^x\cdot \ln 2\)</span> 线性无关。将分子用 <span class="arithmatex">\(\alpha(x),\beta(x)\)</span> 线性表示。</p>
+</details>
+<p>令 <span class="arithmatex">\(4e^x-3\cdot 2^x=a(e^x+2^x)+b(e^x+2^x)'=(a+b)e^x+(a+b\ln 2)2^x\)</span></p>
+<p>则 <span class="arithmatex">\(\begin{cases}a+b=4\\a+b\ln 2=-3\end{cases}\Rightarrow a=-\dfrac{3+4\ln 2}{1-\ln 2}\)</span>，<span class="arithmatex">\(b=\dfrac 7 {1-\ln 2}\)</span></p>
+<p><span class="arithmatex">\(I=\dfrac{a(e^x+2^x)+b(e^x+2^x)'}{e^x+2^x}\text dx=ax+b\ln(e^x+2^x)+C=-\dfrac 1 {1-\ln 2}(-(3+4\ln 2)e^x+7\ln(e^x+2^x))+C\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int\dfrac{x^4}{(x^2+1)^2}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I=\dfrac 1 2\int\dfrac{x^3}{(x^2+1)^2}\text d(1+x^2)=-\dfrac 1 2\int x^3\text d(\dfrac 1 {x^2+1})=-\dfrac 1 2\cdot\dfrac{x^3}{x^2+1}+\dfrac 3 2\int\dfrac{x^2}{x^2+1}\text dx=-\dfrac{x^3}{2(x^2+1)}+\dfrac 3 2 x-\dfrac 3 2\arctan x+C\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{x=\tan u}\int\tan^4 u\cos^2 u\text du=\int \sin^2 u(\sec^2 u-1)\text du=\int \sin^2 u(\text d(\tan u)-\int \sin^2 u\text du=\sin^2 u\tan u-3\int \sin^2 u\text du=\sin^2 u\tan u-\dfrac 3 2 u+\dfrac 3 2\sin u\cos u+C=\dfrac{x^3}{x^2+1}+\dfrac{3x}{2(x^2+1)}-\dfrac 3 2\arctan x+C\)</span></p>
+</li>
+</ul>
+</details>
+<p>计算：<span class="arithmatex">\(\int\dfrac{\tan x}{1+\tan x+\tan^2 x}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\int\dfrac{\tan x\cdot \sec^2 x}{\sec^2 x(1+\tan x+\tan^2 x)}\text dx\xlongequal{\tan x=u}\int\dfrac u {(u^2+1)(u^2+u+1)}\text du=\int (\dfrac 1 {u^2+1}-\dfrac 1 {u^2+u+1})\text du=\arctan u-\dfrac 2 {\sqrt 3}\arctan\dfrac{2u+1}{\sqrt 3}+C=x-\dfrac 2 {\sqrt 3}\arctan\dfrac{2\tan x+1}{\sqrt 3}+C\)</span></p>
+</details>
+</details>
+</li>
+<li>
+<p>隐函数的不定积分</p>
+<p>把隐函数写成参数方程，变成只有变量 <span class="arithmatex">\(t\)</span></p>
+<details class="example">
+<summary>例题</summary>
+<p>设函数 <span class="arithmatex">\(y=y(x)\)</span> 时由方程 <span class="arithmatex">\(y^2(y-x)=x^2\)</span> 确定的，计算：<span class="arithmatex">\(\int\dfrac{\text dx}{y^2}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>令 <span class="arithmatex">\(y=tx\)</span>，则 <span class="arithmatex">\(x=\dfrac 1 {t^2(t-1)}\)</span>，<span class="arithmatex">\(y=\dfrac 1 {t(t-1)}\)</span>，<span class="arithmatex">\(\text dx=\dfrac{3t-2}{t^3(t-1)^2}\text dt\)</span></p>
+<p><span class="arithmatex">\(\int \dfrac{\text dx}{y^2}=\int t^2(t-1)^2\cdot\dfrac{3t-2}{t^3(t-1)^2}\text dt=\int \dfrac{3t-2}t\text dt=3t-2\ln|t|+C=\dfrac{3y}x-2\ln|\dfrac y x|+C\)</span></p>
+</details>
+</details>
+</li>
 </ul>
 
 

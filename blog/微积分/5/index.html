@@ -774,13 +774,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定积分的应用
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
         题目
@@ -1797,7 +1808,7 @@
   <span class="md-ellipsis">
     
   
-    环境配置
+    info
   
 
     
@@ -1819,6 +1830,34 @@
   
     <li class="md-nav__item">
       <a href="../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/2/" class="md-nav__link">
         
   
   
@@ -2571,13 +2610,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定积分的应用
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
         题目
@@ -2606,7 +2656,7 @@
 
   <h1>第五章 定积分及其应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-29'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-29T07:26:42.228814+00:00'>2025-12-29</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-29'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-29T07:26:42.228814+00:00'>2025-12-29</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-31'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-31T07:55:09.607968+00:00'>2025-12-31</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-31'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-31T07:55:09.607968+00:00'>2025-12-31</time></span></div></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">定积分概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3242,9 +3292,141 @@
 <p>对于 <span class="arithmatex">\(f(x)\)</span> 的瑕点 <span class="arithmatex">\(x=c\in(a,b)\)</span> 的瑕积分可定义为 <span class="arithmatex">\(\int_a^b f(x)\text dx=\int_a^c f(x)\text dx+\int_c^b f(x)\text dx=\lim\limits_{\varepsilon_1\to 0^+}\int_a^{c-\varepsilon_1}f(x)\text dx+\lim\limits_{\varepsilon_2\to 0^+}\int_{c+\varepsilon_2}^b f(x)\text dx\)</span>，其中 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,c)\cup(c,b]\)</span> 上有定义，且在 <span class="arithmatex">\(x=c\)</span> 的任一邻域内无界，但在任何 <span class="arithmatex">\([a,u]\subset[a,c)\)</span> 和 <span class="arithmatex">\([v,b]\subset(c,b]\)</span> 上均可积。当且仅当右边两个瑕积分均收敛时，左边的瑕积分才收敛。</p>
 </li>
 </ul>
+<details class="example" open="open">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\lim\limits_{n\to+\infty}\dfrac{\sqrt[n]{n!}}{n}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(=e^{\lim\limits_{n\to +\infty}\ln \sqrt[n]{\frac 1 n\frac 2 n\cdots\frac n n}}=e^{\lim\limits_{n\to +\infty}\frac 1 n \sum_{k=1}^n \ln\frac k n}=e^{\int_0^1 \ln x\text dx}=e^{x\ln x\vert_0^1-\int_0^1 x\cdot\frac 1 x\text dx}=e^{-1}\)</span></p>
+</details>
+<p>（Euler 积分）计算：<span class="arithmatex">\(\int_0^{\frac\pi 2}\ln\sin x\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>令 <span class="arithmatex">\(I=\int_0^{\frac\pi 2}\ln\sin x\text dx\)</span>，<span class="arithmatex">\(J=\int_0^{\frac\pi 2}\ln\cos x\text dx\xlongequal{x=\frac\pi 2-u}\int_0^{\frac\pi 2}\ln\sin u\text du=I\)</span></p>
+<p><span class="arithmatex">\(I+J=\int_0^{\frac\pi 2}\ln\dfrac 1 2\sin 2x\text dx=\int_0^{\frac\pi 2}\ln\sin 2x\text dx-\dfrac\pi 2\ln 2\xlongequal{2x=t}\dfrac 1 2\int_0^\pi \ln \sin t\text dt-\dfrac\pi 2\ln 2=I-\dfrac\pi 2\ln 2\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I=-\dfrac\pi 2\ln 2\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^{\frac\pi 2}x\cot x\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\int_0^{\frac\pi 2}x\dfrac{\cos x}{\sin x}\text dx=\int_0^{\frac\pi 2}x\dfrac 1 {\sin x}\text d(\sin x)=\int_0^{\frac\pi 2}x\text d(\ln\sin x)=(x\ln\sin x)\big\vert_0^{\frac\pi 2}-\int_0^{\frac\pi 2}\ln\sin x\text dx=\dfrac\pi 2\ln 2\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^{\pi}\dfrac{x\sin x}{1-\cos x}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=2\int_0^{\pi}\dfrac{x\sin\frac x 2\cos\frac x 2}{2\sin^2\frac x 2}\text dx\xlongequal{\frac x 2=u}4\int_0^{\frac\pi 2}\dfrac{u\cos u}{\sin u}\text du=4\int_0^{\frac\pi 2}u\text d(\ln\sin u)=4(u\ln\sin u)\big\vert_0^{\frac\pi 2}-4\int_0^{\frac\pi 2}\ln\sin u\text du=2\pi\ln 2\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(I=\int_0^{+\infty}e^{-ax}\sin bx\text dx\)</span>，<span class="arithmatex">\(J=\int_0^{+\infty}e^{-ax}\cos bx\text dx\,(a&gt;0)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I=\int_0^{+\infty}\sin bx\text d(-\dfrac 1 a e^{-ax})=-\dfrac 1 a e^{-a}\sin bx\big\vert_0^{+\infty}+\dfrac a b \int_0^{+\infty}e^{-ax}\cos bx\text dx=\dfrac a b J\)</span></p>
+<p><span class="arithmatex">\(J=\int_0^{+\infty}\cos bx\text d(-\dfrac 1 a e^{-ax})=-\dfrac 1 a e^{-ax}\cos bx\big\vert_0^{+\infty}-\dfrac b a\int_0^{+\infty}e^{-ax}\sin bx\text dx=\dfrac 1 a -\dfrac b a I\)</span></p>
+<p><span class="arithmatex">\(I=\dfrac b {a^2}-\dfrac{b^2}{a^2}I\Rightarrow I=\dfrac b {a^2+b^2}\)</span></p>
+<p><span class="arithmatex">\(J=\dfrac a {a^2+b^2}\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong>（利用欧拉公式 <span class="arithmatex">\(e^{ibx}=\cos bx+i\sin bx\)</span>）</p>
+<p><span class="arithmatex">\(\int_0^{+\infty}e^{-ax+ibx}\text dx=\int_0^{+\infty}e^{-ax}(\cos bx+i\sin bx)\text dx=J+iI\)</span></p>
+<p><span class="arithmatex">\(\int_0^{+\infty}e^{-(a-ib)x}\text dx=\dfrac 1 {a-ib}=-\dfrac 1 {a-ib}e^{-(a-ib)x}\big\vert_0^{+\infty}=\dfrac 1 {a-ib}=\dfrac{a+ib}{a^2+b^2}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow J=\dfrac a {a^2+b^2}\)</span>，<span class="arithmatex">\(I=\dfrac b {a^2+b^2}\)</span></p>
 </li>
 </ul>
-<h2 id="_6">题目<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+</details>
+</details>
+</li>
+<li>
+<p>p-积分：<span class="arithmatex">\(\int_1^{+\infty}\dfrac{\text dx}{x^p}\)</span> 在 <span class="arithmatex">\(p\leq 1\)</span> 时发散，<span class="arithmatex">\(p&gt;1\)</span> 时收敛。</p>
+</li>
+<li>
+<p>q-积分：<span class="arithmatex">\(\int_0^1 \dfrac{\text dx}{x^q}\)</span> 在 <span class="arithmatex">\(q\geq 1\)</span> 时发散，<span class="arithmatex">\(q&lt;1\)</span> 时收敛。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\Gamma\)</span> 函数：<span class="arithmatex">\(\Gamma(s)=\int_0^{+\infty}x^{s-1}e^{-x}\text dx\)</span></p>
+<ul>
+<li>
+<p>定义域</p>
+<p><span class="arithmatex">\(\Gamma(s)=\int_0^{+\infty}x^{s-1}e^{-x}\text dx=\int_0^1 x^{s-1}e^{-x}\text dx+\int_1^{+\infty}x^{s-1}e^{-x}\text dx\)</span></p>
+<ol>
+<li>
+<p>讨论 <span class="arithmatex">\(\int_0^1\)</span>：</p>
+<ul>
+<li><span class="arithmatex">\(s\geq 1\)</span> 时，为常义积分，收敛</li>
+<li><span class="arithmatex">\(s&lt;1\)</span> 时，<span class="arithmatex">\(x=0\)</span> 时瑕点，<span class="arithmatex">\(\dfrac{e^{-x}}{x^{1-s}}\sim \dfrac{1}{x^{1-s}},x\to 0^+\)</span>，则 <span class="arithmatex">\(s&gt;0\)</span> 时收敛，<span class="arithmatex">\(s\leq 0\)</span> 发散</li>
+</ul>
+</li>
+<li>
+<p>讨论 <span class="arithmatex">\(\int_1^{+\infty}\)</span>：</p>
+<ul>
+<li><span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{\frac{e^{-x}}{x^{1-s}}}{\frac 1 {x^2}}=\lim\limits_{x\to +\infty}\dfrac{x^{s+1}}{e^x}=0\)</span>，故收敛</li>
+</ul>
+</li>
+</ol>
+<p>综上，<span class="arithmatex">\(s&gt;0\)</span> 时收敛，<span class="arithmatex">\(s\leq 0\)</span> 时发散。</p>
+<p>因此 <span class="arithmatex">\(\Gamma(s)\)</span> 定义域为 <span class="arithmatex">\(s\in(0,+\infty)\)</span>。</p>
+</li>
+<li>
+<p>性质</p>
+<p><span class="arithmatex">\(s&gt;0\)</span> 时，<span class="arithmatex">\(\Gamma(s+1)=\int_0^{+\infty}x^se^{-x}\text dx=\int_0^{+\infty}x^s\text d(-e^{-x})=-x^se^{-x}\big\vert_0^{+\infty}+\int_0^{+\infty}e^{-x}\cdot sx^{s-1}\text dx=s\Gamma(s)\)</span></p>
+<p>又 <span class="arithmatex">\(\Gamma(1)=1\)</span>，则 <span class="arithmatex">\(\Gamma(n+1)=n!\)</span></p>
+</li>
+<li>
+<p>Poisson（泊松）积分：<span class="arithmatex">\(\int_0^{+\infty}e^{-x^2}\text dx=\dfrac{\sqrt\pi}2\)</span></p>
+<p><span class="arithmatex">\(\Gamma(\dfrac 1 2)=\int_0^{+\infty}\dfrac{e^{-x}}{\sqrt x}\text dx=2\int_0^{+\infty}e^{-x}\text d(\sqrt x)\xlongequal{t=\sqrt x}2\int_0^{+\infty}e^{-t^2}\text dt=\sqrt{\pi}\)</span></p>
+<p>余元公式：<span class="arithmatex">\(\Gamma(s)\Gamma(1-s)=\dfrac\pi{\sin(\pi s)}\,(0&lt;s&lt;1)\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>无限区间上反常积分敛散性的判别</p>
+<p>当 <span class="arithmatex">\(\int_a^{+\infty}|f(x)|\text dx\)</span> 收敛时，称 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 为绝对收敛；若 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 收敛，而 <span class="arithmatex">\(\int_a^{+\infty}|f(x)|\text dx\)</span> 发散，称 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 为条件收敛。</p>
+<p>由柯西收敛准则，若反常积分绝对收敛，则原反常积分必定收敛。</p>
+</li>
+<li>
+<p>非负函数无穷积分的比较判别法</p>
+<ul>
+<li>
+<p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 是定义在 <span class="arithmatex">\([a,+\infty)\)</span> 上的非负函数，且在任何有限区间内可积，对 <span class="arithmatex">\(\forall x\in[a,+\infty)\)</span> 有 <span class="arithmatex">\(f(x)\leq g(x)\)</span>，则</p>
+<ol>
+<li>若 <span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 收敛，则 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 收敛</li>
+<li>若 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 发散，则 <span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 发散</li>
+</ol>
+</li>
+<li>
+<p>比较判别法的极限形式</p>
+<p>设 <span class="arithmatex">\(f,g\)</span> 在 <span class="arithmatex">\([a,+\infty)\)</span> 上有定义，且在任何有限 <span class="arithmatex">\([a,u]\)</span> 上可积，<span class="arithmatex">\(f(x)\geq 0\)</span>，<span class="arithmatex">\(g(x)&gt;0\)</span>，<span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{f(x)}{g(x)}=c\)</span>。</p>
+<ol>
+<li>若 <span class="arithmatex">\(0&lt;c&lt;+\infty\)</span>，则 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 与 <span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 同敛散</li>
+<li>若 <span class="arithmatex">\(c=0\)</span>，则 <span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 收敛 <span class="arithmatex">\(\Rightarrow \int_a^{+\infty}f(x)\text dx\)</span> 收敛，<span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 发散 <span class="arithmatex">\(\Rightarrow\int_a^{+\infty}g(x)\text dx\)</span> 发散</li>
+<li>若 <span class="arithmatex">\(c=+\infty\)</span>，则 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 收敛 <span class="arithmatex">\(\Rightarrow \int_a^{+\infty}g(x)\text dx\)</span> 收敛，<span class="arithmatex">\(\int_a^{+\infty}g(x)\text dx\)</span> 发散 <span class="arithmatex">\(\Rightarrow \int_a^{+\infty}f(x)\text dx\)</span> 发散</li>
+</ol>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([a,+\infty),(a&gt;0)\)</span> 上有定义，在任何有限区间 <span class="arithmatex">\([a,u]\)</span> 上可积，且 <span class="arithmatex">\(\lim\limits_{x\to +\infty}x^pf(x)=\lim\limits_{x\to +\infty}\dfrac{f(x)}{x^{-p}}=c\)</span>。</p>
+<ol>
+<li>若 <span class="arithmatex">\(p&gt;1\)</span> 且 <span class="arithmatex">\(0\leq c&lt;+\infty\)</span>，则 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 收敛</li>
+<li>若 <span class="arithmatex">\(p\leq 1\)</span> 且 <span class="arithmatex">\(0&lt;c\leq +\infty\)</span>，则 <span class="arithmatex">\(\int_a^{+\infty}f(x)\text dx\)</span> 发散</li>
+</ol>
+<details class="example">
+<summary>例题</summary>
+<p>判断反常积分的收敛性：① <span class="arithmatex">\(\int_1^{+\infty}\dfrac x {\sqrt{1+x^6}}\text dx\)</span>；② <span class="arithmatex">\(\int_1^{+\infty}x^{\alpha}e^{-x}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>① 由于 <span class="arithmatex">\(\lim\limits_{x\to +\infty}x^2\cdot\dfrac x {\sqrt{1+x^6}}=1\)</span>，<span class="arithmatex">\(\int_1^{+\infty}\dfrac{\text dx}{x^2}\)</span> 收敛，故 <span class="arithmatex">\(\int_1^{+\infty}\dfrac x {\sqrt{1+x^6}}\text dx\)</span> 收敛。</p>
+<p>② <span class="arithmatex">\(\lim\limits_{x\to +\infty}x^{\alpha+2}e^{-x}=0\)</span>，<span class="arithmatex">\(\int_1^{+\infty}\dfrac{\text dx}{x^2}\)</span> 收敛，故 <span class="arithmatex">\(\int_1^{+\infty}x^{\alpha}e^{-x}\text dx\)</span> 收敛。</p>
+</details>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">定积分的应用<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>微元分析法</li>
+</ul>
+<h2 id="_7">题目<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>积分与极限结合</p>
@@ -3639,6 +3821,105 @@
 <p><span class="arithmatex">\(\int_0^1\dfrac{\sin x}{\sqrt{1-x^2}}\text dx&lt;\int_0^1\dfrac{x}{\sqrt{1-x^2}}\text dx=-\dfrac 1 2\int_0^1\dfrac{1}{\sqrt{1-x^2}}\text d(1-x^2)=-\dfrac 1 2\cdot 2\sqrt x\big\vert_1^0=1\)</span></p>
 </li>
 </ul>
+</details>
+</details>
+</li>
+<li>
+<p>反常积分杂题</p>
+<details class="example">
+<summary>例题</summary>
+<p>计算：<span class="arithmatex">\(\int_0^{+\infty}\dfrac{\text dx}{1+x^3}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I\xlongequal{x=\frac 1 u}\int_0^{+\infty}\dfrac u {1+u^3}\text du\)</span></p>
+<p>则 <span class="arithmatex">\(I=\dfrac 1 2\int_0^{+\infty}\dfrac{1+x}{1+x^3}\text dx=\dfrac 1 2\int_0^{+\infty}\dfrac 1 {1-x+x^2}\text dx=2\int_0^{+\infty}\dfrac{\text dx}{(2x-1)^2+3}=\dfrac 1 {\sqrt 3}\arctan\dfrac{2x-1}{\sqrt 3}\big\vert_0^{+\infty}=\dfrac 2 {3\sqrt 3}\pi\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^{+\infty}\dfrac{\text dx}{1+x^4}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I\xlongequal{x=\frac 1 u}\int_0^{+\infty}\dfrac{u^2}{1+u^4}\text du\)</span></p>
+<p><span class="arithmatex">\(2I=\int_0^{+\infty}\dfrac{(1+x^2)\text dx}{1+x^4}=\int_0^{+\infty}\dfrac{1+\frac 1 {x^2}}{\frac 1 {x^2}+x^2}\text dx=\int_0^{+\infty}\dfrac{\text d(x-\frac 1 x)}{(x-\frac 1 x)^2+2}=\dfrac 1 {\sqrt 2}\arctan\dfrac{x-\frac 1 x}{\sqrt 2}\big\vert_0^{+\infty}=\dfrac\pi{\sqrt 2}\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^{\frac\pi 2}\sqrt{\tan x}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\int_0^{\frac\pi 2}\sqrt{\tan x}\xlongequal[x=\arctan u^2]{\sqrt{\tan x}=u}\int_0^{+\infty}u\cdot \dfrac{2u}{1+u^4}\text du=2\int_0^{+\infty}\dfrac{u^2}{1+u^4}=2\cdot\dfrac\pi{2\sqrt 2}=\dfrac\pi{\sqrt 2}\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^{+\infty}\dfrac{\text dx}{1+x^6}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=\int_0^{+\infty}\dfrac{\text dx}{1+x^6}\xlongequal{x=\frac 1 u}\int_0^{+\infty}\dfrac{u^4}{u^6+1}\text du\)</span></p>
+<p><span class="arithmatex">\(2I=\int_0^{+\infty}\dfrac{x^4+1}{x^6+1}\text dx=\int_0^{+\infty}\dfrac{(x^4-x^2+1)+x^2}{(x^2+1)(x^4-x^2+1)}\text dx=\int_0^{+\infty}\dfrac{\text dx}{x^2+1}+\int_0^{x^2}{x^6+1}\text dx=\arctan x\big\vert_0^{+\infty}+\dfrac 1 3\arctan(x^3)\big\vert_0^{+\infty}=\dfrac 2 3\pi\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I=\dfrac\pi 3\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^{+\infty}\dfrac{\text dx}{(1+x^2)(1+x^{\alpha})}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li><strong>法 1：</strong></li>
+</ul>
+<p><span class="arithmatex">\(I=\int_0^{+\infty}\dfrac{\text dx}{(1+x^2)(1+x^{\alpha})}\xlongequal{u=\frac 1 x}\int_0^{+\infty}\dfrac{u^{\alpha}}{(1+u^2)(1+u^{\alpha})}\text dx\)</span></p>
+<p><span class="arithmatex">\(2I=\int_0^{+\infty}\dfrac{1+x^{\alpha}}{(1+x^2)(1+x^{\alpha})}\text dx=\int_0^{+\infty}\dfrac{\text dx}{1+x^2}=\dfrac\pi 2\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I=\dfrac\pi 4\)</span></p>
+<ul>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{x=\tan u}\int_0^{\frac\pi 2}\dfrac{\sec^2 u\text du}{\sec^2 u(1+\tan^{\alpha}u)}=\int_0^{\frac\pi 2}\dfrac{\text du}{1+\tan^{\alpha}u}=\int_0^{\frac\pi 2}\dfrac{\cos^{\alpha}u}{\sin^{\alpha}u+\cos^{\alpha}u}\text du=\dfrac\pi 4\)</span></p>
+</li>
+</ul>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^{\frac\pi 2}\dfrac{\text dx}{1+\cot^3 x}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{u=\cot x}\int_{+\infty}^0 \dfrac 1 {1+u^3}\cdot(-\dfrac 1 {1+u^2})\text du=\int_0^{+\infty}\dfrac{\text du}{(1+u^3)(1+u^2)}\)</span></p>
+<p><span class="arithmatex">\(I\xlongequal{t=\frac 1 u}\int_0^{+\infty}\dfrac{t^3}{(1+t^3)(1+t^2)}\text dt\)</span></p>
+<p><span class="arithmatex">\(2I=\int_0^{+\infty}\dfrac{1+x^3}{(1+x^3)(1+x^2)}\text dx=\int_0^{+\infty}\dfrac{\text dx}{1+x^2}=\dfrac\pi 2\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I=\dfrac\pi 4\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(I\xlongequal{u=\frac\pi 2-x}\int_0^{\frac\pi 2}\dfrac{\text du}{1+\tan^3 u}\)</span></p>
+<p><span class="arithmatex">\(2I=\int_0^{\frac\pi 2}(\dfrac 1 {1+\frac{1}{\tan^3 x}}+\dfrac{1}{1+\tan^3 x})=\dfrac\pi 2\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I=\dfrac\pi 4\)</span></p>
+</li>
+</ul>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 是周期为 <span class="arithmatex">\(T&gt;0\)</span> 的连续函数，证明：<span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac 1 x\int_0^x f(t)\text dt=\dfrac 1 T\int_0^T f(x)\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>对 <span class="arithmatex">\(\forall x&gt;0\)</span>，<span class="arithmatex">\(\exists n\in\mathbb N\)</span>，使 <span class="arithmatex">\(nT\leq x&lt;(n+1)T\)</span>。</p>
+<p>记 <span class="arithmatex">\(\int_0^T f(x)\text dx=A\)</span>，<span class="arithmatex">\(\int_0^T|f(x)|\text dx=B\)</span>。</p>
+<p><span class="arithmatex">\(nA-B&lt;\int_0^x f(u)\text du=nA+\int_{nT}^x f(u)\text du\leq nA+B\)</span></p>
+<p><span class="arithmatex">\(\dfrac{nA-B}x&lt;\dfrac{\int_0^x f(u)\text du}x\leq \dfrac{nA+B}x\)</span></p>
+<p>而 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{nA-B}x=\lim\limits_{x\to +\infty}\dfrac{nA+B}x=\dfrac 1 T\int_0^T f(x)\text dx\)</span>，故 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{\int_0^x f(u)\text du}x=\dfrac 1 T\int_0^Tf(x)\text dx\)</span>。</p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^{\pi}\dfrac{\sin(2n+1)x}{\sin x}\text dx\,(n\in\mathbb N)\)</span>。（Dirichlet 积分）</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p>救 <span class="arithmatex">\(I_n=\int_0^\pi\dfrac{\sin(2n+1)}{\sin x}\text dx\)</span>，则 <span class="arithmatex">\(I_0=\pi\)</span></p>
+<p>当 <span class="arithmatex">\(n\geq 1\)</span> 时，<span class="arithmatex">\(I_n-I_{n-1}=\int_0^{\pi}\dfrac{\sin(2n+1)x-\sin(2n-1)x}{\sin x}\text dx=\int_0^\pi\dfrac{2\cos 2nx\sin x}{\sin x}\text dx=0\)</span></p>
+<p>故 <span class="arithmatex">\(I_n=I_{n-1}=\cdots=I_1=I_0=\pi\)</span></p>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><strong>法 2：</strong></p>
+<p>记 <span class="arithmatex">\(S_n=\sum_{k=1}^n\cos 2kx\)</span></p>
+<p><span class="arithmatex">\(S_n=\dfrac 1 {2\sin x}\sum_{k=1}^n 2\sin x\cos 2kx=\dfrac 1 {2\sin x}\sum_{k=1}^n (\sin(2k+1)x-\sin(2k-1)x)=\dfrac{\sin(2n+1)-\sin x}{2\sin x}\)</span>（Dirichlet 和）</p>
+<p>故 <span class="arithmatex">\(\int_0^{\pi}\dfrac{\sin(2n+1)x}{\sin x}\text dx=\int_0^\pi(2S_n+1)\text dx=\pi\)</span></p>
+</li>
+</ul>
+<p>已知 <span class="arithmatex">\(\int_0^{+\infty}\dfrac{\sin x}x\text dx=\dfrac\pi 2\)</span>，计算：<span class="arithmatex">\(\int_0^{+\infty}\dfrac{\sin^4 x}{x^2}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(I=-\int_0^{+\infty}\sin^4 x\text d(\dfrac 1 x)=-\dfrac{\sin^4x}{x}\big\vert_0^{+\infty}+4\int_0^{+\infty}\dfrac{\sin^3 x\cos x}x\text dx=\int_0^{+\infty}\dfrac{(1-\cos 2x)\sin 2x} x \text dx=\int_0^{+\infty}\dfrac{\sin 2x}x\text dx-\dfrac 1 2\int_0^{+\infty}\dfrac{\sin 4x}x\text dx=\int_0^{+\infty}\dfrac{\sin 2x}{2x}\text d(2x)-\dfrac 1 2\int_0^{+\infty}\dfrac{\sin 4x}{4x}\text d(4x)=\dfrac\pi 4\)</span></p>
 </details>
 </details>
 </li>
