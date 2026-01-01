@@ -14,7 +14,7 @@
         <link rel="prev" href="../4/">
       
       
-        <link rel="next" href="../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/1/">
+        <link rel="next" href="../%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">
       
       
         
@@ -805,6 +805,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2656,7 +2684,7 @@
 
   <h1>第五章 定积分及其应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-31'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-31T07:55:09.607968+00:00'>2025-12-31</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2025-12-31'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2025-12-31T07:55:09.607968+00:00'>2025-12-31</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-01'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-01T19:53:02.269028+00:00'>2026-01-01</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-01'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-01T19:53:02.269028+00:00'>2026-01-01</time></span></div></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">定积分概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3026,8 +3054,8 @@
 <p>计算：<span class="arithmatex">\(\int_{-1}^1 x^2\arctan (e^x)\text dx\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
-<details class="abstarct" open="open">
-<summary>Abstarct</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
 <p><span class="arithmatex">\(\int_{-a}^a f(x)\text dx=\int_0^a [f(x)+f(-x)]\text dx\)</span></p>
 <p><span class="arithmatex">\(\arctan(e^x)+\arctan(e^{-x})=\dfrac\pi 2\)</span></p>
 </details>
@@ -3890,11 +3918,15 @@
 <p>设 <span class="arithmatex">\(f(x)\)</span> 是周期为 <span class="arithmatex">\(T&gt;0\)</span> 的连续函数，证明：<span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac 1 x\int_0^x f(t)\text dt=\dfrac 1 T\int_0^T f(x)\text dx\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>积分 <span class="arithmatex">\(\int_0^x\)</span> 可以拆成 <span class="arithmatex">\(n\)</span> 个周期的积分和一段余项积分。<span class="arithmatex">\(x\to +\infty\)</span> 时，<span class="arithmatex">\(n\to\dfrac x T\)</span>；余项积分有界，除以 <span class="arithmatex">\(x\)</span> 后趋于 <span class="arithmatex">\(0\)</span>。</p>
+</details>
 <p>对 <span class="arithmatex">\(\forall x&gt;0\)</span>，<span class="arithmatex">\(\exists n\in\mathbb N\)</span>，使 <span class="arithmatex">\(nT\leq x&lt;(n+1)T\)</span>。</p>
 <p>记 <span class="arithmatex">\(\int_0^T f(x)\text dx=A\)</span>，<span class="arithmatex">\(\int_0^T|f(x)|\text dx=B\)</span>。</p>
 <p><span class="arithmatex">\(nA-B&lt;\int_0^x f(u)\text du=nA+\int_{nT}^x f(u)\text du\leq nA+B\)</span></p>
 <p><span class="arithmatex">\(\dfrac{nA-B}x&lt;\dfrac{\int_0^x f(u)\text du}x\leq \dfrac{nA+B}x\)</span></p>
-<p>而 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{nA-B}x=\lim\limits_{x\to +\infty}\dfrac{nA+B}x=\dfrac 1 T\int_0^T f(x)\text dx\)</span>，故 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{\int_0^x f(u)\text du}x=\dfrac 1 T\int_0^Tf(x)\text dx\)</span>。</p>
+<p>而 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{nA-B}x=\lim\limits_{x\to +\infty}\dfrac{nA+B}x=\dfrac 1 TA\)</span>，故 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{\int_0^x f(u)\text du}x=\dfrac 1 T\int_0^Tf(x)\text dx\)</span>。</p>
 </details>
 <p>计算：<span class="arithmatex">\(\int_0^{\pi}\dfrac{\sin(2n+1)x}{\sin x}\text dx\,(n\in\mathbb N)\)</span>。（Dirichlet 积分）</p>
 <details class="note">
@@ -3906,9 +3938,6 @@
 <p>当 <span class="arithmatex">\(n\geq 1\)</span> 时，<span class="arithmatex">\(I_n-I_{n-1}=\int_0^{\pi}\dfrac{\sin(2n+1)x-\sin(2n-1)x}{\sin x}\text dx=\int_0^\pi\dfrac{2\cos 2nx\sin x}{\sin x}\text dx=0\)</span></p>
 <p>故 <span class="arithmatex">\(I_n=I_{n-1}=\cdots=I_1=I_0=\pi\)</span></p>
 </li>
-</ul>
-</details>
-<ul>
 <li>
 <p><strong>法 2：</strong></p>
 <p>记 <span class="arithmatex">\(S_n=\sum_{k=1}^n\cos 2kx\)</span></p>
@@ -3916,6 +3945,7 @@
 <p>故 <span class="arithmatex">\(\int_0^{\pi}\dfrac{\sin(2n+1)x}{\sin x}\text dx=\int_0^\pi(2S_n+1)\text dx=\pi\)</span></p>
 </li>
 </ul>
+</details>
 <p>已知 <span class="arithmatex">\(\int_0^{+\infty}\dfrac{\sin x}x\text dx=\dfrac\pi 2\)</span>，计算：<span class="arithmatex">\(\int_0^{+\infty}\dfrac{\sin^4 x}{x^2}\text dx\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
