@@ -2540,7 +2540,7 @@
 
   <h1>期末复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-01'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-01T19:53:02.269028+00:00'>2026-01-01</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-01'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-01T19:53:02.269028+00:00'>2026-01-01</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-02T13:07:34.126831+00:00'>2026-01-02</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-02'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-02T13:07:34.126831+00:00'>2026-01-02</time></span></div></div></div>
 <details class="warning" open="open">
 <summary>一些踩过的坑</summary>
 <ul>
@@ -2549,6 +2549,7 @@
 <li>误把 <span class="arithmatex">\(\lim\limits_{x\to 0}(1-x)^{\frac 1 x}\)</span> 当成 <span class="arithmatex">\(e\)</span>。其实是 <span class="arithmatex">\(\dfrac 1 e\)</span>。</li>
 <li>误把 <span class="arithmatex">\(\int_0^x y\sin((t+1)^2)\text dt\)</span> 算为 <span class="arithmatex">\(y\sin((x+1)^2)\)</span>，没用乘法的求导法则。其实是 <span class="arithmatex">\(y'\int_0^x \sin((t+1)^2)\text dt+y\sin((x+1)^2)\)</span>。</li>
 <li>算不定积分忘记 <span class="arithmatex">\(+C\)</span>。</li>
+<li>误把 <span class="arithmatex">\(\sec^2\dfrac x 2\text dx\)</span> 直接换成 <span class="arithmatex">\(\text d(\tan\dfrac x 2)\)</span>。</li>
 </ul>
 </details>
 <details class="tip" open="open">
@@ -2557,6 +2558,9 @@
 <li><span class="arithmatex">\(\lim\limits_{t\to +\infty}t(-\arctan t+\dfrac\pi 2)=\lim_{t\to +\infty}t\cdot\arctan\dfrac 1 t=1\)</span></li>
 <li>考虑极值点记得考虑不可导点，考虑拐点记得考虑二阶导数不存在的点。</li>
 <li>曲率公式 <span class="arithmatex">\(K=\dfrac{|y''|}{(1+y'^2)^{\frac 3 2}}\)</span></li>
+<li>旋转曲面侧面积 <span class="arithmatex">\(S=\int 2\pi r\text ds\)</span>，注意是乘弧长微元</li>
+<li>极坐标弧长公式 <span class="arithmatex">\(L=\int_{\alpha}^{\beta}\sqrt{r^2(\theta)+[r'(\theta)]^2}\text d\theta\)</span></li>
+<li>推广的积分中值定理：若 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上恒非负或恒非正，则 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)g(x)\text dx=f(\xi)\int_a^b g(x)\text dx\)</span>。</li>
 </ul>
 </details>
 <h2 id="_1">刷历年卷<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
@@ -2622,9 +2626,6 @@
 <summary>解答</summary>
 <p><span class="arithmatex">\(=\lim\limits_{x\to +\infty}x[(1+\frac 1 x)^{\frac 1 7}-(1-\frac 1 x)^{\frac 1 7}]\xlongequal{t=\frac 1 x}\lim\limits_{t\to 0}\dfrac{(1+t)^{\frac 1 7}-1}t-\lim\limits_{t\to 0}\dfrac{(1-t)^{\frac 1 7}-1}t=\dfrac 1 7-(-\dfrac 1 7)=\dfrac 2 7\)</span></p>
 </details>
-</details>
-<details class="info" open="open">
-<summary>2021-2022</summary>
 <p>设 <span class="arithmatex">\(\ln\cos x=a_0+a_1x+a_2x^2+a_3x^3+a_4x^4+o(x^4),x\to 0\)</span>，求实数 <span class="arithmatex">\(a_0,a_1,a_2,a_3,a_4\)</span> 的值。</p>
 <details class="note">
 <summary>解答</summary>
@@ -2633,17 +2634,17 @@
 <p><span class="arithmatex">\(\begin{aligned}\ln\cos x&amp;=\ln(1-\dfrac{x^2}2+\dfrac{x^4}{24}+o(x^4))\,(x\to 0)\\&amp;=[-\dfrac{x^2}2+\dfrac{x^4}{24}+o(x^4)]-\dfrac{\frac{x^4}4+o(x^4)}{2}+o(x^4)\,(x\to 0)\\&amp;=-\dfrac{x^2}2-\dfrac 1 {12}x^4+o(x^4),(x\to 0)\end{aligned}\)</span></p>
 <p><span class="arithmatex">\(a_0=0\)</span>，<span class="arithmatex">\(a_1=0\)</span>，<span class="arithmatex">\(a_2=-\dfrac 1 2\)</span>，<span class="arithmatex">\(a_3=0\)</span>，<span class="arithmatex">\(a_4=-\dfrac 1 {12}\)</span></p>
 </details>
-</details>
-<details class="info" open="open">
-<summary>2019-2020</summary>
-<p>设 <span class="arithmatex">\(f(x)=\begin{cases}(1+x)^{\frac 1 x},&amp;x\neq 0\land x&gt;-1\\e,&amp;x=0\end{cases}\)</span>，<span class="arithmatex">\(f(x)=a_0+\dfrac{a_1}{1!}x+\dfrac{a_2}{2!}x^2+\dfrac{a_3}{3!}x^3+o(x^3),x\to 0\)</span>，求 <span class="arithmatex">\(a_1,a_2,a_3\)</span>。</p>
+<p>已知 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,+\infty)\)</span> 上连续，且有唯一极值点 <span class="arithmatex">\(x_0\)</span>。若 <span class="arithmatex">\(x_0\)</span> 为极大值点，证明 <span class="arithmatex">\(f(x_0)\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的最大值。</p>
 <details class="note">
 <summary>解答</summary>
-<p><span class="arithmatex">\(\ln(1+x)=x-\dfrac{x^2}2+\dfrac{x^3}3-\dfrac{x^4}4+o(x^4)\)</span>，<span class="arithmatex">\(x\to 0\)</span></p>
-<p><span class="arithmatex">\(e^x=1+x+\dfrac{x^2}2+\dfrac{x^3}6+o(x^3)\)</span>，<span class="arithmatex">\(x\to 0\)</span></p>
-<p><span class="arithmatex">\(\forall x\neq 0\)</span> 且 <span class="arithmatex">\(x&gt;-1\)</span>，</p>
-<p><span class="arithmatex">\(\begin{aligned}f(x)&amp;=(1+x)^{\frac 1 x}\\&amp;=e^{\frac{\ln(1+x)}x}\\&amp;=e\cdot e^{\frac{\ln(1+x)}x-1}\\&amp;=e\cdot e^{-\frac x 2+\frac{x^2}3-\frac{x^3}4+o(x^3)}\,(x\to 0)\\&amp;=e\cdot [1+(-\dfrac x 2+\dfrac{x^2}3-\dfrac{x^3}4+o(x^3))+\dfrac 1 2(-\dfrac x 2+\dfrac{x^2}3-\dfrac{x^3}4+o(x^3))^2\\&amp;+\dfrac 1 6 (-\dfrac x 2+\dfrac{x^2}3-\dfrac{x^3}4+o(x^3))^3+o(x^3)]\,(x\to 0)\\&amp;=e-\dfrac e 2x+\dfrac{11e}24x^2-\dfrac{7e}{16}x^3+o(x^3)\,(x\to 0)\end{aligned}\)</span></p>
-<p><span class="arithmatex">\(a_1=-\dfrac e 2\)</span>，<span class="arithmatex">\(a_2=\dfrac{11e}{12}\)</span>，<span class="arithmatex">\(a_3=-\dfrac{21e}8\)</span></p>
+<p>反证法。假设 <span class="arithmatex">\(x_0\)</span> 不是 <span class="arithmatex">\(f(x)\)</span> 的最大值点，则 <span class="arithmatex">\(\exists x_1\in(0,+\infty)\)</span> 且 <span class="arithmatex">\(x_1\neq x_0\)</span> 使得 <span class="arithmatex">\(f(x_1)&gt;f(x_0)\)</span>。</p>
+<p>不妨设 <span class="arithmatex">\(x_1&gt;x_0\)</span>。由于 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([x_0,x_1]\)</span> 上连续，则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([x_0,x_1]\)</span> 上存在最小值 <span class="arithmatex">\(m\)</span>：<span class="arithmatex">\(\exists x_3\in[x_0,x_1]\)</span>，使得 <span class="arithmatex">\(f(x_3)=m\)</span>。</p>
+<p>下证 <span class="arithmatex">\(x_3\neq x_0\)</span> 且 <span class="arithmatex">\(x_3\neq x_1\)</span>。</p>
+<ul>
+<li>由于 <span class="arithmatex">\(x_0\)</span> 是 <span class="arithmatex">\(f(x)\)</span> 的极大值点，则 <span class="arithmatex">\(\exists\delta&gt;0\)</span> 使得 <span class="arithmatex">\(f(x_0+\delta)&lt;f(x_0)\)</span> 且 <span class="arithmatex">\(x_0+\delta\in[x_0,x_1]\)</span>（否则 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 右侧一个小区间上恒为 <span class="arithmatex">\(f(x_0)\)</span>，与 <span class="arithmatex">\(x_0\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的唯一极值点矛盾），故 <span class="arithmatex">\(x_3\neq x_0\)</span>。</li>
+<li>又 <span class="arithmatex">\(f(x_1)&gt;f(x_0)\)</span>，故 <span class="arithmatex">\(x_3\neq x_1\)</span>。</li>
+</ul>
+<p>从而 <span class="arithmatex">\(x_3\in(x_0,x_1)\)</span>，从而 <span class="arithmatex">\(x_3\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的极小值点，这与 <span class="arithmatex">\(x_0\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的唯一极值点矛盾。故得证。</p>
 </details>
 </details>
 <details class="info" open="open">
@@ -2659,6 +2660,32 @@
 <details class="note">
 <summary>解答</summary>
 <p><span class="arithmatex">\(\begin{aligned}&amp;=\int_0^{+\infty} \dfrac{x\text d(1+e^x)}{(1+e^x)^2}\\&amp;=\int_0^{+\infty}x\text d(-\dfrac 1 {1+e^x})\\&amp;=-\dfrac x {1+e^x}\big\vert_0^{+\infty}-\int_0^{+\infty}(-\dfrac 1 {1+e^x})\text dx\\&amp;\xlongequal{t=e^x}\int_1^{+\infty}\dfrac 1 {1+t}\cdot \dfrac 1 t\text dt\\&amp;=\ln\dfrac t{t+1}\big\vert_1^{+\infty}\\&amp;=\ln 2\end{aligned}\)</span></p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2019-2020</summary>
+<p>设 <span class="arithmatex">\(f(x)=\begin{cases}(1+x)^{\frac 1 x},&amp;x\neq 0\land x&gt;-1\\e,&amp;x=0\end{cases}\)</span>，<span class="arithmatex">\(f(x)=a_0+\dfrac{a_1}{1!}x+\dfrac{a_2}{2!}x^2+\dfrac{a_3}{3!}x^3+o(x^3),x\to 0\)</span>，求 <span class="arithmatex">\(a_1,a_2,a_3\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\ln(1+x)=x-\dfrac{x^2}2+\dfrac{x^3}3-\dfrac{x^4}4+o(x^4)\)</span>，<span class="arithmatex">\(x\to 0\)</span></p>
+<p><span class="arithmatex">\(e^x=1+x+\dfrac{x^2}2+\dfrac{x^3}6+o(x^3)\)</span>，<span class="arithmatex">\(x\to 0\)</span></p>
+<p><span class="arithmatex">\(\forall x\neq 0\)</span> 且 <span class="arithmatex">\(x&gt;-1\)</span>，</p>
+<p><span class="arithmatex">\(\begin{aligned}f(x)&amp;=(1+x)^{\frac 1 x}\\&amp;=e^{\frac{\ln(1+x)}x}\\&amp;=e\cdot e^{\frac{\ln(1+x)}x-1}\\&amp;=e\cdot e^{-\frac x 2+\frac{x^2}3-\frac{x^3}4+o(x^3)}\,(x\to 0)\\&amp;=e\cdot [1+(-\dfrac x 2+\dfrac{x^2}3-\dfrac{x^3}4+o(x^3))+\dfrac 1 2(-\dfrac x 2+\dfrac{x^2}3-\dfrac{x^3}4+o(x^3))^2\\&amp;+\dfrac 1 6 (-\dfrac x 2+\dfrac{x^2}3-\dfrac{x^3}4+o(x^3))^3+o(x^3)]\,(x\to 0)\\&amp;=e-\dfrac e 2x+\dfrac{11e}24x^2-\dfrac{7e}{16}x^3+o(x^3)\,(x\to 0)\end{aligned}\)</span></p>
+<p><span class="arithmatex">\(a_1=-\dfrac e 2\)</span>，<span class="arithmatex">\(a_2=\dfrac{11e}{12}\)</span>，<span class="arithmatex">\(a_3=-\dfrac{21e}8\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int_1^{+\infty}\dfrac{\text dx}{x\sqrt{1+x^4}}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;\xlongequal{t=\frac 1 x}\int_0^1\dfrac{t\text dt}{\sqrt{t^4+1}}\\&amp;=\dfrac 1 2\int_0^1 \dfrac{\text d(t^2)}{\sqrt{(t^2)^2+1}}\\&amp;\xlongequal{u=t^2}\dfrac 1 2\ln(u+\sqrt{u^2+1})\big\vert_0^1\\&amp;=\dfrac \ln(\sqrt 2+1)\end{aligned}\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;=\int_1^{+\infty}\dfrac{x^3\text dx}{x^4\sqrt{1+x^4}}\\&amp;\xlongequal{t=x^4}\dfrac 1 4\int_1^{+\infty}\dfrac{\text dt}{t\sqrt{1+t}}\\&amp;\xlongequal{u=\sqrt{1+t}}\dfrac 1 4\int_{\sqrt 2}^{+\infty}\dfrac{2\text du}{u^2-1}\\&amp;=\dfrac 1 4\ln\dfrac{u-1}{u+1}\big\vert_{\sqrt 2}^{+\infty}\\&amp;=\dfrac 1 2\ln(\sqrt 2+1)\end{aligned}\)</span></p>
+</li>
+</ul>
 </details>
 </details>
 <details class="info" open="open">
@@ -2712,6 +2739,14 @@
 <details class="note">
 <summary>解答</summary>
 <p><span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{(1+\cos x-1)^{\frac 1 x}-1}x=\lim\limits_{x\to 0}\dfrac{e^{\frac 1 x\ln(1+\cos x-1)}-1}x\)</span>【<span class="arithmatex">\(\dfrac 1 x\ln(1+\cos x-1)\sim \dfrac 1 x (\cos x-1)\sim \dfrac 1 x (-\dfrac 1 2x^2)\to 0\)</span>】<span class="arithmatex">\(=\lim\limits_{x\to 0}\dfrac{-\frac 1 2 x}{x}=-\dfrac 1 2\)</span></p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2015-2016</summary>
+<p>计算：<span class="arithmatex">\(\int_0^2 x^2\sqrt{2x-x^2}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\begin{aligned}&amp;\xlongequal{t=x-1}\int_{-1}^1(1+t)^2\sqrt{1-t^2}\text dt\\&amp;=\int_{-1}^1\sqrt{1-t^2}\text dt+\int_{-1}^1t^2\sqrt{1-t^2}\text dt\\&amp;=\dfrac\pi 2+2\int_0^1 t^2\sqrt{1-t^2}\text dt\\&amp;\xlongequal{t=\sin u}\dfrac\pi 2+2\int_0^{\frac\pi 2}\sin^2u\cos^2u\text du\\&amp;=\dfrac\pi 2+\dfrac 1 4\int_0^{\frac\pi 2}\sin^2 2u\text d(2u)\\&amp;=\dfrac\pi 2+\dfrac 1 4\cdot 2\cdot\dfrac 1 2\cdot\dfrac\pi 2\\&amp;=\dfrac 5 8\pi\end{aligned}\)</span></p>
 </details>
 </details>
 

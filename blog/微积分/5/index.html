@@ -2684,7 +2684,7 @@
 
   <h1>第五章 定积分及其应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-01'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-01T19:53:02.269028+00:00'>2026-01-01</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-01'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-01T19:53:02.269028+00:00'>2026-01-01</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-02T13:07:34.126831+00:00'>2026-01-02</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-02'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-02T13:07:34.126831+00:00'>2026-01-02</time></span></div></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">定积分概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2816,6 +2816,11 @@
 <p>若 <span class="arithmatex">\(f(x)\)</span> 不是常数，则 <span class="arithmatex">\(m&lt;M\)</span>，<span class="arithmatex">\(x_1&lt;x_2\)</span>。有 <span class="arithmatex">\(m(b-a)&lt;\int_a^b f(x)\text dx&lt;M(b-a)\)</span>，即 <span class="arithmatex">\(m&lt;\dfrac{\int_a^b f(x)\text dx}{b-a}&lt;M\)</span>。根据连续函数的介值定理，<span class="arithmatex">\(\exists\xi\in(x_1,x_2)\subseteq(a,b)\)</span> 使得 <span class="arithmatex">\(f(\xi)=\dfrac{\int_a^b f(x)\text dx}{b-a}\)</span>，即 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)\text dx=f(\xi)(b-a)\)</span>。</p>
 </li>
 </ul>
+</li>
+<li>
+<p><strong>法 3：</strong></p>
+<p>设 <span class="arithmatex">\(F(x)=\int_a^x f(t)\text dt\)</span>。</p>
+<p><span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，在 <span class="arithmatex">\((a,b)\)</span> 内可导，根据拉格朗日中值定理，<span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(F'(\xi)=\dfrac{F(b)-F(a)}{b-a}\)</span>，即 <span class="arithmatex">\(f(\xi)=\dfrac{\int_a^b f(t)\text dt}{b-a}\)</span>。</p>
 </li>
 </ul>
 </details>
@@ -3689,11 +3694,13 @@
 </li>
 </ul>
 </details>
-<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上二阶可导，且 <span class="arithmatex">\(f''(x)&gt;0\)</span>，证明：<span class="arithmatex">\(f(\dfrac{a+b}2)\leq\dfrac 1 {b-a}\int_a^b f(x)\text dx\leq \dfrac{f(a)+f(b)}2\)</span>。</p>
+<p>（Hermite-Hadamard 不等式）设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上二阶可导，且 <span class="arithmatex">\(f''(x)&gt;0\)</span>，证明：<span class="arithmatex">\(f(\dfrac{a+b}2)\leq\dfrac 1 {b-a}\int_a^b f(x)\text dx\leq \dfrac{f(a)+f(b)}2\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
-<p>（固定上限→可变上限）</p>
 <ul>
+<li>
+<p><strong>法 1：</strong>（固定上限→可变上限）</p>
+</li>
 <li>
 <p>令 <span class="arithmatex">\(F(x)=\int_a^x f(t)\text dt-(x-a)f(\dfrac{a+x}2)\)</span></p>
 <p>则 <span class="arithmatex">\(F'(x)=f(x)-f(\dfrac{a+x}2)-\dfrac 1 2 (x-a)f'(\dfrac{a+x}2)=\dfrac{x-a}2 (f'(\xi)-f'(\dfrac{a+x}2))&gt;0\)</span>，其中 <span class="arithmatex">\(\dfrac{a+x}2&lt;\xi&lt;x\)</span></p>
@@ -3706,13 +3713,22 @@
 </li>
 </ul>
 <p>综上，<span class="arithmatex">\(f(\dfrac{a+b}{2})\leq \dfrac 1 {b-a}\int_a^b f(x)\text dx\leq \dfrac{f(a)+f(b)}2\)</span></p>
-</details>
-<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上满足：对 <span class="arithmatex">\(\forall x_,x_2\in[a,b]\)</span> 及 <span class="arithmatex">\(\alpha\in[0,1]\)</span> 有 <span class="arithmatex">\(f(\alpha x_1+(1-\alpha)x_2)\leq \alpha f(x_1)+(1-\alpha)f(x_2)\)</span>。证明：<span class="arithmatex">\(f(\dfrac{a+b}2)\leq \dfrac 1 {b-a}\int_a^b f(x)\text dx\leq \dfrac{f(a)+f(b)}2\)</span>。</p>
-<details class="note">
-<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 2：</strong></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(f(x)\geq f(\dfrac{a+b}2)+f'(\dfrac{a+b}2)(x-\dfrac{a+b}2)\)</span></p>
+<p><span class="arithmatex">\(\int_a^b f(x)\text dx\geq \int_a^b f(\dfrac{a+b}2)\text dx+f'(\dfrac{a+b}2)\int_a^b (x-\dfrac{a+b}2)\text dx=f(\dfrac{a+b}2)(b-a)\)</span></p>
+</li>
+<li>
+<p>对 <span class="arithmatex">\(\forall x_1,x_2\in[a,b]\)</span> 及 <span class="arithmatex">\(\alpha\in[0,1]\)</span> 有 <span class="arithmatex">\(f(\alpha x_1+(1-\alpha)x_2)\leq \alpha f(x_1)+(1-\alpha)f(x_2)\)</span></p>
 <p>令 <span class="arithmatex">\(x=a+t(b-a)=(1-t)a+tb\,(0\leq t\leq 1)\)</span></p>
 <p><span class="arithmatex">\(\int_a^b f(x)\text dx=(b-a)\int_0^1 f((1-t)a+tb)\text dt\leq (b-a)\int_0^1 [(1-t)f(a)+tf(b)]\text dt=\dfrac{b-a}2[f(a)+f(b)]\)</span></p>
-<p><span class="arithmatex">\(\int_a^b f(x)\text dx=(b-a)\int_0^1 f((1-t)a+tb)\text dt= (b-a)\int_0^1 \dfrac 1 2 [f((1-t)a+tb)+f(ta+(1-t)b)]\text dt\geq (b-a)\int_0^1 f(\dfrac{[(1-t)a+tb]+[ta+(1-t)b]}2)\text dt=(b-a)f(\dfrac{a+b}2)\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
 </details>
 <p>证明：<span class="arithmatex">\(\int_0^{\frac\pi 2}\dfrac{\cos x}{1+x^2}\text dx&gt;\int_0^{\frac\pi 2}\dfrac{\sin x}{1+x^2}\text dx\)</span>。</p>
 <details class="note">

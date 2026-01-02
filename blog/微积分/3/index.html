@@ -2728,7 +2728,7 @@
 
   <h1>第三章 微分中值定理及导数的应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-01'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-01T19:53:02.268028+00:00'>2026-01-01</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-01'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-01T19:53:02.268028+00:00'>2026-01-01</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-02T13:07:34.125831+00:00'>2026-01-02</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-02'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-02T13:07:34.125831+00:00'>2026-01-02</time></span></div></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">微分中值定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2939,14 +2939,13 @@
 </li>
 <li>
 <p><span class="arithmatex">\(\dfrac{*}{\infty}\)</span> 型</p>
-</li>
-</ul>
 <p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\(\mathring U(x_0)\)</span> 内满足：① <span class="arithmatex">\(\lim\limits_{x\to x_0}g(x)=\infty\)</span>；② <span class="arithmatex">\(f(x),g(x)\)</span> 可导且 <span class="arithmatex">\(g'(x)\neq 0\)</span>；③ <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f'(x)}{g'(x)}=A\)</span>（常数或 <span class="arithmatex">\(\infty\)</span>），则 <span class="arithmatex">\(\lim\limits_{x\to x_0}\dfrac{f(x)}{g(x)}=\lim\limits_{x\to x_0}\dfrac{f'(x)}{g'(x)}=A\)</span>。</p>
-<p>???+ warning "注意"
-        ① 所求极限为 <span class="arithmatex">\(\dfrac 0 0\)</span> 或 <span class="arithmatex">\(\dfrac * {\infty}\)</span> 型；② 分子分母的导数存在；③ 导数比 <span class="arithmatex">\(\dfrac{f'(x)}{g'(x)}\)</span> 的极限存在，才能用洛必达！</p>
-<div class="highlight"><pre><span></span><code>    例如 $\lim\limits_{x\to +\infty}\dfrac{2x}{x+1}$ 不是 $\dfrac 0 0$ 或 $\dfrac * {\infty}$ 型，不能用洛必达；$\lim\limits_{x\to \infty}\dfrac{x+\sin x}{x-\sin x}$ 为 $\dfrac{\infty}{\infty}$ 型极限，但 $\lim\limits_{x\to \infty}\dfrac{1+\cos x}{1-\cos x}$ 不存在，不能用洛必达；$\lim\limits_{x\to 0}\dfrac{x^2\sin\frac 1 x}{e^x-1}$ 为 $\dfrac 0 0$ 型极限，但 $\lim\limits_{x\to 0}\dfrac{2x\sin \frac 1 x-\cos\frac 1 x}{e^x}$ 不存在，不能用洛必达。
-</code></pre></div>
-<ul>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>① 所求极限为 <span class="arithmatex">\(\dfrac 0 0\)</span> 或 <span class="arithmatex">\(\dfrac * {\infty}\)</span> 型；② 分子分母的导数存在；③ 导数比 <span class="arithmatex">\(\dfrac{f'(x)}{g'(x)}\)</span> 的极限存在，才能用洛必达！</p>
+<p>例如 <span class="arithmatex">\(\lim\limits_{x\to +\infty}\dfrac{2x}{x+1}\)</span> 不是 <span class="arithmatex">\(\dfrac 0 0\)</span> 或 <span class="arithmatex">\(\dfrac * {\infty}\)</span> 型，不能用洛必达；<span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{x+\sin x}{x-\sin x}\)</span> 为 <span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span> 型极限，但 <span class="arithmatex">\(\lim\limits_{x\to \infty}\dfrac{1+\cos x}{1-\cos x}\)</span> 不存在，不能用洛必达；<span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{x^2\sin\frac 1 x}{e^x-1}\)</span> 为 <span class="arithmatex">\(\dfrac 0 0\)</span> 型极限，但 <span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{2x\sin \frac 1 x-\cos\frac 1 x}{e^x}\)</span> 不存在，不能用洛必达。</p>
+</details>
+</li>
 <li>
 <p>其他类型未定式的极限</p>
 <p><span class="arithmatex">\(0\cdot \infty=0\cdot \dfrac 1 {0}\)</span> 或 <span class="arithmatex">\(=\dfrac{1}{\infty}\cdot \infty\)</span></p>
@@ -3339,6 +3338,39 @@
 </details>
 </li>
 </ul>
+</li>
+<li>
+<p>第二个重要极限的延伸：</p>
+<p>当 <span class="arithmatex">\(\alpha\geq \dfrac 1 2\)</span> 时，<span class="arithmatex">\(e\leq (1+\dfrac 1 n)^{n+\alpha}\)</span>；当 <span class="arithmatex">\(\beta\leq \dfrac 1 {\ln 2}-1\)</span> 时，<span class="arithmatex">\(e\geq (1+\dfrac 1 n)^{n+\beta}\)</span>。</p>
+<p>设 <span class="arithmatex">\(x_n=(1+\dfrac 1 n)^{n+\alpha}\)</span>，则 <span class="arithmatex">\(\{x_n\}\)</span> 单调递减当且仅当 <span class="arithmatex">\(\alpha\geq \dfrac 1 2\)</span>。</p>
+<details class="example">
+<summary>例题</summary>
+<p>假设 <span class="arithmatex">\((1+\dfrac 1 n)^{n+\beta}\leq e\leq (1+\dfrac 1 n)^{n+\alpha}\)</span> 对所有正整数 <span class="arithmatex">\(n\)</span> 都成立，求 <span class="arithmatex">\(\alpha\)</span> 的最小值和 <span class="arithmatex">\(\beta\)</span> 的最大值。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\((1+\dfrac 1 n)^{n+\beta}\leq e\leq (1+\dfrac 1 n)^{n+\alpha}\Leftrightarrow \beta\leq \dfrac 1 {\ln(1+\dfrac 1 n)}-n\leq \alpha\)</span></p>
+<p>设 <span class="arithmatex">\(f(x)=\dfrac 1 {\ln(1+x)}-\dfrac 1 x\,(0&lt;x\leq 1)\)</span>，则 <span class="arithmatex">\(f'(x)=-\dfrac 1 {(1+x)\ln^2(1+x)}+\dfrac 1 {x^2}\)</span>。</p>
+<p>令 <span class="arithmatex">\(g(x)=x^2-(1+x)\ln^2(1+x)\)</span>，则 <span class="arithmatex">\(g'(2)=2x-\ln^2(1+x)-2\ln(1+x)\)</span>，<span class="arithmatex">\(g''(x)=2-\dfrac{2\ln(1+x)}{1+x}-\dfrac 2 {1+x}=\dfrac{2(x-\ln(1+x))}2&gt;0\)</span>。</p>
+<p><span class="arithmatex">\(g'(x)\)</span> 在 <span class="arithmatex">\((0,1]\)</span> 上单调递增，<span class="arithmatex">\(g'(x)&gt;g'(0)=0\)</span>。<span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\((0,1]\)</span> 上单调递增，<span class="arithmatex">\(g(x)&gt;g(0)=0\)</span>，从而 <span class="arithmatex">\(f'(x)&lt;0\)</span>。<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,1]\)</span> 上单调递减，<span class="arithmatex">\(f(0+0)=\lim\limits_{x\to 0^+}f(x)=\dfrac 1 2\)</span>，<span class="arithmatex">\(f(1)=\dfrac 1 {\ln 2}-1\)</span>，则 <span class="arithmatex">\(\alpha_{\min}=\dfrac 1 2\)</span>，<span class="arithmatex">\(\beta_{\max}=\dfrac 1 {\ln 2}-1\)</span>。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)=(1+x)^{\frac 1 x+\alpha}\)</span>，证明：<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,1]\)</span> 上单调递增 <span class="arithmatex">\(\Leftrightarrow\alpha\geq \dfrac 1 2\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(f'(x)=(1+x)^{\frac 1 x+\alpha}(-\dfrac 1 {x^2}\ln(x+1)+(\dfrac 1 x+\alpha)\cdot\dfrac 1 {x+1})\)</span></p>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,1]\)</span> 上单调递增 <span class="arithmatex">\(\Leftrightarrow f'(x)\geq 0\Leftrightarrow -\dfrac 1 {x^2}\ln(x+1)+(\dfrac 1 x+\alpha)\cdot\dfrac 1 {x+1}\geq 0\Leftrightarrow \alpha\geq \dfrac{x+1}{x^2}\ln(x+1)-\dfrac 1 x\)</span></p>
+<p>设 <span class="arithmatex">\(g(x)=\dfrac{x+1}{x^2}\ln(x+1)-\dfrac 1 x=\dfrac{(1+x)\ln(1+x)-x}{x^2}\)</span>，则 <span class="arithmatex">\(g'(x)=\dfrac{2x-(x+2)\ln(1+x)}{x^3}\)</span>。</p>
+<p>设 <span class="arithmatex">\(h(x)=\dfrac{2x}{x+2}-\ln(1+x)\)</span>，则 <span class="arithmatex">\(h'(x)=-\dfrac{x^2}{(x+1)(x+2)^2}&lt;0\)</span>，<span class="arithmatex">\(h(x)\)</span> 在 <span class="arithmatex">\((0,1]\)</span> 上单调递减，<span class="arithmatex">\(h(x)&lt;h(0)=0\)</span>，<span class="arithmatex">\(g'(x)&lt;0\)</span>，<span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\((0,1]\)</span> 上单调递减，<span class="arithmatex">\(g(x)&lt;g(0+0)=\lim\limits_{x\to 0^+}\dfrac{(1+x)(x-\frac{x^2}2+o(x^2))-x}{x^2}=\dfrac 1 2\)</span>。</p>
+<p>因此 <span class="arithmatex">\(\alpha\geq \dfrac 1 2\)</span>。</p>
+</details>
+<p>设正整数 <span class="arithmatex">\(n&gt;1\)</span>，证明：<span class="arithmatex">\(\dfrac 1 {2ne}&lt;\dfrac 1 e-(1-\dfrac 1 n)^n&lt;\dfrac 1 {ne}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\dfrac 1 e-(1-\dfrac 1 n)^n&lt;\dfrac 1 {ne}\Leftrightarrow e&gt;(\dfrac n {n-1})^{n-1}\Leftrightarrow (1+\dfrac 1 n)^n&lt;e\)</span></p>
+<p><span class="arithmatex">\(\dfrac 1 {2ne}&lt;\dfrac 1 e-(1-\dfrac 1 n)^n\Leftrightarrow e&lt;(\dfrac n {n-1})^n\cdot (1-\dfrac 1 {2n})\Leftrightarrow e&lt;(1+\dfrac 1 n)^n\cdot\dfrac{2n+1}{2n}\)</span></p>
+<p>则命题等价于 <span class="arithmatex">\((1+\dfrac 1 n)^n&lt;e&lt;(1+\dfrac 1 n)^n\cdot\dfrac{2n+1}{2n}\)</span></p>
+<p>又 <span class="arithmatex">\(\sqrt{1+\dfrac 1 n}&lt;1+\dfrac 1 {2n}=\dfrac{2n+1}{2n}\)</span>，故只需证明 <span class="arithmatex">\(e&lt;(1+\dfrac 1 n)^{n+\frac 1 2}\)</span> 即可。</p>
+</details>
+</details>
 </li>
 </ul>
 <h3 id="_6">函数图形的凹凸性与拐点<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
