@@ -37,4 +37,7 @@ jobs:
       - run: pip install mkdocs-material 
       - run: pip install --upgrade --force-reinstall mkdocs-material
       - run: pip install mkdocs-encryptcontent-plugin
+      - env:
+          secret: ${{ secrets.SECRET }}
       - run: mkdocs gh-deploy  --ignore-version --force
+
