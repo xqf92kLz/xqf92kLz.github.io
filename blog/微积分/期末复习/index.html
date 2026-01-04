@@ -2568,7 +2568,7 @@
 
   <h1>期末复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-03'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-03T06:45:29.173872+00:00'>2026-01-03</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-03'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-03T06:45:29.173872+00:00'>2026-01-03</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-04'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-04T10:57:10.082710+00:00'>2026-01-04</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-04'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-04T10:57:10.082710+00:00'>2026-01-04</time></span></div></div></div>
 <details class="warning" open="open">
 <summary>一些踩过的坑</summary>
 <ul>
@@ -2576,8 +2576,11 @@
 <li>误以为 <span class="arithmatex">\(\int\arctan x=\dfrac 1 {1+x^2}+C\)</span>。其实 <span class="arithmatex">\((\arctan x)'=\dfrac 1 {1+x^2}\)</span>。</li>
 <li>误把 <span class="arithmatex">\(\lim\limits_{x\to 0}(1-x)^{\frac 1 x}\)</span> 当成 <span class="arithmatex">\(e\)</span>。其实是 <span class="arithmatex">\(\dfrac 1 e\)</span>。</li>
 <li>误把 <span class="arithmatex">\(\int_0^x y\sin((t+1)^2)\text dt\)</span> 算为 <span class="arithmatex">\(y\sin((x+1)^2)\)</span>，没用乘法的求导法则。其实是 <span class="arithmatex">\(y'\int_0^x \sin((t+1)^2)\text dt+y\sin((x+1)^2)\)</span>。</li>
-<li>算不定积分忘记 <span class="arithmatex">\(+C\)</span>。</li>
-<li>误把 <span class="arithmatex">\(\sec^2\dfrac x 2\text dx\)</span> 直接换成 <span class="arithmatex">\(\text d(\tan\dfrac x 2)\)</span>。</li>
+<li>【错多次】算不定积分忘记 <span class="arithmatex">\(+C\)</span>。</li>
+<li>【错多次】误把 <span class="arithmatex">\(\sec^2\dfrac x 2\text dx\)</span> 直接换成 <span class="arithmatex">\(\text d(\tan\dfrac x 2)\)</span>。</li>
+<li><span class="arithmatex">\(\dfrac{\text dy}{\text dx}\)</span> 后续把分子分母写反了。</li>
+<li><span class="arithmatex">\(\text dy=y'\text dx\)</span>，把 <span class="arithmatex">\(\text dx\)</span> 漏了。</li>
+<li>柯西不等式 <span class="arithmatex">\((\int_a^b f(x)g(x)\text dx)^2\leq \int_a^b f^2(x)\text dx\cdot \int_a^b g^2(x)\text dx\)</span> 记错了。</li>
 </ul>
 </details>
 <details class="tip" open="open">
@@ -2589,11 +2592,66 @@
 <li>旋转曲面侧面积 <span class="arithmatex">\(S=\int 2\pi r\text ds\)</span>，注意是乘弧长微元</li>
 <li>极坐标弧长公式 <span class="arithmatex">\(L=\int_{\alpha}^{\beta}\sqrt{r^2(\theta)+[r'(\theta)]^2}\text d\theta\)</span></li>
 <li>推广的积分中值定理：若 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上恒非负或恒非正，则 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)g(x)\text dx=f(\xi)\int_a^b g(x)\text dx\)</span>。</li>
+<li><span class="arithmatex">\(\infty\pm\infty\)</span> 提公因子转化成不定式。如 <span class="arithmatex">\(\lim\limits_{x\to -\infty}x\arctan x+\dfrac\pi 2 x=\lim\limits_{x\to -\infty}\dfrac{\arctan x+\frac\pi 2}{\frac 1 x}=\lim\limits_{x\to -\infty}\dfrac{\frac{1}{1+x^2}}{-\frac 1 {x^2}}=-1\)</span>。</li>
 </ul>
 </details>
 <h2 id="_1">刷历年卷<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <details class="info" open="open">
+<summary>2024-2025</summary>
+<p>已知数列 <span class="arithmatex">\(\{a_n\},\{b_n\}\)</span> 满足 <span class="arithmatex">\(e^{a_n}=a_n+e^{b_n}\)</span>，其中 <span class="arithmatex">\(0&lt;a_n&lt;\dfrac 1{n^2}\)</span>，证明：（1）<span class="arithmatex">\(0&lt;b_n&lt;\dfrac {3a_n^2}4\)</span>；（2）<span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac{b_1}{a_1}+\dfrac{b_2}{a_2}+\cdots+\dfrac{b_n}{a_n}\)</span> 存在。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p>（1）</p>
+<p>由于当 <span class="arithmatex">\(x\neq 0\)</span> 时，<span class="arithmatex">\(e^x&gt;x+1\)</span>，故 <span class="arithmatex">\(e^{b_n}=e^{a_n}-a_n&gt;1\)</span>，故 <span class="arithmatex">\(b_n&gt;0\)</span>。</p>
+<p><span class="arithmatex">\(b_n&lt;\dfrac 3 4 a_n^2\Leftrightarrow e^{b_n}&lt;e^{\frac 3 4 a_n^2}\Leftrightarrow e^{a_n}-a_n&lt;e^{\frac 3 4 a_n^2}\)</span></p>
+<p>设 <span class="arithmatex">\(f(x)=e^x-x-e^{\frac 3 4}x^2\,(x\in[0,1])\)</span>。</p>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(f'(x)=e^x-1-\dfrac 3 2 xe^{\frac 3 4 x^2}\)</span>，<span class="arithmatex">\(f''(x)=e^x-\dfrac 3 2 e^{\frac 3 4 x^2}-\dfrac 9 4 x^2 e^{\frac 3 4 x^2}\)</span>，由于 <span class="arithmatex">\(e^x-\dfrac 3 2 e^{\frac 3 4 x^2}=e^x(1-\dfrac 3 2 e^{\frac 3 4 x^2-x}=e^x(1-\dfrac 3 2 e^{\frac 3 4 (x-\frac 2 3)^2-\frac 1 3})\leq 1-\dfrac 3 2 e^{-\frac 1 3}&lt;0\)</span>，则 <span class="arithmatex">\(f''(x)&lt;0\)</span>，<span class="arithmatex">\(f'(x)\)</span> 单调递减。而 <span class="arithmatex">\(f'(0)=0\)</span>，则 <span class="arithmatex">\(x\in(0,1]\)</span> 时 <span class="arithmatex">\(f'(x)&lt;f'(0)=0\)</span>，<span class="arithmatex">\(f(x)\)</span> 单调递减，<span class="arithmatex">\(f(x)&lt;f(0)=0\)</span>。得证。</p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(f(x)=e^x-x-e^{\frac 3 4 x^2}&lt;e^x-x-(\dfrac 3 4 x^2+1)\)</span></p>
+<p>设 <span class="arithmatex">\(g(x)=e^x-x-\dfrac 3 4 x^2-1\)</span>，则 <span class="arithmatex">\(g'(x)=e^x-1-\dfrac 3 2 x\)</span>，<span class="arithmatex">\(g''(x)=e^x-\dfrac 3 2&lt;0\)</span>，<span class="arithmatex">\(g'(x)\)</span> 单调递减，<span class="arithmatex">\(g'(x)&lt;g'(0)=0\)</span>，<span class="arithmatex">\(g(x)\)</span> 单调递减，<span class="arithmatex">\(g(x)&lt;g(0)=0\)</span>。得证。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>（2）</p>
+<p>设 <span class="arithmatex">\(c_n=\dfrac {b_1}{a_1}+\dfrac{b_2}{a_2}+\cdots+\dfrac{b_n}{a_n}\)</span>，由于 <span class="arithmatex">\(\dfrac{b_n}{a_n}&gt;0\)</span>，则 <span class="arithmatex">\(\{c_n\}\)</span> 单调递减，又 <span class="arithmatex">\(\dfrac{b_n}{a_n}&lt;\dfrac 3 4 a_n&lt;\dfrac 3 {4n^2}\)</span>，则 <span class="arithmatex">\(c_n&lt;\dfrac 3 4(1+\dfrac 1 {2^2}+\cdots+\dfrac 1 {n^2})&lt;\dfrac 3 4[1+\dfrac 1 {1\times 2}+\cdots+\dfrac 1 {(n-1)n}]&lt;\dfrac  3 2\)</span></p>
+<p>根据单调有界准则，<span class="arithmatex">\(\lim\limits_{n\to \infty}c_n\)</span> 存在，即 <span class="arithmatex">\(\lim\limits_{n\to \infty}(\dfrac{b_1}{a_1}+\dfrac{b_2}{a_2}+\cdots+\dfrac{b_n}{a_n})\)</span> 存在。</p>
+</li>
+</ul>
+</details>
+<p>已知函数 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([0,1]\)</span> 上有 <span class="arithmatex">\(2\)</span> 阶倒数，且 <span class="arithmatex">\(f''(x)&lt;0\)</span>，<span class="arithmatex">\(f(0)=f(1)=0\)</span>。易得 <span class="arithmatex">\(f'(x)\)</span> 在区间 <span class="arithmatex">\((0,1)\)</span> 内存在唯一零点 <span class="arithmatex">\(x_0\)</span>，且存在 <span class="arithmatex">\(\exists x_1\in(0,x_0),x_2\in(x_0,1)\)</span> 使得 <span class="arithmatex">\(f(x_1)=f(x_2)=\dfrac{f(x_0)}2\)</span>。证明：<span class="arithmatex">\(\int_0^1 f(x)\text dx&lt;f(x_0)(x_2-x_1)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>只需证 <span class="arithmatex">\(\int_0^{x_0}f(x)\text dx&lt;\int_{x_1}^{x_0}2f(x_1)\text dx\)</span> 且 <span class="arithmatex">\(\int_{x_0}^{x_2}f(x)\text dx&lt;\int_{x_0}^{x_2}2f(x_2)\text dx\)</span>。</p>
+<p>以证 <span class="arithmatex">\(\int_0^{x_0}f(x)\text dx&lt;\int_{x_1}^{x_0}2f(x_1)\text dx\)</span> 为例。即证 <span class="arithmatex">\(\int_0^{x_1}f(x)\text dx&lt;\int_{x_1}^{x_0}[2f(x_1)-f(x)]\text dx\)</span>。</p>
+<p>由于 <span class="arithmatex">\(f''(x)&lt;0\)</span>，故 <span class="arithmatex">\(2x_1&lt;x_0\)</span>。</p>
+<p>只需证 <span class="arithmatex">\(\int_0^{x_1}f(x)\text dx&lt;\int_{x_1}^{2x_1}[2f(x_1)-f(x)]\text dx\)</span>。注意到 <span class="arithmatex">\(f(x_1-h)&lt;2f(x_1)-f(x_1+h)\)</span>【凸函数的性质】，得证。</p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2023-2024 B 卷</summary>
+<p>已知 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,c]\)</span> 上二阶可导，且 <span class="arithmatex">\(a&lt;b&lt;c\)</span>，证明：<span class="arithmatex">\(\exists\xi\in(a,c)\)</span> 使得 <span class="arithmatex">\(\dfrac{f(a)}{(a-b)(a-c)}+\dfrac{f(b)}{(b-c)(b-a)}+\dfrac{f(c)}{(c-b)(c-a)}=\dfrac 1 2 f''(\xi)\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>过点 <span class="arithmatex">\((a,f(a)),(b,f(b)),(c,f(c))\)</span> 的二次曲线为 <span class="arithmatex">\(g(x)=\dfrac{(x-b)(x-c)}{(a-b)(a-c)}f(a)+\dfrac{(x-a)(x-c)}{(b-a)(b-c)}f(b)+\dfrac{(x-a)(x-b)}{(c-a)(c-b)}f(c)\)</span>【拉格朗日插值】。</p>
+<p>设 <span class="arithmatex">\(F(x)=f(x)-g(x)\)</span>，则 <span class="arithmatex">\(F''(x)=f''(x)-2[\dfrac{f(a)}{(a-b)(a-c)}+\dfrac{f(b)}{(b-a)(b-c)}+\dfrac{f(c)}{(c-a)(c-b)}]\)</span>。</p>
+<p><span class="arithmatex">\(F(x)\)</span> 在 <span class="arithmatex">\([a,c]\)</span> 上连续，在 <span class="arithmatex">\((a,c)\)</span> 内可导，且 <span class="arithmatex">\(F(a)=F(b)=F(c)=0\)</span>。做两次罗尔定理，<span class="arithmatex">\(\exists\xi\in(a,c)\)</span> 使得 <span class="arithmatex">\(F''(\xi)=0\)</span>，得证。</p>
+</details>
+</details>
+<details class="info" open="open">
 <summary>2023-2024</summary>
+<p>设 <span class="arithmatex">\(\int_1^{+\infty}(1-\cos\dfrac 1 {x^p})\text dx\)</span> 收敛，求 <span class="arithmatex">\(p\)</span> 的取值范围。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(1-\cos\dfrac 1 {x^p}\sim \dfrac 1{2x^{2p}}\)</span>，则 <span class="arithmatex">\(2p&gt;1\)</span>，<span class="arithmatex">\(p\in(\dfrac 1 2,+\infty)\)</span>。</p>
+</details>
 <p>设 <span class="arithmatex">\(0&lt;a_1&lt;1\)</span>，<span class="arithmatex">\(a_{n+1}=a_n(1-a_n)\,(n=1,2,3,\cdots)\)</span>。</p>
 <p>（1）证明 <span class="arithmatex">\(a_n&lt;\dfrac 1 {n+1}\,(n=2,3,4,\cdots)\)</span>；（2）证明数列 <span class="arithmatex">\(\{na_n\}\)</span> 收敛；（3）求 <span class="arithmatex">\(\lim\limits_{n\to \infty}na_n\)</span>。</p>
 <details class="note">
@@ -2619,9 +2677,9 @@
 <p><strong>法 1：</strong></p>
 <p>记 <span class="arithmatex">\(\lim\limits_{n\to \infty}na_n=a\)</span>，则 <span class="arithmatex">\(0&lt;a\leq 1\)</span>。</p>
 <p>假设 <span class="arithmatex">\(0&lt;a&lt;1\)</span>。</p>
-<p><span class="arithmatex">\((n+1)a_{n+1}=2a_2+\sum_{k=2}^na_k[1-(k+1)a_k]\)</span></p>
-<p>由于 <span class="arithmatex">\(\lim\limits{n\to \infty}[1-(n+1)a_n]=1-\lim\limits_{n\to \infty}\dfrac {n+1}n\cdot na_n=1-a&gt;0\)</span>，则 <span class="arithmatex">\(\exists N\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时 <span class="arithmatex">\(1-(n+1)a_n&gt;\dfrac {1-a}2&gt;0\)</span>，则 <span class="arithmatex">\(2a_2+\sum_{k=2}^{N-1}a_k[1-(k+1)a_k]+\sum_{k=N}^na_k\dfrac{1-a}2&lt;(n+1)a_{n+1}&lt;1\)</span>，易得 <span class="arithmatex">\(a_1+a_2+\cdots+a_n\)</span> 收敛。</p>
-<p>而 <span class="arithmatex">\(\{na_n\}\)</span> 单调递增，<span class="arithmatex">\(na_n\geq 2a_2\)</span>，<span class="arithmatex">\(a_n\geq \dfrac {2a_2}n\)</span>，又 <span class="arithmatex">\(\sum_{n=1}^{\infty}\dfrac 1 n\)</span> 发散，故 <span class="arithmatex">\(a_1+a_2+\cdots+a_n\)</span> 发散，矛盾。</p>
+<p><span class="arithmatex">\((n+1)a_{n+1}=2a_2+\sum_{k=2}^na_k[1-(k+1)a_k]&lt;1\)</span></p>
+<p>由于 <span class="arithmatex">\(\lim\limits_{k\to \infty}[1-(k+1)a_k]=1-a&gt;0\)</span>，则 <span class="arithmatex">\(\exists N\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时 <span class="arithmatex">\(1-(n+1)a_n&gt;\dfrac {1-a}2\)</span>，则 <span class="arithmatex">\(M+\sum_{k=N}^na_k\dfrac{1-a}2&lt;1\)</span>（其中 <span class="arithmatex">\(M=2a_2+\sum_{k=2}^{N-1}a_k[1-(k+1)a_k]\)</span>），可得 <span class="arithmatex">\(\sum_{k=N}^n a_k\)</span> 有界，从而 <span class="arithmatex">\(\sum_{k=1}^n a_k\)</span> 有界，又 <span class="arithmatex">\(\{\sum_{k=1}^n a_k\}\)</span> 单调递增，故 <span class="arithmatex">\(\sum_{k=1}^n a_k\)</span> 收敛。</p>
+<p>而 <span class="arithmatex">\(\{na_n\}\)</span> 单调递增，<span class="arithmatex">\(ka_k\geq 2a_2\)</span>，<span class="arithmatex">\(a_k\geq \dfrac {2a_2}k\)</span>，又 <span class="arithmatex">\(\sum_{k=1}^{n}\dfrac 1 k\)</span> 发散，故 <span class="arithmatex">\(\sum_{k=1}^n a_k\)</span> 发散，矛盾。</p>
 <p>故假设不成立，得 <span class="arithmatex">\(a=1\)</span>。</p>
 </li>
 <li>
@@ -2630,6 +2688,21 @@
 <p><span class="arithmatex">\(\{\dfrac 1 {a_n}\}\)</span> 单调递增且趋于无穷，根据 Stolz 定理，<span class="arithmatex">\(\lim\limits_{n\to \infty}\dfrac n {\frac 1 {a_n}}=\lim\limits_{n\to \infty}\dfrac{(n+1)-n}{\frac 1 {a_{n+1}}-\frac 1 {a_n}}=\lim\limits_{n\to \infty}\dfrac{a_na_{n+1}}{a_n-a_{n+1}}=\lim\limits_{n\to \infty}\dfrac{a_n(1-a_n)}{1-(1-a_n)}=\lim\limits_{n\to \infty}(1-a_n)=1\)</span></p>
 </li>
 </ul>
+</li>
+</ul>
+</details>
+<p>已知 <span class="arithmatex">\(f(x)\)</span> 在区间 <span class="arithmatex">\([0,1]\)</span> 上有二阶导数，且 <span class="arithmatex">\(f''(x)&gt;0\)</span>，<span class="arithmatex">\(f(0)=\int_0^1 f(x)\text dx=0\)</span>，证明：<span class="arithmatex">\(\int_0^1 xf(x)\text dx&gt;0\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,1)\)</span> 内存在唯一零点 <span class="arithmatex">\(x_0\)</span>。<span class="arithmatex">\(x\in(0,x_0)\)</span> 时，<span class="arithmatex">\(f(x)&lt;0\)</span>；当 <span class="arithmatex">\(x\in(x_0,1]\)</span> 时，<span class="arithmatex">\(f(x)&gt;0\)</span>。</p>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(\int_0^1 xf(x)\text dx=\int_0^{x_0}xf(x)\text dx+\int_{x_0}^1 xf(x)\text dx&gt;\int_0^{x_0}x_0f(x)\text dx+\int_{x_0}^1 x_0f(x)\text dx=x_0\int_0^1 f(x)\text dx=0\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(\int_0^1 xf(x)\text dx=\int_0^1 (x-x_0)f(x)+\int_0^1 x_0f(x)&gt;0\)</span>【<span class="arithmatex">\(\int_0^1 (x-x_0)f(x)&gt;0\)</span>，<span class="arithmatex">\(\int_0^1 x_0 f(x)=0\)</span>】</p>
 </li>
 </ul>
 </details>
@@ -2645,6 +2718,12 @@
 <details class="note">
 <summary>解答</summary>
 <p><span class="arithmatex">\(\begin{aligned}&amp;=\int_0^{\frac\pi 4}e^{\frac t 2}\sqrt{\cos t}\text dt+\int_0^{\frac\pi 4}\dfrac{e^{\frac t 2}\text d(\cos t)}{\sqrt{\cos t}}\\&amp;=\int_0^{\frac\pi 4}e^{\frac t 2}\sqrt{\cos t}\text dt+2\int_0^{\frac\pi 4}e^{\frac t 2}\text d(\sqrt{\cos t})\\&amp;=\int_0^{\frac\pi 4}e^{\frac t 2}\sqrt{\cos t}\text dt+2e^{\frac t 2}\sqrt{\cos t}\big\vert_0^{\frac\pi 4}-2\int_0^{\frac\pi 4}\sqrt{\cos t}\cdot\dfrac 1 2 e^{\frac t 2}\text dt\\&amp;=2^{\frac 3 4}{e^{-\frac\pi 8}}-2\end{aligned}\)</span></p>
+</details>
+<p>【积分第二中值定理】已知 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,2)\)</span> 上连续，<span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\((0,2)\)</span> 上单调递增且导函数连续。证明：<span class="arithmatex">\(\exists\xi\in[0,1]\)</span> 使得 <span class="arithmatex">\(\int_0^1 f(x)g(x)\text dx=g(0)\int_0^{\xi}f(x)\text dx+g(1)\int_{\xi}^1 f(x)\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(F(x)=\int_0^x f(t)\text dt\)</span>。</p>
+<p><span class="arithmatex">\(\begin{aligned}\int_0^1 f(x)g(x)\text dx&amp;=\int_0^1 g(x)\text dF(x)\\&amp;=g(x)F(x)\big\vert_0^1-\int_0^1 F(x)g'(x)\text dx\\&amp;=g(1)\int_0^1 f(x)\text dx-F(\xi)\int_0^1 g'(x)\text dx\\&amp;=g(1)\int_0^1 f(x)\text dx-[g(1)-g(0)]\int_0^{\xi}f(x)\text dx\\&amp;=g(0)\int_0^{\xi}f(x)\text dx+g(1)\int_{\xi}^1 f(x)\text dx\end{aligned}\)</span></p>
 </details>
 </details>
 <details class="info" open="open">
@@ -2674,6 +2753,25 @@
 </ul>
 <p>从而 <span class="arithmatex">\(x_3\in(x_0,x_1)\)</span>，从而 <span class="arithmatex">\(x_3\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的极小值点，这与 <span class="arithmatex">\(x_0\)</span> 为 <span class="arithmatex">\(f(x)\)</span> 的唯一极值点矛盾。故得证。</p>
 </details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,1)\)</span> 上连续，<span class="arithmatex">\(\forall x_1,x_2,x_3\in(0,1)\)</span> 且 <span class="arithmatex">\(x_1&lt;x_2&lt;x_3\)</span> 均有 <span class="arithmatex">\(\dfrac{f(x_2)-f(x_1)}{x_2-x_1}&gt;\dfrac{f(x_3)-f(x_1)}{x_3-x_1}&gt;\dfrac{f(x_3)-f(x_2)}{x_3-x_2}\)</span>，证明：<span class="arithmatex">\(a_n=(n+2)[f(\dfrac 1 2)-f(\dfrac 1 2-\dfrac 1 {n+2}))]\)</span> 收敛。</p>
+<details class="note">
+<summary>证明</summary>
+<p>取 <span class="arithmatex">\(x_1=\dfrac 1 2-\dfrac 1 {n+2}\)</span>，<span class="arithmatex">\(x_2=\dfrac 1 2-\dfrac 1 {n+3}\)</span>，<span class="arithmatex">\(x_3=\dfrac 1 2\)</span>，则 <span class="arithmatex">\(a_n=\dfrac{f(\frac 1 2)-f(\frac 1 2-\frac{1}{n+2})}{\frac 1 {n+2}}&gt;\dfrac{f(\frac 1 2)-f(\frac 1 2-\frac 1 {n+3})}{\frac 1 {n+3}}=a_{n+1}\)</span>，故 <span class="arithmatex">\(\{a_n\}\)</span> 单调递减。</p>
+<p>取 <span class="arithmatex">\(x_1=\dfrac 1 2-\dfrac 1 {n+2}\)</span>，<span class="arithmatex">\(x_2=\dfrac 1 2\)</span>，<span class="arithmatex">\(x_3=\dfrac 3 4\)</span>，则 <span class="arithmatex">\(a_n=\dfrac{f(\frac 1 2)-f(\frac 1 2-\frac 1 {n+2})}{\frac 1 {n+2}}&gt;\dfrac{f(\frac 3 4)-f(\frac 1 2)}{\frac 1 4}\)</span>，故 <span class="arithmatex">\(\{a_n\}\)</span> 有下界。</p>
+<p>根据单调有界定理，<span class="arithmatex">\(\{a_n\}\)</span> 收敛。</p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上连续且可导，当 <span class="arithmatex">\(x\in[0,1]\)</span> 时，<span class="arithmatex">\(\int_x^1 f(t)\text dt\geq \dfrac {1-x^3}2\)</span>。证明：<span class="arithmatex">\(\int_0^1 [f(x)]^2 \text dx&gt;\dfrac{5}{12}\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(F(x)=\int_x^1 f(t)\text dt\)</span></p>
+<ul>
+<li><span class="arithmatex">\(\int_0^1 f(x)\text dx\geq \int_0^1 \dfrac{1-x^3}2\text dx=\dfrac 3 8\)</span></li>
+<li><span class="arithmatex">\(\int_0^1 F(x)\text dx=xF(x)\big\vert_0^1-\int_0^1 x(-f(x))\text dx=\int_0^1 xf(x)\text dx\)</span></li>
+</ul>
+<p>则 <span class="arithmatex">\(\int_0^1 xf(x)\text dx\geq \dfrac 3 8\)</span></p>
+<p>由柯西不等式，<span class="arithmatex">\((\int_0^1 xf(x)\text dx)^2\leq \int_0^1 x^2\text dx\cdot \int_0^1 [f(x)]^2 \text dx\)</span></p>
+<p>则 <span class="arithmatex">\(\int_0^1[f(x)]^2\text dx\geq \dfrac{\frac 3 8\cdot\frac 3 8}{\frac 1 3}=\dfrac {27}{64}&gt;\dfrac 5 {12}\)</span></p>
+</details>
 </details>
 <details class="info" open="open">
 <summary>2020-2021</summary>
@@ -2688,6 +2786,12 @@
 <details class="note">
 <summary>解答</summary>
 <p><span class="arithmatex">\(\begin{aligned}&amp;=\int_0^{+\infty} \dfrac{x\text d(1+e^x)}{(1+e^x)^2}\\&amp;=\int_0^{+\infty}x\text d(-\dfrac 1 {1+e^x})\\&amp;=-\dfrac x {1+e^x}\big\vert_0^{+\infty}-\int_0^{+\infty}(-\dfrac 1 {1+e^x})\text dx\\&amp;\xlongequal{t=e^x}\int_1^{+\infty}\dfrac 1 {1+t}\cdot \dfrac 1 t\text dt\\&amp;=\ln\dfrac t{t+1}\big\vert_1^{+\infty}\\&amp;=\ln 2\end{aligned}\)</span></p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,1)\)</span> 上连续且 <span class="arithmatex">\(\forall x_1,x_2,x_3\in(0,1)\)</span> 且 <span class="arithmatex">\(x_1&lt;x_2&lt;x_3\)</span> 均有 <span class="arithmatex">\(\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\leq \dfrac{f(x_3)-f(x_2)}{x_3-x_2}\)</span>。设 <span class="arithmatex">\(a&lt;b\)</span> 且 <span class="arithmatex">\([a,b]\subset(0,1)\)</span>，证明：<span class="arithmatex">\(\exists L&gt;0\)</span> 使得 <span class="arithmatex">\(\forall t_1,t_2\in[a,b]\)</span>，有 <span class="arithmatex">\(|f(t_2)-f(t_1)|\leq L|t_2-t_1|\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p>即证 <span class="arithmatex">\(|\dfrac{f(t_2)-f(t_1)}{t_2-t_1}|&lt;L\)</span>。</p>
+<p>取 <span class="arithmatex">\(c&lt;a\)</span>，<span class="arithmatex">\(d&gt;b\)</span>，则 <span class="arithmatex">\(m=\dfrac{f(a)-f(c)}{a-c}\leq \dfrac{f(t_2)-f(t_1)}{t_2-t_1}\leq \dfrac{f(d)-f(b)}{d-b}=M\)</span>，令 <span class="arithmatex">\(L=\max\{|m|,|M|\}\)</span> 即可。</p>
 </details>
 </details>
 <details class="info" open="open">
@@ -2707,13 +2811,36 @@
 <ul>
 <li>
 <p><strong>法 1：</strong></p>
-<p><span class="arithmatex">\(\begin{aligned}I&amp;\xlongequal{t=\frac 1 x}\int_0^1\dfrac{t\text dt}{\sqrt{t^4+1}}\\&amp;=\dfrac 1 2\int_0^1 \dfrac{\text d(t^2)}{\sqrt{(t^2)^2+1}}\\&amp;\xlongequal{u=t^2}\dfrac 1 2\ln(u+\sqrt{u^2+1})\big\vert_0^1\\&amp;=\dfrac \ln(\sqrt 2+1)\end{aligned}\)</span></p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;\xlongequal{t=\frac 1 x}\int_0^1\dfrac{t\text dt}{\sqrt{t^4+1}}\\&amp;=\dfrac 1 2\int_0^1 \dfrac{\text d(t^2)}{\sqrt{(t^2)^2+1}}\\&amp;\xlongequal{u=t^2}\dfrac 1 2\ln(u+\sqrt{u^2+1})\big\vert_0^1\\&amp;=\dfrac 1 2 \ln(\sqrt 2+1)\end{aligned}\)</span></p>
 </li>
 <li>
 <p><strong>法 2：</strong></p>
 <p><span class="arithmatex">\(\begin{aligned}I&amp;=\int_1^{+\infty}\dfrac{x^3\text dx}{x^4\sqrt{1+x^4}}\\&amp;\xlongequal{t=x^4}\dfrac 1 4\int_1^{+\infty}\dfrac{\text dt}{t\sqrt{1+t}}\\&amp;\xlongequal{u=\sqrt{1+t}}\dfrac 1 4\int_{\sqrt 2}^{+\infty}\dfrac{2\text du}{u^2-1}\\&amp;=\dfrac 1 4\ln\dfrac{u-1}{u+1}\big\vert_{\sqrt 2}^{+\infty}\\&amp;=\dfrac 1 2\ln(\sqrt 2+1)\end{aligned}\)</span></p>
 </li>
 </ul>
+</details>
+<p>计算：<span class="arithmatex">\(\int_0^1\dfrac{\ln(1+2x+x^2)}{1+x^2}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;\xlongequal{x=\tan u}\int_0^{\frac\pi 4}\dfrac{2\ln(1+\tan u)}{\sec^2 u}\cdot\sec^2 u\text du\\&amp;=2\int_0^{\frac\pi 4}\ln(1+\tan u)\text du\\&amp;\xlongequal{t=\frac\pi 4-u}2\int_0^{\frac\pi 4}\ln(1+\tan(\dfrac\pi 4-t))\text dt\\&amp;=2\int_0^{\frac\pi 4}\ln(1+\dfrac{1-\tan t}{1+\tan t})\text dt\\&amp;=2\int_0^{\frac\pi 4}\ln\dfrac 2 {1+\tan t}\text dt\\&amp;=\dfrac\pi 2\ln 2-I\end{aligned}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I=\dfrac\pi 4\ln 2\)</span></p>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p><span class="arithmatex">\(\begin{aligned}I&amp;=2\int_0^1\dfrac{\ln(1+x)}{1+x^2}\text dx\\&amp;\xlongequal{x=\frac{1-u}{1+u}}2\int_1^0\dfrac{\ln(1+\frac{1-u}{1+u})}{1+\frac{(1-u)^2}{(1+u)^2}}[-\dfrac{2}{(1+u)^2}]\text du\\&amp;=2\int_0^1\dfrac{\ln 2-\ln(1+u)}{1+u^2}\text du\\&amp;=\dfrac\pi 2\ln 2-I\end{aligned}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow I=\dfrac\pi 4\ln 2\)</span></p>
+</li>
+</ul>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((-1,2)\)</span> 有连续的导函数，且满足 <span class="arithmatex">\(f(0)=0\)</span>，<span class="arithmatex">\(f(1)=1\)</span>，证明：<span class="arithmatex">\(\int_0^1|f(x)-f'(x)|\text dx\geq \dfrac 1 e\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\([e^{-x}f(x)]'=e^{-x}[f'(x)-f(x)]\)</span></p>
+<p><span class="arithmatex">\(\int_0^1 e^{-x}[f'(x)-f(x)]\text dx=(e^{-x}f(x))\big\vert_0^1=\dfrac 1 e\)</span></p>
+<p>则 <span class="arithmatex">\(\dfrac 1 e=|\int_0^1 e^{-x}(f'(x)-f(x))\text dx|\leq \int_0^1 e^{-x}|f'(x)-f(x)|\text dx\leq \int_0^1 |f'(x)-f(x)|\text dx\)</span></p>
 </details>
 </details>
 <details class="info" open="open">
@@ -2745,6 +2872,30 @@
 <p><span class="arithmatex">\(\lim\limits_{x\to 0}\dfrac{x^2+y(x)}{x^2}=2019\)</span></p>
 <p><span class="arithmatex">\(y(x)=y(0)+y'(0)x+\dfrac{y''(0)}2x^2+o(x^2)\)</span></p>
 <p>则 <span class="arithmatex">\(y(0)=0\)</span>，<span class="arithmatex">\(y'(0)=0\)</span>，<span class="arithmatex">\(y''(0)=4036\)</span></p>
+</details>
+<p>计算：<span class="arithmatex">\(\int\dfrac{x\ln x}{(1+x^2)^2}\text dx\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\begin{aligned}&amp;=\dfrac 1 2\int\dfrac{\ln x}{(1+x^2)^2}\text d(1+x^2)\\&amp;=-\dfrac 1 2\int\ln x\text d(\dfrac 1 {1+x^2})\\&amp;=-\dfrac 1 2[\dfrac{\ln x}{1+x^2}-\int \dfrac 1 {1+x^2}\cdot\dfrac 1 x\text dx]\\&amp;=-\dfrac 1 2[\dfrac{\ln x}{1+x^2}-\ln x+\dfrac 1 2 \ln (1+x^2)]+C\\&amp;=-\dfrac{\ln x}{2(1+x^2)}+\dfrac 1 2\ln\dfrac x {\sqrt{1+x^2}}+C\end{aligned}\)</span></p>
+</details>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\((0,1)\)</span> 有定义，且 <span class="arithmatex">\(\forall x_1,x_2,x_3\in(0,1)\)</span> 且 <span class="arithmatex">\(x_1&lt;x_2&lt;x_3\)</span> 均有 <span class="arithmatex">\(\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\leq \dfrac{f(x_3)-f(x_1)}{x_3-x_1}\leq \dfrac{f(x_3)-f(x_2)}{x_3-x_2}\)</span>。任取 <span class="arithmatex">\(x_0\in(0,1)\)</span>，证明 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处右连续。</p>
+<details class="note">
+<summary>解答</summary>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>只需证 <span class="arithmatex">\(\lim\limits_{x\to x_0^+}\dfrac{f(x)-f(x_0)}{x-x_0}\)</span> 存在，即有 <span class="arithmatex">\(\lim\limits_{x\to x_0^+}f(x)-f(x_0)=0\)</span>。</p>
+</details>
+<p>取 <span class="arithmatex">\(a\in(0,x_0)\)</span>，<span class="arithmatex">\(b\in(x_0,1)\)</span></p>
+<p>则 <span class="arithmatex">\(\dfrac{f(x_0)-f(a)}{x_0-a}\leq \dfrac{f(x)-f(x_0)}{x-x_0}\leq \dfrac{f(b)-f(x_0)}{b-x_0}\)</span></p>
+<p><span class="arithmatex">\(0=\lim\limits_{x\to x_0^+}\dfrac{f(x_0)-f(a)}{x_0-a}(x-x_0)\leq \lim\limits_{x\to x_0^+}f(x)-f(x_0)\leq \lim\limits_{x\to x_0^+}\dfrac{f(b)-f(x_0)}{b-x_0}(x-x_0)=0\)</span></p>
+<p>故 <span class="arithmatex">\(\lim\limits_{x\to x_0^+}f(x)=f(x_0)\)</span>，<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 处右连续。</p>
+</details>
+<p>【Young 不等式】设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,+\infty)\)</span> 上严格单调递增、连续，<span class="arithmatex">\(f(0)=0\)</span>。对 <span class="arithmatex">\(a&gt;0\)</span>，<span class="arithmatex">\(b&gt;0\)</span>，证明：<span class="arithmatex">\(\int_0^af(x)\text dx+\int_0^b f^{-1}(y)\text dy\geq ab\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(F(x)=\int_0^x f(t)\text dt+\int_0^b f^{-1}(t)\text dt-xb\)</span>，则 <span class="arithmatex">\(F'(x)=f(x)-b\)</span>。</p>
+<p><span class="arithmatex">\(x\in(0,f^{-1}(b))\)</span> 时，<span class="arithmatex">\(F'(x)&lt;f(f^{-1}(b))-b=0\)</span>，<span class="arithmatex">\(F(x)\)</span> 单调递减；<span class="arithmatex">\(x\in(f^{-1}(b),+\infty)\)</span> 时，<span class="arithmatex">\(F'(x)&gt;f(f^{-1}(b))-b=0\)</span>，<span class="arithmatex">\(F(x)\)</span> 单调递增。</p>
+<p>则 <span class="arithmatex">\(F(x)_{\min}=F(f^{-1}(b))=\int_0^{f^{-1}(b)}f(t)\text dt+\int_0^{b}f^{-1}(t)\text dt-f^{-1}(b)b\)</span>，又 <span class="arithmatex">\(\int_0^{f^{-1}(b)}f(t)\text dt\xlongequal[t=f(u)]{u=f^{-1}(t)}\int_0^{f^{-1}(b)}u\text df(u)=uf(u)\big\vert_0^{f^{-1}(b)}-\int_0^{f^{-1}(b)}f(u)\text du\)</span>，故 <span class="arithmatex">\(F(x)\geq 0\)</span>。</p>
 </details>
 </details>
 <details class="info" open="open">

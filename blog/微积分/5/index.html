@@ -2712,7 +2712,7 @@
 
   <h1>第五章 定积分及其应用</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-03'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-03T06:45:29.173872+00:00'>2026-01-03</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-03'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-03T06:45:29.173872+00:00'>2026-01-03</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-04'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-04T10:57:10.082710+00:00'>2026-01-04</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-04'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-04T10:57:10.082710+00:00'>2026-01-04</time></span></div></div></div>
 <h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">定积分概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2820,7 +2820,7 @@
 </details>
 </li>
 <li>
-<p>定积分中值定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)\text dx=f(\xi)(b-a)\)</span>。</p>
+<p>积分中值定理：设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，则 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)\text dx=f(\xi)(b-a)\)</span>。</p>
 <p>称 <span class="arithmatex">\(\overline f=\dfrac{\int_a^b f(x)\text dx}{b-a}\)</span> 为函数 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上的平均值。</p>
 <details class="note">
 <summary>证明</summary>
@@ -2863,7 +2863,7 @@
 <p>由介值定理，<span class="arithmatex">\(\dfrac{f(0)+f(2)}2\)</span> 被 <span class="arithmatex">\([0,2]\)</span> 种某点的函数值取到。由积分中值定理，也会被 <span class="arithmatex">\((2,3)\)</span> 内某点的函数中取到。</p>
 </details>
 <p>根据连续函数的介值定理，<span class="arithmatex">\(\exists x_1\in[0,2]\)</span> 使得 <span class="arithmatex">\(f(x_1)=\dfrac{f(0)+f(2)}{2}\)</span>。</p>
-<p>根据定积分中值定理，<span class="arithmatex">\(\exists x_2\in(2,3)\)</span> 使得 <span class="arithmatex">\(\int_2^3 f(x)\text dx=f(x_2)\)</span>。</p>
+<p>根据积分中值定理，<span class="arithmatex">\(\exists x_2\in(2,3)\)</span> 使得 <span class="arithmatex">\(\int_2^3 f(x)\text dx=f(x_2)\)</span>。</p>
 <p>则 <span class="arithmatex">\(f(x_1)=f(x_2)\)</span>。又 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([x_1,x_2]\)</span> 上连续，在 <span class="arithmatex">\((x_1,x_2)\)</span> 内可导，根据罗尔定理，<span class="arithmatex">\(\exists\xi\in(x_1,x_2)\subset(0,3)\)</span> 使得 <span class="arithmatex">\(f'(\xi)=0\)</span>。</p>
 <details class="tip" open="open">
 <summary>Tip</summary>
@@ -2873,7 +2873,7 @@
 </details>
 </li>
 <li>
-<p>推广的定积分中值定理</p>
+<p>推广的积分中值定理</p>
 <p>设 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上 <strong>不变号</strong>，则 <span class="arithmatex">\(\exists\xi\in[a,b]\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)g(x)\text dx=f(\xi)\int_a^b g(x)\text dx\)</span>。</p>
 <details class="note">
 <summary>证明</summary>
@@ -3176,7 +3176,7 @@
 <p>而 <span class="arithmatex">\(\sin(u+\dfrac \pi 4)\)</span> 可以换元成 <span class="arithmatex">\(\cos t\)</span>。两个 <span class="arithmatex">\(\cos\)</span> 的积分项可以抵消。</p>
 </details>
 <p><span class="arithmatex">\(\int_0^{\frac\pi 4}\ln(1+\tan u)\text du=\int_0^{\frac\pi 4}\ln(\sin u+\cos u)\text du-\int_0^{\frac\pi 4}\ln\cos u\text du\)</span></p>
-<p>而 <span class="arithmatex">\(\int_0^{\frac \pi 4}\ln(\sin u+\cos u)\text du=\int_0^{\frac\pi 4}\ln[\sqrt 2\sin (u+\dfrac\pi 4)\text du]=\dfrac\pi 8\ln 2+\int_{\frac\pi 4}^{\frac\pi 2}\ln\sin t\text dt\xlongequal{t=\frac\pi 2-u}\dfrac\pi 8\ln 2-\int_{\frac\pi 4}^0\ln\cos u\text du=\dfrac\pi 8\ln 2+\int_0^{\frac\pi 4}\ln\cos u\text du\)</span></p>
+<p>而 <span class="arithmatex">\(\int_0^{\frac \pi 4}\ln(\sin u+\cos u)\text du=\int_0^{\frac\pi 4}\ln[\sqrt 2\sin (u+\dfrac\pi 4)]\text du=\dfrac\pi 8\ln 2+\int_{\frac\pi 4}^{\frac\pi 2}\ln\sin t\text dt\xlongequal{t=\frac\pi 2-u}\dfrac\pi 8\ln 2-\int_{\frac\pi 4}^0\ln\cos u\text du=\dfrac\pi 8\ln 2+\int_0^{\frac\pi 4}\ln\cos u\text du\)</span></p>
 <p>因此 <span class="arithmatex">\(\int_0^1 \dfrac{\ln(1+x)}{1+x^2}\text dx=\dfrac\pi 8\ln 2\)</span>。</p>
 </li>
 <li>
@@ -3706,19 +3706,20 @@
 </li>
 </ul>
 </details>
-<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上有一阶连续导数，且 <span class="arithmatex">\(f(0)=0\)</span>，<span class="arithmatex">\(f(1)=1\)</span>，证明：<span class="arithmatex">\(\int_0^1|f(x)-f'(x)|\text dx\geq \dfrac 1 3\)</span>。</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上有一阶连续导数，且 <span class="arithmatex">\(f(0)=0\)</span>，<span class="arithmatex">\(f(1)=1\)</span>，证明：<span class="arithmatex">\(\int_0^1|f(x)-f'(x)|\text dx\geq \dfrac 1 e\)</span>。</p>
 <details class="note">
 <summary>解答</summary>
 <ul>
 <li>
 <p><strong>法 1：</strong></p>
-<p><span class="arithmatex">\(\int_0^1(e^{-x}f(x))'\text dx=\int_0^1 e^{-x}(f(x)-f'(x))\text dx=(e^{-x}f(x))\vert_0^1=\dfrac 1 e\)</span></p>
-<p>故 <span class="arithmatex">\(\dfrac 1 e=|\int_0^1 e^{-x}(f(x)-f'(x))\text dx|\leq \int_0^1 e^{-x}|f(x)-f'(x)|\text dx\leq \int_0^1|f(x)-f'(x)|\text dx\)</span></p>
+<p><span class="arithmatex">\([e^{-x}f(x)]'=e^{-x}[f'(x)-f(x)]\)</span></p>
+<p><span class="arithmatex">\(\int_0^1 e^{-x}[f'(x)-f(x)]\text dx=(e^{-x}f(x))\big\vert_0^1=\dfrac 1 e\)</span></p>
+<p>则 <span class="arithmatex">\(\dfrac 1 e=|\int_0^1 e^{-x}(f'(x)-f(x))\text dx|\leq \int_0^1 e^{-x}|f'(x)-f(x)|\text dx\leq \int_0^1 |f'(x)-f(x)|\text dx\)</span></p>
 </li>
 <li>
 <p><strong>法 2：</strong></p>
-<p><span class="arithmatex">\(\int_0^1 e^{-x}f'(x)\text dx=e^{-x}f(x)\vert_0^1+\int_0^1 e^{-x}f(x)\text dx=\dfrac 1 e+\int_0^1 e^{-x}f(x)\text dx\)</span></p>
-<p>故 <span class="arithmatex">\(\dfrac 1 e=\int_0^1 e^{-x}[f'(x)-f(x)]\text dx\leq \int_0^1 e^{-x}{f'(x)-f(x)|}\text dx\leq \int_0^1 |f'(x)-f(x)|\text dx\)</span></p>
+<p><span class="arithmatex">\(\int_0^1 e^{-x}f'(x)\text dx=e^{-x}f(x)\big\vert_0^1+\int_0^1 e^{-x}f(x)\text dx=\dfrac 1 e+\int_0^1 e^{-x}f(x)\text dx\)</span></p>
+<p>故 <span class="arithmatex">\(\dfrac 1 e=\int_0^1 e^{-x}[f'(x)-f(x)]\text dx\leq \int_0^1 e^{-x}{|f'(x)-f(x)|}\text dx\leq \int_0^1 |f'(x)-f(x)|\text dx\)</span></p>
 </li>
 </ul>
 </details>
@@ -3881,8 +3882,8 @@
 <ul>
 <li>
 <p><strong>法 1：</strong></p>
-<p><span class="arithmatex">\(\int_0^1\dfrac{\cos x}{\sqrt{1-x^2}}\text dx\xlongequal{x=\sin u}=\int_0^{\frac\pi 2}\dfrac{\cos(\sin u)}{\cos u}\cdot \cos u\text du=\int_0^{\frac\pi 2}\cos(\sin u)\text du\)</span></p>
-<p><span class="arithmatex">\(\int_0^1\dfrac{\sin x}{\sqrt{1-x^2}}\text dx\xlongequal{x=\cos u}=\int_{\frac\pi 2}^0\dfrac{\sin(\cos u)}{\sin u}\cdot(-\sin u)\text du=\int_0^{\frac\pi 2}\sin(\cos u)\text du\)</span></p>
+<p><span class="arithmatex">\(\int_0^1\dfrac{\cos x}{\sqrt{1-x^2}}\text dx\xlongequal{x=\sin u}\int_0^{\frac\pi 2}\dfrac{\cos(\sin u)}{\cos u}\cdot \cos u\text du=\int_0^{\frac\pi 2}\cos(\sin u)\text du\)</span></p>
+<p><span class="arithmatex">\(\int_0^1\dfrac{\sin x}{\sqrt{1-x^2}}\text dx\xlongequal{x=\cos u}\int_{\frac\pi 2}^0\dfrac{\sin(\cos u)}{\sin u}\cdot(-\sin u)\text du=\int_0^{\frac\pi 2}\sin(\cos u)\text du\)</span></p>
 <p>当 <span class="arithmatex">\(0\leq x\leq\dfrac\pi 2\)</span> 时，<span class="arithmatex">\(\cos(\sin u)-\sin(\cos u)=\sin(\dfrac\pi 2-\sin u)-\sin(\cos u)&gt;0\)</span>【<span class="arithmatex">\(\sin x+\cos x\leq \sqrt 2&lt;\dfrac\pi 2\)</span>，则 <span class="arithmatex">\(\dfrac\pi 2-\sin u&gt;\cos u\)</span>】</p>
 <p>故 <span class="arithmatex">\(\int_0^1\dfrac{\cos x}{\sqrt{1-x^2}}\text dx&gt;\int_0^1\dfrac{\sin x}{\sqrt{1-x^2}}\text dx\)</span></p>
 </li>

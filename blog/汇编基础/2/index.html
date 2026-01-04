@@ -1939,10 +1939,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="堆栈">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1950,11 +1949,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2740,10 +2734,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="堆栈">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2751,11 +2744,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2778,7 +2766,7 @@
 
   <h1>汇编入门</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-03'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-03T06:45:29.176872+00:00'>2026-01-03</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-03'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-03T06:45:29.176872+00:00'>2026-01-03</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-04'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-04T10:57:10.085710+00:00'>2026-01-04</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-04'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-04T10:57:10.085710+00:00'>2026-01-04</time></span></div></div></div>
 <p>模板：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">.386</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">data</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">use16</span>
@@ -3318,44 +3306,47 @@
 <details class="info">
 <summary>rep movsb</summary>
 <p>假定要把地址 1000h:0 处长度为 100h 的字节复制到目标地址 2000h:0</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="no">h</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="no">h</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nf">mov</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nf">mov</span><span class="w"> </span><span class="no">di</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="no">h</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nf">cld</span><span class="w"> </span><span class="c1">; DF=0 正方向</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="na">rep</span><span class="w"> </span><span class="nf">movsb</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1">; 上面这条指令的执行过程如下:</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nl">again:</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="no">ds</span><span class="p">:[</span><span class="no">si</span><span class="p">]</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">di</span><span class="p">],</span><span class="w"> </span><span class="no">al</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="nf">inc</span><span class="w"> </span><span class="no">si</span><span class="w"> </span><span class="c1">; SI++</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="nf">inc</span><span class="w"> </span><span class="no">di</span><span class="w"> </span><span class="c1">; DI++</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="nf">dec</span><span class="w"> </span><span class="no">cx</span><span class="w"> </span><span class="c1">; CX--</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="nf">jnz</span><span class="w"> </span><span class="no">again</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="no">h</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="no">h</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nf">mov</span><span class="w"> </span><span class="no">si</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="no">h-1</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nf">mov</span><span class="w"> </span><span class="no">di</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="no">h-1</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="no">h</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nf">std</span><span class="w"> </span><span class="c1">; DF=1 反方向</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="na">rep</span><span class="w"> </span><span class="nf">movsb</span><span class="c1">; </span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1">; 上面这条指令的执行过程如下:</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nl">again:</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="no">ds</span><span class="p">:[</span><span class="no">si</span><span class="p">]</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">di</span><span class="p">],</span><span class="w"> </span><span class="no">al</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="nf">dec</span><span class="w"> </span><span class="no">si</span><span class="w"> </span><span class="c1">; SI--</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="nf">dec</span><span class="w"> </span><span class="no">di</span><span class="w"> </span><span class="c1">; DI--</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="nf">dec</span><span class="w"> </span><span class="no">cx</span><span class="w"> </span><span class="c1">; CX--</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="nf">jnz</span><span class="w"> </span><span class="no">again</span>
-</code></pre></div>
-<p>源 / 目标地址重叠时，需要注意复制的方向，避免数据覆盖</p>
+<p>```asm
+mov ax, 1000h</p>
 </details>
+<p>mov ds, ax
+  mov ax, 2000h
+  mov es, ax
+  mov si, 0
+  mov di, 0
+  mov cx, 100h
+  cld ; DF=0 正方向
+  rep movsb
+  ; 上面这条指令的执行过程如下:
+  again:
+  mov al, ds:[si]
+  mov es:[di], al
+  inc si ; SI++
+  inc di ; DI++
+  dec cx ; CX--
+    jnz again
+    ```</p>
+<div class="highlight"><pre><span></span><code>```asm
+mov ax, 1000h
+</code></pre></div>
+<p>mov ds, ax
+  mov ax, 2000h
+  mov es, ax
+  mov si, 100h-1
+  mov di, 100h-1
+  mov cx, 100h
+  std ; DF=1 反方向
+  rep movsb; 
+  ; 上面这条指令的执行过程如下:
+  again:
+  mov al, ds:[si]
+  mov es:[di], al
+  dec si ; SI--
+  dec di ; DI--
+  dec cx ; CX--
+  jnz again
+  ```</p>
+<p>源 / 目标地址重叠时，需要注意复制的方向，避免数据覆盖</p>
 </li>
 <li>
 <p>IF：IF 用于禁止或允许硬件中断。当 IF=0 时禁止硬件中断；当 IF=1 时允许硬件中断。</p>
@@ -3441,22 +3432,22 @@
 <p>文本模式下，显卡内存的段地址固定为 0B800h，整个屏幕的显示内容都存储在该段内。</p>
 <p>每个字符占 2 字节：低地址字节存储字符的 ASCII 码（8 位），高地址字节存储字符的颜色属性（8 位，其中低 4 位为前景色，高 4 位为背景色。4 位表示 3 位 RGB 编码和 1 位亮度位）。</p>
 <p>25 行 × 80 列，屏幕上的每个位置对应的显存偏移地址计算公式为：偏移地址 = (行号 × 80 + 列号) × 2。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nl">main:</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">B800h</span><span class="c1">; B800h是显卡内存的段地址</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">ds</span><span class="p">:[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span><span class="c1">; 待输出字符的ASCII码</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">ds</span><span class="p">:[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="mi">17</span><span class="no">h</span><span class="c1">; 待输出字符的颜色</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">                           </span><span class="c1">; 高4位是背景色, 低4位是前景色</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">                           </span><span class="c1">; 1=蓝色背景, 7=白色前景</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">                           </span><span class="c1">; 1=0001      7=0111</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">                           </span><span class="c1">;    RGB         RGB</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nl">main:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">B800h</span><span class="c1">; B800h是显卡内存的段地址</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">ds</span><span class="p">:[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span><span class="c1">; 待输出字符的ASCII码</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">ds</span><span class="p">:[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="mi">17</span><span class="no">h</span><span class="c1">; 待输出字符的颜色</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">                           </span><span class="c1">; 高4位是背景色, 低4位是前景色</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">                           </span><span class="c1">; 1=蓝色背景, 7=白色前景</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">                           </span><span class="c1">; 1=0001      7=0111</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">                           </span><span class="c1">;    RGB         RGB</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
 </code></pre></div>
 </li>
 </ul>
@@ -3510,10 +3501,10 @@
 </li>
 <li>
 <p>定义堆栈段：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nf">stk</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">stack</span><span class="w">  </span><span class="c1">; 必须加stack关键字，标识为堆栈段</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nf">db</span><span class="w"> </span><span class="mi">100</span><span class="no">h</span><span class="w"> </span><span class="no">dup</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w">     </span><span class="c1">; 堆栈大小=100h字节（256字节），无名数组。</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">                   </span><span class="c1">; 此时ss指向stk堆栈段的段基址，sp=堆栈段大小=100h</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nf">stk</span><span class="w"> </span><span class="no">ends</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">stk</span><span class="w"> </span><span class="no">segment</span><span class="w"> </span><span class="no">stack</span><span class="w">  </span><span class="c1">; 必须加stack关键字，标识为堆栈段</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nf">db</span><span class="w"> </span><span class="mi">100</span><span class="no">h</span><span class="w"> </span><span class="no">dup</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w">     </span><span class="c1">; 堆栈大小=100h字节（256字节），无名数组。</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">                   </span><span class="c1">; 此时ss指向stk堆栈段的段基址，sp=堆栈段大小=100h</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nf">stk</span><span class="w"> </span><span class="no">ends</span>
 </code></pre></div>
 <p>若源程序未定义 stack 段，系统会默认，ss = 程序首段的段地址（通常是代码段 cs），sp = 0（栈顶指向段起始位置）。</p>
 </li>
@@ -3544,105 +3535,106 @@
 <p>C 语言调用约定（__cdecl）：从右往左传参</p>
 <details class="note">
 <summary>获取参数 示例</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">; 被调函数func内部访问参数：</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nl">func:</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">bp</span><span class="w">            </span><span class="c1">; 保存bp</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="no">sp</span><span class="w">         </span><span class="c1">; 用bp作为基址访问参数</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="c1">; [bp+0] = 保存的bp值</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="c1">; [bp+2] = 返回地址IP</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="c1">; [bp+4] = 第一个参数(ax)</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="c1">; [bp+6] = 第二个参数(bx)</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="c1">; [bp+8] = 第三个参数(cx)</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">bp</span><span class="err">+</span><span class="mi">4</span><span class="p">]</span><span class="w">     </span><span class="c1">; 获取第一个参数</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">bp</span><span class="err">+</span><span class="mi">6</span><span class="p">]</span><span class="w">     </span><span class="c1">; 获取第二个参数</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">bp</span><span class="err">+</span><span class="mi">8</span><span class="p">]</span><span class="w">     </span><span class="c1">; 获取第三个参数</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="nf">pop</span><span class="w"> </span><span class="no">bp</span><span class="w">             </span><span class="c1">; 恢复bp</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span><span class="nf">ret</span><span class="w">                </span><span class="c1">; 返回，参数由调用者清理</span>
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="nl">main:</span>
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">    </span><span class="c1">; 调用者准备参数（从右到左压栈）</span>
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">cx</span><span class="w">       </span><span class="c1">; 第三个参数（最右边）</span>
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">bx</span><span class="w">       </span><span class="c1">; 第二个参数</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">ax</span><span class="w">       </span><span class="c1">; 第一个参数（最左边）</span>
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">    </span><span class="nf">call</span><span class="w"> </span><span class="no">func</span><span class="w">      </span><span class="c1">; 调用函数</span>
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">sp</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="w">      </span><span class="c1">; 调用者清理堆栈（3个参数×2字节=6字节）</span>
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">    </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">; 被调函数func内部访问参数：</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nl">func:</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">bp</span><span class="w">            </span><span class="c1">; 保存bp</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="no">sp</span><span class="w">         </span><span class="c1">; 用bp作为基址访问参数</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="c1">; [bp+0] = 保存的bp值</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="c1">; [bp+2] = 返回地址IP</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="c1">; [bp+4] = 第一个参数(ax)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="c1">; [bp+6] = 第二个参数(bx)</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="c1">; [bp+8] = 第三个参数(cx)</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">bp</span><span class="err">+</span><span class="mi">4</span><span class="p">]</span><span class="w">     </span><span class="c1">; 获取第一个参数</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">bp</span><span class="err">+</span><span class="mi">6</span><span class="p">]</span><span class="w">     </span><span class="c1">; 获取第二个参数</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">cx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">bp</span><span class="err">+</span><span class="mi">8</span><span class="p">]</span><span class="w">     </span><span class="c1">; 获取第三个参数</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="nf">pop</span><span class="w"> </span><span class="no">bp</span><span class="w">             </span><span class="c1">; 恢复bp</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">    </span><span class="nf">ret</span><span class="w">                </span><span class="c1">; 返回，参数由调用者清理</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="nl">main:</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="c1">; 调用者准备参数（从右到左压栈）</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">cx</span><span class="w">       </span><span class="c1">; 第三个参数（最右边）</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">bx</span><span class="w">       </span><span class="c1">; 第二个参数</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">ax</span><span class="w">       </span><span class="c1">; 第一个参数（最左边）</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">    </span><span class="nf">call</span><span class="w"> </span><span class="no">func</span><span class="w">      </span><span class="c1">; 调用函数</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">sp</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="w">      </span><span class="c1">; 调用者清理堆栈（3个参数×2字节=6字节）</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">    </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
 </code></pre></div>
 </details>
 <details class="note">
 <summary>局部变量的使用 示例</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nl">func:</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">bp</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="no">sp</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="nf">sub</span><span class="w"> </span><span class="no">sp</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w">          </span><span class="c1">; 为2个局部变量分配空间（每个2字节）</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="c1">; [bp-4] = 局部变量2</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="c1">; [bp-2] = 局部变量1</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="c1">; [bp+0] = 保存的bp</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="c1">; [bp+2] = 返回地址</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="c1">; [bp+4] = 第一个参数</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="c1">; 访问局部变量</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">word</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">bp-2</span><span class="p">],</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="c1">; 初始化局部变量1</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">word</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">bp-4</span><span class="p">],</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="c1">; 初始化局部变量2</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span><span class="c1">; 访问参数</span>
-<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">bp</span><span class="err">+</span><span class="mi">4</span><span class="p">]</span>
-<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>
-<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">    </span><span class="c1">; ... 函数体 ...</span>
-<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
-<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">sp</span><span class="p">,</span><span class="w"> </span><span class="no">bp</span><span class="w">         </span><span class="c1">; 清理局部变量（恢复sp到bp）</span>
-<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">    </span><span class="nf">pop</span><span class="w"> </span><span class="no">bp</span>
-<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">    </span><span class="nf">ret</span><span class="w">                </span><span class="c1">; 返回</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nl">func:</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">bp</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="no">sp</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nf">sub</span><span class="w"> </span><span class="no">sp</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w">          </span><span class="c1">; 为2个局部变量分配空间（每个2字节）</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="c1">; [bp-4] = 局部变量2</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="c1">; [bp-2] = 局部变量1</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="c1">; [bp+0] = 保存的bp</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="c1">; [bp+2] = 返回地址</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="c1">; [bp+4] = 第一个参数</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="c1">; 访问局部变量</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">word</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">bp-2</span><span class="p">],</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="c1">; 初始化局部变量1</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">word</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">bp-4</span><span class="p">],</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="c1">; 初始化局部变量2</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="c1">; 访问参数</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">bp</span><span class="err">+</span><span class="mi">4</span><span class="p">]</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">    </span><span class="c1">; ... 函数体 ...</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">sp</span><span class="p">,</span><span class="w"> </span><span class="no">bp</span><span class="w">         </span><span class="c1">; 清理局部变量（恢复sp到bp）</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="nf">pop</span><span class="w"> </span><span class="no">bp</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="nf">ret</span><span class="w">                </span><span class="c1">; 返回</span>
 </code></pre></div>
 </details>
 <details class="note">
 <summary>递归 示例</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1">; 每次都 n=[bp+4], ret 时 ax=f(n)</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nl">f:</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">bp</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">bp</span><span class="p">,</span><span class="w"> </span><span class="no">sp</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="c1">; [bp+0] = 保存的上层bp值</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="c1">; [bp+2] = 返回地址IP</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="c1">; [bp+4] = 参数n（调用时压入的）</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">bp</span><span class="err">+</span><span class="mi">4</span><span class="p">]</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="nf">cmp</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="nf">je</span><span class="w"> </span><span class="no">f_done</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">        </span><span class="nf">sub</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">        </span><span class="nf">push</span><span class="w"> </span><span class="no">ax</span><span class="w"> </span><span class="c1">; 压入参数 (n-1)</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span><span class="nf">call</span><span class="w"> </span><span class="no">f</span><span class="w">  </span><span class="c1">; 递归调用 f(n-1)，返回后 ax = f(n-1)</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">        </span><span class="nf">add</span><span class="w"> </span><span class="no">sp</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="c1">; 清理参数 (n-1)</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">        </span><span class="nf">add</span><span class="w"> </span><span class="no">ax</span><span class="p">,[</span><span class="no">bp</span><span class="err">+</span><span class="mi">4</span><span class="p">]</span><span class="w">   </span><span class="c1">; ax = f(n-1) + n = f(n)</span>
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">    </span><span class="nl">f_done:</span>
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">        </span><span class="nf">pop</span><span class="w"> </span><span class="no">bp</span>
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">        </span><span class="nf">ret</span>
-<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="nl">main:</span>
-<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span>
-<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">    </span><span class="nf">push</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">    </span><span class="nf">call</span><span class="w"> </span><span class="no">f</span>
-<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">    </span><span class="nf">add</span><span class="w"> </span><span class="no">sp</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">    </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
-<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">    </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<p>```asm
+code segment
+assume cs:code
+; 每次都 n=[bp+4], ret 时 ax=f(n)
+f:
+    push bp
+    mov bp, sp</p>
+<div class="highlight"><pre><span></span><code>; [bp+0] = 保存的上层bp值
+; [bp+2] = 返回地址IP
+; [bp+4] = 参数n（调用时压入的）
+
+mov ax, [bp+4]
+cmp ax, 1
+je f_done
+    sub ax, 1
+    push ax ; 压入参数 (n-1)
+    call f  ; 递归调用 f(n-1)，返回后 ax = f(n-1)
+    add sp, 2   ; 清理参数 (n-1)
+    add ax,[bp+4]   ; ax = f(n-1) + n = f(n)
+f_done:
+    pop bp
+    ret
 </code></pre></div>
+<p>main:
+    mov ax, 3
+    push ax
+    call f
+    add sp, 2
+    mov ah, 4Ch
+    int 21h
+code ends
+end main</p>
 </details>
+<p>```</p>
 </li>
 </ul>
-<h3 id="_7">中断程序设计<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h2 id="_7">中断程序设计<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>中断：CPU 暂停当前程序，执行预设的中断处理函数，完成后返回原程序。</p>
@@ -3654,97 +3646,97 @@
 </ul>
 <details class="example">
 <summary>示例</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">(1)</span><span class="w"> </span><span class="nf">int</span><span class="w"> </span><span class="no">n指令的执行过程</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="err">①</span><span class="nf">pushf</span><span class="w"> </span><span class="c1">; pushf表示push fl</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="err">②</span><span class="nf">push</span><span class="w"> </span><span class="no">cs</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="err">③</span><span class="nf">push</span><span class="w"> </span><span class="err">下条指令的偏移地址</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="err">④</span><span class="nf">jmp</span><span class="w"> </span><span class="no">dword</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="mi">0</span><span class="p">:[</span><span class="no">n</span><span class="p">*</span><span class="mi">4</span><span class="p">]</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="err">其中</span><span class="nf">dword</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="mi">0</span><span class="p">:[</span><span class="no">n</span><span class="p">*</span><span class="mi">4</span><span class="p">]</span><span class="err">称为</span><span class="no">int</span><span class="w"> </span><span class="no">n的中断向量</span><span class="p">,</span><span class="w"> </span><span class="err">中断向量实质上是</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="err">该中断对应的中断函数的地址</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="err">设</span><span class="nf">n</span><span class="err">=</span><span class="mi">21</span><span class="no">h</span><span class="p">,</span><span class="w"> </span><span class="err">且有以下内存布局</span><span class="p">:</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="err">0:84</span><span class="nf">h</span><span class="w"> </span><span class="mi">78</span><span class="no">h</span><span class="w"> </span><span class="c1">;\ </span>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="err">0:85</span><span class="nf">h</span><span class="w"> </span><span class="mi">56</span><span class="no">h</span><span class="w"> </span><span class="c1">; \ 1234h:5678h这个远指针存放到内存中时是按照</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="err">0:86</span><span class="nf">h</span><span class="w"> </span><span class="mi">34</span><span class="no">h</span><span class="w"> </span><span class="c1">; / 一个long int值0x12345678来保存的</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="err">0:87</span><span class="nf">h</span><span class="w"> </span><span class="mi">12</span><span class="no">h</span><span class="w"> </span><span class="c1">;/</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="err">那么</span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h执行时</span><span class="p">,</span><span class="w"> </span><span class="no">CPU会跳到1234h</span><span class="p">:</span><span class="mi">5678</span><span class="no">h去执行中断函数</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="err">(2)</span><span class="w"> </span><span class="nf">iret指令的执行过程</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="err">①</span><span class="nf">pop</span><span class="w"> </span><span class="no">ip</span>
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="err">②</span><span class="nf">pop</span><span class="w"> </span><span class="no">cs</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="err">③</span><span class="nf">popf</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>
-<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="err">(3)</span><span class="w"> </span><span class="nf">int8.asm</span>
-<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>
-<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="c1">;修改int 8h的中断向量使其指向中断函数int_8h，</span>
-<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="c1">;并让该函数每隔秒1秒在屏幕左上角(0,0)处显示&#39;0&#39;到&#39;9&#39;计数</span>
-<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
-<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
-<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="nf">s</span><span class="w"> </span><span class="no">db</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">0</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="no">h</span><span class="w">          </span><span class="c1">; 待显示的字符及颜色</span>
-<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="nf">count</span><span class="w"> </span><span class="no">db</span><span class="w"> </span><span class="mi">0</span><span class="w">             </span><span class="c1">; 每隔1/18秒count++</span>
-<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="nf">stop</span><span class="w">  </span><span class="no">db</span><span class="w"> </span><span class="mi">0</span><span class="w">             </span><span class="c1">; stop==1时程序结束</span>
-<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="nf">old_8h</span><span class="w"> </span><span class="no">dw</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w">         </span><span class="c1">; 用来保存int 8h的中断向量</span>
-<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="nl">int_8h:</span><span class="w">                </span><span class="c1">; 中断函数</span>
-<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="w">   </span><span class="nf">push</span><span class="w"> </span><span class="no">ax</span><span class="w">             </span><span class="c1">;\中断函数不能破坏任何一个寄存器的值,</span>
-<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="w">   </span><span class="nf">push</span><span class="w"> </span><span class="no">es</span><span class="w">             </span><span class="c1">;/故需要把用到的寄存器都压入堆栈</span>
-<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">B800h</span><span class="w">      </span>
-<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a><span class="w">   </span><span class="no">mov</span><span class="w"> </span><span class="no">es</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span><span class="w">          </span><span class="c1">; ES = 0B800h</span>
-<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a><span class="w">   </span><span class="nf">inc</span><span class="w"> </span><span class="no">cs</span><span class="p">:[</span><span class="no">count</span><span class="p">]</span><span class="w">      </span><span class="c1">; 因每隔1/18秒自动产生一次时钟中断int 8h，</span>
-<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cs</span><span class="p">:[</span><span class="no">count</span><span class="p">],</span><span class="w"> </span><span class="mi">18</span><span class="w">  </span><span class="c1">; 故需要累计18次中断才刚好是1秒钟</span>
-<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="w">   </span><span class="nf">jb</span><span class="w"> </span><span class="no">skip</span><span class="w">             </span><span class="c1">; 不足18次中断就返回</span>
-<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cs</span><span class="p">:[</span><span class="no">count</span><span class="p">],</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="c1">; 满18次中断后，count清零</span>
-<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">word</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">cs</span><span class="p">:[</span><span class="no">s</span><span class="p">]</span>
-<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="no">ax</span><span class="w">      </span><span class="c1">; 在(0,0)处显示计数</span>
-<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a><span class="w">   </span><span class="nf">inc</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w">         </span><span class="c1">; 计数加1</span>
-<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">9</span><span class="err">&#39;</span>
-<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a><span class="w">   </span><span class="nf">jbe</span><span class="w"> </span><span class="no">skip</span>
-<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">stop</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">         </span><span class="c1">; 计数超过&#39;9&#39;时把stop置1</span>
-<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a><span class="nl">skip:</span>
-<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a><span class="w">   </span><span class="nf">pop</span><span class="w"> </span><span class="no">es</span><span class="w">              </span><span class="c1">;\ </span>
-<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a><span class="w">   </span><span class="nf">pop</span><span class="w"> </span><span class="no">ax</span><span class="w">              </span><span class="c1">;/恢复寄存器的值</span>
-<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a><span class="w">   </span><span class="nf">push</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="no">h</span><span class="w">         </span><span class="c1">; EOI信号(end of interrupt)</span>
-<a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a><span class="w">   </span><span class="nf">out</span><span class="w"> </span><span class="mi">20</span><span class="no">h</span><span class="p">,</span><span class="w"> </span><span class="no">al</span><span class="w">         </span><span class="c1">; 20h是中断控制器的端口号</span>
-<a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a><span class="w">                       </span><span class="c1">; 发送20h信号给20h号端口是告诉中断控制器</span>
-<a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a><span class="w">                       </span><span class="c1">; 本次硬件中断已处理完毕，如果不发送此信号</span>
-<a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a><span class="w">                       </span><span class="c1">; 给中断控制器的话，下次再有硬件中断发生时</span>
-<a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a><span class="w">                       </span><span class="c1">; 中断控制器将不会放行新中断从而CPU将无法</span>
-<a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a><span class="w">                       </span><span class="c1">; 收到新的中断请求</span>
-<a id="__codelineno-11-56" name="__codelineno-11-56" href="#__codelineno-11-56"></a><span class="w">   </span><span class="nf">pop</span><span class="w"> </span><span class="no">ax</span>
-<a id="__codelineno-11-57" name="__codelineno-11-57" href="#__codelineno-11-57"></a><span class="w">   </span><span class="nf">iret</span><span class="w">                </span><span class="c1">; 中断返回</span>
-<a id="__codelineno-11-58" name="__codelineno-11-58" href="#__codelineno-11-58"></a><span class="nl">main:</span>
-<a id="__codelineno-11-59" name="__codelineno-11-59" href="#__codelineno-11-59"></a><span class="w">   </span><span class="nf">push</span><span class="w"> </span><span class="no">cs</span><span class="w"> </span>
-<a id="__codelineno-11-60" name="__codelineno-11-60" href="#__codelineno-11-60"></a><span class="w">   </span><span class="no">pop</span><span class="w"> </span><span class="no">ds</span><span class="w">              </span><span class="c1">; DS = CS</span>
-<a id="__codelineno-11-61" name="__codelineno-11-61" href="#__codelineno-11-61"></a><span class="w">   </span><span class="nf">xor</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span><span class="w">          </span><span class="c1">; AX=0</span>
-<a id="__codelineno-11-62" name="__codelineno-11-62" href="#__codelineno-11-62"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span><span class="w">          </span><span class="c1">; ES = 0</span>
-<a id="__codelineno-11-63" name="__codelineno-11-63" href="#__codelineno-11-63"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="no">h</span><span class="p">*</span><span class="mi">4</span><span class="w">        </span><span class="c1">; int n的中断向量位于0:n*4处</span>
-<a id="__codelineno-11-64" name="__codelineno-11-64" href="#__codelineno-11-64"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="p">]</span><span class="w">     </span><span class="c1">; ax=word ptr 0:[20h]</span>
-<a id="__codelineno-11-65" name="__codelineno-11-65" href="#__codelineno-11-65"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="err">+</span><span class="mi">2</span><span class="p">]</span><span class="w">   </span><span class="c1">; dx=word ptr 0:[22h]</span>
-<a id="__codelineno-11-66" name="__codelineno-11-66" href="#__codelineno-11-66"></a><span class="w">                       </span><span class="c1">; 假设0:20h起存放有以下4个字节</span>
-<a id="__codelineno-11-67" name="__codelineno-11-67" href="#__codelineno-11-67"></a><span class="w">                       </span><span class="c1">; 0:20h 78h</span>
-<a id="__codelineno-11-68" name="__codelineno-11-68" href="#__codelineno-11-68"></a><span class="w">                       </span><span class="c1">; 0:21h 56h</span>
-<a id="__codelineno-11-69" name="__codelineno-11-69" href="#__codelineno-11-69"></a><span class="w">                       </span><span class="c1">; 0:22h 34h</span>
-<a id="__codelineno-11-70" name="__codelineno-11-70" href="#__codelineno-11-70"></a><span class="w">                       </span><span class="c1">; 0:23h 12h</span>
-<a id="__codelineno-11-71" name="__codelineno-11-71" href="#__codelineno-11-71"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">old_8h</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="no">ax</span><span class="c1">;\</span>
-<a id="__codelineno-11-72" name="__codelineno-11-72" href="#__codelineno-11-72"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">old_8h</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="no">dx</span><span class="c1">;/保存int 8h的中断向量</span>
-<a id="__codelineno-11-73" name="__codelineno-11-73" href="#__codelineno-11-73"></a><span class="w">   </span><span class="nf">cli</span><span class="w">                 </span><span class="c1">; 禁止硬件中断,防止在修改中断向量期间发生硬件中断</span>
-<a id="__codelineno-11-74" name="__codelineno-11-74" href="#__codelineno-11-74"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">word</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="p">],</span><span class="w"> </span><span class="no">offset</span><span class="w"> </span><span class="no">int_8h</span>
-<a id="__codelineno-11-75" name="__codelineno-11-75" href="#__codelineno-11-75"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="err">+</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="no">cs</span><span class="w">   </span><span class="c1">; 修改int 8h的中断向量为code:int_8h</span>
-<a id="__codelineno-11-76" name="__codelineno-11-76" href="#__codelineno-11-76"></a><span class="w">   </span><span class="nf">sti</span><span class="w">                 </span><span class="c1">; 允许硬件中断</span>
-<a id="__codelineno-11-77" name="__codelineno-11-77" href="#__codelineno-11-77"></a><span class="nl">wait_for_stop_signal:</span>
-<a id="__codelineno-11-78" name="__codelineno-11-78" href="#__codelineno-11-78"></a><span class="w">   </span><span class="c1">;int 8              ; 此处可能会发生int 8h</span>
-<a id="__codelineno-11-79" name="__codelineno-11-79" href="#__codelineno-11-79"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">stop</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-11-80" name="__codelineno-11-80" href="#__codelineno-11-80"></a><span class="w">   </span><span class="c1">;int 8              ; 此处可能会发生int 8h</span>
-<a id="__codelineno-11-81" name="__codelineno-11-81" href="#__codelineno-11-81"></a><span class="w">   </span><span class="nf">jne</span><span class="w"> </span><span class="no">wait_for_stop_signal</span>
-<a id="__codelineno-11-82" name="__codelineno-11-82" href="#__codelineno-11-82"></a><span class="w">   </span><span class="nf">cli</span><span class="w">                 </span>
-<a id="__codelineno-11-83" name="__codelineno-11-83" href="#__codelineno-11-83"></a><span class="w">   </span><span class="no">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">old_8h</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<a id="__codelineno-11-84" name="__codelineno-11-84" href="#__codelineno-11-84"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">old_8h</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<a id="__codelineno-11-85" name="__codelineno-11-85" href="#__codelineno-11-85"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="p">],</span><span class="w"> </span><span class="no">ax</span><span class="w">     </span><span class="c1">;\</span>
-<a id="__codelineno-11-86" name="__codelineno-11-86" href="#__codelineno-11-86"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="err">+</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="no">dx</span><span class="w">   </span><span class="c1">;/恢复int 8h的中断向量</span>
-<a id="__codelineno-11-87" name="__codelineno-11-87" href="#__codelineno-11-87"></a><span class="w">   </span><span class="nf">sti</span>
-<a id="__codelineno-11-88" name="__codelineno-11-88" href="#__codelineno-11-88"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
-<a id="__codelineno-11-89" name="__codelineno-11-89" href="#__codelineno-11-89"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
-<a id="__codelineno-11-90" name="__codelineno-11-90" href="#__codelineno-11-90"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
-<a id="__codelineno-11-91" name="__codelineno-11-91" href="#__codelineno-11-91"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">(1)</span><span class="w"> </span><span class="nf">int</span><span class="w"> </span><span class="no">n指令的执行过程</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="err">①</span><span class="nf">pushf</span><span class="w"> </span><span class="c1">; pushf表示push fl</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="err">②</span><span class="nf">push</span><span class="w"> </span><span class="no">cs</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="err">③</span><span class="nf">push</span><span class="w"> </span><span class="err">下条指令的偏移地址</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="err">④</span><span class="nf">jmp</span><span class="w"> </span><span class="no">dword</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="mi">0</span><span class="p">:[</span><span class="no">n</span><span class="p">*</span><span class="mi">4</span><span class="p">]</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="err">其中</span><span class="nf">dword</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="mi">0</span><span class="p">:[</span><span class="no">n</span><span class="p">*</span><span class="mi">4</span><span class="p">]</span><span class="err">称为</span><span class="no">int</span><span class="w"> </span><span class="no">n的中断向量</span><span class="p">,</span><span class="w"> </span><span class="err">中断向量实质上是</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="err">该中断对应的中断函数的地址</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="err">设</span><span class="nf">n</span><span class="err">=</span><span class="mi">21</span><span class="no">h</span><span class="p">,</span><span class="w"> </span><span class="err">且有以下内存布局</span><span class="p">:</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="err">0:84</span><span class="nf">h</span><span class="w"> </span><span class="mi">78</span><span class="no">h</span><span class="w"> </span><span class="c1">;\ </span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="err">0:85</span><span class="nf">h</span><span class="w"> </span><span class="mi">56</span><span class="no">h</span><span class="w"> </span><span class="c1">; \ 1234h:5678h这个远指针存放到内存中时是按照</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="err">0:86</span><span class="nf">h</span><span class="w"> </span><span class="mi">34</span><span class="no">h</span><span class="w"> </span><span class="c1">; / 一个long int值0x12345678来保存的</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="err">0:87</span><span class="nf">h</span><span class="w"> </span><span class="mi">12</span><span class="no">h</span><span class="w"> </span><span class="c1">;/</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="err">那么</span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h执行时</span><span class="p">,</span><span class="w"> </span><span class="no">CPU会跳到1234h</span><span class="p">:</span><span class="mi">5678</span><span class="no">h去执行中断函数</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="err">(2)</span><span class="w"> </span><span class="nf">iret指令的执行过程</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="err">①</span><span class="nf">pop</span><span class="w"> </span><span class="no">ip</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="err">②</span><span class="nf">pop</span><span class="w"> </span><span class="no">cs</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="err">③</span><span class="nf">popf</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="err">(3)</span><span class="w"> </span><span class="nf">int8.asm</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="c1">;修改int 8h的中断向量使其指向中断函数int_8h，</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="c1">;并让该函数每隔秒1秒在屏幕左上角(0,0)处显示&#39;0&#39;到&#39;9&#39;计数</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="nf">code</span><span class="w"> </span><span class="no">segment</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="nf">assume</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">code</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="nf">s</span><span class="w"> </span><span class="no">db</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">0</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="no">h</span><span class="w">          </span><span class="c1">; 待显示的字符及颜色</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="nf">count</span><span class="w"> </span><span class="no">db</span><span class="w"> </span><span class="mi">0</span><span class="w">             </span><span class="c1">; 每隔1/18秒count++</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="nf">stop</span><span class="w">  </span><span class="no">db</span><span class="w"> </span><span class="mi">0</span><span class="w">             </span><span class="c1">; stop==1时程序结束</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="nf">old_8h</span><span class="w"> </span><span class="no">dw</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w">         </span><span class="c1">; 用来保存int 8h的中断向量</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="nl">int_8h:</span><span class="w">                </span><span class="c1">; 中断函数</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">   </span><span class="nf">push</span><span class="w"> </span><span class="no">ax</span><span class="w">             </span><span class="c1">;\中断函数不能破坏任何一个寄存器的值,</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">   </span><span class="nf">push</span><span class="w"> </span><span class="no">es</span><span class="w">             </span><span class="c1">;/故需要把用到的寄存器都压入堆栈</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">B800h</span><span class="w">      </span>
+<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="w">   </span><span class="no">mov</span><span class="w"> </span><span class="no">es</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span><span class="w">          </span><span class="c1">; ES = 0B800h</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="w">   </span><span class="nf">inc</span><span class="w"> </span><span class="no">cs</span><span class="p">:[</span><span class="no">count</span><span class="p">]</span><span class="w">      </span><span class="c1">; 因每隔1/18秒自动产生一次时钟中断int 8h，</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cs</span><span class="p">:[</span><span class="no">count</span><span class="p">],</span><span class="w"> </span><span class="mi">18</span><span class="w">  </span><span class="c1">; 故需要累计18次中断才刚好是1秒钟</span>
+<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="w">   </span><span class="nf">jb</span><span class="w"> </span><span class="no">skip</span><span class="w">             </span><span class="c1">; 不足18次中断就返回</span>
+<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cs</span><span class="p">:[</span><span class="no">count</span><span class="p">],</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="c1">; 满18次中断后，count清零</span>
+<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">word</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">cs</span><span class="p">:[</span><span class="no">s</span><span class="p">]</span>
+<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="no">ax</span><span class="w">      </span><span class="c1">; 在(0,0)处显示计数</span>
+<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="w">   </span><span class="nf">inc</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w">         </span><span class="c1">; 计数加1</span>
+<a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">9</span><span class="err">&#39;</span>
+<a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a><span class="w">   </span><span class="nf">jbe</span><span class="w"> </span><span class="no">skip</span>
+<a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">stop</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">         </span><span class="c1">; 计数超过&#39;9&#39;时把stop置1</span>
+<a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a><span class="nl">skip:</span>
+<a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a><span class="w">   </span><span class="nf">pop</span><span class="w"> </span><span class="no">es</span><span class="w">              </span><span class="c1">;\ </span>
+<a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a><span class="w">   </span><span class="nf">pop</span><span class="w"> </span><span class="no">ax</span><span class="w">              </span><span class="c1">;/恢复寄存器的值</span>
+<a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a><span class="w">   </span><span class="nf">push</span><span class="w"> </span><span class="no">ax</span>
+<a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="no">h</span><span class="w">         </span><span class="c1">; EOI信号(end of interrupt)</span>
+<a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a><span class="w">   </span><span class="nf">out</span><span class="w"> </span><span class="mi">20</span><span class="no">h</span><span class="p">,</span><span class="w"> </span><span class="no">al</span><span class="w">         </span><span class="c1">; 20h是中断控制器的端口号</span>
+<a id="__codelineno-8-51" name="__codelineno-8-51" href="#__codelineno-8-51"></a><span class="w">                       </span><span class="c1">; 发送20h信号给20h号端口是告诉中断控制器</span>
+<a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a><span class="w">                       </span><span class="c1">; 本次硬件中断已处理完毕，如果不发送此信号</span>
+<a id="__codelineno-8-53" name="__codelineno-8-53" href="#__codelineno-8-53"></a><span class="w">                       </span><span class="c1">; 给中断控制器的话，下次再有硬件中断发生时</span>
+<a id="__codelineno-8-54" name="__codelineno-8-54" href="#__codelineno-8-54"></a><span class="w">                       </span><span class="c1">; 中断控制器将不会放行新中断从而CPU将无法</span>
+<a id="__codelineno-8-55" name="__codelineno-8-55" href="#__codelineno-8-55"></a><span class="w">                       </span><span class="c1">; 收到新的中断请求</span>
+<a id="__codelineno-8-56" name="__codelineno-8-56" href="#__codelineno-8-56"></a><span class="w">   </span><span class="nf">pop</span><span class="w"> </span><span class="no">ax</span>
+<a id="__codelineno-8-57" name="__codelineno-8-57" href="#__codelineno-8-57"></a><span class="w">   </span><span class="nf">iret</span><span class="w">                </span><span class="c1">; 中断返回</span>
+<a id="__codelineno-8-58" name="__codelineno-8-58" href="#__codelineno-8-58"></a><span class="nl">main:</span>
+<a id="__codelineno-8-59" name="__codelineno-8-59" href="#__codelineno-8-59"></a><span class="w">   </span><span class="nf">push</span><span class="w"> </span><span class="no">cs</span><span class="w"> </span>
+<a id="__codelineno-8-60" name="__codelineno-8-60" href="#__codelineno-8-60"></a><span class="w">   </span><span class="no">pop</span><span class="w"> </span><span class="no">ds</span><span class="w">              </span><span class="c1">; DS = CS</span>
+<a id="__codelineno-8-61" name="__codelineno-8-61" href="#__codelineno-8-61"></a><span class="w">   </span><span class="nf">xor</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span><span class="w">          </span><span class="c1">; AX=0</span>
+<a id="__codelineno-8-62" name="__codelineno-8-62" href="#__codelineno-8-62"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">,</span><span class="w"> </span><span class="no">ax</span><span class="w">          </span><span class="c1">; ES = 0</span>
+<a id="__codelineno-8-63" name="__codelineno-8-63" href="#__codelineno-8-63"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">bx</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="no">h</span><span class="p">*</span><span class="mi">4</span><span class="w">        </span><span class="c1">; int n的中断向量位于0:n*4处</span>
+<a id="__codelineno-8-64" name="__codelineno-8-64" href="#__codelineno-8-64"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="p">]</span><span class="w">     </span><span class="c1">; ax=word ptr 0:[20h]</span>
+<a id="__codelineno-8-65" name="__codelineno-8-65" href="#__codelineno-8-65"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="err">+</span><span class="mi">2</span><span class="p">]</span><span class="w">   </span><span class="c1">; dx=word ptr 0:[22h]</span>
+<a id="__codelineno-8-66" name="__codelineno-8-66" href="#__codelineno-8-66"></a><span class="w">                       </span><span class="c1">; 假设0:20h起存放有以下4个字节</span>
+<a id="__codelineno-8-67" name="__codelineno-8-67" href="#__codelineno-8-67"></a><span class="w">                       </span><span class="c1">; 0:20h 78h</span>
+<a id="__codelineno-8-68" name="__codelineno-8-68" href="#__codelineno-8-68"></a><span class="w">                       </span><span class="c1">; 0:21h 56h</span>
+<a id="__codelineno-8-69" name="__codelineno-8-69" href="#__codelineno-8-69"></a><span class="w">                       </span><span class="c1">; 0:22h 34h</span>
+<a id="__codelineno-8-70" name="__codelineno-8-70" href="#__codelineno-8-70"></a><span class="w">                       </span><span class="c1">; 0:23h 12h</span>
+<a id="__codelineno-8-71" name="__codelineno-8-71" href="#__codelineno-8-71"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">old_8h</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="no">ax</span><span class="c1">;\</span>
+<a id="__codelineno-8-72" name="__codelineno-8-72" href="#__codelineno-8-72"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">old_8h</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="no">dx</span><span class="c1">;/保存int 8h的中断向量</span>
+<a id="__codelineno-8-73" name="__codelineno-8-73" href="#__codelineno-8-73"></a><span class="w">   </span><span class="nf">cli</span><span class="w">                 </span><span class="c1">; 禁止硬件中断,防止在修改中断向量期间发生硬件中断</span>
+<a id="__codelineno-8-74" name="__codelineno-8-74" href="#__codelineno-8-74"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">word</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="p">],</span><span class="w"> </span><span class="no">offset</span><span class="w"> </span><span class="no">int_8h</span>
+<a id="__codelineno-8-75" name="__codelineno-8-75" href="#__codelineno-8-75"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="err">+</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="no">cs</span><span class="w">   </span><span class="c1">; 修改int 8h的中断向量为code:int_8h</span>
+<a id="__codelineno-8-76" name="__codelineno-8-76" href="#__codelineno-8-76"></a><span class="w">   </span><span class="nf">sti</span><span class="w">                 </span><span class="c1">; 允许硬件中断</span>
+<a id="__codelineno-8-77" name="__codelineno-8-77" href="#__codelineno-8-77"></a><span class="nl">wait_for_stop_signal:</span>
+<a id="__codelineno-8-78" name="__codelineno-8-78" href="#__codelineno-8-78"></a><span class="w">   </span><span class="c1">;int 8              ; 此处可能会发生int 8h</span>
+<a id="__codelineno-8-79" name="__codelineno-8-79" href="#__codelineno-8-79"></a><span class="w">   </span><span class="nf">cmp</span><span class="w"> </span><span class="no">stop</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-8-80" name="__codelineno-8-80" href="#__codelineno-8-80"></a><span class="w">   </span><span class="c1">;int 8              ; 此处可能会发生int 8h</span>
+<a id="__codelineno-8-81" name="__codelineno-8-81" href="#__codelineno-8-81"></a><span class="w">   </span><span class="nf">jne</span><span class="w"> </span><span class="no">wait_for_stop_signal</span>
+<a id="__codelineno-8-82" name="__codelineno-8-82" href="#__codelineno-8-82"></a><span class="w">   </span><span class="nf">cli</span><span class="w">                 </span>
+<a id="__codelineno-8-83" name="__codelineno-8-83" href="#__codelineno-8-83"></a><span class="w">   </span><span class="no">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">old_8h</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-8-84" name="__codelineno-8-84" href="#__codelineno-8-84"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="no">old_8h</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-8-85" name="__codelineno-8-85" href="#__codelineno-8-85"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="p">],</span><span class="w"> </span><span class="no">ax</span><span class="w">     </span><span class="c1">;\</span>
+<a id="__codelineno-8-86" name="__codelineno-8-86" href="#__codelineno-8-86"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">es</span><span class="p">:[</span><span class="no">bx</span><span class="err">+</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="no">dx</span><span class="w">   </span><span class="c1">;/恢复int 8h的中断向量</span>
+<a id="__codelineno-8-87" name="__codelineno-8-87" href="#__codelineno-8-87"></a><span class="w">   </span><span class="nf">sti</span>
+<a id="__codelineno-8-88" name="__codelineno-8-88" href="#__codelineno-8-88"></a><span class="w">   </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">Ch</span>
+<a id="__codelineno-8-89" name="__codelineno-8-89" href="#__codelineno-8-89"></a><span class="w">   </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span>
+<a id="__codelineno-8-90" name="__codelineno-8-90" href="#__codelineno-8-90"></a><span class="nf">code</span><span class="w"> </span><span class="no">ends</span>
+<a id="__codelineno-8-91" name="__codelineno-8-91" href="#__codelineno-8-91"></a><span class="nf">end</span><span class="w"> </span><span class="no">main</span>
 </code></pre></div>
 </details>
 </li>
