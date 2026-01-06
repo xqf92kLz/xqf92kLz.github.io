@@ -1295,6 +1295,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        指向函数的指针
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1965,6 +1976,34 @@
     
   
     做题记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
   
 
     
@@ -2725,6 +2764,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        指向函数的指针
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2744,7 +2794,7 @@
 
   <h1>指针</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-04'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-04T10:57:10.074710+00:00'>2026-01-04</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-04'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-04T10:57:10.074710+00:00'>2026-01-04</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-06'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-06T09:06:03.407887+00:00'>2026-01-06</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-06'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-06T09:06:03.407887+00:00'>2026-01-06</time></span></div></div></div>
 <h3 id="_1">定义<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -2917,6 +2967,16 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">if</span><span class="p">(</span><span class="n">pfore</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">phead</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">,</span><span class="n">free</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">else</span><span class="w"> </span><span class="n">pfore</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">,</span><span class="n">free</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
 </code></pre></div>
+<h3 id="_9">指向函数的指针<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>函数指针</p>
+<p><code>int (*p)(int,int);</code> 定义了一个函数指针 p 指向一个参数类型表为 int,int 的函数。</p>
+<p><code>int fun(int x,int y);</code>，<code>p=fun</code>，将 p 指向函数 fun()。</p>
+<p><code>fun(x,y)</code> 或 <code>(*p)(x,y)</code> 调用函数。</p>
+<p><code>int calc(int (*p)(int,int));</code> 可以让函数指针 p 作为函数的参数。</p>
+</li>
+</ul>
 
 
 
