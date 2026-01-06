@@ -2156,7 +2156,7 @@
 			??? note "英文"
 				scrap，e.g. He wrote his address on a scrap of paper.
 	
-		- 良心；良知 l
+		- 良心；良知 c
 	
 			??? note "英文"
 				conscience
