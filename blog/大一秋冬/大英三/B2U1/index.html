@@ -1,0 +1,3554 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.uwouni.com/blog/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U1/">
+      
+      
+        <link rel="prev" href="../B1U1-4/">
+      
+      
+        <link rel="next" href="../B2U2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://cdn.luogu.com.cn/upload/image_hosting/uo5wu9mh.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>B2U1 Mind the gap - uwouni</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/light.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/scale.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/backdrop.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/core/core.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/user.config.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="uwouni" class="md-header__button md-logo" aria-label="uwouni" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            uwouni
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              B2U1 Mind the gap
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/0/" class="md-tabs__link">
+          
+  
+  
+  微积分
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/1/" class="md-tabs__link">
+          
+  
+  
+  线性代数
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../C%20%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%A2%8E%E5%B1%91/" class="md-tabs__link">
+          
+  
+  
+  C 程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/0/" class="md-tabs__link">
+          
+  
+  
+  汇编基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  大一秋冬
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="uwouni" class="md-nav__button md-logo" aria-label="uwouni" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    uwouni
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 0 章 预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章 函数与极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 导数与微分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 微分中值定理及导数的应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章 不定积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 定积分及其应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章 线性方程组的求解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 行列式与矩阵的秩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 矩阵的运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章 $n$ 元向量空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章 线性空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章 欧式空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 矩阵的特征值理论与相似对角化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章 二次型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C 程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C 程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../C%20%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%A2%8E%E5%B1%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    知识碎屑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../C%20%E7%A8%8B/%E6%8C%87%E9%92%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    指针
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../C%20%E7%A8%8B/%E6%96%87%E4%BB%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../C%20%E7%A8%8B/%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    踩过的坑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../C%20%E7%A8%8B/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    汇编基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    汇编基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    汇编入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/solve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    做题记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一秋冬
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一秋冬
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大英三
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大英三
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../to%20do/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    to do
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B1U1-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B1U1-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U1 Mind the gap
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U1 Mind the gap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        词汇
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="词汇">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        课文
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="课文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        视听说
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="视听说">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listening-speaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listening &amp; speaking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-speaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing &amp; speaking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-listening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further listening
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        写作
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B2U2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U2 On the road
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B2U3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U3 Just relax!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B2U4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U4 Does gender matter?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Quiz1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quiz1 复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B2U5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U5 The power of words
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B2U6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U6 You are what you eat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B2U7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U7 Nature's gifts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B2U8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U8 Technology:controllers or helpers?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Quiz2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quiz2 复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Oral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oral exam 准备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Read/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Read 准备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Final/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    无线网络应用
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    无线网络应用
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E8%B5%84%E6%96%99%E6%90%9C%E9%9B%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    资料搜集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 1：当今网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 3：协议和模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/5-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 5-9：数值系统 数据链路 以太网交换 网络层 地址解析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 4：物理层
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/11-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 11-12：IPv4 和 IPv6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/00/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (为实验补充介绍) 无线技术
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%AE%9E%E9%AA%8C%E4%BA%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验二：无线路由器与 AP 配置应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/2%2C10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 2,10：交换机 路由器 终端设备 基本配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/14-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 14-15：传输层 应用层
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%AE%9E%E9%AA%8C%E4%B8%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验三：无线网络 DNS IIS 服务配置应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 16：网络安全基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (为实验补充介绍) 无线网络安全性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 17：构建小型网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块 13：ICMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%AE%9E%E9%AA%8C%E5%9B%9B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验四：防火墙等无线网络安全实验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%AE%9E%E9%AA%8C%E4%BA%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验五：无线网络 DHCP 服务及 AP 组网
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%AE%9E%E9%AA%8C%E5%85%AD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验六：无线流媒体服务及虚拟 WiFi 组网
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    在线学习心得
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        词汇
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="词汇">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        课文
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="课文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        视听说
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="视听说">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listening-speaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listening &amp; speaking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-speaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing &amp; speaking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-listening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further listening
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        写作
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>B2U1 Mind the gap</h1>
+
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-07T07:56:27.801961+00:00'>2026-01-07</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-07'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-07T07:56:27.801961+00:00'>2026-01-07</time></span></div></div></div>
+<h2 id="_1">词汇<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="reading-1">Reading 1<a class="headerlink" href="#reading-1" title="Permanent link">&para;</a></h3>
+<details class="info">
+<summary>生词</summary>
+<ul>
+<li>
+<p>workforce</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>n. [sing.] all the people who work in a particular industry or company, or are available to work in a particular country or area （行业的）全体从业人员；（公司的）全体员工；（国家或地区的）劳动力</p>
+<p>e.g. Senior executives are looking to build a highly skilled workforce.</p>
+</details>
+</li>
+<li>
+<p>momentum</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>n. [U] the ability to keep increasing, developing, or being more successful 动力；势头</p>
+<p>e.g. They are anxious to maintain the momentum of the search for a solution.</p>
+</details>
+</li>
+<li>
+<p>supreme</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>a. having the highest position of power, importance, or influence （权力、重要性或影响力）最高的，至高无上的</p>
+<p>e.g. Winning an Olympic gold medal was, I suppose, the supreme moment of my life.</p>
+</details>
+<p>reign supreme</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>if sb. / sth. reigns supreme, they are the most important part of a situation or time 主宰；称雄；呈极盛之势</p>
+<p>e.g. At that time, the bicycle reigned supreme as Britain's most popular mode of transportation.</p>
+</details>
+</li>
+<li>
+<p>impetus</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>n. [U, sing.] sth. that encourages a process or activity to develop more quickly 刺激；推动（力）；促进</p>
+<p>e.g. The grant for building the opera house gave impetus to the city's cultural life.</p>
+</details>
+</li>
+<li>
+<p>holdout</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>n. [C] a person or organization who resists sth. or refuses to accept an offer 抵制者（或组织）；不合作者（或组织）</p>
+<p>e.g. A few holdouts still use typewriters, but nearly everybody uses computers now.</p>
+</details>
+</li>
+<li>
+<p>cord</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>n. [C, U] 1) an electrical wire or wires with a protective covering, usu. for connecting electrical equipment to the supply of electricity 电线
+n. [C, U] 2) a piece of thick string or thin rope 粗线；细绳；索；带</p>
+</details>
+</li>
+<li>
+<p>stall</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>n. [C] a table or small shop with an open front that people sell things from, esp. at a market （尤指集市上的）货摊，摊位，售货亭</p>
+<p>e.g. The street is lined with stalls selling Chinese New Year decorations.</p>
+</details>
+</li>
+<li>
+<p>specturm</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>n. [C] (pl. <strong>spectra</strong>) a complete range of opinions, people, situations, etc., going from one extreme to its opposite （观点、人、情况等的）范围，幅度</p>
+</details>
+</li>
+<li>
+<p>head-to-head</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>ad. competing directly with another person or group 正面交锋地</p>
+<p>a. (only before noun) in which two people or groups face each other directly in order to decide the result of a disagreement or competition 正面交锋的</p>
+<p>e.g. Rather than go head-to-head with their main rivals, they decided to try a more subtle approach.</p>
+<p>e.g. He beat some of the world's greatest tennis players in head-to-head competition.</p>
+</details>
+</li>
+<li>
+<p>dogged</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>a. (usu. before noun) showing determination; not giving up easily 顽强的；不屈不挠的；坚持不懈的</p>
+<p>e.g. Her ambition and dogged determination ensured that she rose to the top of her profession.</p>
+</details>
+</li>
+</ul>
+</details>
+<h3 id="reading-2">Reading 2<a class="headerlink" href="#reading-2" title="Permanent link">&para;</a></h3>
+<details class="info">
+<summary>生词</summary>
+<ul>
+<li>
+<p>phenomenon 一词多义</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>n. [C] (pl. phenomena) 1) a fact or an event in nature or society, esp. one that is not fully understood 现象</p>
+<p>n. [C] (pl. phenomena) 2) sb. / sth. that is very unusual because of a rare quality or ability that they have 非凡的人（事物）；奇才；奇事</p>
+<p>e.g. Language is a social and cultural phenomenon.</p>
+<p>e.g. The rock band was a phenomenon — nobody had heard anything like them before.</p>
+</details>
+</li>
+<li>
+<p>sophisticated</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>a. having a lot of experience of life, and good judgment about socially important things such as art and fashion. 见多识广的；老练的；练达的</p>
+<p>e.g. Mark is a smart and sophisticated young man.</p>
+</details>
+</li>
+<li>
+<p>spontaneous</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>a. happening or done in a natural, often sudden way, without any planning or without being forced 自发的；自然而生的；一时冲动的</p>
+<p>e.g. The audience broke into spontaneous applause.</p>
+</details>
+</li>
+<li>
+<p>savvy</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>a. (infml.) knowing a lot about sth. and able to make good judgments about it 有见识的；在行的</p>
+<p>n. [U] (infml.) practical knowledge and ability 实际知识和能力；见识</p>
+<p>e.g. She bought the laptop on the advice of a computer-savvy friend.</p>
+<p>e.g. He's obviously got a lot of political savvy.</p>
+</details>
+</li>
+<li>
+<p>daunting</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>a. frightening in a way that makes you feel less confident 使人气馁的；吓人的</p>
+<p>e.g. They were faced with the daunting task of restoring the house.</p>
+</details>
+</li>
+<li>
+<p>attribute 一词多义</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>vt. (~ … to …) 1) believe or say that sb. / sth. has a particular quality 认为···具有···的特征</p>
+<p>vt. (~ … to …) 2) believe or say that a situation or event is caused by sth. 把···归因于···</p>
+<p>e.g. People were beginning to attribute superhuman qualities to him.</p>
+<p>e.g. The fall in the number of deaths from heart disease is generally attributed to improvements in diet.</p>
+</details>
+</li>
+<li>
+<p>deem</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>vt.(fml.) think of sth. in a particular way or as having a particular quality 认为；视为</p>
+<p>e.g. These buildings are deemed to be of architectural importance and must be protected.</p>
+</details>
+</li>
+<li>
+<p>entitled</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>a. feeling that you have the right to do or have what you want without having to work for it or deserve it, just because of who you are （由于自身身份）认为应得的，有权利的，有资格的</p>
+<p>e.g. I don't want to make my kids feel entitled only because I am a teacher at this school.</p>
+</details>
+</li>
+<li>
+<p>speak to</p>
+<details class="abstract">
+<summary>释义</summary>
+<p>(figuratively) resonate with; feel emotionally relevant to 与···产生共鸣；与···产生情感联结</p>
+<p>e.g. If this story spoke to you, I very much want to hear from you.</p>
+</details>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>拼写易错</summary>
+<ul>
+<li>
+<p>n. 千禧一代</p>
+<details class="note">
+<summary>拼写</summary>
+<p>millennial</p>
+</details>
+</li>
+<li>
+<p>a. 具有创业素质的</p>
+<details class="note">
+<summary>拼写</summary>
+<p>entrepreneurial</p>
+</details>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>词义辨析</summary>
+<ul>
+<li>
+<p>considerable  adj. 相当大的（尤指能产生影响或很重要）</p>
+<details class="danger">
+<summary>辨析</summary>
+<p>considerable  adj. 相当多的，相当大的</p>
+<p>considerate  adj.  体贴的，考虑周到的</p>
+<p>[精选辨析]
+considerable = consider (考虑) + able (能…的) → 能让人考虑的东西，数量应该不少吧 → 相当多的，相当大的
+considerate = consider (考虑) + ate (吃) → 吃什么都考虑好了 → 考虑周到的，体贴的</p>
+</details>
+</li>
+</ul>
+</details>
+<h2 id="_2">课文<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="reading-1_1">Reading 1<a class="headerlink" href="#reading-1_1" title="Permanent link">&para;</a></h3>
+<details class="info">
+<summary>From "Made in China" to "Created in China"</summary>
+<p>1 In late September 2022, I went to visit a famous <strong>entrepreneur</strong> in Zhongguancun. I entered his <mark>office complex（办公大楼（综合体））</mark> from the back door. <strong>Mistakenly</strong>, I took the wrong lift and, as if <mark>tripping through a <strong>wormhole</strong>（穿越一条时空隧道（虫洞））</mark>, found myself in the Beijing of the past century. </p>
+<p>1 2022年9月底，我去中关村拜访了一位著名企业家。我从后门走进了他的办公大楼。但我坐错了电梯，仿佛穿越了一条时空隧道，我来到了上个世纪的北京。</p>
+<p>2 In the late 1990s, Zhongguancun, now sometimes <mark>referred to as（被称为……/因……而广为人知）</mark> China's Silicon Valley, <mark>was largely known for</mark> its electronics markets <strong>sprawling</strong> along the neighborhood. There were several high-rise buildings, in which you could <strong>wander</strong> around vast open floors <mark>packed with <strong>stalls</strong>（布满了摊位）</mark>   selling   <mark>a wide <strong>spectrum</strong> of（各种各样的（范围很广的））</mark> tech devices from DVD players to phones, cameras to TVs, USB <strong>cords</strong> to printers. Most of them <mark>were manufactured or <strong>assembled</strong> in China（中国生产或者组装的）</mark>. </p>
+<p>2 在二十世纪九十年代末，现在有时被称为中国硅谷的中关村以遍布杂乱无章的电子市场而广为人知。那里有几栋高楼，你可以在开阔的开放楼层间闲逛，那里到处是摊位，出售各种科技设备，包括影碟机、手机、相机、电视、USB数据线、打印机等。其中大多数都是在中国制造或组装的。</p>
+<p>3 Now, the electronics markets in Zhongguancun are mostly gone. Standing <strong>amid</strong> the <strong>glittering</strong> office complex, which <mark>is home to（是……的所在地）</mark> some of the most promising <mark>high-tech start-ups（高科技初创企业）</mark> and <mark>R&amp;D companies（研发公司，Research and Development Companies）</mark>, you can hardly imagine what it was like only a few decades ago. </p>
+<p>3 如今，中关村的电子市场大多已经消失了。在闪闪发光的办公大楼中有一些最具前景的高科技初创企业和研发公司。站在那里，你几乎无法想象几十年前那里的样子。</p>
+<p>4 There are still some <strong>holdouts</strong> here, so it's easy to <mark>slip into（不小心溜入……）</mark> an older lift, as I did, and find yourself surrounded by keyboards and printers. But this contrast also reminds you of just how quickly China is changing. "Some people in Silicon Valley still think all China can do is <mark><strong>clone</strong> their ideas（克隆（复制）想法/拷贝（模仿））</mark>, but that's out of date. Now I see China as a ==major driving force for <strong>innovation</strong> and lots of companies in Western countries are copying China," said an investor working between China and America. </p>
+<p>4 这里依然有一些守旧者，所以你很容易像我一样误入一部旧电梯，发现自己被键盘和打印机包围。然而，这种对比也提醒着你中国的变化有多快。“硅谷的一些人仍然觉得中国只会照搬他们的创意，但这种观念已过时了。现在我认为中国是创新的主要驱动力，许多西方企业正在效仿中国。”一位来往于中美之间的投资者说。</p>
+<p>5 For now, these worlds <strong>coexist</strong>: the China of the past and the China of the future. But <strong>increasingly</strong>, the one that draws the world's attention is not the factory-and-warehouse aspect of China, but the new <mark>innovation-driven（创新驱动的）</mark> China that <mark>is <strong>poised</strong> to reshape the future of global technology（蓄势待发（重塑全球科技的未来））</mark>, with growing strength in fields ranging from <strong>artificial intelligence</strong> to <strong>drones</strong>. The international community describes China's great development and achievements as "<strong>miracles</strong>." What is the <strong>impetus</strong> behind these miracles? That's why I went to meet with this entrepreneur. </p>
+<p>5 目前，过去的中国与未来的中国共存。但渐渐地，吸引世界关注的不再是中国的工厂和仓库，而是创新驱动的中国。中国在人工智能和无人机等领域的实力不断增强，势将重塑全球技术的未来。国际社会将中国的巨大发展和成就称为“奇迹”。这些奇迹背后的动力是什么？这就是我要去拜访这位企业家的原因。</p>
+<p>6 He told me that China's tech landscape back in the 1990s would be <strong>unrecognizable</strong> to a young person of today. Foreign brands <mark><strong>reigned</strong> <strong>supreme</strong> in the mobile phone <strong>sector</strong>（称霸（手机）领域，在……独占鳌头）</mark>, e-commerce was just <mark>a <strong>glimmer</strong> in an entrepreneur's eye（一个模糊想法）</mark>, and the potential of the Internet <mark>was only vaguely realized（模糊地意识到）</mark>. </p>
+<p>6 他告诉我，二十世纪九十年代的中国科技格局是如今的年轻人无法想象的。外国品牌称霸手机领域，电子商务只是创业者的一个模糊想法，互联网的潜力也仅仅得到了初步认识。</p>
+<p>7 However, China has <mark><strong>accomplished</strong> a remarkable <strong>feat</strong>（完成令人瞩目的壮举）</mark> in <mark><strong>transforming</strong> itself from a low-cost manufacturing economy to a higher-value, innovation-led one（从（低成本制造业经济）向（高价值、创新驱动型经济）转型）</mark>, in only a few decades. According to <strong>the Global Innovation Index</strong> 2021 <mark>released by <strong>the World Intellectual Property Organization</strong>（由世界知识产权组织发布）</mark>, China ranks 12<sup>th</sup>, <mark>moving up two places from（从……上升两位）</mark> 14<sup>th</sup> in 2020, and <mark>maintaining <strong>momentum</strong> for nine <strong>consecutive</strong> years（连续九年保持势头）</mark>. </p>
+<p>7 然而，在短短几十年的时间里，中国就完成了从低成本制造业经济向高价值、创新驱动型经济转型这一令人瞩目的壮举。根据世界知识产权组织发布的“2021年全球创新指数”，中国排名第12位，比2020年的第14位上升了两位，而且连续九年保持上升势头。</p>
+<p>8 "The rise of China as an innovation <strong>hub</strong> has not happened <strong>overnight</strong>," the entrepreneur said. "This can be explained by China's <mark>consistent and favorable innovation policies（一致和有利的创新政策）</mark> for more than three decades, as well as by the fact that it has <strong>impressively</strong> increased spending on education, science, and technology." According to official data, Chinese investments in R&amp;D have <strong>burgeoned</strong> since the turn of the century, increasing more than ten times since 2000 and reaching a high of 2.4 percent of <strong>GDP</strong> in 2020. </p>
+<p>8 “中国崛起为创新中心并非一蹴而就。”这位企业家说。“这可以归因于中国三十多年来持续有利的创新政策，以及中国大幅增加的教育、科学、技术方面的支出。”根据官方数据，自本世纪初以来，中国在研发方面的投入迅速增长。自2000年以来，研发投入增长了十倍以上，而且在国内生产总值中，它的占比在2020年创了新高，达到了2.4%。</p>
+<p>9 More importantly, China has the ability to <mark>translate pro-innovation policy and innovation inputs into sound results（将（支持创新的政策和创新投入）转化为（良好的结果））</mark>, such as technological <strong>breakthroughs</strong> and high-tech products. After years of hard work, China is now leading the world in the field of <strong>aerospace</strong> technology, high-speed railways, 5G-enabled technologies, artificial intelligence, and deep-sea exploration. <mark>In the long term（in the long/short/medium term，长期/短期/中期）</mark>, some of these innovations might have <strong>profound</strong> effects on the economy and industry, pretty much like how the invention of electricity and computers changed human life. </p>
+<p>9 更重要的是，中国具备将支持创新的政策和创新投入转化为切实成果的能力，如技术突破和高科技产品。经过多年的努力，中国现在在航天技术、高速铁路、5G技术、人工智能和深海探测领域处于世界领先地位。从长远来看，其中一些创新可能对经济和工业产生深远影响，就像电力和计算机的发明改变了人类生活一样。</p>
+<p>10 " Innovation is leading China to <mark>ride the wave of digitalization（乘着数字化浪潮）</mark> and <mark><strong>evolve</strong> into a global tech hub（发展成（为全球科技中心））</mark>. And the country is <mark><strong>envisioning</strong> a shift from 'made in China' to 'created in China,'（设想从“中国制造”转向“中国创造”）</mark> from 'Chinese speed' to 'Chinese quality,' and from 'Chinese products' to 'Chinese brands,'" he added. </p>
+<p>10 “创新正在引领中国乘着数字化浪潮发展成为全球科技中心。中国正设想从‘中国制造’转向‘中国创造’，从‘中国速度’转向‘中国质量’，从‘中国产品’转向‘中国品牌’。”他补充道。</p>
+<p>11 Walking out of the building around 7 p.m. after the interview, I found a complex of buildings still brightly lit, probably with many employees working hard on China's next big innovation. </p>
+<p>11 采访结束后，我大约晚上七点左右走出大楼，发现办公大楼依然灯火通明，可能有许多员工正在努力研发中国的下一个重大创新。</p>
+<p>12 <mark>It is no wonder that（难怪……）</mark> when a few weeks ago I talked to a group of Chinese executives about their recent trip to <strong>Silicon Valley</strong>, the <strong>consensus</strong> was confidence. "What Silicon Valley has done is impressive, but now I see the most potential in China," said one executive. The world <mark>celebrates Silicon Valley as（赞扬……是……）</mark> a center of innovation, but many Chinese executives, particularly from China's growing technology sector, feel increasingly convinced that they can <mark>compete <strong>head-to-head</strong>（正面交锋）</mark>, engineer by engineer, with the best in Silicon Valley or other innovation hubs. </p>
+<p>12 几周前，我和一群中国高管谈论他们最近的硅谷之行时，他们一致表示对中国充满信心，这也就不足为奇了。“硅谷所取得的成就的确令人赞叹，但现在我认为中国具有最大的潜力。”一位高管说。全世界都在赞扬硅谷是创新中心，但许多中国高管，特别是来自中国不断壮大的科技产业的那些高管，越来越坚信他们可以与硅谷或其他创新中心的精英进行一对一正面交锋。</p>
+<p>13 Indeed, the country <mark>has more than its share of（拥有超过其份额的……很多）</mark> world-class companies that <mark>are increasingly rising in（在……上的排名越来越高）</mark> <strong>rankings</strong> on size, growth, and, most significantly, innovation. With a huge capital investment, an educated and ambitious <strong>workforce</strong>, a <mark>can-do spirit（乐观的（敢于尝试的）精神）</mark>, impressive companies, and a <mark><strong>dogged</strong> spirit（顽强的精神）</mark> to achieve, China is sure to lead in the era of innovation. </p>
+<p>13 确实，中国拥有很多世界级公司，它们在规模、发展速度和最重要的创新方面的排名不断上升。凭借大量的资本投入、受过良好教育且雄心勃勃的劳动人口、敢作敢为的精神、令人瞩目的企业以及坚忍不拔的进取精神，中国必将引领创新时代。</p>
+<p>14 Next time someone tells you China doesn't innovate, suggest that they <mark>take a closer look（仔细看看（进一步查看，更深入的研究））</mark>. </p>
+<p>14 下次有人告诉你中国没有创新能力时，建议他们更加仔细地看看。</p>
+</details>
+<h3 id="reading-2_1">Reading 2<a class="headerlink" href="#reading-2_1" title="Permanent link">&para;</a></h3>
+<details class="info">
+<summary>Dawn of the Chinese Millennials</summary>
+<p>1 As the clock struck twelve to welcome the new year, I noticed that Chinese people of all ages were suddenly posting pictures of themselves at 18 on social media. They <strong>reminisced</strong> about their youth, and <strong>regretfully</strong> <strong>remarked</strong> how fast time had flown. </p>
+<p>1 当迎接新年的钟声敲响午夜12点的时候，我注意到各个年龄段的中国人突然都在社交媒体上晒出了他们18岁时的照片。他们追忆似水年华，叹息时光飞逝。</p>
+<p>2 Curious, I asked my colleagues about the <strong>phenomenon</strong>. Did something happen that led to this <strong>outpouring</strong>? Or was this an annual <em>Auld Lang Syne</em>-type ritual? </p>
+<p>2 出于好奇，我向同事们了解这种现象。是什么导致了这种现象的涌现？这抑或是一年一度的仪式，就像大家都在新年来临之时唱《美好往昔》一样？</p>
+<p>3 It turned out to be a <strong>spontaneous</strong> movement to express <strong>amazement</strong> that someone born in 2000 would be an 18-year-old adult this year. This movement eventually evolved into people posting pictures of themselves at that age. </p>
+<p>3 这原来是一次人们自发的活动，他们惊叹那些2000年出生的人今年就年满18岁成年了。这个活动最终演变成了人们分享自己18岁的照片。</p>
+<p>4 Other than feeling old, I started to think about how an 18-year-old Chinese has all the advantages of modern China, including the possibility to develop into global citizens, in contrast to their parents and grandparents. They were the first generation to experience the benefits of China's reform and opening up, which began in 1978. Unlike their parents, who lived through <strong>hardship</strong> and poverty, they have never experienced an economic <strong>downturn</strong>. In fact, China's average GDP growth was nearly 10 percent <strong>per annum</strong> from 1979 to 2010. Born and raised as the country's wealth was rapidly growing, they benefited enormously from economic and social reforms. Also, as most of them are the only child in their family, they are the <strong>sole</strong> focus of their parents' and grandparents' love and financial support. Therefore, their spending <strong>capacity</strong> is more generous than past generations. </p>
+<p>4 除了觉得自己老了之外，我开始思考，与他们的父母和祖父母相比，一个18岁的中国人是如何拥有现代中国所赋予他们的所有优势的，包括成长为世界公民的可能性。他们是中国1978年开始的改革开放的第一代受益者。他们的父母经历了苦难和贫穷，但他们却不一样，他们从未经历过经济衰退。事实上，从1979年到2010年，中国国内生产总值的年均增长率接近10%。他们出生和成长于中国财富迅速增长的时期，因此从经济和社会改革中受益匪浅。同时，因为他们大多是家中的独生子女，集父辈与祖父辈的宠爱与经济支持于一身，所以他们的消费能力也比过去几代人都要强。</p>
+<p>5 They are also more educated and globally aware than their parents. About a quarter of them are college graduates or above, as compared to only three percent in their parents' generation. Born as digital natives with information at their fingertips, these <strong>youngsters</strong> are more <strong>sophisticated</strong>, have exposure to international cultures and ideas, and enjoy a modern healthy <strong>lifestyle</strong>. They tend to be more <strong>individualistic</strong>, <strong>entrepreneurial</strong>, and <strong>confident</strong>. Young people born after 1990 tend to change jobs frequently. However, there's also <strong>considerable</strong> pressure on them to look after their aging parents and even grandparents. As most of them are the only child in the family, they face the <strong>daunting</strong> task of ensuring the health and well-being of their older generations as they <strong>navigate</strong> through their own lives. However, they are generally very positive about the future, as they are confident about China's growing status in the world. </p>
+<p>5 和父母相比，他们的受教育程度更高，全球意识也更强。他们中大约有四分之一的人是大学毕业或接受过更高的教育，而他们的父辈中仅有3%的人受过同等教育。他们是天生的数字原住民，对信息了如指掌。他们也更加世故老练，有机会接触到国际文化和思想，并享受现代的健康生活方式。他们往往更具有个性、创业精神和自信心。1990后出生的年轻人往往频繁更换工作。然而，他们要照顾日渐衰老的父母甚至祖父母，压力也相当大。由于他们大多数是家中的独生子女，在应对自己生活的同时，他们还面临着一项艰巨任务——确保老一辈人的健康和幸福。不过，总体来说，他们对未来非常乐观积极，因为他们对中国日益提高的世界地位充满信心。</p>
+<p>6 In Australia, we would call these young people "millennials" or "Gen Y." All sorts of characteristics are <strong>attributed</strong> to millennials such as being tech-<strong>savvy</strong>, <strong>progressive</strong>, environmentally minded, and globally aware. However, they are also <strong>deemed</strong> to be <strong>self-centered</strong>, <strong>entitled</strong>, sheltered, and even lazy. As the saying goes, every generation has its doubts about the one that follows it. Whatever the case may be, millennials in China are a huge phenomenon that is impacting China and the world in many ways, for example, in its consumer behavior. </p>
+<p>6 在澳大利亚，我们称这些年轻人为“千禧一代”或“Y一代”。人们认为千禧一代具有各种特点，比如精通科技、思想进步、有环保意识和全球意识。然而，他们也被认为是以自我为中心的、享有权利的、受庇护的，甚至懒惰的一代。俗话说，每一代人都觉得一代不如一代。不管情况如何，中国的千禧一代是非凡的一代人，他们在很多方面影响着中国和世界，例如，在消费行为方面的影响。</p>
+<p>7 Naturally, Chinese millennials present a vast market. One study shows that <strong>consumption</strong> by young Chinese spenders under the age of 35 accounts for 65 percent of consumption growth. In addition, consumption by these millennials is <strong>forecast</strong> to grow at an annual rate of 11 percent from 2016 to 2021, twice that of consumers older than 35. In three years, the share of total consumption by the young generation is projected to reach 69 percent, as compared to 31 percent by the older generation. </p>
+<p>7 中国的千禧一代自然是一个庞大的市场。一项研究显示，35岁以下的中国年轻人的消费额占消费增长的65%。此外，从2016年到2021年，这些千禧一代的消费额预计将以每年11%的速度增长，这相当于35岁以上消费者的两倍。三年后，年轻一代的消费额有望占到总消费额的69%，而老一代的消费额仅占31%。</p>
+<p>8 What kind of products and services do these millennials want? According to another study, Chinese millennials spend most on experiences and products where quality matters. Therefore, what's most important for a product is to have the ability to speak to a millennial's <strong>aspirations</strong> and sense of identity, of which being a global citizen and having pride in China are important factors. <strong>Furthermore</strong>, like most young people, millennials in China are also more likely to spend money on things that make their life more comfortable and convenient. And they want these products and services delivered fast. Hence, millennials have driven China's <strong>e-commerce</strong> boom. They are generally eager to experience what's new and <strong>trendy</strong>. See now, buy now, and live for today may be what some Chinese millennials believe in nowadays. </p>
+<p>8 这些千禧一代想要什么样的产品和服务呢？另一项研究表明，中国的千禧一代在优质体验和产品上消费最多。因此，一个产品最重要的是要能够表达千禧一代的愿望和自我认同感，其中全球公民的身份和民族自豪感是他们身上的重要特征。此外，和大多数年轻人一样，中国的千禧一代也更愿意花钱买一些东西，让生活更加舒适和方便。他们希望这些产品和服务能够快速送达到他们手上，因此，他们促进了中国电子商务的繁荣。他们普遍热衷于体验新潮的东西。“即看即买”、“活在当下”也许就是如今一些中国千禧一代所秉承的信条。</p>
+<p>9 After a few days, I managed to find a photograph of myself at 18 as a Grade 12 student in <strong>Melbourne</strong>. However, by that time, the <strong>craze</strong> of posting old pictures of oneself had passed. Chinese millennials have moved on. Such is the speed at which these young people move. To get their attention, we need to move as fast as they do. </p>
+<p>9 几天后，我设法找到了一张我18岁时在墨尔本读12年级时的照片。然而，分享自己老照片的热潮在那时已经过去了。中国的千禧一代在继续前行，这就是这些年轻人的行动速度。要想引起他们的注意，我们也需要像他们一样快速前行。</p>
+</details>
+<h2 id="_3">视听说<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="listening-speaking">Listening &amp; speaking<a class="headerlink" href="#listening-speaking" title="Permanent link">&para;</a></h3>
+<details class="info">
+<summary>News report</summary>
+<p>China is now stepping up efforts to bridge the digital divide faced by seniors and provide them with convenient and smart life services. <em>The State Council</em>（国务院） released guidelines introducing a set of measures to help the elderly better adjust to technological innovations.</p>
+<p>While the guidelines require relevant parties to keep non-digital services, they also encourage tech companies to design their products to meet the needs of seniors. It sets objectives for work in the 2020-2022 period focusing on seven types of services and <mark>scenarios</mark> frequently encountered by the elderly, such as health care, leisure activities and transportation.</p>
+<p>For instance, some of China's tech <mark>giants</mark> have rolled out features to let the tech-savvy young generation help their parents with their smartphones via remote access and screen sharing. Parents no longer have to describe what is happening on their screen. The youth will be able to remotely control their parents' phones and see precisely what is happening.</p>
+<p>China had 254 million people aged 60 or above by the end of 2019 — 18.1 percent of the country's population — according to <em>the National Bureau of Statistics</em>（国家统计局）. <em>The Ministry of Civil Affairs</em>（民政部） estimates the number will surpass 300 million in the next five years.</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>
+<p>What is China doing to bridge the digital divide faced by seniors?</p>
+</li>
+<li>
+<p>What does the State Council encourage tech companies to do to help seniors?</p>
+</li>
+<li>
+<p>What new features have tech companies launched to enable young people to help their parents?</p>
+</li>
+<li>
+<p>What was the population aged 60 or above in China by the end of 2019?</p>
+</li>
+</ol>
+</details>
+<details class="info">
+<summary>Conversation</summary>
+<p><strong>W:</strong> China has many stories to tell, but how to present them as movies globally is an important issue for Chinese film-makers. Today, we're happy to have a very famous film critic with us. Welcome, Mr. Zhang.</p>
+<p><strong>M:</strong> Thank you. It's my great pleasure to be here.</p>
+<p><strong>W:</strong> Mr. Zhang, can you share with us some information about the film market in China?</p>
+<p><strong>M:</strong> Well, it's thriving（a. 欣欣向荣的；兴旺发达的）. China became the world's second-largest film market in 2013 and is predicted to surpass North America as the number one market in the next couple of years.</p>
+<p><strong>W:</strong> That's pretty impressive. With the development of globalization, movies have become one of the best media for a country to promote its culture to the world. Do you think there are any challenges in this regard?</p>
+<p><strong>M:</strong> Definitely, many stories are very interesting to Chinese people, but they may make little sense to people in other countries. So it is very important to find common values across different cultures as it helps Chinese culture to go global. Take, for example, <em>Journey to the West</em>（《西游记》）. To adapt it into a globally acceptable fantasy（n. 幻想作品）, a film director needs to explore the meaning of human life.</p>
+<p><strong>W:</strong> Hollywood has set a good example in promoting cultural exchanges. What do you think we can learn from it?</p>
+<p><strong>M:</strong> We can learn advanced production methods from Hollywood as they have new, complete and mature concepts. I believe everyone can be a blue-sky（a. 天马行空的） thinker, but it takes good skills to turn ideas into a real, moving and performable script. This is also extremely difficult, and Hollywood has a whole system for it.</p>
+<p><strong>W:</strong> Thank you very much for your unique insights into this topic.</p>
+<p><strong>M:</strong> My pleasure.</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>
+<p>Who is Mr. Zhang?</p>
+</li>
+<li>
+<p>Which of the following serves as evidence of China's thriving film market?</p>
+</li>
+<li>
+<p>What should Chinese film directors do to promote Chinese culture to the world?</p>
+</li>
+<li>
+<p>What can we learn about Hollywood?</p>
+</li>
+</ol>
+</details>
+<details class="info">
+<summary>Passage 1</summary>
+<p>If you've ever traveled to London, the phrase, "Mind the gap," may have been forever burned into your memory（be burned into one's memory，在某人记忆中留下深深的烙印）. It is a recorded voice to warn travelers to watch out for the space between the platform and the train, reminding people to mind the gap each time a train stops.</p>
+<p>The phrase can also be one of the most powerful weapons in the business world. This is the <mark>rallying cry（n. 战斗口号）</mark> for you to explore what's missing, what's not there, and what it could be. It is a phrase that can open new doors of opportunity.</p>
+<p>Minding the gap has been the source of hundreds of hit products and services, as unsatisfied customer desires were the origin of some of the most famous brands in the world. When you speak to customers, you should find out what's missing in their lives. The areas of disagreement, dissatisfaction, and <mark>deficiency（n. 不足；缺乏）</mark> provide you with a map for innovation. Rather than studying competitors' products, you need to focus on minding the gap of customer needs. It is a pathway to entirely new — and highly different — solutions.</p>
+<p>In business today, people tend to focus on solving problems when they appear. People also focus on what already exists, only to make small changes. But, what's more important is to look for hidden areas of unfulfilled promises, customer needs, and missing information. While the gaps aren't screaming for attention, they can be a <mark>wellspring（n. 源泉）</mark> of opportunity and, if you get to them first, they can help you become far more competitive.</p>
+</details>
+<details class="info">
+<summary>Passage 2</summary>
+<p>Is it possible that a gap year can make you more hirable? A survey of over 1,000 college students, graduates and hiring managers gave a few interesting insights into how people perceive taking a year off school.</p>
+<p>According to the survey, 78 percent of students who took a gap year felt it was beneficial to clarifying what they wanted to do in their life. This not only saved them that year's <mark>tuition</mark> bill, but potentially saved countless dollars and time spent focusing on the wrong major or taking the wrong career path. Of the students surveyed, 31 percent believed that gap years should be <mark>mandatory（a. 强制性的；义务的）</mark>.</p>
+<p>When it comes to applying for jobs, it pays to stand out — literally.</p>
+<p>Sixty-seven percent of hiring managers believed it was beneficial for students and recent graduates to take a gap year. More than a fifth of hiring managers even reported they were more likely to hire a candidate who had taken a gap year, and 19 percent said they would offer higher <mark>compensation（n. 报酬；工资）</mark> to those candidates.</p>
+<p>While a lot of people think of a gap year as time spent exploring the world, that's not necessarily the path to employment. The majority of hiring managers surveyed preferred candidates who spent their gap year completing an <mark>internship（n. 实习期的工作）</mark> program or volunteering to those candidates who did other common activities such as traveling or learning a new language.</p>
+<p>The survey also showed that hiring managers felt that "gappers" often had three positive characteristics that would help them in their career: confidence, self-awareness and well-roundedness.</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>
+<p>Why did some students feel it was beneficial to take a gap year?</p>
+</li>
+<li>
+<p>Which gap year activity was preferable, according to the majority of hiring managers surveyed?</p>
+</li>
+<li>
+<p>Which of the following is one common feature of gappers?</p>
+<p>A. Self-respect.</p>
+<p>B. Self-control.</p>
+<p>C. Self-discipline.</p>
+<p>D. Self-knowledge.</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：D（不是 C）</p>
+</details>
+</li>
+</ol>
+</details>
+<h3 id="viewing-speaking">Viewing &amp; speaking<a class="headerlink" href="#viewing-speaking" title="Permanent link">&para;</a></h3>
+<details class="info">
+<summary>Video clip</summary>
+<p><strong>Adam:</strong> Hey, doggy! <em>Nihao</em>! It’s nice to meet you. </p>
+<p><strong>Adam:</strong> Hey, nice to meet you. </p>
+<p><strong>Adam:</strong> In my quest to find real China, I’ve come to Lanping County, which has a reputation as being the most impoverished county in all of China. But when I got to Lanping City (County), I didn’t really find what I was expecting. It wasn’t as impoverished as people made it out to be. So I decided to dig deeper. I’ve come to the outskirts of Lanping County, just into this mountain village. I have to find the answer. Let’s go. </p>
+<p><strong>Voiceover:</strong> Wumapu Village, a village of extreme poverty in Lanping County, has harsh natural conditions. Ninety-five percent of its farmland is found on steep slopes, which is unsuitable for contiguous cultivation. The village has almost no source of income. Wumapu Village is the focus and challenge of Lanping County’s poverty alleviation program. The subsidy-based poverty alleviation policy barely worked here, so a more targeted poverty alleviation measure is needed. </p>
+<p><strong>Adam:</strong> <em>Nihao</em>! Hello! Hi! Nice to meet you. </p>
+<p><strong>Adam:</strong> Well, I definitely found what I was looking for. This is the poorest place I’ve seen since I moved to China. And it may sound like a sad story but there might be a happy ending. For example, the little old lady, my new friend, she’ll be given a house by the government. So there are still some unanswered questions, but I’ll keep searching. </p>
+<p><strong>Voiceover:</strong> In China, relocating the impoverished population is the top priority in the fight against poverty. Launched in 2016, 8.7 million people had been relocated by the end of 2018, but the Chinese government also emphasizes that apart from improving living conditions, the development must be sustainable. Once the people have settled, poverty alleviation measures must be introduced and production boosted. Targeted poverty alleviation is a comprehensive and systematic project in China. Relocating the impoverished population is only the first step. To truly eliminate poverty, China has many other amazing means. </p>
+<p><strong>Adam:</strong> All of these products are made locally and they’re being shipped everywhere in China through the process of this logistics operation and e-commerce. Many of the local people don’t have to worry (any) more about employment. They are finding their means through selling their local goods. </p>
+<p><strong>Voiceover:</strong> The Chinese government sees industrial development as the premise for poverty alleviation. However, these industry-based targeted poverty alleviation policies can play a limited role and may have relieved only the impoverished present generation. For the future, China has better plans. </p>
+<p><strong>Voiceover:</strong> In recent years, China’s Ministry of Education has been actively promoting education in its fight against poverty. In addition to improving hardware facilities, the youth are encouraged to volunteer to teach in rural areas. Meanwhile, the Internet is introduced to eliminate educational inequality. </p>
+<p><strong>He Jiangtao:</strong> I’m not the only one. We have six other colleagues. They’re also from Zhuhai, but from different schools. </p>
+<p><strong>Adam:</strong> What impact do you feel like your service here has provided? </p>
+<p><strong>He Jiangtao:</strong> Education, to make the gap smaller and smaller between eastern regions and some western regions. Yeah, this is a huge project for China. I know it is hard work to do a teaching job here, but we try our best. I want to give our students the wings to fly, to create a hopeful future. I think that is the point, in a sense, why I’m here.</p>
+</details>
+<h3 id="further-listening">Further listening<a class="headerlink" href="#further-listening" title="Permanent link">&para;</a></h3>
+<details class="info">
+<summary>News report</summary>
+<p><em>Ant Forest</em>（蚂蚁森林（支付宝设计的一款公益行动））, a green initiative by <em>Alipay</em>（支付宝）, received the UN <em>Champions of the Earth</em>（地球卫士奖） award in September.</p>
+<p>The award is the United Nations' highest environmental honor. It was given to Ant Forest for encouraging more than half a billion people to adopt an eco-friendly and greener lifestyle, thus greatly contributing to environmental protection with the help of digital technology.</p>
+<p>Although people had environmental awareness in the past, many of them, in fact, didn't put environmental protection into practice in their daily lives. To some extent, Alipay bridges this gap successfully by inspiring its users to choose from various low-carbon options in their daily lives, such as limited usage of paper and plastic, online payment of <mark>utility（n. 公用事业（如燃气、电气等））</mark> bills, and green travel using public transportation or bicycles instead of driving cars.</p>
+<p>The app has attracted more than 500 million users and has efficiently cut almost 7.9 million tons of carbon emissions by planting around 122 million trees in some of China's driest areas.</p>
+<p>According to <em>Inger Andersen</em>（英格 • 安德森（人名））, executive director of the <em>United Nations Environment Programme</em>（联合国环境规划署）, "Ant Forest shows how technology can reshape our world by <mark>harnessing</mark> the positive energy and innovation of global users."</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>
+<p>Why did Ant Forest receive the UN Champions of the Earth award?</p>
+</li>
+<li>
+<p>What does Ant Forest encourage its users to do?</p>
+</li>
+<li>
+<p>How many carbon emissions has Ant Forest helped reduce?</p>
+</li>
+</ol>
+</details>
+<details class="info">
+<summary>Conversation</summary>
+<p><strong>W:</strong> Today, it's great to have Richard Turrin joining us. Mr. Turrin is the author of the best-selling <em>Innovation Lab Excellence</em>.</p>
+<p><strong>M:</strong> Thank you. It's my great honor to be here.</p>
+<p><strong>W:</strong> What do you think of the AI companies in China and in Western countries?</p>
+<p><strong>M:</strong> Well, look at some well-known Western tech companies today and look at <mark>a screen capture（n. 屏幕截图）</mark> of what they looked like 10 years ago, and then you'll see that they're very similar. But if you look at how China's AI companies have transformed in a decade, you can see their super apps can do far more than they once did. They have surpassed the Western Internet companies. Anybody who can't see this, I know, has never really used any of these apps and obviously never lived in China.</p>
+<p><strong>W:</strong> For the record between 1998 and 2019, China accounted for the second largest number of AI patents（n. 专利） just behind the US. Do you think this would be possible for China without her encouraging innovation?</p>
+<p><strong>M:</strong> Looking at China's AI patents is a great way to have at least part of the picture of the amount of innovation within the AI space in China. But another interesting aspect is about AI implementation（n. 实施）. While the West looks at science fiction movies to get that cash-free dream, people in China are living in such a world. The lead that China has, not just in patents but also in actual implementation, is really impressive and shows the level of innovation that China is able to push forward.</p>
+<p><strong>W:</strong> Thank you very much.</p>
+<p><strong>M:</strong> You are welcome.</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>
+<p>What do we learn about some of the well-known Western tech companies in the past decade?</p>
+</li>
+<li>
+<p>What do China's AI patents indicate?</p>
+</li>
+<li>
+<p>Which of the following is true of Westerners?</p>
+<p>A. They are very interested in science fiction movies.</p>
+<p>B. They are fascinated by apps designed by AI companies.</p>
+<p>C. They have been in the lead in AI implementation.</p>
+<p>D. They haven't achieved their cash-free dream.</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：D（不是 A）</p>
+</details>
+</li>
+</ol>
+</details>
+<details class="info">
+<summary>Passage 1</summary>
+<p>For generations, Chinese culture was <mark>alien（a. 陌生的）</mark> to most New Zealanders（n. 新西兰人）, despite a thriving <mark>ethnic（a. 具有种族（民族、部落）特色的）</mark> Chinese community that has kept its language and traditions alive.</p>
+<p>But a growing number of non-Chinese Kiwis（Kiwi，n. 新西兰人） are learning Chinese and studying the culture, at a very young age in school, with help from the <em>Confucius Institute</em>（孔子学院） in <em>New Zealand</em>（新西兰（大洋洲国家））.</p>
+<p>Based at the <em>University of Auckland</em>（奥克兰大学（新西兰））, the institute was founded in 2006 at a time when the number of students who studied Chinese was generally low.</p>
+<p>Rather than simply providing ethnic Chinese New Zealanders with a better language learning environment, the institute focuses on encouraging non-Chinese Kiwis to learn Chinese and become interested in Chinese culture. It organizes groups of <mark>principals</mark>（principal，n. 校长） to pay annual visits to China in order to raise their awareness of the importance and benefits of learning Chinese through exchanges with their Chinese <mark>counterparts（counterpart，n. 职务相当的人）</mark>, tours of Chinese schools and visits to New Zealand companies doing business in China.</p>
+<p>It also provides teaching assistants to help schools run Chinese classes. Most of the teachers sent from China are graduates with a master's degree in international education.</p>
+<p>While support from the principals and teaching capabilities are important, the main reason for the rapid expansion of Chinese classes in New Zealand schools is the interest from students.</p>
+<p>The institute analyzes methods and teaching materials from schools that have proved effective in raising students' interest, and introduces them to other schools.</p>
+<p>Besides, more parents in New Zealand are beginning to realize that learning Chinese could offer great advantages in their children's future.</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>
+<p>What can be learned about the Chinese community in New Zealand?</p>
+</li>
+<li>
+<p>What is the main purpose of the Confucius Institute at the University of Auckland?</p>
+</li>
+<li>
+<p>What kind of activity is organized by the Confucius Institute at the University of Auckland?</p>
+</li>
+<li>
+<p>What is the main reason for the expansion of Chinese learning in New Zealand?</p>
+</li>
+</ol>
+</details>
+<details class="info">
+<summary>Passage 2</summary>
+<p>You've heard the joke — adults to teenagers, "We don't even speak the same language." But as it relates to <mark>slang（n. 俚语）</mark>, that statement is more true than funny. There seems to be a growing generational gap. But what makes today's language gap wider than ever before?</p>
+<p>Since the birth of the Internet, the way we communicate has evolved — face-to-face has been replaced by screen-to-screen. New generations <mark>are inundated with（be inundated with，（收到太多某物而）应接不暇）</mark> technology from the day they're born. They are comfortable with digital conversation, whether that means exchanging slang via text, or picture-based communication, such as emojis, memes（meme，n. （网络）迷因（指迅速在因特网上传播的视频、笑话等））, and videos.</p>
+<p>Older generations are less <mark>inclined</mark> to text, post, or share. Naturally, verbal communication is more valuable to them. It's what they were raised on. Digital communication lacks all the comfortable <mark>subtleties（subtlety，n. （想法、观点、细节中的）微妙之处）</mark> of face-to-face conversation like body language or eye contact. But, even letter writing is not a direct <mark>parallel（n. 可相比拟的人（或事物））</mark> to "text talk" due to one major difference: Letters cannot arrive in seconds.</p>
+<p>The problem isn't that older generations don't understand the smiling emoji, or that they can't learn a new slang <mark>term</mark>, but that they often don't see the same value. While there is still debate as to whether or not it becomes harder to learn new things as we age, we know that if we're not motivated, it's definitely more difficult.</p>
+<p>Humans need interaction. Interpersonal communication is directly linked with our quality of life. However, the wider the language gap between generations, the more separated those groups become, each choosing to find human connection within their preferred form of communication — face-to-face, or screen-to-screen.</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>
+<p>Why are new generations comfortable with digital conversation?</p>
+</li>
+<li>
+<p>Which of the following is true of older generations?</p>
+<p>A. They don't understand emojis or memes.</p>
+<p>B. They are less likely to use body language.</p>
+<p>C. They can't see the value of emojis and slang.</p>
+<p>D. They find it difficult to learn new things.</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：C（不是 A）</p>
+</details>
+</li>
+<li>
+<p>What will the widening language gap between generations lead to?</p>
+</li>
+</ol>
+</details>
+<h2 id="_4">写作<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<details class="info">
+<summary>第一次 Writing</summary>
+<p>The line graph compares the average monthly wages, measured in US dollars, across five countries between 1990 and 2016.</p>
+<p>As shown in the graph, China demonstrated the most striking growth over this period. Starting from just around <code>$</code>100 in 1990, it experienced a dramatic and consistent rise, climbing steeply after 2005, and ultimately surpassing <code>$</code>800 by 2016, thereby outpacing all the other countries.</p>
+<p>Meanwhile, Indonesia, Thailand, and Vietnam followed a more gradual upward trajectory. By the end of the period, their wage levels edged up roughly <code>$</code>200, showing modest yet steady improvement.</p>
+<p>In sharp contrast, Mexico, which began with the highest wages in 1990, underwent ups and downs throughout the period. By 2016, it had been overtaken decisively by China, losing its early dominance.</p>
+<p>If these trends continue, China is likely to widen its lead even further.</p>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["search", "content.action.edit", "navigation.tabs", "navigation.instant", "navigation.top", "content.code.copy", "search.suggest", "search.highlight", "search.share", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../../javascripts/katex.js"></script>
+      
+        <script src="../../../../assets/document_dates/tippy/popper.min.js"></script>
+      
+        <script src="../../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/md5.min.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/default.config.js"></script>
+      
+        <script src="../../../../assets/document_dates/user.config.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/utils.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/core.js"></script>
+      
+    
+  </body>
+</html>
