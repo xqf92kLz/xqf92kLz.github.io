@@ -617,70 +617,222 @@
     end main
     ```
 
+??? note "8 表达式求值1"
+	```asm
+	;本题要求:
+    comment %
+    键盘输入一个表达式, 该表达式中包含若干个十进制非符号数(≤4294967295)及以下运算符:
+       + * /
+    输出该表达式的十六进制值。
+    其中除法运算只需要计算商(丢弃余数),
+    表达式中的运算符不需要考虑优先级即一律按从左到右顺序计算。
+    若表达式中的任何一步计算结果超过32位(即大于0FFFFFFFFh),
+    则该步运算结果仅保留低32位(丢弃高32位)。
+    例如：
+    输入：
+    12345+56789*54321/9876
+    输出：
+    0005CD62
+    =======================================================================%
+    ;==========请把以下代码保存到src\main.asm==============================
+    ;==========选中main.sh及src文件夹->右键->压缩成submit.zip提交==========
+    .386
+    data segment use16
+    t db "0123456789ABCDEF"
+    buf  db 81, 0, 81 dup(0)
+    b    dd 0
+    c    dd 0
+    prev_op  dw 1; 1 means '+', 2 means '*', 3 means '/', 0 means '\0'
+    fun  dw 0000h, fun_add, fun_mul, fun_div
+    s    db 00h, '+', '*', '/'
+    data ends
+
+    code segment use16
+    assume cs:code, ds:data
+    output:
+       push eax
+       push ebx
+       push ecx
+       push edx
+       mov bx, offset t
+       mov ecx, 8
+    next:
+       rol eax, 4
+       push eax
+       and eax, 0Fh
+       xlat
+       mov ah, 2
+       mov dl, al
+       int 21h
+       pop eax
+       loop next
+       mov ah, 2
+       mov dl, 0Dh
+       int 21h
+       mov dl, 0Ah
+       int 21h
+       pop edx
+       pop ecx
+       pop ebx
+       pop eax
+       ret
+    
+    main:
+       cld
+       mov ax, data
+       mov ds, ax
+       mov ah, 0Ah
+       mov dx, offset buf
+       int 21h
+       xor bx, bx
+       mov bl, buf[1]    ; BL=输入字符串的长度
+       mov buf[bx+2], 00h; 把输入的回车符替换成00h
+                         ; buf[2]起是字符串的内容
+       mov ah, 2
+       mov dl, 0Dh
+       int 21h           ; 输出回车
+       mov dl, 0Ah
+       int 21h           ; 输出换行
+       ;
+       lea si, buf[2]    ; ds:si->输入的字符串
+       ;
+    ;请在#1_begin和#1_end之间补充代码实现以下功能:
+    ;    计算ds:si指向的表达式,运算结果保存到变量[b]中
+    ;注意: 
+    ;    所有补充代码包括自定义函数及变量均必须
+    ;    放在#1_begin和#1_end之间
+    ;#1_begin-------------------------------------
+
+
+    process:
+        mov al,[si]
+        mov bx,0
+        findo:
+            cmp al,s[bx]
+            je findo_
+            inc bx
+            cmp bx,3
+            jbe findo
+        findo_:
+        cmp bx,3
+        jbe iso
+            mov ebx,0
+            mov bl,al
+            sub bl,'0'
+    
+            mov eax,c
+            mov ecx,10
+            mul ecx
+            mov c,eax
+    
+            add c,ebx
+            jmp done
+        iso:
+            mov bp,prev_op
+            shl bp,1
+            call word ptr [fun+bp]
+            mov prev_op,bx
+        done:
+        inc si
+        cmp prev_op,0
+        jne process
+    jmp do_output
+    
+    fun_add:
+        mov eax,b
+        add eax,c
+        mov c,0
+        mov b,eax
+        ret
+    fun_mul:
+        mov eax,b
+        mul c
+        mov c,0
+        mov b,eax
+        ret
+    fun_div:
+        mov eax,[b]
+        mov edx,0
+        div c
+        mov c,0
+        mov b,eax
+        ret
+    ;#1_end=======================================
+    do_output:
+       mov eax, [b]
+       call output; 用16进制格式输出变量b的值
+    exit:
+       mov ah, 4Ch
+       int 21h
+    code ends
+    end main
+    ;==========请把以上代码保存到src\main.asm==============================
+    ```
+
 ??? note "10 调用函数f(n)求 1+2+3+...+n 之和并保存到变量sum中"
 	
 	注意要用空格不能用 Tab。白老师在书本题目集的 judge 程序里面没有对 Tab 做处理。
 	
 	```asm
 	;本题要求:
-    ;完成3项程序填空,调用函数f()求1+2+3+...+n之和并保存到变量sum中,
-    ;注意sum不会超过0FFFFh,故在计算过程中不需要考虑加法溢出
-    ;==========请把在完成填空后把本文件保存到src\main.asm==================
-    ;==========选中main.sh及src文件夹->右键->压缩成submit.zip提交==========
-    .386
-    data segment use16
-    sth db 10h dup(0)
-    n dw 3
-    sum dw 0
-    data ends
-
-    code segment use16
-    assume cs:code, ds:data
-    ;函数f()原型:
-    ;   short int f(short int n, short int *psum);
-    ;函数f()功能:
-    ;   计算1+2+3+...n的和, 并把和保存到*psum中。例如当n=3时, *psum=6。
-    ;提示:
-    ;   f()的参数通过堆栈传递, 其中n就是[bp+4], psum就是[bp+6]。
-    ;注意:
-    ;   在函数f()中不可直接引用data段中的变量n及sum, 否则会编译失败
-    f proc near
-       push bp
-       mov bp, sp
-       mov bx, 0
-       mov cx, 0
-    ;#1_begin--------
-       mov cx,[bp+4] ; <--第1空, 请把解答写在分号左边, 本行上方切勿插入空行
-    ;#1_end----------
-       mov bx, [bp+6]
-       xor ax, ax
-    next:
-       add ax, cx
-       loop next
-    ;#2_begin------
-       mov [bx],ax ; <--第2空, 请把解答写在分号左边, 本行上方切勿插入空行
-    ;#2_end--------
-       pop bp
-       ret
-    f endp
-
-    main:
-       mov ax, data
-       mov ds, ax
-       mov ax, offset sum; ax = sum的偏移地址
-    ;#3_begin------------
-       push ax ; <--第3空, 请把解答写在分号左边, 本行上方切勿插入空行
-    ;#3_end--------------
-       push [n]     ; 传递n的值给函数f()
-       call f
-       add sp, 4    ; 清除堆栈上的2个参数
-       mov ax, [sum]; 跟踪时请检查当n=3时,ax应该等于6
-       mov ah, 4Ch
-       int 21h
-    code ends
-    end main
-    ;==========请在完成填空后把本文件保存到src\main.asm================
-    ```
+	;完成3项程序填空,调用函数f()求1+2+3+...+n之和并保存到变量sum中,
+	;注意sum不会超过0FFFFh,故在计算过程中不需要考虑加法溢出
+	;==========请把在完成填空后把本文件保存到src\main.asm==================
+	;==========选中main.sh及src文件夹->右键->压缩成submit.zip提交==========
+	.386
+	data segment use16
+	sth db 10h dup(0)
+	n dw 3
+	sum dw 0
+	data ends
+	
+	code segment use16
+	assume cs:code, ds:data
+	;函数f()原型:
+	;   short int f(short int n, short int *psum);
+	;函数f()功能:
+	;   计算1+2+3+...n的和, 并把和保存到*psum中。例如当n=3时, *psum=6。
+	;提示:
+	;   f()的参数通过堆栈传递, 其中n就是[bp+4], psum就是[bp+6]。
+	;注意:
+	;   在函数f()中不可直接引用data段中的变量n及sum, 否则会编译失败
+	f proc near
+	   push bp
+	   mov bp, sp
+	   mov bx, 0
+	   mov cx, 0
+	;#1_begin--------
+	   mov cx,[bp+4] ; <--第1空, 请把解答写在分号左边, 本行上方切勿插入空行
+	;#1_end----------
+	   mov bx, [bp+6]
+	   xor ax, ax
+	next:
+	   add ax, cx
+	   loop next
+	;#2_begin------
+	   mov [bx],ax ; <--第2空, 请把解答写在分号左边, 本行上方切勿插入空行
+	;#2_end--------
+	   pop bp
+	   ret
+	f endp
+	
+	main:
+	   mov ax, data
+	   mov ds, ax
+	   mov ax, offset sum; ax = sum的偏移地址
+	;#3_begin------------
+	   push ax ; <--第3空, 请把解答写在分号左边, 本行上方切勿插入空行
+	;#3_end--------------
+	   push [n]     ; 传递n的值给函数f()
+	   call f
+	   add sp, 4    ; 清除堆栈上的2个参数
+	   mov ax, [sum]; 跟踪时请检查当n=3时,ax应该等于6
+	   mov ah, 4Ch
+	   int 21h
+	code ends
+	end main
+	;==========请在完成填空后把本文件保存到src\main.asm================
+	```
 
 
 ??? note "11 输入一个十六进制字符串,转化成整数,统计该整数二进制位值=1的位数"
@@ -956,6 +1108,93 @@
     ;==========请把以上代码保存到src\main.asm==============================
     ```
 
+??? note "20 输入一个字符，判断它是英文、数字、空白、还是其它字符"
+	```asm
+	;本题要求:
+    comment %
+    以下程序的功能是：
+    (1) 调用int 21h/AH=01h输入一个字符c
+    (2) 若c∈['A','Z']或c∈['a','z']则输出"alpha"
+    (3) 若c∈['0','9']则输出"digit"
+    (4) 若c==0Dh||c==09h||c==' '则输出"white space"
+    (5) 若为其它字符则输出"other"
+    (6) 输出字符串请调用int 21h/AH=09h
+    %
+    ;==========请把以下代码保存到src\main.asm==============================
+    ;==========选中main.sh及src文件夹->右键->压缩成submit.zip提交==========
+    data segment
+    alpha db "alpha", '$'
+    digit db "digit", '$'
+    white db "white space", '$'
+    other db "other", '$'
+    data ends
+
+    code segment
+    assume cs:code, ds:data
+    main:
+       mov ax, data
+       mov ds, ax
+    ;请在#1_begin和#1_end之间补充代码实现以下功能:
+    ;(1) 调用int 21h/AH=01h输入一个字符c
+    ;(2) 若c∈['A','Z']或c∈['a','z']则输出"alpha"
+    ;(3) 若c∈['0','9']则输出"digit"
+    ;(4) 若c==0Dh||c==09h||c==' '则输出"white space"
+    ;(5) 若为其它字符则输出"other"
+    ;#1_begin-------------------------------------
+        mov ah,1
+        int 21h
+
+        cmp al,0Dh
+        je print_white
+        cmp al,09h
+        je print_white
+        cmp al,20h
+        je print_white
+
+        cmp al,'A'
+        jb check_lower
+        cmp al,'Z'
+        jbe print_alpha
+
+        check_lower:
+        cmp al,'a'
+        jb check_digit
+        cmp al,'z'
+        jbe print_alpha
+
+        check_digit:
+        cmp al,'0'
+        jb print_other
+        cmp al,'9'
+        jbe print_digit
+
+        jmp print_other
+
+    print_alpha:
+        mov dx,offset alpha
+        jmp print
+    print_digit:
+        mov dx,offset digit
+        jmp print
+    print_white:
+        mov dx,offset white
+        jmp print
+    print_other:
+        mov dx,offset other
+        jmp print
+    print:
+        mov ah,9
+        int 21h
+    ;#1_end=======================================
+    exit:
+       mov ah, 4Ch
+       int 21h
+    code ends
+    end main
+    ;==========请把以上代码保存到src\main.asm==============================
+    ```
+
+
 ??? note "21 扫雷"
 	```asm
 	.386
@@ -1195,6 +1434,349 @@
     end main
     ```
 
+??? note "22 迷宫"
+	```asm
+	;本题要求: 
+    ;          补全函数show_maze()及move_bug()
+    ;==========请把在完成代码补全后把本文件保存到src\main.asm==============
+    ;==========选中main.sh及src文件夹->右键->压缩成submit.zip提交==========
+
+    .386
+
+    data segment use16
+    WALL         equ 0B2h
+    RED          equ 0Ch
+    WHITE        equ 07h
+    RIGHT_BOUND  equ 40
+    BOTTOM_BOUND equ 12
+    W            equ (RIGHT_BOUND+1)
+    H            equ (BOTTOM_BOUND+1)
+    ;
+    ;-------以下定义在judge时会改变---------
+    maze label byte
+    db 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    db 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1
+    db 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1
+    db 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1
+    db 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1
+    db 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1
+    db 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1
+    db 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1
+    db 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1
+    db 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1
+    db 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1
+    db 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+    db 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    tx dw 39
+    ty dw 11
+    ;=======以上定义在judge时会改变=========
+    ;
+    trace db (BOTTOM_BOUND+1)*(RIGHT_BOUND+1) dup (0)
+    mark  db (BOTTOM_BOUND+1)*(RIGHT_BOUND+1) dup (0)
+    ;
+    d dw -1, 0, 0, 1, 1, 0, 0, -1; int d[4][2]={{-1,0},{0,1},{1,0},{0,-1}}
+    data ends
+
+    code segment use16
+    assume cs:code, ds:data
+    ;把二维数组下标转化为一维数组下标
+    ;int __stdcall index(int y, int x)
+    ;input:
+    ;   y = word ptr [bp+4]
+    ;   x = word ptr [bp+6]
+    ;output:
+    ;   di = y*W+x
+    index proc
+       push bp
+       mov bp, sp
+       mov ax, [bp+4]
+       mov cx, W
+       mul cx
+       add ax, [bp+6]
+       mov di, ax
+       pop bp
+       ret 4
+    index endp
+
+
+    ;在坐标(x,y)处画一个颜色为color的字符shape
+    ;void __cdecl draw_char(int x, int y, unsigned char shape, unsigned char color)
+    ;input:
+    ;   x = [bp+4]
+    ;   y = [bp+6]
+    ;   shape = [bp+8]
+    ;   color = [bp+0Ah]
+    ;output:
+    ;   draw shape with color at (x,y)
+    draw_char:
+       push bp
+       mov bp, sp
+       push di
+       mov ax, [bp+6]
+       mov cx, 80
+       mul cx
+       add ax, [bp+4]
+       shl ax, 1
+       mov di, ax
+       mov al, [bp+8]
+       mov ah, [bp+0Ah]
+       mov es:[di], ax
+       pop di
+       pop bp
+       ret
+
+
+    ;显示迷宫
+    ;void __cdecl show_maze(int x0, int y0, int x1, int y1)
+    ;input:
+    ;   x0 = [bp+4]
+    ;   y0 = [bp+6]
+    ;   x1 = [bp+8]
+    ;   y1 = [bp+0Ah]
+    ;output:
+    ;   show maze
+    show_maze:
+    ;#1_begin------------------------------
+    ;请在这里补全函数show_maze()
+        push bp
+        mov bp,sp
+        push si
+        push di
+        push ax
+        mov si,[bp+6]
+        fory:
+            cmp si,[bp+0Ah]
+            jg fory_
+            mov di,[bp+4]
+            forx:
+                cmp di,[bp+8]
+                jg forx_
+                push di
+                push di
+                push si
+                call index
+                mov ah,0
+                mov al,maze[di]
+                pop di
+                cmp ax,0
+                je tospace
+                    cmp ax,1
+                    je toWALL
+                        jmp done
+                    toWALL:
+                        mov ax,WALL
+                    jmp done
+                tospace:
+                    mov ax,' '
+                done:
+                push WHITE
+                push ax
+                push si
+                push di
+                call draw_char
+                add sp,8
+                inc di
+                jmp forx
+            forx_:
+            inc si
+            jmp fory
+        fory_:
+        pop ax
+        pop di
+        pop si
+        pop bp
+        ret
+    ;#1_end================================
+
+
+    ;画路线
+    ;void __cdecl show_trace(void)
+    show_trace:
+       push bp
+       mov bp, sp
+       push bx
+       push si
+       push di
+       mov bx, 1
+    show_trace_next_row:
+       cmp bx, BOTTOM_BOUND
+       jge show_trace_done
+       mov si, 1
+    show_trace_next_node:
+       cmp si, RIGHT_BOUND
+       jge show_trace_one_row_done
+       push si
+       push bx
+       call index
+       mov al, trace[di]
+       cmp al, 1
+       jne show_trace_one_node_done
+    show_this_trace_node:
+       mov al, 47h
+       push ax
+       mov al, ' '
+       push ax
+       push bx
+       push si
+       call draw_char
+       add sp, 8
+    show_trace_one_node_done:
+       inc si
+       jmp show_trace_next_node
+    show_trace_one_row_done:
+       inc bx
+       jmp show_trace_next_row
+    show_trace_done:
+       pop di
+       pop si
+       pop bx
+       pop bp
+       ret   
+
+
+    ;用深度优先算法搜索迷宫查找目标, (x0,y0)是起点, (x1,y1)是终点
+    ;int __cdecl move_bug(int x0, int y0, int x1, int y1)
+    ;input:
+    ;   x0 = [bp+4]
+    ;   y0 = [bp+6]
+    ;   x1 = [bp+8]
+    ;   y1 = [bp+0Ah]
+    ;output:
+    ;   ax = 1 as true
+    ;   ax = 0 as false
+    ;locals:
+    ;   k  = word ptr [bp-6]
+    ;   nx = word ptr [bp-4]
+    ;   ny = word ptr [bp-2]
+    k  equ word ptr [bp-6]
+    nx equ word ptr [bp-4]
+    ny equ word ptr [bp-2]
+    move_bug:
+    ;#2_begin------------------------------
+    ;请在这里补全函数move_bug()
+        push bp
+        mov bp,sp
+        sub sp,6
+        push si
+        push di
+        mov si,[bp+4]
+        mov di,[bp+6]
+        cmp si,0
+        jb return0
+        cmp si,RIGHT_BOUND
+        ja return0
+        cmp di,0
+        jb return0
+        cmp di,BOTTOM_BOUND
+        ja return0
+
+        push di
+        push si
+        push di
+        call index
+        mov bx,di
+        pop di
+        cmp maze[bx],1
+        je return0
+        cmp mark[bx],1
+        je return0
+
+        mov mark[bx],1
+        mov trace[bx],1
+        cmp si,[bp+8]
+        jne do
+        cmp di,[bp+0Ah]
+        jne do
+        jmp return1
+    do:
+        mov k,0
+        fork:
+            push bx
+            mov bx,k
+            shl bx,2
+
+            mov nx,si
+            mov ax,d[bx]
+            add nx,ax
+            mov ny,di
+            mov ax,d[bx+2]	; 注意d是dw类型，每个元素2字节
+            add ny,ax
+
+            push word ptr [bp+0Ah]
+            push word ptr [bp+8]
+            push ny
+            push nx
+            call move_bug
+            add sp,8
+
+            pop bx
+
+            cmp ax,1
+            je return1
+
+            inc k
+            cmp k,4
+            jb fork
+
+        mov trace[bx],0
+
+    return0:
+        mov ax,0
+        jmp en
+    return1:
+        mov ax,1
+    en:
+        pop di
+        pop si
+        add sp,6
+        pop bp
+        ret
+    ;#2_end================================
+
+
+    main:
+       mov ax, data
+       mov ds, ax
+       mov ax, 0B800h
+       mov es, ax
+       cld
+       ;
+       mov ax, 0003h
+       int 10h
+       ;
+       mov maze[W*1+1], 0Fh
+       ;
+       push [tx]
+       push [ty]
+       call index
+       mov maze[di], 1Eh
+       ;
+       mov ax, BOTTOM_BOUND
+       push ax
+       mov ax, RIGHT_BOUND
+       push ax
+       xor ax, ax
+       push ax
+       push ax
+       call show_maze
+       add sp, 8
+       ;
+       push [ty]
+       push [tx]
+       mov ax, 1
+       push ax
+       push ax
+       call move_bug
+       add sp, 8
+       ;
+       call show_trace
+       ;
+       mov ah, 4Ch
+       int 21h
+    code ends
+    end main
+	```
+	
 ## 作业
 
 ??? note "第一次作业 10.1"
