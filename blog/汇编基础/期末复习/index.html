@@ -2907,7 +2907,7 @@
 
   <h1>期末复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-07T07:56:27.811961+00:00'>2026-01-07</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-07'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-07T07:56:27.811961+00:00'>2026-01-07</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-07T09:40:26.471954+00:00'>2026-01-07</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-07'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-07T09:40:26.471954+00:00'>2026-01-07</time></span></div></div></div>
 <h2 id="int-21h">int 21h<a class="headerlink" href="#int-21h" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2985,7 +2985,7 @@
 <p>ds：数据段寄存器，存放数据段的段地址</p>
 <p>es：附加段寄存器</p>
 <p>ss：堆栈段寄存器，存放堆栈段的段地址</p>
-<p>cs 不能用 mov 指令赋值；ds、es、ss 可以用 mov 指令赋值，但源操作数不能是常数，只能是寄存器 ax、bx、cx、dx、sp、bp、si、di 或变量（word）</p>
+<p>cs 不能用 mov 指令赋值；ds、es、ss 可以用 mov 指令赋值，但源操作数不能是常数，只能是寄存器 ax、bx、cx、dx、sp、bp、si、di 或变量（word ptr 宽度的）</p>
 </li>
 <li>
 <p>偏移地址寄存器：表示偏移地址</p>
@@ -3022,6 +3022,7 @@
 </li>
 <li>
 <p>（第 4 位）af：加法时低 4 位向高 4 位进位、减法时低 4 位向高 4 位借位时，af = 1，否则 af = 0</p>
+<p>af 没有相关的跳转指令，它与 BCD 码调整指令入 <code>aaa</code>、<code>aas</code>、<code>daa</code>、<code>das</code> 有关</p>
 </li>
 </ul>
 </li>
@@ -3123,8 +3124,19 @@
 <li>
 <p>语句</p>
 </li>
-<li>常数</li>
-<li>标号</li>
+<li>
+<p>常数</p>
+<p>注意常数表达式中只能包含运算符和常数，不能含有寄存器或对变量值的引用。例如 <code>mov ax,bx+2</code>、<code>mov dx,(byte ptr [si])*3</code> 都是错误的。</p>
+</li>
+<li>
+<p>标号</p>
+</li>
+<li>
+<p>变量</p>
+<p>代码段中，可以用 <code>var</code> 或 <code>[var]</code> 引用变量 var，用 <code>a[1]</code>或 <code>[a+1]</code> 引用 db 类型数组 a 的第一个元素</p>
+<p>数据段中，可以用 <code>var</code> 或 <code>offset var</code> 作为伪指令 ddw 的操作数表示变量 var 的偏移地址（近指针），可以用 <code>var</code> 作为伪指令 dd 的操作数表示变量 var 的远指针。如 <code>addr1 dw abc</code> = <code>addr1 dw offset abc</code>，<code>addr2 dd xyz</code> = <code>addr2 dw offset xyz,seg xyz</code></p>
+<p>代码段的指令中，只能用 <code>offset var</code> 引用变量 var 的偏移地址，<code>seg var</code> 或数据段名引用该变量的段地址</p>
+</li>
 </ul>
 <h2 id="8086">8086 指令系统<a class="headerlink" href="#8086" title="Permanent link">&para;</a></h2>
 <p>任何指令均不能引用寄存器 ip 及 fl</p>
@@ -3253,20 +3265,19 @@
 <li>
 <p>十进制调整指令</p>
 <p>BCD 码 (Binary Coded Decimal)：用二进制编码的十进制数，分为压缩 BCD 码和非压缩 BCD 码。例如十进制数 37 用压缩 BCD 码表示为 37h，而用非压缩 BCD 码则表示为 0307h</p>
+<p>非压缩 BCD 码采用 8 个二进制位表示 1 个十进制位，其中 8 个二进制位中的高 4 位没有意义，即可以为任意值</p>
 <ul>
 <li>
 <p>压缩 BCD 码调整指令</p>
 <ul>
 <li><code>daa</code>：在 al 被做加法后将结果 al 调整为 BCD 码</li>
-<li>
-<p><code>das</code>：在 al 被做减法后将结果 al 调整为 BCD 码</p>
-<ul>
-<li>非压缩 BCD 码调整指令</li>
+<li><code>das</code>：在 al 被做减法后将结果 al 调整为 BCD 码</li>
 </ul>
 </li>
 <li>
-<p><code>aaa</code>：加法的 ASCII 调整，在 al 被做加法后连带 ah 一起调整 ax 为非压缩 BCD 码</p>
-</li>
+<p>非压缩 BCD 码调整指令</p>
+<ul>
+<li><code>aaa</code>：加法的 ASCII 调整，在 al 被做加法后连带 ah 一起调整 ax 为非压缩 BCD 码</li>
 <li><code>aas</code>：减法的 ASCII 调整，在 al 被做减法后连带 ah 一起调整 ax 为非压缩 BCD 码</li>
 <li><code>aam</code>：乘法的 ASCII 调整，在 al 被做乘法后连带 ah 一起调整 ax 为非压缩 BCD 码</li>
 <li><code>aad</code>：除法的 ASCII 调整，在 al 被做除法后连带 ah 一起调整 ax 为非压缩 BCD 码</li>
@@ -3392,9 +3403,20 @@
 <li>
 <p>无条件跳转指令</p>
 <ul>
-<li><code>jmp short dest</code> / <code>jmp dest</code>：短跳。机器码有 2 个字节，dest 与下条指令距离在 [-128,127]</li>
-<li><code>jmp near ptr dest</code> / <code>jmp dest</code>：近跳。机器码有 3 个字节，dest 与下条指令距离在 [-32768,+32767]</li>
-<li><code>jmp far ptr dest</code> / <code>jmp dest</code>：远跳。机器码有 5 个字节</li>
+<li>
+<p><code>jmp short dest</code> / <code>jmp dest</code>：短跳。机器码有 2 个字节，dest 与下条指令距离在 [-128,127]</p>
+<p>机器码 <code>0EBh,idata8</code>，操作是 IP = IP（下条指令的偏移地址）+ 符号扩充为 16 位的 idata8</p>
+<p>idata8 = 目标地址 - (当前这条短跳指令的偏移地址 + 2) = 目标地址 - 下条指令的偏移地址</p>
+</li>
+<li>
+<p><code>jmp near ptr dest</code> / <code>jmp dest</code>：近跳。机器码有 3 个字节，dest 与下条指令距离在 [-32768,+32767]</p>
+<p>机器码 <code>0E9h,idata16_L8,idata16_H8</code>，操作是 IP = IP（下条指令的偏移地址）+ idata16</p>
+<p>idata16 = 目标地址 - (当前这条近跳指令的偏移地址 + 3) = 目标地址 - 下条指令的偏移地址</p>
+</li>
+<li>
+<p><code>jmp far ptr dest</code> / <code>jmp dest</code>：远跳。机器码有 5 个字节</p>
+<p>机器码 <code>0EAh,idata32_L16,idata32_H16</code>，操作是 IP = idata32_L16，CS = idata32_H16</p>
+</li>
 </ul>
 </li>
 <li>
@@ -3420,24 +3442,47 @@
 <li>
 <p>子程序调用与返回指令</p>
 <ul>
-<li><code>call near ptr dest</code> / <code>call dest</code>：近调用。机器码有 3 个字节</li>
-<li><code>retn</code> / <code>retn idata16</code>：近返回（在多数情况下可以简写为 ret）</li>
-<li><code>call far ptr dest</code>：远调用。机器码有 5 个字节</li>
-<li><code>retf</code> / <code>retf idata16</code>：远返回</li>
+<li>
+<p><code>call near ptr dest</code> / <code>call dest</code>：近调用。机器码有 3 个字节，dest 与下条指令距离在 [-32768,+32767]</p>
+<p>机器码 <code>0E8h,idata16_L8,idata16_H8</code>，操作是 push IP（下条指令的偏移地址），IP = IP + idata16</p>
+<p>idata16 = 目标地址 - (当前指令的偏移地址 + 3) = 目标地址 - 下条指令的偏移地址</p>
+</li>
+<li>
+<p><code>retn</code> / <code>retn idata16</code>：近返回（在多数情况下可以简写为 ret）</p>
+<p><code>retn</code> 的操作是 pop IP</p>
+<p><code>retn idata16</code> 的操作是 pop IP, sp += idata16</p>
+</li>
+<li>
+<p><code>call far ptr dest</code>：远调用。机器码有 5 个字节</p>
+<p>机器码 <code>9Ah,idata32_L16,idata32_H16</code>，操作是 push CS, push IP, IP = idata32_L16, CS=idata32_H16</p>
+</li>
+<li>
+<p><code>retf</code> / <code>retf idata16</code>：远返回</p>
+<p><code>retf</code> 的操作是 pop IP，pop CS</p>
+<p><code>retf idata16</code> 的操作是 pop IP, pop CS, sp += idata16</p>
+</li>
 </ul>
 </li>
 <li>
 <p>中断和中断返回指令</p>
 <ul>
 <li>
-<p><code>int idata8</code>：调用 n 号中断，等效的操作有 pushf, push cs, push ip, tf = 0, if = 0, ip = word ptr 0:[n*4], cs = word ptr 0:[n*4+2]</p>
+<p><code>int idata8</code>：调用 n 号中断</p>
+<p>机器码 <code>0CDh,idata8</code>，操作是 pushf, push CS, push IP, IF = 0，TF = 0, IP = word ptr 0000:[idata8*4], CS = word ptr 0000:[idata8*4+2]</p>
 </li>
 <li>
-<p><code>into</code>：溢出中断，如果 of == 1 则调用 4 号中断（int 4h）</p>
+<p><code>int 3</code>：软件断点中断</p>
+<p>机器码 <code>0CCh</code>，操作是 pushf, push CS, push IP, IF = 0, TF = 0, IP = word ptr 0000:[000Ch], CS = word ptr 0000:[000Eh]</p>
 </li>
-<li><code>iret</code>：中断返回，等效操作有 pop ip, pop cs, popf</li>
+<li>
+<p><code>into</code>：溢出中断。如果 of == 1 则调用 4 号中断（int 4h）</p>
+<p>机器码 <code>0CEh</code>，操作是若 OF == 1，则 pushf, push CS, push IP, IF = 0, TF = 0, IP = word ptr 0000:[0010h], CS = word ptr 0000:[0012h]</p>
+</li>
+<li>
+<p><code>iret</code>：中断返回</p>
+<p>操作是 pop IP，pop CS，popf</p>
+</li>
 </ul>
-<p>​   </p>
 </li>
 </ul>
 </li>
