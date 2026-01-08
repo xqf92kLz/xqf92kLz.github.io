@@ -2722,7 +2722,7 @@
 
   <h1>期末复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-07'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-07T15:38:17.257584+00:00'>2026-01-07</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-07'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-07T15:38:17.257584+00:00'>2026-01-07</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-08T11:16:20.375222+00:00'>2026-01-08</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-08'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-08T11:16:20.375222+00:00'>2026-01-08</time></span></div></div></div>
 <details class="warning" open="open">
 <summary>一些踩过的坑</summary>
 <ul>
@@ -2750,7 +2750,7 @@
 </ul>
 </details>
 <h2 id="_1">云峰模拟卷<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<details class="info">
+<details class="info" open="open">
 <summary>2025-2026</summary>
 <p>设 <span class="arithmatex">\(\int_1^{+\infty}[\dfrac{2x^2+bx+a}{x(2x+a)}-1]\text dx=1\)</span>，求 <span class="arithmatex">\(a,b\)</span>。</p>
 <details class="note">
@@ -3091,6 +3091,13 @@
 <details class="note">
 <summary>解答</summary>
 <p><span class="arithmatex">\(\begin{aligned}&amp;\xlongequal{t=x-1}\int_{-1}^1(1+t)^2\sqrt{1-t^2}\text dt\\&amp;=\int_{-1}^1\sqrt{1-t^2}\text dt+\int_{-1}^1t^2\sqrt{1-t^2}\text dt\\&amp;=\dfrac\pi 2+2\int_0^1 t^2\sqrt{1-t^2}\text dt\\&amp;\xlongequal{t=\sin u}\dfrac\pi 2+2\int_0^{\frac\pi 2}\sin^2u\cos^2u\text du\\&amp;=\dfrac\pi 2+\dfrac 1 4\int_0^{\frac\pi 2}\sin^2 2u\text d(2u)\\&amp;=\dfrac\pi 2+\dfrac 1 4\cdot 2\cdot\dfrac 1 2\cdot\dfrac\pi 2\\&amp;=\dfrac 5 8\pi\end{aligned}\)</span></p>
+</details>
+<p>将 <span class="arithmatex">\(f(x)=x\arctan x-\ln\sqrt{1+x^2}\)</span> 展开成 <span class="arithmatex">\(x\)</span> 的幂级数，并写出成立的区间。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(f'(x)=\arctan x+x\cdot \dfrac 1 {1+x^2}-\dfrac 1 {\sqrt{1+x^2}}\cdot \dfrac 1{2\sqrt{1+x^2}}\cdot 2x=\arctan x=\int_0^x \dfrac 1 {1+x^2}\text dx=\int_0^x \sum_{n=0}^{\infty}(-1)^n x^{2n}\text dx=\sum_{n=0}^{\infty}(-1)^n\dfrac{x^{2n+1}}{2n+1}\)</span></p>
+<p><span class="arithmatex">\(f(x)=f(0)+\int_0^x f'(x)\text dx=\sum_{n=0}^{\infty}(-1)^n\dfrac{x^{2n+2}}{(2n+1)(2n+2)}\)</span></p>
+<p><span class="arithmatex">\(x\in[-1,1]\)</span></p>
 </details>
 </details>
 
