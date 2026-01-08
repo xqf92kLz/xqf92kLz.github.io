@@ -2722,7 +2722,7 @@
 
   <h1>期末复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-08T11:16:20.375222+00:00'>2026-01-08</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-08'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-08T11:16:20.375222+00:00'>2026-01-08</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-08T14:22:49.098487+00:00'>2026-01-08</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-08'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-08T14:22:49.098487+00:00'>2026-01-08</time></span></div></div></div>
 <details class="warning" open="open">
 <summary>一些踩过的坑</summary>
 <ul>
@@ -2742,9 +2742,10 @@
 <ul>
 <li><span class="arithmatex">\(\lim\limits_{t\to +\infty}t(-\arctan t+\dfrac\pi 2)=\lim_{t\to +\infty}t\cdot\arctan\dfrac 1 t=1\)</span></li>
 <li>考虑极值点记得考虑不可导点，考虑拐点记得考虑二阶导数不存在的点。</li>
-<li>曲率公式 <span class="arithmatex">\(K=\dfrac{|y''|}{(1+y'^2)^{\frac 3 2}}\)</span></li>
+<li>曲率公式 <span class="arithmatex">\(k=\dfrac{|y''|}{(1+y'^2)^{\frac 3 2}}=\dfrac{|x'y''-x''y'|}{(x'^2+y'^2)^{\frac 3 2}}\)</span>。曲率半径 <span class="arithmatex">\(R=\dfrac 1 k\)</span></li>
 <li>旋转曲面侧面积 <span class="arithmatex">\(S=\int 2\pi r\text ds\)</span>，注意是乘弧长微元</li>
-<li>极坐标弧长公式 <span class="arithmatex">\(L=\int_{\alpha}^{\beta}\sqrt{r^2(\theta)+[r'(\theta)]^2}\text d\theta\)</span></li>
+<li>极坐标弧长公式：若 <span class="arithmatex">\(r=r(\theta)\,(\alpha\leq \theta\leq \beta)\)</span>，则 <span class="arithmatex">\(s=\int_{\alpha}^{\beta}\sqrt{r^2(\theta)+[r'(\theta)]^2}\text d\theta\)</span></li>
+<li>若 <span class="arithmatex">\(\theta=\theta(r)\,(a\leq r\leq b)\)</span>，则 <span class="arithmatex">\(s=\int_a^b\sqrt{1+r^2\cdot[\theta'(r)]^2}\text dr\)</span></li>
 <li>推广的积分中值定理：若 <span class="arithmatex">\(f(x),g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上恒非负或恒非正，则 <span class="arithmatex">\(\exists\xi\in(a,b)\)</span> 使得 <span class="arithmatex">\(\int_a^b f(x)g(x)\text dx=f(\xi)\int_a^b g(x)\text dx\)</span>。</li>
 <li><span class="arithmatex">\(\infty\pm\infty\)</span> 提公因子转化成不定式。如 <span class="arithmatex">\(\lim\limits_{x\to -\infty}x\arctan x+\dfrac\pi 2 x=\lim\limits_{x\to -\infty}\dfrac{\arctan x+\frac\pi 2}{\frac 1 x}=\lim\limits_{x\to -\infty}\dfrac{\frac{1}{1+x^2}}{-\frac 1 {x^2}}=-1\)</span>。</li>
 </ul>
@@ -3100,6 +3101,7 @@
 <p><span class="arithmatex">\(x\in[-1,1]\)</span></p>
 </details>
 </details>
+<p>​       </p>
 
 
 
