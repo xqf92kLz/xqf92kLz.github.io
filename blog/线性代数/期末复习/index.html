@@ -746,6 +746,17 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
+        知识补充
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         补习题课内容
       
     </span>
@@ -789,17 +800,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        知识补充
-      
-    </span>
-  </a>
   
 </li>
       
@@ -2716,6 +2716,17 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
+        知识补充
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         补习题课内容
       
     </span>
@@ -2763,17 +2774,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        知识补充
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2803,12 +2803,13 @@
 
   <h1>期末复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-10T04:53:45.519267+00:00'>2026-01-10</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-10'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-10T04:53:45.519267+00:00'>2026-01-10</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-10'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-10T12:34:11.949153+00:00'>2026-01-10</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-10'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-10T12:34:11.949153+00:00'>2026-01-10</time></span></div></div></div>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <ul>
 <li>区分正交和正定。</li>
 <li>不是所有实对称矩阵都能写成 <span class="arithmatex">\(\boldsymbol B\boldsymbol B^T\)</span> 的形式的。只有半正定的实对称矩阵可以。</li>
+<li>证正定首先要证明是实对称矩阵。</li>
 </ul>
 </details>
 <details class="tip" open="open">
@@ -2822,9 +2823,62 @@
 <p><span class="arithmatex">\(|(\boldsymbol \alpha,\boldsymbol \beta)|\leq\|\boldsymbol \alpha\|\|\boldsymbol \beta\|\)</span></p>
 <p><span class="arithmatex">\((\boldsymbol \alpha^T\boldsymbol \beta)^2\leq (\boldsymbol \alpha^T\boldsymbol \alpha)(\boldsymbol \beta^T\boldsymbol \beta)\)</span></p>
 </li>
+<li>
+<p>正定矩阵一定是实对称矩阵</p>
+</li>
 </ul>
 </details>
-<h2 id="_1">补习题课内容<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">知识补充<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>秩一矩阵 <span class="arithmatex">\(\boldsymbol A=\boldsymbol \alpha\boldsymbol \beta^T\)</span></p>
+<p>由于 <span class="arithmatex">\(\boldsymbol A\boldsymbol \alpha=(\boldsymbol \beta^T\boldsymbol \alpha)\boldsymbol \alpha\)</span>，故 <span class="arithmatex">\(\lambda=\boldsymbol \beta^T\boldsymbol \alpha=\text{tr}(\boldsymbol A)\)</span> 是一个特征值。</p>
+<p>由于 <span class="arithmatex">\(r(\boldsymbol A)=1&lt;n\)</span>，则 <span class="arithmatex">\(\lambda=0\)</span> 是至少 <span class="arithmatex">\(n-1\)</span> 重特征值。</p>
+<p>故若 <span class="arithmatex">\(\text{tr}(\boldsymbol A)\neq 0\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值为 <span class="arithmatex">\(\text{tr}(\boldsymbol A)\)</span>（一重）、<span class="arithmatex">\(0\)</span>（<span class="arithmatex">\(n-1\)</span> 重）。</p>
+</li>
+<li>
+<p>实反对称矩阵</p>
+<ul>
+<li>
+<p>零二次型性质：<span class="arithmatex">\(\forall \boldsymbol x\in\mathbb P^{n\times 1}\)</span>，<span class="arithmatex">\(y=\boldsymbol x^T\boldsymbol A\boldsymbol x=0\)</span></p>
+<p>证明：<span class="arithmatex">\(y=(\boldsymbol x^T\boldsymbol A\boldsymbol x)^T=\boldsymbol x^T\boldsymbol A^T\boldsymbol x=\boldsymbol x^T(-\boldsymbol A)\boldsymbol x=-y\Rightarrow y=0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(|\boldsymbol A|=|\boldsymbol A^T|=|\boldsymbol -\boldsymbol A|=(-1)^n|\boldsymbol A|\)</span></p>
+</li>
+<li>
+<p>特征值 <span class="arithmatex">\(\lambda\)</span> 只能是纯虚数或 <span class="arithmatex">\(0\)</span>。非零特征值成对出现（<span class="arithmatex">\(\pm b\text i\)</span>）</p>
+</li>
+<li>
+<p>秩必定是偶数</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\boldsymbol Q=(\boldsymbol E-\boldsymbol A)(\boldsymbol E+\boldsymbol A)^{-1}\)</span> 是正交矩阵，且不含特征值 <span class="arithmatex">\(-1\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 与 <span class="arithmatex">\(\boldsymbol B\boldsymbol x=\boldsymbol 0\)</span> 的公共解：<span class="arithmatex">\(\begin{pmatrix}\boldsymbol A\\\boldsymbol B\end{pmatrix}\boldsymbol x=\boldsymbol 0\)</span> 的解</p>
+</li>
+<li>
+<p>方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 与 <span class="arithmatex">\(\boldsymbol B\boldsymbol x=\boldsymbol 0\)</span> 同解 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(r(\boldsymbol A)=r(\boldsymbol B)=r\begin{pmatrix}\boldsymbol A\\\boldsymbol B\end{pmatrix}\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol A\)</span> 的行向量组与 <span class="arithmatex">\(\boldsymbol B\)</span> 的行向量组等价</p>
+<p>方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 的解也是 <span class="arithmatex">\(\boldsymbol B\boldsymbol x=\boldsymbol 0\)</span> 的解 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(r(\boldsymbol A)=r\begin{pmatrix}\boldsymbol A\\\boldsymbol B\end{pmatrix}\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\boldsymbol B\)</span> 的行向量组可以由 <span class="arithmatex">\(\boldsymbol A\)</span> 的行向量组线性表示</p>
+</li>
+<li>
+<p>舒尔公式：当 <span class="arithmatex">\(\boldsymbol A\)</span> 可逆时</p>
+<p><span class="arithmatex">\(\begin{pmatrix}\boldsymbol E_r&amp;\boldsymbol O\\-\boldsymbol C\boldsymbol A^{-1}&amp;\boldsymbol E_{n-r}\end{pmatrix}\begin{pmatrix}\boldsymbol A&amp;\boldsymbol B\\\boldsymbol C&amp;\boldsymbol D\end{pmatrix}=\begin{pmatrix}\boldsymbol A&amp;\boldsymbol B\\\boldsymbol O&amp;\boldsymbol D-\boldsymbol C\boldsymbol A^{-1}\boldsymbol B\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\begin{pmatrix}\boldsymbol A&amp;\boldsymbol B\\\boldsymbol C&amp;\boldsymbol D\end{pmatrix}\begin{pmatrix}\boldsymbol E_r&amp;-\boldsymbol A^{-1}\boldsymbol B\\\boldsymbol O&amp;\boldsymbol E_{n-r}\end{pmatrix}=\begin{pmatrix}\boldsymbol A&amp;\boldsymbol O\\\boldsymbol C&amp;\boldsymbol D-\boldsymbol C\boldsymbol A^{-1}\boldsymbol B\end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(\begin{pmatrix}\boldsymbol E_r&amp;\boldsymbol O\\-\boldsymbol C\boldsymbol A^{-1}&amp;\boldsymbol E_{n-r}\end{pmatrix}\begin{pmatrix}\boldsymbol A&amp;\boldsymbol B\\\boldsymbol C&amp;\boldsymbol D\end{pmatrix}\begin{pmatrix}\boldsymbol E_r&amp;-\boldsymbol A^{-1}\boldsymbol B\\\boldsymbol O&amp;\boldsymbol E_{n-r}\end{pmatrix}=\begin{pmatrix}\boldsymbol A&amp;\boldsymbol O\\\boldsymbol O&amp;\boldsymbol D-\boldsymbol C\boldsymbol A^{-1}\boldsymbol B\end{pmatrix}\)</span></p>
+</li>
+<li>
+<p>特征值的降价公式：设 <span class="arithmatex">\(\boldsymbol A_{m\times n},\boldsymbol B_{n\times m},m\geq n\)</span>，则 <span class="arithmatex">\(|\lambda \boldsymbol E_m-\boldsymbol A\boldsymbol B|=\lambda^{m-n}|\lambda\boldsymbol E_n-\boldsymbol B\boldsymbol A|\)</span>。</p>
+<p>特别地，若 <span class="arithmatex">\(n=m\)</span>，则 <span class="arithmatex">\(\boldsymbol A\boldsymbol B\)</span> 与 <span class="arithmatex">\(\boldsymbol B\boldsymbol A\)</span> 有相同的特征多项式。</p>
+</li>
+<li>
+<p>列满秩矩阵适合左消去律，行满秩矩阵适合右消去律</p>
+</li>
+</ul>
+<h2 id="_2">补习题课内容<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="1215">12.15<a class="headerlink" href="#1215" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -2837,8 +2891,8 @@
 <li>
 <p>（1）</p>
 <ul>
-<li><strong>法 1：</strong></li>
-</ul>
+<li>
+<p><strong>法 1：</strong></p>
 <p><span class="arithmatex">\((\boldsymbol \alpha_i-\boldsymbol \alpha_0,\boldsymbol \alpha_j-\boldsymbol \alpha_0)=(\boldsymbol \alpha_i,\boldsymbol \alpha_j)-(\boldsymbol \alpha_i,\boldsymbol \alpha_0)-(\boldsymbol \alpha_j,\boldsymbol \alpha_0)+(\boldsymbol \alpha_0,\boldsymbol \alpha_0)\)</span></p>
 <p>又 <span class="arithmatex">\(|\boldsymbol \alpha_i-\boldsymbol \alpha_j|=\sqrt{(\boldsymbol \alpha_i-\boldsymbol \alpha_j,\boldsymbol \alpha_i,\boldsymbol \alpha_j)}=2\)</span>，则</p>
 <p><span class="arithmatex">\(4=(\boldsymbol \alpha_i-\boldsymbol \alpha_j,\boldsymbol \alpha_i-\boldsymbol \alpha_j)=(\boldsymbol \alpha_i,\boldsymbol \alpha_i)-2(\boldsymbol \alpha_i,\boldsymbol \alpha_j)+(\boldsymbol \alpha_j,\boldsymbol \alpha_j)\quad(1)\)</span> </p>
@@ -2846,7 +2900,7 @@
 <p><span class="arithmatex">\(4=(\boldsymbol \alpha_j-\boldsymbol \alpha_0,\boldsymbol \alpha_j-\boldsymbol \alpha_0)=(\boldsymbol \alpha_j,\boldsymbol \alpha_j)-2(\boldsymbol \alpha_j,\boldsymbol \alpha_0)+(\boldsymbol \alpha_0,\boldsymbol \alpha_0)\quad(3)\)</span></p>
 <p><span class="arithmatex">\((2)+(3)-(1)\)</span> 得 <span class="arithmatex">\(4=2((\boldsymbol \alpha_i,\boldsymbol \alpha_j)-(\boldsymbol \alpha_i,\boldsymbol 0)-(\boldsymbol \alpha_j,\boldsymbol \alpha_0)+(\boldsymbol \alpha_0,\boldsymbol \alpha_0))\)</span></p>
 <p>因此 <span class="arithmatex">\((\boldsymbol \beta_i,\boldsymbol \beta_j)=(\boldsymbol \alpha_i-\boldsymbol \alpha_0,\boldsymbol \alpha_j-\boldsymbol \alpha_0)=2\)</span></p>
-<ul>
+</li>
 <li>
 <p><strong>法 2：</strong></p>
 <p><span class="arithmatex">\((\boldsymbol \beta_i-\boldsymbol \beta_j,\boldsymbol \beta_i-\boldsymbol \beta_j)=(\boldsymbol \beta_i,\boldsymbol \beta_i)-2(\boldsymbol \beta_i,\boldsymbol \beta_j)+(\boldsymbol \beta_j,\boldsymbol \beta_j)\)</span></p>
@@ -2995,15 +3049,6 @@
 </details>
 </li>
 </ul>
-<h2 id="_2">知识补充<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>秩一矩阵 <span class="arithmatex">\(\boldsymbol A=\boldsymbol \alpha\boldsymbol \beta^T\)</span></p>
-<p>由于 <span class="arithmatex">\(\boldsymbol A\boldsymbol \alpha=(\boldsymbol \beta^T\boldsymbol \alpha)\boldsymbol \alpha\)</span>，故 <span class="arithmatex">\(\lambda=\boldsymbol \beta^T\boldsymbol \alpha=\text{tr}(\boldsymbol A)\)</span> 是一个特征值。</p>
-<p>由于 <span class="arithmatex">\(r(\boldsymbol A)=1&lt;n\)</span>，则 <span class="arithmatex">\(\lambda=0\)</span> 是至少 <span class="arithmatex">\(n-1\)</span> 重特征值。</p>
-<p>故若 <span class="arithmatex">\(\text{tr}(\boldsymbol A)\neq 0\)</span>，则 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值为 <span class="arithmatex">\(\text{tr}(\boldsymbol A)\)</span>（一重）、<span class="arithmatex">\(0\)</span>（<span class="arithmatex">\(n-1\)</span> 重）。</p>
-</li>
-</ul>
 <h2 id="_3">刷历年卷<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <details class="info" open="open">
 <summary>2024-2025 春夏</summary>
@@ -3096,15 +3141,24 @@
 <ul>
 <li>
 <p>（1）</p>
+<ul>
+<li>
+<p><strong>法 1：</strong></p>
 <p>考虑齐次线性方程组 <span class="arithmatex">\((\boldsymbol E-\boldsymbol A)\boldsymbol x=\boldsymbol 0\)</span>。</p>
 <p>则 <span class="arithmatex">\(\boldsymbol x^T(\boldsymbol E-\boldsymbol A)\boldsymbol x=\boldsymbol x^T\boldsymbol 0=0\)</span></p>
 <p><span class="arithmatex">\(\boldsymbol x^T\boldsymbol x-\boldsymbol x^T\boldsymbol A\boldsymbol x=0\)</span></p>
 <p>而 <span class="arithmatex">\(\boldsymbol x^T\boldsymbol A\boldsymbol x=(\boldsymbol x^T\boldsymbol A\boldsymbol x)^T=\boldsymbol x^T(-\boldsymbol A)\boldsymbol x=-\boldsymbol x^T\boldsymbol A\boldsymbol x\)</span>，得 <span class="arithmatex">\(\boldsymbol x^T\boldsymbol A\boldsymbol x=0\)</span></p>
-<p>故 <span class="arithmatex">\(\boldsymbol x^T\boldsymbol x=0\Rightarrow \boldsymbol x=0\)</span>，从而齐次方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 只有零解，故 <span class="arithmatex">\(\boldsymbol E-\boldsymbol A\)</span> 可逆。</p>
+<p>故 <span class="arithmatex">\(\boldsymbol x^T\boldsymbol x=0\Rightarrow \boldsymbol x=0\)</span>，从而齐次方程组 <span class="arithmatex">\((\boldsymbol E-\boldsymbol A)\boldsymbol x=\boldsymbol 0\)</span> 只有零解，故 <span class="arithmatex">\(\boldsymbol E-\boldsymbol A\)</span> 可逆。</p>
 <details class="tip" open="open">
 <summary>Tip</summary>
 <p>证明 <span class="arithmatex">\(\boldsymbol A\)</span> 可逆，除了证明 <span class="arithmatex">\(|\boldsymbol A|\neq 0\)</span> 外，还可以证明齐次线性方程组 <span class="arithmatex">\(\boldsymbol A\boldsymbol x=\boldsymbol 0\)</span> 只有零解。</p>
 </details>
+</li>
+<li>
+<p><strong>法 2：</strong></p>
+<p>实反对称矩阵 <span class="arithmatex">\(\boldsymbol A\)</span> 的特征值只能是 <span class="arithmatex">\(0\)</span> 或纯虚数 <span class="arithmatex">\(b\text i\)</span>。<span class="arithmatex">\(\boldsymbol E+\boldsymbol A\)</span> 的特征值为 <span class="arithmatex">\(1\)</span> 或 <span class="arithmatex">\(1+b\text i\)</span>，故 <span class="arithmatex">\(\boldsymbol E+\boldsymbol A\)</span> 的所有特征值均不为 <span class="arithmatex">\(0\)</span>，<span class="arithmatex">\(\boldsymbol E+\boldsymbol A\)</span> 可逆。</p>
+</li>
+</ul>
 </li>
 <li>
 <p>（2）</p>
@@ -3230,10 +3284,120 @@
 <li>
 <p><span class="arithmatex">\(\Rightarrow\)</span>：</p>
 <p>由于 <span class="arithmatex">\(r(\boldsymbol A)=r\)</span>，则存在 <span class="arithmatex">\(m\)</span> 阶可逆矩阵 <span class="arithmatex">\(\boldsymbol P\)</span> 和 <span class="arithmatex">\(n\)</span> 阶可逆矩阵 <span class="arithmatex">\(\boldsymbol Q\)</span>，使得 <span class="arithmatex">\(\boldsymbol A=\boldsymbol P^{-1}\begin{pmatrix}\boldsymbol E_r&amp;\boldsymbol O\\\boldsymbol O&amp;\boldsymbol O\end{pmatrix}\boldsymbol Q^{-1}=\boldsymbol P^{-1}\begin{pmatrix}\boldsymbol E_r\\\boldsymbol O\end{pmatrix}\begin{pmatrix}\boldsymbol E_r&amp;\boldsymbol O\end{pmatrix}\boldsymbol Q^{-1}\)</span></p>
-<p>令 <span class="arithmatex">\(\boldsymbol M_{m\times r}=\boldsymbol P^{-1}\begin{pmatrix}\boldsymbol E_r\\\boldsymbol O\end{pmatrix}=(\boldsymbol \alpha_1,\boldsymbol \alpha_2,\cdots,\boldsymbol \alpha-r)\)</span>，则</p>
+<p>令 <span class="arithmatex">\(\boldsymbol M_{m\times r}=\boldsymbol P^{-1}\begin{pmatrix}\boldsymbol E_r\\\boldsymbol O\end{pmatrix}=(\boldsymbol \alpha_1,\boldsymbol \alpha_2,\cdots,\boldsymbol \alpha_r)\)</span>，<span class="arithmatex">\(\boldsymbol \alpha_1,\boldsymbol \alpha_2,\cdots,\boldsymbol \alpha_r\)</span> 线性无关</p>
+<p><span class="arithmatex">\(\boldsymbol N_{r\times n}=(\boldsymbol E_r,\boldsymbol O)\boldsymbol Q^{-1}=\begin{pmatrix}\boldsymbol \beta_1^T\\\boldsymbol \beta_2^T\\\vdots\\\boldsymbol \beta_r^T\end{pmatrix}\)</span>，则 <span class="arithmatex">\(\boldsymbol \beta_1,\boldsymbol \beta_2,\cdots,\boldsymbol \beta_r\)</span> 线性无关</p>
+<p><span class="arithmatex">\(\boldsymbol A=(\boldsymbol \alpha_1,\boldsymbol \alpha_2,\cdots,\boldsymbol \alpha_r)\begin{pmatrix}\boldsymbol \beta_1^T\\\boldsymbol \beta_2^T\\\vdots\\\boldsymbol \beta_r^T\end{pmatrix}=\sum_{i=1}^r\boldsymbol \alpha_i\boldsymbol \beta_i^T\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\Leftarrow\)</span>：</p>
+<p><span class="arithmatex">\(\boldsymbol A=(\boldsymbol \alpha_1,\boldsymbol \alpha_2,\cdots,\boldsymbol \alpha_r)\begin{pmatrix}\boldsymbol \beta_1^T\\\boldsymbol \beta_2^T\\\vdots\\\boldsymbol \beta_r^T\end{pmatrix}=\sum_{i=1}^r\boldsymbol \alpha_i\boldsymbol \beta_i^T=\boldsymbol M_{m\times r}\boldsymbol N_{r\times n}\)</span>，由于 <span class="arithmatex">\(\boldsymbol \alpha_1,\boldsymbol \alpha_2,\cdots,\boldsymbol \alpha_r\)</span>、<span class="arithmatex">\(\boldsymbol \beta_1,\boldsymbol \beta_2,\cdots,\boldsymbol \beta_r\)</span> 线性无关，则 <span class="arithmatex">\(r(\boldsymbol M)=r(\boldsymbol N)=r\)</span></p>
+<p>则 <span class="arithmatex">\(r(\boldsymbol A)\leq \min(r(\boldsymbol M),r(\boldsymbol N))=r\)</span>，<span class="arithmatex">\(r(\boldsymbol A)\geq r(\boldsymbol M)+r(\boldsymbol N)-r=r\)</span>，故 <span class="arithmatex">\(r(\boldsymbol A)=r\)</span></p>
 </li>
 </ul>
 </details>
+<p><span class="arithmatex">\(\boldsymbol A\)</span> 是 <span class="arithmatex">\(n\)</span> 阶实对称阵，<span class="arithmatex">\(\boldsymbol B\)</span> 是 <span class="arithmatex">\(n\)</span> 阶正定矩阵，证明：矩阵 <span class="arithmatex">\(\boldsymbol A\boldsymbol B\)</span> 的特征值均为实数。</p>
+<details class="note">
+<summary>解答</summary>
+<p>存在可逆实矩阵 <span class="arithmatex">\(\boldsymbol C\)</span> 使得 <span class="arithmatex">\(\boldsymbol B=\boldsymbol C^T\boldsymbol C\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol A\boldsymbol B=\boldsymbol A\boldsymbol C^T\boldsymbol C\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol C\boldsymbol A\boldsymbol B\boldsymbol C^{-1}=\boldsymbol C\boldsymbol A\boldsymbol C^T\boldsymbol C\boldsymbol C^{-1}=\boldsymbol C\boldsymbol A\boldsymbol C^T\)</span>，则 <span class="arithmatex">\(\boldsymbol A\boldsymbol B\sim \boldsymbol C\boldsymbol A\boldsymbol C^T\)</span>，<span class="arithmatex">\(\boldsymbol A\boldsymbol B\)</span> 与 <span class="arithmatex">\(\boldsymbol C\boldsymbol A\boldsymbol C^T\)</span> 特征值相同</p>
+<p>又 <span class="arithmatex">\((\boldsymbol C\boldsymbol A\boldsymbol C^T)^T=\boldsymbol C\boldsymbol A\boldsymbol C^T\)</span>，故 <span class="arithmatex">\(\boldsymbol C\boldsymbol A\boldsymbol C^T\)</span> 是实对称矩阵，特征值均为实数</p>
+<p>因此 <span class="arithmatex">\(\boldsymbol A\boldsymbol B\)</span> 的特征值均为实数</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>将非对称的乘积 <span class="arithmatex">\(\boldsymbol A\boldsymbol B\)</span> 转化为实对称矩阵的相似矩阵</p>
+</details>
+</details>
+<p><span class="arithmatex">\(\boldsymbol A,\boldsymbol B\)</span> 均为实矩阵，<span class="arithmatex">\(\boldsymbol A^{-1}+\boldsymbol B^{-1}=(\boldsymbol A+\boldsymbol B)^{-1}\)</span>，证明：<span class="arithmatex">\((\boldsymbol A\boldsymbol B^{-1})^3=\boldsymbol E\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\((\boldsymbol A+\boldsymbol B)(\boldsymbol A^{-1}+\boldsymbol B^{-1})=\boldsymbol E\)</span></p>
+<p>得 <span class="arithmatex">\(\boldsymbol A\boldsymbol B^{-1}+\boldsymbol B\boldsymbol A^{-1}=-\boldsymbol E\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol A\boldsymbol B^{-1}+(\boldsymbol A\boldsymbol B^{-1})^{-1}=-\boldsymbol E\)</span></p>
+<p>记 <span class="arithmatex">\(\boldsymbol X=\boldsymbol A\boldsymbol B^{-1}\)</span>，则 <span class="arithmatex">\(\boldsymbol X=-\boldsymbol E-\boldsymbol X^{-1}\)</span>，下证 <span class="arithmatex">\(\boldsymbol X^3=\boldsymbol E\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol X^2=-\boldsymbol X-\boldsymbol E\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol X^3=-\boldsymbol X^2-\boldsymbol X=-(-\boldsymbol X-\boldsymbol E)-\boldsymbol X=\boldsymbol E\)</span></p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2020-2021</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol A\in\mathbb R^{m\times n}\)</span>，<span class="arithmatex">\(\boldsymbol B\in\mathbb R^{p\times n}\)</span>，<span class="arithmatex">\(W=\{\boldsymbol A\boldsymbol X\in\mathbb R^m\mid \boldsymbol B\boldsymbol X=\boldsymbol 0_p\}\)</span>，其中 <span class="arithmatex">\(\boldsymbol 0_p\)</span> 是一个 <span class="arithmatex">\(p\)</span> 维零列向量。</p>
+<p>若 <span class="arithmatex">\(r\begin{pmatrix}\boldsymbol A\\\boldsymbol B\end{pmatrix}=r_1\)</span>，<span class="arithmatex">\(r(\boldsymbol B)=r_2\)</span>，求 <span class="arithmatex">\(W\)</span> 的维数。</p>
+<details class="note">
+<summary>解答</summary>
+<p>设 <span class="arithmatex">\(V=\{\boldsymbol X\mid \boldsymbol B\boldsymbol X=\boldsymbol 0\}\)</span></p>
+<p><span class="arithmatex">\(\varphi:V\to W\)</span>，<span class="arithmatex">\(\varphi(\boldsymbol X)=\boldsymbol A\boldsymbol X\)</span></p>
+<p><span class="arithmatex">\(\text{Im}(\varphi)=\{\varphi(\boldsymbol X)\mid \boldsymbol X\in V\}=W\)</span></p>
+<p><span class="arithmatex">\(\text{Ker}(\varphi)=\{\varphi(\boldsymbol X)=\boldsymbol 0\mid \boldsymbol X\in V\}\)</span>，则 <span class="arithmatex">\(\dim \text{Ker}(\varphi)=n-r_1\)</span></p>
+<p>又 <span class="arithmatex">\(\dim \text{Im}(\varphi)+\dim\text{Ker}(\varphi)=\dim V\)</span>，故 <span class="arithmatex">\(\dim W+(n-r_1)=(n-r_2)\)</span>，得 <span class="arithmatex">\(\dim W=r_1-r_2\)</span></p>
+</details>
+<p>设 <span class="arithmatex">\(\boldsymbol A\)</span> 是一个 <span class="arithmatex">\(n\)</span> 阶正交矩阵，<span class="arithmatex">\(\boldsymbol A+\boldsymbol E\)</span> 可逆。证明：<span class="arithmatex">\(\boldsymbol A(\boldsymbol E+\boldsymbol X)=\boldsymbol E-\boldsymbol X\)</span> 的解 <span class="arithmatex">\(\boldsymbol X\)</span> 为实反对称矩阵。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\boldsymbol X=(\boldsymbol A+\boldsymbol E)^{-1}(\boldsymbol E-\boldsymbol A)\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol X^T=(\boldsymbol E-\boldsymbol A^T)(\boldsymbol A^T+\boldsymbol E)^{-1}=(\boldsymbol E-\boldsymbol A^{-1})(\boldsymbol A^{-1}+\boldsymbol E)^{-1}=\boldsymbol A^{-1}(\boldsymbol A-\boldsymbol E)[\boldsymbol A^{-1}(\boldsymbol E+\boldsymbol A)]^{-1}=\boldsymbol A^{-1}(\boldsymbol A-\boldsymbol E)(\boldsymbol E+\boldsymbol A)^{-1}\boldsymbol A=(\boldsymbol A-\boldsymbol E)\boldsymbol A^{-1}\boldsymbol A(\boldsymbol E+\boldsymbol A)^{-1}=-(\boldsymbol A+\boldsymbol E)^{-1}(\boldsymbol E-\boldsymbol A)\)</span></p>
+<p>故 <span class="arithmatex">\(\boldsymbol X^T=-\boldsymbol X\)</span></p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2019-2020 春夏</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol A\in\mathbb R^{n\times n}\)</span>，证明：<span class="arithmatex">\(\boldsymbol A\)</span> 是反对称矩阵 <span class="arithmatex">\(\Leftrightarrow \boldsymbol A \boldsymbol A^T=-\boldsymbol A^2\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<ul>
+<li><span class="arithmatex">\(\Rightarrow\)</span>：代入即证</li>
+<li>
+<p><span class="arithmatex">\(\Leftarrow\)</span>：</p>
+<p><span class="arithmatex">\(\boldsymbol A\boldsymbol A^T=-\boldsymbol A^2\Rightarrow \boldsymbol A(\boldsymbol A^T+\boldsymbol A)=\boldsymbol O\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol A^T\boldsymbol A=-(\boldsymbol A^T)^2\Rightarrow \boldsymbol A^T(\boldsymbol A+\boldsymbol A^T)=\boldsymbol O\)</span></p>
+<p>证明 <span class="arithmatex">\(\boldsymbol A+\boldsymbol A^T=\boldsymbol O\)</span>，等价于证明 <span class="arithmatex">\(\text{tr}((\boldsymbol A+\boldsymbol A^T)(\boldsymbol A+\boldsymbol A^T)^T)=0\)</span></p>
+<p><span class="arithmatex">\(\text{tr}((\boldsymbol A+\boldsymbol A^T)(\boldsymbol A+\boldsymbol A^T)^T)=\text{tr}((\boldsymbol A+\boldsymbol A^T)(\boldsymbol A^T+\boldsymbol A))=\text{tr}(\boldsymbol A(\boldsymbol A^T+\boldsymbol A))+\text{tr}(\boldsymbol A^T(\boldsymbol A^T+\boldsymbol A))=0\)</span>，得证</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>证明 <span class="arithmatex">\(\boldsymbol A=\boldsymbol O\)</span>，可以证明 <span class="arithmatex">\(\text{tr}(\boldsymbol A\boldsymbol A^T)=0\)</span></p>
+</details>
+</li>
+</ul>
+</details>
+<p>设 <span class="arithmatex">\(\boldsymbol C\)</span> 是 <span class="arithmatex">\(n\)</span> 阶正定矩阵，<span class="arithmatex">\(\boldsymbol B\)</span> 是满足 <span class="arithmatex">\(\boldsymbol B\boldsymbol B^T=-\boldsymbol B^2\)</span> 的 <span class="arithmatex">\(n\)</span> 阶实矩阵，证明：<span class="arithmatex">\(\boldsymbol B+\boldsymbol C\)</span> 可逆。</p>
+<details class="note">
+<summary>解答</summary>
+<p>由上一题知 <span class="arithmatex">\(\boldsymbol B\)</span> 是反对称矩阵，则 <span class="arithmatex">\(\forall \boldsymbol x\)</span> 有 <span class="arithmatex">\(\boldsymbol x^T\boldsymbol B\boldsymbol x=0\)</span></p>
+<p><span class="arithmatex">\(\boldsymbol C\)</span> 是正定矩阵，则 <span class="arithmatex">\(\forall \boldsymbol x\neq \boldsymbol 0\)</span>，<span class="arithmatex">\(\boldsymbol x^T\boldsymbol C\boldsymbol x&gt;0\)</span></p>
+<p>故 <span class="arithmatex">\(\boldsymbol x^T(\boldsymbol B+\boldsymbol C)\boldsymbol x&gt;0\)</span>，则 <span class="arithmatex">\(\boldsymbol B+\boldsymbol C\)</span> 是正定矩阵，所有特征值大于 <span class="arithmatex">\(0\)</span>，从而 <span class="arithmatex">\(|\boldsymbol B+\boldsymbol C|\neq 0\)</span>，<span class="arithmatex">\(\boldsymbol B+\boldsymbol C\)</span> 可逆</p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2019-2020 秋冬</summary>
+<p>设 <span class="arithmatex">\(n\)</span> 阶方阵 <span class="arithmatex">\(\boldsymbol A=(a_{ij})_{n\times n}\)</span>，<span class="arithmatex">\(a_{ij}=\sin(i+j)\)</span>（<span class="arithmatex">\(i,j=1,2,\cdots,n\)</span>），求 <span class="arithmatex">\(|\boldsymbol A|\)</span>。</p>
+<details class="note">
+<summary>解答</summary>
+<p><span class="arithmatex">\(\boldsymbol A\)</span> 的第 <span class="arithmatex">\(j\)</span> 列 <span class="arithmatex">\(\begin{pmatrix}\sin(1+j)\\\sin(2+j)\\\vdots\\sin(n+j)\end{pmatrix}=\begin{pmatrix}\sin 1\\\sin 2\\\vdots\\\sin n\end{pmatrix}\cos j+\begin{pmatrix}\cos 1\\\cos 2\\\vdots\\\cos n\end{pmatrix}\sin j\)</span></p>
+<p>则 <span class="arithmatex">\(\boldsymbol A\)</span> 的所有列向量均可由向量 <span class="arithmatex">\((\sin 1,\cdots,\sin n)^T\)</span> 和 <span class="arithmatex">\((\cos 1,\cdots,\cos n)^T\)</span> 线性表示</p>
+<ul>
+<li>当 <span class="arithmatex">\(n\geq 3\)</span> 时，<span class="arithmatex">\(r(\boldsymbol A)\leq 2&lt;n\)</span>，<span class="arithmatex">\(|\boldsymbol A|=0\)</span></li>
+<li>当 <span class="arithmatex">\(n=1\)</span> 时，<span class="arithmatex">\(|\boldsymbol A|=a_{11}=\sin 2\)</span></li>
+<li>当 <span class="arithmatex">\(n=2\)</span> 时，<span class="arithmatex">\(|\boldsymbol A|=\begin{vmatrix}\sin 2&amp;\sin 3\\\sin 3&amp;\sin 4\end{vmatrix}=\sin 2\sin 4-\sin^2 3\)</span></li>
+</ul>
+</details>
+<p>设 <span class="arithmatex">\(\mathbb R_+\)</span> 为所有正实数组成的几何，加法和数乘定义如下：<span class="arithmatex">\(\forall a,b\in \mathbb R_+\)</span>，<span class="arithmatex">\(k\in\mathbb R\)</span>，<span class="arithmatex">\(a\oplus b=ab\)</span>，<span class="arithmatex">\(k\odot a=a^k\)</span>，已知 <span class="arithmatex">\(\mathbb R_+\)</span> 关于加法 <span class="arithmatex">\(\oplus\)</span> 和数乘 <span class="arithmatex">\(\odot\)</span> 构成一个实线性空间，求 <span class="arithmatex">\(\mathbb R_+\)</span> 的一组基和维数。</p>
+<details class="note">
+<summary>解答</summary>
+<p>任取 <span class="arithmatex">\(a\in\mathbb R_+,a\neq 1\)</span>，则 <span class="arithmatex">\(\forall x\in\mathbb R_+\)</span>，令 <span class="arithmatex">\(k=\log_a x\in\mathbb R\)</span>，则 <span class="arithmatex">\(x=a^k=k\odot a\)</span>。故 <span class="arithmatex">\(\mathbb R_+\)</span> 中的任意向量均可由向量 <span class="arithmatex">\(a\)</span> 线性表示，故 <span class="arithmatex">\(\dim \mathbb R_+=1\)</span>，且 <span class="arithmatex">\(\mathbb R_+\)</span> 中任意不等于 <span class="arithmatex">\(1\)</span> 的正实数均可作为一组基。</p>
+</details>
+</details>
+<details class="info" open="open">
+<summary>2017-2018</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol A\)</span> 为可逆的 <span class="arithmatex">\(n\)</span> 阶实对称矩阵，<span class="arithmatex">\(\boldsymbol B\)</span> 为 <span class="arithmatex">\(n\)</span> 阶反对称矩阵，<span class="arithmatex">\(\boldsymbol A\boldsymbol B=\boldsymbol B\boldsymbol A\)</span>，证明：<span class="arithmatex">\(\boldsymbol A-\boldsymbol B\)</span> 可逆。</p>
+</details>
+<details class="info" open="open">
+<summary>2016-2017</summary>
+<p>设 <span class="arithmatex">\(\boldsymbol A，\boldsymbol B\)</span> 都是 <span class="arithmatex">\(n\)</span> 阶实方阵，证明：（1）<span class="arithmatex">\(\boldsymbol A\boldsymbol B+\boldsymbol B\)</span> 和 <span class="arithmatex">\(\boldsymbol B\boldsymbol A+\boldsymbol B\)</span> 有相同的特征值；（2）若 <span class="arithmatex">\(\boldsymbol A\boldsymbol B=(\boldsymbol B-\boldsymbol A^T)\boldsymbol A\)</span>，则 <span class="arithmatex">\(\boldsymbol A=\boldsymbol O\)</span>。</p>
+<p>证明：任何一个方阵可表示为一个幂等矩阵（满足 <span class="arithmatex">\(\boldsymbol A^2=\boldsymbol A\)</span> 的方阵）和一个可逆矩阵的乘积。</p>
+</details>
+<details class="info" open="open">
+<summary>2016-2017</summary>
+<p>已知 <span class="arithmatex">\(\sum_{k=1}^n a_k=0\)</span>，求 <span class="arithmatex">\(\boldsymbol A=\begin{pmatrix}a_1^2+1&amp;a_1a_2+1&amp;\cdots&amp;a_1a_n+1\\a_2a_1+1&amp;a_2^2+1&amp;\cdots&amp;a_2a_n+1\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\a_na_1+1&amp;a_na_2+1&amp;\cdots&amp;a_n^2+1\end{pmatrix}\)</span> 的特征值。</p>
 </details>
 
 
