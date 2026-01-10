@@ -196,7 +196,7 @@
 				
 				先考虑 $\boldsymbol B$
 				
-				- 法 1：求出 $\boldsymbol B$ 的特征值，则正的特征值个数即为 $\boldsymbol B$ 的正惯性指数，$|\lambda\boldsymbol E-\boldsymbol B|=(\lambda-2)(\lambda-\dfrac{3+\sqrt 5}2)(\lambda-\dfrac{3-\sqrt 5}2)$，显然 $\boldsymbol B$ 的 $3$ 个特征值都是正的，故 $\boldsymbol B$ 的正惯性指数为 $3$，$\boldsymbol B$ 与 $\boldsymbol A$ 在实数域上补合同。
+				- 法 1：求出 $\boldsymbol B$ 的特征值，则正的特征值个数即为 $\boldsymbol B$ 的正惯性指数，$|\lambda\boldsymbol E-\boldsymbol B|=(\lambda-2)(\lambda-\dfrac{3+\sqrt 5}2)(\lambda-\dfrac{3-\sqrt 5}2)$，显然 $\boldsymbol B$ 的 $3$ 个特征值都是正的，故 $\boldsymbol B$ 的正惯性指数为 $3$，$\boldsymbol B$ 与 $\boldsymbol A$ 在实数域上不合同。
 				- 法 2：求出以 $\boldsymbol B$ 作为二次型矩阵的二次型 $f$，再利用配方法，化 $f$ 为标准型，就可以求出二次型的正惯性指数。$f(x_1,x_2,x_3)=\boldsymbol X^T\boldsymbol B\boldsymbol X=x_1^2-2x_1x_2+2x_2^2+2x_3^2=(x_1-x_2)^2+x_2^2+2x_3^2$，故 $\boldsymbol B$ 的正惯性指数为 $3$，$\boldsymbol B$ 与 $\boldsymbol A$ 在实数域上不合同。
 
 ### 二次型的正定性
@@ -236,7 +236,7 @@
 		
 			设 $f(x_1,x_2,\cdots,x_n)=\boldsymbol X^T\boldsymbol A\boldsymbol X\xlongequal{\boldsymbol X=\boldsymbol C\boldsymbol Y,|\boldsymbol C|\neq 0}d_1y_1^2+d_2y_2^2+\cdots+d_ny_n^2$
 			
-			反设 $d_1\leq 0$，取 $\boldsymbol Y_1=(1,0,\cdots,0)^T$，则有 $\boldsymbol X_1=\boldsymbol C\boldsymbol Y_1\neq\boldsymbol \theta$，但是 $f(\boldsymbol X_1)=d_1\leq 0$，矛盾。
+			不妨设 $d_1\leq 0$，取 $\boldsymbol Y_1=(1,0,\cdots,0)^T$，则有 $\boldsymbol X_1=\boldsymbol C\boldsymbol Y_1\neq\boldsymbol \theta$，但是 $f(\boldsymbol X_1)=d_1\leq 0$，矛盾。
 		
 		- ② 正惯性指数等于 $n$ $\Rightarrow$ ⑤ $\boldsymbol A$ 的特征值全部大于 $0$：
 		
@@ -311,7 +311,7 @@
 
     ??? note "证明"
     	- ② 因为 $(\boldsymbol A^{-1})^T=(\boldsymbol A^T)^{-1}=\boldsymbol A^{-1}$，则 $\boldsymbol A^{-1}$ 为对称矩阵。又因为 $\boldsymbol A^{-1}$ 的特征值全大于 $0$，则 $\boldsymbol A^{-1}$ 为正定矩阵。
-  	
+
 
     	- ⑤ 一方面 $(\boldsymbol C^T\boldsymbol A\boldsymbol C)^T=\boldsymbol C^T\boldsymbol A\boldsymbol C$。又因为 $\boldsymbol A=\boldsymbol B^T\boldsymbol B$（$\boldsymbol B$ 可逆），则 $\boldsymbol C^T\boldsymbol A\boldsymbol C=\boldsymbol C^T\boldsymbol B^T\boldsymbol B\boldsymbol C=(\boldsymbol B\boldsymbol C)^T(\boldsymbol B\boldsymbol C)$ 且 $|\boldsymbol B\boldsymbol C|\neq 0$，故 $\boldsymbol C^T\boldsymbol A\boldsymbol C$ 为正定矩阵
 

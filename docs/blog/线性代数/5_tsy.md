@@ -85,7 +85,7 @@
 
 - 性质 4：$\dim V_{\lambda_0}\leq \lambda_0$ 的重数，这里 $\lambda_0$ 的重数是指 $\lambda_0$ 作为特征多项式零点的重数。（即 $r_i\leq n_i$）
 
-	$\dim V_{\lambda_0}=n-r(\lambda_0\boldsymbol E-\boldsymbol A)$，即 $(\lambda_0\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0$ 基础解析中向量的个数。
+	$\dim V_{\lambda_0}=n-r(\lambda_0\boldsymbol E-\boldsymbol A)$，即 $(\lambda_0\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0$ 基础解系中向量的个数。
 	
 	称 $\dim V_{\lambda_0}$ 为特征值 $\lambda_0$ 的几何重数，$\lambda_0$ 的重数为特征值 $\lambda_0$ 的代数重数。
 	
@@ -138,9 +138,9 @@
 	所以矩阵的相似也确定了一个等价关系，称为相似等价关系。可以将 $\mathbb P^{n\times n}$ 按照相似关系分划为不同的类——相似（等价）类，使得 $\mathbb P^{n\times n}$ 中的每一个方阵属于且只属于其中的一个相似（等价）类。
 
 	??? note "证明"
-		$\boldsymbol E^{-1}\boldsymbol A\boldsymbol E=\boldsymbol A$。即 $\boldsymbol A\stackrel S\sim A$。
+		$\boldsymbol E^{-1}\boldsymbol A\boldsymbol E=\boldsymbol A$。即 $\boldsymbol A\stackrel S\sim \boldsymbol A$。
 		
-		设 $\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B$，则 $\boldsymbol  A=\boldsymbol P\boldsymbol B\boldsymbol P^{-1}$。即若 $\boldsymbol A\stackrel S\sim B$，则 $\boldsymbol B\stackrel S\sim A$。
+		设 $\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B$，则 $\boldsymbol  A=\boldsymbol P\boldsymbol B\boldsymbol P^{-1}$。即若 $\boldsymbol A\stackrel S\sim \boldsymbol B$，则 $\boldsymbol B\stackrel S\sim \boldsymbol A$。
 		
 		设 $\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\boldsymbol B,\boldsymbol Q^{-1}\boldsymbol B\boldsymbol Q=\boldsymbol C$，则 $\boldsymbol Q^{-1}(\boldsymbol P^{-1}\boldsymbol A\boldsymbol P)\boldsymbol Q=(\boldsymbol P\boldsymbol Q)^{-1}\boldsymbol A(\boldsymbol P\boldsymbol Q)=\boldsymbol C$。即若 $\boldsymbol A\stackrel S\sim \boldsymbol B,\boldsymbol B\stackrel S\sim \boldsymbol C$，则 $\boldsymbol A\stackrel S\sim \boldsymbol C$。
 
@@ -326,9 +326,9 @@
 			
 			- ② 再求特征向量：$(5\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0$ 基础解系 $\boldsymbol \xi_{11}=(1,1,1)^T$，$(-\boldsymbol E-\boldsymbol A)\boldsymbol X=\boldsymbol 0$ 基础解系 $\boldsymbol \xi_{21}=(1,0,-1)^T,\boldsymbol \xi_{22}=(0,1,-1)^T$
 			
-  	          （检验计算是否正确：检查是否 $(\boldsymbol \xi_{11},\boldsymbol \xi_{21})=(\boldsymbol \xi_{11},\boldsymbol \xi_{22})=0$）
-		
-  	          （如令 $\boldsymbol P=(\boldsymbol \xi_{11},\boldsymbol \xi_{21},\boldsymbol \xi_{22}$，则 $\boldsymbol P$ 可逆，且 $\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(5,-1,-1)$）
+                （检验计算是否正确：检查是否 $(\boldsymbol \xi_{11},\boldsymbol \xi_{21})=(\boldsymbol \xi_{11},\boldsymbol \xi_{22})=0$）
+
+                （如令 $\boldsymbol P=(\boldsymbol \xi_{11},\boldsymbol \xi_{21},\boldsymbol \xi_{22}$，则 $\boldsymbol P$ 可逆，且 $\boldsymbol P^{-1}\boldsymbol A\boldsymbol P=\text{diag}(5,-1,-1)$）
 		
 			- ③ 将 $\boldsymbol \xi_{21},\boldsymbol \xi_{22}$ 利用 Schmidt 正交化，化成标准正交向量组
 			
