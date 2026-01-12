@@ -97,6 +97,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -529,6 +534,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -545,6 +568,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        刷历年卷
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2631,6 +2682,25 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        刷历年卷
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2648,71 +2718,343 @@
 
   <h1>期末复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-11'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-11T03:40:13.847191+00:00'>2026-01-11</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-11'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-11T03:40:13.847191+00:00'>2026-01-11</time></span></div></div></div>
-<p>提纲：</p>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-12'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-12T15:59:51.172307+00:00'>2026-01-12</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-12'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-12T15:59:51.172307+00:00'>2026-01-12</time></span></div></div></div>
+<details class="info">
+<summary>查漏补缺</summary>
 <ul>
-<li>基础操作</li>
-<li>野指针、空指针、通用指针</li>
-<li>数组与指针</li>
-<li>指针的指针（二级指针）</li>
-<li>指针与字符串</li>
-<li>函数指针</li>
-<li>结构指针</li>
-<li>malloc() 与 free()</li>
-<li>链表</li>
-</ul>
-<hr />
-<p>相关辨析：</p>
+<li>
+<p>常量</p>
 <ul>
-<li>数组 vs 指针</li>
+<li>
+<p>若整数常量第一个数字是 0，那么该常量被看做八进制数</p>
+</li>
+<li>
+<p>字符串常量末尾有 '\0'</p>
+<p>若用字符串常量初始化字符数组，会自动添 '\0'</p>
+</li>
+<li>
+<p>switch 语句，<code>case 常量表达式:</code> 的常量表达式的类型必须是整型，且任意两个 case 语句中的常量表达式值不应该相等</p>
+</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;ABC&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">a</span><span class="p">;</span><span class="w">    </span><span class="c1">//或 char *p=&amp;a[0];</span>
+</li>
+<li>
+<p>运算符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operator</th>
+<th style="text-align: left;">Order of evaluation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>()</code>、<code>[]</code>、<code>.</code>、<code>-&gt;</code>、<code>++</code>（变量++）、<code>--</code>（变量--）</td>
+<td style="text-align: left;">left to right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>!</code>、<code>~</code>、<code>++</code>（++变量）、<code>--</code>（--变量）、<code>&amp;</code>（取地址）、<code>*</code>（解引用）、<code>(type)</code>、<code>sizeof</code></td>
+<td style="text-align: left;"><strong>right to left</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>*</code>、<code>/</code>、<code>%</code></td>
+<td style="text-align: left;">left to right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>+</code>、<code>-</code></td>
+<td style="text-align: left;">left to right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;&lt;</code>、<code>&gt;&gt;</code></td>
+<td style="text-align: left;">left to right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;</code>、<code>&lt;=</code>、<code>&gt;</code>、<code>&gt;=</code></td>
+<td style="text-align: left;">left to right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>==</code>、<code>!=</code></td>
+<td style="text-align: left;">left to right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&amp;</code></td>
+<td style="text-align: left;">left to right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>^</code></td>
+<td style="text-align: left;">left to right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>|</code></td>
+<td style="text-align: left;">left to right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&amp;&amp;</code></td>
+<td style="text-align: left;">left to right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>||</code></td>
+<td style="text-align: left;">left to right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>?:</code></td>
+<td style="text-align: left;"><strong>right to left</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>=</code>、<code>+=</code>、<code>-=</code>、<code>*=</code>、<code>/=</code>、<code>%=</code>、<code>&amp;=</code>、<code>^=</code>、<code>|=</code>、<code>&gt;&gt;=</code>、<code>&lt;&lt;=</code></td>
+<td style="text-align: left;"><strong>right to left</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>,</code></td>
+<td style="text-align: left;">left to right</td>
+</tr>
+</tbody>
+</table>
+<p>初等运算符 &gt; 单目运算（从右往左）&gt; 算术运算 &gt; 移位运算 &gt; 关系运算 &gt; 位逻辑运算 &gt; 逻辑运算 &gt; 三目运算（从右往左）&gt; 赋值运算（从右往左） &gt; 逗号运算</p>
+</li>
+<li>
+<p>表达式</p>
+<p>C89 标准下，如果除法的两个操作数中有一个是负数，那么取整的方向是不确定的</p>
+</li>
+<li>
+<p>指针</p>
+<p><code>struct point *pt;</code>：声明了一个指向 point 结构类型的指针 pt。指向数组的指针被声明为指向该数组所容纳元素的指针，这里声明的 pt 也可以指向一个数组。</p>
+<p><code>char *pt[100];</code>：声明了一个包含有 100 个字符指针元素的数组</p>
+<p><code>struct point(*fnPrt)(int);</code> 声明了一个指向返回值类型为 struct point 的函数的指针，该函数接受一个整型参数</p>
+<p><code>void*</code> 是通用的指针类型，C 语言保证任何类型的指针都可以保存到 <code>void*</code> 类型中，并且随后将其从 <code>void*</code> 类型的指针中取出而不改变原来的值。除了这个特例外，C 语言不允许不同类型指针之间的转换</p>
+</li>
+<li>
+<p>结构变量</p>
+<p><code>struct 结构名 变量列表;</code> 声明结构变量</p>
+</li>
+<li>
+<p>存储类型</p>
+<p>C 语言一共有 4 种存储类型：auto、static、extern 和 register</p>
+<p>当为函数指定存储类型的时候，只能用关键字 static 或 extern。若不指定，默认为 extern</p>
+<p>将变量指定为 extern 时，变量必须在某处声明时不使用 extern 关键字，或者某处使用 extern 但进行了初始化</p>
+<p>将变量指定为 register 时，不一定确保放在寄存器中；根据实现不同，对于能够声明的变量类型有各种限制；不能取该类型变量的地址</p>
+</li>
+<li>
+<p>函数</p>
+<p>函数的参数传递按照值引用的方式进行，即在函数内部不能修改实际的参数。如果给函数传递一个指针参数，函数内部可以对该指针指向的位置进行修改，但是不能对实际的指针进行修改</p>
+</li>
+<li>
+<p>预处理指令</p>
+<p>预处理器在编译程序编译代码之前对其进行处理。所有的预处理执行都必须以 <code>#</code> 开始</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define 宏名 宏定义字符串</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#define 宏名(参数1,参数2,...,参数n)宏定义字符串</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">#if 常量表达式1  </span><span class="c1">//或 #ifdef 标识符，#ifndef 标识符</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">程序段1</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cp">#elif 常量表达式2</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">程序段2</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="cp">#else</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">程序段n</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="cp">#endif</span>
 </code></pre></div>
-<p>相同点：<code>p[i]==a[i]</code>，<code>*(p+i)==*(a+i)</code></p>
-<p>不同点：<code>sizeof(a)</code> 与 <code>sizeof(p)</code> 不同，<code>a="XYZ"</code> 会 CE、<code>p="XYZ"</code> 不会 CE，<code>&amp;a</code> 与 <code>&amp;p</code> 类型不同</p>
-<ul>
-<li><code>*</code> 的优先级高于 <code>+</code>。</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span>
+<p><code>#include "文件名"</code>：一般预处理器将在当前源程序所在的目录中寻找该文件。如果在当前目录中没有找到该文件，那么编译器将在标准目录（某些特定的目录，由编译器实现厂商决定）中寻找该文件</p>
+<p><code>#include&lt;文件名&gt;</code>：预处理器将在标准目录中寻找这些文件</p>
+<p><code>#line</code>、<code>#error</code>、<code>#progma</code>，用于构造 C 程序</p>
+</li>
+<li>
+<p>文件</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">fgetc</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">fputc</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span><span class="n">fp</span><span class="p">);</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">fgets</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">fp</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">fputs</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">fp</span><span class="p">);</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="o">=</span><span class="n">fopen</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span><span class="n">mode</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span><span class="w"> </span><span class="c1">//成功返回 0</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">feof</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">fread</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">T</span><span class="p">),</span><span class="n">n</span><span class="p">,</span><span class="n">fp</span><span class="p">);</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">fwrite</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">T</span><span class="p">),</span><span class="n">n</span><span class="p">,</span><span class="n">fp</span><span class="p">);</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">rewind</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">fseek</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">posi</span><span class="p">);</span><span class="w">   </span><span class="c1">//成功返回 0</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">ftell</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">remove</span><span class="p">(</span><span class="n">fname</span><span class="p">);</span><span class="w">  </span><span class="c1">//成功返回 0</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">rename</span><span class="p">(</span><span class="n">oldfname</span><span class="p">,</span><span class="n">newfname</span><span class="p">);</span><span class="w">  </span><span class="c1">//成功返回 0</span>
 </code></pre></div>
-<p><code>a</code>：<code>&amp;a[0]</code></p>
-<p><code>a+i</code>：<code>&amp;a[i]</code></p>
-<p><code>*(a+i)</code>：<code>a[i]</code>，<code>&amp;a[i][0]</code></p>
-<p><code>*(a+i)+j</code>：<code>a[i]+j</code>，<code>&amp;a[i][j]</code></p>
-<p><code>**(a+i)</code>：<code>*a[i]</code>，<code>a[i][0]</code></p>
-<p><code>*(*(a+i)+j)</code>：<code>*(a[i]+j)</code>，<code>a[i][j]</code></p>
-<ul>
-<li>数组指针</li>
+</li>
+<li>
+<p>字符串：</p>
+<p><code>strcat(s,t)</code>：s = s + t</p>
+<p><code>strcmp(s,t)</code>：比较。相等返回 0，大于返回正数，小于返回负数</p>
+<p><code>strcpy(s,t)</code>：s = t</p>
+<p><code>strchr(s,c)</code>：在字符串 s 中找字符 c 首次出现的地址</p>
+<p><code>strstr(s,t)</code>：在字符串 s 中找字符串 t 首次出现的地址</p>
+<p><code>char *p="hello";strcpy(p,"world");</code> 会 RE，因为 "hello" 是字符串常量，p 指向的是只读内存</p>
+</li>
+<li>
+<p>动态内存分配函数</p>
+<p><code>void *colloc(unsigned int n,unsigned int size)</code>：分配 n 个连续存储单元，每个但愿包含 size 个字节</p>
+<p><code>void *alloc(unsigned int size)</code>：分配 size 个字节的存储单元块</p>
+<p><code>void free(void *p)</code>：释放 p 所指内存单元块。p 必须严格是动态内存分配函数（malloc/calloc/realloc）返回的原始首地址，不能是该地址偏移后的指针</p>
+<p><code>void *realloc(void *p,unsigned int size)</code>：将 p 所指的已分配存储单元块的大小改为 size</p>
+</li>
+<li>
+<p>typedef</p>
+<p>已知一个函数指针类型，它所指的函数返回值类型为空类型，接收两个参数：一个是字符指针类型，一个是整型。用 typedef 将该函数指针类型命名为 FunType：<code>typedef void (*FunType)(char *, int);</code></p>
+<p>假设已有结构类型定义：<code>struct point { int a, int b };</code> 请用 <code>typedef</code> 把具有 5 个上述结构类型元素的数组类型重新命名为 RECT：<code>typedef struct point RECT[5];</code></p>
+<p>用 typedef 写出类型 POINT 的定义，使得 POINT 表示指向由 10 个字符指针构成的数组的指针类型：<code>typedef char* (*POINT)[10];</code></p>
+<p>typedef 与 define 区别：比如 <code>typedef int* IntPtr;</code>（记得不要漏掉 <code>;</code>）和 <code>#define IntPtr int*</code>，后者定义 <code>IntPtr a,b;</code> 会变成 <code>int* a,b;</code>（b 是 int），前者则 a 和 b 都是 int*</p>
+</li>
+<li>
+<p>argc：参数个数（含程序名）；argv：字符串数组，argv[0] 为程序名，argv[1] 为第一个参数</p>
+</li>
+<li>
+<p><code>int k=11;printf("%d,%o,%x",k,k,k);</code> 输出 <code>11,13,b</code> 而非 <code>11,013,0xb</code> （不输出前导符）</p>
+</li>
+<li>
+<p>一个函数的定义不可以完整地包含另一个函数的定义</p>
+</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)[</span><span class="mi">4</span><span class="p">];</span><span class="w">  </span><span class="c1">//p 是数组指针，它指向了一个由 4 个 int 构成的一维数组</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">p</span><span class="o">=&amp;</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</details>
+<details class="warning">
+<summary>注意</summary>
+<p><code>#if</code>，<code>#ifdef</code> 的区别</p>
+<p>不能解引用 NULL</p>
+<p>sizeof 运算符计算数据类型 / 变量 / 数组占用的字节数</p>
+<p>sizeof 包含字符串末尾的 '\0'，strlen 不包含 '\0'。注意看清楚 sizeof(s) 的 s 是字符串还是字符数组。注意 sizeof(数组名) 算的不是数组大小，是 数组大小 × 类型的字节数</p>
+<p>浮点转整型：强制转换 (int) 遵循向零截断，仅丢弃小数部分，不四舍五入</p>
+<p>逻辑与 &amp;&amp;：左侧为假（0）时，右侧表达式短路不执行；</p>
+<p>数组名 a：常量指针，地址不可修改</p>
+<p>指针 ± 整数：偏移量 = 整数 × 指向类型的字节数</p>
+<p>scanf 按格式符逐个匹配，遇到不匹配字符停止当前变量读取</p>
+<p>C 语言中 switch 语句的 case 后常量表达式不支持浮点型（如 float、double），仅允许整型（如 int、long）、字符型（本质是 ASCII 码对应的整型）、枚举型</p>
+<p>如果所有 case 都不满足，执行 default，加入 default 后面没写 break，还会执行 default 下面的语句直到遇到 break 为止</p>
+<p>多维数组记得看清楚每维大小，不要只看初始化列表搞错了</p>
+</details>
+<h2 id="_1">刷历年卷<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<details class="info">
+<summary>2015-2016</summary>
+<p>把数组 int a[10][20] 传入函数 aver 求平均值，不正确的代码段是</p>
+<p>A.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">20</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">aver</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">float</span><span class="w"> </span><span class="nf">aver</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/*…*/</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
-<p><code>a[i][j]</code>：<code>*(*(p+i)+j)</code>，<code>*(p[i]+j)</code>，<code>(*(p+i))[j]</code>，<code>p[i][j]</code></p>
-<p>注意 <code>*</code> 的优先级高于 <code>+</code>。</p>
-<p><code>*p</code>：<code>a[0]</code>，<code>&amp;a[0][0]</code></p>
-<p><code>*p+i</code>：<code>a[0]+i</code>，<code>&amp;a[0][i]</code></p>
-<p><code>*(p+i)</code>：<code>a[i]</code>，<code>&amp;a[i][0]</code></p>
-<p><code>**p</code>：<code>*a[0]</code>，<code>a[0][0]</code></p>
-<p><code>**(p+i)</code>：<code>*a[i]</code>，<code>a[i][0]</code></p>
-<p>若将二维数组作为函数参数：定义 <code>int f(int a[3][4])</code> 实际上是 <code>int f(int (*a)[4])</code>。调用 <code>f(a)</code>实际上是 <code>f(&amp;a[0])</code>。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">**</span><span class="n">a</span><span class="p">);</span><span class="w">       </span><span class="c1">// ! 编译错误</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[][]);</span><span class="w">     </span><span class="c1">// ! 编译错误</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][]);</span><span class="w">    </span><span class="c1">// ! 编译错误</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]);</span><span class="w">   </span><span class="c1">// √</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[][</span><span class="mi">4</span><span class="p">]);</span><span class="w">      </span><span class="c1">// √</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">)[</span><span class="mi">4</span><span class="p">]);</span><span class="w">   </span><span class="c1">// √</span>
+<p>C.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">20</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">aver</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kt">float</span><span class="w"> </span><span class="nf">aver</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/*…*/</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
-<ul>
-<li>指针数组 vs 数组指针</li>
-</ul>
-<p><code>char *a[5];</code> vs <code>char (*a)[5];</code></p>
-<p><code>[]</code> 的优先级高于 <code>*</code>。</p>
-<ul>
-<li>结构指针：注意 <code>.</code> 的优先级高于 <code>*</code>。例如 <code>struct st a[3],*p; p=&amp;a[0];</code>，<code>*(p+i).name</code> 错误，<code>(*(p+i)).name</code> 正确，<code>(p+i)-&gt;name</code> 正确。</li>
-</ul>
+<details class="note">
+<summary>解答</summary>
+<p>答案：A</p>
+<p>A. <code>a</code> 作为数组名传参时会 “退化” 为数组指针，类型为 <code>int (*)[20]</code>，与形参 <code>int *a</code> 类型不匹配，会 CE</p>
+<p>C. <code>a</code> 等价于指向 <code>a[0]</code> 的数组指针，所以 <code>*a</code> 等价于 <code>a[0]</code>，等价于 <code>&amp;a[0][0]</code>，类型为 <code>int*</code>，与形参 <code>int *a</code> 类型匹配</p>
+</details>
+</details>
+<details class="info">
+<summary>2014-2015</summary>
+<p>对于变量定义 <code>int x, a[8], *p=&amp;a[0];</code>，表达式______是不正确的</p>
+<p>A．x = a[7]    B．x = *(p+3)      C．x = *p++        D. x = *a++</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：D</p>
+<p>a：是数组名，本质是一个常量指针（指向数组首元素 a[0] 的地址），常量指针的地址值不能被修改（即不能做自增 / 自减操作）；</p>
+<p>p：是指针变量（指向 a[0]），变量可以被修改（支持 p++、p-- 等操作）；</p>
+</details>
+<p>设有 <code>double a[4]={10, 20, 30, 40}, *p=&amp;a[3]; p=p-2;</code> 且假定 &amp;a[0] 为 0xFFD8，则 <code>printf("%x", p);</code> 将输出</p>
+<p>A．FFD9  B．FFE0  C．FFEE  D．FFF0</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：B</p>
+<p>指针加减整数时，偏移量是「整数 × 指向类型的字节数」，而非单纯的字节数</p>
+<p>a[1] 的地址是 0xFFD8 + 8 = 0xFFE0</p>
+</details>
+<p>设 <code>int i=0, j=9; char s[ ] = "happy new year!", *sp=s,*sq=s+9;</code> 执行下列哪一条语句所得到的结果和其他三项不同</p>
+<p>A．<code>while ( i &lt;= j ) s[i++]=s[j--];</code> B．<code>for ( ; i&lt;=j; ++i, --j ) s[i]=s[j];</code>
+C．<code>for ( ; sp++ &lt;= sq--; ) *sp = *sq;</code>  D．<code>do { *sp=*sq; } while( sp++ &lt; sq-- );</code></p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：C</p>
+<p>C. for 循环条件是 <code>sp++ &lt;= sq--</code>，导致第一次赋值时 sp 已指向 s[1]，漏掉了 s[0] 的赋值，多覆盖了 s[5]</p>
+</details>
+<p>以下程序段的输出是</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">80</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;apple</span><span class="se">\0</span><span class="s">grape</span><span class="se">\0</span><span class="s">pear</span><span class="se">\0</span><span class="s">coco</span><span class="se">\0</span><span class="s">&quot;</span><span class="p">};</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">)]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d#%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="k">sizeof</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+<details class="note">
+<summary>解答</summary>
+<p>答案：<code>16#80</code></p>
+<p>strlen：计算字符串长度，从起始位置到第一个'\0'为止，不包含'\0'</p>
+<p>sizeof：计算数组 / 变量的内存字节数，对数组 s[80] 来说，结果固定为 80（和内容无关）</p>
+</details>
+<p>假设一个指针变量 8 个字节，则以下程序的运行结果是</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">[])</span><span class="w">                      </span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span><span class="w">   </span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="k">sizeof</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">{</span><span class="w">   </span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">[][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">},</span><span class="o">*</span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d#%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">}</span>
+</code></pre></div>
+<details class="note">
+<summary>解答</summary>
+<p>答案：<code>24#8</code></p>
+<p>a 是二维数组名，计算整个数组的字节数：总元素数 = 行数 × 列数 = 2 × 3 = 6 个，每个 long 占 4 字节，总字节数 = 6 × 4 = 24</p>
+</details>
+</details>
+<details class="info">
+<summary>2013-2014</summary>
+<p>在 C 语言中，下列表达式的值最大的是
+A．<code>sizeof('a')</code> B．<code>sizeof(97)</code>  C．<code>sizeof("aaaa")</code>  D．<code>sizeof(97.0)</code></p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：D</p>
+<p>A. 'a' 是字符常量，在 C 语言中，字符常量的本质是 int 类型。4 字节</p>
+<p>B. 97 是整数常量，默认类型是 int。4 字节</p>
+<p>C. "aaaa" 是字符串常量，C 语言中字符串以 '\0'（空字符）结尾。"aaaa" 包含 4 个 'a' + 1 个 '\0'，共 5 个字符，每个字符是 char 类型（1 字节）。5 字节</p>
+<p>D. 97.0 是浮点常量，默认类型是 double（双精度浮点型）。8 字节</p>
+</details>
+<p>已知 <code>unsigned short  m=65539;</code> 则执行语句 <code>printf("%d", m);</code> 后的输出结果是</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：3</p>
+<p>无符号整数溢出，对 <span class="arithmatex">\(2^{16}=65536\)</span> 取模</p>
+</details>
+<p>假设 a 是一个 float 变量，语句：<code>printf(____________)</code> 可将 a 按照保留两位小数的百分率形式输出，例如 a=0.32049 就应输出 32.05%（注意需有百分号）</p>
+<details class="note">
+<summary>解答</summary>
+<p><code>"%.2f%%", a*100</code> 或 <code>"%.2f%c", a*100,'%'</code></p>
+</details>
+<p>对于以下代码段，若输入 <code>12e-0x34.56</code>，则输出结果是</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f%c%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d</span><span class="p">);</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%.2f%c%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
+</code></pre></div>
+<details class="note">
+<summary>解答</summary>
+<p>答案：<code>12.00x34</code></p>
+<p>scanf 按格式符逐个匹配输入内容，遇到无法匹配当前格式符的字符时，会停止对当前变量的读取，并将该字符留给下一个格式符匹配；若某个格式符完全无法匹配，则对应变量赋值失败（值未定义）</p>
+<p>f：<code>12e-0</code></p>
+<p>c：<code>'x'</code></p>
+<p>d：<code>34</code></p>
+</details>
+<p>下列程序段的输出结果是</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[]</span><span class="o">=</span><span class="s">&quot;xyz&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">ps</span><span class="o">=</span><span class="n">s</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">ps</span><span class="o">++</span><span class="p">);</span><span class="w">   </span><span class="n">ps</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">for</span><span class="p">(</span><span class="n">ps</span><span class="o">--</span><span class="p">;</span><span class="w"> </span><span class="n">ps</span><span class="o">-</span><span class="n">s</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">ps</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s#&quot;</span><span class="p">,</span><span class="n">ps</span><span class="p">);</span><span class="w">  </span>
+</code></pre></div>
+<details class="note">
+<summary>解答</summary>
+<p>答案：<code>z#yz#xyz#</code></p>
+<p><code>printf("%s", ps)</code>：从 ps 指向的地址开始输出字符，直到遇到 '\0' 为止。</p>
+</details>
+</details>
+<details class="info">
+<summary>2011-2012</summary>
+<p>表达式 <code>-10&gt;&gt;2+3</code> 的值为______（假设是算术移位）</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：-1</p>
+<p>有符号整数以补码形式存储和运算</p>
+<p>-10 的 8 位补码是 1111 0110，右移 5 位得到 1111 1111（补 5 个 1），对应进制 -1</p>
+</details>
+</details>
 
 
 
