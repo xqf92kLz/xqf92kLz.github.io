@@ -2718,7 +2718,7 @@
 
   <h1>期末复习</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-12'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-12T15:59:51.172307+00:00'>2026-01-12</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-12'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-12T15:59:51.172307+00:00'>2026-01-12</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-13T04:25:49.543580+00:00'>2026-01-13</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-13'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-13T04:25:49.543580+00:00'>2026-01-13</time></span></div></div></div>
 <details class="info">
 <summary>查漏补缺</summary>
 <ul>
@@ -2852,9 +2852,42 @@
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">程序段n</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="cp">#endif</span>
 </code></pre></div>
-<p><code>#include "文件名"</code>：一般预处理器将在当前源程序所在的目录中寻找该文件。如果在当前目录中没有找到该文件，那么编译器将在标准目录（某些特定的目录，由编译器实现厂商决定）中寻找该文件</p>
-<p><code>#include&lt;文件名&gt;</code>：预处理器将在标准目录中寻找这些文件</p>
+<p><code>#include "filename"</code>：一般预处理器将在当前源程序所在的目录中寻找该文件。如果在当前目录中没有找到该文件，那么编译器将在标准目录中寻找该文件</p>
+<p><code>#include&lt;filename&gt;</code>：仅在标准目录中寻找这些文件</p>
 <p><code>#line</code>、<code>#error</code>、<code>#progma</code>，用于构造 C 程序</p>
+</li>
+<li>
+<p>字符串：</p>
+<p><code>strcat(s,t)</code>：把字符串 t 拼接到 s 的末尾（覆盖 s 原有的 \0，并在拼接后新增 '\0'）</p>
+<p><code>strcmp(s,t)</code>：比较。相等返回 0，大于返回正数，小于返回负数</p>
+<p><code>strcpy(s,t)</code>：s = t</p>
+<p><code>strchr(s,c)</code>：在字符串 s 中找字符 c 首次出现的地址</p>
+<p><code>strstr(s,t)</code>：在字符串 s 中找字符串 t 首次出现的地址</p>
+<p><code>char *p="hello";strcpy(p,"world");</code> 会 RE，因为 "hello" 是字符串常量，p 指向的是只读内存。同理 <code>char *a="hello"; a[0]='H';</code> 会 RE，因为 "hello" 存在于静态存储区中，是只读的，不能进行修改</p>
+<p>strcpy/strcat 的 s 必须是可写的 char<em>（不能是字符串常量），strcpy/strcat 的 t、strcmp/strchr/strstr 的s/t 只需要可读的 const char</em>（字符数组 / 字符串常量均可）</p>
+</li>
+<li>
+<p>动态内存分配函数</p>
+<p><code>void *colloc(unsigned int n,unsigned int size)</code>：分配 n 个连续存储单元，每个但愿包含 size 个字节</p>
+<p><code>void *alloc(unsigned int size)</code>：分配 size 个字节的存储单元块</p>
+<p><code>void free(void *p)</code>：释放 p 所指内存单元块。p 必须严格是动态内存分配函数（malloc/calloc/realloc）返回的原始首地址，不能是该地址偏移后的指针</p>
+<p><code>void *realloc(void *p,unsigned int size)</code>：将 p 所指的已分配存储单元块的大小改为 size</p>
+</li>
+<li>
+<p>typedef</p>
+<p>已知一个函数指针类型，它所指的函数返回值类型为空类型，接收两个参数：一个是字符指针类型，一个是整型。用 typedef 将该函数指针类型命名为 FunType：<code>typedef void (*FunType)(char *, int);</code></p>
+<p>假设已有结构类型定义：<code>struct point { int a, int b };</code> 请用 <code>typedef</code> 把具有 5 个上述结构类型元素的数组类型重新命名为 RECT：<code>typedef struct point RECT[5];</code></p>
+<p>用 typedef 写出类型 POINT 的定义，使得 POINT 表示指向由 10 个字符指针构成的数组的指针类型：<code>typedef char* (*POINT)[10];</code></p>
+<p>typedef 与 define 区别：比如 <code>typedef int* IntPtr;</code>（记得不要漏掉 <code>;</code>）和 <code>#define IntPtr int*</code>，定义 <code>IntPtr a,b;</code>，前者相当于 <code>int *a,*b</code>（a 和 b 都是 int*），后者相当于 <code>int* a,b;</code>（b 是 int）</p>
+</li>
+<li>
+<p>argc：参数个数（含程序名）；argv：字符串数组，argv[0] 为程序名，argv[1] 为第一个参数</p>
+</li>
+<li>
+<p><code>int k=11;printf("%d,%o,%x",k,k,k);</code> 输出 <code>11,13,b</code> 而非 <code>11,013,0xb</code> （不输出前导符）</p>
+</li>
+<li>
+<p>一个函数的定义不可以完整地包含另一个函数的定义</p>
 </li>
 <li>
 <p>文件</p>
@@ -2873,38 +2906,22 @@
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">remove</span><span class="p">(</span><span class="n">fname</span><span class="p">);</span><span class="w">  </span><span class="c1">//成功返回 0</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">rename</span><span class="p">(</span><span class="n">oldfname</span><span class="p">,</span><span class="n">newfname</span><span class="p">);</span><span class="w">  </span><span class="c1">//成功返回 0</span>
 </code></pre></div>
+<p>使用 <code>FILE *fopen(char *文件名, char *模式)</code> 打开文件，返回对应的文件指针。如果返回值为 NULL 说明文件打开失败。</p>
+<p>使用 <code>int fclose(FILE *文件指针)</code> 关闭文件，如果返回值非 0 说明文件关闭失败。</p>
+<p>使用 <code>char fgetc(FILE* file)</code> 读取单个字符。</p>
+<p>使用 <code>void fputc(char c, FILE* file)</code> 写入单个字符。</p>
+<p>使用 <code>char *fgets(char *s, int n, FILE* file)</code> 读取字符串：连续读取至多 n-1 个字符并将其保存到 s 中。如果遇到换行符（会保留换行符）或 EOF（不保留）则截止，并自动往末尾添加 '\0'。执行成功时返回读取到的字符串，否则返回 NULL。</p>
+<p>使用 <code>char *fputs(char *s, FILE *file)</code> 写入字符串</p>
+<p>还可以使用 <code>fscanf</code> 与 <code>fprintf</code>，第一个参数是文件指针，后面参数和 scanf 与 printf 的使用方法相同。</p>
+<p>使用 <code>fread(void* 数据块(首)地址, size_t 单个数据块字节数, size_t 要读入的数据块个数, FILE* 文件指针)</code> 来从以二进制模式打开的文件中读取数据。</p>
+<p>使用 <code>fwrite(void* 数据块(首)地址, size_t 单个数据块字节数, size_t 要读入的数据块个数, FILE* 文件指针)</code> 来往以二进制模式打开的文件中写入数据。</p>
+<p>使用 <code>int feof(FILE* 文件指针)</code> 判断文件尾是否已经被尝试读取。（如 fgetc 已经返回 EOF 而不是将要返回 EOF）</p>
+<p>使用 <code>rewind(FILE* 文件指针)</code> 使得文件读写指针恢复到打开文件时所指向的位置（字节数）。</p>
+<p>使用 <code>fseek(FILE* 文件指针, size_t 偏移量, int 起始位置)</code> 来移动读写指针，其中起始位置可选值为 0（SEEK_SET）、1（SEEK_CUR）、2（SEEK_END） 分别对应文件头、当前位置、文件尾。</p>
+<p>使用 <code>ftell(FILE* 文件指针)</code> 获取文件指针的位置（字节数），即相对于文件开头的偏移量。</p>
 </li>
 <li>
-<p>字符串：</p>
-<p><code>strcat(s,t)</code>：s = s + t</p>
-<p><code>strcmp(s,t)</code>：比较。相等返回 0，大于返回正数，小于返回负数</p>
-<p><code>strcpy(s,t)</code>：s = t</p>
-<p><code>strchr(s,c)</code>：在字符串 s 中找字符 c 首次出现的地址</p>
-<p><code>strstr(s,t)</code>：在字符串 s 中找字符串 t 首次出现的地址</p>
-<p><code>char *p="hello";strcpy(p,"world");</code> 会 RE，因为 "hello" 是字符串常量，p 指向的是只读内存</p>
-</li>
-<li>
-<p>动态内存分配函数</p>
-<p><code>void *colloc(unsigned int n,unsigned int size)</code>：分配 n 个连续存储单元，每个但愿包含 size 个字节</p>
-<p><code>void *alloc(unsigned int size)</code>：分配 size 个字节的存储单元块</p>
-<p><code>void free(void *p)</code>：释放 p 所指内存单元块。p 必须严格是动态内存分配函数（malloc/calloc/realloc）返回的原始首地址，不能是该地址偏移后的指针</p>
-<p><code>void *realloc(void *p,unsigned int size)</code>：将 p 所指的已分配存储单元块的大小改为 size</p>
-</li>
-<li>
-<p>typedef</p>
-<p>已知一个函数指针类型，它所指的函数返回值类型为空类型，接收两个参数：一个是字符指针类型，一个是整型。用 typedef 将该函数指针类型命名为 FunType：<code>typedef void (*FunType)(char *, int);</code></p>
-<p>假设已有结构类型定义：<code>struct point { int a, int b };</code> 请用 <code>typedef</code> 把具有 5 个上述结构类型元素的数组类型重新命名为 RECT：<code>typedef struct point RECT[5];</code></p>
-<p>用 typedef 写出类型 POINT 的定义，使得 POINT 表示指向由 10 个字符指针构成的数组的指针类型：<code>typedef char* (*POINT)[10];</code></p>
-<p>typedef 与 define 区别：比如 <code>typedef int* IntPtr;</code>（记得不要漏掉 <code>;</code>）和 <code>#define IntPtr int*</code>，后者定义 <code>IntPtr a,b;</code> 会变成 <code>int* a,b;</code>（b 是 int），前者则 a 和 b 都是 int*</p>
-</li>
-<li>
-<p>argc：参数个数（含程序名）；argv：字符串数组，argv[0] 为程序名，argv[1] 为第一个参数</p>
-</li>
-<li>
-<p><code>int k=11;printf("%d,%o,%x",k,k,k);</code> 输出 <code>11,13,b</code> 而非 <code>11,013,0xb</code> （不输出前导符）</p>
-</li>
-<li>
-<p>一个函数的定义不可以完整地包含另一个函数的定义</p>
+<p>printf() 中参数传递从右往左</p>
 </li>
 </ul>
 </details>
@@ -2913,11 +2930,11 @@
 <p><code>#if</code>，<code>#ifdef</code> 的区别</p>
 <p>不能解引用 NULL</p>
 <p>sizeof 运算符计算数据类型 / 变量 / 数组占用的字节数</p>
-<p>sizeof 包含字符串末尾的 '\0'，strlen 不包含 '\0'。注意看清楚 sizeof(s) 的 s 是字符串还是字符数组。注意 sizeof(数组名) 算的不是数组大小，是 数组大小 × 类型的字节数</p>
+<p>sizeof 包含字符串末尾的 '\0'，strlen 不包含 '\0'。注意看清楚 sizeof(s) 的 s 是字符串还是字符数组。注意 sizeof(数组名) 算的不是数组大小，是 数组大小 × 类型的字节数。注意 <code>\012</code> 不是 <code>\0</code> 再 <code>12</code>。</p>
 <p>浮点转整型：强制转换 (int) 遵循向零截断，仅丢弃小数部分，不四舍五入</p>
 <p>逻辑与 &amp;&amp;：左侧为假（0）时，右侧表达式短路不执行；</p>
 <p>数组名 a：常量指针，地址不可修改</p>
-<p>指针 ± 整数：偏移量 = 整数 × 指向类型的字节数</p>
+<p>指针 ± 整数：地址偏移量 = 整数 × 指向类型的字节数。但是 指针 - 指针 算的不是地址相减，而是 q-p=((int)q-(int)p)/sizeof(<em>p)。除非 (char</em>)q-(char*p)，单位就是一个字节；或者 (int)q-(int)p</p>
 <p>scanf 按格式符逐个匹配，遇到不匹配字符停止当前变量读取</p>
 <p>C 语言中 switch 语句的 case 后常量表达式不支持浮点型（如 float、double），仅允许整型（如 int、long）、字符型（本质是 ASCII 码对应的整型）、枚举型</p>
 <p>如果所有 case 都不满足，执行 default，加入 default 后面没写 break，还会执行 default 下面的语句直到遇到 break 为止</p>
@@ -3055,6 +3072,7 @@ A．<code>sizeof('a')</code> B．<code>sizeof(97)</code>  C．<code>sizeof("aaaa
 <p>-10 的 8 位补码是 1111 0110，右移 5 位得到 1111 1111（补 5 个 1），对应进制 -1</p>
 </details>
 </details>
+<p>​   </p>
 
 
 

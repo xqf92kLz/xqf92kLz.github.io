@@ -2648,7 +2648,7 @@
 
   <h1>踩过的坑</h1>
 
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-12'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-12T15:59:51.172307+00:00'>2026-01-12</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-12'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-12T15:59:51.172307+00:00'>2026-01-12</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-13'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-01-13T04:25:49.543580+00:00'>2026-01-13</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-01-13'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-01-13T04:25:49.543580+00:00'>2026-01-13</time></span></div></div></div>
 <details class="warning" open="open">
 <summary>常见错误</summary>
 <ul>
@@ -2744,6 +2744,43 @@
 <summary>解答</summary>
 <p>答案：T（不是 F）。</p>
 <p>函数参数 <code>int a[]</code> 不是整体引用数组，它就是 <code>int *a</code>，是在传递一个指针。</p>
+</details>
+</details>
+<details class="example">
+<summary>期末考前错题</summary>
+<p>以下程序段的功能是输出 1~100 之间每个整数的各位数字之和。T or F</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">for</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">num</span><span class="o">++</span><span class="p">){</span><span class="w"> </span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">do</span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">       </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">       </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
+</code></pre></div>
+<details class="note">
+<summary>解答</summary>
+<p>答案：F（不是 T）</p>
+<p>循环体直接把 num 改了</p>
+</details>
+<p>文件指针指向文件缓冲区中文件数据的存取位置。  T or F</p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：F（不是 T）</p>
+<p>文件指针式特殊指针，指向的是文件类型结构，它是多项信息的综合题。每一个文件都有自己的 FILE 结构和文件缓冲区，FILE 结构中有一个 curp 成员，通过 fp-&gt;curp 可以只是文件缓冲区中数据存取的位置。</p>
+</details>
+<p>若有定义 <code>double *p;</code>，使 p 指向一个双精度型的动态存储单元的语句为（）。</p>
+<p>A. <code>p = malloc(sizeof(double));</code></p>
+<p>B. <code>p = (double *)malloc(sizeof(*p));</code></p>
+<p>C. <code>p = malloc(8);</code></p>
+<p>D. <code>p = (double *)malloc(sizeof(double));</code></p>
+<details class="note">
+<summary>解答</summary>
+<p>答案：BD</p>
+<p>感觉像有争议的题目</p>
+<p>A. 缺少强制类型转换，在 C 语言中虽合法但可能产生警告；</p>
+<p>B. <code>*p</code> 是 double 类型，因此 <code>sizeof(*p)</code> 等价于 <code>sizeof(double)</code></p>
+<p>C. 某些特殊平台上 double 不是 8 字节（比如早期系统是 4 字节），会导致分配的空间大小错误，丧失可移植性</p>
 </details>
 </details>
 
