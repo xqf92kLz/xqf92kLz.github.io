@@ -13,7 +13,6 @@ const ttDefaultConfig = {
     interactive: true,      // 是否允许内容交互
     animation: 'scale',     // 动画类型: scale shift-away
     inertia: true,          // 是否允许动画惯性
-    zIndex: 2,              // 控制 tooltip 元素的显示层级(z-index)
     // arrow: false,           // 是否允许箭头
     // animateFill: true,      // 背景填充颜色是否应为动画效果
     // delay: [400, null],     // 动画延迟: [show, hide]: show 为 400 毫秒, hide 为 null 表示默认值
@@ -87,73 +86,73 @@ window.TooltipLanguage = (function () {
     const defaultLanguages = {
         ar: {
             created_time: "تاريخ الإنشاء",
-            updated_time: "تاريخ التعديل",
+            modified_time: "تاريخ التعديل",
             author: "المؤلف",
             authors: "المؤلفون"
         },
         de: {
             created_time: "Erstellungszeit",
-            updated_time: "Änderungszeit",
+            modified_time: "Änderungszeit",
             author: "Autor",
             authors: "Autoren"
         },
         en: {
             created_time: "Created",
-            updated_time: "Last Update",
+            modified_time: "Last Update",
             author: "Author",
             authors: "Authors"
         },
         es: {
             created_time: "Fecha de creación",
-            updated_time: "Fecha de modificación",
+            modified_time: "Fecha de modificación",
             author: "Autor",
             authors: "Autores"
         },
         fr: {
             created_time: "Date de création",
-            updated_time: "Date de modification",
+            modified_time: "Date de modification",
             author: "Auteur",
             authors: "Auteurs"
         },
         ja: {
             created_time: "作成日時",
-            updated_time: "更新日時",
+            modified_time: "更新日時",
             author: "著者",
             authors: "著者"
         },
         ko: {
             created_time: "작성일",
-            updated_time: "수정일",
+            modified_time: "수정일",
             author: "작성자",
             authors: "작성자"
         },
         nl: {
             created_time: "Gecreëerd",
-            updated_time: "Laatst geüpdatet",
+            modified_time: "Laatst geüpdatet",
             author: "Auteur",
             authors: "Auteurs"            
         },
         pt: {
             created_time: "Criado em",
-            updated_time: "Última atualização",
+            modified_time: "Última atualização",
             author: "Autor",
             authors: "Autores"
         },
         ru: {
             created_time: "Дата создания",
-            updated_time: "Дата изменения",
+            modified_time: "Дата изменения",
             author: "Автор",
             authors: "Авторы"
         },
         zh: {
             created_time: "创建时间",
-            updated_time: "最后更新",
+            modified_time: "最后更新",
             author: "作者",
             authors: "作者"
         },
         zh_TW: {
             created_time: "建立時間",
-            updated_time: "修改時間",
+            modified_time: "修改時間",
             author: "作者",
             authors: "作者"
         }
