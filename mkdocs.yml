@@ -3,12 +3,6 @@ site_url: https://www.uwouni.com/
 
 nav:
   - 首页: index.md
-  - C 程:
-    - 知识碎屑: blog/C 程/知识碎屑.md
-    - 指针: blog/C 程/指针.md
-    - 文件: blog/C 程/文件.md
-    - 踩过的坑: blog/C 程/踩过的坑.md
-    - 期末复习: blog/C 程/期末复习.md
   - 大一秋冬:
     - info: blog/大一秋冬/index.md
     - 微积分:
@@ -33,6 +27,12 @@ nav:
       - 第六章 二次型: blog/大一秋冬/线性代数/6_tsy.md
       - 第六章: blog/大一秋冬/线性代数/6.md
       - 期末复习: blog/大一秋冬/线性代数/期末复习.md
+    - C 程:
+      - 知识碎屑: blog/大一秋冬/C 程/知识碎屑.md
+      - 指针: blog/大一秋冬/C 程/指针.md
+      - 文件: blog/大一秋冬/C 程/文件.md
+      - 踩过的坑: blog/大一秋冬/C 程/踩过的坑.md
+      - 期末复习: blog/大一秋冬/C 程/期末复习.md
     - 大英三:
       - to do: blog/大一秋冬/大英三/to do.md
       - B1U1-4: blog/大一秋冬/大英三/B1U1-4.md
@@ -133,21 +133,22 @@ plugins:
   - document-dates:
        position: top
        show_author: false
-  # - encryptcontent:  
-  #     global_password: SECRET
-  #     title_prefix: ''
-  #    remember_password: False 
-  #    summary: '看不到我~'
-  #    hljs: True
-  #    mermaid2: True
-  #    decryption_failure_message: '密码错误'
-  #    encryption_info_message: '该笔记不对外公开'
-  #    encrypted_something:
-  #      md-footer__inner: [nav, class] #Footer
-   #     md-nav: [nav, class] #Menu and toc
-   #   inject:
-   #     md-content: [div, class]
-      # password_file: 'passwords.yml'
+  - encryptcontent:  
+       global_password: myt666
+       title_prefix: ''
+       remember_password: False 
+       summary: '看不到我~'
+       hljs: True
+       mermaid2: True
+       decryption_failure_message: '密码错误'
+       encryption_info_message: '该笔记不对外公开'
+       encrypted_something:
+         md-footer__inner: [nav, class] #Footer
+         md-nav: [nav, class] #Menu and toc
+       inject:
+         md-content: [div, class]
+       # password_file: 'passwords.yml'
+       
 
 markdown_extensions: #详见https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/ 和 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
   - abbr
