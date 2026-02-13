@@ -34,7 +34,13 @@ input[type="password"] {
   border-radius: 4px;
   
   /* 核心：高度控制 (与按钮完全一致) */
-  height: var(--decrypt
+  height: var(--decrypt-height);
+  box-sizing: border-box;      /* 关键！包含边框在内计算高度 */
+  vertical-align: middle;      /* 垂直居中对齐 */
+  
+  padding: 0 10px;
+  background-color: #ffffff;
+}
 
 /* Logo title */
 .md-header__topic:first-child {
