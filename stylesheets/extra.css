@@ -1,3 +1,41 @@
+/* 定义统一的高度变量，方便调整 */
+:root {
+  --decrypt-height: 36px; /* 你可以改这个值，比如 40px 或 36px */
+}
+
+/* 1. 自定义按钮样式 (灰色、圆角) */
+.decryption-btn {
+  background-color: #f0f0f0;   /* 浅灰色背景 */
+  color: #333333;              /* 深灰色文字 */
+  border: 1px solid #cccccc;   /* 灰色边框 */
+  border-radius: 4px;          /* 圆角大小 */
+  cursor: pointer;             /* 鼠标变小手 */
+  
+  /* 核心：高度控制 */
+  height: var(--decrypt-height);
+  box-sizing: border-box;      /* 关键！包含边框在内计算高度 */
+  vertical-align: middle;      /* 垂直居中对齐 */
+  
+  padding: 0 16px;             /* 左右留出空间 */
+  margin-left: 3px; /* 按钮与输入框距离 */
+  transition: all 0.2s ease;
+}
+
+/* 鼠标悬停变深一点，提示可以点击 */
+.decryption-btn:hover {
+  background-color: #e0e0e0;
+  border-color: #b3b3b3;
+}
+
+/* 2. 输入框样式 (必须同步修改，才能保证高度一致) */
+/* 注意：这里使用了属性选择器来定位密码框 */
+input[type="password"] {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  
+  /* 核心：高度控制 (与按钮完全一致) */
+  height: var(--decrypt
+
 /* Logo title */
 .md-header__topic:first-child {
   font-weight: initial !important;

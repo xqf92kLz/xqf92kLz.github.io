@@ -346,7 +346,17 @@ async function init_decryptor() {
         encryptcontent_done = true;
         window.dispatchEvent(encryptcontent_event);
     }
-    
+    /* If password_button is set, try decrypt content when button is press */
+    let decrypt_button = document.getElementById("mkdocs-decrypt-button");
+    if (decrypt_button) {
+        decrypt_button.onclick = async function(event) {
+            event.preventDefault();
+            content_decrypted = await decrypt_action(
+                username_input, password_input, encrypted_content, decrypted_content
+            );
+            decryptor_reaction(content_decrypted, password_input, decrypted_content);
+        };
+    }
     /* Default, try decrypt content when key enter is press */
     password_input.addEventListener('keypress', async function(event) {
         if (event.key === "Enter") {
