@@ -1,3 +1,118 @@
+/* ==========================================
+   1. 字体质感与粗细
+   ========================================== */
+body, .md-typeset {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    color: #333 !important;
+    line-height: 1.6 !important;
+}
+
+/* 1. 正常的内联代码：恢复清瘦感 (Regular 400) */
+.md-typeset code {
+    background-color: #f3f4f4 !important;
+    padding: 0.15em 0.3em !important;
+    border-radius: 3px !important;
+    font-size: 0.9em !important;
+    color: #333 !important;
+    box-shadow: none !important;
+    font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace !important;
+    font-weight: 400 !important; /* 普通代码瘦身 */
+}
+
+strong, b, .md-typeset strong, .md-typeset b {
+    font-weight: 600 !important; 
+    color: #222 !important;
+}
+
+/* ==========================================
+   5. 表格内的文字与粗体同步“瘦身”
+   ========================================== */
+
+/* 强行覆盖 Material 主题对表头 (th) 和表格内粗体 (strong/b) 的独占加粗 */
+.md-typeset table th,
+.md-typeset table td strong,
+.md-typeset table td b,
+.md-typeset table th strong,
+.md-typeset table th b {
+    font-weight: 600 !important; /* 同步 Typora 的半粗体质感 */
+    color: #222 !important;      /* 保持干练的深灰色 */
+}
+
+/* 顺便让表格里的内联代码也保持清瘦 */
+.md-typeset table th code,
+.md-typeset table td code {
+    font-weight: 400 !important;
+}
+
+/* 如果表格里有加粗的代码，依然给出 600 的字重 */
+.md-typeset table th strong code,
+.md-typeset table td strong code {
+    font-weight: 600 !important;
+}
+
+/* 2. 真正被加粗的代码：恢复精干的粗体 (Semi-bold 600) */
+/* 涵盖了 **`代码`** 和 `**代码**` 两种 Markdown 写法 */
+.md-typeset strong code,
+.md-typeset b code,
+.md-typeset code strong,
+.md-typeset code b {
+    font-weight: 600 !important; /* 找回加粗效果，且不至于像默认的 700 那样发糊 */
+    color: #222 !important;      /* 稍微加深一点颜色，增强对比度 */
+}
+
+/* ==========================================
+   2. 靠左间距：彻底核弹级重置（解决 sudo 向右漂移）
+   ========================================== */
+/* 杀掉 MkDocs 画蛇添足的假符号 */
+.md-typeset ul > li::before,
+.md-typeset ol > li::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* 核心修复：把 Material 主题偷偷加的叠加间距全部清零！ */
+.md-typeset ul,
+.md-typeset ol,
+.md-typeset li,
+.md-typeset li > p {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* 重新赋予唯一的阶梯距离：仅靠 ul/ol 的内边距控制缩进，完美对齐上一级文字 */
+.md-typeset ul,
+.md-typeset ol {
+    padding-left: 1.6em !important; /* Typora 的黄金对齐距离 */
+}
+
+/* 恢复原生列表，强制符号悬挂在文字外部 */
+.md-typeset ul > li,
+.md-typeset ol > li {
+    display: list-item !important;
+    list-style-position: outside !important;
+    /* 列表项的行间距 */
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+}
+
+/* ==========================================
+   3. 行间距：压扁多余的 P 标签空隙
+   ========================================== */
+.md-typeset li > p {
+    margin-top: 4px !important; 
+    margin-bottom: 4px !important;
+    line-height: inherit !important;
+}
+
+/* ==========================================
+   4. 符号体系还原 (完全对照 Typora 截图)
+   ========================================== */
+.md-typeset ol { list-style-type: decimal !important; }
+.md-typeset ul { list-style-type: disc !important; }
+.md-typeset ul ul, .md-typeset ol ul { list-style-type: circle !important; }
+.md-typeset ul ul ul, .md-typeset ol ul ul { list-style-type: square !important; }
+
 /* 定义统一的高度变量，方便调整 */
 :root {
   --decrypt-height: 36px; /* 你可以改这个值，比如 40px 或 36px */
