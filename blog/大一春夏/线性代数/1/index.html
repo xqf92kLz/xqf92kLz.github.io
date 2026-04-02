@@ -1,119 +1,240 @@
 
-<!DOCTYPE html>
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.uwouni.com/blog/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/1/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://cdn.luogu.com.cn/upload/image_hosting/uo5wu9mh.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>1 - uwouni</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
 
-<html class="no-js" lang="zh">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://www.uwouni.com/blog/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/1/" rel="canonical"/>
-<link href="../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1%27/" rel="prev"/>
-<link href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" rel="next"/>
-<link href="https://cdn.luogu.com.cn/upload/image_hosting/uo5wu9mh.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.5" name="generator"/>
-<title>线性图形的几何问题 - uwouni</title>
-<link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
-<link href="../../../../stylesheets/katex.min.css" rel="stylesheet"/>
-<link href="../../../../stylesheets/extra.css" rel="stylesheet"/>
-<link href="../../../../assets/document_dates/fonts/material-icons.css" rel="stylesheet"/>
-<link href="../../../../assets/document_dates/tippy/backdrop.css" rel="stylesheet"/>
-<link href="../../../../assets/document_dates/tippy/light.css" rel="stylesheet"/>
-<link href="../../../../assets/document_dates/tippy/material.css" rel="stylesheet"/>
-<link href="../../../../assets/document_dates/tippy/scale.css" rel="stylesheet"/>
-<link href="../../../../assets/document_dates/tippy/shift-away.css" rel="stylesheet"/>
-<link href="../../../../assets/document_dates/tippy/tippy.css" rel="stylesheet"/>
-<link href="../../../../assets/document_dates/core/core.css" rel="stylesheet"/>
-<link href="../../../../assets/document_dates/user.config.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-</head>
-<body data-md-color-accent="red" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-</div>
-<div data-md-component="announce">
-</div>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/backdrop.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/light.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/scale.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/core/core.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/user.config.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
 <header class="md-header" data-md-component="header">
-<nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="uwouni" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="uwouni">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="uwouni" class="md-header__button md-logo" aria-label="uwouni" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             uwouni
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
-              线性图形的几何问题
+              1
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="red" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="blue" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
-</label>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
 </form>
-<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-<label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-</label>
-<div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="__search"></label>
-<div class="md-search__inner" role="search">
-<form class="md-search__form" name="search">
-<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
-<label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-</label>
-<nav aria-label="查找" class="md-search__options">
-<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
-</a>
-<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-</button>
-</nav>
-<div class="md-search__suggest" data-md-component="search-suggest"></div>
-</form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
             正在初始化搜索引擎
           </div>
-<ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</nav>
+      
+    
+    
+  </nav>
+  
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
-<div class="md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
         
   
   
@@ -122,9 +243,26 @@
   首页
 
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/">
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/" class="md-tabs__link">
           
   
   
@@ -133,9 +271,23 @@
   大一上
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1/">
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2/" class="md-tabs__link">
           
   
   
@@ -144,9 +296,20 @@
   数学分析
 
         </a>
-</li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="./">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../LALU/" class="md-tabs__link">
           
   
   
@@ -155,9 +318,20 @@
   线性代数
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" class="md-tabs__link">
           
   
   
@@ -166,9 +340,20 @@
   计算机系统
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" class="md-tabs__link">
           
   
   
@@ -177,9 +362,20 @@
   离散数学
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/" class="md-tabs__link">
           
   
   
@@ -188,9 +384,20 @@
   数据结构基础
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../%E6%99%AE%E7%89%A9%E5%AE%9E%E9%AA%8C/">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%99%AE%E7%89%A9%E5%AE%9E%E9%AA%8C/" class="md-tabs__link">
           
   
   
@@ -199,100 +406,4211 @@
   普物实验
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../%E5%9B%BE%E7%81%B5%E7%A0%94%E8%AE%A8%E7%8F%AD%E8%AF%BE/">
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
           
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="uwouni" class="md-nav__button md-logo" aria-label="uwouni" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    uwouni
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
-  图灵学术班
+  
+  <span class="md-ellipsis">
+    
+  
+    大一上
+  
 
-        </a>
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一上
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一秋冬
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一秋冬
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分（甲）Ⅰ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分（甲）Ⅰ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%BE%AE%E7%A7%AF%E5%88%86/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 0 章 预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%BE%AE%E7%A7%AF%E5%88%86/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章 函数与极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%BE%AE%E7%A7%AF%E5%88%86/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 导数与微分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%BE%AE%E7%A7%AF%E5%88%86/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 微分中值定理及导数的应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%BE%AE%E7%A7%AF%E5%88%86/%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%BE%AE%E7%A7%AF%E5%88%86/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章 不定积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%BE%AE%E7%A7%AF%E5%88%86/4%27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%BE%AE%E7%A7%AF%E5%88%86/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 定积分及其应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%BE%AE%E7%A7%AF%E5%88%86/5%27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章预习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%BE%AE%E7%A7%AF%E5%88%86/5%27%27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%BE%AE%E7%A7%AF%E5%88%86/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数（甲）
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数（甲）
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章 线性方程组的求解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 行列式与矩阵的秩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 矩阵的运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章 $n$ 元向量空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章 线性空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章 欧式空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/5_tsy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 矩阵的特征值理论与相似对角化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/5%27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章预习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/6_tsy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章 二次型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/6%27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章预习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C 程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C 程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/C%20%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%A2%8E%E5%B1%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    知识碎屑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/C%20%E7%A8%8B/%E6%8C%87%E9%92%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    指针
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/C%20%E7%A8%8B/%E6%96%87%E4%BB%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/C%20%E7%A8%8B/%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    踩过的坑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/C%20%E7%A8%8B/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大英三
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大英三
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/to%20do/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    to do
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/B1U1-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B1U1-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U1 Mind the gap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U2 On the road
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U3 Just relax!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U4 Does gender matter?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/Quiz1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quiz1 复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U5 The power of words
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U6 You are what you eat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U7 Nature's gifts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/B2U8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B2U8 Technology:controllers or helpers?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/Quiz2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quiz2 复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/Oral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oral exam 准备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/Read/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Read 准备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E5%A4%A7%E8%8B%B1%E4%B8%89/Final/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    汇编基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_6" id="__nav_2_1_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    汇编基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    汇编入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/solve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    做题记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期末复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    无线网络应用
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_7" id="__nav_2_1_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    无线网络应用
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC/%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一寒假
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一寒假
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E5%AF%92%E5%81%87/%E5%BE%AE%E7%A7%AF%E5%88%86/Kira/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    预习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E5%AF%92%E5%81%87/%E5%BE%AE%E7%A7%AF%E5%88%86/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章 级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学分析（甲）Ⅰ（H）
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数学分析（甲）Ⅰ（H）
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/0%27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gemini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数Ⅰ（H）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数Ⅱ（H）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E5%AF%92%E5%81%87/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机科学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_5" id="__nav_2_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人工智能
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    人工智能
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E4%B8%80%E5%AF%92%E5%81%87/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neural Networks: Zero to Hero
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_6" id="__nav_2_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    离散数学
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    离散数学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/CS70/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS70: Discrete Mathematics and Probability Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/MIT%206.042J/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MIT 6.042J: Mathematics for Computer Science
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_7" id="__nav_2_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机系统
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算机系统
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/CS61C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS61C: Great Ideas in Computer Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/ETH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ETH Zurich：Digital Design and Computer Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学分析
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数学分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    函数列与函数项级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    幂级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fourier 级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LALU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LALU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 线性映射
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机系统
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算机系统
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lab0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lab1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    离散数学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    离散数学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch1: The Foundations: Logic and Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch2: Basic Structures: Sets, Functions, Sequences, Sums, and Matrices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据结构基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/hw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E6%99%AE%E7%89%A9%E5%AE%9E%E9%AA%8C/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    普物实验
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    普物实验
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%99%AE%E7%89%A9%E5%AE%9E%E9%AA%8C/lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        映射
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        商空间
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶空间
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>1</h1>
+
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-03-30'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-03-30T19:07:48.756713+08:00'>2026-03-30</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-03-31'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-03-31T13:01:21.953264+08:00'>2026-03-31</time></span></div></div></div>
+<h3 id="_1">映射<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>映射的定义 <span class="arithmatex">\(T: V \to W\)</span></p>
+<ul>
+<li>
+<p><strong>值域 (Range) <span class="arithmatex">\(\text{range } T\)</span></strong>：<span class="arithmatex">\(V\)</span> 在映射 <span class="arithmatex">\(T\)</span> 下的<strong>像</strong>。它不一定是整个 <span class="arithmatex">\(W\)</span>，而是 <span class="arithmatex">\(W\)</span> 中所有能被 <span class="arithmatex">\(V\)</span> 里的向量“打中”的点的集合。</p>
+<p><strong>零空间 (Null Space) <span class="arithmatex">\(\text{null } T\)</span></strong>：<strong><span class="arithmatex">\(0\)</span> 的原像</strong>。也就是 <span class="arithmatex">\(V\)</span> 中所有经过 <span class="arithmatex">\(T\)</span> 映射后变成 <span class="arithmatex">\(W\)</span> 中零向量的那些向量。</p>
+<p><strong>线性映射 (Linear Map)</strong>：<span class="arithmatex">\(T(u+v) = Tu + Tv\)</span> 和 <span class="arithmatex">\(T(cv) = c(Tv)\)</span>。</p>
 </li>
 </ul>
-</div>
-</nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0" style="display:none !important">by1pu6vapo3qkx09ayT4DQ==;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</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="目录" class="md-nav md-nav--secondary" style="display:none !important">ZyhY7cNuSWgHM9/peqSdhA==;cNJAX/G0/fC6+uXt//MsNA==</nav>
-</div>
-</div>
-</div>
-<div><div id="mkdocs-encrypted-content" style="display:none">l6PjNXEgQL++rtZt6G2CRQ==;rmjMfah6YpXC2dyfWEvHUw==</div>
-<div id="mkdocs-decrypted-content" style="display:none">
-<form class="md-content__inner md-typeset" id="mkdocs-decrypt-form">
-<h1>看不到我~</h1>
-<p>该笔记不对外公开</p>
-<input class="md-input" id="mkdocs-content-password" placeholder="Password" type="password"/>
-<button class="decryption-btn" id="mkdocs-decrypt-button">继续</button>
-<p id="mkdocs-decrypt-msg"></p>
-</form>
-</div>
-<script type="text/javascript">
-var encryptcontent_id = "encryptcontent_1";
-var encryptcontent_path = "blog/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/1/";
-var decryption_failure_message = "\u5bc6\u7801\u9519\u8bef";
-var encryptcontent_keystore = ["J6XqmORoP8Kd61/wSxCQEw==;6L/3Tz1e+mrlNub6FsWViZxAnv6ViBcT1K4m5BhhdUQ0aVVSiQ3Frlwg57PVoCt9SO3YI8Wrom8ha0nrFozJ2Lp3m0e/15T2l/dE9QJeRF+MSvj32cDJG+22MzcvQGyL;miqUbyws75EqrIqPralLpg=="];
-var encryptcontent_obfuscate = 0;
-var inject_something = {'md-content': ['div', 'class']};
-const encryptcontent_event = new Event("encryptcontent_event");
-var encryptcontent_done = false;
-</script>
-<script type="module">
-if (!window.hasOwnProperty("init_decryptor")) {
-    import("../../../../assets/javascripts/decrypt-contents.js");
-} else {
-    init_decryptor();
-}
-</script></div><div class="md-content" data-md-component="content" style="display:none !important">xSroMSDv5KvqijNvye3uvw==;0gB/MEJ0vQeN5d8T3XU2ZyIWqDoCn6GCKAdSGlzQIzrNWJZKWdkadWBigx6kPBmSLTD7tQ0MoYxaA0QrjSR9NPqJtwmKexGHGbNSiWKLom5K+GifTj7HG+oIRmlnzmbBYuzNfmhrNE0NzO99tTOJKTOoT5N0TR7VP98OUguKS8KuwXzH/lkuooqQPxgc6GTIjc0UhYOxX37LfeTIjarumVtVz6/mFM7iqNS5LI7K1zyAVkDwnreu1VG7vBdU3/GUfBhzk6qI3nYUpjoatLbfxtvy/FoGch0/203UXnXeQPD+ctaosA7hDBZkXkTrh636qH0ERWJNAs+URNa5LXxsrXMkeip2bvbG4OddrLmtrUxFv2c66gsI9h6O4TT86LVwUC6oPXSufKHYXlpFp9Ij0NfrKgvZftcSlWcwE8G5s+jTtP69kAGIPCiqMIrUP/k0KLo4k7MKHn1UReVK2/jNSP3niofj2uL077e80aMOC9cuwkDX3snrog+RFJ7QHSkCoE+hVhDH7VXn2Beo9Ydus2xvUBtInw5bO/BUd9bDwTSrtCttqSb45VAJ5Nl5dDdbGlOKUje+5xnJbn23+cDbUjanFbbSqSr4alYRsT4EayPb5NfmH2x93g5QmxynE3dszzMleHma0LO1vvkHKcuE86BSLOjNLhRKH+BWgdCaFwxenuihNqjAp0CyWEDwsu7y4VltrowB6axzeF0pav/0eylW+W+M48BYajd2RIWju0J3CdAVJbM2B9q/9DCxVZzmf7nrzs3bT1FHqaG3+CVsZvzbM7S98TdO8hovbYg18Z7K3Q0A+nAdKF9KO889ZZYcRISpXAod8z9slKiy/nchoIVVKIHlJ9+Vh0TWIVL0Y+Q=</div>
+<h3 id="_2">商空间<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>想象向量空间 <span class="arithmatex">\(V\)</span> 是一个巨大的集合，而 <span class="arithmatex">\(U\)</span> 是它的一个子空间。我们要把 <span class="arithmatex">\(V\)</span> 里的元素进行“分类”，规则是：如果两个向量 <span class="arithmatex">\(v_1\)</span> 和 <span class="arithmatex">\(v_2\)</span> 的<strong>差</strong>落在 <span class="arithmatex">\(U\)</span> 里面（即 <span class="arithmatex">\(v_1 - v_2 \in U\)</span>），我们就认为它们属于“同一类”。</p>
+<p>这种“类”在数学上叫做<strong>仿射子空间 (Affine Subset)</strong>，通常写成 <span class="arithmatex">\(v + U\)</span>。</p>
+<blockquote>
+<p><strong>例</strong></p>
+<p>假设 <span class="arithmatex">\(V\)</span> 是整个二维平面 <span class="arithmatex">\(\mathbb{R}^2\)</span>，<span class="arithmatex">\(U\)</span> 是经过原点的一条直线（一维子空间）。</p>
+<ul>
+<li><span class="arithmatex">\(v_1 - v_2\)</span> 代表了从 <span class="arithmatex">\(v_2\)</span> 指向 <span class="arithmatex">\(v_1\)</span> 的位移向量。<span class="arithmatex">\(v_1 - v_2 \in U\)</span> 时，这个“位移向量”如果把起点平移到原点，它会完全叠在直线 <span class="arithmatex">\(U\)</span> 上。</li>
+<li>如果 <span class="arithmatex">\(v_1 - v_2 \in U\)</span>，意味着连接这两个点的线段，其方向和直线 <span class="arithmatex">\(U\)</span> 是完全平行的。</li>
+<li><span class="arithmatex">\(U\)</span> 本身： 是一条过原点的直线。</li>
+<li><span class="arithmatex">\(v + U\)</span>（一个类）： 是把 <span class="arithmatex">\(U\)</span> 沿着向量 <span class="arithmatex">\(v\)</span> 的方向平移后得到的那条直线。</li>
+</ul>
+<hr />
+<p>在三维空间 <span class="arithmatex">\(V\)</span> 中，如果子空间 <span class="arithmatex">\(U\)</span> 是“地板”（一个平面），那么每一个“类” <span class="arithmatex">\(v+U\)</span> 就是一个<strong>平行于地板的平面</strong>。</p>
+<p>这些“类”堆叠在一起，填满了整个三维房间。如果我们把每一层“类”都看作一个<strong>单独的元素</strong>，这些平面“堆叠”出来的轨迹是<strong>一条线</strong>。</p>
+<p>现在观察一下维度的变化：</p>
+<ul>
+<li><strong>原始空间 <span class="arithmatex">\(V\)</span></strong> 的维度是 <strong>3</strong>（房间是三维的）。</li>
+<li><strong>子空间 <span class="arithmatex">\(U\)</span></strong> 的维度是 <strong>2</strong>（地板是二维的）。</li>
+<li><strong>商空间 <span class="arithmatex">\(V/U\)</span></strong>：我们将每个平面看作一个元素，这些平面“堆叠”出来的轨迹是<strong>一条线</strong>。所以商空间 <span class="arithmatex">\(V/U\)</span> 的维度是 <strong>1</strong>。</li>
+</ul>
+<p>这引出了线性代数中一个非常著名的公式：</p>
+<div class="arithmatex">\[\dim(V/U) = \dim V - \dim U\]</div>
+</blockquote>
+</li>
+<li>
+<p>商空间之所以重要，是因为它能帮我们理解线性映射 <span class="arithmatex">\(T: V \to W\)</span> 的本质。</p>
+<ul>
+<li><strong>零空间 <span class="arithmatex">\(\text{null } T\)</span></strong>：所有被 <span class="arithmatex">\(T\)</span> 映射到 <span class="arithmatex">\(0\)</span> 的向量。</li>
+<li><strong>值域 <span class="arithmatex">\(\text{range } T\)</span></strong>：<span class="arithmatex">\(V\)</span> 映射过去后在 <span class="arithmatex">\(W\)</span> 中形成的像。</li>
+</ul>
+<p><strong>商空间 <span class="arithmatex">\(V/(\text{null } T)\)</span> 与值域 <span class="arithmatex">\(\text{range } T\)</span> 在结构上是“一样”的（同构）。</strong></p>
+<blockquote>
+<p>在映射 <span class="arithmatex">\(T\)</span> 的眼中，所有属于 <span class="arithmatex">\(\text{null } T\)</span> 里的向量最后都会变成 <span class="arithmatex">\(0\)</span>。那么，对于两个向量 <span class="arithmatex">\(v_1\)</span> 和 <span class="arithmatex">\(v_2\)</span>，如果它们的差 <span class="arithmatex">\(v_1 - v_2\)</span> 刚好在 <span class="arithmatex">\(\text{null } T\)</span> 里，你觉得 <span class="arithmatex">\(T(v_1)\)</span> 和 <span class="arithmatex">\(T(v_2)\)</span> 的值会有什么关系？（提示：利用线性映射的性质 <span class="arithmatex">\(T(v_1 - v_2) = T(v_1) - T(v_2)\)</span>）</p>
+<p>根据线性映射的定义：</p>
+<div class="arithmatex">\[T(v_1) - T(v_2) = T(v_1 - v_2)\]</div>
+<p>如果差值 <span class="arithmatex">\(v_1 - v_2\)</span> 落在零空间 <span class="arithmatex">\(\text{null } T\)</span> 中，那么 <span class="arithmatex">\(T(v_1 - v_2) = 0\)</span>，这就意味着 <span class="arithmatex">\(T(v_1) = T(v_2)\)</span>。</p>
+<p>这告诉我们：在映射 <span class="arithmatex">\(T\)</span> 的眼里，<strong>同一个“类” <span class="arithmatex">\(v + \text{null } T\)</span> 里的所有向量，映射过去的结果都是同一个值</strong>。</p>
+<p>这就解释了为什么商空间 <span class="arithmatex">\(V/(\text{null } T)\)</span> 和值域 <span class="arithmatex">\(\text{range } T\)</span> 是“一样”的（同构）：</p>
+<ol>
+<li>商空间把那些会被 <span class="arithmatex">\(T\)</span> “弄混”的点打包成了一个个<strong>类</strong>。</li>
+<li>这些类与值域里的每一个<strong>值</strong>恰好形成了一一对应的关系。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h3 id="_3">对偶空间<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>对偶空间</strong> <span class="arithmatex">\(V'\)</span> 的定义是：所有从 <span class="arithmatex">\(V\)</span> 到标量域 <span class="arithmatex">\(\mathbb{F}\)</span>（通常是实数或复数）的<strong>线性映射</strong>组成的集合。</p>
+<p>这些映射被称为<strong>线性泛函 (Linear Functionals)</strong>。</p>
+<blockquote>
+<p><strong>我们可以用一个形象的比喻：</strong></p>
+<ul>
+<li><strong>向量 <span class="arithmatex">\(v\)</span></strong> 是“被测量”的对象（比如一段木头）。</li>
+<li><strong>线性泛函 <span class="arithmatex">\(\phi \in V'\)</span></strong> 是一把“尺子”（比如长度、重量、含水量）。</li>
+<li>当你把尺子作用在木头上，即 <span class="arithmatex">\(\phi(v)\)</span>，你会得到一个具体的<strong>数</strong>。</li>
+</ul>
+<hr />
+<p><strong>为了确认对“线性泛函”的理解，请尝试判断：</strong></p>
+<p>假设 <span class="arithmatex">\(V = \mathbb{R}^3\)</span>（三维坐标空间），以下两个运算中，哪一个是 <span class="arithmatex">\(V\)</span> 上的<strong>线性泛函</strong>？</p>
+<ol>
+<li><span class="arithmatex">\(f(x, y, z) = x + 2y + 3z\)</span></li>
+<li><span class="arithmatex">\(g(x, y, z) = x^2 + y^2 + z^2\)</span></li>
+</ol>
+<p>线性泛函的核心在于它必须满足<strong>线性</strong>的两个基本要求：</p>
+<ol>
+<li><strong>可加性</strong>：<span class="arithmatex">\(f(u + v) = f(u) + f(v)\)</span></li>
+<li><strong>齐次性</strong>：<span class="arithmatex">\(f(cv) = c f(v)\)</span></li>
+</ol>
+<p>让我们观察给出的两个例子：</p>
+<ul>
+<li><strong>第一个：<span class="arithmatex">\(f(x, y, z) = x + 2y + 3z\)</span></strong></li>
+</ul>
+<p>这是一次多项式。如果你把坐标翻倍，结果也会翻倍；如果你把两个向量相加，结果也刚好是各自结果的和。它就像是一个<strong>加权平均</strong>，是典型的<strong>线性泛函</strong> ✅。</p>
+<ul>
+<li><strong>第二个：<span class="arithmatex">\(g(x, y, z) = x^2 + y^2 + z^2\)</span></strong></li>
+</ul>
+<p>这里出现了<strong>平方</strong>。</p>
+<ul>
+<li><strong>试一试齐次性</strong>：如果我们将向量翻倍，即 <span class="arithmatex">\((2x, 2y, 2z)\)</span>，那么 <span class="arithmatex">\(g\)</span> 的结果会变成 <span class="arithmatex">\((2x)^2 + (2y)^2 + (2z)^2 = 4(x^2 + y^2 + z^2)\)</span>。</li>
+<li><strong>结果</strong>：自变量翻了 <span class="arithmatex">\(2\)</span> 倍，结果却翻了 <span class="arithmatex">\(4\)</span> 倍！</li>
+</ul>
+<p>所以，<span class="arithmatex">\(g\)</span> 并不是线性的。它其实是向量的<strong>模长的平方</strong>，属于二次型，而不是线性泛函 ❌。</p>
+<hr />
+<p><strong>对偶空间 <span class="arithmatex">\(V'\)</span></strong> 就是由所有像 <span class="arithmatex">\(f\)</span> 这样“合格”的线性映射组成的集合。</p>
+<p>有趣的地方在于：</p>
+<ul>
+<li><span class="arithmatex">\(V\)</span> 里的元素是<strong>向量</strong>（被测量的对象）。</li>
+<li><span class="arithmatex">\(V'\)</span> 里的元素是<strong>函数</strong>（测量向量的尺子）。</li>
+</ul>
+<p>但在高等线性代数中，<strong>“尺子”本身也可以看作“向量”</strong>。因为你可以把两把尺子相加（得到一把新尺子），也可以把尺子拉长（数乘）。</p>
+<hr />
+<p><strong>为了深入理解，我们可以看一个具体的例子：</strong></p>
+<p>假设 <span class="arithmatex">\(V\)</span> 是所有<strong>多项式</strong>组成的空间。</p>
+<p>我们要定义一个“线性泛函”（一把尺子）来测量这些多项式。</p>
+<p><strong>你觉得下面哪种操作可以算作是对多项式的线性测量（即线性泛函）？</strong></p>
+<ol>
+<li>计算多项式在 <span class="arithmatex">\(x=1\)</span> 处的值，即 <span class="arithmatex">\(\phi(p) = p(1)\)</span>。</li>
+<li>计算多项式的最高次数，即 <span class="arithmatex">\(\psi(p) = \text{deg}(p)\)</span>。</li>
+</ol>
+<p><span class="arithmatex">\(\phi(p) = p(1)\)</span> 是一个<strong>线性泛函</strong> ✅。如果你有两个多项式 <span class="arithmatex">\(p\)</span> 和 <span class="arithmatex">\(q\)</span>，那么 <span class="arithmatex">\((p+q)(1)\)</span> 确实等于 <span class="arithmatex">\(p(1) + q(1)\)</span>；同理，乘上一个常数也满足规则。这把尺子的功能就是“提取多项式在 <span class="arithmatex">\(1\)</span> 处的高度”。</p>
+<p>至于 <span class="arithmatex">\(\psi(p) = \text{deg}(p)\)</span>（最高次数），它不是线性的 ❌。比如 <span class="arithmatex">\(x^2\)</span> 和 <span class="arithmatex">\(-x^2 + x\)</span> 的次数都是 <span class="arithmatex">\(2\)</span>，但它们相加后次数变成了 <span class="arithmatex">\(1\)</span>，并不等于 <span class="arithmatex">\(2+2\)</span>。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>对偶基</strong></p>
+<p>既然 <span class="arithmatex">\(V'\)</span> 是一个向量空间，它就应该有自己的<strong>基</strong>。</p>
+<blockquote>
+<p>假设 <span class="arithmatex">\(V\)</span> 有一组基 <span class="arithmatex">\((v_1, \dots, v_n)\)</span>。我们要为 <span class="arithmatex">\(V'\)</span> 找一组对应的“尺子” <span class="arithmatex">\((\phi_1, \dots, \phi_n)\)</span>。</p>
+<p>《线性代数应该这样学》中定义这组<strong>对偶基</strong>的方式非常优雅：</p>
+<p>每把尺子 <span class="arithmatex">\(\phi_i\)</span> 只负责测量对应的基向量 <span class="arithmatex">\(v_i\)</span>，对其他的基向量都视而不见。</p>
+<p>用数学语言表达：</p>
+<p><span class="arithmatex">\(\phi_i(v_j) =\begin{cases}1 &amp; \text{if } i = j \\0 &amp; \text{if } i \neq j\end{cases}\)</span></p>
+<hr />
+<p><strong>举个例子：</strong></p>
+<p>在 <span class="arithmatex">\(V = \mathbb{R}^2\)</span> 中，如果基是 <span class="arithmatex">\(v_1 = (1, 0)\)</span> 和 <span class="arithmatex">\(v_2 = (0, 1)\)</span>：</p>
+<ul>
+<li><span class="arithmatex">\(\phi_1(x, y) = x\)</span> （它只提取第一个坐标，对第二个坐标视而不见）</li>
+<li><span class="arithmatex">\(\phi_2(x, y) = y\)</span> （它只提取第二个坐标）</li>
+</ul>
+<p>这就是所谓的<strong>对偶基</strong>。它就像是一组专用的“探测器”，每一个探测器只负责测量向量在某个特定基向量方向上的“分量”。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>对偶映射</strong></p>
+<blockquote>
+<p>现在我们有了“向量”和“尺子”，让我们看看当有一个线性映射 <span class="arithmatex">\(T: V \to W\)</span> 时会发生什么。</p>
+<p>线性映射 <span class="arithmatex">\(T\)</span> 把 <span class="arithmatex">\(V\)</span> 里的向量搬到了 <span class="arithmatex">\(W\)</span> 里。那么，如果 <span class="arithmatex">\(W\)</span> 空间里有一把尺子 <span class="arithmatex">\(\varphi \in W'\)</span>（用来测量 <span class="arithmatex">\(W\)</span> 里的向量），我们能不能用它来测量 <span class="arithmatex">\(V\)</span> 里的向量呢？</p>
+<p>我们可以定义一个<strong>对偶映射 <span class="arithmatex">\(T': W' \to V'\)</span></strong>。</p>
+<p>它的工作逻辑非常直观（虽然方向是反向的）：</p>
+<p>如果要测量 <span class="arithmatex">\(V\)</span> 里的向量 <span class="arithmatex">\(v\)</span>，我们先用 <span class="arithmatex">\(T\)</span> 把 <span class="arithmatex">\(v\)</span> 搬到 <span class="arithmatex">\(W\)</span> 里，然后再用 <span class="arithmatex">\(W\)</span> 里的尺子 <span class="arithmatex">\(\varphi\)</span> 去量它。</p>
+<p>数学表达式就是：</p>
+<div class="arithmatex">\[(T' \varphi)(v) = \varphi(Tv)\]</div>
+<p><strong>这里有一个非常有趣的现象：</strong></p>
+<ul>
+<li>原本的映射 <span class="arithmatex">\(T\)</span> 是从 <span class="arithmatex">\(V\)</span> 到 <span class="arithmatex">\(W\)</span>。</li>
+<li>对偶映射 <span class="arithmatex">\(T'\)</span> 却是从 <span class="arithmatex">\(W'\)</span> 回到 <span class="arithmatex">\(V'\)</span>。</li>
+</ul>
+<p><strong>根据这个逻辑，你觉得为什么对偶映射的方向和原映射是“相反”的？</strong></p>
+<p>（提示：看看上面的定义式，我们需要先有哪里的“尺子”，才能去测量搬运过来的向量？）</p>
+<hr />
+<p>因为 <span class="arithmatex">\(T\)</span> 把 <span class="arithmatex">\(V\)</span> 里的向量“搬”到了 <span class="arithmatex">\(W\)</span>，所以我们自然需要 <span class="arithmatex">\(W\)</span> 空间里的尺子（线性泛函）来测量这些成果。</p>
+<p>我们可以把这个过程想象成一个<strong>接力赛</strong>：</p>
+<ol>
+<li><strong>第一棒 (<span class="arithmatex">\(T\)</span>)</strong>：向量 <span class="arithmatex">\(v\)</span> 从 <span class="arithmatex">\(V\)</span> 出发，经过 <span class="arithmatex">\(T\)</span> 的变换，到达了 <span class="arithmatex">\(W\)</span>，变成了 <span class="arithmatex">\(Tv\)</span>。</li>
+<li><strong>第二棒 (<span class="arithmatex">\(\varphi\)</span>)</strong>：在 <span class="arithmatex">\(W\)</span> 终点站守候的尺子 <span class="arithmatex">\(\varphi\)</span> 伸出来，量了一下 <span class="arithmatex">\(Tv\)</span>，得到了一个数 <span class="arithmatex">\(\varphi(Tv)\)</span>。</li>
+</ol>
+<p>这个“组合动作” (<span class="arithmatex">\(\varphi \circ T\)</span>) 本身就是一把<strong>新的尺子</strong>，它能直接量 <span class="arithmatex">\(V\)</span> 里的向量。我们把这把新尺子叫做 <span class="arithmatex">\(T'(\varphi)\)</span>。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>对偶映射与矩阵的联系</strong></p>
+</li>
+</ul>
+<blockquote>
+<p>假设 <span class="arithmatex">\(V\)</span> 有一组基 <span class="arithmatex">\((v_1, \dots, v_n)\)</span>，<span class="arithmatex">\(W\)</span> 有一组基 <span class="arithmatex">\((w_1, \dots, w_m)\)</span>。</p>
+<p>要把线性映射 <span class="arithmatex">\(T\)</span> 变成一个矩阵，我们只需要看 <span class="arithmatex">\(T\)</span> 对 <span class="arithmatex">\(V\)</span> 的每一块“基石”做了什么：</p>
+<ol>
+<li>
+<p><strong>第一步</strong>：算出 <span class="arithmatex">\(T(v_1)\)</span>。这个结果现在躺在 <span class="arithmatex">\(W\)</span> 空间里。</p>
+</li>
+<li>
+<p><strong>第二步</strong>：既然 <span class="arithmatex">\(T(v_1)\)</span> 在 <span class="arithmatex">\(W\)</span> 里，它就可以被 <span class="arithmatex">\(W\)</span> 的基 <span class="arithmatex">\((w_1, \dots, w_m)\)</span> 线性组合出来：</p>
+<div class="arithmatex">\[T(v_1) = a_{1,1}w_1 + a_{2,1}w_2 + \dots + a_{m,1}w_m\]</div>
+</li>
+<li>
+<p><strong>第三步</strong>：把这些系数 <span class="arithmatex">\(a_{1,1}, a_{2,1}, \dots\)</span> 垂直排成一列。这就是矩阵的<strong>第一列</strong>。</p>
+</li>
+</ol>
+<p><strong>本质上：</strong> 矩阵的第 <span class="arithmatex">\(j\)</span> 列，就是输入第 <span class="arithmatex">\(j\)</span> 个基向量后，输出结果在对方基下的“坐标”。</p>
+<hr />
+<p>现在回到我们刚才的“尺子”比喻。</p>
+<ul>
+<li><strong>原映射 <span class="arithmatex">\(T\)</span></strong>：把 <span class="arithmatex">\(V\)</span> 的基变成 <span class="arithmatex">\(W\)</span> 的组合（看列）。</li>
+<li><strong>对偶映射 <span class="arithmatex">\(T'\)</span></strong>：把 <span class="arithmatex">\(W'\)</span> 的“尺子”变回 <span class="arithmatex">\(V'\)</span> 的“尺子”。</li>
+</ul>
+<p>如果你把 <span class="arithmatex">\(W'\)</span> 里的对偶基 <span class="arithmatex">\(\varphi_i\)</span> 看作是提取 <span class="arithmatex">\(W\)</span> 中第 <span class="arithmatex">\(i\)</span> 个分量的探测器。</p>
+<p>那么 <span class="arithmatex">\(T'(\varphi_i)\)</span> 这把新尺子去量 <span class="arithmatex">\(v_j\)</span> 的时候：</p>
+<div class="arithmatex">\[(T' \varphi_i)(v_j) = \varphi_i(T v_j)\]</div>
+<p>这个结果恰好就是 <span class="arithmatex">\(T(v_j)\)</span> 在 <span class="arithmatex">\(w_i\)</span> 方向上的系数。</p>
+<p><strong>发现了吗？</strong></p>
+<p>在原矩阵中，这个数在第 <span class="arithmatex">\(i\)</span> 行、第 <span class="arithmatex">\(j\)</span> 列。</p>
+<p>但在对偶映射的逻辑里，我们是输入了第 <span class="arithmatex">\(i\)</span> 把尺子，得到了关于第 <span class="arithmatex">\(j\)</span> 个基的测量值。</p>
+<hr />
+<p>📊 矩阵列的含义：<span class="arithmatex">\(T\)</span> 做出的“动作”</p>
+<p>在原映射 <span class="arithmatex">\(T: V \to W\)</span> 中，矩阵的<strong>第 <span class="arithmatex">\(j\)</span> 列</strong>告诉我们：如果你把 <span class="arithmatex">\(V\)</span> 的第 <span class="arithmatex">\(j\)</span> 个基向量 <span class="arithmatex">\(v_j\)</span> 扔进映射 <span class="arithmatex">\(T\)</span>，它在 <span class="arithmatex">\(W\)</span> 空间里长什么样。</p>
+<p>以刚才的矩阵为例：</p>
+<div class="arithmatex">\[A = \begin{pmatrix} \mathbf{1} &amp; 2 \\ \mathbf{3} &amp; 4 \end{pmatrix}\]</div>
+<p>第一列是 <span class="arithmatex">\(\begin{pmatrix} 1 \\ 3 \end{pmatrix}\)</span>，意思是 <span class="arithmatex">\(T(v_1) = 1w_1 + 3w_2\)</span>。</p>
+<p>📏 尺子的含义：<span class="arithmatex">\(\varphi_i\)</span> 做的“测量”</p>
+<p>现在看 <span class="arithmatex">\(W\)</span> 空间里的<strong>对偶基（尺子）</strong>。</p>
+<ul>
+<li><span class="arithmatex">\(\varphi_1\)</span> 是一把只量 <span class="arithmatex">\(w_1\)</span> 分量的尺子。如果一个向量是 <span class="arithmatex">\(1w_1 + 3w_2\)</span>，<span class="arithmatex">\(\varphi_1\)</span> 量的结果就是 <strong>1</strong>。</li>
+<li><span class="arithmatex">\(\varphi_2\)</span> 是一把只量 <span class="arithmatex">\(w_2\)</span> 分量的尺子。同样的向量，<span class="arithmatex">\(\varphi_2\)</span> 量的结果就是 <strong>3</strong>。</li>
+</ul>
+<p>🔄 对偶映射 <span class="arithmatex">\(T'\)</span>：测量的“接力”</p>
+<p>对偶映射 <span class="arithmatex">\(T'\)</span> 的作用是：给它一把 <span class="arithmatex">\(W\)</span> 的尺子（比如 <span class="arithmatex">\(\varphi_1\)</span>），它返回一把 <span class="arithmatex">\(V\)</span> 的新尺子。</p>
+<p>这把新尺子去量 <span class="arithmatex">\(v_1\)</span> 的结果，定义是 <span class="arithmatex">\((T' \varphi_1)(v_1) = \varphi_1(T v_1)\)</span>。</p>
+<p>让我们把数填进去：</p>
+<ol>
+<li>我们知道 <span class="arithmatex">\(T(v_1) = 1w_1 + 3w_2\)</span>。</li>
+<li>用 <span class="arithmatex">\(W\)</span> 的第一把尺子 <span class="arithmatex">\(\varphi_1\)</span> 去量这个结果：<span class="arithmatex">\(\varphi_1(1w_1 + 3w_2) = \mathbf{1}\)</span>。</li>
+<li>所以，新尺子 <span class="arithmatex">\(T'(\varphi_1)\)</span> 量 <span class="arithmatex">\(v_1\)</span> 的结果是 <strong>1</strong>。</li>
+</ol>
+<hr />
+<p>同理，<strong>3</strong> 恰恰就是矩阵 <span class="arithmatex">\(A\)</span> 第一列的第二个数字。</p>
+<p>让我们理清这个“测量接力”的逻辑：</p>
+<ol>
+<li><strong>输入</strong>：<span class="arithmatex">\(v_1\)</span>。</li>
+<li><strong>动作 <span class="arithmatex">\(T\)</span></strong>：把 <span class="arithmatex">\(v_1\)</span> 变成了 <span class="arithmatex">\(T(v_1) = 1w_1 + \mathbf{3}w_2\)</span>。</li>
+<li><strong>测量 <span class="arithmatex">\(\varphi_2\)</span></strong>：这把尺子专门测量结果中 <span class="arithmatex">\(w_2\)</span> 前面的系数。</li>
+<li><strong>结果</strong>：<span class="arithmatex">\(\varphi_2(T v_1) = 3\)</span>。</li>
+</ol>
+<p>这个过程定义了一把<strong>新尺子</strong>（即 <span class="arithmatex">\(T'\varphi_2\)</span>）量 <span class="arithmatex">\(v_1\)</span> 的结果。</p>
+<hr />
+<p>🔄 从“列”到“行”的华丽转身</p>
+<p>现在请观察：</p>
+<ul>
+<li>
+<p>在<strong>原矩阵 <span class="arithmatex">\(A\)</span></strong> 中，数字 <code>3</code> 位于 <strong>第 2 行、第 1 列</strong>。</p>
+</li>
+<li>
+<p>在<strong>对偶映射 <span class="arithmatex">\(T'\)</span></strong> 的逻辑中，</p>
+<ul>
+<li><strong>第 2 列</strong>：代表我们输入了 <span class="arithmatex">\(W\)</span> 的<strong>第 2 把尺子</strong> <span class="arithmatex">\(\varphi_2\)</span>。</li>
+<li><strong>第 1 行</strong>：代表输出结果中，关于 <span class="arithmatex">\(V\)</span> 的<strong>第 1 把尺子</strong> <span class="arithmatex">\(\phi_1\)</span> 的系数。</li>
+</ul>
+<p>我们算出来 <span class="arithmatex">\((T'\varphi_2)(v_1) = 3\)</span>。这说明新尺子 <span class="arithmatex">\(T'\varphi_2\)</span> 量 <span class="arithmatex">\(v_1\)</span> 得到了 <span class="arithmatex">\(3\)</span>。</p>
+<p>在对偶空间里，这意味着新尺子可以写成：<span class="arithmatex">\(T'\varphi_2 = \dots + \mathbf{3}\phi_1 + \dots\)</span></p>
+<p>因为 <span class="arithmatex">\(3\)</span> 是 <span class="arithmatex">\(\phi_1\)</span> 前面的系数，所以它出现在 <strong>第 1 行</strong>。</p>
+</li>
+</ul>
+<p>这就解释了为什么 <span class="arithmatex">\(T'\)</span> 的矩阵就是原矩阵的<strong>转置</strong>。</p>
+</blockquote>
+<ul>
+<li><strong>湮没空间</strong></li>
+</ul>
+<p>如果一把尺子 <span class="arithmatex">\(\varphi\)</span> 在 <span class="arithmatex">\(T'\)</span> 的<strong>零空间</strong>里（<span class="arithmatex">\(T'\varphi = 0\)</span>），意味着这把尺子回溯到 <span class="arithmatex">\(V\)</span> 之后，量什么都是 <span class="arithmatex">\(0\)</span>。</p>
+<p>$<span class="arithmatex">\((T'\varphi)(v) = \varphi(Tv) = 0\)</span>$</p>
+<p>这说明 <span class="arithmatex">\(\varphi\)</span> 这把尺子非常特殊：它把所有“能被 <span class="arithmatex">\(T\)</span> 制造出来”的东西（即 <span class="arithmatex">\(\text{range } T\)</span>）全部量成了 <span class="arithmatex">\(0\)</span>。在数学上，我们说 <span class="arithmatex">\(\varphi\)</span> <strong>湮没</strong>了 <span class="arithmatex">\(\text{range } T\)</span>。</p>
+<blockquote>
+<p><strong>现在，根据这个逻辑，你觉得下面哪个说法更准确？</strong></p>
+<ol>
+<li>如果一个向量 <span class="arithmatex">\(w\)</span> 不在 <span class="arithmatex">\(T\)</span> 的值域里，那么 <span class="arithmatex">\(T'\)</span> 的零空间里的尺子<strong>一定</strong>要把 <span class="arithmatex">\(w\)</span> 量成 <span class="arithmatex">\(0\)</span>。</li>
+<li>只有当向量 <span class="arithmatex">\(w\)</span> 属于 <span class="arithmatex">\(T\)</span> 的值域时，<span class="arithmatex">\(T'\)</span> 零空间里的尺子才<strong>保证</strong>把它量成 <span class="arithmatex">\(0\)</span>。</li>
+</ol>
+<hr />
+<p>正是 <strong>2</strong>。 ✅</p>
+<ol>
+<li><strong>前提</strong>：假设一把尺子 <span class="arithmatex">\(\varphi\)</span> 在 <span class="arithmatex">\(T'\)</span> 的零空间里，即 <span class="arithmatex">\(T' \varphi = 0\)</span>。</li>
+<li><strong>转换</strong>：根据对偶映射的接力规则，这意味着对于 <span class="arithmatex">\(V\)</span> 中<strong>任何</strong>向量 <span class="arithmatex">\(v\)</span>，都有 <span class="arithmatex">\((T' \varphi)(v) = \varphi(Tv) = 0\)</span>。</li>
+<li><strong>观察</strong>：所有的 <span class="arithmatex">\(Tv\)</span> 构成了 <span class="arithmatex">\(T\)</span> 的<strong>值域</strong>。</li>
+<li><strong>结论</strong>：这把尺子 <span class="arithmatex">\(\varphi\)</span> 把值域里的所有向量都量成了 <span class="arithmatex">\(0\)</span>。</li>
+</ol>
+<p>这完美符合“湮没空间”的定义！所以我们得到了一个极对称的等式：</p>
+<div class="arithmatex">\[\text{null } T' = (\text{range } T)^0\]</div>
+<blockquote>
+<p><span class="arithmatex">\((\text{range } T)^0\)</span> 表示“值域的<strong>湮没空间</strong>”（Annihilator of the range）。</p>
+<p>为了理解它，我们先看它的定义： 如果 <span class="arithmatex">\(U\)</span> 是 <span class="arithmatex">\(W\)</span> 的一个子空间，那么 <span class="arithmatex">\(U^0\)</span> 是由所有能把 <span class="arithmatex">\(U\)</span> 里的向量“变成零”的尺子（线性泛函）组成的集合。</p>
+<p>所以，<span class="arithmatex">\((\text{range } T)^0\)</span> 里面装的是这样一些尺子 <span class="arithmatex">\(\varphi\)</span>： 对于 <span class="arithmatex">\(T\)</span> 的值域里的任意一个向量 <span class="arithmatex">\(w\)</span>，这把尺子量出来的结果都是 <span class="arithmatex">\(\varphi(w) = 0\)</span>。</p>
+</blockquote>
+<p>这两个集合其实是从两个不同的角度描述了<strong>同一批尺子</strong>：</p>
+<ul>
+<li><strong>从“来源”看 (<span class="arithmatex">\(\text{null } T'\)</span>)</strong>：我们关注的是这把尺子通过对偶映射 <span class="arithmatex">\(T'\)</span> 回传到 <span class="arithmatex">\(V\)</span> 后的表现。如果回传后它量什么都是 <span class="arithmatex">\(0\)</span>，它就在这个集合里。</li>
+<li><strong>从“对象”看 (<span class="arithmatex">\((\text{range } T)^0\)</span>)</strong>：我们关注的是这把尺子在 <span class="arithmatex">\(W\)</span> 空间里，对 <span class="arithmatex">\(T\)</span> 的“成果”（值域）的态度。如果它把这些成果全部湮没了，它就在这个集合里。</li>
+</ul>
+<hr />
+<p>在 <span class="arithmatex">\(W\)</span> 空间中，有一个普适公式（针对任何子空间 <span class="arithmatex">\(U \subset W\)</span>）：</p>
+<div class="arithmatex">\[\dim U + \dim U^0 = \dim W\]</div>
+<blockquote>
+<p>想象一下，<span class="arithmatex">\(W\)</span> 是一个 <span class="arithmatex">\(m\)</span> 维的空间。我们选一组非常特别的基 <span class="arithmatex">\((w_1, \dots, w_m)\)</span>，使得前 <span class="arithmatex">\(k\)</span> 个向量刚好构成了子空间 <span class="arithmatex">\(U\)</span> 的基。</p>
+<p><strong>1. 构造视角：谁能湮没 <span class="arithmatex">\(U\)</span>？</strong></p>
+<ul>
+<li>
+<p><strong>子空间 <span class="arithmatex">\(U\)</span></strong>：基是 <span class="arithmatex">\((w_1, \dots, w_k)\)</span>。所以 <span class="arithmatex">\(\dim U = k\)</span>。</p>
+</li>
+<li>
+<p><strong>全空间 <span class="arithmatex">\(W\)</span> 的对偶基（尺子）</strong>：<span class="arithmatex">\((\varphi_1, \dots, \varphi_m)\)</span>。</p>
+</li>
+</ul>
+<p>还记得对偶基的定义吗？<span class="arithmatex">\(\varphi_i\)</span> 只量第 <span class="arithmatex">\(i\)</span> 个分量，其他的全是 <span class="arithmatex">\(0\)</span>。</p>
+<p>现在我们来看看，哪些尺子属于 <span class="arithmatex">\(U^0\)</span>（即能把 <span class="arithmatex">\(U\)</span> 里所有向量都量成 <span class="arithmatex">\(0\)</span> 的尺子）：</p>
+<ul>
+<li><strong><span class="arithmatex">\(\varphi_1, \dots, \varphi_k\)</span> 行吗？</strong> 不行。因为 <span class="arithmatex">\(\varphi_1\)</span> 量 <span class="arithmatex">\(w_1\)</span> 会得到 <span class="arithmatex">\(1\)</span>，而 <span class="arithmatex">\(w_1\)</span> 在 <span class="arithmatex">\(U\)</span> 里面。所以这些尺子没能“湮没” <span class="arithmatex">\(U\)</span>。</li>
+<li><strong><span class="arithmatex">\(\varphi_{k+1}, \dots, \varphi_m\)</span> 行吗？</strong> <strong>行！</strong> 因为这些尺子只对 <span class="arithmatex">\(w_{k+1}\)</span> 以后的向量有反应。对于 <span class="arithmatex">\(U\)</span> 里的任何向量（它们只是 <span class="arithmatex">\(w_1, \dots, w_k\)</span> 的组合），这些尺子量出来的结果全是 <span class="arithmatex">\(0\)</span>。</li>
+</ul>
+<p><strong>2. 数量对齐</strong></p>
+<p>你会发现，<span class="arithmatex">\(U^0\)</span> 的基正好就是对偶基中剩下的那部分：<span class="arithmatex">\((\varphi_{k+1}, \dots, \varphi_m)\)</span>。</p>
+<p>让我们数一数：</p>
+<ul>
+<li><span class="arithmatex">\(U\)</span> 的基有 <strong><span class="arithmatex">\(k\)</span></strong> 个。</li>
+<li><span class="arithmatex">\(U^0\)</span> 的基有 <strong><span class="arithmatex">\(m - k\)</span></strong> 个。</li>
+</ul>
+<p>把它们加在一起：</p>
+<div class="arithmatex">\[\dim U + \dim U^0 = k + (m - k) = m = \dim W\]</div>
+</blockquote>
+<p>如果我们把 <span class="arithmatex">\(U\)</span> 换成 <span class="arithmatex">\(T\)</span> 的<strong>值域</strong> (<span class="arithmatex">\(\text{range } T\)</span>)，公式就变成了：</p>
+<div class="arithmatex">\[\dim(\text{range } T) + \dim(\text{range } T)^0 = \dim W\]</div>
+<p>再代入我们刚刚确认的身份等式 <span class="arithmatex">\(\text{null } T' = (\text{range } T)^0\)</span>：</p>
+<div class="arithmatex">\[\dim(\text{range } T) + \dim(\text{null } T') = \dim W\]</div>
+<hr />
+<div class="arithmatex">\[\dim W' = \dim (\text{null } T') + \dim (\text{range } T')\]</div>
+<blockquote>
+<p>对于任何线性映射 <span class="arithmatex">\(L: X \to Y\)</span>，都有一个普适的规律：</p>
+<div class="arithmatex">\[\dim (\text{输入空间 } X) = \dim (\text{null } L) + \dim (\text{range } L)\]</div>
+<p>现在，我们的映射是 <strong><span class="arithmatex">\(T': W' \to V'\)</span></strong>：</p>
+<ul>
+<li><strong>输入空间 <span class="arithmatex">\(X\)</span></strong> 是 <span class="arithmatex">\(W'\)</span>（也就是 <span class="arithmatex">\(W\)</span> 的对偶空间，所有 <span class="arithmatex">\(W\)</span> 上的尺子）。</li>
+<li><strong>零空间 <span class="arithmatex">\(\text{null } T'\)</span></strong> 是 <span class="arithmatex">\(W'\)</span> 中那些被 <span class="arithmatex">\(T'\)</span> 变回 <span class="arithmatex">\(V\)</span> 后变成“全零尺子”的集合。</li>
+<li><strong>值域 <span class="arithmatex">\(\text{range } T'\)</span></strong> 是 <span class="arithmatex">\(T'\)</span> 把 <span class="arithmatex">\(W'\)</span> 里的尺子映射到 <span class="arithmatex">\(V'\)</span> 后，在 <span class="arithmatex">\(V'\)</span> 中占据的领地。</li>
+</ul>
+<p>所以公式写出来就是：</p>
+<div class="arithmatex">\[\dim W' = \dim (\text{null } T') + \dim (\text{range } T')\]</div>
+</blockquote>
+<p>然后 <span class="arithmatex">\(\dim W' = \dim W\)</span></p>
+<blockquote>
+<p>为什么对偶空间的维度和原空间一样？</p>
+<p>还记得我们刚才讨论的<strong>对偶基</strong>吗？如果 <span class="arithmatex">\(W\)</span> 有一组基 <span class="arithmatex">\((w_1, \dots, w_m)\)</span>，那么我们就对应地有一组对偶基 <span class="arithmatex">\((\varphi_1, \dots, \varphi_m)\)</span>。</p>
+<p>基的个数没变，所以维度也没变。</p>
+</blockquote>
+<p>既然 <span class="arithmatex">\(\dim W' = \dim W\)</span>，我们把这个代换进去，就得到了：</p>
+<div class="arithmatex">\[\dim W = \dim (\text{range } T') + \dim (\text{null } T')\]</div>
+<hr />
+<p>在线性代数中，一个映射的<strong>值域维度</strong>被称为它的<strong>秩 (Rank)</strong>。</p>
+<p>从<strong>湮没空间</strong>的角度：<span class="arithmatex">\(\dim W = \dim(\text{range } T) + \dim(\text{null } T')\)</span> （因为 <span class="arithmatex">\(\text{null } T' = (\text{range } T)^0\)</span>）</p>
+<p>从<strong>维数定理</strong>的角度：<span class="arithmatex">\(\dim W = \dim(\text{range } T') + \dim(\text{null } T')\)</span> （这是线性映射的基本维度公式）</p>
+<p>这就推导出了线性代数中最具对称美的结论之一：<strong>一个线性映射的秩，等于它对偶映射的秩。</strong></p>
+<div class="arithmatex">\[\dim(\text{range } T) = \dim(\text{range } T')\]</div>
+<p>如果你把 <span class="arithmatex">\(T\)</span> 写成矩阵 <span class="arithmatex">\(A\)</span>，把 <span class="arithmatex">\(T'\)</span> 写成它的转置矩阵 <span class="arithmatex">\(A^T\)</span>，这个结论其实就是在说：<strong>一个矩阵的列秩（列向量的极大无关组大小）永远等于它的行秩（行向量的极大无关组大小）。</strong></p>
+</blockquote>
+<ul>
+<li>
+<p>双对偶空间</p>
+<blockquote>
+<ul>
+<li><strong><span class="arithmatex">\(V\)</span>（原空间）：</strong> 这里的元素是向量 <span class="arithmatex">\(v\)</span>，你可以把它们想象成“点”。</li>
+<li><strong><span class="arithmatex">\(V^*\)</span>（对偶空间）：</strong> 这里的元素是线性泛函 <span class="arithmatex">\(f\)</span>。<span class="arithmatex">\(f\)</span> 就像一把“尺子”，它吃进一个向量 <span class="arithmatex">\(v\)</span>，产出一个实数 <span class="arithmatex">\(f(v)\)</span>。</li>
+<li><span class="arithmatex">\(V^{**}\)</span><strong>（双对偶空间）：</strong> 这是 <span class="arithmatex">\(V^*\)</span> 的对偶空间。这意味着 <span class="arithmatex">\(V^{**}\)</span> 里的元素 <span class="arithmatex">\(\varphi\)</span> 是“量尺子的尺子”。它吃进一把尺子 <span class="arithmatex">\(f\)</span>，产出一个实数 <span class="arithmatex">\(\varphi(f)\)</span>。</li>
+</ul>
+<p>这里的核心发现是：虽然 <span class="arithmatex">\(V\)</span> 和 <span class="arithmatex">\(V^*\)</span> 在有限维时维度相同，但它们之间的同构通常依赖于你选择哪组基（基变了，对应的坐标映射就变了）。然而，<span class="arithmatex">\(V\)</span> 到 <span class="arithmatex">\(V^{**}\)</span> 之间存在一个<strong>自然同构（Natural Isomorphism）</strong>，它完全不需要基就能定义。</p>
+<p>定义 $<span class="arithmatex">\((\psi(v))(f) = f(v)\)</span>$</p>
+<ul>
+<li><strong>左边：</strong> 我们把向量 <span class="arithmatex">\(v\)</span> 通过 <span class="arithmatex">\(\psi\)</span> 变成了一个作用在 <span class="arithmatex">\(V^{**}\)</span> 上的函数。这个函数去测量尺子 <span class="arithmatex">\(f\)</span>。</li>
+<li>
+<p><strong>右边：</strong> 实际上就是用尺子 <span class="arithmatex">\(f\)</span> 去量向量 <span class="arithmatex">\(v\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\psi(v)\)</span> 是什么？</p>
+</li>
+</ul>
+<p>根据定义，<span class="arithmatex">\(\psi(v)\)</span> 是一个<strong>函数</strong>。</p>
+<p>这个函数吃进一把“尺子” <span class="arithmatex">\(f \in V^*\)</span>，然后吐出一个数 <span class="arithmatex">\(f(v)\)</span>。</p>
+<p>因为 <span class="arithmatex">\(\psi(v)\)</span> 的输入是 <span class="arithmatex">\(V^*\)</span> 里的元素，输出是实数（或复数），所以根据定义，<span class="arithmatex">\(\psi(v)\)</span> 属于 <span class="arithmatex">\(V^*\)</span> 的对偶空间，也就是 <span class="arithmatex">\(V^{**}\)</span>。</p>
+<ol>
+<li>角色的大反转 🔄</li>
+</ol>
+<p>通常我们认为 <span class="arithmatex">\(f\)</span> 是“主动”的（函数），而 <span class="arithmatex">\(v\)</span> 是“被动”的（参数）。</p>
+<p>但在 <span class="arithmatex">\(\psi(v)\)</span> 的视角下，角色反过来了：</p>
+<ul>
+<li><strong>原来：</strong> 尺子 <span class="arithmatex">\(f\)</span> 测量 物体 <span class="arithmatex">\(v\)</span>。</li>
+<li>
+<p><strong>现在：</strong> 物体 <span class="arithmatex">\(v\)</span> 变成了一个“评价器”，它评价 尺子 <span class="arithmatex">\(f\)</span> 在它身上的测量结果。</p>
+</li>
+<li>
+<p>为什么是 <span class="arithmatex">\(V \to V^{**}\)</span>？</p>
+</li>
+</ul>
+<p>因为：</p>
+<ol>
+<li>你给 <span class="arithmatex">\(\psi\)</span> 输入一个 <span class="arithmatex">\(V\)</span> 中的向量 <span class="arithmatex">\(v\)</span>。</li>
+<li><span class="arithmatex">\(\psi\)</span> 返回给你一个 <span class="arithmatex">\(V^{**}\)</span> 中的元素 <span class="arithmatex">\(\psi(v)\)</span>。</li>
+</ol>
+<p>所以这个映射的整体轨迹就是从 <span class="arithmatex">\(V\)</span> 指向 <span class="arithmatex">\(V^{**}\)</span>。</p>
+</blockquote>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-</div>
-<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
   回到页面顶部
 </button>
-</main>
-<footer class="md-footer">
-<div class="md-footer-meta md-typeset">
-<div class="md-footer-meta__inner md-grid">
-<div class="md-copyright">
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
     </a>
+  
 </div>
-</div>
-</div>
+      
+    </div>
+  </div>
 </footer>
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["search", "content.action.edit", "navigation.tabs", "navigation.instant", "navigation.indexes", "navigation.top", "content.code.copy", "search.suggest", "search.highlight", "search.share", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
-<script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
-<script src="../../../../javascripts/katex.min.js"></script>
-<script src="../../../../javascripts/auto-render.min.js"></script>
-<script src="../../../../javascripts/katex.js"></script>
-<script src="../../../../assets/document_dates/tippy/popper.min.js"></script>
-<script src="../../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
-<script src="../../../../assets/document_dates/core/md5.min.js"></script>
-<script src="../../../../assets/document_dates/core/default.config.js"></script>
-<script src="../../../../assets/document_dates/user.config.js"></script>
-<script src="../../../../assets/document_dates/core/utils.js"></script>
-<script src="../../../../assets/document_dates/core/core.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["search", "content.action.edit", "navigation.tabs", "navigation.instant", "navigation.indexes", "navigation.top", "content.code.copy", "search.suggest", "search.highlight", "search.share", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/katex.min.js"></script>
+      
+        <script src="../../../../javascripts/auto-render.min.js"></script>
+      
+        <script src="../../../../javascripts/katex.js"></script>
+      
+        <script src="../../../../assets/document_dates/tippy/popper.min.js"></script>
+      
+        <script src="../../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/md5.min.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/default.config.js"></script>
+      
+        <script src="../../../../assets/document_dates/user.config.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/utils.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/core.js"></script>
+      
+    
+  </body>
 </html>
