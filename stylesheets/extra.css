@@ -1,3 +1,8 @@
+/*目录字体大小*/
+.md-nav{
+  font-size:15px;
+}
+
 /*修改表格样式*/
 .md-typeset table:not([class]) thead { background-color: rgba(128, 128, 128, 0.04); }
 /*.md-typeset table:not([class]) {
@@ -41,11 +46,31 @@ span.md-status--encrypted,
 /* ==========================================
    1. 字体质感与粗细
    ========================================== */
-body, .md-typeset {
+body {
     /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;*/
     -webkit-font-smoothing: antialiased;
-    color: #333 !important;
     line-height: 1.6 !important;
+}
+.md-typeset {
+    color: #333 !important;
+}
+[data-md-color-scheme="slate"] .md-typeset {
+    color: #d0d0d0 !important;
+}
+
+/* 标题颜色 */
+
+.md-typeset h5{
+    font-size: 1.04em !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4,
+[data-md-color-scheme="slate"] .md-typeset h5,
+[data-md-color-scheme="slate"] .md-typeset h6 {
+    color: #f0f0f0 !important;
 }
 
 /* 1. 正常的内联代码：恢复清瘦感 (Regular 400) */
@@ -59,10 +84,20 @@ body, .md-typeset {
     font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace !important;
     font-weight: 400 !important; /* 普通代码瘦身 */
 }
+[data-md-color-scheme="slate"] .md-typeset code {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+}
 
 strong, b, .md-typeset strong, .md-typeset b {
-    font-weight: 600 !important; 
+    font-weight: 600 !important;
     color: #222 !important;
+}
+[data-md-color-scheme="slate"] strong,
+[data-md-color-scheme="slate"] b,
+[data-md-color-scheme="slate"] .md-typeset strong,
+[data-md-color-scheme="slate"] .md-typeset b {
+    color: #f0f0f0 !important;
 }
 
 /* ==========================================
@@ -77,6 +112,13 @@ strong, b, .md-typeset strong, .md-typeset b {
 .md-typeset table th b {
     font-weight: 600 !important; /* 同步 Typora 的半粗体质感 */
     color: #222 !important;      /* 保持干练的深灰色 */
+}
+[data-md-color-scheme="slate"] .md-typeset table th,
+[data-md-color-scheme="slate"] .md-typeset table td strong,
+[data-md-color-scheme="slate"] .md-typeset table td b,
+[data-md-color-scheme="slate"] .md-typeset table th strong,
+[data-md-color-scheme="slate"] .md-typeset table th b {
+    color: #e0e0e0 !important;
 }
 
 /* 顺便让表格里的内联代码也保持清瘦 */
@@ -99,6 +141,12 @@ strong, b, .md-typeset strong, .md-typeset b {
 .md-typeset code b {
     font-weight: 600 !important; /* 找回加粗效果，且不至于像默认的 700 那样发糊 */
     color: #222 !important;      /* 稍微加深一点颜色，增强对比度 */
+}
+[data-md-color-scheme="slate"] .md-typeset strong code,
+[data-md-color-scheme="slate"] .md-typeset b code,
+[data-md-color-scheme="slate"] .md-typeset code strong,
+[data-md-color-scheme="slate"] .md-typeset code b {
+    color: #f0f0f0 !important;
 }
 
 /* ==========================================
@@ -181,20 +229,34 @@ strong, b, .md-typeset strong, .md-typeset b {
   background-color: #e0e0e0;
   border-color: #b3b3b3;
 }
+[data-md-color-scheme="slate"] .decryption-btn {
+  background-color: #2d2d2d;
+  color: #d0d0d0;
+  border-color: #555555;
+}
+[data-md-color-scheme="slate"] .decryption-btn:hover {
+  background-color: #3a3a3a;
+  border-color: #777777;
+}
 
 /* 2. 输入框样式 (必须同步修改，才能保证高度一致) */
 /* 注意：这里使用了属性选择器来定位密码框 */
 input[type="password"] {
   border: 1px solid #cccccc;
   border-radius: 4px;
-  
+
   /* 核心：高度控制 (与按钮完全一致) */
   height: var(--decrypt-height);
   box-sizing: border-box;      /* 关键！包含边框在内计算高度 */
   vertical-align: middle;      /* 垂直居中对齐 */
-  
+
   padding: 0 10px;
   background-color: #ffffff;
+}
+[data-md-color-scheme="slate"] input[type="password"] {
+  background-color: #2d2d2d;
+  color: #d0d0d0;
+  border-color: #555555;
 }
 
 /* Logo title */
